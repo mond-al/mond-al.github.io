@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> - Articles</title>
+    <description>안드로이드 개발 로깅.</description>
+    <link>
+    https://mond-al.github.io</link>
+    
+      
+      <item>
+        <title>Test</title>
+        
+          <description>&lt;p&gt;우선은 스크립트로 업데이트&lt;/p&gt;
+</description>
+        
+        <pubDate>Fri, 01 Jan 2021 00:00:00 +0900</pubDate>
+        <link>
+        https://mond-al.github.io/new-year</link>
+        <guid isPermaLink="true">https://mond-al.github.io/new-year</guid>
+      </item>
+      
+    
+  </channel>
+</rss>
