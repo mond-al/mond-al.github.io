@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/recyclerview/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-01-24T02:24:35+09:00</updated>
+  <updated>2021-01-24T02:29:35+09:00</updated>
   <id>https://mond-al.github.io/tag/recyclerview/feed.xml</id>
 
   
@@ -40,15 +40,12 @@
       <content type="html" xml:base="https://mond-al.github.io/fast-scroller">&lt;p&gt;RecyclerView FastScroller를 직접 만든 이유.&lt;/p&gt;
 
 &lt;h2 id=&quot;fastscroll&quot;&gt;FastScroll&lt;/h2&gt;
-&lt;p&gt;Fast Scroll이라고 하면 어떤기능인지 떠오르시나요?&lt;br /&gt;
-&lt;img src=&quot;assets/movie/2021-01-18-fast-scroller/samsung_fastscroll.gif&quot; alt=&quot;drawing&quot; width=&quot;200&quot; /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;img src=&quot;assets/movie/2021-01-18-fast-scroller/samsung_fastscroll.gif&quot; alt=&quot;drawing&quot; width=&quot;200&quot; /&gt;&lt;br /&gt;
 Fast Scroll은 위 그림처럼 보통 갤러리나 수많은 아이템을 보여줄 때, 순차적으로 스크롤하여 접근하는 대신 스크롤 바를 잡고 바로 이동하는 것을 말합니다.&lt;/p&gt;
 
-&lt;p&gt;Recyclerview 위젯은 이미 &lt;a href=&quot;https://android.googlesource.com/platform/frameworks/support/+/androidx-main/recyclerview/recyclerview/src/main/java/androidx/recyclerview/widget/FastScroller.java&quot;&gt;FastScroller&lt;/a&gt;를 가지고있고 RecyclerView를 xml로 정의할때 &lt;code class=&quot;highlighter-rouge&quot;&gt;app:fastScrollEnabled=&quot;true&quot;&lt;/code&gt; 한줄만 넣어주면 해당기능을 지원합니다.&lt;/p&gt;
+&lt;p&gt;Recyclerview 위젯은 이미 &lt;a href=&quot;https://android.googlesource.com/platform/frameworks/support/+/androidx-main/recyclerview/recyclerview/src/main/java/androidx/recyclerview/widget/FastScroller.java&quot;&gt;FastScroller&lt;/a&gt;를 가지고있고 RecyclerView를 xml로 정의할때 &lt;code class=&quot;highlighter-rouge&quot;&gt;app:fastScrollEnabled=&quot;true&quot;&lt;/code&gt; 한줄만 넣어주면 해당기능을 지원 할 것 처럼 생겼습니다.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;하지만 이 클래스는 그림의 떡 입니다.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h2 id=&quot;하지만-이-클래스는-그림의-떡-입니다&quot;&gt;하지만 이 클래스는 그림의 떡 입니다.&lt;/h2&gt;
 
 &lt;p&gt;FastScroller는 &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;private&lt;/span&gt;&lt;/code&gt;이며, adapter와 달리 사용자가 직접 &lt;strong&gt;&lt;em&gt;접근하여 커스텀 할 수 없는 형태&lt;/em&gt;&lt;/strong&gt;로 선언 되어있습니다.&lt;/p&gt;
 
