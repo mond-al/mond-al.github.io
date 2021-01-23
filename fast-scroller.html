@@ -277,7 +277,8 @@ Fast Scroll은 위 그림처럼 보통 갤러리나 수많은 아이템을 보�
 
 <p>하지만, 이게 문제가 없다면 굳이 RecyclerView 저런 속성들과 클래스들이 추가 되지 않았겠죠.</p>
 
-<p><code class="highlighter-rouge">scrollbarThumbVertical</code>속성으로 그려지게 되는 ScrollBarDrawable 객체의 콜백은 스크롤하는 범위의 모든 아이템이 OnBindViewHolder를 호출하게 됩니다. 수십 수백개 정도는 큰 문제가 되지않지만, 천단위를 넘어가기 시작하면 디바이스에서는 쉴틈없는 GC가 수행됩니다. (GC를 유도하기 좋은 간편한? 트리거를 찾았습니다! lol)</p>
+<p><code class="highlighter-rouge">scrollbarThumbVertical</code>속성으로 그려지게 되는 ScrollBarDrawable 객체의 콜백은 스크롤하는 범위의 모든 아이템이 OnBindViewHolder를 호출하게 됩니다. 수십 수백개 정도는 큰 문제가 되지않지만, 천단위를 넘어가기 시작하면 디바이스에서는 쉴틈없는 GC가 수행됩니다. (GC를 유도하기 좋은 간편한? 트리거를 찾았습니다! lol)
+up</p>
 
 <h2 id="결론--그래서-fastscroller-를-직접-구현-하게-되었습니다">결론 : 그래서 FastScroller 를 직접 구현 하게 되었습니다.</h2>
 
