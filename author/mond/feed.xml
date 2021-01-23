@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/author/mond/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-01-24T02:29:35+09:00</updated>
+  <updated>2021-01-24T02:36:32+09:00</updated>
   <id>https://mond-al.github.io/author/mond/feed.xml</id>
 
   
@@ -125,8 +125,7 @@ Fast Scroll은 위 그림처럼 보통 갤러리나 수많은 아이템을 보�
 
 &lt;p&gt;하지만, 이게 문제가 없다면 굳이 RecyclerView 저런 속성들과 클래스들이 추가 되지 않았겠죠.&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;scrollbarThumbVertical&lt;/code&gt;속성으로 그려지게 되는 ScrollBarDrawable 객체의 콜백은 스크롤하는 범위의 모든 아이템이 OnBindViewHolder를 호출하게 됩니다. 수십 수백개 정도는 큰 문제가 되지않지만, 천단위를 넘어가기 시작하면 디바이스에서는 쉴틈없는 GC가 수행됩니다. (GC를 유도하기 좋은 간편한? 트리거를 찾았습니다! lol)
-up&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;scrollbarThumbVertical&lt;/code&gt;속성으로 그려지게 되는 ScrollBarDrawable 객체의 콜백은 스크롤하는 범위의 모든 아이템이 OnBindViewHolder를 호출하게 됩니다. 수십 수백개 정도는 큰 문제가 되지않지만,구조에 따라 천단위를 넘어가기 시작하면 스크롤중 아이템의 이미지를 그리는 앱이나, 아이템 뷰모델이 큰 경우에는 상당한 부담이 될 것 입니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;결론--그래서-fastscroller-를-직접-구현-하게-되었습니다&quot;&gt;결론 : 그래서 FastScroller 를 직접 구현 하게 되었습니다.&lt;/h2&gt;
 
