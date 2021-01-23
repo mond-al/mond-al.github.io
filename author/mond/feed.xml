@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/author/mond/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-01-23T20:53:01+09:00</updated>
+  <updated>2021-01-23T22:03:52+09:00</updated>
   <id>https://mond-al.github.io/author/mond/feed.xml</id>
 
   
@@ -12,7 +12,7 @@
   
 
   
-    <title type="html">Android/App/dev &amp;gt; Log | </title>
+    <title type="html">Developer/App/Android/mond &amp;gt; Log | </title>
   
 
   
@@ -32,12 +32,35 @@
 
   
     <entry>
-      <title type="html">Test</title>
-      <link href="https://mond-al.github.io/new-year" rel="alternate" type="text/html" title="Test" />
-      <published>2021-01-01T00:00:00+09:00</published>
-      <updated>2021-01-01T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/new-year</id>
-      <content type="html" xml:base="https://mond-al.github.io/new-year">&lt;p&gt;우선은 스크립트로 업데이트&lt;/p&gt;</content>
+      <title type="html">reboot</title>
+      <link href="https://mond-al.github.io/about-reboot" rel="alternate" type="text/html" title="reboot" />
+      <published>2021-01-12T00:00:00+09:00</published>
+      <updated>2021-01-12T00:00:00+09:00</updated>
+      <id>https://mond-al.github.io/about-reboot</id>
+      <content type="html" xml:base="https://mond-al.github.io/about-reboot">&lt;p&gt;다시 시작&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Blog&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;주니어 시절에는 블로그를 꽤 열심히 정리 했던 것 같습니다. 주니어 시절 개발과정에서 겪게 되는 삽질이 반복 되지 않도록 쓰기 시작했던 블로그 글들은 분명 제가 개발자로 성장하는데 큰 도움이 되었다고 생각됩니다. 하지만 세상일이 항상 그렇듯 일이 바쁘다는 핑계로 정리하는 습관이 사라지더니 어느 순간 모두 비공개로만 혼자서 보는 일기장으로, 그 후에는 점점 잊힌 페이지가 되더군요.&lt;/p&gt;
+
+&lt;p&gt;문득 정신을 차려보니 안드로이드를 개발한 지 어느덧 10년이란 시간이 지났습니다. 근래 들어 다시 “성장”하고 싶다는 생각이 들기 시작했고 포털에서 제공하는 블로그대신 github으로 자리를 옮겨와서 새롭게 시작합니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;MRSK project &lt;code class=&quot;highlighter-rouge&quot;&gt;(alMond Reyclerview Support Kit)&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;안드로이드 앱을 개발하다 보면 가장 많이 사용하게 되는 컴포넌트가 아무래도 RecyclerView가 아닐까 합니다. 구글이 제공해주는 만능상자 같은 리사이클러들의 다양한 API를 이용해 엮고 응용해서 RecyclerView를 사용하기 편하게 도와주는 키트를 만들어 보려 합니다. 언제든 간편하게 적용하고, 간편하게 제거 가능한 형태를 목표로 합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;snippet code로 바로 적용 가능한 용법을 예제앱에 적용해거나
+(https://github.com/mond-al/RecyclerView-Support)&lt;/li&gt;
+  &lt;li&gt;조금 구성이 필요한 것은 별도로 배포할 예정입니다.
+(https://github.com/mond-al/recyclerview-fastscroller)&lt;/li&gt;
+&lt;/ul&gt;</content>
 
       
       
@@ -54,13 +77,9 @@
       
 
       
-        <category term="android" />
-      
-        <category term="guide" />
-      
 
       
-        <summary type="html">우선은 스크립트로 업데이트</summary>
+        <summary type="html">다시 시작</summary>
       
 
       
