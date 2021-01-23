@@ -166,8 +166,50 @@ into the {body} of the default.hbs template -->
 
 <ul class="entry-meta inline-list">
   
+    
+  	<li><a href="#android" class="tag"><span class="term alltags">android</span> <span class="count alltags">1</span></a></li>
+  
+    
+  	<li><a href="#fastscroll" class="tag"><span class="term alltags">fastscroll</span> <span class="count alltags">1</span></a></li>
+  
+    
+  	<li><a href="#recyclerview" class="tag"><span class="term alltags">recyclerview</span> <span class="count alltags">1</span></a></li>
+  
 </ul>
 
+
+  
+	<article>
+	<h2 id="android" class="tag-heading">ANDROID</h2>
+		<ul>
+    
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/fast-scroller" target="_blank" title="android Recyclerview Fastscroll">android Recyclerview Fastscroll</a></li> -->
+      <li class="entry-title"><a href="/fast-scroller" target="_blank" title="android Recyclerview Fastscroll">android Recyclerview Fastscroll</a></li>
+    
+		</ul>
+	</article><!-- /.hentry -->
+
+  
+	<article>
+	<h2 id="fastscroll" class="tag-heading">FASTSCROLL</h2>
+		<ul>
+    
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/fast-scroller" target="_blank" title="android Recyclerview Fastscroll">android Recyclerview Fastscroll</a></li> -->
+      <li class="entry-title"><a href="/fast-scroller" target="_blank" title="android Recyclerview Fastscroll">android Recyclerview Fastscroll</a></li>
+    
+		</ul>
+	</article><!-- /.hentry -->
+
+  
+	<article>
+	<h2 id="recyclerview" class="tag-heading">RECYCLERVIEW</h2>
+		<ul>
+    
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/fast-scroller" target="_blank" title="android Recyclerview Fastscroll">android Recyclerview Fastscroll</a></li> -->
+      <li class="entry-title"><a href="/fast-scroller" target="_blank" title="android Recyclerview Fastscroll">android Recyclerview Fastscroll</a></li>
+    
+		</ul>
+	</article><!-- /.hentry -->
 
 </div>
             </section>
