@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/recyclerview/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-01-24T14:52:02+09:00</updated>
+  <updated>2021-01-24T14:55:25+09:00</updated>
   <id>https://mond-al.github.io/tag/recyclerview/feed.xml</id>
 
   
@@ -38,9 +38,9 @@
       <updated>2021-01-18T00:00:00+09:00</updated>
       <id>https://mond-al.github.io/fast-scroller</id>
       <content type="html" xml:base="https://mond-al.github.io/fast-scroller">&lt;p&gt;&lt;img src=&quot;assets/images/post/2021-01-18-fast-scroller/samsung_fastscroll.gif&quot; alt=&quot;drawing&quot; width=&quot;200&quot; /&gt;&lt;br /&gt;
-FastScroller 위 그림처럼 보통 갤러리나 수많은 아이템을 보여줄 때, 순차적으로 스크롤하여 접근하는 대신 스크롤 바를 잡고 바로 이동하는 것을 말합니다.&lt;/p&gt;
+우리는 보통 위 그림처럼 보통 갤러리나 수많은 아이템을 보여줄 때, 순차적으로 스크롤하여 접근하는 대신 스크롤 바를 잡고 바로 이동하는 역활을 하는 것을 FastScroller라고 합니다. FastScroller를 한마디로 이야기하면 “드래그하여 특정한 위치로 이동가능한 스크롤 바”라고 정의 할 수 있습니다.&lt;/p&gt;
 
-&lt;p&gt;Recyclerview 위젯은 &lt;a href=&quot;https://android.googlesource.com/platform/frameworks/support/+/androidx-main/recyclerview/recyclerview/src/main/java/androidx/recyclerview/widget/FastScroller.java&quot;&gt;FastScroller&lt;/a&gt;를 가지고있고 RecyclerView를 xml로 정의할때 &lt;code class=&quot;highlighter-rouge&quot;&gt;app:fastScrollEnabled=&quot;true&quot;&lt;/code&gt; 한줄만 넣어주면 해당기능을 지원 할 것 처럼 생겼습니다. 역시 구글형!&lt;/p&gt;
+&lt;p&gt;Recyclerview은 &lt;a href=&quot;https://android.googlesource.com/platform/frameworks/support/+/androidx-main/recyclerview/recyclerview/src/main/java/androidx/recyclerview/widget/FastScroller.java&quot;&gt;FastScroller&lt;/a&gt;를 가지고있고 RecyclerView를 xml로 정의할때 &lt;code class=&quot;highlighter-rouge&quot;&gt;app:fastScrollEnabled=&quot;true&quot;&lt;/code&gt; 한줄만 넣어주면 해당기능을 지원 할 것 처럼 생겼습니다. 역시 구글형!&lt;/p&gt;
 
 &lt;h3 id=&quot;하지만-이-클래스는-그림의-떡-입니다&quot;&gt;하지만 이 클래스는 그림의 떡 입니다.&lt;/h3&gt;
 
@@ -154,7 +154,7 @@ FastScroller 위 그림처럼 보통 갤러리나 수많은 아이템을 보여�
       
 
       
-        <summary type="html">FastScroller 위 그림처럼 보통 갤러리나 수많은 아이템을 보여줄 때, 순차적으로 스크롤하여 접근하는 대신 스크롤 바를 잡고 바로 이동하는 것을 말합니다.</summary>
+        <summary type="html">우리는 보통 위 그림처럼 보통 갤러리나 수많은 아이템을 보여줄 때, 순차적으로 스크롤하여 접근하는 대신 스크롤 바를 잡고 바로 이동하는 역활을 하는 것을 FastScroller라고 합니다. FastScroller를 한마디로 이야기하면 “드래그하여 특정한 위치로 이동가능한 스크롤 바”라고 정의 할 수 있습니다.</summary>
       
 
       
