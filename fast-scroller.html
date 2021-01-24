@@ -53,7 +53,7 @@
     <meta property="og:title" content="Recyclerview Fastscroller Review" />
     <meta property="og:description" content="FastScroller 위 그림처럼 보통 갤러리나 수많은 아이템을 보여줄 때, 순차적으로 스크롤하여 접근하는 대신 스크롤 바를 잡고 바로 이동하는 것을 말합니다. Recyclerview 위젯은 FastScroller를 가지고있고 RecyclerView를 xml로 정의할때 app:fastScrollEnabled="true" 한줄만 넣어주면 해당기능을 지원 할 것 처럼 생겼습니다. 역시 구글형! 하지만 이 클래스는 그림의 떡 입니다. public RecyclerView(@NonNull Context context, @Nullable AttributeSet" />
     <meta property="og:url" content="https://mond-al.github.io/fast-scroller" />
-    <meta property="og:image" content="https://mond-al.github.io/assets/images/blog-cover.jpg" />
+    <meta property="og:image" content="https://mond-al.github.io/assets/images/post/2021-01-18-fast-scroller/cover.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
     <meta property="article:published_time" content="2021-01-18T00:00:00+09:00" />
@@ -63,7 +63,7 @@
     <meta name="twitter:title" content="Recyclerview Fastscroller Review" />
     <meta name="twitter:description" content="FastScroller 위 그림처럼 보통 갤러리나 수많은 아이템을 보여줄 때, 순차적으로 스크롤하여 접근하는 대신 스크롤 바를 잡고 바로 이동하는 것을 말합니다. Recyclerview 위젯은 FastScroller를 가지고있고 RecyclerView를 xml로 정의할때 app:fastScrollEnabled="true" 한줄만 넣어주면 해당기능을 지원 할 것 처럼 생겼습니다. 역시 구글형! 하지만 이 클래스는 그림의 떡 입니다. public RecyclerView(@NonNull Context context, @Nullable AttributeSet" />
     <meta name="twitter:url" content="https://mond-al.github.io/" />
-    <meta name="twitter:image" content="https://mond-al.github.io/assets/images/blog-cover.jpg" />
+    <meta name="twitter:image" content="https://mond-al.github.io/assets/images/post/2021-01-18-fast-scroller/cover.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Developer/App/Android/mond > Log" />
     <meta name="twitter:label2" content="Filed under" />
@@ -85,7 +85,7 @@
     "url": "https://mond-al.github.io/fast-scroller",
     "image": {
         "@type": "ImageObject",
-        "url": "https://mond-al.github.io/assets/images/blog-cover.jpg",
+        "url": "https://mond-al.github.io/assets/images/post/2021-01-18-fast-scroller/cover.png",
         "width": 2000,
         "height": 666
     },
@@ -157,7 +157,7 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-android tag-recyclerview tag-fastscroller  no-image">
+        <article class="post-full  tag-android tag-recyclerview tag-fastscroller  ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
@@ -182,11 +182,14 @@ into the {body} of the default.hbs template -->
                 <h1 class="post-full-title">Recyclerview Fastscroller Review</h1>
             </header>
 
-            <!---->
+            <!--
+            <figure class="post-full-image" style="background-image: url(/assets/images/post/2021-01-18-fast-scroller/cover.png)">
+            </figure>
+            -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p><img src="assets/movie/2021-01-18-fast-scroller/samsung_fastscroll.gif" alt="drawing" width="200" /><br />
+                    <p><img src="assets/images/post/2021-01-18-fast-scroller/samsung_fastscroll.gif" alt="drawing" width="200" /><br />
 FastScroller 위 그림처럼 보통 갤러리나 수많은 아이템을 보여줄 때, 순차적으로 스크롤하여 접근하는 대신 스크롤 바를 잡고 바로 이동하는 것을 말합니다.</p>
 
 <p>Recyclerview 위젯은 <a href="https://android.googlesource.com/platform/frameworks/support/+/androidx-main/recyclerview/recyclerview/src/main/java/androidx/recyclerview/widget/FastScroller.java">FastScroller</a>를 가지고있고 RecyclerView를 xml로 정의할때 <code class="highlighter-rouge">app:fastScrollEnabled="true"</code> 한줄만 넣어주면 해당기능을 지원 할 것 처럼 생겼습니다. 역시 구글형!</p>
@@ -262,7 +265,7 @@ FastScroller 위 그림처럼 보통 갤러리나 수많은 아이템을 보여�
 
 <h3 id="터치-할-수-없는-스크롤바">터치 할 수 없는 스크롤바</h3>
 
-<p>아이템의 수가 적을때는 아쉬운 점이 있어도 그나마 사용하는데 문제는 없었습니다. 하지만, 아이템의 수가 늘어나면 스크롤이 길어지고 thumb의 높이는 0px로 수렴하게됩니다. 아쉽게도 일정크기를 유지 하도록 하는 옵션이 제공되지 않습니다. 아이템이 1000개만 넘어가도 이미 손가락으로 터치는 불가능할 정도로 작아집니다.  이 문제는 구글 이슈트레커에 등록된지 4년째 이지만 진행되는 내용은 없는 것 같습니다.(<a href="https://issuetracker.google.com/issues/64729576">link</a>)</p>
+<p>아이템의 수가 적을때는 아쉬운 점이 있어도 그나마 사용하는데 문제는 없었습니다. 하지만, 아이템의 수가 늘어나면 스크롤이 길어지고 thumb의 높이는 0px로 수렴하게됩니다. 아쉽게도 일정크기를 유지 하도록 하는 옵션이 제공되지 않습니다. 아이템이 1000개만 넘어가도 이미 손가락으로 터치는 불가능할 정도로 작아집니다.  이 문제는 구글 이슈트레커에 등록된지 4년째 이지만 진행되는 내용은 없는 것 같습니다.(<a href="https://issuetracker.google.com/issues/64729576">https://issuetracker.google.com/issues/64729576</a>)</p>
 
 <h3 id="바인드-지옥">바인드 지옥</h3>
 
@@ -274,7 +277,7 @@ FastScroller 위 그림처럼 보통 갤러리나 수많은 아이템을 보여�
 
 <h3 id="결론--그래서-fastscroller-를-직접-구현-하게-되었습니다">결론 : 그래서 FastScroller 를 직접 구현 하게 되었습니다.</h3>
 
-<p>다음편에서는 직접 구현한 FastScroller를 살펴보겠습니다. 물론 앞으로 개선되어야 할 부분이 많지만, 0.1이라는 버전에 걸맞지 않게 상당히 본래 목적에 맞게 잘 동작합니다.</p>
+<p>다음편에서는 직접 구현한 FastScroller를 살펴보겠습니다. 물론 앞으로 개선되어야 할 부분이 많지만 일단은 잘 동작합니다.</p>
 
 <h3 id="한번-써보세요-">한번 써보세요~ 👍</h3>
 
@@ -365,12 +368,69 @@ FastScroller 위 그림처럼 보통 갤러리나 수많은 아이템을 보여�
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/test-image">
+                <div class="post-card-image" style="background-image: url(/assets/images/post/2021-01-22-test-image/cover.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/test-image">
+                <header class="post-card-header">
+                    
+                        
+                            
+                               <span class="post-card-tags">Test</span>
+                            
+                        
+                            
+                                <span class="post-card-tags">Image</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">테스트용 이미지 다운로드</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/mond.jpg" alt="jisoo Yang" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/mond/">jisoo Yang</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
                 
 
-    <article class="post-card post-template no-image">
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/about-reboot">
+                <div class="post-card-image" style="background-image: url(/assets/images/post/2021-01-12-about-reboot/cover.png)"></div>
+            </a>
         
         <div class="post-card-content">
             <a class="post-card-content-link" href="/about-reboot">

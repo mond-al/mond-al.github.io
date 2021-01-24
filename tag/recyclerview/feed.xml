@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/recyclerview/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-01-24T11:07:33+09:00</updated>
+  <updated>2021-01-24T14:24:17+09:00</updated>
   <id>https://mond-al.github.io/tag/recyclerview/feed.xml</id>
 
   
@@ -37,7 +37,7 @@
       <published>2021-01-18T00:00:00+09:00</published>
       <updated>2021-01-18T00:00:00+09:00</updated>
       <id>https://mond-al.github.io/fast-scroller</id>
-      <content type="html" xml:base="https://mond-al.github.io/fast-scroller">&lt;p&gt;&lt;img src=&quot;assets/movie/2021-01-18-fast-scroller/samsung_fastscroll.gif&quot; alt=&quot;drawing&quot; width=&quot;200&quot; /&gt;&lt;br /&gt;
+      <content type="html" xml:base="https://mond-al.github.io/fast-scroller">&lt;p&gt;&lt;img src=&quot;assets/images/post/2021-01-18-fast-scroller/samsung_fastscroll.gif&quot; alt=&quot;drawing&quot; width=&quot;200&quot; /&gt;&lt;br /&gt;
 FastScroller 위 그림처럼 보통 갤러리나 수많은 아이템을 보여줄 때, 순차적으로 스크롤하여 접근하는 대신 스크롤 바를 잡고 바로 이동하는 것을 말합니다.&lt;/p&gt;
 
 &lt;p&gt;Recyclerview 위젯은 &lt;a href=&quot;https://android.googlesource.com/platform/frameworks/support/+/androidx-main/recyclerview/recyclerview/src/main/java/androidx/recyclerview/widget/FastScroller.java&quot;&gt;FastScroller&lt;/a&gt;를 가지고있고 RecyclerView를 xml로 정의할때 &lt;code class=&quot;highlighter-rouge&quot;&gt;app:fastScrollEnabled=&quot;true&quot;&lt;/code&gt; 한줄만 넣어주면 해당기능을 지원 할 것 처럼 생겼습니다. 역시 구글형!&lt;/p&gt;
@@ -113,7 +113,7 @@ FastScroller 위 그림처럼 보통 갤러리나 수많은 아이템을 보여�
 
 &lt;h3 id=&quot;터치-할-수-없는-스크롤바&quot;&gt;터치 할 수 없는 스크롤바&lt;/h3&gt;
 
-&lt;p&gt;아이템의 수가 적을때는 아쉬운 점이 있어도 그나마 사용하는데 문제는 없었습니다. 하지만, 아이템의 수가 늘어나면 스크롤이 길어지고 thumb의 높이는 0px로 수렴하게됩니다. 아쉽게도 일정크기를 유지 하도록 하는 옵션이 제공되지 않습니다. 아이템이 1000개만 넘어가도 이미 손가락으로 터치는 불가능할 정도로 작아집니다.  이 문제는 구글 이슈트레커에 등록된지 4년째 이지만 진행되는 내용은 없는 것 같습니다.(&lt;a href=&quot;https://issuetracker.google.com/issues/64729576&quot;&gt;link&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;아이템의 수가 적을때는 아쉬운 점이 있어도 그나마 사용하는데 문제는 없었습니다. 하지만, 아이템의 수가 늘어나면 스크롤이 길어지고 thumb의 높이는 0px로 수렴하게됩니다. 아쉽게도 일정크기를 유지 하도록 하는 옵션이 제공되지 않습니다. 아이템이 1000개만 넘어가도 이미 손가락으로 터치는 불가능할 정도로 작아집니다.  이 문제는 구글 이슈트레커에 등록된지 4년째 이지만 진행되는 내용은 없는 것 같습니다.(&lt;a href=&quot;https://issuetracker.google.com/issues/64729576&quot;&gt;https://issuetracker.google.com/issues/64729576&lt;/a&gt;)&lt;/p&gt;
 
 &lt;h3 id=&quot;바인드-지옥&quot;&gt;바인드 지옥&lt;/h3&gt;
 
@@ -125,7 +125,7 @@ FastScroller 위 그림처럼 보통 갤러리나 수많은 아이템을 보여�
 
 &lt;h3 id=&quot;결론--그래서-fastscroller-를-직접-구현-하게-되었습니다&quot;&gt;결론 : 그래서 FastScroller 를 직접 구현 하게 되었습니다.&lt;/h3&gt;
 
-&lt;p&gt;다음편에서는 직접 구현한 FastScroller를 살펴보겠습니다. 물론 앞으로 개선되어야 할 부분이 많지만, 0.1이라는 버전에 걸맞지 않게 상당히 본래 목적에 맞게 잘 동작합니다.&lt;/p&gt;
+&lt;p&gt;다음편에서는 직접 구현한 FastScroller를 살펴보겠습니다. 물론 앞으로 개선되어야 할 부분이 많지만 일단은 잘 동작합니다.&lt;/p&gt;
 
 &lt;h3 id=&quot;한번-써보세요-&quot;&gt;한번 써보세요~ 👍&lt;/h3&gt;
 

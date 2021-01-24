@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="https://mond-al.github.io/tag/image/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
+  <updated>2021-01-24T14:24:17+09:00</updated>
+  <id>https://mond-al.github.io/tag/image/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Developer/App/Android/mond &amp;gt; Log | </title>
+  
+
+  
+    <subtitle>안드로이드 개발 로깅.</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">테스트용 이미지 다운로드</title>
+      <link href="https://mond-al.github.io/test-image" rel="alternate" type="text/html" title="테스트용 이미지 다운로드" />
+      <published>2021-01-22T00:00:00+09:00</published>
+      <updated>2021-01-22T00:00:00+09:00</updated>
+      <id>https://mond-al.github.io/test-image</id>
+      <content type="html" xml:base="https://mond-al.github.io/test-image">&lt;p&gt;개발하다 보면 이미지 소스들이 필요한 경우가 있습니다. 혼자서 테스트할 때는 개인폰에 저장하고, 직접 촬영한 이미지를기반으로 작업 가능하지만 개발중인 화면을 다른 누군가에게 보여줄 때는 사생활이 공개될까 조심스럽기도 하구요.&lt;/p&gt;
+
+&lt;p&gt;이것을 예제앱에 포함하고 싶을때 적당한 이미지를 구한다는건 상당히 신경쓰이는 일 입니다.&lt;/p&gt;
+
+&lt;p&gt;그래서 준비해봤습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;여러장의-이미지가-필요할-때&quot;&gt;여러장의 이미지가 필요할 때&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;http://unsample.net&quot;&gt;http://unsample.net&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://unsplash.com&quot;&gt;이미지 공유 사이트 unsplash&lt;/a&gt;를 기반으로 zip으로 묶어서 한번에 다운로드.&lt;/li&gt;
+  &lt;li&gt;한번에 원하는 크기의 이미지를 최대 30장을 묶어서 내려받을 수 있습니다.&lt;/li&gt;
+  &lt;li&gt;필요한 이미지 갯수, width/height, quality를 지정 가능하고, 원한다면 특정 이미지를 검색해서 모을 수 있습니다.&lt;/li&gt;
+  &lt;li&gt;모든 사진은 무료 로 다운로드 하여 사용할 수 있습니다.&lt;/li&gt;
+  &lt;li&gt;심지어 상업적 및 비상업적 목적 모두 사용도 가능합니다. 이미지 자체를 판매는 금지!.&lt;/li&gt;
+  &lt;li&gt;샘플앱에 넣어서 사용하는 것도 가능 하겠네요. :~)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;간단한-테스트용-이미지를-만들어서-구분해서-쓰고-싶을-때&quot;&gt;간단한 테스트용 이미지를 만들어서 구분해서 쓰고 싶을 때&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://www.websiteplanet.com/webtools/dummy-images-generator&quot;&gt;https://www.websiteplanet.com/webtools/dummy-images-generator&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;width x height, 배경색, 글자색, format을 지정하면 바로 이미지로 다운로드 가능.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;혹시 한번에 1부터 100까지 쓰여진 이미지를 만들어서 다운받을 수 있는 곳은 없을까요? 제보 부탁드립니다. 🙇‍♂️&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jisoo Yang</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="test" />
+      
+        <category term="image" />
+      
+
+      
+        <summary type="html">개발하다 보면 이미지 소스들이 필요한 경우가 있습니다. 혼자서 테스트할 때는 개인폰에 저장하고, 직접 촬영한 이미지를기반으로 작업 가능하지만 개발중인 화면을 다른 누군가에게 보여줄 때는 사생활이 공개될까 조심스럽기도 하구요.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

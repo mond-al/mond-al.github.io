@@ -8,9 +8,24 @@
     
       
       <item>
+        <title>테스트용 이미지 다운로드</title>
+        
+          <description>&lt;p&gt;개발하다 보면 이미지 소스들이 필요한 경우가 있습니다. 혼자서 테스트할 때는 개인폰에 저장하고, 직접 촬영한 이미지를기반으로 작업 가능하지만 개발중인 화면을 다른 누군가에게 보여줄 때는 사생활이 공개될까 조심스럽기도 하구요.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 22 Jan 2021 00:00:00 +0900</pubDate>
+        <link>
+        https://mond-al.github.io/test-image</link>
+        <guid isPermaLink="true">https://mond-al.github.io/test-image</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Recyclerview Fastscroller Review</title>
         
-          <description>&lt;p&gt;&lt;img src=&quot;assets/movie/2021-01-18-fast-scroller/samsung_fastscroll.gif&quot; alt=&quot;drawing&quot; width=&quot;200&quot; /&gt;&lt;br /&gt;
+          <description>&lt;p&gt;&lt;img src=&quot;assets/images/post/2021-01-18-fast-scroller/samsung_fastscroll.gif&quot; alt=&quot;drawing&quot; width=&quot;200&quot; /&gt;&lt;br /&gt;
 FastScroller 위 그림처럼 보통 갤러리나 수많은 아이템을 보여줄 때, 순차적으로 스크롤하여 접근하는 대신 스크롤 바를 잡고 바로 이동하는 것을 말합니다.&lt;/p&gt;
 
 </description>
@@ -26,7 +41,8 @@ FastScroller 위 그림처럼 보통 갤러리나 수많은 아이템을 보여�
       <item>
         <title>reboot</title>
         
-          <description>&lt;p&gt;다시 시작&lt;/p&gt;
+          <description>&lt;p&gt;다시 시작합니다.
+BLOG, MRSK project&lt;/p&gt;
 
 </description>
         

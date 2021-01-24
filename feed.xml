@@ -1,4 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://mond-al.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mond-al.github.io/" rel="alternate" type="text/html" /><updated>2021-01-24T11:07:33+09:00</updated><id>https://mond-al.github.io/</id><title type="html">Developer/App/Android/mond &amp;gt; Log</title><subtitle>안드로이드 개발 로깅.</subtitle><entry><title type="html">Recyclerview Fastscroller Review</title><link href="https://mond-al.github.io/fast-scroller" rel="alternate" type="text/html" title="Recyclerview Fastscroller Review" /><published>2021-01-18T00:00:00+09:00</published><updated>2021-01-18T00:00:00+09:00</updated><id>https://mond-al.github.io/fast-scroller</id><content type="html" xml:base="https://mond-al.github.io/fast-scroller">&lt;p&gt;&lt;img src=&quot;assets/movie/2021-01-18-fast-scroller/samsung_fastscroll.gif&quot; alt=&quot;drawing&quot; width=&quot;200&quot; /&gt;&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://mond-al.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mond-al.github.io/" rel="alternate" type="text/html" /><updated>2021-01-24T14:24:17+09:00</updated><id>https://mond-al.github.io/</id><title type="html">Developer/App/Android/mond &amp;gt; Log</title><subtitle>안드로이드 개발 로깅.</subtitle><entry><title type="html">테스트용 이미지 다운로드</title><link href="https://mond-al.github.io/test-image" rel="alternate" type="text/html" title="테스트용 이미지 다운로드" /><published>2021-01-22T00:00:00+09:00</published><updated>2021-01-22T00:00:00+09:00</updated><id>https://mond-al.github.io/test-image</id><content type="html" xml:base="https://mond-al.github.io/test-image">&lt;p&gt;개발하다 보면 이미지 소스들이 필요한 경우가 있습니다. 혼자서 테스트할 때는 개인폰에 저장하고, 직접 촬영한 이미지를기반으로 작업 가능하지만 개발중인 화면을 다른 누군가에게 보여줄 때는 사생활이 공개될까 조심스럽기도 하구요.&lt;/p&gt;
+
+&lt;p&gt;이것을 예제앱에 포함하고 싶을때 적당한 이미지를 구한다는건 상당히 신경쓰이는 일 입니다.&lt;/p&gt;
+
+&lt;p&gt;그래서 준비해봤습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;여러장의-이미지가-필요할-때&quot;&gt;여러장의 이미지가 필요할 때&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;http://unsample.net&quot;&gt;http://unsample.net&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://unsplash.com&quot;&gt;이미지 공유 사이트 unsplash&lt;/a&gt;를 기반으로 zip으로 묶어서 한번에 다운로드.&lt;/li&gt;
+  &lt;li&gt;한번에 원하는 크기의 이미지를 최대 30장을 묶어서 내려받을 수 있습니다.&lt;/li&gt;
+  &lt;li&gt;필요한 이미지 갯수, width/height, quality를 지정 가능하고, 원한다면 특정 이미지를 검색해서 모을 수 있습니다.&lt;/li&gt;
+  &lt;li&gt;모든 사진은 무료 로 다운로드 하여 사용할 수 있습니다.&lt;/li&gt;
+  &lt;li&gt;심지어 상업적 및 비상업적 목적 모두 사용도 가능합니다. 이미지 자체를 판매는 금지!.&lt;/li&gt;
+  &lt;li&gt;샘플앱에 넣어서 사용하는 것도 가능 하겠네요. :~)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;간단한-테스트용-이미지를-만들어서-구분해서-쓰고-싶을-때&quot;&gt;간단한 테스트용 이미지를 만들어서 구분해서 쓰고 싶을 때&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://www.websiteplanet.com/webtools/dummy-images-generator&quot;&gt;https://www.websiteplanet.com/webtools/dummy-images-generator&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;width x height, 배경색, 글자색, format을 지정하면 바로 이미지로 다운로드 가능.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;혹시 한번에 1부터 100까지 쓰여진 이미지를 만들어서 다운받을 수 있는 곳은 없을까요? 제보 부탁드립니다. 🙇‍♂️&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>jisoo Yang</name></author><category term="test" /><category term="image" /><summary type="html">개발하다 보면 이미지 소스들이 필요한 경우가 있습니다. 혼자서 테스트할 때는 개인폰에 저장하고, 직접 촬영한 이미지를기반으로 작업 가능하지만 개발중인 화면을 다른 누군가에게 보여줄 때는 사생활이 공개될까 조심스럽기도 하구요.</summary></entry><entry><title type="html">Recyclerview Fastscroller Review</title><link href="https://mond-al.github.io/fast-scroller" rel="alternate" type="text/html" title="Recyclerview Fastscroller Review" /><published>2021-01-18T00:00:00+09:00</published><updated>2021-01-18T00:00:00+09:00</updated><id>https://mond-al.github.io/fast-scroller</id><content type="html" xml:base="https://mond-al.github.io/fast-scroller">&lt;p&gt;&lt;img src=&quot;assets/images/post/2021-01-18-fast-scroller/samsung_fastscroll.gif&quot; alt=&quot;drawing&quot; width=&quot;200&quot; /&gt;&lt;br /&gt;
 FastScroller 위 그림처럼 보통 갤러리나 수많은 아이템을 보여줄 때, 순차적으로 스크롤하여 접근하는 대신 스크롤 바를 잡고 바로 이동하는 것을 말합니다.&lt;/p&gt;
 
 &lt;p&gt;Recyclerview 위젯은 &lt;a href=&quot;https://android.googlesource.com/platform/frameworks/support/+/androidx-main/recyclerview/recyclerview/src/main/java/androidx/recyclerview/widget/FastScroller.java&quot;&gt;FastScroller&lt;/a&gt;를 가지고있고 RecyclerView를 xml로 정의할때 &lt;code class=&quot;highlighter-rouge&quot;&gt;app:fastScrollEnabled=&quot;true&quot;&lt;/code&gt; 한줄만 넣어주면 해당기능을 지원 할 것 처럼 생겼습니다. 역시 구글형!&lt;/p&gt;
@@ -74,7 +102,7 @@ FastScroller 위 그림처럼 보통 갤러리나 수많은 아이템을 보여�
 
 &lt;h3 id=&quot;터치-할-수-없는-스크롤바&quot;&gt;터치 할 수 없는 스크롤바&lt;/h3&gt;
 
-&lt;p&gt;아이템의 수가 적을때는 아쉬운 점이 있어도 그나마 사용하는데 문제는 없었습니다. 하지만, 아이템의 수가 늘어나면 스크롤이 길어지고 thumb의 높이는 0px로 수렴하게됩니다. 아쉽게도 일정크기를 유지 하도록 하는 옵션이 제공되지 않습니다. 아이템이 1000개만 넘어가도 이미 손가락으로 터치는 불가능할 정도로 작아집니다.  이 문제는 구글 이슈트레커에 등록된지 4년째 이지만 진행되는 내용은 없는 것 같습니다.(&lt;a href=&quot;https://issuetracker.google.com/issues/64729576&quot;&gt;link&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;아이템의 수가 적을때는 아쉬운 점이 있어도 그나마 사용하는데 문제는 없었습니다. 하지만, 아이템의 수가 늘어나면 스크롤이 길어지고 thumb의 높이는 0px로 수렴하게됩니다. 아쉽게도 일정크기를 유지 하도록 하는 옵션이 제공되지 않습니다. 아이템이 1000개만 넘어가도 이미 손가락으로 터치는 불가능할 정도로 작아집니다.  이 문제는 구글 이슈트레커에 등록된지 4년째 이지만 진행되는 내용은 없는 것 같습니다.(&lt;a href=&quot;https://issuetracker.google.com/issues/64729576&quot;&gt;https://issuetracker.google.com/issues/64729576&lt;/a&gt;)&lt;/p&gt;
 
 &lt;h3 id=&quot;바인드-지옥&quot;&gt;바인드 지옥&lt;/h3&gt;
 
@@ -86,11 +114,12 @@ FastScroller 위 그림처럼 보통 갤러리나 수많은 아이템을 보여�
 
 &lt;h3 id=&quot;결론--그래서-fastscroller-를-직접-구현-하게-되었습니다&quot;&gt;결론 : 그래서 FastScroller 를 직접 구현 하게 되었습니다.&lt;/h3&gt;
 
-&lt;p&gt;다음편에서는 직접 구현한 FastScroller를 살펴보겠습니다. 물론 앞으로 개선되어야 할 부분이 많지만, 0.1이라는 버전에 걸맞지 않게 상당히 본래 목적에 맞게 잘 동작합니다.&lt;/p&gt;
+&lt;p&gt;다음편에서는 직접 구현한 FastScroller를 살펴보겠습니다. 물론 앞으로 개선되어야 할 부분이 많지만 일단은 잘 동작합니다.&lt;/p&gt;
 
 &lt;h3 id=&quot;한번-써보세요-&quot;&gt;한번 써보세요~ 👍&lt;/h3&gt;
 
-&lt;p&gt;link : &lt;a href=&quot;https://github.com/mond-al/recyclerview-fastscroller&quot;&gt;https://github.com/mond-al/recyclerview-fastscroller&lt;/a&gt;&lt;/p&gt;</content><author><name>jisoo Yang</name></author><category term="android" /><category term="recyclerview" /><category term="fastscroller" /><summary type="html">FastScroller 위 그림처럼 보통 갤러리나 수많은 아이템을 보여줄 때, 순차적으로 스크롤하여 접근하는 대신 스크롤 바를 잡고 바로 이동하는 것을 말합니다.</summary></entry><entry><title type="html">reboot</title><link href="https://mond-al.github.io/about-reboot" rel="alternate" type="text/html" title="reboot" /><published>2021-01-12T00:00:00+09:00</published><updated>2021-01-12T00:00:00+09:00</updated><id>https://mond-al.github.io/about-reboot</id><content type="html" xml:base="https://mond-al.github.io/about-reboot">&lt;p&gt;다시 시작&lt;/p&gt;
+&lt;p&gt;link : &lt;a href=&quot;https://github.com/mond-al/recyclerview-fastscroller&quot;&gt;https://github.com/mond-al/recyclerview-fastscroller&lt;/a&gt;&lt;/p&gt;</content><author><name>jisoo Yang</name></author><category term="android" /><category term="recyclerview" /><category term="fastscroller" /><summary type="html">FastScroller 위 그림처럼 보통 갤러리나 수많은 아이템을 보여줄 때, 순차적으로 스크롤하여 접근하는 대신 스크롤 바를 잡고 바로 이동하는 것을 말합니다.</summary></entry><entry><title type="html">reboot</title><link href="https://mond-al.github.io/about-reboot" rel="alternate" type="text/html" title="reboot" /><published>2021-01-12T00:00:00+09:00</published><updated>2021-01-12T00:00:00+09:00</updated><id>https://mond-al.github.io/about-reboot</id><content type="html" xml:base="https://mond-al.github.io/about-reboot">&lt;p&gt;다시 시작합니다.
+BLOG, MRSK project&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Blog&lt;/p&gt;
@@ -113,4 +142,4 @@ FastScroller 위 그림처럼 보통 갤러리나 수많은 아이템을 보여�
 (https://github.com/mond-al/RecyclerView-Support)&lt;/li&gt;
   &lt;li&gt;조금 구성이 필요한 것은 별도로 배포할 예정입니다.
 (https://github.com/mond-al/recyclerview-fastscroller)&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>jisoo Yang</name></author><summary type="html">다시 시작</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>jisoo Yang</name></author><summary type="html">다시 시작합니다. BLOG, MRSK project</summary></entry></feed>
