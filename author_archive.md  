@@ -170,7 +170,7 @@ into the {body} of the default.hbs template -->
   	<li><a href="#android" class="tag"><span class="term alltags">android</span> <span class="count alltags">1</span></a></li>
   
     
-  	<li><a href="#fastscroll" class="tag"><span class="term alltags">fastscroll</span> <span class="count alltags">1</span></a></li>
+  	<li><a href="#fastscroller" class="tag"><span class="term alltags">fastscroller</span> <span class="count alltags">1</span></a></li>
   
     
   	<li><a href="#recyclerview" class="tag"><span class="term alltags">recyclerview</span> <span class="count alltags">1</span></a></li>
@@ -183,19 +183,19 @@ into the {body} of the default.hbs template -->
 	<h2 id="android" class="tag-heading">ANDROID</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/fast-scroller" target="_blank" title="Android Recyclerview Fastscroll Review">Android Recyclerview Fastscroll Review</a></li> -->
-      <li class="entry-title"><a href="/fast-scroller" target="_blank" title="Android Recyclerview Fastscroll Review">Android Recyclerview Fastscroll Review</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/fast-scroller" target="_blank" title="Recyclerview Fastscroller Review">Recyclerview Fastscroller Review</a></li> -->
+      <li class="entry-title"><a href="/fast-scroller" target="_blank" title="Recyclerview Fastscroller Review">Recyclerview Fastscroller Review</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
 
   
 	<article>
-	<h2 id="fastscroll" class="tag-heading">FASTSCROLL</h2>
+	<h2 id="fastscroller" class="tag-heading">FASTSCROLLER</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/fast-scroller" target="_blank" title="Android Recyclerview Fastscroll Review">Android Recyclerview Fastscroll Review</a></li> -->
-      <li class="entry-title"><a href="/fast-scroller" target="_blank" title="Android Recyclerview Fastscroll Review">Android Recyclerview Fastscroll Review</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/fast-scroller" target="_blank" title="Recyclerview Fastscroller Review">Recyclerview Fastscroller Review</a></li> -->
+      <li class="entry-title"><a href="/fast-scroller" target="_blank" title="Recyclerview Fastscroller Review">Recyclerview Fastscroller Review</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -205,8 +205,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="recyclerview" class="tag-heading">RECYCLERVIEW</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/fast-scroller" target="_blank" title="Android Recyclerview Fastscroll Review">Android Recyclerview Fastscroll Review</a></li> -->
-      <li class="entry-title"><a href="/fast-scroller" target="_blank" title="Android Recyclerview Fastscroll Review">Android Recyclerview Fastscroll Review</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/fast-scroller" target="_blank" title="Recyclerview Fastscroller Review">Recyclerview Fastscroller Review</a></li> -->
+      <li class="entry-title"><a href="/fast-scroller" target="_blank" title="Recyclerview Fastscroller Review">Recyclerview Fastscroller Review</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->

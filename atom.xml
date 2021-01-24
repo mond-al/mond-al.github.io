@@ -8,9 +8,10 @@
     
       
       <item>
-        <title>Android Recyclerview Fastscroll Review</title>
+        <title>Recyclerview Fastscroller Review</title>
         
-          <description>&lt;p&gt;feat. RecyclerView FastScroller를 직접 만든 이유.&lt;/p&gt;
+          <description>&lt;p&gt;&lt;img src=&quot;assets/movie/2021-01-18-fast-scroller/samsung_fastscroll.gif&quot; alt=&quot;drawing&quot; width=&quot;200&quot; /&gt;&lt;br /&gt;
+FastScroller 위 그림처럼 보통 갤러리나 수많은 아이템을 보여줄 때, 순차적으로 스크롤하여 접근하는 대신 스크롤 바를 잡고 바로 이동하는 것을 말합니다.&lt;/p&gt;
 
 </description>
         
