@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/android/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-01-24T02:36:32+09:00</updated>
+  <updated>2021-01-24T10:56:53+09:00</updated>
   <id>https://mond-al.github.io/tag/android/feed.xml</id>
 
   
@@ -32,18 +32,18 @@
 
   
     <entry>
-      <title type="html">android Recyclerview Fastscroll</title>
-      <link href="https://mond-al.github.io/fast-scroller" rel="alternate" type="text/html" title="android Recyclerview Fastscroll" />
+      <title type="html">Android Recyclerview Fastscroll Review</title>
+      <link href="https://mond-al.github.io/fast-scroller" rel="alternate" type="text/html" title="Android Recyclerview Fastscroll Review" />
       <published>2021-01-18T00:00:00+09:00</published>
       <updated>2021-01-18T00:00:00+09:00</updated>
       <id>https://mond-al.github.io/fast-scroller</id>
-      <content type="html" xml:base="https://mond-al.github.io/fast-scroller">&lt;p&gt;RecyclerView FastScroller를 직접 만든 이유.&lt;/p&gt;
+      <content type="html" xml:base="https://mond-al.github.io/fast-scroller">&lt;p&gt;feat. RecyclerView FastScroller를 직접 만든 이유.&lt;/p&gt;
 
 &lt;h2 id=&quot;fastscroll&quot;&gt;FastScroll&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;assets/movie/2021-01-18-fast-scroller/samsung_fastscroll.gif&quot; alt=&quot;drawing&quot; width=&quot;200&quot; /&gt;&lt;br /&gt;
 Fast Scroll은 위 그림처럼 보통 갤러리나 수많은 아이템을 보여줄 때, 순차적으로 스크롤하여 접근하는 대신 스크롤 바를 잡고 바로 이동하는 것을 말합니다.&lt;/p&gt;
 
-&lt;p&gt;Recyclerview 위젯은 이미 &lt;a href=&quot;https://android.googlesource.com/platform/frameworks/support/+/androidx-main/recyclerview/recyclerview/src/main/java/androidx/recyclerview/widget/FastScroller.java&quot;&gt;FastScroller&lt;/a&gt;를 가지고있고 RecyclerView를 xml로 정의할때 &lt;code class=&quot;highlighter-rouge&quot;&gt;app:fastScrollEnabled=&quot;true&quot;&lt;/code&gt; 한줄만 넣어주면 해당기능을 지원 할 것 처럼 생겼습니다.&lt;/p&gt;
+&lt;p&gt;Recyclerview 위젯은 &lt;a href=&quot;https://android.googlesource.com/platform/frameworks/support/+/androidx-main/recyclerview/recyclerview/src/main/java/androidx/recyclerview/widget/FastScroller.java&quot;&gt;FastScroller&lt;/a&gt;를 가지고있고 RecyclerView를 xml로 정의할때 &lt;code class=&quot;highlighter-rouge&quot;&gt;app:fastScrollEnabled=&quot;true&quot;&lt;/code&gt; 한줄만 넣어주면 해당기능을 지원 할 것 처럼 생겼습니다. 역시 구글형!&lt;/p&gt;
 
 &lt;h2 id=&quot;하지만-이-클래스는-그림의-떡-입니다&quot;&gt;하지만 이 클래스는 그림의 떡 입니다.&lt;/h2&gt;
 
@@ -63,8 +63,7 @@ Fast Scroll은 위 그림처럼 보통 갤러리나 수많은 아이템을 보�
 
 &lt;p&gt;RecyclerView의 생성자에서 FastScroller 객체를 만들때 자기 자신을 생성자에 넘겨 버리는 것으로 완료되어 버립니다. 더 이상 RecyclerView 객체에서 접근 할 수 없게 되어 버렸습니다.  (&lt;a href=&quot;https://android.googlesource.com/platform/frameworks/support/+/androidx-main/recyclerview/recyclerview/src/main/java/androidx/recyclerview/widget/RecyclerView.java#738&quot;&gt;link&lt;/a&gt;)&lt;/p&gt;
 
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@VisibleForTesting&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initFastScroller&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StateListDrawable&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verticalThumbDrawable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initFastScroller&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StateListDrawable&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verticalThumbDrawable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;Resources&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resources&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getResources&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;// 왜죠? 구글형? 무책임하게 생성만 하고 끝이라니요.&lt;/span&gt;
@@ -160,7 +159,7 @@ Fast Scroll은 위 그림처럼 보통 갤러리나 수많은 아이템을 보�
       
 
       
-        <summary type="html">RecyclerView FastScroller를 직접 만든 이유.</summary>
+        <summary type="html">feat. RecyclerView FastScroller를 직접 만든 이유.</summary>
       
 
       
