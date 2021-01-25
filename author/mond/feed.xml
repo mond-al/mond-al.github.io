@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/author/mond/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-01-25T10:41:49+09:00</updated>
+  <updated>2021-01-25T10:45:26+09:00</updated>
   <id>https://mond-al.github.io/author/mond/feed.xml</id>
 
   
@@ -55,16 +55,16 @@
   &lt;li&gt;샘플앱에 넣어서 사용하는 것도 가능 하겠네요. :~)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;간단한-테스트용-이미지를-만들어서-구분해서-쓰고-싶을-때&quot;&gt;간단한 테스트용 이미지를 만들어서 구분해서 쓰고 싶을 때&lt;/h2&gt;
+&lt;h2 id=&quot;더미-이미지가-필요할-때&quot;&gt;더미 이미지가 필요할 때&lt;/h2&gt;
 &lt;blockquote&gt;
   &lt;p&gt;&lt;a href=&quot;https://www.websiteplanet.com/webtools/dummy-images-generator&quot;&gt;https://www.websiteplanet.com/webtools/dummy-images-generator&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/images/post/2021-01-22-test-image/dummy-images-generator.png&quot; alt=&quot;drawing&quot; width=&quot;200&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/post/2021-01-22-test-image/dummy-images-generator.png&quot; alt=&quot;title&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;width x height, 배경색, 글자색, format을 지정하면 바로 이미지로 다운로드 가능.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;혹시 한번에 1부터 100까지 쓰여진 이미지를 만들어서 다운받을 수 있는 곳은 없을까요? 제보 부탁드립니다. 🙇‍♂️&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;혹시 한번에 1부터 1000?까지 쓰여진 이미지를 만들어서 다운받을 수 있는 곳은 없을까요? 제보 부탁드립니다. 🙇‍♂️&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;</content>
 
       
