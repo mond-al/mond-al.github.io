@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://mond-al.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mond-al.github.io/" rel="alternate" type="text/html" /><updated>2021-01-25T10:36:42+09:00</updated><id>https://mond-al.github.io/</id><title type="html">Developer/App/Android/mond &amp;gt; Log</title><subtitle>안드로이드 개발 로깅.</subtitle><entry><title type="html">테스트용 이미지 다운로드</title><link href="https://mond-al.github.io/test-image" rel="alternate" type="text/html" title="테스트용 이미지 다운로드" /><published>2021-01-22T00:00:00+09:00</published><updated>2021-01-22T00:00:00+09:00</updated><id>https://mond-al.github.io/test-image</id><content type="html" xml:base="https://mond-al.github.io/test-image">&lt;p&gt;기능 테스트를 하다 보면 이미지 소스들이 필요한 경우가 있습니다. 때로는 예제앱에 이미지를 포함하고 싶을때 적당한 이미지를 선택하는것도 은근 신경쓰이는 일 입니다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://mond-al.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mond-al.github.io/" rel="alternate" type="text/html" /><updated>2021-01-25T10:41:49+09:00</updated><id>https://mond-al.github.io/</id><title type="html">Developer/App/Android/mond &amp;gt; Log</title><subtitle>안드로이드 개발 로깅.</subtitle><entry><title type="html">테스트용 이미지 다운로드</title><link href="https://mond-al.github.io/test-image" rel="alternate" type="text/html" title="테스트용 이미지 다운로드" /><published>2021-01-22T00:00:00+09:00</published><updated>2021-01-22T00:00:00+09:00</updated><id>https://mond-al.github.io/test-image</id><content type="html" xml:base="https://mond-al.github.io/test-image">&lt;p&gt;기능 테스트를 하다 보면 이미지 소스들이 필요한 경우가 있습니다. 때로는 예제앱에 이미지를 포함하고 싶을때 적당한 이미지를 선택하는것도 은근 신경쓰이는 일 입니다.&lt;/p&gt;
 
 &lt;p&gt;그래서 준비해봤습니다.&lt;/p&gt;
 
@@ -20,6 +20,8 @@
 &lt;blockquote&gt;
   &lt;p&gt;&lt;a href=&quot;https://www.websiteplanet.com/webtools/dummy-images-generator&quot;&gt;https://www.websiteplanet.com/webtools/dummy-images-generator&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/post/2021-01-22-test-image/dummy-images-generator.png&quot; alt=&quot;drawing&quot; width=&quot;200&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;width x height, 배경색, 글자색, format을 지정하면 바로 이미지로 다운로드 가능.&lt;/li&gt;
