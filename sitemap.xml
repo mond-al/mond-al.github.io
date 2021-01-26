@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>https://mond-al.github.io/dependency-gradle</loc>
+    </url>
+    
+    <url>
         <loc>https://mond-al.github.io/test-image</loc>
     </url>
     
@@ -105,6 +109,26 @@
     
     <url>
         <loc>https://mond-al.github.io/tag/image/</loc>
+    </url>
+    
+    
+    
+    
+    
+    
+    
+    <url>
+        <loc>https://mond-al.github.io/tag/gradle/</loc>
+    </url>
+    
+    
+    
+    
+    
+    
+    
+    <url>
+        <loc>https://mond-al.github.io/tag/dependency/</loc>
     </url>
     
     

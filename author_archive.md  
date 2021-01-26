@@ -167,10 +167,16 @@ into the {body} of the default.hbs template -->
 <ul class="entry-meta inline-list">
   
     
-  	<li><a href="#android" class="tag"><span class="term alltags">android</span> <span class="count alltags">1</span></a></li>
+  	<li><a href="#android" class="tag"><span class="term alltags">android</span> <span class="count alltags">2</span></a></li>
+  
+    
+  	<li><a href="#dependency" class="tag"><span class="term alltags">dependency</span> <span class="count alltags">1</span></a></li>
   
     
   	<li><a href="#fastscroller" class="tag"><span class="term alltags">fastscroller</span> <span class="count alltags">1</span></a></li>
+  
+    
+  	<li><a href="#gradle" class="tag"><span class="term alltags">gradle</span> <span class="count alltags">1</span></a></li>
   
     
   	<li><a href="#image" class="tag"><span class="term alltags">image</span> <span class="count alltags">1</span></a></li>
@@ -189,8 +195,22 @@ into the {body} of the default.hbs template -->
 	<h2 id="android" class="tag-heading">ANDROID</h2>
 		<ul>
     
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/dependency-gradle" target="_blank" title="앱의 의존성 트리">앱의 의존성 트리</a></li> -->
+      <li class="entry-title"><a href="/dependency-gradle" target="_blank" title="앱의 의존성 트리">앱의 의존성 트리</a></li>
+    
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/fast-scroller" target="_blank" title="Recyclerview Fastscroller Review">Recyclerview Fastscroller Review</a></li> -->
       <li class="entry-title"><a href="/fast-scroller" target="_blank" title="Recyclerview Fastscroller Review">Recyclerview Fastscroller Review</a></li>
+    
+		</ul>
+	</article><!-- /.hentry -->
+
+  
+	<article>
+	<h2 id="dependency" class="tag-heading">DEPENDENCY</h2>
+		<ul>
+    
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/dependency-gradle" target="_blank" title="앱의 의존성 트리">앱의 의존성 트리</a></li> -->
+      <li class="entry-title"><a href="/dependency-gradle" target="_blank" title="앱의 의존성 트리">앱의 의존성 트리</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -202,6 +222,17 @@ into the {body} of the default.hbs template -->
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/fast-scroller" target="_blank" title="Recyclerview Fastscroller Review">Recyclerview Fastscroller Review</a></li> -->
       <li class="entry-title"><a href="/fast-scroller" target="_blank" title="Recyclerview Fastscroller Review">Recyclerview Fastscroller Review</a></li>
+    
+		</ul>
+	</article><!-- /.hentry -->
+
+  
+	<article>
+	<h2 id="gradle" class="tag-heading">GRADLE</h2>
+		<ul>
+    
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/dependency-gradle" target="_blank" title="앱의 의존성 트리">앱의 의존성 트리</a></li> -->
+      <li class="entry-title"><a href="/dependency-gradle" target="_blank" title="앱의 의존성 트리">앱의 의존성 트리</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
