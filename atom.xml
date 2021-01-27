@@ -8,17 +8,16 @@
     
       
       <item>
-        <title>앱의 의존성 트리</title>
+        <title>ProductFlavors와 BuildType (작성중)</title>
         
-          <description>&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./gradlew app:dependencies &lt;span class=&quot;nt&quot;&gt;--configuration&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;flavors&lt;span class=&quot;o&quot;&gt;}{&lt;/span&gt;buildType&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;RuntimeClasspath
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+          <description>&lt;p&gt;ProductFlavors와 BuildType을 이용해서 변화하는 결과물을 바꿔보자.&lt;/p&gt;
 
 </description>
         
         <pubDate>Tue, 26 Jan 2021 00:00:00 +0900</pubDate>
         <link>
-        https://mond-al.github.io/dependency-gradle</link>
-        <guid isPermaLink="true">https://mond-al.github.io/dependency-gradle</guid>
+        https://mond-al.github.io/ProductFlavors-BuildType</link>
+        <guid isPermaLink="true">https://mond-al.github.io/ProductFlavors-BuildType</guid>
       </item>
       
     

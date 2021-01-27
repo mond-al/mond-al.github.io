@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/android/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-01-26T16:40:08+09:00</updated>
+  <updated>2021-01-28T03:41:56+09:00</updated>
   <id>https://mond-al.github.io/tag/android/feed.xml</id>
 
   
@@ -32,21 +32,104 @@
 
   
     <entry>
-      <title type="html">앱의 의존성 트리</title>
-      <link href="https://mond-al.github.io/dependency-gradle" rel="alternate" type="text/html" title="앱의 의존성 트리" />
+      <title type="html">ProductFlavors와 BuildType (작성중)</title>
+      <link href="https://mond-al.github.io/ProductFlavors-BuildType" rel="alternate" type="text/html" title="ProductFlavors와 BuildType (작성중)" />
       <published>2021-01-26T00:00:00+09:00</published>
       <updated>2021-01-26T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/dependency-gradle</id>
-      <content type="html" xml:base="https://mond-al.github.io/dependency-gradle">&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./gradlew app:dependencies &lt;span class=&quot;nt&quot;&gt;--configuration&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;flavors&lt;span class=&quot;o&quot;&gt;}{&lt;/span&gt;buildType&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;RuntimeClasspath
+      <id>https://mond-al.github.io/ProductFlavors-BuildType</id>
+      <content type="html" xml:base="https://mond-al.github.io/ProductFlavors-BuildType">&lt;p&gt;ProductFlavors와 BuildType을 이용해서 변화하는 결과물을 바꿔보자.&lt;/p&gt;
+
+&lt;p&gt;서비스가 점점 커지다 보면 일명 “OO향”빌드를 배포해야하는 경우나 “XX용”빌드를 따로 뽑아야하는 경우가 생깁니다. 가령 예를 들자면 “중국향”과 “국내향”처럼 나눌수 있을 것이고, “개발용”,”QA용”,”내부배포용”,”실서비스용”으로도 나눌 수도 있습니다.&lt;/p&gt;
+
+&lt;p&gt;문득 첫직장에서 ~~향 이라는 말을 들었을때 “향”의 의미가 direction(向,향하다)의 의미라 생각했는데, 지금생각해보면 Flavors(香,향기)의 의미가 더 적절한거 같습니다.&lt;/p&gt;
+
+&lt;p&gt;지금은 Gradle을 기반으로 BuildTypes은 기본으로하고 ProductFlavors에 여러가지 dimension을 정의하여 조합하여 빌드를 간편하게 생산 할 수있습니다. 간략한 예를 들어 상황을 정의하고 실제 build.gradle 파일을 수정해 보겠습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;간단한-시나리오&quot;&gt;간단한 시나리오.&lt;/h3&gt;
+
+&lt;p&gt;다양한 환경에 배포를 목표로 하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;오레오&lt;/code&gt;라는 앱이 있습니다.
+개발 단계는 &lt;code class=&quot;highlighter-rouge&quot;&gt;개발&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;QA&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;배포단계&lt;/code&gt;로 진행됩니다. 앱은 &lt;code class=&quot;highlighter-rouge&quot;&gt;GooglePlay&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;OneStore&lt;/code&gt;에 등록합니다. 각 마켓별로 다른 프로모션을 적용 할 예정이기 때문에 빌드에 따라 앱이 다르게 동작해야합니다. 그리고 GooglePlay에서는 &lt;code class=&quot;highlighter-rouge&quot;&gt;초코오레오&lt;/code&gt; 라는 이름으로 등록되고, OneStore에서는 &lt;code class=&quot;highlighter-rouge&quot;&gt;치즈오레오&lt;/code&gt;로 등록됩니다. 두 앱은 동시에 설치가 가능합니다.&lt;/p&gt;
+
+&lt;p&gt;Android Studio에서 기본 프로젝트중 가장 단순한 Empty Activity를 기반으로 프로젝트를 생성합니다.
+app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;android&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;compileSdkVersion&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;buildToolsVersion&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;30.0.2&quot;&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;defaultConfig&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;applicationId&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;com.al.mond.oreo&quot;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;minSdkVersion&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;23&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;targetSdkVersion&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;versionCode&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;versionName&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;1.0&quot;&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;testInstrumentationRunner&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;androidx.test.runner.AndroidJUnitRunner&quot;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;buildTypes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;release&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;minifyEnabled&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;proguardFiles&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getDefaultProguardFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'proguard-android-optimize.txt'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'proguard-rules.pro'&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;compileOptions&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;sourceCompatibility&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;JavaVersion&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;VERSION_1_8&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;targetCompatibility&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;JavaVersion&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;VERSION_1_8&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;kotlinOptions&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;jvmTarget&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.8'&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Ex)&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./gradlew app:dependencies &lt;span class=&quot;nt&quot;&gt;--configuration&lt;/span&gt; cbtDebugRuntimeClasspath
-./gradlew app:dependencies &lt;span class=&quot;nt&quot;&gt;--configuration&lt;/span&gt; betaReleaseRuntimeClasspath &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; dependency.log
+&lt;p&gt;우선 buildType을 나누어보겠습니다. buildTypes만 간추려서 다시 정의해보겠습니다.&lt;/p&gt;
 
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;c1&quot;&gt;// 동일한 개발환경 제공하기 위해 debug.keystore도 함께 공유합니다.&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;signingConfigs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;debug&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;storeFile&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'debug.keystore'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;release&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;storeFile&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'oreo.keystore'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;storePassword&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;*********&quot;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;keyAlias&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;cheesecake&quot;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;keyPassword&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;*******&quot;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;buildTypes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;release&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//스토어 배포&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;signingConfig&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;signingConfigs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;release&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;minifyEnabled&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;debuggable&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;proguardFiles&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getDefaultProguardFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'proguard-android-optimize.txt'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'proguard-rules.pro'&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;inhouse&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//내부 배포&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;initWith&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;release&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;minifyEnabled&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;debuggable&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;dev&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//개발&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;signingConfig&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;signingConfigs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;debug&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;minifyEnabled&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;debuggable&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://i.stack.imgur.com/yRb2u.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content>
+&lt;p&gt;BuildTypes는 목적이 뚜렷하고 이미 속성들이 잘 갖추어 져 있기때문에 금방 끝났습니다. Gradle은 다음과 같은 우선순위 단계에 따라 중복 리소스를 병합합니다. 이제 Store에 따라 환경을 나누어 추가해 보겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;종속 항목 → 기본 → 빌드 버전 → 빌드 유형
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;갑자기 영업팀이 좋은 프로모션을 제안받았다고 baidu에도 등록 할 수 있도록 요청합니다. 
+참고로 중국에서는 Google API를 호출하면 응답을 받을 수 없습니다. 때문에 PlayStore에 배포된 앱을 중국에 가져가서 실행하면 보통 시작하자마자 push Token을 받지 못하고 죽어버리거나 정상적인 동작이 되지 않습니다. 대신 Baidu에서는 구글과 거의 비슷한 형태의 API를 제공해 주고 있습니다. 때문에 빌드 설정에 따라 실제 앱의 동작도 다르게 분기되어야 하는 부분들이 생깁니다.&lt;/p&gt;</content>
 
       
       
@@ -67,11 +150,13 @@
       
         <category term="gradle" />
       
-        <category term="dependency" />
+        <category term="ProductFlavors" />
+      
+        <category term="BuildTypes" />
       
 
       
-        <summary type="html">./gradlew app:dependencies --configuration {flavors}{buildType}RuntimeClasspath</summary>
+        <summary type="html">ProductFlavors와 BuildType을 이용해서 변화하는 결과물을 바꿔보자.</summary>
       
 
       

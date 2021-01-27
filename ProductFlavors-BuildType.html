@@ -11,7 +11,7 @@
 
 
 
-    <title>앱의 의존성 트리</title>
+    <title>ProductFlavors와 BuildType (작성중)</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -44,48 +44,26 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="안드로이드 개발 로깅." />
     <link rel="shortcut icon" href="https://mond-al.github.io/assets/images/fav/favicon-96x96.png" type="image/png" />
-    <link rel="canonical" href="https://mond-al.github.io/dependency-gradle" />
+    <link rel="canonical" href="https://mond-al.github.io/ProductFlavors-BuildType" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="Developer/App/Android/mond > Log" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="앱의 의존성 트리" />
-    <meta property="og:description" content="./gradlew app:dependencies --configuration {flavors}{buildType}RuntimeClasspath
-
-
-Ex)
-./gradlew app:dependencies --configuration cbtDebugRuntimeClasspath
-./gradlew app:dependencies --configuration betaReleaseRuntimeClasspath &gt; dependency.log
-
-
-
-
-
-" />
-    <meta property="og:url" content="https://mond-al.github.io/dependency-gradle" />
-    <meta property="og:image" content="https://mond-al.github.io/assets/images/blog-cover.jpg" />
+    <meta property="og:title" content="ProductFlavors와 BuildType (작성중)" />
+    <meta property="og:description" content="ProductFlavors와 BuildType을 이용해서 변화하는 결과물을 바꿔보자. 서비스가 점점 커지다 보면 일명 “OO향”빌드를 배포해야하는 경우나 “XX용”빌드를 따로 뽑아야하는 경우가 생깁니다. 가령 예를 들자면 “중국향”과 “국내향”처럼 나눌수 있을 것이고, “개발용”,”QA용”,”내부배포용”,”실서비스용”으로도 나눌 수도 있습니다. 문득 첫직장에서 ~~향 이라는 말을 들었을때 “향”의 의미가 direction(向,향하다)의 의미라 생각했는데, 지금생각해보면 Flavors(香,향기)의 의미가 더 적절한거 같습니다. 지금은 Gradle을" />
+    <meta property="og:url" content="https://mond-al.github.io/ProductFlavors-BuildType" />
+    <meta property="og:image" content="https://mond-al.github.io/assets/images/post/2021-01-26-ProductFlavors-BuildType/cover.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
     <meta property="article:published_time" content="2021-01-26T00:00:00+09:00" />
     <meta property="article:modified_time" content="2021-01-26T00:00:00+09:00" />
     <meta property="article:tag" content="Android" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="앱의 의존성 트리" />
-    <meta name="twitter:description" content="./gradlew app:dependencies --configuration {flavors}{buildType}RuntimeClasspath
-
-
-Ex)
-./gradlew app:dependencies --configuration cbtDebugRuntimeClasspath
-./gradlew app:dependencies --configuration betaReleaseRuntimeClasspath &gt; dependency.log
-
-
-
-
-
-" />
+    <meta name="twitter:title" content="ProductFlavors와 BuildType (작성중)" />
+    <meta name="twitter:description" content="ProductFlavors와 BuildType을 이용해서 변화하는 결과물을 바꿔보자. 서비스가 점점 커지다 보면 일명 “OO향”빌드를 배포해야하는 경우나 “XX용”빌드를 따로 뽑아야하는 경우가 생깁니다. 가령 예를 들자면 “중국향”과 “국내향”처럼 나눌수 있을 것이고, “개발용”,”QA용”,”내부배포용”,”실서비스용”으로도 나눌 수도 있습니다. 문득 첫직장에서 ~~향 이라는 말을 들었을때 “향”의 의미가 direction(向,향하다)의 의미라 생각했는데, 지금생각해보면 Flavors(香,향기)의 의미가 더 적절한거 같습니다. 지금은 Gradle을" />
     <meta name="twitter:url" content="https://mond-al.github.io/" />
-    <meta name="twitter:image" content="https://mond-al.github.io/assets/images/blog-cover.jpg" />
+    <meta name="twitter:image" content="https://mond-al.github.io/assets/images/post/2021-01-26-ProductFlavors-BuildType/cover.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Developer/App/Android/mond > Log" />
     <meta name="twitter:label2" content="Filed under" />
@@ -104,29 +82,18 @@ Ex)
         "name": "Developer/App/Android/mond > Log",
         "logo": "https://mond-al.github.io/"
     },
-    "url": "https://mond-al.github.io/dependency-gradle",
+    "url": "https://mond-al.github.io/ProductFlavors-BuildType",
     "image": {
         "@type": "ImageObject",
-        "url": "https://mond-al.github.io/assets/images/blog-cover.jpg",
+        "url": "https://mond-al.github.io/assets/images/post/2021-01-26-ProductFlavors-BuildType/cover.png",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://mond-al.github.io/dependency-gradle"
+        "@id": "https://mond-al.github.io/ProductFlavors-BuildType"
     },
-    "description": "./gradlew app:dependencies --configuration {flavors}{buildType}RuntimeClasspath
-
-
-Ex)
-./gradlew app:dependencies --configuration cbtDebugRuntimeClasspath
-./gradlew app:dependencies --configuration betaReleaseRuntimeClasspath &gt; dependency.log
-
-
-
-
-
-"
+    "description": "ProductFlavors와 BuildType을 이용해서 변화하는 결과물을 바꿔보자. 서비스가 점점 커지다 보면 일명 “OO향”빌드를 배포해야하는 경우나 “XX용”빌드를 따로 뽑아야하는 경우가 생깁니다. 가령 예를 들자면 “중국향”과 “국내향”처럼 나눌수 있을 것이고, “개발용”,”QA용”,”내부배포용”,”실서비스용”으로도 나눌 수도 있습니다. 문득 첫직장에서 ~~향 이라는 말을 들었을때 “향”의 의미가 direction(向,향하다)의 의미라 생각했는데, 지금생각해보면 Flavors(香,향기)의 의미가 더 적절한거 같습니다. 지금은 Gradle을"
 }
     </script>
 
@@ -139,7 +106,7 @@ Ex)
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="앱의 의존성 트리" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="ProductFlavors와 BuildType (작성중)" href="/feed.xml" />
 
 
 </head>
@@ -190,7 +157,7 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-android tag-gradle tag-dependency  no-image">
+        <article class="post-full  tag-android tag-gradle tag-productflavors tag-buildtypes  ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
@@ -207,29 +174,118 @@ into the {body} of the default.hbs template -->
                             
                         
                             
-                               <a href='/tag/dependency/'>DEPENDENCY</a>
+                               <a href='/tag/productflavors/'>PRODUCTFLAVORS</a>,
+                            
+                        
+                            
+                               <a href='/tag/buildtypes/'>BUILDTYPES</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title">앱의 의존성 트리</h1>
+                <h1 class="post-full-title">ProductFlavors와 BuildType (작성중)</h1>
             </header>
 
-            <!---->
+            <!--
+            <figure class="post-full-image" style="background-image: url(/assets/images/post/2021-01-26-ProductFlavors-BuildType/cover.png)">
+            </figure>
+            -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./gradlew app:dependencies <span class="nt">--configuration</span> <span class="o">{</span>flavors<span class="o">}{</span>buildType<span class="o">}</span>RuntimeClasspath
+                    <p>ProductFlavors와 BuildType을 이용해서 변화하는 결과물을 바꿔보자.</p>
+
+<p>서비스가 점점 커지다 보면 일명 “OO향”빌드를 배포해야하는 경우나 “XX용”빌드를 따로 뽑아야하는 경우가 생깁니다. 가령 예를 들자면 “중국향”과 “국내향”처럼 나눌수 있을 것이고, “개발용”,”QA용”,”내부배포용”,”실서비스용”으로도 나눌 수도 있습니다.</p>
+
+<p>문득 첫직장에서 ~~향 이라는 말을 들었을때 “향”의 의미가 direction(向,향하다)의 의미라 생각했는데, 지금생각해보면 Flavors(香,향기)의 의미가 더 적절한거 같습니다.</p>
+
+<p>지금은 Gradle을 기반으로 BuildTypes은 기본으로하고 ProductFlavors에 여러가지 dimension을 정의하여 조합하여 빌드를 간편하게 생산 할 수있습니다. 간략한 예를 들어 상황을 정의하고 실제 build.gradle 파일을 수정해 보겠습니다.</p>
+
+<h3 id="간단한-시나리오">간단한 시나리오.</h3>
+
+<p>다양한 환경에 배포를 목표로 하는 <code class="highlighter-rouge">오레오</code>라는 앱이 있습니다.
+개발 단계는 <code class="highlighter-rouge">개발</code>,<code class="highlighter-rouge">QA</code>,<code class="highlighter-rouge">배포단계</code>로 진행됩니다. 앱은 <code class="highlighter-rouge">GooglePlay</code>,<code class="highlighter-rouge">OneStore</code>에 등록합니다. 각 마켓별로 다른 프로모션을 적용 할 예정이기 때문에 빌드에 따라 앱이 다르게 동작해야합니다. 그리고 GooglePlay에서는 <code class="highlighter-rouge">초코오레오</code> 라는 이름으로 등록되고, OneStore에서는 <code class="highlighter-rouge">치즈오레오</code>로 등록됩니다. 두 앱은 동시에 설치가 가능합니다.</p>
+
+<p>Android Studio에서 기본 프로젝트중 가장 단순한 Empty Activity를 기반으로 프로젝트를 생성합니다.
+app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수 있습니다.</p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">android</span> <span class="o">{</span>
+    <span class="n">compileSdkVersion</span> <span class="mi">30</span>
+    <span class="n">buildToolsVersion</span> <span class="s2">"30.0.2"</span>
+
+    <span class="n">defaultConfig</span> <span class="o">{</span>
+        <span class="n">applicationId</span> <span class="s2">"com.al.mond.oreo"</span>
+        <span class="n">minSdkVersion</span> <span class="mi">23</span>
+        <span class="n">targetSdkVersion</span> <span class="mi">30</span>
+        <span class="n">versionCode</span> <span class="mi">1</span>
+        <span class="n">versionName</span> <span class="s2">"1.0"</span>
+
+        <span class="n">testInstrumentationRunner</span> <span class="s2">"androidx.test.runner.AndroidJUnitRunner"</span>
+    <span class="o">}</span>
+
+    <span class="n">buildTypes</span> <span class="o">{</span>
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="n">minifyEnabled</span> <span class="kc">false</span>
+            <span class="n">proguardFiles</span> <span class="nf">getDefaultProguardFile</span><span class="o">(</span><span class="s1">'proguard-android-optimize.txt'</span><span class="o">),</span> <span class="s1">'proguard-rules.pro'</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="n">compileOptions</span> <span class="o">{</span>
+        <span class="n">sourceCompatibility</span> <span class="n">JavaVersion</span><span class="o">.</span><span class="na">VERSION_1_8</span>
+        <span class="n">targetCompatibility</span> <span class="n">JavaVersion</span><span class="o">.</span><span class="na">VERSION_1_8</span>
+    <span class="o">}</span>
+    <span class="n">kotlinOptions</span> <span class="o">{</span>
+        <span class="n">jvmTarget</span> <span class="o">=</span> <span class="s1">'1.8'</span>
+    <span class="o">}</span>
+<span class="o">}</span>
 </code></pre></div></div>
 
-<p>Ex)</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./gradlew app:dependencies <span class="nt">--configuration</span> cbtDebugRuntimeClasspath
-./gradlew app:dependencies <span class="nt">--configuration</span> betaReleaseRuntimeClasspath <span class="o">&gt;</span> dependency.log
+<p>우선 buildType을 나누어보겠습니다. buildTypes만 간추려서 다시 정의해보겠습니다.</p>
 
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1">// 동일한 개발환경 제공하기 위해 debug.keystore도 함께 공유합니다.</span>
+    <span class="n">signingConfigs</span> <span class="o">{</span>
+        <span class="n">debug</span> <span class="o">{</span>
+            <span class="n">storeFile</span> <span class="nf">file</span><span class="o">(</span><span class="s1">'debug.keystore'</span><span class="o">)</span>
+        <span class="o">}</span>
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="n">storeFile</span> <span class="nf">file</span><span class="o">(</span><span class="s1">'oreo.keystore'</span><span class="o">)</span>
+            <span class="n">storePassword</span> <span class="s2">"*********"</span>
+            <span class="n">keyAlias</span> <span class="s2">"cheesecake"</span>
+            <span class="n">keyPassword</span> <span class="s2">"*******"</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="n">buildTypes</span> <span class="o">{</span>
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="c1">//스토어 배포</span>
+            <span class="n">signingConfig</span> <span class="n">signingConfigs</span><span class="o">.</span><span class="na">release</span>
+            <span class="n">minifyEnabled</span> <span class="kc">true</span>
+            <span class="n">debuggable</span> <span class="kc">false</span>
+            <span class="n">proguardFiles</span> <span class="nf">getDefaultProguardFile</span><span class="o">(</span><span class="s1">'proguard-android-optimize.txt'</span><span class="o">),</span> <span class="s1">'proguard-rules.pro'</span>
+        <span class="o">}</span>
+
+        <span class="n">inhouse</span> <span class="o">{</span>
+            <span class="c1">//내부 배포</span>
+            <span class="n">initWith</span> <span class="n">release</span>
+            <span class="n">minifyEnabled</span> <span class="kc">false</span>
+            <span class="n">debuggable</span> <span class="kc">true</span>
+        <span class="o">}</span>
+
+        <span class="n">dev</span> <span class="o">{</span>
+            <span class="c1">//개발</span>
+            <span class="n">signingConfig</span> <span class="n">signingConfigs</span><span class="o">.</span><span class="na">debug</span>
+            <span class="n">minifyEnabled</span> <span class="kc">true</span>
+            <span class="n">debuggable</span> <span class="kc">false</span>
+        <span class="o">}</span>
+    
 </code></pre></div></div>
 
-<p><img src="https://i.stack.imgur.com/yRb2u.png" alt="" /></p>
+<p>BuildTypes는 목적이 뚜렷하고 이미 속성들이 잘 갖추어 져 있기때문에 금방 끝났습니다. Gradle은 다음과 같은 우선순위 단계에 따라 중복 리소스를 병합합니다. 이제 Store에 따라 환경을 나누어 추가해 보겠습니다.</p>
 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>종속 항목 → 기본 → 빌드 버전 → 빌드 유형
+</code></pre></div></div>
+
+<p>갑자기 영업팀이 좋은 프로모션을 제안받았다고 baidu에도 등록 할 수 있도록 요청합니다. 
+참고로 중국에서는 Google API를 호출하면 응답을 받을 수 없습니다. 때문에 PlayStore에 배포된 앱을 중국에 가져가서 실행하면 보통 시작하자마자 push Token을 받지 못하고 죽어버리거나 정상적인 동작이 되지 않습니다. 대신 Baidu에서는 구글과 거의 비슷한 형태의 API를 제공해 주고 있습니다. 때문에 빌드 설정에 따라 실제 앱의 동작도 다르게 분기되어야 하는 부분들이 생깁니다.</p>
 
                 </div>
             </section>
@@ -284,9 +340,9 @@ into the {body} of the default.hbs template -->
 <!--                    <div id="disqus_thread"></div>-->
 <!--                    <script>-->
 <!--                        var disqus_config = function () {-->
-<!--                            this.page.url = 'https://mond-al.github.io/dependency-gradle';-->
-<!--                            this.page.identifier = '/dependency-gradle';-->
-<!--                            this.page.title = '앱의 의존성 트리';-->
+<!--                            this.page.url = 'https://mond-al.github.io/ProductFlavors-BuildType';-->
+<!--                            this.page.identifier = '/ProductFlavors-BuildType';-->
+<!--                            this.page.title = 'ProductFlavors와 BuildType (작성중)';-->
 <!--                        };-->
 <!--                        (function() {-->
 <!--                            var d = document, s = d.createElement('script');-->
@@ -431,18 +487,18 @@ into the {body} of the default.hbs template -->
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">앱의 의존성 트리</div>
+    <div class="floating-header-title">ProductFlavors와 BuildType (작성중)</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%EC%95%B1%EC%9D%98+%EC%9D%98%EC%A1%B4%EC%84%B1+%ED%8A%B8%EB%A6%AC&amp;url=https://mond-al.github.io/dependency-gradle"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=ProductFlavors%EC%99%80+BuildType+%28%EC%9E%91%EC%84%B1%EC%A4%91%29&amp;url=https://mond-al.github.io/ProductFlavors-BuildType"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://mond-al.github.io/dependency-gradle"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://mond-al.github.io/ProductFlavors-BuildType"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 

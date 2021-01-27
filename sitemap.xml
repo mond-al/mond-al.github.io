@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
-        <loc>https://mond-al.github.io/dependency-gradle</loc>
+        <loc>https://mond-al.github.io/ProductFlavors-BuildType</loc>
     </url>
     
     <url>
@@ -128,7 +128,17 @@
     
     
     <url>
-        <loc>https://mond-al.github.io/tag/dependency/</loc>
+        <loc>https://mond-al.github.io/tag/productflavors/</loc>
+    </url>
+    
+    
+    
+    
+    
+    
+    
+    <url>
+        <loc>https://mond-al.github.io/tag/buildtypes/</loc>
     </url>
     
     
