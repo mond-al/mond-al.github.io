@@ -11,13 +11,16 @@
 
 
 
-    <title>ProductFlavors와 BuildType (작성중)</title>
+    <title>ProductFlavors와 BuildType 조합</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
     <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+
+    <!-- awesome font   -->
+    <script src="https://kit.fontawesome.com/09fc514f86.js" crossorigin="anonymous"></script>
     <!-- highlight.js -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <style>.hljs { background: none; }</style>
@@ -42,8 +45,8 @@
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="Developer/App/Android/mond > Log" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="ProductFlavors와 BuildType (작성중)" />
-    <meta property="og:description" content="ProductFlavors와 BuildType을 이용해서 변화하는 결과물을 바꿔보자. 서비스가 점점 커지다 보면 일명 “OO향”빌드를 배포해야하는 경우나 “XX용”빌드를 따로 뽑아야하는 경우가 생깁니다. 가령 예를 들자면 “중국향”과 “국내향”처럼 나눌수 있을 것이고, “개발용”,”QA용”,”내부배포용”,”실서비스용”으로도 나눌 수도 있습니다. 문득 첫직장에서 ~~향 이라는 말을 들었을때 “향”의 의미가 direction(向,향하다)의 의미라 생각했는데, 지금생각해보면 Flavors(香,향기)의 의미가 더 적절한거 같습니다. 지금은 Gradle을" />
+    <meta property="og:title" content="ProductFlavors와 BuildType 조합" />
+    <meta property="og:description" content="ProductFlavors와 BuildType을 이용해서 다양한 형상을 만들 수 있습니다. 서비스가 점점 커지다 보면 일명 “OO향”빌드를 배포해야하는 경우나 “XX용”빌드를 따로 뽑아야하는 경우가 생깁니다. 가령 예를 들자면 “중국향”과 “국내향”처럼 나눌수 있을 것이고, “개발용”,”QA용”,”내부배포용”,”실서비스용”으로도 나눌 수도 있습니다. 이런 구성을 개발에서 각 버전을 구분하여 관리해야 한다면 우리는 어떻게 해야 할까요? Gradle을 기반으로 BuildTypes은 기본으로하고 ProductFlavors에" />
     <meta property="og:url" content="https://mond-al.github.io/ProductFlavors-BuildType" />
     <meta property="og:image" content="https://mond-al.github.io/assets/images/post/2021-01-26-ProductFlavors-BuildType/cover.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -52,8 +55,8 @@
     <meta property="article:modified_time" content="2021-01-26T00:00:00+09:00" />
     <meta property="article:tag" content="Android" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="ProductFlavors와 BuildType (작성중)" />
-    <meta name="twitter:description" content="ProductFlavors와 BuildType을 이용해서 변화하는 결과물을 바꿔보자. 서비스가 점점 커지다 보면 일명 “OO향”빌드를 배포해야하는 경우나 “XX용”빌드를 따로 뽑아야하는 경우가 생깁니다. 가령 예를 들자면 “중국향”과 “국내향”처럼 나눌수 있을 것이고, “개발용”,”QA용”,”내부배포용”,”실서비스용”으로도 나눌 수도 있습니다. 문득 첫직장에서 ~~향 이라는 말을 들었을때 “향”의 의미가 direction(向,향하다)의 의미라 생각했는데, 지금생각해보면 Flavors(香,향기)의 의미가 더 적절한거 같습니다. 지금은 Gradle을" />
+    <meta name="twitter:title" content="ProductFlavors와 BuildType 조합" />
+    <meta name="twitter:description" content="ProductFlavors와 BuildType을 이용해서 다양한 형상을 만들 수 있습니다. 서비스가 점점 커지다 보면 일명 “OO향”빌드를 배포해야하는 경우나 “XX용”빌드를 따로 뽑아야하는 경우가 생깁니다. 가령 예를 들자면 “중국향”과 “국내향”처럼 나눌수 있을 것이고, “개발용”,”QA용”,”내부배포용”,”실서비스용”으로도 나눌 수도 있습니다. 이런 구성을 개발에서 각 버전을 구분하여 관리해야 한다면 우리는 어떻게 해야 할까요? Gradle을 기반으로 BuildTypes은 기본으로하고 ProductFlavors에" />
     <meta name="twitter:url" content="https://mond-al.github.io/" />
     <meta name="twitter:image" content="https://mond-al.github.io/assets/images/post/2021-01-26-ProductFlavors-BuildType/cover.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -85,7 +88,7 @@
         "@type": "WebPage",
         "@id": "https://mond-al.github.io/ProductFlavors-BuildType"
     },
-    "description": "ProductFlavors와 BuildType을 이용해서 변화하는 결과물을 바꿔보자. 서비스가 점점 커지다 보면 일명 “OO향”빌드를 배포해야하는 경우나 “XX용”빌드를 따로 뽑아야하는 경우가 생깁니다. 가령 예를 들자면 “중국향”과 “국내향”처럼 나눌수 있을 것이고, “개발용”,”QA용”,”내부배포용”,”실서비스용”으로도 나눌 수도 있습니다. 문득 첫직장에서 ~~향 이라는 말을 들었을때 “향”의 의미가 direction(向,향하다)의 의미라 생각했는데, 지금생각해보면 Flavors(香,향기)의 의미가 더 적절한거 같습니다. 지금은 Gradle을"
+    "description": "ProductFlavors와 BuildType을 이용해서 다양한 형상을 만들 수 있습니다. 서비스가 점점 커지다 보면 일명 “OO향”빌드를 배포해야하는 경우나 “XX용”빌드를 따로 뽑아야하는 경우가 생깁니다. 가령 예를 들자면 “중국향”과 “국내향”처럼 나눌수 있을 것이고, “개발용”,”QA용”,”내부배포용”,”실서비스용”으로도 나눌 수도 있습니다. 이런 구성을 개발에서 각 버전을 구분하여 관리해야 한다면 우리는 어떻게 해야 할까요? Gradle을 기반으로 BuildTypes은 기본으로하고 ProductFlavors에"
 }
     </script>
 
@@ -98,7 +101,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="ProductFlavors와 BuildType (작성중)" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="ProductFlavors와 BuildType 조합" href="/feed.xml" />
 
 
 </head>
@@ -107,8 +110,8 @@
     <div class="site-wrapper">
         <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
         <!-- default -->
-<!--font-awesome -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- awesome font   -->
+<script src="https://kit.fontawesome.com/09fc514f86.js" crossorigin="anonymous"></script>
 
 <!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template -->
@@ -177,7 +180,7 @@ into the {body} of the default.hbs template -->
                         
                     
                 </section>
-                <h1 class="post-full-title">ProductFlavors와 BuildType (작성중)</h1>
+                <h1 class="post-full-title">ProductFlavors와 BuildType 조합</h1>
             </header>
 
 <!--            -->
@@ -187,21 +190,108 @@ into the {body} of the default.hbs template -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p>ProductFlavors와 BuildType을 이용해서 변화하는 결과물을 바꿔보자.</p>
+                    <p>ProductFlavors와 BuildType을 이용해서 다양한 형상을 만들 수 있습니다.</p>
 
-<p>서비스가 점점 커지다 보면 일명 “OO향”빌드를 배포해야하는 경우나 “XX용”빌드를 따로 뽑아야하는 경우가 생깁니다. 가령 예를 들자면 “중국향”과 “국내향”처럼 나눌수 있을 것이고, “개발용”,”QA용”,”내부배포용”,”실서비스용”으로도 나눌 수도 있습니다.</p>
+<p>서비스가 점점 커지다 보면 일명 “OO향”빌드를 배포해야하는 경우나 “XX용”빌드를 따로 뽑아야하는 경우가 생깁니다. 가령 예를 들자면 “중국향”과 “국내향”처럼 나눌수 있을 것이고, “개발용”,”QA용”,”내부배포용”,”실서비스용”으로도 나눌 수도 있습니다. 이런 구성을 개발에서 각 버전을 구분하여 관리해야 한다면 우리는 어떻게 해야 할까요?</p>
 
-<p>문득 첫직장에서 ~~향 이라는 말을 들었을때 “향”의 의미가 direction(向,향하다)의 의미라 생각했는데, 지금생각해보면 Flavors(香,향기)의 의미가 더 적절한거 같습니다.</p>
+<p>Gradle을 기반으로 BuildTypes은 기본으로하고 ProductFlavors에 여러가지 dimension을 정의하여 조합하여 빌드를 간편하게 생산 할 수있습니다. 간략한 예를 들어 상황을 정의하고 실제 build.gradle 파일을 수정해 보겠습니다.</p>
 
-<p>지금은 Gradle을 기반으로 BuildTypes은 기본으로하고 ProductFlavors에 여러가지 dimension을 정의하여 조합하여 빌드를 간편하게 생산 할 수있습니다. 간략한 예를 들어 상황을 정의하고 실제 build.gradle 파일을 수정해 보겠습니다.</p>
+<p>groovy 언어가 익숙치 않고 gradle에 대한 학습할 기회가 적다보니 build.gradle파일을 편집하기는 꽤 부담스럽습니다. 조금만 바뀌어도 빌드가 안되거나 많은 사이드 이펙트를 만들 수 있기 때문인데요. 오늘은 아래의 build.gradle 파일을 처음부터 작성해보면서 각 구문의 의미와 용법을 설명해 보겠습니다. 알고나면 정말 단순합니다. 쫄지말고 본문부터 그냥 읽어보세요.</p>
 
-<h3 id="간단한-시나리오">간단한 시나리오.</h3>
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plugins</span> <span class="o">{</span>
+    <span class="n">id</span> <span class="s1">'com.android.application'</span>
+    <span class="n">id</span> <span class="s1">'kotlin-android'</span>
+<span class="o">}</span>
+
+<span class="n">android</span> <span class="o">{</span>
+    <span class="n">compileSdkVersion</span> <span class="mi">30</span>
+    <span class="n">buildToolsVersion</span> <span class="s2">"30.0.2"</span>
+
+    <span class="n">defaultConfig</span> <span class="o">{</span>
+        <span class="n">applicationId</span> <span class="s2">"com.al.mond.oreo"</span>
+        <span class="n">minSdkVersion</span> <span class="mi">23</span>
+        <span class="n">targetSdkVersion</span> <span class="mi">30</span>
+        <span class="n">versionCode</span> <span class="mi">1</span>
+        <span class="n">versionName</span> <span class="s2">"1.0"</span>
+
+        <span class="n">testInstrumentationRunner</span> <span class="s2">"androidx.test.runner.AndroidJUnitRunner"</span>
+    <span class="o">}</span>
+
+
+    <span class="n">flavorDimensions</span>  <span class="s2">"store"</span><span class="o">,</span><span class="s2">"server"</span>
+    <span class="n">productFlavors</span> <span class="o">{</span>
+        <span class="n">playGoogle</span> <span class="o">{</span>
+            <span class="n">dimension</span> <span class="s2">"store"</span>
+            <span class="n">applicationIdSuffix</span> <span class="s2">".google"</span>
+            <span class="n">resValue</span> <span class="s2">"string"</span><span class="o">,</span> <span class="s2">"storeInfo"</span><span class="o">,</span> <span class="s2">"OOOOOO"</span>
+        <span class="o">}</span>
+        <span class="n">oneStore</span> <span class="o">{</span>
+            <span class="n">dimension</span> <span class="s2">"store"</span>
+            <span class="n">applicationIdSuffix</span> <span class="s2">".onestore"</span>
+            <span class="n">resValue</span> <span class="s2">"string"</span><span class="o">,</span> <span class="s2">"storeInfo"</span><span class="o">,</span> <span class="s2">"XXXXXX"</span>
+        <span class="o">}</span>
+        <span class="n">dev</span> <span class="o">{</span>
+            <span class="n">dimension</span> <span class="s2">"server"</span>
+            <span class="n">resValue</span> <span class="s2">"string"</span><span class="o">,</span> <span class="s2">"server_url"</span><span class="o">,</span> <span class="s2">"https://test.oreo.com/rest"</span>
+        <span class="o">}</span>
+        <span class="n">prod</span> <span class="o">{</span>
+            <span class="n">dimension</span> <span class="s2">"server"</span>
+            <span class="n">resValue</span> <span class="s2">"string"</span><span class="o">,</span> <span class="s2">"server_url"</span><span class="o">,</span> <span class="s2">"https://oreo.com/rest"</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="n">buildTypes</span> <span class="o">{</span>
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="c1">//스토어 배포</span>
+            <span class="n">minifyEnabled</span> <span class="kc">true</span>
+            <span class="n">debuggable</span> <span class="kc">false</span>
+            <span class="n">proguardFiles</span> <span class="nf">getDefaultProguardFile</span><span class="o">(</span><span class="s1">'proguard-android-optimize.txt'</span><span class="o">),</span> <span class="s1">'proguard-rules.pro'</span>
+        <span class="o">}</span>
+
+        <span class="n">inhouse</span> <span class="o">{</span>
+            <span class="c1">//내부 배포</span>
+            <span class="n">initWith</span> <span class="n">release</span>
+            <span class="n">debuggable</span> <span class="kc">true</span>
+        <span class="o">}</span>
+
+        <span class="n">debug</span> <span class="o">{</span>
+            <span class="c1">//개발</span>
+            <span class="n">minifyEnabled</span> <span class="kc">true</span>
+            <span class="n">debuggable</span> <span class="kc">false</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="n">compileOptions</span> <span class="o">{</span>
+        <span class="n">sourceCompatibility</span> <span class="n">JavaVersion</span><span class="o">.</span><span class="na">VERSION_1_8</span>
+        <span class="n">targetCompatibility</span> <span class="n">JavaVersion</span><span class="o">.</span><span class="na">VERSION_1_8</span>
+    <span class="o">}</span>
+    <span class="n">kotlinOptions</span> <span class="o">{</span>
+        <span class="n">jvmTarget</span> <span class="o">=</span> <span class="s1">'1.8'</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="n">dependencies</span> <span class="o">{</span>
+    <span class="n">implementation</span> <span class="s2">"org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"</span>
+    <span class="n">implementation</span> <span class="s1">'androidx.core:core-ktx:1.3.2'</span>
+    <span class="n">implementation</span> <span class="s1">'androidx.appcompat:appcompat:1.2.0'</span>
+    <span class="n">implementation</span> <span class="s1">'com.google.android.material:material:1.2.1'</span>
+    <span class="n">implementation</span> <span class="s1">'androidx.constraintlayout:constraintlayout:2.0.4'</span>
+    <span class="n">testImplementation</span> <span class="s1">'junit:junit:4.+'</span>
+    <span class="n">androidTestImplementation</span> <span class="s1">'androidx.test.ext:junit:1.1.2'</span>
+    <span class="n">androidTestImplementation</span> <span class="s1">'androidx.test.espresso:espresso-core:3.3.0'</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+
+<h3 id="아주-간단한-시나리오">아주 간단한 시나리오.</h3>
 
 <p>다양한 환경에 배포를 목표로 하는 <code class="highlighter-rouge">오레오</code>라는 앱이 있습니다.
-개발 단계는 <code class="highlighter-rouge">개발</code>,<code class="highlighter-rouge">QA</code>,<code class="highlighter-rouge">배포단계</code>로 진행됩니다. 앱은 <code class="highlighter-rouge">GooglePlay</code>,<code class="highlighter-rouge">OneStore</code>에 등록합니다. 각 마켓별로 다른 프로모션을 적용 할 예정이기 때문에 빌드에 따라 앱이 다르게 동작해야합니다. 그리고 GooglePlay에서는 <code class="highlighter-rouge">초코오레오</code> 라는 이름으로 등록되고, OneStore에서는 <code class="highlighter-rouge">치즈오레오</code>로 등록됩니다. 두 앱은 동시에 설치가 가능합니다.</p>
+개발 단계는 <code class="highlighter-rouge">개발</code>,<code class="highlighter-rouge">내부배포</code>,<code class="highlighter-rouge">상용배포</code>로 진행됩니다. 앱은 <code class="highlighter-rouge">GooglePlay</code>,<code class="highlighter-rouge">OneStore</code>에 등록합니다. 각 마켓별로 다른 프로모션을 적용 할 예정이기 때문에 빌드에 따라 앱이 다르게 동작해야합니다. 그리고 GooglePlay에서는 <code class="highlighter-rouge">초코오레오</code> 라는 이름으로 등록되고, OneStore에서는 <code class="highlighter-rouge">치즈오레오</code>로 등록됩니다. 두 앱은 동시에 설치가 가능합니다.</p>
 
 <p>Android Studio에서 기본 프로젝트중 가장 단순한 Empty Activity를 기반으로 프로젝트를 생성합니다.
-app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수 있습니다.</p>
+app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수 있습니다. 오늘은 이 프로젝트로 예제를 구성해 보겠습니다.</p>
+
+<p><img src="assets/images/post/2021-01-26-ProductFlavors-BuildType/new_project.png" alt="new" /></p>
 
 <div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">android</span> <span class="o">{</span>
     <span class="n">compileSdkVersion</span> <span class="mi">30</span>
@@ -233,21 +323,9 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
 <span class="o">}</span>
 </code></pre></div></div>
 
-<p>우선 buildType을 나누어보겠습니다. buildTypes만 간추려서 다시 정의해보겠습니다.</p>
+<h3 id="buildtypes">BuildTypes</h3>
 
-<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1">// 동일한 개발환경 제공하기 위해 debug.keystore도 함께 공유합니다.</span>
-    <span class="n">signingConfigs</span> <span class="o">{</span>
-        <span class="n">debug</span> <span class="o">{</span>
-            <span class="n">storeFile</span> <span class="nf">file</span><span class="o">(</span><span class="s1">'debug.keystore'</span><span class="o">)</span>
-        <span class="o">}</span>
-        <span class="n">release</span> <span class="o">{</span>
-            <span class="n">storeFile</span> <span class="nf">file</span><span class="o">(</span><span class="s1">'oreo.keystore'</span><span class="o">)</span>
-            <span class="n">storePassword</span> <span class="s2">"*********"</span>
-            <span class="n">keyAlias</span> <span class="s2">"cheesecake"</span>
-            <span class="n">keyPassword</span> <span class="s2">"*******"</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
-
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="o">...</span>
     <span class="n">buildTypes</span> <span class="o">{</span>
         <span class="n">release</span> <span class="o">{</span>
             <span class="c1">//스토어 배포</span>
@@ -260,26 +338,200 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
         <span class="n">inhouse</span> <span class="o">{</span>
             <span class="c1">//내부 배포</span>
             <span class="n">initWith</span> <span class="n">release</span>
-            <span class="n">minifyEnabled</span> <span class="kc">false</span>
+            <span class="n">applicationIdSuffix</span> <span class="s2">".inhouse"</span>
             <span class="n">debuggable</span> <span class="kc">true</span>
         <span class="o">}</span>
 
-        <span class="n">dev</span> <span class="o">{</span>
+        <span class="n">debug</span> <span class="o">{</span>
             <span class="c1">//개발</span>
+            <span class="n">applicationIdSuffix</span> <span class="s2">".debug"</span>
             <span class="n">signingConfig</span> <span class="n">signingConfigs</span><span class="o">.</span><span class="na">debug</span>
             <span class="n">minifyEnabled</span> <span class="kc">true</span>
             <span class="n">debuggable</span> <span class="kc">false</span>
         <span class="o">}</span>
-    
+    <span class="o">}</span>
+    <span class="o">...</span>
 </code></pre></div></div>
 
-<p>BuildTypes는 목적이 뚜렷하고 이미 속성들이 잘 갖추어 져 있기때문에 금방 끝났습니다. Gradle은 다음과 같은 우선순위 단계에 따라 중복 리소스를 병합합니다. 이제 Store에 따라 환경을 나누어 추가해 보겠습니다.</p>
+<p>우선 빌드의 타입을 가장 보편적인 형태를 따라 상용빌드(release), 내부빌드(inhouse), 디버그빌드(debug)로 나누어 두었습니다. inhouse빌드는 대부분의 속성을 <code class="highlighter-rouge">initWith release</code>를 통해서 release빌드의 속성을 그대로 상속받고 필요한 속성인 <code class="highlighter-rouge">debuggable</code>만 <code class="highlighter-rouge">ture</code>로 변경했습니다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>종속 항목 → 기본 → 빌드 버전 → 빌드 유형
+<p><code class="highlighter-rouge">applicationIdSuffix</code>옵션을 통해 각 빌드의 applicationId를 다르게 구성 했습니다. 이렇게 applicationId이 다르면 applicationId가 중복되지 않기 때문에 하나의 폰에 여러가지 빌드타입을 설치하고 기능을 비교할 수 도 있습니다. 물론 앱 아이콘과 앱 이름을 구분하여 서로 헷갈리지 않도록 함께 처리해두어야 합니다. inhouse빌드는 applicationId가 <code class="highlighter-rouge">com.al.mond.oreo.inhouse</code>가 되고 release빌드는 suffix가 없으니 applicationId가 <code class="highlighter-rouge">com.al.mond.oreo</code>이 됩니다.</p>
+
+<p>그리고 필수는 아니지만 inhouse빌드는 release와 동일하게 난독화된 상태로 진행하는 것을 추천하고 싶습니다. inhouse에서 디버깅의 편리함을 위해 <code class="highlighter-rouge">minifyEnabled</code>을 <code class="highlighter-rouge">false</code>로 둔다면, 난독화를 통해 클래스나 필드이 변경되기 때문에 이름에 의존적인 코드가 실수로 난독화 되어버린다면, 검수단계에서 발견하지 못하게 됩니다. 예를들어 API호출도 잘 되었고 서버에서 값도 잘 내려주었지만, DAO클래스가 난독화 되어 데이터를 파싱하지 못 할 수 있습니다. 이렇게 되면 검수는 난독화하지 않은 상태로 했기 때문에 잘 동작하고, 실배포에서는 문제가 발생합니다. 때문에 inhouse빌드는 디버그할때 번거롭더라도 항상 <code class="highlighter-rouge">minifyEnabled</code>를 <code class="highlighter-rouge">true</code>로 두어 난독화를 시켜줍시다.</p>
+
+<p>정의된 빌드에 따라 실행은 Android Studio 화면 왼쪽 모서리쪽에 접혀있는 <code class="highlighter-rouge">build variants</code> 사이드바를 클릭하여 열어주세요.<br />
+<img src="assets/images/post/2021-01-26-ProductFlavors-BuildType/buildvariant.png" alt="androidStudio" /></p>
+
+<p>이제 아래의 그림처럼 release,inhouse,debug 빌드를 선택할 수 있게 되었습니다.
+<img src="assets/images/post/2021-01-26-ProductFlavors-BuildType/build_type.png" alt="androidStudio" /></p>
+
+<p>BuildType은 보통 목적이 뚜렷하고 이미 속성들이 잘 갖추어 져 있기때문에 생각 할 부분이 적습니다.</p>
+
+<h3 id="productflavors">ProductFlavors</h3>
+
+<p>이제 ProductFlavors를 정의해 보겠습니다.</p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">flavorDimensions</span> <span class="s2">"store"</span>
 </code></pre></div></div>
 
-<p>갑자기 영업팀이 좋은 프로모션을 제안받았다고 baidu에도 등록 할 수 있도록 요청합니다. 
-참고로 중국에서는 Google API를 호출하면 응답을 받을 수 없습니다. 때문에 PlayStore에 배포된 앱을 중국에 가져가서 실행하면 보통 시작하자마자 push Token을 받지 못하고 죽어버리거나 정상적인 동작이 되지 않습니다. 대신 Baidu에서는 구글과 거의 비슷한 형태의 API를 제공해 주고 있습니다. 때문에 빌드 설정에 따라 실제 앱의 동작도 다르게 분기되어야 하는 부분들이 생깁니다.</p>
+<p>ProductFlavors를 정의하기에 앞서 어떤 차원에서 사용 할 것인지 이름을 정의해야 합니다. Dimensions의 의미가 처음에는 와 닿지 않습니다. 우리가 정의하는 항목의 수 많큼 <code class="highlighter-rouge">배열의 차원</code>으로 생각하면 이해하기가 한결 쉬워집니다. 적절한 예가 바로 떠오르지 않아서 조금 억지스럽지만 “스토어”별로 googlePlay와 OneStore 나누고, “과금스타일”별로 유료와 무료 빌드를 나눈다면 2x2의 2차원 배열이 됩니다. 여기에 “서버”까지 내부망과 외부망용으로 구분하게되면 2x2x2의 3차원 배열이 됩니다. Dimensions의 의미가 잘 이해 되셨나요?</p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">flavorDimensions</span> <span class="s2">"store"</span>
+    <span class="n">productFlavors</span> <span class="o">{</span>
+        <span class="n">playGoogle</span> <span class="o">{</span>
+            <span class="n">applicationIdSuffix</span> <span class="s2">".google"</span>
+            <span class="n">dimension</span> <span class="s2">"store"</span>
+            <span class="n">resValue</span> <span class="s2">"string"</span><span class="o">,</span> <span class="s2">"storeInfo"</span><span class="o">,</span> <span class="s2">"OOOOOO"</span>
+        <span class="o">}</span>
+        <span class="n">oneStore</span> <span class="o">{</span>
+            <span class="n">applicationIdSuffix</span> <span class="s2">".onestore"</span>
+            <span class="n">dimension</span> <span class="s2">"store"</span>
+            <span class="n">resValue</span> <span class="s2">"string"</span><span class="o">,</span> <span class="s2">"storeInfo"</span><span class="o">,</span> <span class="s2">"XXXXXX"</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+</code></pre></div></div>
+
+<p>buildType에서와 마찬가지로 <code class="highlighter-rouge">applicationIdSuffix</code>를 이용하여 각각 다른 applicationId를 할당합니다. 구글플레이에 등록예정인 인하우스 빌드의 applicationId는 <code class="highlighter-rouge">com.al.mond.oreo.google.inhouse</code>가 됩니다. 각 스토어에 따라 다른 String값을 가져야 한다면  <code class="highlighter-rouge">res/value/string.xml</code>대신 <code class="highlighter-rouge">resValue</code>를 이용해서 정의 할 수 있습니다.</p>
+
+<p>이렇게 아주 간단한 1차원 배열의 store Dimension을 정의하고 playGoogle과 oneStore 두가지 선택지를 추가 했습니다. 
+이제 서버 dimension을 추가해서 2차원 배열의 Dimension을 아래처럼 구성 할 수 있습니다. 빌드에 따라 서버 API의 BaseUrl도 달라지도록 준비 해봤습니다.</p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">flavorDimensions</span> <span class="s2">"store"</span><span class="o">,</span> <span class="s2">"server"</span>
+    <span class="n">productFlavors</span> <span class="o">{</span>
+        <span class="n">playGoogle</span> <span class="o">{</span>
+            <span class="n">dimension</span> <span class="s2">"store"</span>
+            <span class="n">applicationIdSuffix</span> <span class="s2">".google"</span>
+            <span class="n">resValue</span> <span class="s2">"string"</span><span class="o">,</span> <span class="s2">"storeInfo"</span><span class="o">,</span> <span class="s2">"OOOOOO"</span>
+        <span class="o">}</span>
+        <span class="n">oneStore</span> <span class="o">{</span>
+            <span class="n">dimension</span> <span class="s2">"store"</span>
+            <span class="n">applicationIdSuffix</span> <span class="s2">".onestore"</span>
+            <span class="n">resValue</span> <span class="s2">"string"</span><span class="o">,</span> <span class="s2">"storeInfo"</span><span class="o">,</span> <span class="s2">"XXXXXX"</span>
+        <span class="o">}</span>
+        <span class="n">dev</span> <span class="o">{</span>
+            <span class="n">dimension</span> <span class="s2">"server"</span>
+            <span class="n">resValue</span> <span class="s2">"string"</span><span class="o">,</span> <span class="s2">"server_url"</span><span class="o">,</span> <span class="s2">"https://test.oreo.com/rest"</span>
+        <span class="o">}</span>
+        <span class="n">prod</span> <span class="o">{</span>
+            <span class="n">dimension</span> <span class="s2">"server"</span>
+            <span class="n">resValue</span> <span class="s2">"string"</span><span class="o">,</span> <span class="s2">"server_url"</span><span class="o">,</span> <span class="s2">"https://oreo.com/rest"</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="productflavors의-dimension을-추가하고-관리할-때-주의점들">productFlavors의 dimension을 추가하고 관리할 때 주의점들</h3>
+<p>buildType의 이름과 productFlavors의 이름은 서로 동일한 이름을 사용 할 수 없습니다. 추후에 서버의 타입이 “debug”인 서버가 추가되면 다른 이름을 사용하거나 dimension의 정의에 대해 고민을 해야할 시점입니다.</p>
+
+<p>경험상 대부분의 프로젝트들은 그렇게 많은 dimension이 필요하지는 않습니다. 아시다시피 배열의 차원이 늘어나면, 조합 가능한 경우의 수가 기하급수적으로 늘어납니다. 결국 사용하지 않는 BuildVariant가 많아 지고, 관리 되지않는 무의미한 dimension이 되지 않도록 주의해야 합니다.<br />
+  <code class="highlighter-rouge">2개의 스토어 x 2개의 서버 x 3개의 빌드타입  = 12가지 변형</code> 벌써 눈이 핑핑 돌기 시작하네요.</p>
+
+<p>두개이상의 Dimension이 정의되면 순서에 유의해야합니다. <code class="highlighter-rouge">"store","server"</code> 일때와 <code class="highlighter-rouge">"server","store"</code>일때는 생성되는 BuildVariant도 달라지게 됩니다.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="assets/images/post/2021-01-26-ProductFlavors-BuildType/store_server.png" alt="androidStudio" /></td>
+      <td><img src="assets/images/post/2021-01-26-ProductFlavors-BuildType/server_store.png" alt="androidStudio" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>순서가 변경되면 각 설정의 조합이나 변형에 따라 다르게 읽어들이게 될 Res폴더의 경로도 변경 되어야 하고, 혹시 배포 자동화를 위해 만들어둔 스크립트가 있다면 변경되어야 합니다. 어렵진 않지만 시력을 잃을 수 도 있습니다. <i class="far fa-eye-slash"></i></p>
+
+<p>빌드변형들(build variants)의 이름은 <a href="https://ko.wikipedia.org/wiki/%EB%82%99%ED%83%80_%EB%8C%80%EB%AC%B8%EC%9E%90">카멜표기법</a>을 따르며 flavorDimensions에 정의된 순서대로 나열하고 마지막에 buildType을 쓰면 됩니다. 로컬에서 빌드 할 때는 안드로이드 스튜디오가 알아서 메뉴를 만들어 주기 때문에 우리는 잘 선택하기만 하면 됩니다.</p>
+
+<h3 id="끝">끝</h3>
+
+<p>도입부에 올려둔 build.gradle파일을 다시 보면 처음 이 글을 읽기 시작했을 때와 다른 느낌이 드시나요? 
+다음 포스트에서는 각 빌드변형별로 다른 아이콘, 다른 앱이름을 붙여보도록 하겠습니다. (LINK)</p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plugins</span> <span class="o">{</span>
+    <span class="n">id</span> <span class="s1">'com.android.application'</span>
+    <span class="n">id</span> <span class="s1">'kotlin-android'</span>
+<span class="o">}</span>
+
+<span class="n">android</span> <span class="o">{</span>
+    <span class="n">compileSdkVersion</span> <span class="mi">30</span>
+    <span class="n">buildToolsVersion</span> <span class="s2">"30.0.2"</span>
+
+    <span class="n">defaultConfig</span> <span class="o">{</span>
+        <span class="n">applicationId</span> <span class="s2">"com.al.mond.oreo"</span>
+        <span class="n">minSdkVersion</span> <span class="mi">23</span>
+        <span class="n">targetSdkVersion</span> <span class="mi">30</span>
+        <span class="n">versionCode</span> <span class="mi">1</span>
+        <span class="n">versionName</span> <span class="s2">"1.0"</span>
+
+        <span class="n">testInstrumentationRunner</span> <span class="s2">"androidx.test.runner.AndroidJUnitRunner"</span>
+    <span class="o">}</span>
+
+
+    <span class="n">flavorDimensions</span>  <span class="s2">"store"</span><span class="o">,</span><span class="s2">"server"</span>
+    <span class="n">productFlavors</span> <span class="o">{</span>
+        <span class="n">playGoogle</span> <span class="o">{</span>
+            <span class="n">dimension</span> <span class="s2">"store"</span>
+            <span class="n">applicationIdSuffix</span> <span class="s2">".google"</span>
+            <span class="n">resValue</span> <span class="s2">"string"</span><span class="o">,</span> <span class="s2">"storeInfo"</span><span class="o">,</span> <span class="s2">"OOOOOO"</span>
+        <span class="o">}</span>
+        <span class="n">oneStore</span> <span class="o">{</span>
+            <span class="n">dimension</span> <span class="s2">"store"</span>
+            <span class="n">applicationIdSuffix</span> <span class="s2">".onestore"</span>
+            <span class="n">resValue</span> <span class="s2">"string"</span><span class="o">,</span> <span class="s2">"storeInfo"</span><span class="o">,</span> <span class="s2">"XXXXXX"</span>
+        <span class="o">}</span>
+        <span class="n">dev</span> <span class="o">{</span>
+            <span class="n">dimension</span> <span class="s2">"server"</span>
+            <span class="n">resValue</span> <span class="s2">"string"</span><span class="o">,</span> <span class="s2">"server_url"</span><span class="o">,</span> <span class="s2">"https://test.oreo.com/rest"</span>
+        <span class="o">}</span>
+        <span class="n">prod</span> <span class="o">{</span>
+            <span class="n">dimension</span> <span class="s2">"server"</span>
+            <span class="n">resValue</span> <span class="s2">"string"</span><span class="o">,</span> <span class="s2">"server_url"</span><span class="o">,</span> <span class="s2">"https://oreo.com/rest"</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="n">buildTypes</span> <span class="o">{</span>
+        <span class="n">release</span> <span class="o">{</span>
+            <span class="c1">//스토어 배포</span>
+            <span class="n">minifyEnabled</span> <span class="kc">true</span>
+            <span class="n">debuggable</span> <span class="kc">false</span>
+            <span class="n">proguardFiles</span> <span class="nf">getDefaultProguardFile</span><span class="o">(</span><span class="s1">'proguard-android-optimize.txt'</span><span class="o">),</span> <span class="s1">'proguard-rules.pro'</span>
+        <span class="o">}</span>
+
+        <span class="n">inhouse</span> <span class="o">{</span>
+            <span class="c1">//내부 배포</span>
+            <span class="n">initWith</span> <span class="n">release</span>
+            <span class="n">minifyEnabled</span> <span class="kc">false</span>
+            <span class="n">debuggable</span> <span class="kc">true</span>
+        <span class="o">}</span>
+
+        <span class="n">debug</span> <span class="o">{</span>
+            <span class="c1">//개발</span>
+            <span class="n">minifyEnabled</span> <span class="kc">true</span>
+            <span class="n">debuggable</span> <span class="kc">false</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="n">compileOptions</span> <span class="o">{</span>
+        <span class="n">sourceCompatibility</span> <span class="n">JavaVersion</span><span class="o">.</span><span class="na">VERSION_1_8</span>
+        <span class="n">targetCompatibility</span> <span class="n">JavaVersion</span><span class="o">.</span><span class="na">VERSION_1_8</span>
+    <span class="o">}</span>
+    <span class="n">kotlinOptions</span> <span class="o">{</span>
+        <span class="n">jvmTarget</span> <span class="o">=</span> <span class="s1">'1.8'</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="n">dependencies</span> <span class="o">{</span>
+
+    <span class="n">implementation</span> <span class="s2">"org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"</span>
+    <span class="n">implementation</span> <span class="s1">'androidx.core:core-ktx:1.3.2'</span>
+    <span class="n">implementation</span> <span class="s1">'androidx.appcompat:appcompat:1.2.0'</span>
+    <span class="n">implementation</span> <span class="s1">'com.google.android.material:material:1.2.1'</span>
+    <span class="n">implementation</span> <span class="s1">'androidx.constraintlayout:constraintlayout:2.0.4'</span>
+    <span class="n">testImplementation</span> <span class="s1">'junit:junit:4.+'</span>
+    <span class="n">androidTestImplementation</span> <span class="s1">'androidx.test.ext:junit:1.1.2'</span>
+    <span class="n">androidTestImplementation</span> <span class="s1">'androidx.test.espresso:espresso-core:3.3.0'</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+
 
                 </div>
             </section>
@@ -318,7 +570,7 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
                         var disqus_config = function () {
                             this.page.url = 'https://mond-al.github.io/ProductFlavors-BuildType';
                             this.page.identifier = '/ProductFlavors-BuildType';
-                            this.page.title = 'ProductFlavors와 BuildType (작성중)';
+                            this.page.title = 'ProductFlavors와 BuildType 조합';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -468,13 +720,13 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">ProductFlavors와 BuildType (작성중)</div>
+    <div class="floating-header-title">ProductFlavors와 BuildType 조합</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=ProductFlavors%EC%99%80+BuildType+%28%EC%9E%91%EC%84%B1%EC%A4%91%29&amp;url=https://mond-al.github.io/ProductFlavors-BuildType"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=ProductFlavors%EC%99%80+BuildType+%EC%A1%B0%ED%95%A9&amp;url=https://mond-al.github.io/ProductFlavors-BuildType"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 

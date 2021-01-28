@@ -18,6 +18,9 @@
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
     <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+
+    <!-- awesome font   -->
+    <script src="https://kit.fontawesome.com/09fc514f86.js" crossorigin="anonymous"></script>
     <!-- highlight.js -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <style>.hljs { background: none; }</style>
@@ -193,8 +196,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="BuildTypes" class="tag-heading">BUILDTYPES</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType (작성중)">ProductFlavors와 BuildType (작성중)</a></li> -->
-      <li class="entry-title"><a href="/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType (작성중)">ProductFlavors와 BuildType (작성중)</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType 조합">ProductFlavors와 BuildType 조합</a></li> -->
+      <li class="entry-title"><a href="/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType 조합">ProductFlavors와 BuildType 조합</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -204,8 +207,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="ProductFlavors" class="tag-heading">PRODUCTFLAVORS</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType (작성중)">ProductFlavors와 BuildType (작성중)</a></li> -->
-      <li class="entry-title"><a href="/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType (작성중)">ProductFlavors와 BuildType (작성중)</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType 조합">ProductFlavors와 BuildType 조합</a></li> -->
+      <li class="entry-title"><a href="/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType 조합">ProductFlavors와 BuildType 조합</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -215,8 +218,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="android" class="tag-heading">ANDROID</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType (작성중)">ProductFlavors와 BuildType (작성중)</a></li> -->
-      <li class="entry-title"><a href="/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType (작성중)">ProductFlavors와 BuildType (작성중)</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType 조합">ProductFlavors와 BuildType 조합</a></li> -->
+      <li class="entry-title"><a href="/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType 조합">ProductFlavors와 BuildType 조합</a></li>
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/fast-scroller" target="_blank" title="Recyclerview Fastscroller Review">Recyclerview Fastscroller Review</a></li> -->
       <li class="entry-title"><a href="/fast-scroller" target="_blank" title="Recyclerview Fastscroller Review">Recyclerview Fastscroller Review</a></li>
@@ -240,8 +243,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="gradle" class="tag-heading">GRADLE</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType (작성중)">ProductFlavors와 BuildType (작성중)</a></li> -->
-      <li class="entry-title"><a href="/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType (작성중)">ProductFlavors와 BuildType (작성중)</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType 조합">ProductFlavors와 BuildType 조합</a></li> -->
+      <li class="entry-title"><a href="/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType 조합">ProductFlavors와 BuildType 조합</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
