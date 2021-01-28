@@ -701,6 +701,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 .post-full-comments,
 .footnotes {
     min-width: 100%;
+    font-family:'Nanum Gothic', Georgia,  serif;
 }
 
 .post-full-content li {
