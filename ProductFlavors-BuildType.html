@@ -112,7 +112,7 @@
         <!-- default -->
 <!-- awesome font   -->
 <script src="https://kit.fontawesome.com/09fc514f86.js" crossorigin="anonymous"></script>
-
+<link rel="stylesheet" href="/assets/built/syntax.css">
 <!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template -->
 
@@ -220,7 +220,7 @@ into the {body} of the default.hbs template -->
 
     <span class="n">flavorDimensions</span>  <span class="s2">"store"</span><span class="o">,</span><span class="s2">"server"</span>
     <span class="n">productFlavors</span> <span class="o">{</span>
-        <span class="n">playGoogle</span> <span class="o">{</span>
+        <span class="n">googlePlay</span> <span class="o">{</span>
             <span class="n">dimension</span> <span class="s2">"store"</span>
             <span class="n">applicationIdSuffix</span> <span class="s2">".google"</span>
             <span class="n">resValue</span> <span class="s2">"string"</span><span class="o">,</span> <span class="s2">"storeInfo"</span><span class="o">,</span> <span class="s2">"OOOOOO"</span>
@@ -256,8 +256,8 @@ into the {body} of the default.hbs template -->
 
         <span class="n">debug</span> <span class="o">{</span>
             <span class="c1">//개발</span>
-            <span class="n">minifyEnabled</span> <span class="kc">true</span>
-            <span class="n">debuggable</span> <span class="kc">false</span>
+            <span class="n">minifyEnabled</span> <span class="kc">false</span>
+            <span class="n">debuggable</span> <span class="kc">true</span>
         <span class="o">}</span>
     <span class="o">}</span>
 
@@ -346,8 +346,8 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
             <span class="c1">//개발</span>
             <span class="n">applicationIdSuffix</span> <span class="s2">".debug"</span>
             <span class="n">signingConfig</span> <span class="n">signingConfigs</span><span class="o">.</span><span class="na">debug</span>
-            <span class="n">minifyEnabled</span> <span class="kc">true</span>
-            <span class="n">debuggable</span> <span class="kc">false</span>
+            <span class="n">minifyEnabled</span> <span class="kc">false</span>
+            <span class="n">debuggable</span> <span class="kc">true</span>
         <span class="o">}</span>
     <span class="o">}</span>
     <span class="o">...</span>
@@ -378,7 +378,7 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
 
 <div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">flavorDimensions</span> <span class="s2">"store"</span>
     <span class="n">productFlavors</span> <span class="o">{</span>
-        <span class="n">playGoogle</span> <span class="o">{</span>
+        <span class="n">googlePlay</span> <span class="o">{</span>
             <span class="n">applicationIdSuffix</span> <span class="s2">".google"</span>
             <span class="n">dimension</span> <span class="s2">"store"</span>
             <span class="n">resValue</span> <span class="s2">"string"</span><span class="o">,</span> <span class="s2">"storeInfo"</span><span class="o">,</span> <span class="s2">"OOOOOO"</span>
@@ -393,12 +393,12 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
 
 <p>buildType에서와 마찬가지로 <code class="highlighter-rouge">applicationIdSuffix</code>를 이용하여 각각 다른 applicationId를 할당합니다. 구글플레이에 등록예정인 인하우스 빌드의 applicationId는 <code class="highlighter-rouge">com.al.mond.oreo.google.inhouse</code>가 됩니다. 각 스토어에 따라 다른 String값을 가져야 한다면  <code class="highlighter-rouge">res/value/string.xml</code>대신 <code class="highlighter-rouge">resValue</code>를 이용해서 정의 할 수 있습니다.</p>
 
-<p>이렇게 아주 간단한 1차원 배열의 store Dimension을 정의하고 playGoogle과 oneStore 두가지 선택지를 추가 했습니다. 
+<p>이렇게 아주 간단한 1차원 배열의 store Dimension을 정의하고 googlePlay과 oneStore 두가지 선택지를 추가 했습니다. 
 이제 서버 dimension을 추가해서 2차원 배열의 Dimension을 아래처럼 구성 할 수 있습니다. 빌드에 따라 서버 API의 BaseUrl도 달라지도록 준비 해봤습니다.</p>
 
 <div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">flavorDimensions</span> <span class="s2">"store"</span><span class="o">,</span> <span class="s2">"server"</span>
     <span class="n">productFlavors</span> <span class="o">{</span>
-        <span class="n">playGoogle</span> <span class="o">{</span>
+        <span class="n">googlePlay</span> <span class="o">{</span>
             <span class="n">dimension</span> <span class="s2">"store"</span>
             <span class="n">applicationIdSuffix</span> <span class="s2">".google"</span>
             <span class="n">resValue</span> <span class="s2">"string"</span><span class="o">,</span> <span class="s2">"storeInfo"</span><span class="o">,</span> <span class="s2">"OOOOOO"</span>
@@ -467,7 +467,7 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
 
     <span class="n">flavorDimensions</span>  <span class="s2">"store"</span><span class="o">,</span><span class="s2">"server"</span>
     <span class="n">productFlavors</span> <span class="o">{</span>
-        <span class="n">playGoogle</span> <span class="o">{</span>
+        <span class="n">googlePlay</span> <span class="o">{</span>
             <span class="n">dimension</span> <span class="s2">"store"</span>
             <span class="n">applicationIdSuffix</span> <span class="s2">".google"</span>
             <span class="n">resValue</span> <span class="s2">"string"</span><span class="o">,</span> <span class="s2">"storeInfo"</span><span class="o">,</span> <span class="s2">"OOOOOO"</span>
@@ -498,14 +498,13 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
         <span class="n">inhouse</span> <span class="o">{</span>
             <span class="c1">//내부 배포</span>
             <span class="n">initWith</span> <span class="n">release</span>
-            <span class="n">minifyEnabled</span> <span class="kc">false</span>
             <span class="n">debuggable</span> <span class="kc">true</span>
         <span class="o">}</span>
 
         <span class="n">debug</span> <span class="o">{</span>
             <span class="c1">//개발</span>
-            <span class="n">minifyEnabled</span> <span class="kc">true</span>
-            <span class="n">debuggable</span> <span class="kc">false</span>
+            <span class="n">minifyEnabled</span> <span class="kc">false</span>
+            <span class="n">debuggable</span> <span class="kc">true</span>
         <span class="o">}</span>
     <span class="o">}</span>
 
@@ -615,6 +614,15 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
                                 
                                   
                                     
+                                        
+                                        
+                                            <li><a href="/dependency-gradle">앱의 의존성 확인하고 전이 의존성 변경하기</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
                                   
                                 
                                   
@@ -635,7 +643,7 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
                         <footer class="read-next-card-footer">
                             <a href="/tag/android/">
                                 
-                                    See all 1 posts  →
+                                    See all 2 posts  →
                                 
                             </a>
                         </footer>
@@ -644,6 +652,72 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
             
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/dependency-gradle">
+                <div class="post-card-image" style="background-image: url(/assets/images/cover/2021-01-27-dependency-gradle.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/dependency-gradle">
+                <header class="post-card-header">
+                    
+                        
+                            
+                               <span class="post-card-tags">Android</span>
+                            
+                        
+                            
+                               <span class="post-card-tags">Gradle</span>
+                            
+                        
+                            
+                               <span class="post-card-tags">Dependency</span>
+                            
+                        
+                            
+                                <span class="post-card-tags">Transitive</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">앱의 의존성 확인하고 전이 의존성 변경하기</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
             
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
