@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/gradle/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-01-30T05:04:16+09:00</updated>
+  <updated>2021-01-30T05:25:56+09:00</updated>
   <id>https://mond-al.github.io/tag/gradle/feed.xml</id>
 
   
@@ -169,7 +169,7 @@ BUILD SUCCESSFUL &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;693ms
 
 &lt;h3 id=&quot;시나리오-2-전이-의존성-제외하기--downgrade&quot;&gt;시나리오 2 (전이 의존성 제외하기 : downgrade)&lt;/h3&gt;
 
-&lt;p&gt;여러 모듈 의존성을 가진 X가 있습니다. 그런데 X의 최신 버전이 내 코드에서 문제를 일으키는 것을 발견하게 되었습니다. 물론 그중에 최신 버전을 사용하는 모듈도 포함되어 있습니다. 이런 경우 강제로 버전을 다운그레이드 합니다. 방법은 특정 버전을 strictly로 지정하면 됩니다.&lt;/p&gt;
+&lt;p&gt;여러 모듈 의존성을 가진 X가 있습니다. 물론 그중에 최신 버전을 사용하는 모듈도 포함되어 있습니다. 그런데 X의 최신 버전이 내 코드에서 문제를 일으키는 것을 발견하게 되었습니다. 이런 경우 강제로 버전을 다운그레이드 합니다. 방법은 특정 버전을 strictly로 지정하면 됩니다.&lt;/p&gt;
 
 &lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;dependencies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;                                                                                  
     &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'X'&lt;/span&gt;
