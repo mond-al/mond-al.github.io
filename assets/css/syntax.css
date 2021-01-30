@@ -204,7 +204,6 @@
 }
 .highlight {
   color: #f8f8f2;
-  background-color: #0e0f11;
-  width: 1040px;
+  width : 800px;
   overflow-x: scroll
 }
