@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/error/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-01-30T21:32:14+09:00</updated>
+  <updated>2021-01-30T21:50:22+09:00</updated>
   <id>https://mond-al.github.io/tag/error/feed.xml</id>
 
   
@@ -50,7 +50,7 @@
       <updated>2021-01-30T00:00:00+09:00</updated>
       <id>https://mond-al.github.io/error-log_android_11_api_changed</id>
       <content type="html" xml:base="https://mond-al.github.io/error-log_android_11_api_changed">&lt;h3 id=&quot;where-did-the-problem-occur&quot;&gt;Where did the problem occur?&lt;/h3&gt;
-&lt;p&gt;Case A.&lt;/p&gt;
+&lt;h2 id=&quot;case-a&quot;&gt;case A&lt;/h2&gt;
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ExceptionInInitializerError&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;okhttp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;internal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;platform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Platform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Platform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;85&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;okhttp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;OkHttpClient&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;newSslSocketFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;OkHttpClient&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;263&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
@@ -59,7 +59,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;Case B.&lt;/p&gt;
+&lt;h2 id=&quot;case-b&quot;&gt;Case B.&lt;/h2&gt;
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mi&quot;&gt;22965&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;23063&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;AndroidRuntime:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FATAL&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;EXCEPTION:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RxIoScheduler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
     &lt;span class=&quot;nl&quot;&gt;Process:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aaa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bbb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ccc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;debug&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;PID:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;22965&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;IllegalStateException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Fatal&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;thrown&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Scheduler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Worker&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
@@ -116,8 +116,8 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-&lt;p&gt;https://developer.android.com/about/versions/11/non-sdk-11#how-to-toggle
-https://github.com/square/okhttp/issues/5816&lt;/p&gt;</content>
+&lt;p&gt;&lt;a href=&quot;https://developer.android.com/about/versions/11/non-sdk-11#how-to-toggle&quot;&gt;https://developer.android.com/about/versions/11/non-sdk-11#how-to-toggle&lt;/a&gt;
+&lt;a href=&quot;https://developer.android.com/about/versions/11/non-sdk-11#how-to-toggle&quot;&gt;https://github.com/square/okhttp/issues/5816&lt;/a&gt;&lt;/p&gt;</content>
 
       
       
@@ -142,7 +142,7 @@ https://github.com/square/okhttp/issues/5816&lt;/p&gt;</content>
       
 
       
-        <summary type="html">Where did the problem occur? Case A. java.lang.ExceptionInInitializerError at okhttp3.internal.platform.Platform.get(Platform.java:85) at okhttp3.OkHttpClient.newSslSocketFactory(OkHttpClient.java:263) at okhttp3.OkHttpClient.&amp;lt;init&amp;gt;(OkHttpClient.java:229) at okhttp3.OkHttpClient$Builder.build(OkHttpClient.java:1015)</summary>
+        <summary type="html">Where did the problem occur? case A java.lang.ExceptionInInitializerError at okhttp3.internal.platform.Platform.get(Platform.java:85) at okhttp3.OkHttpClient.newSslSocketFactory(OkHttpClient.java:263) at okhttp3.OkHttpClient.&amp;lt;init&amp;gt;(OkHttpClient.java:229) at okhttp3.OkHttpClient$Builder.build(OkHttpClient.java:1015)</summary>
       
 
       
