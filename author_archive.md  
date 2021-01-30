@@ -138,7 +138,7 @@ into the {body} of the default.hbs template -->
     <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
     <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
     <li class="nav-getting-started" role="menuitem"><a href="/tag/android/">Android</a></li>
-    <li class="nav-try-ghost" role="menuitem"><a href="/tag/Android/">Project</a></li>
+    <li class="nav-try-ghost" role="menuitem"><a href="/tag/android/">Project</a></li>
 </ul>
 
         
@@ -226,8 +226,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="BuildTypes" class="tag-heading">BUILDTYPES</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="http://localhost:4000/20210126/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType 조합">ProductFlavors와 BuildType 조합</a></li> -->
-      <li class="entry-title"><a href="/20210126/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType 조합">ProductFlavors와 BuildType 조합</a></li>
+      <!-- <li class="entry-title"><a href="http://localhost:4000/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType 조합">ProductFlavors와 BuildType 조합</a></li> -->
+      <li class="entry-title"><a href="/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType 조합">ProductFlavors와 BuildType 조합</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -237,8 +237,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="ProductFlavors" class="tag-heading">PRODUCTFLAVORS</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="http://localhost:4000/20210126/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType 조합">ProductFlavors와 BuildType 조합</a></li> -->
-      <li class="entry-title"><a href="/20210126/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType 조합">ProductFlavors와 BuildType 조합</a></li>
+      <!-- <li class="entry-title"><a href="http://localhost:4000/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType 조합">ProductFlavors와 BuildType 조합</a></li> -->
+      <li class="entry-title"><a href="/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType 조합">ProductFlavors와 BuildType 조합</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -248,17 +248,17 @@ into the {body} of the default.hbs template -->
 	<h2 id="android" class="tag-heading">ANDROID</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="http://localhost:4000/20210130/error-log-android-11-api-changed" target="_blank" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</a></li> -->
-      <li class="entry-title"><a href="/20210130/error-log-android-11-api-changed" target="_blank" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</a></li>
+      <!-- <li class="entry-title"><a href="http://localhost:4000/error-log-android-11-api-changed" target="_blank" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</a></li> -->
+      <li class="entry-title"><a href="/error-log-android-11-api-changed" target="_blank" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</a></li>
     
-      <!-- <li class="entry-title"><a href="http://localhost:4000/20210127/dependency-gradle" target="_blank" title="앱의 의존성 확인하고 전이 의존성 변경하기">앱의 의존성 확인하고 전이 의존성 변경하기</a></li> -->
-      <li class="entry-title"><a href="/20210127/dependency-gradle" target="_blank" title="앱의 의존성 확인하고 전이 의존성 변경하기">앱의 의존성 확인하고 전이 의존성 변경하기</a></li>
+      <!-- <li class="entry-title"><a href="http://localhost:4000/dependency-gradle" target="_blank" title="앱의 의존성 확인하고 전이 의존성 변경하기">앱의 의존성 확인하고 전이 의존성 변경하기</a></li> -->
+      <li class="entry-title"><a href="/dependency-gradle" target="_blank" title="앱의 의존성 확인하고 전이 의존성 변경하기">앱의 의존성 확인하고 전이 의존성 변경하기</a></li>
     
-      <!-- <li class="entry-title"><a href="http://localhost:4000/20210126/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType 조합">ProductFlavors와 BuildType 조합</a></li> -->
-      <li class="entry-title"><a href="/20210126/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType 조합">ProductFlavors와 BuildType 조합</a></li>
+      <!-- <li class="entry-title"><a href="http://localhost:4000/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType 조합">ProductFlavors와 BuildType 조합</a></li> -->
+      <li class="entry-title"><a href="/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType 조합">ProductFlavors와 BuildType 조합</a></li>
     
-      <!-- <li class="entry-title"><a href="http://localhost:4000/20210118/fast-scroller" target="_blank" title="Recyclerview Fastscroller Review">Recyclerview Fastscroller Review</a></li> -->
-      <li class="entry-title"><a href="/20210118/fast-scroller" target="_blank" title="Recyclerview Fastscroller Review">Recyclerview Fastscroller Review</a></li>
+      <!-- <li class="entry-title"><a href="http://localhost:4000/fast-scroller" target="_blank" title="Recyclerview Fastscroller Review">Recyclerview Fastscroller Review</a></li> -->
+      <li class="entry-title"><a href="/fast-scroller" target="_blank" title="Recyclerview Fastscroller Review">Recyclerview Fastscroller Review</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -268,8 +268,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="dependency" class="tag-heading">DEPENDENCY</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="http://localhost:4000/20210127/dependency-gradle" target="_blank" title="앱의 의존성 확인하고 전이 의존성 변경하기">앱의 의존성 확인하고 전이 의존성 변경하기</a></li> -->
-      <li class="entry-title"><a href="/20210127/dependency-gradle" target="_blank" title="앱의 의존성 확인하고 전이 의존성 변경하기">앱의 의존성 확인하고 전이 의존성 변경하기</a></li>
+      <!-- <li class="entry-title"><a href="http://localhost:4000/dependency-gradle" target="_blank" title="앱의 의존성 확인하고 전이 의존성 변경하기">앱의 의존성 확인하고 전이 의존성 변경하기</a></li> -->
+      <li class="entry-title"><a href="/dependency-gradle" target="_blank" title="앱의 의존성 확인하고 전이 의존성 변경하기">앱의 의존성 확인하고 전이 의존성 변경하기</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -279,8 +279,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="download" class="tag-heading">DOWNLOAD</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="http://localhost:4000/20210122/test-image" target="_blank" title="개발 테스트용 이미지 다운로드">개발 테스트용 이미지 다운로드</a></li> -->
-      <li class="entry-title"><a href="/20210122/test-image" target="_blank" title="개발 테스트용 이미지 다운로드">개발 테스트용 이미지 다운로드</a></li>
+      <!-- <li class="entry-title"><a href="http://localhost:4000/test-image" target="_blank" title="개발 테스트용 이미지 다운로드">개발 테스트용 이미지 다운로드</a></li> -->
+      <li class="entry-title"><a href="/test-image" target="_blank" title="개발 테스트용 이미지 다운로드">개발 테스트용 이미지 다운로드</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -290,8 +290,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="error" class="tag-heading">ERROR</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="http://localhost:4000/20210130/error-log-android-11-api-changed" target="_blank" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</a></li> -->
-      <li class="entry-title"><a href="/20210130/error-log-android-11-api-changed" target="_blank" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</a></li>
+      <!-- <li class="entry-title"><a href="http://localhost:4000/error-log-android-11-api-changed" target="_blank" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</a></li> -->
+      <li class="entry-title"><a href="/error-log-android-11-api-changed" target="_blank" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -301,8 +301,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="fastscroller" class="tag-heading">FASTSCROLLER</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="http://localhost:4000/20210118/fast-scroller" target="_blank" title="Recyclerview Fastscroller Review">Recyclerview Fastscroller Review</a></li> -->
-      <li class="entry-title"><a href="/20210118/fast-scroller" target="_blank" title="Recyclerview Fastscroller Review">Recyclerview Fastscroller Review</a></li>
+      <!-- <li class="entry-title"><a href="http://localhost:4000/fast-scroller" target="_blank" title="Recyclerview Fastscroller Review">Recyclerview Fastscroller Review</a></li> -->
+      <li class="entry-title"><a href="/fast-scroller" target="_blank" title="Recyclerview Fastscroller Review">Recyclerview Fastscroller Review</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -312,11 +312,11 @@ into the {body} of the default.hbs template -->
 	<h2 id="gradle" class="tag-heading">GRADLE</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="http://localhost:4000/20210127/dependency-gradle" target="_blank" title="앱의 의존성 확인하고 전이 의존성 변경하기">앱의 의존성 확인하고 전이 의존성 변경하기</a></li> -->
-      <li class="entry-title"><a href="/20210127/dependency-gradle" target="_blank" title="앱의 의존성 확인하고 전이 의존성 변경하기">앱의 의존성 확인하고 전이 의존성 변경하기</a></li>
+      <!-- <li class="entry-title"><a href="http://localhost:4000/dependency-gradle" target="_blank" title="앱의 의존성 확인하고 전이 의존성 변경하기">앱의 의존성 확인하고 전이 의존성 변경하기</a></li> -->
+      <li class="entry-title"><a href="/dependency-gradle" target="_blank" title="앱의 의존성 확인하고 전이 의존성 변경하기">앱의 의존성 확인하고 전이 의존성 변경하기</a></li>
     
-      <!-- <li class="entry-title"><a href="http://localhost:4000/20210126/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType 조합">ProductFlavors와 BuildType 조합</a></li> -->
-      <li class="entry-title"><a href="/20210126/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType 조합">ProductFlavors와 BuildType 조합</a></li>
+      <!-- <li class="entry-title"><a href="http://localhost:4000/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType 조합">ProductFlavors와 BuildType 조합</a></li> -->
+      <li class="entry-title"><a href="/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType 조합">ProductFlavors와 BuildType 조합</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -326,8 +326,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="image" class="tag-heading">IMAGE</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="http://localhost:4000/20210122/test-image" target="_blank" title="개발 테스트용 이미지 다운로드">개발 테스트용 이미지 다운로드</a></li> -->
-      <li class="entry-title"><a href="/20210122/test-image" target="_blank" title="개발 테스트용 이미지 다운로드">개발 테스트용 이미지 다운로드</a></li>
+      <!-- <li class="entry-title"><a href="http://localhost:4000/test-image" target="_blank" title="개발 테스트용 이미지 다운로드">개발 테스트용 이미지 다운로드</a></li> -->
+      <li class="entry-title"><a href="/test-image" target="_blank" title="개발 테스트용 이미지 다운로드">개발 테스트용 이미지 다운로드</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -337,8 +337,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="log" class="tag-heading">LOG</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="http://localhost:4000/20210130/error-log-android-11-api-changed" target="_blank" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</a></li> -->
-      <li class="entry-title"><a href="/20210130/error-log-android-11-api-changed" target="_blank" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</a></li>
+      <!-- <li class="entry-title"><a href="http://localhost:4000/error-log-android-11-api-changed" target="_blank" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</a></li> -->
+      <li class="entry-title"><a href="/error-log-android-11-api-changed" target="_blank" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -348,8 +348,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="recyclerview" class="tag-heading">RECYCLERVIEW</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="http://localhost:4000/20210118/fast-scroller" target="_blank" title="Recyclerview Fastscroller Review">Recyclerview Fastscroller Review</a></li> -->
-      <li class="entry-title"><a href="/20210118/fast-scroller" target="_blank" title="Recyclerview Fastscroller Review">Recyclerview Fastscroller Review</a></li>
+      <!-- <li class="entry-title"><a href="http://localhost:4000/fast-scroller" target="_blank" title="Recyclerview Fastscroller Review">Recyclerview Fastscroller Review</a></li> -->
+      <li class="entry-title"><a href="/fast-scroller" target="_blank" title="Recyclerview Fastscroller Review">Recyclerview Fastscroller Review</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -359,8 +359,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="test" class="tag-heading">TEST</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="http://localhost:4000/20210122/test-image" target="_blank" title="개발 테스트용 이미지 다운로드">개발 테스트용 이미지 다운로드</a></li> -->
-      <li class="entry-title"><a href="/20210122/test-image" target="_blank" title="개발 테스트용 이미지 다운로드">개발 테스트용 이미지 다운로드</a></li>
+      <!-- <li class="entry-title"><a href="http://localhost:4000/test-image" target="_blank" title="개발 테스트용 이미지 다운로드">개발 테스트용 이미지 다운로드</a></li> -->
+      <li class="entry-title"><a href="/test-image" target="_blank" title="개발 테스트용 이미지 다운로드">개발 테스트용 이미지 다운로드</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -370,8 +370,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="transitive" class="tag-heading">TRANSITIVE</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="http://localhost:4000/20210127/dependency-gradle" target="_blank" title="앱의 의존성 확인하고 전이 의존성 변경하기">앱의 의존성 확인하고 전이 의존성 변경하기</a></li> -->
-      <li class="entry-title"><a href="/20210127/dependency-gradle" target="_blank" title="앱의 의존성 확인하고 전이 의존성 변경하기">앱의 의존성 확인하고 전이 의존성 변경하기</a></li>
+      <!-- <li class="entry-title"><a href="http://localhost:4000/dependency-gradle" target="_blank" title="앱의 의존성 확인하고 전이 의존성 변경하기">앱의 의존성 확인하고 전이 의존성 변경하기</a></li> -->
+      <li class="entry-title"><a href="/dependency-gradle" target="_blank" title="앱의 의존성 확인하고 전이 의존성 변경하기">앱의 의존성 확인하고 전이 의존성 변경하기</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -381,8 +381,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="u" class="tag-heading">U</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="http://localhost:4000/20210112/about-reboot" target="_blank" title="reboot">reboot</a></li> -->
-      <li class="entry-title"><a href="/20210112/about-reboot" target="_blank" title="reboot">reboot</a></li>
+      <!-- <li class="entry-title"><a href="http://localhost:4000/about-reboot" target="_blank" title="reboot">reboot</a></li> -->
+      <li class="entry-title"><a href="/about-reboot" target="_blank" title="reboot">reboot</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
