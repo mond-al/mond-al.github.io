@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="https://mond-al.github.io/tag/android/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://mond-al.github.io/author/mond/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
   <updated>2021-01-31T02:59:16+09:00</updated>
-  <id>https://mond-al.github.io/tag/android/feed.xml</id>
+  <id>https://mond-al.github.io/author/mond/feed.xml</id>
 
   
   
@@ -744,6 +744,65 @@ dependencies {
     </entry>
   
     <entry>
+      <title type="html">개발 테스트용 이미지 다운로드</title>
+      <link href="https://mond-al.github.io/test-image" rel="alternate" type="text/html" title="개발 테스트용 이미지 다운로드" />
+      <published>2021-01-22T00:00:00+09:00</published>
+      <updated>2021-01-22T00:00:00+09:00</updated>
+      <id>https://mond-al.github.io/test-image</id>
+      <content type="html" xml:base="https://mond-al.github.io/test-image">기능 테스트를 하다 보면 이미지 소스들이 필요한 경우가 있습니다. 때로는 예제앱에 이미지를 포함하고 싶을때 적당한 이미지를 선택하는것도 은근 신경쓰이는 일 입니다.
+
+그래서 준비해봤습니다! 간편하게 개발용 테스트 이미지를 다운받을 수 있는 사이트입니다. 저작권문제도 없습니다. 
+
+## 여러장의 이미지가 필요할 때  
+&gt; [http://unsample.net](http://unsample.net)
+
+  * [이미지 공유 사이트 unsplash](https://unsplash.com)를 기반으로 zip으로 묶어서 한번에 다운로드.
+  * 한번에 원하는 크기의 이미지를 최대 30장을 묶어서 내려받을 수 있습니다. 
+  * 필요한 이미지 갯수, width/height, quality를 지정 가능하고, 원한다면 특정 이미지를 검색해서 모을 수 있습니다.
+  * 모든 사진은 무료 로 다운로드 하여 사용할 수 있습니다.
+  * 심지어 상업적 및 비상업적 목적 모두 사용도 가능합니다. 이미지 자체를 판매는 금지!.
+  * 샘플앱에 넣어서 사용하는 것도 가능 하겠네요. :~)
+    
+## 더미 이미지가 필요할 때   
+&gt;[https://www.websiteplanet.com/webtools/dummy-images-generator](https://www.websiteplanet.com/webtools/dummy-images-generator)
+
+![title](assets/images/post/2021-01-22-test-image/dummy-images-generator.png){: width=&quot;100%&quot;}
+
+
+* width x height, 배경색, 글자색, format을 지정하면 바로 이미지로 다운로드 가능.
+* ```혹시 한번에 1부터 1000?까지 쓰여진 이미지를 만들어서 다운받을 수 있는 곳은 없을까요? 제보 부탁드립니다. 🙇‍♂️```</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jisoo Yang</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="test" />
+      
+        <category term="image" />
+      
+        <category term="download" />
+      
+
+      
+        <summary type="html">기능 테스트를 하다 보면 이미지 소스들이 필요한 경우가 있습니다. 때로는 예제앱에 이미지를 포함하고 싶을때 적당한 이미지를 선택하는것도 은근 신경쓰이는 일 입니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">Recyclerview Fastscroller Review</title>
       <link href="https://mond-al.github.io/fast-scroller" rel="alternate" type="text/html" title="Recyclerview Fastscroller Review" />
       <published>2021-01-18T00:00:00+09:00</published>
@@ -874,6 +933,61 @@ link : [https://github.com/mond-al/recyclerview-fastscroller](https://github.com
 
       
         <summary type="html">위 그림처럼 갤러리나 수많은 아이템을 보여줄 때, 순차적으로 스크롤하여 접근하는 대신 스크롤 바를 잡고 바로 이동하는 역활을 하는 것을 FastScroller라고 합니다. FastScroller를 한마디로 이야기하면 “드래그하여 특정한 위치로 이동가능한 스크롤 바”라고 정의 할 수 있습니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">reboot</title>
+      <link href="https://mond-al.github.io/about-reboot" rel="alternate" type="text/html" title="reboot" />
+      <published>2021-01-12T00:00:00+09:00</published>
+      <updated>2021-01-12T00:00:00+09:00</updated>
+      <id>https://mond-al.github.io/about-reboot</id>
+      <content type="html" xml:base="https://mond-al.github.io/about-reboot">다시 시작합니다.
+BLOG, MRSK project
+
+
+&gt;Blog
+
+주니어 시절에는 블로그를 꽤 열심히 정리 했던 것 같습니다. 주니어 시절 개발과정에서 겪게 되는 삽질이 반복 되지 않도록 쓰기 시작했던 블로그 글들은 분명 제가 개발자로 성장하는데 큰 도움이 되었다고 생각됩니다. 하지만 세상일이 항상 그렇듯 일이 바쁘다는 핑계로 정리하는 습관이 사라지더니 어느 순간 모두 비공개로만 혼자서 보는 일기장으로, 그 후에는 점점 잊힌 페이지가 되더군요.
+ 
+ 문득 정신을 차려보니 안드로이드를 개발한 지 어느덧 10년이란 시간이 지났습니다. 근래 들어 다시 &quot;성장&quot;하고 싶다는 생각이 들기 시작했고 포털에서 제공하는 블로그대신 github으로 자리를 옮겨와서 새롭게 시작합니다.
+
+---
+
+&gt;MRSK project ``(alMond Reyclerview Support Kit)``
+
+
+안드로이드 앱을 개발하다 보면 가장 많이 사용하게 되는 컴포넌트가 아무래도 RecyclerView가 아닐까 합니다. 구글이 제공해주는 만능상자 같은 리사이클러뷰가 제공하는 다양한 API를 이용해 엮고 응용해서 RecyclerView를 사용하기 편하게 도와주는 키트를 만들어 보려 합니다. 언제든 간편하게 적용하고, 간편하게 제거 가능한 형태를 목표로 합니다. 
+
+
+- snippet code로 바로 적용 가능한 용법을 예제앱에 적용해거나
+(https://github.com/mond-al/RecyclerView-Support)
+- 조금 구성이 필요한 것은 별도로 배포할 예정입니다.
+(https://github.com/mond-al/recyclerview-fastscroller)</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jisoo Yang</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="u" />
+      
+
+      
+        <summary type="html">다시 시작합니다. BLOG, MRSK project</summary>
       
 
       
