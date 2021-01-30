@@ -248,8 +248,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="android" class="tag-heading">ANDROID</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/error-log_android_11_api_changed" target="_blank" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</a></li> -->
-      <li class="entry-title"><a href="/error-log_android_11_api_changed" target="_blank" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/error-log-android-11-api-changed" target="_blank" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</a></li> -->
+      <li class="entry-title"><a href="/error-log-android-11-api-changed" target="_blank" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</a></li>
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/dependency-gradle" target="_blank" title="앱의 의존성 확인하고 전이 의존성 변경하기">앱의 의존성 확인하고 전이 의존성 변경하기</a></li> -->
       <li class="entry-title"><a href="/dependency-gradle" target="_blank" title="앱의 의존성 확인하고 전이 의존성 변경하기">앱의 의존성 확인하고 전이 의존성 변경하기</a></li>
@@ -290,8 +290,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="error" class="tag-heading">ERROR</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/error-log_android_11_api_changed" target="_blank" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</a></li> -->
-      <li class="entry-title"><a href="/error-log_android_11_api_changed" target="_blank" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/error-log-android-11-api-changed" target="_blank" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</a></li> -->
+      <li class="entry-title"><a href="/error-log-android-11-api-changed" target="_blank" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -337,8 +337,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="log" class="tag-heading">LOG</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/error-log_android_11_api_changed" target="_blank" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</a></li> -->
-      <li class="entry-title"><a href="/error-log_android_11_api_changed" target="_blank" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/error-log-android-11-api-changed" target="_blank" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</a></li> -->
+      <li class="entry-title"><a href="/error-log-android-11-api-changed" target="_blank" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
