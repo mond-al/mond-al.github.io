@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://localhost:4000/author/mond/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2021-01-31T11:36:59+09:00</updated>
-  <id>http://localhost:4000/author/mond/feed.xml</id>
+  <link href="https://mond-al.github.io/author/mond/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
+  <updated>2021-01-31T11:39:55+09:00</updated>
+  <id>https://mond-al.github.io/author/mond/feed.xml</id>
 
   
   
@@ -33,83 +33,79 @@
   
     <entry>
       <title type="html">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</title>
-      <link href="http://localhost:4000/error-log-android-11-api-changed" rel="alternate" type="text/html" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable" />
+      <link href="https://mond-al.github.io/error-log-android-11-api-changed" rel="alternate" type="text/html" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable" />
       <published>2021-01-30T00:00:00+09:00</published>
       <updated>2021-01-30T00:00:00+09:00</updated>
-      <id>http://localhost:4000/error-log-android-11-api-changed</id>
-      <content type="html" xml:base="http://localhost:4000/error-log-android-11-api-changed">### Where did the problem occur? ###
-## case A  
-```java
-java.lang.ExceptionInInitializerError
-    at okhttp3.internal.platform.Platform.get(Platform.java:85)
-    at okhttp3.OkHttpClient.newSslSocketFactory(OkHttpClient.java:263)
-    at okhttp3.OkHttpClient.&lt;init&gt;(OkHttpClient.java:229)
-    at okhttp3.OkHttpClient$Builder.build(OkHttpClient.java:1015)
-```
-&lt;Br&gt;
+      <id>https://mond-al.github.io/error-log-android-11-api-changed</id>
+      <content type="html" xml:base="https://mond-al.github.io/error-log-android-11-api-changed">&lt;h3 id=&quot;where-did-the-problem-occur&quot;&gt;Where did the problem occur?&lt;/h3&gt;
+&lt;h2 id=&quot;case-a&quot;&gt;case A&lt;/h2&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ExceptionInInitializerError&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;okhttp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;internal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;platform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Platform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Platform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;85&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;okhttp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;OkHttpClient&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;newSslSocketFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;OkHttpClient&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;263&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;okhttp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;OkHttpClient&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;OkHttpClient&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;229&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;okhttp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;OkHttpClient&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$Builder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;OkHttpClient&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1015&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-## Case B.  
-```java
-22965-23063 E/AndroidRuntime: FATAL EXCEPTION: RxIoScheduler-3
-    Process: aaa.bbb.ccc.debug, PID: 22965
-    java.lang.IllegalStateException: Fatal Exception thrown on Scheduler.Worker thread.
-        at rx.internal.schedulers.ScheduledAction.run(ScheduledAction.java:59)
-        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:462)
-        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-        at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:301)
-        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
-        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
-        at java.lang.Thread.run(Thread.java:923)
-     # 문제가 발생하는 구체적인 지점.
-     Caused by: java.lang.NoSuchMethodError: No virtual method log(ILjava/lang/String;Ljava/lang/Throwable;)V in class Lokhttp3/internal/platform/Platform; or its super classes (declaration of 'okhttp3.internal.platform.Platform' appears in /data/app/~~xxxxx==/aaa.bbb.ccc.debug-eee==/base.apk!classes3.dex)
-        at okhttp3.logging.HttpLoggingInterceptor$Logger.lambda$static$0(HttpLoggingInterceptor.java:112)
-        at okhttp3.logging.-$$Lambda$HttpLoggingInterceptor$Logger$cXcBbVFwFnV7JF5qXQEzeLK-kgE.log(Unknown Source:0)
-        at okhttp3.logging.HttpLoggingInterceptor.intercept(HttpLoggingInterceptor.java:169)
-        at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
-        at aaa.bbb.ccc.external.retrofit.UserAgent.intercept(UserAgent.java:35)
-        at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
-        at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201)
-        at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154)
-        at retrofit2.OkHttpCall.execute(OkHttpCall.java:188)
-        at retrofit2.adapter.rxjava.CallExecuteOnSubscribe.call(CallExecuteOnSubscribe.java:40)
-        at retrofit2.adapter.rxjava.CallExecuteOnSubscribe.call(CallExecuteOnSubscribe.java:24)
-        at retrofit2.adapter.rxjava.BodyOnSubscribe.call(BodyOnSubscribe.java:36)
-        at retrofit2.adapter.rxjava.BodyOnSubscribe.call(BodyOnSubscribe.java:28)
-        at rx.Observable.unsafeSubscribe(Observable.java:10327)
-        at rx.internal.operators.OperatorSubscribeOn$SubscribeOnSubscriber.call(OperatorSubscribeOn.java:100)
-        at rx.internal.schedulers.CachedThreadScheduler$EventLoopWorker$1.call(CachedThreadScheduler.java:230)
-        at rx.internal.schedulers.ScheduledAction.run(ScheduledAction.java:55)
-        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:462) 
-        at java.util.concurrent.FutureTask.run(FutureTask.java:266) 
-        at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:301) 
-        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167) 
-        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641) 
-        at java.lang.Thread.run(Thread.java:923) 
-```
+&lt;h2 id=&quot;case-b&quot;&gt;Case B.&lt;/h2&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mi&quot;&gt;22965&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;23063&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;AndroidRuntime:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FATAL&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;EXCEPTION:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RxIoScheduler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;Process:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aaa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bbb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ccc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;debug&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;PID:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;22965&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;IllegalStateException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Fatal&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;thrown&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Scheduler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Worker&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;internal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;schedulers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ScheduledAction&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ScheduledAction&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;59&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;concurrent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Executors&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$RunnableAdapter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Executors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;462&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;concurrent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;FutureTask&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FutureTask&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;266&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;concurrent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ScheduledThreadPoolExecutor&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$ScheduledFutureTask&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ScheduledThreadPoolExecutor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;301&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;concurrent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ThreadPoolExecutor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;runWorker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ThreadPoolExecutor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1167&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;concurrent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ThreadPoolExecutor&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$Worker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ThreadPoolExecutor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;641&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;923&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+     &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;문제가&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;발생하는&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;구체적인&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;지점&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;Caused&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;by:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;NoSuchMethodError&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;No&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;virtual&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;method&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ILjava&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Ljava&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Throwable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;V&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Lokhttp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;internal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;platform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Platform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;its&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;classes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;declaration&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;okhttp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;internal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;platform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Platform&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;appears&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/~~&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xxxxx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;aaa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bbb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ccc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;debug&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;eee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;apk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;classes3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;okhttp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;logging&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;HttpLoggingInterceptor&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$Logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lambda&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$static&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HttpLoggingInterceptor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;112&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;okhttp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;logging&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$Lambda$HttpLoggingInterceptor$Logger$cXcBbVFwFnV7JF5qXQEzeLK&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kgE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Unknown&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;Source:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;okhttp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;logging&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;HttpLoggingInterceptor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;intercept&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HttpLoggingInterceptor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;169&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;okhttp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;internal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;RealInterceptorChain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;proceed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RealInterceptorChain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;kt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;109&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aaa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bbb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ccc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;external&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;retrofit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;UserAgent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;intercept&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UserAgent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;okhttp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;internal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;RealInterceptorChain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;proceed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RealInterceptorChain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;kt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;109&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;okhttp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;internal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;connection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;RealCall&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getResponseWithInterceptorChain&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$okhttp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RealCall&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;kt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;201&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;okhttp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;internal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;connection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;RealCall&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RealCall&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;kt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;154&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;retrofit2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;OkHttpCall&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;OkHttpCall&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;188&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;retrofit2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;adapter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;rxjava&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;CallExecuteOnSubscribe&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CallExecuteOnSubscribe&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;retrofit2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;adapter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;rxjava&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;CallExecuteOnSubscribe&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CallExecuteOnSubscribe&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;24&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;retrofit2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;adapter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;rxjava&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;BodyOnSubscribe&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BodyOnSubscribe&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;36&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;retrofit2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;adapter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;rxjava&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;BodyOnSubscribe&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BodyOnSubscribe&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;28&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Observable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;unsafeSubscribe&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Observable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10327&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;internal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;operators&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;OperatorSubscribeOn&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$SubscribeOnSubscriber&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;OperatorSubscribeOn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;internal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;schedulers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;CachedThreadScheduler&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$EventLoopWorker&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CachedThreadScheduler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;230&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;internal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;schedulers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ScheduledAction&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ScheduledAction&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;55&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;concurrent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Executors&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$RunnableAdapter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Executors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;462&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;concurrent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;FutureTask&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FutureTask&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;266&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;concurrent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ScheduledThreadPoolExecutor&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$ScheduledFutureTask&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ScheduledThreadPoolExecutor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;301&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;concurrent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ThreadPoolExecutor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;runWorker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ThreadPoolExecutor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1167&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;concurrent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ThreadPoolExecutor&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;$Worker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ThreadPoolExecutor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;641&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;923&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-### WHAT did you change last? ###
-Android compileSdkVersion 29 -&gt; 30
+&lt;h3 id=&quot;what-did-you-change-last&quot;&gt;WHAT did you change last?&lt;/h3&gt;
+&lt;p&gt;Android compileSdkVersion 29 -&amp;gt; 30&lt;/p&gt;
 
-### WHY did it happen? ###
-Android 11부터 비 SDK 테스트 API(AOSP에서 @TestApi로 주석이 지정된 API)는 이제 기본적으로 차단됨.
-하지만 내가 사용중이던 okhttp와 retrofit은 여전히 리플렉션을 이용해서 해당 API를 요청중이였다. 
+&lt;h3 id=&quot;why-did-it-happen&quot;&gt;WHY did it happen?&lt;/h3&gt;
+&lt;p&gt;Android 11부터 비 SDK 테스트 API(AOSP에서 @TestApi로 주석이 지정된 API)는 이제 기본적으로 차단됨.
+하지만 내가 사용중이던 okhttp와 retrofit은 여전히 리플렉션을 이용해서 해당 API를 요청중이였다.&lt;/p&gt;
 
-```groovy
-    // 사용중이던 OkHttp 관련 모듈과 버전 
-    implementation 'com.squareup.okhttp3:okhttp:3.14.0'
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.14.0'
-```
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;c1&quot;&gt;// 사용중이던 OkHttp 관련 모듈과 버전 &lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'com.squareup.okhttp3:okhttp:3.14.0'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'com.squareup.okhttp3:logging-interceptor:3.14.0'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-### HOW did you solve it? ###
-해당 이슈가 해결된 버전으로 교체.
-```groovy
-    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
-    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
-```
+&lt;h3 id=&quot;how-did-you-solve-it&quot;&gt;HOW did you solve it?&lt;/h3&gt;
+&lt;p&gt;해당 이슈가 해결된 버전으로 교체.&lt;/p&gt;
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'com.squareup.okhttp3:okhttp:4.9.0'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'com.squareup.okhttp3:logging-interceptor:4.9.0'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-### Reference ##
-[https://developer.android.com/about/versions/11/non-sdk-11#how-to-toggle](https://developer.android.com/about/versions/11/non-sdk-11#how-to-toggle)
-[https://github.com/square/okhttp/issues/5816](https://developer.android.com/about/versions/11/non-sdk-11#how-to-toggle)</content>
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://developer.android.com/about/versions/11/non-sdk-11#how-to-toggle&quot;&gt;https://developer.android.com/about/versions/11/non-sdk-11#how-to-toggle&lt;/a&gt;
+&lt;a href=&quot;https://developer.android.com/about/versions/11/non-sdk-11#how-to-toggle&quot;&gt;https://github.com/square/okhttp/issues/5816&lt;/a&gt;&lt;/p&gt;</content>
 
       
       
@@ -143,185 +139,171 @@ Android 11부터 비 SDK 테스트 API(AOSP에서 @TestApi로 주석이 지정�
   
     <entry>
       <title type="html">앱의 의존성 확인하고 전이 의존성 변경하기</title>
-      <link href="http://localhost:4000/dependency-gradle" rel="alternate" type="text/html" title="앱의 의존성 확인하고 전이 의존성 변경하기" />
+      <link href="https://mond-al.github.io/dependency-gradle" rel="alternate" type="text/html" title="앱의 의존성 확인하고 전이 의존성 변경하기" />
       <published>2021-01-27T00:00:00+09:00</published>
       <updated>2021-01-27T00:00:00+09:00</updated>
-      <id>http://localhost:4000/dependency-gradle</id>
-      <content type="html" xml:base="http://localhost:4000/dependency-gradle">의존성과 관련하여 문제가 생겼다고 판단되면 `의존성 트리`를 봐야합니다. 터미널에서 프로젝트가 있는 폴더로 이동하고 아래의 명령어를 실행 하면됩니다. 
+      <id>https://mond-al.github.io/dependency-gradle</id>
+      <content type="html" xml:base="https://mond-al.github.io/dependency-gradle">&lt;p&gt;의존성과 관련하여 문제가 생겼다고 판단되면 &lt;code class=&quot;highlighter-rouge&quot;&gt;의존성 트리&lt;/code&gt;를 봐야합니다. 터미널에서 프로젝트가 있는 폴더로 이동하고 아래의 명령어를 실행 하면됩니다.&lt;/p&gt;
 
-혹시 `{Dementions...}{buildType}`부분이 이해되지 않으신다면, [ProductFlavors와 BuildType](ProductFlavors-BuildType)을 참고해주세요.
+&lt;p&gt;혹시 &lt;code class=&quot;highlighter-rouge&quot;&gt;{Dementions...}{buildType}&lt;/code&gt;부분이 이해되지 않으신다면, &lt;a href=&quot;ProductFlavors-BuildType&quot;&gt;ProductFlavors와 BuildType&lt;/a&gt;을 참고해주세요.&lt;/p&gt;
 
-## 의존성 트리 보기 ##
+&lt;h2 id=&quot;의존성-트리-보기&quot;&gt;의존성 트리 보기&lt;/h2&gt;
 
-### 명령어 형식
-```bash
-./gradlew app:dependencies --configuration {Dementions...}{buildType}{Compile|Runtime}Classpath   
-```
+&lt;h3 id=&quot;명령어-형식&quot;&gt;명령어 형식&lt;/h3&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./gradlew app:dependencies &lt;span class=&quot;nt&quot;&gt;--configuration&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;Dementions...&lt;span class=&quot;o&quot;&gt;}{&lt;/span&gt;buildType&lt;span class=&quot;o&quot;&gt;}{&lt;/span&gt;Compile|Runtime&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;Classpath   
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-### 실제 실행 시켰을때 화면
-```bash 
-./gradlew app:dependencies --configuration prodDebugCompileClasspath
+&lt;h3 id=&quot;실제-실행-시켰을때-화면&quot;&gt;실제 실행 시켰을때 화면&lt;/h3&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./gradlew app:dependencies &lt;span class=&quot;nt&quot;&gt;--configuration&lt;/span&gt; prodDebugCompileClasspath
 
-&gt; Task :app:dependencies
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; Task :app:dependencies
 
-------------------------------------------------------------
+&lt;span class=&quot;nt&quot;&gt;------------------------------------------------------------&lt;/span&gt;
 Project :app
-------------------------------------------------------------
+&lt;span class=&quot;nt&quot;&gt;------------------------------------------------------------&lt;/span&gt;
 
-oneStoreDevDebugCompileClasspath - Compile classpath for compilation 'oneStoreDevDebug' (target  
-(androidJvm)).
+oneStoreDevDebugCompileClasspath - Compile classpath &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;compilation &lt;span class=&quot;s1&quot;&gt;'oneStoreDevDebug'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;target  
+&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;androidJvm&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
 +--- androidx.core:core-ktx:1.3.2
-|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.3.71 -&gt; 1.4.21 (*)
+|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.3.71 -&amp;gt; 1.4.21 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 |    +--- androidx.annotation:annotation:1.1.0
-|    \--- androidx.core:core:1.3.2
+|    &lt;span class=&quot;se&quot;&gt;\-&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; androidx.core:core:1.3.2
 |         +--- androidx.annotation:annotation:1.1.0
-|         +--- androidx.lifecycle:lifecycle-runtime:2.0.0 -&gt; 2.1.0
-|         |    +--- androidx.lifecycle:lifecycle-common:2.1.0                         # (A)
+|         +--- androidx.lifecycle:lifecycle-runtime:2.0.0 -&amp;gt; 2.1.0
+|         |    +--- androidx.lifecycle:lifecycle-common:2.1.0                         &lt;span class=&quot;c&quot;&gt;# (A)&lt;/span&gt;
 ...
 +--- androidx.appcompat:appcompat:1.2.0
 |    +--- androidx.annotation:annotation:1.1.0
 ...
-|    |    |    +--- androidx.annotation:annotation:1.0.0 -&gt; 1.1.0
-|    |    |    +--- androidx.core:core:1.0.0 -&gt; 1.3.2 (*)
+|    |    |    +--- androidx.annotation:annotation:1.0.0 -&amp;gt; 1.1.0
+|    |    |    +--- androidx.core:core:1.0.0 -&amp;gt; 1.3.2 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 |    |    |    +--- androidx.lifecycle:lifecycle-livedata:2.0.0
 |    |    |    |    +--- androidx.arch.core:core-runtime:2.0.0
-|    |    |    |    |    +--- androidx.annotation:annotation:1.0.0 -&gt; 1.1.0
-|    |    |    |    |    \--- androidx.arch.core:core-common:2.0.0 -&gt; 2.1.0 (*)
+|    |    |    |    |    +--- androidx.annotation:annotation:1.0.0 -&amp;gt; 1.1.0
+|    |    |    |    |    &lt;span class=&quot;se&quot;&gt;\-&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; androidx.arch.core:core-common:2.0.0 -&amp;gt; 2.1.0 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 |    |    |    |    +--- androidx.lifecycle:lifecycle-livedata-core:2.0.0
-|    |    |    |    |    +--- androidx.lifecycle:lifecycle-common:2.0.0 -&gt; 2.1.0 (*)   # (B)
+|    |    |    |    |    +--- androidx.lifecycle:lifecycle-common:2.0.0 -&amp;gt; 2.1.0 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;# (B)&lt;/span&gt;
 ...
-+--- org.jetbrains.kotlin:kotlin-stdlib:{strictly 1.4.21} -&gt; 1.4.21 (c)
-+--- androidx.core:core-ktx:{strictly 1.3.2} -&gt; 1.3.2 (c)
-+--- androidx.appcompat:appcompat:{strictly 1.2.0} -&gt; 1.2.0 (c)
-+--- com.google.android.material:material:{strictly 1.2.1} -&gt; 1.2.1 (c)
++--- org.jetbrains.kotlin:kotlin-stdlib:&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;strictly 1.4.21&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; -&amp;gt; 1.4.21 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;c&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
++--- androidx.core:core-ktx:&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;strictly 1.3.2&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; -&amp;gt; 1.3.2 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;c&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
++--- androidx.appcompat:appcompat:&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;strictly 1.2.0&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; -&amp;gt; 1.2.0 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;c&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
++--- com.google.android.material:material:&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;strictly 1.2.1&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; -&amp;gt; 1.2.1 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;c&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 ...
-+--- androidx.interpolator:interpolator:{strictly 1.0.0} -&gt; 1.0.0 (c)
-+--- androidx.arch.core:core-runtime:{strictly 2.0.0} -&gt; 2.0.0 (c)
-\--- androidx.lifecycle:lifecycle-livedata-core:{strictly 2.0.0} -&gt; 2.0.0 (c)
++--- androidx.interpolator:interpolator:&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;strictly 1.0.0&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; -&amp;gt; 1.0.0 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;c&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
++--- androidx.arch.core:core-runtime:&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;strictly 2.0.0&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; -&amp;gt; 2.0.0 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;c&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;se&quot;&gt;\-&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; androidx.lifecycle:lifecycle-livedata-core:&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;strictly 2.0.0&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; -&amp;gt; 2.0.0 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;c&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 
-(c) - dependency constraint
-(*) - dependencies omitted (listed previously)
+&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;c&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; - dependency constraint
+&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; - dependencies omitted &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;listed previously&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 
-A web-based, searchable dependency report is available by adding the --scan option.
+A web-based, searchable dependency report is available by adding the &lt;span class=&quot;nt&quot;&gt;--scan&lt;/span&gt; option.
 
-BUILD SUCCESSFUL in 693ms
+BUILD SUCCESSFUL &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;693ms
 1 actionable task: 1 executed
 
-```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-### 의존성 트리 읽기 ###
+&lt;h3 id=&quot;의존성-트리-읽기&quot;&gt;의존성 트리 읽기&lt;/h3&gt;
 
-`(c)`는 의존성 제약이 걸려있는 상태를 의미합니다. gradle이 알아서 결정하지 못하도록 명시되어 있는 경우입니다. `(\*)`은 이전에 트리에서 이미 하위구조를 보여주었기 때문에 생략되었음을 의미합니다.
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;(c)&lt;/code&gt;는 의존성 제약이 걸려있는 상태를 의미합니다. gradle이 알아서 결정하지 못하도록 명시되어 있는 경우입니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;(\*)&lt;/code&gt;은 이전에 트리에서 이미 하위구조를 보여주었기 때문에 생략되었음을 의미합니다.&lt;/p&gt;
 
-(B)는 `androidx.appcompat:appcompat:1.2.0`는 `androidx.lifecycle:lifecycle-common:2.0.0`을 참조하고 있지만, (A)에서 `androidx.core:core-ktx:1.3.2`에서 `androidx.lifecycle:lifecycle-common:2.1.0`를 참조하고 있기 때문에 최종적으로 `2.0.0`대신 `2.1.0`으로 갈음(`-&gt;`)되었음을 알 수 있습니다. 
- 
-실제 사용 할때는 위 예시 처럼 결과를 화면에 바로 띄우면 사용하기 번거롭습니다. 때문에 아래처럼 파일로 만들거나, 클립보드로 복사해두었다가 내가 쓰기 편한 편집기나 IDE에 붙여놓고 보는 게 편합니다. 
+&lt;p&gt;(B)는 &lt;code class=&quot;highlighter-rouge&quot;&gt;androidx.appcompat:appcompat:1.2.0&lt;/code&gt;는 &lt;code class=&quot;highlighter-rouge&quot;&gt;androidx.lifecycle:lifecycle-common:2.0.0&lt;/code&gt;을 참조하고 있지만, (A)에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;androidx.core:core-ktx:1.3.2&lt;/code&gt;에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;androidx.lifecycle:lifecycle-common:2.1.0&lt;/code&gt;를 참조하고 있기 때문에 최종적으로 &lt;code class=&quot;highlighter-rouge&quot;&gt;2.0.0&lt;/code&gt;대신 &lt;code class=&quot;highlighter-rouge&quot;&gt;2.1.0&lt;/code&gt;으로 갈음(&lt;code class=&quot;highlighter-rouge&quot;&gt;-&amp;gt;&lt;/code&gt;)되었음을 알 수 있습니다.&lt;/p&gt;
 
-&gt;파일로 저장하기   
-&gt;```bash
-&gt;./gradlew app:dependencies --configuration prodReleaseCompileClasspath &gt; dependency.tree
-&gt;```
-&gt;클립보드에 복사하기
-&gt;```bash
-&gt;./gradlew app:dependencies --configuration prodReleaseCompileClasspath | pbcopy  
-&gt;```
+&lt;p&gt;실제 사용 할때는 위 예시 처럼 결과를 화면에 바로 띄우면 사용하기 번거롭습니다. 때문에 아래처럼 파일로 만들거나, 클립보드로 복사해두었다가 내가 쓰기 편한 편집기나 IDE에 붙여놓고 보는 게 편합니다.&lt;/p&gt;
 
+&lt;blockquote&gt;
+  &lt;p&gt;파일로 저장하기&lt;/p&gt;
+  &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./gradlew app:dependencies &lt;span class=&quot;nt&quot;&gt;--configuration&lt;/span&gt; prodReleaseCompileClasspath &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; dependency.tree
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+  &lt;p&gt;클립보드에 복사하기&lt;/p&gt;
+  &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./gradlew app:dependencies &lt;span class=&quot;nt&quot;&gt;--configuration&lt;/span&gt; prodReleaseCompileClasspath | pbcopy  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
 
-## 의존성 문제 해결 하기 ##
+&lt;h2 id=&quot;의존성-문제-해결-하기&quot;&gt;의존성 문제 해결 하기&lt;/h2&gt;
 
-의존성을 변경하게 되면 기존 빌드와 다른 환경으로 빌드 되기 때문에 코드 수준의 변경이 일어났다고 생각하는 것이 좋습니다. 빌드가 성공한다고 하여도 런타임에 문제를 일으킬 수 있습니다. 때문에 항상 의존성 관리는 신중해야 하고 변경 후에는 리그레이션 테스트를 통해 검증하는 것이 좋습니다.
+&lt;p&gt;의존성을 변경하게 되면 기존 빌드와 다른 환경으로 빌드 되기 때문에 코드 수준의 변경이 일어났다고 생각하는 것이 좋습니다. 빌드가 성공한다고 하여도 런타임에 문제를 일으킬 수 있습니다. 때문에 항상 의존성 관리는 신중해야 하고 변경 후에는 리그레이션 테스트를 통해 검증하는 것이 좋습니다.&lt;/p&gt;
 
-실제 예로 보면 눈이 너무 아프니 간단한 상황을 만들고 간략하게 예를 만들어 진행해 보겠습니다.
+&lt;p&gt;실제 예로 보면 눈이 너무 아프니 간단한 상황을 만들고 간략하게 예를 만들어 진행해 보겠습니다.&lt;/p&gt;
 
-### 시나리오 1 (전이 의존성 컨트롤하기:upgrade)
+&lt;h3 id=&quot;시나리오-1-전이-의존성-컨트롤하기upgrade&quot;&gt;시나리오 1 (전이 의존성 컨트롤하기:upgrade)&lt;/h3&gt;
 
-```groovy
-dependencies {                                                                                  
-    implementation 'B:1.0.0'
-}
-```
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;dependencies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;                                                                                  
+    &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'B:1.0.0'&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-```bash
-./gradlew app:dependencies --configuration compileClasspath                                      
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./gradlew app:dependencies &lt;span class=&quot;nt&quot;&gt;--configuration&lt;/span&gt; compileClasspath                                      
 ...
 +--- B:1.0.0
-     \--- C:1.0.0
-```
+     &lt;span class=&quot;se&quot;&gt;\-&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; C:1.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-내 프로젝트에서는 C를 직접 사용지 않았습니다. 하지만 C:1.0.0에 의존성을 가진 B:1.0.0이 있습니다. 그런데 C:1.0.0에 문제가 있어서 B를 사용할때 특정상황에서 버그가 있습니다. 찾아보니 C:1.2.0버전에서는 이 문제를 해결했습니다. 하지만 B는 아직 업데이트 되지 않았습니다. 결국 B에서 C의 버전만 올리면 되는 상황입니다.
+&lt;p&gt;내 프로젝트에서는 C를 직접 사용지 않았습니다. 하지만 C:1.0.0에 의존성을 가진 B:1.0.0이 있습니다. 그런데 C:1.0.0에 문제가 있어서 B를 사용할때 특정상황에서 버그가 있습니다. 찾아보니 C:1.2.0버전에서는 이 문제를 해결했습니다. 하지만 B는 아직 업데이트 되지 않았습니다. 결국 B에서 C의 버전만 올리면 되는 상황입니다.&lt;/p&gt;
 
-참고로 이런 상황에서 B에 대한 명시적인 의존성을 가진 `직접 의존성`(direct dependencies)이라고 하고 C에대한 의존성은 `전이 의존성`(transitive dependencies)이라고 합니다. 
+&lt;p&gt;참고로 이런 상황에서 B에 대한 명시적인 의존성을 가진 &lt;code class=&quot;highlighter-rouge&quot;&gt;직접 의존성&lt;/code&gt;(direct dependencies)이라고 하고 C에대한 의존성은 &lt;code class=&quot;highlighter-rouge&quot;&gt;전이 의존성&lt;/code&gt;(transitive dependencies)이라고 합니다.&lt;/p&gt;
 
-전이 의존성을 변경하기 위해서는 아래처럼 constraint블럭을 지정하고 직접 기입해주면 됩니다. because에 명시적으로 이유까지 적어주면 좋겠습니다.
+&lt;p&gt;전이 의존성을 변경하기 위해서는 아래처럼 constraint블럭을 지정하고 직접 기입해주면 됩니다. because에 명시적으로 이유까지 적어주면 좋겠습니다.&lt;/p&gt;
 
-```groovy
-dependencies {                                                                                  
-    implementation 'B:1.0.0'
-    constraints {
-        implementation('C:1.2.0') {
-            because 'previous versions have a bug impacting this application'
-        }
-    }
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;dependencies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;                                                                                  
+    &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'B:1.0.0'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;constraints&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'C:1.2.0'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;because&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'previous versions have a bug impacting this application'&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 
-}
-```
-```bash
-./gradlew app:dependencies --configuration compileClasspath
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./gradlew app:dependencies &lt;span class=&quot;nt&quot;&gt;--configuration&lt;/span&gt; compileClasspath
 ...
 +--- B:1.0.0
-|    \--- C:1.0.0 -&gt; 1.2.0 (*)
-```
+|    &lt;span class=&quot;se&quot;&gt;\-&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; C:1.0.0 -&amp;gt; 1.2.0 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;h3 id=&quot;시나리오-2-전이-의존성-제외하기--downgrade&quot;&gt;시나리오 2 (전이 의존성 제외하기 : downgrade)&lt;/h3&gt;
 
-### 시나리오 2 (전이 의존성 제외하기 : downgrade)
+&lt;p&gt;여러 모듈 의존성을 가진 X가 있습니다. 물론 그중에 최신 버전을 사용하는 모듈도 포함되어 있습니다. 그런데 X의 최신 버전이 내 코드에서 문제를 일으키는 것을 발견하게 되었습니다. 이런 경우 강제로 버전을 다운그레이드 합니다. 방법은 특정 버전을 strictly로 지정하면 됩니다.&lt;/p&gt;
 
-여러 모듈 의존성을 가진 X가 있습니다. 물론 그중에 최신 버전을 사용하는 모듈도 포함되어 있습니다. 그런데 X의 최신 버전이 내 코드에서 문제를 일으키는 것을 발견하게 되었습니다. 이런 경우 강제로 버전을 다운그레이드 합니다. 방법은 특정 버전을 strictly로 지정하면 됩니다. 
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;dependencies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;                                                                                  
+    &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'X'&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;version&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;strictly&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.0.0'&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'A:1.0.0'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'B:1.1.0'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'C:1.0.1'&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;또는 dependencies 블록 밖에서 전역적으로 덮어 쓸 수도 있습니다.&lt;/p&gt;
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;configurations&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;all&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;                                                                            
+    &lt;span class=&quot;n&quot;&gt;resolutionStrategy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;force&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;X:1.0.0&quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-```groovy
-dependencies {                                                                                  
-    implementation 'X'
-    {
-        version {
-            strictly '1.0.0'
-        }
-    }
-    implementation 'A:1.0.0'
-    implementation 'B:1.1.0'
-    implementation 'C:1.0.1'
-}
-```
-또는 dependencies 블록 밖에서 전역적으로 덮어 쓸 수도 있습니다.
-```groovy
-configurations.all {                                                                            
-    resolutionStrategy.force &quot;X:1.0.0&quot;
-}
-```
-
-```bash
-./gradlew app:dependencies --configuration compileClasspath                                     
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./gradlew app:dependencies &lt;span class=&quot;nt&quot;&gt;--configuration&lt;/span&gt; compileClasspath                                     
 ...
-+--- X:{strictly 1.0.0} -&gt; 1.0.0
++--- X:&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;strictly 1.0.0&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; -&amp;gt; 1.0.0
 +--- B:1.0.0
-|    \--- X:1.3.0 -&gt; 1.0.0 (*)
+|    &lt;span class=&quot;se&quot;&gt;\-&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; X:1.3.0 -&amp;gt; 1.0.0 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 +--- C:1.1.0
-|    \--- X:1.4.0 -&gt; 1.0.0 (*)
+|    &lt;span class=&quot;se&quot;&gt;\-&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; X:1.4.0 -&amp;gt; 1.0.0 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 +--- D:1.0.1
-     \--- X:1.5.0 -&gt; 1.0.0 (*)
-```
+     &lt;span class=&quot;se&quot;&gt;\-&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; X:1.5.0 -&amp;gt; 1.0.0 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;h3 id=&quot;시나리오-3-전이-의존성-제외하기--exclude&quot;&gt;시나리오 3 (전이 의존성 제외하기 : exclude)&lt;/h3&gt;
 
+&lt;p&gt;가장 많이 게 되는 상황입니다. 특정 라이브러리를 가져와서 사용해야겪 하는데, 특정 모듈이나 그룹을 제외하고 싶습니다. 가령 aar로 가져온 모듈과 gradle로 가져온 모듈이 서로 다른버전을 보고 있는 경우가 있습니다. 또는 버전에 따라 패키지 형상이 다른 라이브러리에 각각 의존성이 있는경우가 이에 해당합니다. 이럴 때는 gradle로 가져오는 모듈에서 제외 할 수 있다면 그 부분만 제거합니다.&lt;/p&gt;
 
-### 시나리오 3 (전이 의존성 제외하기 : exclude)
-
-가장 많이 게 되는 상황입니다. 특정 라이브러리를 가져와서 사용해야겪 하는데, 특정 모듈이나 그룹을 제외하고 싶습니다. 가령 aar로 가져온 모듈과 gradle로 가져온 모듈이 서로 다른버전을 보고 있는 경우가 있습니다. 또는 버전에 따라 패키지 형상이 다른 라이브러리에 각각 의존성이 있는경우가 이에 해당합니다. 이럴 때는 gradle로 가져오는 모듈에서 제외 할 수 있다면 그 부분만 제거합니다. 
- 
-```groovy
-dependencies {                                                                                  
-    implementation('X:1.0.0') {
-        exclude group: '{group_name}', module: '{module_name}'
-    }
-}
-```</content>
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;dependencies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;                                                                                  
+    &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'X:1.0.0'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;exclude&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;group:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{group_name}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;module:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{module_name}'&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
 
       
       
@@ -357,359 +339,350 @@ dependencies {
   
     <entry>
       <title type="html">ProductFlavors와 BuildType 조합</title>
-      <link href="http://localhost:4000/ProductFlavors-BuildType" rel="alternate" type="text/html" title="ProductFlavors와 BuildType 조합" />
+      <link href="https://mond-al.github.io/ProductFlavors-BuildType" rel="alternate" type="text/html" title="ProductFlavors와 BuildType 조합" />
       <published>2021-01-26T00:00:00+09:00</published>
       <updated>2021-01-26T00:00:00+09:00</updated>
-      <id>http://localhost:4000/ProductFlavors-BuildType</id>
-      <content type="html" xml:base="http://localhost:4000/ProductFlavors-BuildType">ProductFlavors와 BuildType을 이용해서 다양한 형상을 만들 수 있습니다.
-
-서비스가 점점 커지다 보면 일명 &quot;OO향&quot;빌드를 배포해야하는 경우나 &quot;XX용&quot;빌드를 따로 뽑아야하는 경우가 생깁니다. 가령 예를 들자면 &quot;중국향&quot;과 &quot;국내향&quot;처럼 나눌수 있을 것이고, &quot;개발용&quot;,&quot;QA용&quot;,&quot;내부배포용&quot;,&quot;실서비스용&quot;으로도 나눌 수도 있습니다. 이런 구성을 개발에서 각 버전을 구분하여 관리해야 한다면 우리는 어떻게 해야 할까요? 
-
- Gradle을 기반으로 BuildTypes은 기본으로하고 ProductFlavors에 여러가지 dimension을 정의하여 조합하여 빌드를 간편하게 생산 할 수있습니다. 간략한 예를 들어 상황을 정의하고 실제 build.gradle 파일을 수정해 보겠습니다.
-
-
-groovy 언어가 익숙치 않고 gradle에 대한 학습할 기회가 적다보니 build.gradle파일을 편집하기는 꽤 부담스럽습니다. 조금만 바뀌어도 빌드가 안되거나 많은 사이드 이펙트를 만들 수 있기 때문인데요. 오늘은 아래의 build.gradle 파일을 처음부터 작성해보면서 각 구문의 의미와 용법을 설명해 보겠습니다. 알고나면 정말 단순합니다. 쫄지말고 본문부터 그냥 읽어보세요.  
-
-```groovy
-plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
-}
-
-android {
-    compileSdkVersion 30
-    buildToolsVersion &quot;30.0.2&quot;
-
-    defaultConfig {
-        applicationId &quot;com.al.mond.oreo&quot;
-        minSdkVersion 23
-        targetSdkVersion 30
-        versionCode 1
-        versionName &quot;1.0&quot;
-
-        testInstrumentationRunner &quot;androidx.test.runner.AndroidJUnitRunner&quot;
-    }
-
-
-    flavorDimensions  &quot;store&quot;,&quot;server&quot;
-    productFlavors {
-        googlePlay {
-            dimension &quot;store&quot;
-            applicationIdSuffix &quot;.google&quot;
-            resValue &quot;string&quot;, &quot;storeInfo&quot;, &quot;OOOOOO&quot;
-        }
-        oneStore {
-            dimension &quot;store&quot;
-            applicationIdSuffix &quot;.onestore&quot;
-            resValue &quot;string&quot;, &quot;storeInfo&quot;, &quot;XXXXXX&quot;
-        }
-        dev {
-            dimension &quot;server&quot;
-            resValue &quot;string&quot;, &quot;server_url&quot;, &quot;https://test.oreo.com/rest&quot;
-        }
-        prod {
-            dimension &quot;server&quot;
-            resValue &quot;string&quot;, &quot;server_url&quot;, &quot;https://oreo.com/rest&quot;
-        }
-    }
-
-    buildTypes {
-        release {
-            //스토어 배포
-            minifyEnabled true
-            debuggable false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-
-        inhouse {
-            //내부 배포
-            initWith release
-            debuggable true
-        }
-
-        debug {
-            //개발
-            minifyEnabled false
-            debuggable true
-        }
-    }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
-}
-
-dependencies {
-    implementation &quot;org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version&quot;
-    implementation 'androidx.core:core-ktx:1.3.2'
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.2.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-}
-
-```
-
-### 아주 간단한 시나리오. ###
-
-다양한 환경에 배포를 목표로 하는 `오레오`라는 앱이 있습니다.
-개발 단계는 `개발`,`내부배포`,`상용배포`로 진행됩니다. 앱은 `GooglePlay`,`OneStore`에 등록합니다. 각 마켓별로 다른 프로모션을 적용 할 예정이기 때문에 빌드에 따라 앱이 다르게 동작해야합니다. 그리고 GooglePlay에서는 `초코오레오` 라는 이름으로 등록되고, OneStore에서는 `치즈오레오`로 등록됩니다. 두 앱은 동시에 설치가 가능합니다. 
-
-
-Android Studio에서 기본 프로젝트중 가장 단순한 Empty Activity를 기반으로 프로젝트를 생성합니다.
-app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수 있습니다. 오늘은 이 프로젝트로 예제를 구성해 보겠습니다. 
-
-![new](assets/images/post/2021-01-26-ProductFlavors-BuildType/new_project.png)
-
-```groovy
-android {
-    compileSdkVersion 30
-    buildToolsVersion &quot;30.0.2&quot;
-
-    defaultConfig {
-        applicationId &quot;com.al.mond.oreo&quot;
-        minSdkVersion 23
-        targetSdkVersion 30
-        versionCode 1
-        versionName &quot;1.0&quot;
-
-        testInstrumentationRunner &quot;androidx.test.runner.AndroidJUnitRunner&quot;
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
-}
-```
-
-
-### BuildTypes  
-
-
-```groovy
-    ...
-    buildTypes {
-        release {
-            //스토어 배포
-            signingConfig signingConfigs.release
-            minifyEnabled true
-            debuggable false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-
-        inhouse {
-            //내부 배포
-            initWith release
-            applicationIdSuffix &quot;.inhouse&quot;
-            debuggable true
-        }
-
-        debug {
-            //개발
-            applicationIdSuffix &quot;.debug&quot;
-            signingConfig signingConfigs.debug
-            minifyEnabled false
-            debuggable true
-        }
-    }
-    ...
-```
-
-우선 빌드의 타입을 가장 보편적인 형태를 따라 상용빌드(release), 내부빌드(inhouse), 디버그빌드(debug)로 나누어 두었습니다. inhouse빌드는 대부분의 속성을 `initWith release`를 통해서 release빌드의 속성을 그대로 상속받고 필요한 속성인 `debuggable`만 `ture`로 변경했습니다.
-
-`applicationIdSuffix`옵션을 통해 각 빌드의 applicationId를 다르게 구성 했습니다. 이렇게 applicationId이 다르면 applicationId가 중복되지 않기 때문에 하나의 폰에 여러가지 빌드타입을 설치하고 기능을 비교할 수 도 있습니다. 물론 앱 아이콘과 앱 이름을 구분하여 서로 헷갈리지 않도록 함께 처리해두어야 합니다. inhouse빌드는 applicationId가 `com.al.mond.oreo.inhouse`가 되고 release빌드는 suffix가 없으니 applicationId가 `com.al.mond.oreo`이 됩니다. 
-
-그리고 필수는 아니지만 inhouse빌드는 release와 동일하게 난독화된 상태로 진행하는 것을 추천하고 싶습니다. inhouse에서 디버깅의 편리함을 위해 `minifyEnabled`을 `false`로 둔다면, 난독화를 통해 클래스나 필드이 변경되기 때문에 이름에 의존적인 코드가 실수로 난독화 되어버린다면, 검수단계에서 발견하지 못하게 됩니다. 예를들어 API호출도 잘 되었고 서버에서 값도 잘 내려주었지만, DAO클래스가 난독화 되어 데이터를 파싱하지 못 할 수 있습니다. 이렇게 되면 검수는 난독화하지 않은 상태로 했기 때문에 잘 동작하고, 실배포에서는 문제가 발생합니다. 때문에 inhouse빌드는 디버그할때 번거롭더라도 항상 `minifyEnabled`를 `true`로 두어 난독화를 시켜줍시다. 
-
-정의된 빌드에 따라 실행은 Android Studio 화면 왼쪽 모서리쪽에 접혀있는 `build variants` 사이드바를 클릭하여 열어주세요.  
-![androidStudio](assets/images/post/2021-01-26-ProductFlavors-BuildType/buildvariant.png)
-
-이제 아래의 그림처럼 release,inhouse,debug 빌드를 선택할 수 있게 되었습니다.
-![androidStudio](assets/images/post/2021-01-26-ProductFlavors-BuildType/build_type.png)
-
-BuildType은 보통 목적이 뚜렷하고 이미 속성들이 잘 갖추어 져 있기때문에 생각 할 부분이 적습니다. 
- 
-
-### ProductFlavors ###
-
-이제 ProductFlavors를 정의해 보겠습니다. 
-
-```groovy
-flavorDimensions &quot;store&quot;
-```
-
-ProductFlavors를 정의하기에 앞서 어떤 차원에서 사용 할 것인지 이름을 정의해야 합니다. Dimensions의 의미가 처음에는 와 닿지 않습니다. 우리가 정의하는 항목의 수 많큼 `배열의 차원`으로 생각하면 이해하기가 한결 쉬워집니다. 적절한 예가 바로 떠오르지 않아서 조금 억지스럽지만 &quot;스토어&quot;별로 googlePlay와 OneStore 나누고, &quot;과금스타일&quot;별로 유료와 무료 빌드를 나눈다면 2x2의 2차원 배열이 됩니다. 여기에 &quot;서버&quot;까지 내부망과 외부망용으로 구분하게되면 2x2x2의 3차원 배열이 됩니다. Dimensions의 의미가 잘 이해 되셨나요?
-
-```groovy
-    flavorDimensions &quot;store&quot;
-    productFlavors {
-        googlePlay {
-            applicationIdSuffix &quot;.google&quot;
-            dimension &quot;store&quot;
-            resValue &quot;string&quot;, &quot;storeInfo&quot;, &quot;OOOOOO&quot;
-        }
-        oneStore {
-            applicationIdSuffix &quot;.onestore&quot;
-            dimension &quot;store&quot;
-            resValue &quot;string&quot;, &quot;storeInfo&quot;, &quot;XXXXXX&quot;
-        }
-    }
-```
-
-buildType에서와 마찬가지로 `applicationIdSuffix`를 이용하여 각각 다른 applicationId를 할당합니다. 구글플레이에 등록예정인 인하우스 빌드의 applicationId는 `com.al.mond.oreo.google.inhouse`가 됩니다. 각 스토어에 따라 다른 String값을 가져야 한다면  `res/value/string.xml`대신 `resValue`를 이용해서 정의 할 수 있습니다. 
-
-이렇게 아주 간단한 1차원 배열의 store Dimension을 정의하고 googlePlay과 oneStore 두가지 선택지를 추가 했습니다. 
-이제 서버 dimension을 추가해서 2차원 배열의 Dimension을 아래처럼 구성 할 수 있습니다. 빌드에 따라 서버 API의 BaseUrl도 달라지도록 준비 해봤습니다. 
-
-```groovy
-    flavorDimensions &quot;store&quot;, &quot;server&quot;
-    productFlavors {
-        googlePlay {
-            dimension &quot;store&quot;
-            applicationIdSuffix &quot;.google&quot;
-            resValue &quot;string&quot;, &quot;storeInfo&quot;, &quot;OOOOOO&quot;
-        }
-        oneStore {
-            dimension &quot;store&quot;
-            applicationIdSuffix &quot;.onestore&quot;
-            resValue &quot;string&quot;, &quot;storeInfo&quot;, &quot;XXXXXX&quot;
-        }
-        dev {
-            dimension &quot;server&quot;
-            resValue &quot;string&quot;, &quot;server_url&quot;, &quot;https://test.oreo.com/rest&quot;
-        }
-        prod {
-            dimension &quot;server&quot;
-            resValue &quot;string&quot;, &quot;server_url&quot;, &quot;https://oreo.com/rest&quot;
-        }
-    }
-```
-
-
-### productFlavors의 dimension을 추가하고 관리할 때 주의점들 ###
-buildType의 이름과 productFlavors의 이름은 서로 동일한 이름을 사용 할 수 없습니다. 추후에 서버의 타입이 &quot;debug&quot;인 서버가 추가되면 다른 이름을 사용하거나 dimension의 정의에 대해 고민을 해야할 시점입니다.  
- 
- 경험상 대부분의 프로젝트들은 그렇게 많은 dimension이 필요하지는 않습니다. 아시다시피 배열의 차원이 늘어나면, 조합 가능한 경우의 수가 기하급수적으로 늘어납니다. 결국 사용하지 않는 BuildVariant가 많아 지고, 관리 되지않는 무의미한 dimension이 되지 않도록 주의해야 합니다.  
-  `2개의 스토어 x 2개의 서버 x 3개의 빌드타입  = 12가지 변형` 벌써 눈이 핑핑 돌기 시작하네요.
- 
-  
- 두개이상의 Dimension이 정의되면 순서에 유의해야합니다. `&quot;store&quot;,&quot;server&quot;` 일때와 `&quot;server&quot;,&quot;store&quot;`일때는 생성되는 BuildVariant도 달라지게 됩니다.
- 
-| ![androidStudio](assets/images/post/2021-01-26-ProductFlavors-BuildType/store_server.png) | ![androidStudio](assets/images/post/2021-01-26-ProductFlavors-BuildType/server_store.png) |
-
- 순서가 변경되면 각 설정의 조합이나 변형에 따라 다르게 읽어들이게 될 Res폴더의 경로도 변경 되어야 하고, 혹시 배포 자동화를 위해 만들어둔 스크립트가 있다면 변경되어야 합니다. 어렵진 않지만 시력을 잃을 수 도 있습니다. &lt;i class=&quot;far fa-eye-slash&quot;&gt;&lt;/i&gt;
-  
-  빌드변형들(build variants)의 이름은 [카멜표기법](https://ko.wikipedia.org/wiki/%EB%82%99%ED%83%80_%EB%8C%80%EB%AC%B8%EC%9E%90)을 따르며 flavorDimensions에 정의된 순서대로 나열하고 마지막에 buildType을 쓰면 됩니다. 로컬에서 빌드 할 때는 안드로이드 스튜디오가 알아서 메뉴를 만들어 주기 때문에 우리는 잘 선택하기만 하면 됩니다.  
-  
-
-
-### 끝 ###
-
-도입부에 올려둔 build.gradle파일을 다시 보면 처음 이 글을 읽기 시작했을 때와 다른 느낌이 드시나요? 
-다음 포스트에서는 각 빌드변형별로 다른 아이콘, 다른 앱이름을 붙여보도록 하겠습니다. (LINK) 
-
-```groovy
-plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
-}
-
-android {
-    compileSdkVersion 30
-    buildToolsVersion &quot;30.0.2&quot;
-
-    defaultConfig {
-        applicationId &quot;com.al.mond.oreo&quot;
-        minSdkVersion 23
-        targetSdkVersion 30
-        versionCode 1
-        versionName &quot;1.0&quot;
-
-        testInstrumentationRunner &quot;androidx.test.runner.AndroidJUnitRunner&quot;
-    }
-
-
-    flavorDimensions  &quot;store&quot;,&quot;server&quot;
-    productFlavors {
-        googlePlay {
-            dimension &quot;store&quot;
-            applicationIdSuffix &quot;.google&quot;
-            resValue &quot;string&quot;, &quot;storeInfo&quot;, &quot;OOOOOO&quot;
-        }
-        oneStore {
-            dimension &quot;store&quot;
-            applicationIdSuffix &quot;.onestore&quot;
-            resValue &quot;string&quot;, &quot;storeInfo&quot;, &quot;XXXXXX&quot;
-        }
-        dev {
-            dimension &quot;server&quot;
-            resValue &quot;string&quot;, &quot;server_url&quot;, &quot;https://test.oreo.com/rest&quot;
-        }
-        prod {
-            dimension &quot;server&quot;
-            resValue &quot;string&quot;, &quot;server_url&quot;, &quot;https://oreo.com/rest&quot;
-        }
-    }
-
-    buildTypes {
-        release {
-            //스토어 배포
-            minifyEnabled true
-            debuggable false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-
-        inhouse {
-            //내부 배포
-            initWith release
-            debuggable true
-        }
-
-        debug {
-            //개발
-            minifyEnabled false
-            debuggable true
-        }
-    }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
-}
-
-dependencies {
-
-    implementation &quot;org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version&quot;
-    implementation 'androidx.core:core-ktx:1.3.2'
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.2.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-}
-
-```</content>
+      <id>https://mond-al.github.io/ProductFlavors-BuildType</id>
+      <content type="html" xml:base="https://mond-al.github.io/ProductFlavors-BuildType">&lt;p&gt;ProductFlavors와 BuildType을 이용해서 다양한 형상을 만들 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;서비스가 점점 커지다 보면 일명 “OO향”빌드를 배포해야하는 경우나 “XX용”빌드를 따로 뽑아야하는 경우가 생깁니다. 가령 예를 들자면 “중국향”과 “국내향”처럼 나눌수 있을 것이고, “개발용”,”QA용”,”내부배포용”,”실서비스용”으로도 나눌 수도 있습니다. 이런 구성을 개발에서 각 버전을 구분하여 관리해야 한다면 우리는 어떻게 해야 할까요?&lt;/p&gt;
+
+&lt;p&gt;Gradle을 기반으로 BuildTypes은 기본으로하고 ProductFlavors에 여러가지 dimension을 정의하여 조합하여 빌드를 간편하게 생산 할 수있습니다. 간략한 예를 들어 상황을 정의하고 실제 build.gradle 파일을 수정해 보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;groovy 언어가 익숙치 않고 gradle에 대한 학습할 기회가 적다보니 build.gradle파일을 편집하기는 꽤 부담스럽습니다. 조금만 바뀌어도 빌드가 안되거나 많은 사이드 이펙트를 만들 수 있기 때문인데요. 오늘은 아래의 build.gradle 파일을 처음부터 작성해보면서 각 구문의 의미와 용법을 설명해 보겠습니다. 알고나면 정말 단순합니다. 쫄지말고 본문부터 그냥 읽어보세요.&lt;/p&gt;
+
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;plugins&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'com.android.application'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'kotlin-android'&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;android&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;compileSdkVersion&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;buildToolsVersion&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;30.0.2&quot;&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;defaultConfig&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;applicationId&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;com.al.mond.oreo&quot;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;minSdkVersion&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;23&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;targetSdkVersion&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;versionCode&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;versionName&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;1.0&quot;&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;testInstrumentationRunner&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;androidx.test.runner.AndroidJUnitRunner&quot;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+    &lt;span class=&quot;n&quot;&gt;flavorDimensions&lt;/span&gt;  &lt;span class=&quot;s2&quot;&gt;&quot;store&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;server&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;productFlavors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;googlePlay&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;dimension&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;store&quot;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;applicationIdSuffix&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;.google&quot;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;resValue&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;storeInfo&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;OOOOOO&quot;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;oneStore&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;dimension&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;store&quot;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;applicationIdSuffix&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;.onestore&quot;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;resValue&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;storeInfo&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;XXXXXX&quot;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;dev&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;dimension&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;server&quot;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;resValue&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;server_url&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;https://test.oreo.com/rest&quot;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;prod&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;dimension&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;server&quot;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;resValue&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;server_url&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;https://oreo.com/rest&quot;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;buildTypes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;release&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//스토어 배포&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;minifyEnabled&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;debuggable&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;proguardFiles&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getDefaultProguardFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'proguard-android-optimize.txt'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'proguard-rules.pro'&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;inhouse&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//내부 배포&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;initWith&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;release&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;debuggable&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;debug&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//개발&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;minifyEnabled&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;debuggable&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;compileOptions&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;sourceCompatibility&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;JavaVersion&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;VERSION_1_8&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;targetCompatibility&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;JavaVersion&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;VERSION_1_8&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;kotlinOptions&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;jvmTarget&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.8'&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;dependencies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'androidx.core:core-ktx:1.3.2'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'androidx.appcompat:appcompat:1.2.0'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'com.google.android.material:material:1.2.1'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'androidx.constraintlayout:constraintlayout:2.0.4'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;testImplementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'junit:junit:4.+'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;androidTestImplementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'androidx.test.ext:junit:1.1.2'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;androidTestImplementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'androidx.test.espresso:espresso-core:3.3.0'&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;아주-간단한-시나리오&quot;&gt;아주 간단한 시나리오.&lt;/h3&gt;
+
+&lt;p&gt;다양한 환경에 배포를 목표로 하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;오레오&lt;/code&gt;라는 앱이 있습니다.
+개발 단계는 &lt;code class=&quot;highlighter-rouge&quot;&gt;개발&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;내부배포&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;상용배포&lt;/code&gt;로 진행됩니다. 앱은 &lt;code class=&quot;highlighter-rouge&quot;&gt;GooglePlay&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;OneStore&lt;/code&gt;에 등록합니다. 각 마켓별로 다른 프로모션을 적용 할 예정이기 때문에 빌드에 따라 앱이 다르게 동작해야합니다. 그리고 GooglePlay에서는 &lt;code class=&quot;highlighter-rouge&quot;&gt;초코오레오&lt;/code&gt; 라는 이름으로 등록되고, OneStore에서는 &lt;code class=&quot;highlighter-rouge&quot;&gt;치즈오레오&lt;/code&gt;로 등록됩니다. 두 앱은 동시에 설치가 가능합니다.&lt;/p&gt;
+
+&lt;p&gt;Android Studio에서 기본 프로젝트중 가장 단순한 Empty Activity를 기반으로 프로젝트를 생성합니다.
+app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수 있습니다. 오늘은 이 프로젝트로 예제를 구성해 보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/post/2021-01-26-ProductFlavors-BuildType/new_project.png&quot; alt=&quot;new&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;android&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;compileSdkVersion&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;buildToolsVersion&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;30.0.2&quot;&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;defaultConfig&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;applicationId&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;com.al.mond.oreo&quot;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;minSdkVersion&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;23&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;targetSdkVersion&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;versionCode&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;versionName&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;1.0&quot;&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;testInstrumentationRunner&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;androidx.test.runner.AndroidJUnitRunner&quot;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;buildTypes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;release&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;minifyEnabled&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;proguardFiles&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getDefaultProguardFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'proguard-android-optimize.txt'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'proguard-rules.pro'&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;compileOptions&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;sourceCompatibility&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;JavaVersion&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;VERSION_1_8&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;targetCompatibility&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;JavaVersion&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;VERSION_1_8&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;kotlinOptions&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;jvmTarget&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.8'&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;buildtypes&quot;&gt;BuildTypes&lt;/h3&gt;
+
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;buildTypes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;release&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//스토어 배포&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;signingConfig&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;signingConfigs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;release&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;minifyEnabled&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;debuggable&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;proguardFiles&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getDefaultProguardFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'proguard-android-optimize.txt'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'proguard-rules.pro'&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;inhouse&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//내부 배포&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;initWith&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;release&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;applicationIdSuffix&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;.inhouse&quot;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;debuggable&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;debug&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//개발&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;applicationIdSuffix&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;.debug&quot;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;signingConfig&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;signingConfigs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;debug&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;minifyEnabled&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;debuggable&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;우선 빌드의 타입을 가장 보편적인 형태를 따라 상용빌드(release), 내부빌드(inhouse), 디버그빌드(debug)로 나누어 두었습니다. inhouse빌드는 대부분의 속성을 &lt;code class=&quot;highlighter-rouge&quot;&gt;initWith release&lt;/code&gt;를 통해서 release빌드의 속성을 그대로 상속받고 필요한 속성인 &lt;code class=&quot;highlighter-rouge&quot;&gt;debuggable&lt;/code&gt;만 &lt;code class=&quot;highlighter-rouge&quot;&gt;ture&lt;/code&gt;로 변경했습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;applicationIdSuffix&lt;/code&gt;옵션을 통해 각 빌드의 applicationId를 다르게 구성 했습니다. 이렇게 applicationId이 다르면 applicationId가 중복되지 않기 때문에 하나의 폰에 여러가지 빌드타입을 설치하고 기능을 비교할 수 도 있습니다. 물론 앱 아이콘과 앱 이름을 구분하여 서로 헷갈리지 않도록 함께 처리해두어야 합니다. inhouse빌드는 applicationId가 &lt;code class=&quot;highlighter-rouge&quot;&gt;com.al.mond.oreo.inhouse&lt;/code&gt;가 되고 release빌드는 suffix가 없으니 applicationId가 &lt;code class=&quot;highlighter-rouge&quot;&gt;com.al.mond.oreo&lt;/code&gt;이 됩니다.&lt;/p&gt;
+
+&lt;p&gt;그리고 필수는 아니지만 inhouse빌드는 release와 동일하게 난독화된 상태로 진행하는 것을 추천하고 싶습니다. inhouse에서 디버깅의 편리함을 위해 &lt;code class=&quot;highlighter-rouge&quot;&gt;minifyEnabled&lt;/code&gt;을 &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;로 둔다면, 난독화를 통해 클래스나 필드이 변경되기 때문에 이름에 의존적인 코드가 실수로 난독화 되어버린다면, 검수단계에서 발견하지 못하게 됩니다. 예를들어 API호출도 잘 되었고 서버에서 값도 잘 내려주었지만, DAO클래스가 난독화 되어 데이터를 파싱하지 못 할 수 있습니다. 이렇게 되면 검수는 난독화하지 않은 상태로 했기 때문에 잘 동작하고, 실배포에서는 문제가 발생합니다. 때문에 inhouse빌드는 디버그할때 번거롭더라도 항상 &lt;code class=&quot;highlighter-rouge&quot;&gt;minifyEnabled&lt;/code&gt;를 &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;로 두어 난독화를 시켜줍시다.&lt;/p&gt;
+
+&lt;p&gt;정의된 빌드에 따라 실행은 Android Studio 화면 왼쪽 모서리쪽에 접혀있는 &lt;code class=&quot;highlighter-rouge&quot;&gt;build variants&lt;/code&gt; 사이드바를 클릭하여 열어주세요.&lt;br /&gt;
+&lt;img src=&quot;assets/images/post/2021-01-26-ProductFlavors-BuildType/buildvariant.png&quot; alt=&quot;androidStudio&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이제 아래의 그림처럼 release,inhouse,debug 빌드를 선택할 수 있게 되었습니다.
+&lt;img src=&quot;assets/images/post/2021-01-26-ProductFlavors-BuildType/build_type.png&quot; alt=&quot;androidStudio&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;BuildType은 보통 목적이 뚜렷하고 이미 속성들이 잘 갖추어 져 있기때문에 생각 할 부분이 적습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;productflavors&quot;&gt;ProductFlavors&lt;/h3&gt;
+
+&lt;p&gt;이제 ProductFlavors를 정의해 보겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;flavorDimensions&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;store&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;ProductFlavors를 정의하기에 앞서 어떤 차원에서 사용 할 것인지 이름을 정의해야 합니다. Dimensions의 의미가 처음에는 와 닿지 않습니다. 우리가 정의하는 항목의 수 많큼 &lt;code class=&quot;highlighter-rouge&quot;&gt;배열의 차원&lt;/code&gt;으로 생각하면 이해하기가 한결 쉬워집니다. 적절한 예가 바로 떠오르지 않아서 조금 억지스럽지만 “스토어”별로 googlePlay와 OneStore 나누고, “과금스타일”별로 유료와 무료 빌드를 나눈다면 2x2의 2차원 배열이 됩니다. 여기에 “서버”까지 내부망과 외부망용으로 구분하게되면 2x2x2의 3차원 배열이 됩니다. Dimensions의 의미가 잘 이해 되셨나요?&lt;/p&gt;
+
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;n&quot;&gt;flavorDimensions&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;store&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;productFlavors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;googlePlay&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;applicationIdSuffix&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;.google&quot;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;dimension&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;store&quot;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;resValue&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;storeInfo&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;OOOOOO&quot;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;oneStore&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;applicationIdSuffix&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;.onestore&quot;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;dimension&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;store&quot;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;resValue&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;storeInfo&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;XXXXXX&quot;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;buildType에서와 마찬가지로 &lt;code class=&quot;highlighter-rouge&quot;&gt;applicationIdSuffix&lt;/code&gt;를 이용하여 각각 다른 applicationId를 할당합니다. 구글플레이에 등록예정인 인하우스 빌드의 applicationId는 &lt;code class=&quot;highlighter-rouge&quot;&gt;com.al.mond.oreo.google.inhouse&lt;/code&gt;가 됩니다. 각 스토어에 따라 다른 String값을 가져야 한다면  &lt;code class=&quot;highlighter-rouge&quot;&gt;res/value/string.xml&lt;/code&gt;대신 &lt;code class=&quot;highlighter-rouge&quot;&gt;resValue&lt;/code&gt;를 이용해서 정의 할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;이렇게 아주 간단한 1차원 배열의 store Dimension을 정의하고 googlePlay과 oneStore 두가지 선택지를 추가 했습니다. 
+이제 서버 dimension을 추가해서 2차원 배열의 Dimension을 아래처럼 구성 할 수 있습니다. 빌드에 따라 서버 API의 BaseUrl도 달라지도록 준비 해봤습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;n&quot;&gt;flavorDimensions&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;store&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;server&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;productFlavors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;googlePlay&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;dimension&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;store&quot;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;applicationIdSuffix&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;.google&quot;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;resValue&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;storeInfo&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;OOOOOO&quot;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;oneStore&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;dimension&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;store&quot;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;applicationIdSuffix&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;.onestore&quot;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;resValue&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;storeInfo&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;XXXXXX&quot;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;dev&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;dimension&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;server&quot;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;resValue&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;server_url&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;https://test.oreo.com/rest&quot;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;prod&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;dimension&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;server&quot;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;resValue&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;server_url&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;https://oreo.com/rest&quot;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;productflavors의-dimension을-추가하고-관리할-때-주의점들&quot;&gt;productFlavors의 dimension을 추가하고 관리할 때 주의점들&lt;/h3&gt;
+&lt;p&gt;buildType의 이름과 productFlavors의 이름은 서로 동일한 이름을 사용 할 수 없습니다. 추후에 서버의 타입이 “debug”인 서버가 추가되면 다른 이름을 사용하거나 dimension의 정의에 대해 고민을 해야할 시점입니다.&lt;/p&gt;
+
+&lt;p&gt;경험상 대부분의 프로젝트들은 그렇게 많은 dimension이 필요하지는 않습니다. 아시다시피 배열의 차원이 늘어나면, 조합 가능한 경우의 수가 기하급수적으로 늘어납니다. 결국 사용하지 않는 BuildVariant가 많아 지고, 관리 되지않는 무의미한 dimension이 되지 않도록 주의해야 합니다.&lt;br /&gt;
+  &lt;code class=&quot;highlighter-rouge&quot;&gt;2개의 스토어 x 2개의 서버 x 3개의 빌드타입  = 12가지 변형&lt;/code&gt; 벌써 눈이 핑핑 돌기 시작하네요.&lt;/p&gt;
+
+&lt;p&gt;두개이상의 Dimension이 정의되면 순서에 유의해야합니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;store&quot;,&quot;server&quot;&lt;/code&gt; 일때와 &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;server&quot;,&quot;store&quot;&lt;/code&gt;일때는 생성되는 BuildVariant도 달라지게 됩니다.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;assets/images/post/2021-01-26-ProductFlavors-BuildType/store_server.png&quot; alt=&quot;androidStudio&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;assets/images/post/2021-01-26-ProductFlavors-BuildType/server_store.png&quot; alt=&quot;androidStudio&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;순서가 변경되면 각 설정의 조합이나 변형에 따라 다르게 읽어들이게 될 Res폴더의 경로도 변경 되어야 하고, 혹시 배포 자동화를 위해 만들어둔 스크립트가 있다면 변경되어야 합니다. 어렵진 않지만 시력을 잃을 수 도 있습니다. &lt;i class=&quot;far fa-eye-slash&quot;&gt;&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;빌드변형들(build variants)의 이름은 &lt;a href=&quot;https://ko.wikipedia.org/wiki/%EB%82%99%ED%83%80_%EB%8C%80%EB%AC%B8%EC%9E%90&quot;&gt;카멜표기법&lt;/a&gt;을 따르며 flavorDimensions에 정의된 순서대로 나열하고 마지막에 buildType을 쓰면 됩니다. 로컬에서 빌드 할 때는 안드로이드 스튜디오가 알아서 메뉴를 만들어 주기 때문에 우리는 잘 선택하기만 하면 됩니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;끝&quot;&gt;끝&lt;/h3&gt;
+
+&lt;p&gt;도입부에 올려둔 build.gradle파일을 다시 보면 처음 이 글을 읽기 시작했을 때와 다른 느낌이 드시나요? 
+다음 포스트에서는 각 빌드변형별로 다른 아이콘, 다른 앱이름을 붙여보도록 하겠습니다. (LINK)&lt;/p&gt;
+
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;plugins&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'com.android.application'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'kotlin-android'&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;android&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;compileSdkVersion&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;buildToolsVersion&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;30.0.2&quot;&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;defaultConfig&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;applicationId&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;com.al.mond.oreo&quot;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;minSdkVersion&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;23&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;targetSdkVersion&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;versionCode&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;versionName&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;1.0&quot;&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;testInstrumentationRunner&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;androidx.test.runner.AndroidJUnitRunner&quot;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+    &lt;span class=&quot;n&quot;&gt;flavorDimensions&lt;/span&gt;  &lt;span class=&quot;s2&quot;&gt;&quot;store&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;server&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;productFlavors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;googlePlay&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;dimension&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;store&quot;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;applicationIdSuffix&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;.google&quot;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;resValue&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;storeInfo&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;OOOOOO&quot;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;oneStore&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;dimension&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;store&quot;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;applicationIdSuffix&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;.onestore&quot;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;resValue&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;storeInfo&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;XXXXXX&quot;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;dev&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;dimension&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;server&quot;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;resValue&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;server_url&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;https://test.oreo.com/rest&quot;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;prod&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;dimension&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;server&quot;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;resValue&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;server_url&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;https://oreo.com/rest&quot;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;buildTypes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;release&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//스토어 배포&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;minifyEnabled&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;debuggable&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;proguardFiles&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getDefaultProguardFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'proguard-android-optimize.txt'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'proguard-rules.pro'&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;inhouse&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//내부 배포&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;initWith&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;release&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;debuggable&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;debug&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//개발&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;minifyEnabled&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;debuggable&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;compileOptions&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;sourceCompatibility&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;JavaVersion&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;VERSION_1_8&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;targetCompatibility&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;JavaVersion&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;VERSION_1_8&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;kotlinOptions&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;jvmTarget&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.8'&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;dependencies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'androidx.core:core-ktx:1.3.2'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'androidx.appcompat:appcompat:1.2.0'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'com.google.android.material:material:1.2.1'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'androidx.constraintlayout:constraintlayout:2.0.4'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;testImplementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'junit:junit:4.+'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;androidTestImplementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'androidx.test.ext:junit:1.1.2'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;androidTestImplementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'androidx.test.espresso:espresso-core:3.3.0'&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
 
       
       
@@ -745,32 +718,39 @@ dependencies {
   
     <entry>
       <title type="html">개발 테스트용 이미지 다운로드</title>
-      <link href="http://localhost:4000/test-image" rel="alternate" type="text/html" title="개발 테스트용 이미지 다운로드" />
+      <link href="https://mond-al.github.io/test-image" rel="alternate" type="text/html" title="개발 테스트용 이미지 다운로드" />
       <published>2021-01-22T00:00:00+09:00</published>
       <updated>2021-01-22T00:00:00+09:00</updated>
-      <id>http://localhost:4000/test-image</id>
-      <content type="html" xml:base="http://localhost:4000/test-image">기능 테스트를 하다 보면 이미지 소스들이 필요한 경우가 있습니다. 때로는 예제앱에 이미지를 포함하고 싶을때 적당한 이미지를 선택하는것도 은근 신경쓰이는 일 입니다.
+      <id>https://mond-al.github.io/test-image</id>
+      <content type="html" xml:base="https://mond-al.github.io/test-image">&lt;p&gt;기능 테스트를 하다 보면 이미지 소스들이 필요한 경우가 있습니다. 때로는 예제앱에 이미지를 포함하고 싶을때 적당한 이미지를 선택하는것도 은근 신경쓰이는 일 입니다.&lt;/p&gt;
 
-그래서 준비해봤습니다! 간편하게 개발용 테스트 이미지를 다운받을 수 있는 사이트입니다. 저작권문제도 없습니다. 
+&lt;p&gt;그래서 준비해봤습니다! 간편하게 개발용 테스트 이미지를 다운받을 수 있는 사이트입니다. 저작권문제도 없습니다.&lt;/p&gt;
 
-## 여러장의 이미지가 필요할 때  
-&gt; [http://unsample.net](http://unsample.net)
+&lt;h2 id=&quot;여러장의-이미지가-필요할-때&quot;&gt;여러장의 이미지가 필요할 때&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;http://unsample.net&quot;&gt;http://unsample.net&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
-  * [이미지 공유 사이트 unsplash](https://unsplash.com)를 기반으로 zip으로 묶어서 한번에 다운로드.
-  * 한번에 원하는 크기의 이미지를 최대 30장을 묶어서 내려받을 수 있습니다. 
-  * 필요한 이미지 갯수, width/height, quality를 지정 가능하고, 원한다면 특정 이미지를 검색해서 모을 수 있습니다.
-  * 모든 사진은 무료 로 다운로드 하여 사용할 수 있습니다.
-  * 심지어 상업적 및 비상업적 목적 모두 사용도 가능합니다. 이미지 자체를 판매는 금지!.
-  * 샘플앱에 넣어서 사용하는 것도 가능 하겠네요. :~)
-    
-## 더미 이미지가 필요할 때   
-&gt;[https://www.websiteplanet.com/webtools/dummy-images-generator](https://www.websiteplanet.com/webtools/dummy-images-generator)
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://unsplash.com&quot;&gt;이미지 공유 사이트 unsplash&lt;/a&gt;를 기반으로 zip으로 묶어서 한번에 다운로드.&lt;/li&gt;
+  &lt;li&gt;한번에 원하는 크기의 이미지를 최대 30장을 묶어서 내려받을 수 있습니다.&lt;/li&gt;
+  &lt;li&gt;필요한 이미지 갯수, width/height, quality를 지정 가능하고, 원한다면 특정 이미지를 검색해서 모을 수 있습니다.&lt;/li&gt;
+  &lt;li&gt;모든 사진은 무료 로 다운로드 하여 사용할 수 있습니다.&lt;/li&gt;
+  &lt;li&gt;심지어 상업적 및 비상업적 목적 모두 사용도 가능합니다. 이미지 자체를 판매는 금지!.&lt;/li&gt;
+  &lt;li&gt;샘플앱에 넣어서 사용하는 것도 가능 하겠네요. :~)&lt;/li&gt;
+&lt;/ul&gt;
 
-![title](assets/images/post/2021-01-22-test-image/dummy-images-generator.png){: width=&quot;100%&quot;}
+&lt;h2 id=&quot;더미-이미지가-필요할-때&quot;&gt;더미 이미지가 필요할 때&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://www.websiteplanet.com/webtools/dummy-images-generator&quot;&gt;https://www.websiteplanet.com/webtools/dummy-images-generator&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
+&lt;p&gt;&lt;img src=&quot;assets/images/post/2021-01-22-test-image/dummy-images-generator.png&quot; alt=&quot;title&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
-* width x height, 배경색, 글자색, format을 지정하면 바로 이미지로 다운로드 가능.
-* ```혹시 한번에 1부터 1000?까지 쓰여진 이미지를 만들어서 다운받을 수 있는 곳은 없을까요? 제보 부탁드립니다. 🙇‍♂️```</content>
+&lt;ul&gt;
+  &lt;li&gt;width x height, 배경색, 글자색, format을 지정하면 바로 이미지로 다운로드 가능.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;혹시 한번에 1부터 1000?까지 쓰여진 이미지를 만들어서 다운받을 수 있는 곳은 없을까요? 제보 부탁드립니다. 🙇‍♂️&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
 
       
       
@@ -804,110 +784,103 @@ dependencies {
   
     <entry>
       <title type="html">Recyclerview Fastscroller Review</title>
-      <link href="http://localhost:4000/fast-scroller" rel="alternate" type="text/html" title="Recyclerview Fastscroller Review" />
+      <link href="https://mond-al.github.io/fast-scroller" rel="alternate" type="text/html" title="Recyclerview Fastscroller Review" />
       <published>2021-01-18T00:00:00+09:00</published>
       <updated>2021-01-18T00:00:00+09:00</updated>
-      <id>http://localhost:4000/fast-scroller</id>
-      <content type="html" xml:base="http://localhost:4000/fast-scroller">&lt;img src=&quot;assets/images/post/2021-01-18-fast-scroller/samsung_fastscroll.gif&quot; alt=&quot;drawing&quot; width=&quot;200&quot;/&gt;  
-위 그림처럼 갤러리나 수많은 아이템을 보여줄 때, 순차적으로 스크롤하여 접근하는 대신 스크롤 바를 잡고 바로 이동하는 역활을 하는 것을 FastScroller라고 합니다. FastScroller를 한마디로 이야기하면 &quot;드래그하여 특정한 위치로 이동가능한 스크롤 바&quot;라고 정의 할 수 있습니다. 
+      <id>https://mond-al.github.io/fast-scroller</id>
+      <content type="html" xml:base="https://mond-al.github.io/fast-scroller">&lt;p&gt;&lt;img src=&quot;assets/images/post/2021-01-18-fast-scroller/samsung_fastscroll.gif&quot; alt=&quot;drawing&quot; width=&quot;200&quot; /&gt;&lt;br /&gt;
+위 그림처럼 갤러리나 수많은 아이템을 보여줄 때, 순차적으로 스크롤하여 접근하는 대신 스크롤 바를 잡고 바로 이동하는 역활을 하는 것을 FastScroller라고 합니다. FastScroller를 한마디로 이야기하면 “드래그하여 특정한 위치로 이동가능한 스크롤 바”라고 정의 할 수 있습니다.&lt;/p&gt;
 
-Recyclerview는 [FastScroller](https://android.googlesource.com/platform/frameworks/support/+/androidx-main/recyclerview/recyclerview/src/main/java/androidx/recyclerview/widget/FastScroller.java
-)를 가지고있고 RecyclerView를 xml로 정의할때 ``app:fastScrollEnabled=&quot;true&quot;`` 한줄만 넣어주면 해당기능을 지원 할 것 처럼 생겼습니다. 역시 구글형!
+&lt;p&gt;Recyclerview는 &lt;a href=&quot;https://android.googlesource.com/platform/frameworks/support/+/androidx-main/recyclerview/recyclerview/src/main/java/androidx/recyclerview/widget/FastScroller.java&quot;&gt;FastScroller&lt;/a&gt;를 가지고있고 RecyclerView를 xml로 정의할때 &lt;code class=&quot;highlighter-rouge&quot;&gt;app:fastScrollEnabled=&quot;true&quot;&lt;/code&gt; 한줄만 넣어주면 해당기능을 지원 할 것 처럼 생겼습니다. 역시 구글형!&lt;/p&gt;
 
-```java
-public RecyclerView(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
-    super(context, attrs, defStyleAttr);
-    setScrollContainer(true);
-    setFocusableInTouchMode(true);
-    ...
-    mEnableFastScroller = a.getBoolean(R.styleable.RecyclerView_fastScrollEnabled, false);
-    ...
-    if (mEnableFastScroller) {
-         ... // 알아서 다 해줄 것 처럼 해두고...
-         initFastScroller(verticalThumbDrawable, verticalTrackDrawable,
-                 horizontalThumbDrawable, horizontalTrackDrawable);
-    }
-```
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RecyclerView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;@NonNull&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Context&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@Nullable&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AttributeSet&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attrs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;defStyleAttr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attrs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;defStyleAttr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;setScrollContainer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;setFocusableInTouchMode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;mEnableFastScroller&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getBoolean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;styleable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;RecyclerView_fastScrollEnabled&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mEnableFastScroller&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 알아서 다 해줄 것 처럼 해두고...&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;initFastScroller&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;verticalThumbDrawable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verticalTrackDrawable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+                 &lt;span class=&quot;n&quot;&gt;horizontalThumbDrawable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;horizontalTrackDrawable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-###  하지만 이 클래스는 그림의 떡 입니다. ###
+&lt;h3 id=&quot;하지만-이-클래스는-그림의-떡-입니다&quot;&gt;하지만 이 클래스는 그림의 떡 입니다.&lt;/h3&gt;
 
-FastScroller는 `package private`이며, adapter와 달리 사용자가 직접 ***접근하여 커스텀 할 수 없는 형태***로 선언 되어있습니다. RecyclerView의 생성자에서 FastScroller 객체를 만들때 자기 자신을 생성자에 넘겨 버리는 것으로 완료되어 버립니다. 더 이상 RecyclerView 객체에서 접근 할 수 없는 구조입니다.  ([link](https://android.googlesource.com/platform/frameworks/support/+/androidx-main/recyclerview/recyclerview/src/main/java/androidx/recyclerview/widget/RecyclerView.java#738))
+&lt;p&gt;FastScroller는 &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;private&lt;/span&gt;&lt;/code&gt;이며, adapter와 달리 사용자가 직접 &lt;strong&gt;&lt;em&gt;접근하여 커스텀 할 수 없는 형태&lt;/em&gt;&lt;/strong&gt;로 선언 되어있습니다. RecyclerView의 생성자에서 FastScroller 객체를 만들때 자기 자신을 생성자에 넘겨 버리는 것으로 완료되어 버립니다. 더 이상 RecyclerView 객체에서 접근 할 수 없는 구조입니다.  (&lt;a href=&quot;https://android.googlesource.com/platform/frameworks/support/+/androidx-main/recyclerview/recyclerview/src/main/java/androidx/recyclerview/widget/RecyclerView.java#738&quot;&gt;link&lt;/a&gt;)&lt;/p&gt;
 
-```java
-void initFastScroller(StateListDrawable verticalThumbDrawable,
-    ...
-    Resources resources = getContext().getResources();
-    // 왜죠? 구글형? 무책임하게 생성만 하고 끝이라니요.
-    new FastScroller(this, verticalThumbDrawable, verticalTrackDrawable,
-            horizontalThumbDrawable, horizontalTrackDrawable,
-            resources.getDimensionPixelSize(R.dimen.fastscroll_default_thickness),
-            resources.getDimensionPixelSize(R.dimen.fastscroll_minimum_range),
-            resources.getDimensionPixelOffset(R.dimen.fastscroll_margin));
-}
-```
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initFastScroller&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StateListDrawable&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verticalThumbDrawable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Resources&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resources&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getResources&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 왜죠? 구글형? 무책임하게 생성만 하고 끝이라니요.&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;FastScroller&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verticalThumbDrawable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verticalTrackDrawable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;horizontalThumbDrawable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;horizontalTrackDrawable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;resources&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getDimensionPixelSize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dimen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;fastscroll_default_thickness&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;resources&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getDimensionPixelSize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dimen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;fastscroll_minimum_range&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;resources&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getDimensionPixelOffset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dimen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;fastscroll_margin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-###  왜죠? 구글형? ### 
- 
-이렇게 구글형이 만들어준 Fastscroller을 일단 한번 써보겠습니다. 구글형인데, 평타는 치겠죠!
-`android:orientation=&quot;vertical`으로 명시 했지만 initFastScroller메서드에서는 vertical,horizontal 각각의 thumb와 track를 정의하지 않으면 아래와 같은 익셉션을 발생시켜버립니다.
+&lt;h3 id=&quot;왜죠-구글형&quot;&gt;왜죠? 구글형?&lt;/h3&gt;
 
-```java
-if (verticalThumbDrawable == null || verticalTrackDrawable == null
-        || horizontalThumbDrawable == null || horizontalTrackDrawable == null) {
-    throw new IllegalArgumentException(
-            &quot;Trying to set fast scroller without both required drawables.&quot;
-                    + exceptionLabel());
-``` 
+&lt;p&gt;이렇게 구글형이 만들어준 Fastscroller을 일단 한번 써보겠습니다. 구글형인데, 평타는 치겠죠!
+&lt;code class=&quot;highlighter-rouge&quot;&gt;android:orientation=&quot;vertical&lt;/code&gt;으로 명시 했지만 initFastScroller메서드에서는 vertical,horizontal 각각의 thumb와 track를 정의하지 않으면 아래와 같은 익셉션을 발생시켜버립니다.&lt;/p&gt;
 
-그냥 VectorDrawable을 쓰면, StateListDrawable을 달라고 하시네요.
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;verticalThumbDrawable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verticalTrackDrawable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;horizontalThumbDrawable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;horizontalTrackDrawable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;IllegalArgumentException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+            &lt;span class=&quot;s&quot;&gt;&quot;Trying to set fast scroller without both required drawables.&quot;&lt;/span&gt;
+                    &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;exceptionLabel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-```java
-Caused by: java.lang.ClassCastException: android.graphics.drawable.VectorDrawable 
-cannot be cast to android.graphics.drawable.StateListDrawable
-   at androidx.recyclerview.widget.RecyclerView.&lt;init&gt;(RecyclerView.java:702)
-   at androidx.recyclerview.widget.RecyclerView.&lt;init&gt;(RecyclerView.java:650)
-   at java.lang.reflect.Constructor.newInstance0(Native Method) 
-   at java.lang.reflect.Constructor.newInstance(Constructor.java:334) 
-```
- 
- 그래고 이까짓 xml이야 귀찮아도 머리는 쉬고 손가락만 움직이면 되니깐요. 괜찮아요. 구글형이 시키는대로 했습니다.
+&lt;p&gt;그냥 VectorDrawable을 쓰면, StateListDrawable을 달라고 하시네요.&lt;/p&gt;
 
-```xml
-&lt;androidx.recyclerview.widget.RecyclerView
-    android:id=&quot;@+id/recyclerview&quot;
-    android:layout_width=&quot;match_parent&quot;
-    android:layout_height=&quot;match_parent&quot;
-    android:orientation=&quot;vertical&quot;
-    app:fastScrollEnabled=&quot;true&quot;
-    app:fastScrollHorizontalThumbDrawable=&quot;@drawable/thumb_selector&quot;
-    app:fastScrollHorizontalTrackDrawable=&quot;@drawable/track&quot;
-    app:fastScrollVerticalThumbDrawable=&quot;@drawable/thumb_selector&quot;
-    app:fastScrollVerticalTrackDrawable=&quot;@drawable/track_item&quot;
-    app:layoutManager=&quot;androidx.recyclerview.widget.LinearLayoutManager&quot; /&gt;
-```
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Caused&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;by:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ClassCastException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;graphics&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;drawable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;VectorDrawable&lt;/span&gt; 
+&lt;span class=&quot;n&quot;&gt;cannot&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;be&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cast&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;graphics&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;drawable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;StateListDrawable&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;androidx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;recyclerview&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;RecyclerView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RecyclerView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;702&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;androidx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;recyclerview&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;RecyclerView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RecyclerView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;650&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;reflect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Constructor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;newInstance0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Native&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;reflect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Constructor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;newInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Constructor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;334&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-여기서 끝이났다면 이 포스팅이 작성 되지 않았겠죠. 사용자와 디자이너 그리고 기획자가 용납할 수 없는 문제가 여기서 발생합니다.
+&lt;p&gt;그래고 이까짓 xml이야 귀찮아도 머리는 쉬고 손가락만 움직이면 되니깐요. 괜찮아요. 구글형이 시키는대로 했습니다.&lt;/p&gt;
 
-### 터치 할 수 없는 스크롤바 ###
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;androidx.recyclerview.widget.RecyclerView&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@+id/recyclerview&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;match_parent&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;match_parent&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:orientation=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;vertical&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;app:fastScrollEnabled=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;app:fastScrollHorizontalThumbDrawable=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@drawable/thumb_selector&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;app:fastScrollHorizontalTrackDrawable=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@drawable/track&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;app:fastScrollVerticalThumbDrawable=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@drawable/thumb_selector&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;app:fastScrollVerticalTrackDrawable=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@drawable/track_item&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;app:layoutManager=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;androidx.recyclerview.widget.LinearLayoutManager&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-아이템의 수가 적을때는 아쉬운 점이 있어도 그나마 사용하는데 문제는 없었습니다. 하지만, 아이템의 수가 늘어나면 스크롤이 길어지고 thumb의 높이는 0px로 수렴하게됩니다. 아쉽게도 일정크기를 유지 하도록 하는 옵션이 제공되지 않습니다. 아이템이 1000개만 넘어가도 이미 손가락으로 터치는 불가능할 정도로 작아집니다.  이 문제는 구글 이슈트레커에 등록된지 4년째 이지만 진행되는 내용은 없는 것 같습니다.([https://issuetracker.google.com/issues/64729576](https://issuetracker.google.com/issues/64729576)) 
+&lt;p&gt;여기서 끝이났다면 이 포스팅이 작성 되지 않았겠죠. 사용자와 디자이너 그리고 기획자가 용납할 수 없는 문제가 여기서 발생합니다.&lt;/p&gt;
 
+&lt;h3 id=&quot;터치-할-수-없는-스크롤바&quot;&gt;터치 할 수 없는 스크롤바&lt;/h3&gt;
 
-### 바인드 지옥 ### 
+&lt;p&gt;아이템의 수가 적을때는 아쉬운 점이 있어도 그나마 사용하는데 문제는 없었습니다. 하지만, 아이템의 수가 늘어나면 스크롤이 길어지고 thumb의 높이는 0px로 수렴하게됩니다. 아쉽게도 일정크기를 유지 하도록 하는 옵션이 제공되지 않습니다. 아이템이 1000개만 넘어가도 이미 손가락으로 터치는 불가능할 정도로 작아집니다.  이 문제는 구글 이슈트레커에 등록된지 4년째 이지만 진행되는 내용은 없는 것 같습니다.(&lt;a href=&quot;https://issuetracker.google.com/issues/64729576&quot;&gt;https://issuetracker.google.com/issues/64729576&lt;/a&gt;)&lt;/p&gt;
 
-터치할 수 없는 스크롤 바를 해결하기위해 고민하다가 문득 또 다른 해법이 떠올랐습니다. 고리짝 시절에 사용해 봤던 android.view.View의 `scrollbarThumbVertical`이라는 속성이 있습니다. RecyclerView도 View를 상속하니 무리없이 xml에 한줄로 적용이 가능했습니다. VectorDrawable로 정의도 가능하고, 스크롤의 길이에 따라 크기가 변하지도 않습니다.
- 
- 하지만, 이게 문제가 없다면 굳이 RecyclerView 저런 속성들과 클래스들이 추가 되지 않았겠죠. 
+&lt;h3 id=&quot;바인드-지옥&quot;&gt;바인드 지옥&lt;/h3&gt;
 
-`scrollbarThumbVertical`속성으로 그려지게 되는 ScrollBarDrawable 객체의 콜백은 스크롤하는 범위의 모든 아이템이 OnBindViewHolder를 호출하게 됩니다. 수십 수백개 정도는 큰 문제가 되지않지만,구조에 따라 천단위를 넘어가기 시작하면 스크롤중 아이템의 이미지를 그리는 앱이나, 아이템의 모델이 큰 경우에는 상당한 부담이 될 것 입니다. 
+&lt;p&gt;터치할 수 없는 스크롤 바를 해결하기위해 고민하다가 문득 또 다른 해법이 떠올랐습니다. 고리짝 시절에 사용해 봤던 android.view.View의 &lt;code class=&quot;highlighter-rouge&quot;&gt;scrollbarThumbVertical&lt;/code&gt;이라는 속성이 있습니다. RecyclerView도 View를 상속하니 무리없이 xml에 한줄로 적용이 가능했습니다. VectorDrawable로 정의도 가능하고, 스크롤의 길이에 따라 크기가 변하지도 않습니다.&lt;/p&gt;
 
-### 결론 : 그래서 FastScroller 를 직접 구현 하게 되었습니다. ###
+&lt;p&gt;하지만, 이게 문제가 없다면 굳이 RecyclerView 저런 속성들과 클래스들이 추가 되지 않았겠죠.&lt;/p&gt;
 
-다음편에서는 직접 구현한 FastScroller를 살펴보겠습니다. 물론 앞으로 개선되어야 할 부분이 많지만 일단은 잘 동작합니다. 
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;scrollbarThumbVertical&lt;/code&gt;속성으로 그려지게 되는 ScrollBarDrawable 객체의 콜백은 스크롤하는 범위의 모든 아이템이 OnBindViewHolder를 호출하게 됩니다. 수십 수백개 정도는 큰 문제가 되지않지만,구조에 따라 천단위를 넘어가기 시작하면 스크롤중 아이템의 이미지를 그리는 앱이나, 아이템의 모델이 큰 경우에는 상당한 부담이 될 것 입니다.&lt;/p&gt;
 
-### 한번 써보세요~ 👍 ###
+&lt;h3 id=&quot;결론--그래서-fastscroller-를-직접-구현-하게-되었습니다&quot;&gt;결론 : 그래서 FastScroller 를 직접 구현 하게 되었습니다.&lt;/h3&gt;
 
-link : [https://github.com/mond-al/recyclerview-fastscroller](https://github.com/mond-al/recyclerview-fastscroller)</content>
+&lt;p&gt;다음편에서는 직접 구현한 FastScroller를 살펴보겠습니다. 물론 앞으로 개선되어야 할 부분이 많지만 일단은 잘 동작합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;한번-써보세요-&quot;&gt;한번 써보세요~ 👍&lt;/h3&gt;
+
+&lt;p&gt;link : &lt;a href=&quot;https://github.com/mond-al/recyclerview-fastscroller&quot;&gt;https://github.com/mond-al/recyclerview-fastscroller&lt;/a&gt;&lt;/p&gt;</content>
 
       
       
@@ -941,32 +914,35 @@ link : [https://github.com/mond-al/recyclerview-fastscroller](https://github.com
   
     <entry>
       <title type="html">reboot</title>
-      <link href="http://localhost:4000/about-reboot" rel="alternate" type="text/html" title="reboot" />
+      <link href="https://mond-al.github.io/about-reboot" rel="alternate" type="text/html" title="reboot" />
       <published>2021-01-12T00:00:00+09:00</published>
       <updated>2021-01-12T00:00:00+09:00</updated>
-      <id>http://localhost:4000/about-reboot</id>
-      <content type="html" xml:base="http://localhost:4000/about-reboot">다시 시작합니다.
-BLOG, MRSK project
+      <id>https://mond-al.github.io/about-reboot</id>
+      <content type="html" xml:base="https://mond-al.github.io/about-reboot">&lt;p&gt;다시 시작합니다.
+BLOG, MRSK project&lt;/p&gt;
 
+&lt;blockquote&gt;
+  &lt;p&gt;Blog&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&gt;Blog
+&lt;p&gt;주니어 시절에는 블로그를 꽤 열심히 정리 했던 것 같습니다. 주니어 시절 개발과정에서 겪게 되는 삽질이 반복 되지 않도록 쓰기 시작했던 블로그 글들은 분명 제가 개발자로 성장하는데 큰 도움이 되었다고 생각됩니다. 하지만 세상일이 항상 그렇듯 일이 바쁘다는 핑계로 정리하는 습관이 사라지더니 어느 순간 모두 비공개로만 혼자서 보는 일기장으로, 그 후에는 점점 잊힌 페이지가 되더군요.&lt;/p&gt;
 
-주니어 시절에는 블로그를 꽤 열심히 정리 했던 것 같습니다. 주니어 시절 개발과정에서 겪게 되는 삽질이 반복 되지 않도록 쓰기 시작했던 블로그 글들은 분명 제가 개발자로 성장하는데 큰 도움이 되었다고 생각됩니다. 하지만 세상일이 항상 그렇듯 일이 바쁘다는 핑계로 정리하는 습관이 사라지더니 어느 순간 모두 비공개로만 혼자서 보는 일기장으로, 그 후에는 점점 잊힌 페이지가 되더군요.
- 
- 문득 정신을 차려보니 안드로이드를 개발한 지 어느덧 10년이란 시간이 지났습니다. 근래 들어 다시 &quot;성장&quot;하고 싶다는 생각이 들기 시작했고 포털에서 제공하는 블로그대신 github으로 자리를 옮겨와서 새롭게 시작합니다.
+&lt;p&gt;문득 정신을 차려보니 안드로이드를 개발한 지 어느덧 10년이란 시간이 지났습니다. 근래 들어 다시 “성장”하고 싶다는 생각이 들기 시작했고 포털에서 제공하는 블로그대신 github으로 자리를 옮겨와서 새롭게 시작합니다.&lt;/p&gt;
 
----
+&lt;hr /&gt;
 
-&gt;MRSK project ``(alMond Reyclerview Support Kit)``
+&lt;blockquote&gt;
+  &lt;p&gt;MRSK project &lt;code class=&quot;highlighter-rouge&quot;&gt;(alMond Reyclerview Support Kit)&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
+&lt;p&gt;안드로이드 앱을 개발하다 보면 가장 많이 사용하게 되는 컴포넌트가 아무래도 RecyclerView가 아닐까 합니다. 구글이 제공해주는 만능상자 같은 리사이클러뷰가 제공하는 다양한 API를 이용해 엮고 응용해서 RecyclerView를 사용하기 편하게 도와주는 키트를 만들어 보려 합니다. 언제든 간편하게 적용하고, 간편하게 제거 가능한 형태를 목표로 합니다.&lt;/p&gt;
 
-안드로이드 앱을 개발하다 보면 가장 많이 사용하게 되는 컴포넌트가 아무래도 RecyclerView가 아닐까 합니다. 구글이 제공해주는 만능상자 같은 리사이클러뷰가 제공하는 다양한 API를 이용해 엮고 응용해서 RecyclerView를 사용하기 편하게 도와주는 키트를 만들어 보려 합니다. 언제든 간편하게 적용하고, 간편하게 제거 가능한 형태를 목표로 합니다. 
-
-
-- snippet code로 바로 적용 가능한 용법을 예제앱에 적용해거나
-(https://github.com/mond-al/RecyclerView-Support)
-- 조금 구성이 필요한 것은 별도로 배포할 예정입니다.
-(https://github.com/mond-al/recyclerview-fastscroller)</content>
+&lt;ul&gt;
+  &lt;li&gt;snippet code로 바로 적용 가능한 용법을 예제앱에 적용해거나
+(https://github.com/mond-al/RecyclerView-Support)&lt;/li&gt;
+  &lt;li&gt;조금 구성이 필요한 것은 별도로 배포할 예정입니다.
+(https://github.com/mond-al/recyclerview-fastscroller)&lt;/li&gt;
+&lt;/ul&gt;</content>
 
       
       
