@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="https://mond-al.github.io/tag/u/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-01-31T03:21:25+09:00</updated>
-  <id>https://mond-al.github.io/tag/u/feed.xml</id>
+  <link href="http://localhost:4000/tag/u/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2021-01-31T11:36:59+09:00</updated>
+  <id>http://localhost:4000/tag/u/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">reboot</title>
-      <link href="https://mond-al.github.io/about-reboot" rel="alternate" type="text/html" title="reboot" />
+      <link href="http://localhost:4000/about-reboot" rel="alternate" type="text/html" title="reboot" />
       <published>2021-01-12T00:00:00+09:00</published>
       <updated>2021-01-12T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/about-reboot</id>
-      <content type="html" xml:base="https://mond-al.github.io/about-reboot">다시 시작합니다.
+      <id>http://localhost:4000/about-reboot</id>
+      <content type="html" xml:base="http://localhost:4000/about-reboot">다시 시작합니다.
 BLOG, MRSK project
 
 

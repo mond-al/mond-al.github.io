@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="https://mond-al.github.io/tag/fastscroller/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-01-31T03:21:25+09:00</updated>
-  <id>https://mond-al.github.io/tag/fastscroller/feed.xml</id>
+  <link href="http://localhost:4000/tag/fastscroller/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2021-01-31T11:36:59+09:00</updated>
+  <id>http://localhost:4000/tag/fastscroller/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Recyclerview Fastscroller Review</title>
-      <link href="https://mond-al.github.io/fast-scroller" rel="alternate" type="text/html" title="Recyclerview Fastscroller Review" />
+      <link href="http://localhost:4000/fast-scroller" rel="alternate" type="text/html" title="Recyclerview Fastscroller Review" />
       <published>2021-01-18T00:00:00+09:00</published>
       <updated>2021-01-18T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/fast-scroller</id>
-      <content type="html" xml:base="https://mond-al.github.io/fast-scroller">&lt;img src=&quot;assets/images/post/2021-01-18-fast-scroller/samsung_fastscroll.gif&quot; alt=&quot;drawing&quot; width=&quot;200&quot;/&gt;  
+      <id>http://localhost:4000/fast-scroller</id>
+      <content type="html" xml:base="http://localhost:4000/fast-scroller">&lt;img src=&quot;assets/images/post/2021-01-18-fast-scroller/samsung_fastscroll.gif&quot; alt=&quot;drawing&quot; width=&quot;200&quot;/&gt;  
 위 그림처럼 갤러리나 수많은 아이템을 보여줄 때, 순차적으로 스크롤하여 접근하는 대신 스크롤 바를 잡고 바로 이동하는 역활을 하는 것을 FastScroller라고 합니다. FastScroller를 한마디로 이야기하면 &quot;드래그하여 특정한 위치로 이동가능한 스크롤 바&quot;라고 정의 할 수 있습니다. 
 
 Recyclerview는 [FastScroller](https://android.googlesource.com/platform/frameworks/support/+/androidx-main/recyclerview/recyclerview/src/main/java/androidx/recyclerview/widget/FastScroller.java
