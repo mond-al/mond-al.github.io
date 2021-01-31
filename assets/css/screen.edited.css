@@ -144,3 +144,6 @@ td.code {
 .highlight table td:last-child {
     background: none;
 }
+.highlighter-rouge, .highlight, code {
+    width: 100%;
+}
