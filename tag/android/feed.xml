@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/android/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-01T13:16:38+09:00</updated>
+  <updated>2021-02-01T13:53:28+09:00</updated>
   <id>https://mond-al.github.io/tag/android/feed.xml</id>
 
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</title>
-      <link href="https://mond-al.github.io/error-log-android-11-api-changed" rel="alternate" type="text/html" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable" />
+      <link href="https://mond-al.github.io/2021/01/30/error-log-android-11-api-changed.html" rel="alternate" type="text/html" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable" />
       <published>2021-01-30T00:00:00+09:00</published>
       <updated>2021-01-30T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/error-log-android-11-api-changed</id>
-      <content type="html" xml:base="https://mond-al.github.io/error-log-android-11-api-changed">### Where did the problem occur? ###
+      <id>https://mond-al.github.io/2021/01/30/error-log-android-11-api-changed</id>
+      <content type="html" xml:base="https://mond-al.github.io/2021/01/30/error-log-android-11-api-changed.html">### Where did the problem occur? ###
 ## case A  
 ```java
 java.lang.ExceptionInInitializerError
@@ -143,11 +143,11 @@ Android 11부터 비 SDK 테스트 API(AOSP에서 @TestApi로 주석이 지정�
   
     <entry>
       <title type="html">앱의 의존성 확인하고 전이 의존성 변경하기</title>
-      <link href="https://mond-al.github.io/dependency-gradle" rel="alternate" type="text/html" title="앱의 의존성 확인하고 전이 의존성 변경하기" />
+      <link href="https://mond-al.github.io/2021/01/27/dependency-gradle.html" rel="alternate" type="text/html" title="앱의 의존성 확인하고 전이 의존성 변경하기" />
       <published>2021-01-27T00:00:00+09:00</published>
       <updated>2021-01-27T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/dependency-gradle</id>
-      <content type="html" xml:base="https://mond-al.github.io/dependency-gradle">의존성과 관련하여 문제가 생겼다고 판단되면 `의존성 트리`를 봐야합니다. 터미널에서 프로젝트가 있는 폴더로 이동하고 아래의 명령어를 실행 하면됩니다. 
+      <id>https://mond-al.github.io/2021/01/27/dependency-gradle</id>
+      <content type="html" xml:base="https://mond-al.github.io/2021/01/27/dependency-gradle.html">의존성과 관련하여 문제가 생겼다고 판단되면 `의존성 트리`를 봐야합니다. 터미널에서 프로젝트가 있는 폴더로 이동하고 아래의 명령어를 실행 하면됩니다. 
 
 혹시 `{Dementions...}{buildType}`부분이 이해되지 않으신다면, [ProductFlavors와 BuildType](ProductFlavors-BuildType)을 참고해주세요.
 
@@ -357,11 +357,11 @@ dependencies {
   
     <entry>
       <title type="html">ProductFlavors와 BuildType 조합</title>
-      <link href="https://mond-al.github.io/ProductFlavors-BuildType" rel="alternate" type="text/html" title="ProductFlavors와 BuildType 조합" />
+      <link href="https://mond-al.github.io/2021/01/26/ProductFlavors-BuildType.html" rel="alternate" type="text/html" title="ProductFlavors와 BuildType 조합" />
       <published>2021-01-26T00:00:00+09:00</published>
       <updated>2021-01-26T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/ProductFlavors-BuildType</id>
-      <content type="html" xml:base="https://mond-al.github.io/ProductFlavors-BuildType">ProductFlavors와 BuildType을 이용해서 다양한 형상을 만들 수 있습니다.
+      <id>https://mond-al.github.io/2021/01/26/ProductFlavors-BuildType</id>
+      <content type="html" xml:base="https://mond-al.github.io/2021/01/26/ProductFlavors-BuildType.html">ProductFlavors와 BuildType을 이용해서 다양한 형상을 만들 수 있습니다.
 
 서비스가 점점 커지다 보면 일명 &quot;OO향&quot;빌드를 배포해야하는 경우나 &quot;XX용&quot;빌드를 따로 뽑아야하는 경우가 생깁니다. 가령 예를 들자면 &quot;중국향&quot;과 &quot;국내향&quot;처럼 나눌수 있을 것이고, &quot;개발용&quot;,&quot;QA용&quot;,&quot;내부배포용&quot;,&quot;실서비스용&quot;으로도 나눌 수도 있습니다. 이런 구성을 개발에서 각 버전을 구분하여 관리해야 한다면 우리는 어떻게 해야 할까요? 
 
@@ -745,11 +745,11 @@ dependencies {
   
     <entry>
       <title type="html">Recyclerview Fastscroller Review</title>
-      <link href="https://mond-al.github.io/fast-scroller" rel="alternate" type="text/html" title="Recyclerview Fastscroller Review" />
+      <link href="https://mond-al.github.io/2021/01/18/fast-scroller.html" rel="alternate" type="text/html" title="Recyclerview Fastscroller Review" />
       <published>2021-01-18T00:00:00+09:00</published>
       <updated>2021-01-18T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/fast-scroller</id>
-      <content type="html" xml:base="https://mond-al.github.io/fast-scroller">&lt;img src=&quot;assets/images/post/2021-01-18-fast-scroller/samsung_fastscroll.gif&quot; alt=&quot;drawing&quot; width=&quot;200&quot;/&gt;  
+      <id>https://mond-al.github.io/2021/01/18/fast-scroller</id>
+      <content type="html" xml:base="https://mond-al.github.io/2021/01/18/fast-scroller.html">&lt;img src=&quot;assets/images/post/2021-01-18-fast-scroller/samsung_fastscroll.gif&quot; alt=&quot;drawing&quot; width=&quot;200&quot;/&gt;  
 위 그림처럼 갤러리나 수많은 아이템을 보여줄 때, 순차적으로 스크롤하여 접근하는 대신 스크롤 바를 잡고 바로 이동하는 역활을 하는 것을 FastScroller라고 합니다. FastScroller를 한마디로 이야기하면 &quot;드래그하여 특정한 위치로 이동가능한 스크롤 바&quot;라고 정의 할 수 있습니다. 
 
 Recyclerview는 [FastScroller](https://android.googlesource.com/platform/frameworks/support/+/androidx-main/recyclerview/recyclerview/src/main/java/androidx/recyclerview/widget/FastScroller.java

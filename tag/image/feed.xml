@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/image/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-01T13:16:38+09:00</updated>
+  <updated>2021-02-01T13:53:28+09:00</updated>
   <id>https://mond-al.github.io/tag/image/feed.xml</id>
 
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">개발 테스트용 이미지 다운로드</title>
-      <link href="https://mond-al.github.io/test-image" rel="alternate" type="text/html" title="개발 테스트용 이미지 다운로드" />
+      <link href="https://mond-al.github.io/2021/01/22/test-image.html" rel="alternate" type="text/html" title="개발 테스트용 이미지 다운로드" />
       <published>2021-01-22T00:00:00+09:00</published>
       <updated>2021-01-22T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/test-image</id>
-      <content type="html" xml:base="https://mond-al.github.io/test-image">기능 테스트를 하다 보면 이미지 소스들이 필요한 경우가 있습니다. 때로는 예제앱에 이미지를 포함하고 싶을때 적당한 이미지를 선택하는것도 은근 신경쓰이는 일 입니다.
+      <id>https://mond-al.github.io/2021/01/22/test-image</id>
+      <content type="html" xml:base="https://mond-al.github.io/2021/01/22/test-image.html">기능 테스트를 하다 보면 이미지 소스들이 필요한 경우가 있습니다. 때로는 예제앱에 이미지를 포함하고 싶을때 적당한 이미지를 선택하는것도 은근 신경쓰이는 일 입니다.
 
 그래서 준비해봤습니다! 간편하게 개발용 테스트 이미지를 다운받을 수 있는 사이트입니다. 저작권문제도 없습니다. 
 
