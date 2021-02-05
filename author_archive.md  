@@ -253,8 +253,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="R" class="tag-heading">R</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/android-11-R" target="_blank" title="안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)">안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)</a></li> -->
-      <li class="entry-title"><a href="/android-11-R" target="_blank" title="안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)">안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/android-11-R-Storage" target="_blank" title="안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)">안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)</a></li> -->
+      <li class="entry-title"><a href="/android-11-R-Storage" target="_blank" title="안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)">안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -264,8 +264,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="android" class="tag-heading">ANDROID</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/android-11-R" target="_blank" title="안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)">안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)</a></li> -->
-      <li class="entry-title"><a href="/android-11-R" target="_blank" title="안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)">안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/android-11-R-Storage" target="_blank" title="안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)">안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)</a></li> -->
+      <li class="entry-title"><a href="/android-11-R-Storage" target="_blank" title="안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)">안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)</a></li>
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/error-log-android-11-api-changed" target="_blank" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</a></li> -->
       <li class="entry-title"><a href="/error-log-android-11-api-changed" target="_blank" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</a></li>
@@ -378,8 +378,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="sdkversion30" class="tag-heading">SDKVERSION30</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/android-11-R" target="_blank" title="안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)">안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)</a></li> -->
-      <li class="entry-title"><a href="/android-11-R" target="_blank" title="안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)">안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/android-11-R-Storage" target="_blank" title="안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)">안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)</a></li> -->
+      <li class="entry-title"><a href="/android-11-R-Storage" target="_blank" title="안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)">안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
