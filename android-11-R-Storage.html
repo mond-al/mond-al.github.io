@@ -261,7 +261,7 @@ into the {body} of the default.hbs template -->
 <span class="n">contentValues</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">MediaStore</span><span class="o">.</span><span class="na">Images</span><span class="o">.</span><span class="na">Media</span><span class="o">.</span><span class="na">RELATIVE_PATH</span><span class="o">,</span> <span class="n">Environment</span><span class="o">.</span><span class="na">DIRECTORY_PICTURES</span><span class="o">)</span> <span class="c1">// 경로를 결정합니다.</span>
         <span class="o">....</span>
 <span class="n">val</span> <span class="n">uri</span> <span class="o">=</span> <span class="n">getContentResolver</span><span class="o">().</span><span class="na">insert</span><span class="o">(</span><span class="n">MediaStore</span><span class="o">.</span><span class="na">Images</span><span class="o">.</span><span class="na">Media</span><span class="o">.</span><span class="na">EXTERNAL_CONTENT_URI</span><span class="o">,</span> <span class="n">contentValues</span><span class="o">)</span>
-<span class="n">getContentResolver</span><span class="o">().</span><span class="na">openFileDescriptor</span><span class="o">(</span><span class="n">uri</span><span class="o">,</span> <span class="s">"w"</span><span class="o">).</span><span class="na">use</span> <span class="o">{</span>    <span class="c1">// 이제 ContentResolver를 이용해서 접근하도록 합시다.</span>
+<span class="n">getContentResolver</span><span class="o">().</span><span class="na">openFileDescriptor</span><span class="o">(</span><span class="n">uri</span><span class="o">,</span> <span class="s">"w"</span><span class="o">).</span><span class="na">use</span> <span class="o">{</span>    <span class="c1">// 앞서 얻은 uri와 ContentResolver를 이용해서 접근하도록 합시다.</span>
     <span class="n">val</span> <span class="n">outputStream</span> <span class="o">=</span> <span class="n">FileOutputStream</span><span class="o">(</span><span class="n">it</span><span class="o">!!.</span><span class="na">getFileDescriptor</span><span class="o">())</span>
     <span class="o">...</span>
     <span class="n">outputStream</span><span class="o">.</span><span class="na">close</span><span class="o">()</span>
@@ -308,30 +308,30 @@ into the {body} of the default.hbs template -->
 
 <p><a href="https://developer.android.com/training/data-storage/shared/media?hl=ko#toggle-pending-status">https://developer.android.com/training/data-storage/shared/media?hl=ko#toggle-pending-status</a></p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// res/raw폴더에 source파일을 추가하고 실행하면 실제로 동작하는 코드입니다. 
-</span><span class="kd">val</span> <span class="py">audioCollection</span> <span class="p">=</span> <span class="n">MediaStore</span><span class="p">.</span><span class="n">Audio</span><span class="p">.</span><span class="n">Media</span>
-        <span class="p">.</span><span class="n">getContentUri</span><span class="p">(</span><span class="n">MediaStore</span><span class="p">.</span><span class="n">VOLUME_EXTERNAL_PRIMARY</span><span class="p">)</span>
-<span class="kd">val</span> <span class="py">songDetails</span> <span class="p">=</span> <span class="n">ContentValues</span><span class="p">().</span><span class="n">apply</span> <span class="p">{</span>
-    <span class="n">put</span><span class="p">(</span><span class="n">MediaStore</span><span class="p">.</span><span class="n">Audio</span><span class="p">.</span><span class="n">Media</span><span class="p">.</span><span class="n">DISPLAY_NAME</span><span class="p">,</span> <span class="s">"My Workout Playlist.mp3"</span><span class="p">)</span>
-    <span class="n">put</span><span class="p">(</span><span class="n">MediaStore</span><span class="p">.</span><span class="n">Audio</span><span class="p">.</span><span class="n">Media</span><span class="p">.</span><span class="n">IS_PENDING</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="kd">val</span> <span class="py">songContentUri</span> <span class="p">=</span> <span class="n">contentResolver</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">audioCollection</span><span class="p">,</span> <span class="n">songDetails</span><span class="p">)</span><span class="o">!!</span>
-<span class="n">contentResolver</span><span class="p">.</span><span class="n">openFileDescriptor</span><span class="p">(</span><span class="n">songContentUri</span><span class="p">,</span> <span class="s">"w"</span><span class="p">,</span> <span class="k">null</span><span class="p">)</span><span class="o">?.</span><span class="n">use</span> <span class="p">{</span> <span class="n">pfd</span> <span class="p">-&gt;</span>
-    <span class="kd">val</span> <span class="py">inputStream</span> <span class="p">=</span> <span class="n">resources</span><span class="p">.</span><span class="n">openRawResource</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="n">raw</span><span class="p">.</span><span class="n">source</span><span class="p">)</span>   
-    <span class="kd">val</span> <span class="py">outputStream</span> <span class="p">=</span> <span class="n">FileOutputStream</span><span class="p">(</span><span class="n">pfd</span><span class="p">.</span><span class="n">fileDescriptor</span><span class="p">)</span>
-    <span class="k">while</span> <span class="p">(</span><span class="k">true</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">val</span> <span class="py">data</span> <span class="p">=</span> <span class="n">inputStream</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">data</span> <span class="p">==</span> <span class="p">-</span><span class="m">1</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// res/raw폴더에 source파일을 추가하고 실행하면 실제로 동작하는 코드입니다. </span>
+<span class="n">val</span> <span class="n">audioCollection</span> <span class="o">=</span> <span class="n">MediaStore</span><span class="o">.</span><span class="na">Audio</span><span class="o">.</span><span class="na">Media</span>
+        <span class="o">.</span><span class="na">getContentUri</span><span class="o">(</span><span class="n">MediaStore</span><span class="o">.</span><span class="na">VOLUME_EXTERNAL_PRIMARY</span><span class="o">)</span>
+<span class="n">val</span> <span class="n">songDetails</span> <span class="o">=</span> <span class="n">ContentValues</span><span class="o">().</span><span class="na">apply</span> <span class="o">{</span>
+    <span class="n">put</span><span class="o">(</span><span class="n">MediaStore</span><span class="o">.</span><span class="na">Audio</span><span class="o">.</span><span class="na">Media</span><span class="o">.</span><span class="na">DISPLAY_NAME</span><span class="o">,</span> <span class="s">"My Workout Playlist.mp3"</span><span class="o">)</span>
+    <span class="n">put</span><span class="o">(</span><span class="n">MediaStore</span><span class="o">.</span><span class="na">Audio</span><span class="o">.</span><span class="na">Media</span><span class="o">.</span><span class="na">IS_PENDING</span><span class="o">,</span> <span class="mi">1</span><span class="o">)</span>
+<span class="o">}</span>
+<span class="n">val</span> <span class="n">songContentUri</span> <span class="o">=</span> <span class="n">contentResolver</span><span class="o">.</span><span class="na">insert</span><span class="o">(</span><span class="n">audioCollection</span><span class="o">,</span> <span class="n">songDetails</span><span class="o">)!!</span>
+<span class="n">contentResolver</span><span class="o">.</span><span class="na">openFileDescriptor</span><span class="o">(</span><span class="n">songContentUri</span><span class="o">,</span> <span class="s">"w"</span><span class="o">,</span> <span class="kc">null</span><span class="o">)?.</span><span class="na">use</span> <span class="o">{</span> <span class="n">pfd</span> <span class="o">-&gt;</span>
+    <span class="n">val</span> <span class="n">inputStream</span> <span class="o">=</span> <span class="n">resources</span><span class="o">.</span><span class="na">openRawResource</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">raw</span><span class="o">.</span><span class="na">source</span><span class="o">)</span>   
+    <span class="n">val</span> <span class="n">outputStream</span> <span class="o">=</span> <span class="n">FileOutputStream</span><span class="o">(</span><span class="n">pfd</span><span class="o">.</span><span class="na">fileDescriptor</span><span class="o">)</span>
+    <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">val</span> <span class="n">data</span> <span class="o">=</span> <span class="n">inputStream</span><span class="o">.</span><span class="na">read</span><span class="o">()</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">data</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
             <span class="k">break</span>
-        <span class="p">}</span>
-        <span class="n">outputStream</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-    <span class="p">}</span>
-    <span class="n">inputStream</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
-    <span class="n">outputStream</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
-<span class="p">}</span>
-<span class="n">songDetails</span><span class="p">.</span><span class="n">clear</span><span class="p">()</span>
-<span class="n">songDetails</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="n">MediaStore</span><span class="p">.</span><span class="n">Audio</span><span class="p">.</span><span class="n">Media</span><span class="p">.</span><span class="n">IS_PENDING</span><span class="p">,</span> <span class="m">0</span><span class="p">)</span>
-<span class="n">contentResolver</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="n">songContentUri</span><span class="p">,</span> <span class="n">songDetails</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="k">null</span><span class="p">)</span>
+        <span class="o">}</span>
+        <span class="n">outputStream</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">data</span><span class="o">)</span>
+    <span class="o">}</span>
+    <span class="n">inputStream</span><span class="o">.</span><span class="na">close</span><span class="o">()</span>
+    <span class="n">outputStream</span><span class="o">.</span><span class="na">close</span><span class="o">()</span>
+<span class="o">}</span>
+<span class="n">songDetails</span><span class="o">.</span><span class="na">clear</span><span class="o">()</span>
+<span class="n">songDetails</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">MediaStore</span><span class="o">.</span><span class="na">Audio</span><span class="o">.</span><span class="na">Media</span><span class="o">.</span><span class="na">IS_PENDING</span><span class="o">,</span> <span class="mi">0</span><span class="o">)</span>
+<span class="n">contentResolver</span><span class="o">.</span><span class="na">update</span><span class="o">(</span><span class="n">songContentUri</span><span class="o">,</span> <span class="n">songDetails</span><span class="o">,</span> <span class="kc">null</span><span class="o">,</span> <span class="kc">null</span><span class="o">)</span>
 </code></pre></div></div>
 
                 </div>
