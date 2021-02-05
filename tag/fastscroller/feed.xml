@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/fastscroller/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-06T02:53:21+09:00</updated>
+  <updated>2021-02-06T02:53:57+09:00</updated>
   <id>https://mond-al.github.io/tag/fastscroller/feed.xml</id>
 
   
@@ -33,110 +33,103 @@
   
     <entry>
       <title type="html">Recyclerview Fastscroller Review</title>
-      <link href="https://mond-al.github.io/2021/01/18/fast-scroller.html" rel="alternate" type="text/html" title="Recyclerview Fastscroller Review" />
+      <link href="https://mond-al.github.io/fast-scroller" rel="alternate" type="text/html" title="Recyclerview Fastscroller Review" />
       <published>2021-01-18T00:00:00+09:00</published>
       <updated>2021-01-18T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/2021/01/18/fast-scroller</id>
-      <content type="html" xml:base="https://mond-al.github.io/2021/01/18/fast-scroller.html">&lt;img src=&quot;assets/images/post/2021-01-18-fast-scroller/samsung_fastscroll.gif&quot; alt=&quot;drawing&quot; width=&quot;200&quot;/&gt;  
-위 그림처럼 갤러리나 수많은 아이템을 보여줄 때, 순차적으로 스크롤하여 접근하는 대신 스크롤 바를 잡고 바로 이동하는 역활을 하는 것을 FastScroller라고 합니다. FastScroller를 한마디로 이야기하면 &quot;드래그하여 특정한 위치로 이동가능한 스크롤 바&quot;라고 정의 할 수 있습니다. 
+      <id>https://mond-al.github.io/fast-scroller</id>
+      <content type="html" xml:base="https://mond-al.github.io/fast-scroller">&lt;p&gt;&lt;img src=&quot;assets/images/post/2021-01-18-fast-scroller/samsung_fastscroll.gif&quot; alt=&quot;drawing&quot; width=&quot;200&quot; /&gt;&lt;br /&gt;
+위 그림처럼 갤러리나 수많은 아이템을 보여줄 때, 순차적으로 스크롤하여 접근하는 대신 스크롤 바를 잡고 바로 이동하는 역활을 하는 것을 FastScroller라고 합니다. FastScroller를 한마디로 이야기하면 “드래그하여 특정한 위치로 이동가능한 스크롤 바”라고 정의 할 수 있습니다.&lt;/p&gt;
 
-Recyclerview는 [FastScroller](https://android.googlesource.com/platform/frameworks/support/+/androidx-main/recyclerview/recyclerview/src/main/java/androidx/recyclerview/widget/FastScroller.java
-)를 가지고있고 RecyclerView를 xml로 정의할때 ``app:fastScrollEnabled=&quot;true&quot;`` 한줄만 넣어주면 해당기능을 지원 할 것 처럼 생겼습니다. 역시 구글형!
+&lt;p&gt;Recyclerview는 &lt;a href=&quot;https://android.googlesource.com/platform/frameworks/support/+/androidx-main/recyclerview/recyclerview/src/main/java/androidx/recyclerview/widget/FastScroller.java&quot;&gt;FastScroller&lt;/a&gt;를 가지고있고 RecyclerView를 xml로 정의할때 &lt;code class=&quot;highlighter-rouge&quot;&gt;app:fastScrollEnabled=&quot;true&quot;&lt;/code&gt; 한줄만 넣어주면 해당기능을 지원 할 것 처럼 생겼습니다. 역시 구글형!&lt;/p&gt;
 
-```java
-public RecyclerView(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
-    super(context, attrs, defStyleAttr);
-    setScrollContainer(true);
-    setFocusableInTouchMode(true);
-    ...
-    mEnableFastScroller = a.getBoolean(R.styleable.RecyclerView_fastScrollEnabled, false);
-    ...
-    if (mEnableFastScroller) {
-         ... // 알아서 다 해줄 것 처럼 해두고...
-         initFastScroller(verticalThumbDrawable, verticalTrackDrawable,
-                 horizontalThumbDrawable, horizontalTrackDrawable);
-    }
-```
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RecyclerView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;@NonNull&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Context&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@Nullable&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AttributeSet&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attrs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;defStyleAttr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attrs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;defStyleAttr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;setScrollContainer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;setFocusableInTouchMode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;mEnableFastScroller&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getBoolean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;styleable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;RecyclerView_fastScrollEnabled&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mEnableFastScroller&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 알아서 다 해줄 것 처럼 해두고...&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;initFastScroller&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;verticalThumbDrawable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verticalTrackDrawable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+                 &lt;span class=&quot;n&quot;&gt;horizontalThumbDrawable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;horizontalTrackDrawable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-###  하지만 이 클래스는 그림의 떡 입니다. ###
+&lt;h3 id=&quot;하지만-이-클래스는-그림의-떡-입니다&quot;&gt;하지만 이 클래스는 그림의 떡 입니다.&lt;/h3&gt;
 
-FastScroller는 `package private`이며, adapter와 달리 사용자가 직접 ***접근하여 커스텀 할 수 없는 형태***로 선언 되어있습니다. RecyclerView의 생성자에서 FastScroller 객체를 만들때 자기 자신을 생성자에 넘겨 버리는 것으로 완료되어 버립니다. 더 이상 RecyclerView 객체에서 접근 할 수 없는 구조입니다.  ([link](https://android.googlesource.com/platform/frameworks/support/+/androidx-main/recyclerview/recyclerview/src/main/java/androidx/recyclerview/widget/RecyclerView.java#738))
+&lt;p&gt;FastScroller는 &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;private&lt;/span&gt;&lt;/code&gt;이며, adapter와 달리 사용자가 직접 &lt;strong&gt;&lt;em&gt;접근하여 커스텀 할 수 없는 형태&lt;/em&gt;&lt;/strong&gt;로 선언 되어있습니다. RecyclerView의 생성자에서 FastScroller 객체를 만들때 자기 자신을 생성자에 넘겨 버리는 것으로 완료되어 버립니다. 더 이상 RecyclerView 객체에서 접근 할 수 없는 구조입니다.  (&lt;a href=&quot;https://android.googlesource.com/platform/frameworks/support/+/androidx-main/recyclerview/recyclerview/src/main/java/androidx/recyclerview/widget/RecyclerView.java#738&quot;&gt;link&lt;/a&gt;)&lt;/p&gt;
 
-```java
-void initFastScroller(StateListDrawable verticalThumbDrawable,
-    ...
-    Resources resources = getContext().getResources();
-    // 왜죠? 구글형? 무책임하게 생성만 하고 끝이라니요.
-    new FastScroller(this, verticalThumbDrawable, verticalTrackDrawable,
-            horizontalThumbDrawable, horizontalTrackDrawable,
-            resources.getDimensionPixelSize(R.dimen.fastscroll_default_thickness),
-            resources.getDimensionPixelSize(R.dimen.fastscroll_minimum_range),
-            resources.getDimensionPixelOffset(R.dimen.fastscroll_margin));
-}
-```
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initFastScroller&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StateListDrawable&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verticalThumbDrawable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Resources&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resources&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getResources&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 왜죠? 구글형? 무책임하게 생성만 하고 끝이라니요.&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;FastScroller&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verticalThumbDrawable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verticalTrackDrawable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;horizontalThumbDrawable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;horizontalTrackDrawable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;resources&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getDimensionPixelSize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dimen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;fastscroll_default_thickness&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;resources&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getDimensionPixelSize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dimen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;fastscroll_minimum_range&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;resources&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getDimensionPixelOffset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dimen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;fastscroll_margin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-###  왜죠? 구글형? ### 
- 
-이렇게 구글형이 만들어준 Fastscroller을 일단 한번 써보겠습니다. 구글형인데, 평타는 치겠죠!
-`android:orientation=&quot;vertical`으로 명시 했지만 initFastScroller메서드에서는 vertical,horizontal 각각의 thumb와 track를 정의하지 않으면 아래와 같은 익셉션을 발생시켜버립니다.
+&lt;h3 id=&quot;왜죠-구글형&quot;&gt;왜죠? 구글형?&lt;/h3&gt;
 
-```java
-if (verticalThumbDrawable == null || verticalTrackDrawable == null
-        || horizontalThumbDrawable == null || horizontalTrackDrawable == null) {
-    throw new IllegalArgumentException(
-            &quot;Trying to set fast scroller without both required drawables.&quot;
-                    + exceptionLabel());
-``` 
+&lt;p&gt;이렇게 구글형이 만들어준 Fastscroller을 일단 한번 써보겠습니다. 구글형인데, 평타는 치겠죠!
+&lt;code class=&quot;highlighter-rouge&quot;&gt;android:orientation=&quot;vertical&lt;/code&gt;으로 명시 했지만 initFastScroller메서드에서는 vertical,horizontal 각각의 thumb와 track를 정의하지 않으면 아래와 같은 익셉션을 발생시켜버립니다.&lt;/p&gt;
 
-그냥 VectorDrawable을 쓰면, StateListDrawable을 달라고 하시네요.
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;verticalThumbDrawable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verticalTrackDrawable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;horizontalThumbDrawable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;horizontalTrackDrawable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;IllegalArgumentException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+            &lt;span class=&quot;s&quot;&gt;&quot;Trying to set fast scroller without both required drawables.&quot;&lt;/span&gt;
+                    &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;exceptionLabel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-```java
-Caused by: java.lang.ClassCastException: android.graphics.drawable.VectorDrawable 
-cannot be cast to android.graphics.drawable.StateListDrawable
-   at androidx.recyclerview.widget.RecyclerView.&lt;init&gt;(RecyclerView.java:702)
-   at androidx.recyclerview.widget.RecyclerView.&lt;init&gt;(RecyclerView.java:650)
-   at java.lang.reflect.Constructor.newInstance0(Native Method) 
-   at java.lang.reflect.Constructor.newInstance(Constructor.java:334) 
-```
- 
- 그래고 이까짓 xml이야 귀찮아도 머리는 쉬고 손가락만 움직이면 되니깐요. 괜찮아요. 구글형이 시키는대로 했습니다.
+&lt;p&gt;그냥 VectorDrawable을 쓰면, StateListDrawable을 달라고 하시네요.&lt;/p&gt;
 
-```xml
-&lt;androidx.recyclerview.widget.RecyclerView
-    android:id=&quot;@+id/recyclerview&quot;
-    android:layout_width=&quot;match_parent&quot;
-    android:layout_height=&quot;match_parent&quot;
-    android:orientation=&quot;vertical&quot;
-    app:fastScrollEnabled=&quot;true&quot;
-    app:fastScrollHorizontalThumbDrawable=&quot;@drawable/thumb_selector&quot;
-    app:fastScrollHorizontalTrackDrawable=&quot;@drawable/track&quot;
-    app:fastScrollVerticalThumbDrawable=&quot;@drawable/thumb_selector&quot;
-    app:fastScrollVerticalTrackDrawable=&quot;@drawable/track_item&quot;
-    app:layoutManager=&quot;androidx.recyclerview.widget.LinearLayoutManager&quot; /&gt;
-```
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Caused&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;by:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ClassCastException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;graphics&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;drawable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;VectorDrawable&lt;/span&gt; 
+&lt;span class=&quot;n&quot;&gt;cannot&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;be&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cast&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;graphics&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;drawable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;StateListDrawable&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;androidx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;recyclerview&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;RecyclerView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RecyclerView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;702&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;androidx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;recyclerview&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;RecyclerView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RecyclerView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;650&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;reflect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Constructor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;newInstance0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Native&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;reflect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Constructor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;newInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Constructor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;334&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-여기서 끝이났다면 이 포스팅이 작성 되지 않았겠죠. 사용자와 디자이너 그리고 기획자가 용납할 수 없는 문제가 여기서 발생합니다.
+&lt;p&gt;그래고 이까짓 xml이야 귀찮아도 머리는 쉬고 손가락만 움직이면 되니깐요. 괜찮아요. 구글형이 시키는대로 했습니다.&lt;/p&gt;
 
-### 터치 할 수 없는 스크롤바 ###
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;androidx.recyclerview.widget.RecyclerView&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@+id/recyclerview&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;match_parent&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;match_parent&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:orientation=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;vertical&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;app:fastScrollEnabled=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;app:fastScrollHorizontalThumbDrawable=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@drawable/thumb_selector&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;app:fastScrollHorizontalTrackDrawable=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@drawable/track&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;app:fastScrollVerticalThumbDrawable=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@drawable/thumb_selector&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;app:fastScrollVerticalTrackDrawable=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@drawable/track_item&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;app:layoutManager=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;androidx.recyclerview.widget.LinearLayoutManager&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-아이템의 수가 적을때는 아쉬운 점이 있어도 그나마 사용하는데 문제는 없었습니다. 하지만, 아이템의 수가 늘어나면 스크롤이 길어지고 thumb의 높이는 0px로 수렴하게됩니다. 아쉽게도 일정크기를 유지 하도록 하는 옵션이 제공되지 않습니다. 아이템이 1000개만 넘어가도 이미 손가락으로 터치는 불가능할 정도로 작아집니다.  이 문제는 구글 이슈트레커에 등록된지 4년째 이지만 진행되는 내용은 없는 것 같습니다.([https://issuetracker.google.com/issues/64729576](https://issuetracker.google.com/issues/64729576)) 
+&lt;p&gt;여기서 끝이났다면 이 포스팅이 작성 되지 않았겠죠. 사용자와 디자이너 그리고 기획자가 용납할 수 없는 문제가 여기서 발생합니다.&lt;/p&gt;
 
+&lt;h3 id=&quot;터치-할-수-없는-스크롤바&quot;&gt;터치 할 수 없는 스크롤바&lt;/h3&gt;
 
-### 바인드 지옥 ### 
+&lt;p&gt;아이템의 수가 적을때는 아쉬운 점이 있어도 그나마 사용하는데 문제는 없었습니다. 하지만, 아이템의 수가 늘어나면 스크롤이 길어지고 thumb의 높이는 0px로 수렴하게됩니다. 아쉽게도 일정크기를 유지 하도록 하는 옵션이 제공되지 않습니다. 아이템이 1000개만 넘어가도 이미 손가락으로 터치는 불가능할 정도로 작아집니다.  이 문제는 구글 이슈트레커에 등록된지 4년째 이지만 진행되는 내용은 없는 것 같습니다.(&lt;a href=&quot;https://issuetracker.google.com/issues/64729576&quot;&gt;https://issuetracker.google.com/issues/64729576&lt;/a&gt;)&lt;/p&gt;
 
-터치할 수 없는 스크롤 바를 해결하기위해 고민하다가 문득 또 다른 해법이 떠올랐습니다. 고리짝 시절에 사용해 봤던 android.view.View의 `scrollbarThumbVertical`이라는 속성이 있습니다. RecyclerView도 View를 상속하니 무리없이 xml에 한줄로 적용이 가능했습니다. VectorDrawable로 정의도 가능하고, 스크롤의 길이에 따라 크기가 변하지도 않습니다.
- 
- 하지만, 이게 문제가 없다면 굳이 RecyclerView 저런 속성들과 클래스들이 추가 되지 않았겠죠. 
+&lt;h3 id=&quot;바인드-지옥&quot;&gt;바인드 지옥&lt;/h3&gt;
 
-`scrollbarThumbVertical`속성으로 그려지게 되는 ScrollBarDrawable 객체의 콜백은 스크롤하는 범위의 모든 아이템이 OnBindViewHolder를 호출하게 됩니다. 수십 수백개 정도는 큰 문제가 되지않지만,구조에 따라 천단위를 넘어가기 시작하면 스크롤중 아이템의 이미지를 그리는 앱이나, 아이템의 모델이 큰 경우에는 상당한 부담이 될 것 입니다. 
+&lt;p&gt;터치할 수 없는 스크롤 바를 해결하기위해 고민하다가 문득 또 다른 해법이 떠올랐습니다. 고리짝 시절에 사용해 봤던 android.view.View의 &lt;code class=&quot;highlighter-rouge&quot;&gt;scrollbarThumbVertical&lt;/code&gt;이라는 속성이 있습니다. RecyclerView도 View를 상속하니 무리없이 xml에 한줄로 적용이 가능했습니다. VectorDrawable로 정의도 가능하고, 스크롤의 길이에 따라 크기가 변하지도 않습니다.&lt;/p&gt;
 
-### 결론 : 그래서 FastScroller 를 직접 구현 하게 되었습니다. ###
+&lt;p&gt;하지만, 이게 문제가 없다면 굳이 RecyclerView 저런 속성들과 클래스들이 추가 되지 않았겠죠.&lt;/p&gt;
 
-다음편에서는 직접 구현한 FastScroller를 살펴보겠습니다. 물론 앞으로 개선되어야 할 부분이 많지만 일단은 잘 동작합니다. 
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;scrollbarThumbVertical&lt;/code&gt;속성으로 그려지게 되는 ScrollBarDrawable 객체의 콜백은 스크롤하는 범위의 모든 아이템이 OnBindViewHolder를 호출하게 됩니다. 수십 수백개 정도는 큰 문제가 되지않지만,구조에 따라 천단위를 넘어가기 시작하면 스크롤중 아이템의 이미지를 그리는 앱이나, 아이템의 모델이 큰 경우에는 상당한 부담이 될 것 입니다.&lt;/p&gt;
 
-### 한번 써보세요~ 👍 ###
+&lt;h3 id=&quot;결론--그래서-fastscroller-를-직접-구현-하게-되었습니다&quot;&gt;결론 : 그래서 FastScroller 를 직접 구현 하게 되었습니다.&lt;/h3&gt;
 
-link : [https://github.com/mond-al/recyclerview-fastscroller](https://github.com/mond-al/recyclerview-fastscroller)</content>
+&lt;p&gt;다음편에서는 직접 구현한 FastScroller를 살펴보겠습니다. 물론 앞으로 개선되어야 할 부분이 많지만 일단은 잘 동작합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;한번-써보세요-&quot;&gt;한번 써보세요~ 👍&lt;/h3&gt;
+
+&lt;p&gt;link : &lt;a href=&quot;https://github.com/mond-al/recyclerview-fastscroller&quot;&gt;https://github.com/mond-al/recyclerview-fastscroller&lt;/a&gt;&lt;/p&gt;</content>
 
       
       
