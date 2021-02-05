@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>https://mond-al.github.io/android-11-R</loc>
+    </url>
+    
+    <url>
         <loc>https://mond-al.github.io/error-log-android-11-api-changed</loc>
     </url>
     
@@ -217,6 +221,9 @@
     
     
     
+    <url>
+        <loc>https://mond-al.github.io/tag/sdkversion30/</loc>
+    </url>
     
     
     
@@ -224,6 +231,19 @@
     
     
     
+    <url>
+        <loc>https://mond-al.github.io/tag/r/</loc>
+    </url>
+    
+    
+    
+    
+    
+    
+    
+    <url>
+        <loc>https://mond-al.github.io/author/mond/</loc>
+    </url>
     
     
     

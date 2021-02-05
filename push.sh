@@ -4,7 +4,7 @@ git add --all .
 git commit -m "updating site $timestamp ${1}"
 git push
 echo "-------------------------------------------------source compile [2]-------------------------------------------------"
-bundle exec jekyll build --incremental
+bundle exec jekyll build
 cd ../mond-al.github.io
 git add --all .
 git commit -m "updating site $timestamp ${1}"
