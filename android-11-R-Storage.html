@@ -272,9 +272,8 @@ contentResolver에 파일을 등록하도록 하였습니다. 코드의 문맥�
 <span class="n">contentResolver</span><span class="o">.</span><span class="na">insert</span><span class="o">(</span><span class="n">MediaStore</span><span class="o">.</span><span class="na">Images</span><span class="o">.</span><span class="na">Media</span><span class="o">.</span><span class="na">EXTERNAL_CONTENT_URI</span><span class="o">,</span><span class="n">contentValues</span><span class="o">)</span> <span class="c1">// case #3  </span>
 </code></pre></div></div>
 
-<p><code class="highlighter-rouge">Scoped Storage 적용된 상태</code>에서 case #2의 형태로 생성한 파일생성하고, case #3의 코드로 미디어를 등록하면 되지않을까하고 한번 해보았지만 역시나
-동작하지않았습니다. 갤러리앱에 썸네일이 추가되어 추가적인 커맨드를 수행하면 되지 않을까 했지만, 단순히 DB에 row가 추가 되었고 실제 파일에 연결되진 않았습니다. 권한에의해
-링크가 깨진 상태라고 생각 하면 될 것 같네요. 리눅스의 파일권한을 생각하시면 될 것 같습니다.</p>
+<p>실수로 case#2 + case#3조합으로 코드가 동작 한적이 있었는데, 갤러리앱에 (깨진) 썸네일이 추가되는 상태가 되었습니다. 왠지 추가작업을 하면 private한파일을 external하게 공유가능하지 않을까?하는 호기심이 생겨서 이리저리 방법을 찾아봤지만, 역시나 그런 방법은 없었습니다. 썸네일이 추가된 것은 단순히 DB에 row가 추가 된 것이였고 실제 파일에 연결되진 않았습니다. 권한에 의해
+링크가 깨진 상태였었다고 생각 하면 될 것 같네요. (리눅스의 파일권한을 생각하시면 될 것 같습니다.)</p>
 
 <p><img src="assets/images/post/2021-02-01-android-11-R/capture_failure_02.png" alt="capture2" /></p>
 
