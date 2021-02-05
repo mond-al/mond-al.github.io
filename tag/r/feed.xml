@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/r/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-06T02:27:32+09:00</updated>
+  <updated>2021-02-06T02:52:42+09:00</updated>
   <id>https://mond-al.github.io/tag/r/feed.xml</id>
 
   
@@ -86,13 +86,36 @@ val contentValues = ContentValues()
 contentValues.put(MediaStore.Images.Media.DATA, file.absolutePath) 
 contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues) // case #3  
 ```
-`Scoped Storage 적용된 상태`에서 case #2의 형태로 생성한 파일생성하고, case #3의 코드로 미디어를 등록하면 되지않을까하고 한번 해보았지만, 원하는 형태가 되진 않았습니다. 분명 DB에 추가는 되었지만, 이미지 파일을 볼 수 없습니다.
+`Scoped Storage 적용된 상태`에서 case #2의 형태로 생성한 파일생성하고, case #3의 코드로 미디어를 등록하면 되지않을까하고 한번 해보았지만 동작하지않았습니다. 갤러리앱에 썸네일이 추가되어 추가적인 커맨드를 수행하면 되지 않을까 했지만, 단순히 DB에 ROW가 추가 되었고 실제 파일에 연결되진 않았습니다.
 
-![capture1](assets/images/post/2021-02-01-android-11-R/capture_failure_01.png)
 ![capture2](assets/images/post/2021-02-01-android-11-R/capture_failure_02.png)
 
 
-`Scoped Storage 적용되지 않은 상태`</content>
+`Scoped Storage 적용된 상태`에서 프로바이더를 이용하여 이미지,비디오,파일,다운로된 파일의 경로에 추가 하기 위해서는 아래의 코드 처럼 작성해야 합니다.
+```kotlin
+ContentValues contentValues = new ContentValues()
+contentValues.put(MediaStore.Images.Media.IS_PENDING, 1)
+contentValues.put(MediaStore.Images.Media.RELATIVE_PATH, Environment.DIRECTORY_PICTURES)
+        ....
+val uri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues)
+getContentResolver().openFileDescriptor(uri, &quot;w&quot;).use {
+    val outputStream = FileOutputStream(it!!.getFileDescriptor())
+    ...
+    outputStream.close()
+}
+
+contentValues.clear()
+contentValues.put(MediaStore.Images.Media.SIZE, file.length())
+contentValues.put(MediaStore.Images.Media.IS_PENDING, 0)
+getContentResolver().update(fileUri, contentValues, null, null)
+```
+애초에 파일 생성을 `getContentResolver().insert({Columns}.EXTERNAL_CONTENT_URI, contentValues)`로 생성해야합니다. 파일을 생성하면 바로 콘텐츠 프로바이더에서 접근 가능하기 때문에 IO를 고려하며 `IS_PENDING`값을 `1`로 우선 insert하고 완료되면 `0`으로 업데이트합니다. 컨텐츠가 저장되는 폴더는 {Columns}.RELATIVE_PATH의 값을 적절한 값으로 선택해 주면 됩니다. (아래 참고) 
+|---|---|---|
+|Type | Columns | RELATIVE_PATH
+|이미지 | MediaStore.Images.Media | Environment.DIRECTORY_PICTURES or Environment.DIRECTORY_DCIM|
+|영상  | MediaStore.Video.Media | Environment.DIRECTORY_MOVIES|
+|음악  | MediaStore.Audio.Media | Environment.DIRECTORY_MUSIC|
+|다운로드 | MediaStore.Downloads | Environment.DIRECTORY_DOWNLOADS|</content>
 
       
       
