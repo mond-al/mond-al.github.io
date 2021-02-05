@@ -255,7 +255,7 @@ into the {body} of the default.hbs template -->
 
 <p><img src="assets/images/post/2021-02-01-android-11-R/capture_failure_02.png" alt="capture2" /></p>
 
-<p><code class="highlighter-rouge">Scoped Storage 적용된 상태</code>에서 프로바이더를 이용하여 이미지,비디오,파일,다운로된 파일의 경로에 추가 하기 위해서는 아래의 코드 처럼 작성해야 합니다.</p>
+<p><code class="highlighter-rouge">Scoped Storage 적용된 상태</code>에서 <code class="highlighter-rouge">MediaStore</code>를 이용하여 이미지,비디오,오디오,다운로된 파일의 경로에 추가 하기 위해서는 아래의 코드 처럼 작성해야 합니다.</p>
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ContentValues</span> <span class="n">contentValues</span> <span class="p">=</span> <span class="n">new</span> <span class="n">ContentValues</span><span class="p">()</span>
 <span class="n">contentValues</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="n">MediaStore</span><span class="p">.</span><span class="n">Images</span><span class="p">.</span><span class="n">Media</span><span class="p">.</span><span class="n">IS_PENDING</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span>
 <span class="n">contentValues</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="n">MediaStore</span><span class="p">.</span><span class="n">Images</span><span class="p">.</span><span class="n">Media</span><span class="p">.</span><span class="n">RELATIVE_PATH</span><span class="p">,</span> <span class="n">Environment</span><span class="p">.</span><span class="n">DIRECTORY_PICTURES</span><span class="p">)</span>
@@ -272,13 +272,7 @@ into the {body} of the default.hbs template -->
 <span class="n">contentValues</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="n">MediaStore</span><span class="p">.</span><span class="n">Images</span><span class="p">.</span><span class="n">Media</span><span class="p">.</span><span class="n">IS_PENDING</span><span class="p">,</span> <span class="m">0</span><span class="p">)</span>
 <span class="n">getContentResolver</span><span class="p">().</span><span class="n">update</span><span class="p">(</span><span class="n">fileUri</span><span class="p">,</span> <span class="n">contentValues</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="k">null</span><span class="p">)</span>
 </code></pre></div></div>
-<p>애초에 파일 생성을 <code class="highlighter-rouge">getContentResolver().insert({Columns}.EXTERNAL_CONTENT_URI, contentValues)</code>로 생성해야합니다. 파일을 생성하면 바로 콘텐츠 프로바이더에서 접근 가능하기 때문에 IO를 고려하며 <code class="highlighter-rouge">IS_PENDING</code>값을 <code class="highlighter-rouge">1</code>로 우선 insert하고 완료되면 <code class="highlighter-rouge">0</code>으로 업데이트합니다. 컨텐츠가 저장되는 폴더는 {Columns}.RELATIVE_PATH의 값을 적절한 값으로 선택해 주면 됩니다. (아래 참고) 
-|—|—|—|
-|Type | Columns | RELATIVE_PATH
-|이미지 | MediaStore.Images.Media | Environment.DIRECTORY_PICTURES or Environment.DIRECTORY_DCIM|
-|영상  | MediaStore.Video.Media | Environment.DIRECTORY_MOVIES|
-|음악  | MediaStore.Audio.Media | Environment.DIRECTORY_MUSIC|
-|다운로드 | MediaStore.Downloads | Environment.DIRECTORY_DOWNLOADS|</p>
+<p>애초에 파일 생성을 <code class="highlighter-rouge">getContentResolver().insert({Columns}.EXTERNAL_CONTENT_URI, contentValues)</code>로 생성해야합니다. 파일을 생성하면 바로 콘텐츠 프로바이더에서 접근 가능하기 때문에 IO를 고려하며 <code class="highlighter-rouge">IS_PENDING</code>값을 <code class="highlighter-rouge">1</code>로 우선 insert하고 완료되면 <code class="highlighter-rouge">0</code>으로 업데이트합니다. 컨텐츠가 저장되는 폴더는 {Columns}.RELATIVE_PATH에 값을 적절한 값을 넣어주면 됩니다.</p>
 
 
                 </div>
