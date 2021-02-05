@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/fastscroller/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-06T02:25:50+09:00</updated>
+  <updated>2021-02-06T02:27:32+09:00</updated>
   <id>https://mond-al.github.io/tag/fastscroller/feed.xml</id>
 
   
@@ -37,7 +37,7 @@
       <published>2021-01-18T00:00:00+09:00</published>
       <updated>2021-01-18T00:00:00+09:00</updated>
       <id>https://mond-al.github.io/2021/01/18/fast-scroller</id>
-      <content type="html" xml:base="https://mond-al.github.io/2021/01/18/fast-scroller.html">&lt;img src=&quot;/assets/images/post/2021-01-18-fast-scroller/samsung_fastscroll.gif&quot; alt=&quot;drawing&quot; width=&quot;200&quot;/&gt;  
+      <content type="html" xml:base="https://mond-al.github.io/2021/01/18/fast-scroller.html">&lt;img src=&quot;assets/images/post/2021-01-18-fast-scroller/samsung_fastscroll.gif&quot; alt=&quot;drawing&quot; width=&quot;200&quot;/&gt;  
 위 그림처럼 갤러리나 수많은 아이템을 보여줄 때, 순차적으로 스크롤하여 접근하는 대신 스크롤 바를 잡고 바로 이동하는 역활을 하는 것을 FastScroller라고 합니다. FastScroller를 한마디로 이야기하면 &quot;드래그하여 특정한 위치로 이동가능한 스크롤 바&quot;라고 정의 할 수 있습니다. 
 
 Recyclerview는 [FastScroller](https://android.googlesource.com/platform/frameworks/support/+/androidx-main/recyclerview/recyclerview/src/main/java/androidx/recyclerview/widget/FastScroller.java
