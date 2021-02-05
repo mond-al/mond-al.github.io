@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/sdkversion30/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-06T04:01:55+09:00</updated>
+  <updated>2021-02-06T04:04:37+09:00</updated>
   <id>https://mond-al.github.io/tag/sdkversion30/feed.xml</id>
 
   
@@ -97,7 +97,7 @@ requestLegacyExternalStorage를 사용하지 않았거나 targetSdkVersion 30을
 &lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Scoped Storage 적용되지 않은 상태&lt;/code&gt;에서는 새롭게 생성한 이미지나 미디어 파일을 컨텐츠 프로바이더를 이용하여 갤러리에 노출하기 위해서는 아래처럼
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Scoped Storage 적용되지 않은 상태&lt;/code&gt;에서는 새롭게 생성한 이미지나 미디어 파일를 갤러리앱에 노출하기 위해서는 아래처럼
 contentResolver에 파일을 등록하도록 하였습니다. 코드의 문맥을 보면 파일의 절대경로는 별도로 존재하고 DB에 해당 파일의 row를 추가하는 형태 였습니다.&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;contentValues&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ContentValues&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
