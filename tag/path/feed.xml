@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/path/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-07T01:43:17+09:00</updated>
+  <updated>2021-02-07T01:44:31+09:00</updated>
   <id>https://mond-al.github.io/tag/path/feed.xml</id>
 
   
@@ -136,7 +136,7 @@ Step 3. 그리고 용도에 따라 명시적으로 ContentProvider에 등록합�
 
 &lt;p&gt;ContentResolver.insert는 MediaStore API와 ContentValues 객체를 인자로 받아 Uri를 생성합니다. ContentResolver.openXXXXX 메서드를 통해 FileOutputStream이나 ParcelFileDescriptor를 얻어서 파일을 쓰도록 합니다.&lt;/p&gt;
 
-&lt;p&gt;참고로 ContentInterface를 통해 반환하는 Uri는 &lt;code class=&quot;highlighter-rouge&quot;&gt;content://&lt;/code&gt;로 시작합니다. query를 위한&lt;/p&gt;
+&lt;p&gt;참고로 insert에서 반환하는 Uri는 Content Provider의 컨텐츠이기 때문에 &lt;code class=&quot;highlighter-rouge&quot;&gt;content://&lt;/code&gt;로 시작합니다.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Scoped Storage 정책에서 공유되는 파일 작성 &lt;br /&gt;
