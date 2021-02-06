@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/path/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-07T01:39:34+09:00</updated>
+  <updated>2021-02-07T01:43:17+09:00</updated>
   <id>https://mond-al.github.io/tag/path/feed.xml</id>
 
   
@@ -113,8 +113,8 @@ val cacheSize = storageManager.getCacheSizeBytes(uuidForPath) // 사용중인 �
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Legacy External Storage&lt;/code&gt;일때는 &lt;code class=&quot;highlighter-rouge&quot;&gt;WRITE_EXTERNAL_STORAGE&lt;/code&gt;권한이 있는경우 위와같이 외부저장소의 루트부터 대부분의 공간에 접근하고 쓰기가 가능했습니다. 그리고 필요한 경우 ContentProvider에 등록하여 활용합니다.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Legacy External Storage에서 공유되는 파일 작성 &lt;br /&gt;
-Step 1. 권한을 얻습니다.&lt;br /&gt;
+  &lt;p&gt;Legacy External Storage 정책에서 공유되는 파일 작성 순서 &lt;br /&gt;
+Step 1. 쓰기 권한을 얻습니다.&lt;br /&gt;
 Step 2. 파일을 작성합니다.&lt;br /&gt;
 Step 3. 그리고 용도에 따라 명시적으로 ContentProvider에 등록합니다.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -139,7 +139,7 @@ Step 3. 그리고 용도에 따라 명시적으로 ContentProvider에 등록합�
 &lt;p&gt;참고로 ContentInterface를 통해 반환하는 Uri는 &lt;code class=&quot;highlighter-rouge&quot;&gt;content://&lt;/code&gt;로 시작합니다. query를 위한&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Legacy External Storage에서 공유되는 파일 작성 &lt;br /&gt;
+  &lt;p&gt;Scoped Storage 정책에서 공유되는 파일 작성 &lt;br /&gt;
 Step 1. ContentProvider에 파일에 대한 정보를 추가합니다. &lt;br /&gt;
 Step 2. Step 1에서 얻은 Uri를 통해 파일을 작성합니다.&lt;/p&gt;
 &lt;/blockquote&gt;
