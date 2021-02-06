@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/author/mond/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-07T01:44:31+09:00</updated>
+  <updated>2021-02-07T01:45:09+09:00</updated>
   <id>https://mond-al.github.io/author/mond/feed.xml</id>
 
   
@@ -132,9 +132,8 @@ Step 3. 그리고 용도에 따라 명시적으로 ContentProvider에 등록합�
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Scoped Storage&lt;/code&gt;가 적용되면 다른앱과 공유되는 파일은 모두 MediaStore를 이용하여 생성해야 합니다.&lt;/p&gt;
 
-&lt;p&gt;개인적으로 처음에 Scoped Storage를 접했을때 &lt;code class=&quot;highlighter-rouge&quot;&gt;MediaStore를 이용하여 생성해야 합니다&lt;/code&gt;라는 문맥때문에 혼란이 왔었는데요. MediaStore 클래스가 핵심인 것은 맞지만 구현의 관점에서 주어와 목적어를 조금 바꿔서 읽으면 문맥이 더 이해가 쉬워집니다.&lt;/p&gt;
-
-&lt;p&gt;ContentResolver.insert는 MediaStore API와 ContentValues 객체를 인자로 받아 Uri를 생성합니다. ContentResolver.openXXXXX 메서드를 통해 FileOutputStream이나 ParcelFileDescriptor를 얻어서 파일을 쓰도록 합니다.&lt;/p&gt;
+&lt;p&gt;개인적으로 처음에 Scoped Storage를 접했을때 &lt;code class=&quot;highlighter-rouge&quot;&gt;MediaStore를 이용하여 생성해야 합니다&lt;/code&gt;라는 문맥때문에 혼란이 왔었는데요. MediaStore 클래스가 핵심인 것은 맞지만 구현의 관점에서 아래처럼 읽으면 문맥이 더 이해가 쉬웠습니다. 
+ContentResolver.insert는 MediaStore API와 ContentValues 객체를 인자로 받아 Uri를 생성합니다. ContentResolver.openXXXXX 메서드를 통해 FileOutputStream이나 ParcelFileDescriptor를 얻어서 파일을 쓰도록 합니다.&lt;/p&gt;
 
 &lt;p&gt;참고로 insert에서 반환하는 Uri는 Content Provider의 컨텐츠이기 때문에 &lt;code class=&quot;highlighter-rouge&quot;&gt;content://&lt;/code&gt;로 시작합니다.&lt;/p&gt;
 
