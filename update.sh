@@ -1,3 +1,3 @@
 echo "------------------------------------------------- reload ------------------------------------------------- "
 gulp css
-bundle exec jekyll serve --incremental
+bundle exec jekyll serve

@@ -7,6 +7,20 @@
     
       
       <item>
+        <title>파일 생성</title>
+        
+          <description>&lt;p&gt;안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 02 Feb 2021 00:00:00 +0900</pubDate>
+        <link>https://mond-al.github.io//file-control</link>
+        <guid isPermaLink="true">https://mond-al.github.io/file-control</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)</title>
         
           <description>&lt;p&gt;Android 11(R)은 Android 6.0(M,Marshmallow)이후로 가장 큰 변화가 생긴 버전이 아닐까 합니다.&lt;/p&gt;

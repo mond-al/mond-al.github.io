@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>파일 생성</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <!-- awesome font   -->
+    <script src="https://kit.fontawesome.com/09fc514f86.js" crossorigin="anonymous"></script>
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="안드로이드 개발 로깅." />
+    <link rel="shortcut icon" href="https://mond-al.github.io/assets/images/fav/favicon-96x96.png" type="image/png" />
+    <link rel="canonical" href="https://mond-al.github.io/file-control" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>파일 생성 | Developer/App/Android/mond &gt; Log</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="파일 생성" />
+<meta name="author" content="jisoo Yang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다." />
+<meta property="og:description" content="안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다." />
+<link rel="canonical" href="https://mond-al.github.io/file-control" />
+<meta property="og:url" content="https://mond-al.github.io/file-control" />
+<meta property="og:site_name" content="Developer/App/Android/mond &gt; Log" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-02-02T00:00:00+09:00" />
+<script type="application/ld+json">
+{"url":"https://mond-al.github.io/file-control","headline":"파일 생성","datePublished":"2021-02-02T00:00:00+09:00","dateModified":"2021-02-02T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mond-al.github.io/file-control"},"author":{"@type":"Person","name":"jisoo Yang"},"description":"안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다.","@type":"BlogPosting","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="Developer/App/Android/mond > Log" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="파일 생성" />
+    <meta property="og:description" content="안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다. 코드 아래 path를 정리해두었는데 path는 제조사,기종,OS버전등에 의해 따라 달라질 수 있습니다. 대략적인 형상에 대해 정리 해두는 자료로 이해하기 바랍니다. 용어정리 Device Storage(저장소)의 구분 A.Internal Storage : 내부 저장소 B.External Storage : 외부 저장소 B1. Built in non-removable storage :" />
+    <meta property="og:url" content="https://mond-al.github.io/file-control" />
+    <meta property="og:image" content="https://mond-al.github.io/assets/images/cover/common_android.jpg" />
+    <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta property="article:author" content="https://www.facebook.com/" />
+    <meta property="article:published_time" content="2021-02-02T00:00:00+09:00" />
+    <meta property="article:modified_time" content="2021-02-02T00:00:00+09:00" />
+    <meta property="article:tag" content="Android" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="파일 생성" />
+    <meta name="twitter:description" content="안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다. 코드 아래 path를 정리해두었는데 path는 제조사,기종,OS버전등에 의해 따라 달라질 수 있습니다. 대략적인 형상에 대해 정리 해두는 자료로 이해하기 바랍니다. 용어정리 Device Storage(저장소)의 구분 A.Internal Storage : 내부 저장소 B.External Storage : 외부 저장소 B1. Built in non-removable storage :" />
+    <meta name="twitter:url" content="https://mond-al.github.io/" />
+    <meta name="twitter:image" content="https://mond-al.github.io/assets/images/cover/common_android.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Developer/App/Android/mond > Log" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Android" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Developer/App/Android/mond > Log",
+        "logo": "https://mond-al.github.io/"
+    },
+    "url": "https://mond-al.github.io/file-control",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://mond-al.github.io/assets/images/cover/common_android.jpg",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://mond-al.github.io/file-control"
+    },
+    "description": "안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다. 코드 아래 path를 정리해두었는데 path는 제조사,기종,OS버전등에 의해 따라 달라질 수 있습니다. 대략적인 형상에 대해 정리 해두는 자료로 이해하기 바랍니다. 용어정리 Device Storage(저장소)의 구분 A.Internal Storage : 내부 저장소 B.External Storage : 외부 저장소 B1. Built in non-removable storage :"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="파일 생성" href="/feed.xml" />
+
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+<!-- awesome font   -->
+<script src="https://kit.fontawesome.com/09fc514f86.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/assets/built/syntax.css">
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="https://mond-al.github.io/">Developer/App/Android/mond > Log</a>
+            
+        
+        
+            <!--메뉴 네비바 -->
+<ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-getting-started" role="menuitem"><a href="/tag/android/">Android</a></li>
+    <li class="nav-try-ghost" role="menuitem"><a href="/tag/android/">Project</a></li>
+</ul>
+
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+            
+        </div>
+        
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full  tag-android tag-file tag-path  ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime=" 2 February 2021"> 2 February 2021</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='/tag/android/'>ANDROID</a>,
+                            
+                        
+                            
+                               <a href='/tag/file/'>FILE</a>,
+                            
+                        
+                            
+                               <a href='/tag/path/'>PATH</a>
+                            
+                        
+                    
+                </section>
+                <h1 class="post-full-title">파일 생성</h1>
+            </header>
+
+<!--            -->
+<!--            <figure class="post-full-image" style="background-image: url(/assets/images/cover/common_android.jpg)">-->
+<!--            </figure>-->
+<!--            -->
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <p>안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다.</p>
+
+<p><strong>코드 아래 path를 정리해두었는데 path는 제조사,기종,OS버전등에 의해 따라 달라질 수 있습니다. 대략적인 형상에 대해 정리 해두는 자료로 이해하기 바랍니다.</strong></p>
+
+<h2 id="용어정리">용어정리</h2>
+
+<h3 id="device-storage저장소의-구분">Device Storage(저장소)의 구분</h3>
+<pre><code class="language-tree">A.Internal Storage : 내부 저장소  
+B.External Storage : 외부 저장소  
+   B1. Built in non-removable storage : 기본으로 제공되는 빌트인 저장소. 보통 내장메모리라고 표현.  
+   B2. SDcard : 디바이스 제조사, 모델에 따라 지원 할 수도 있는 SDcard    
+   B3. USB Storage : USB 단자를 통해 연결된 저장장치  
+</code></pre>
+<p>기본적으로 내부 메모리 영역은 사용자가 직접 접근할 수 없는 영역이라고 생각 하면 됩니다. 평소 외부 저장소중에 B1을 내장 메모리로 지칭하기 때문에 용어혼란이 오기 쉽기 때문에 미리 정리하고 시작합니다.</p>
+
+<h3 id="external-storage-정책의-구분">External Storage 정책의 구분</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Legacy External Storage 
+   : Scoped Storage가 적용되지않은 상태. targetSdkVersion이 28이하 이거나 단말이 Android 9이하. 
+- Scoped Storage
+   : Scoped Storage가 적용된 상태. targetSdkVersion이 29이상이고 단말이 Android 10이상.  
+     단, targetSdkVersion이 29인 경우 requestLegacyExternalStorage를 활성화 하지 않아야 함 
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="cache-영역">Cache 영역</h2>
+
+<p>별도의 권한없이 파일을 생성,삭제 가능합니다. 다른 앱이나 사용자가 접근 할 수 없습니다. 추가 디스크 공간이 필요할 때 캐시 데이터의 총합이 할당된 크기를 초과한 경우 캐시영역의 파일이 삭제됩니다. sharedUserId 기능을 사용하는 경우 공유 UID의 모든 패키지에 대해 캐시 된 데이터가 함께 추적됩니다. 앱이 삭제되면 함께 삭제됩니다 .<a href="">link</a></p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">cacheFile</span> <span class="p">=</span> <span class="n">File</span><span class="p">(</span><span class="n">context</span><span class="p">.</span><span class="n">cacheDir</span><span class="p">,</span> <span class="s">"cache_file.txt"</span><span class="p">)</span>
+<span class="c1">// &gt; /data/user/0/*{applicationId}*/**cache**/cache_file.txt
+</span></code></pre></div></div>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">externalCacheFile</span> <span class="p">=</span> <span class="n">File</span><span class="p">(</span><span class="n">context</span><span class="p">.</span><span class="n">externalCacheDir</span><span class="p">,</span> <span class="s">"ex_cache_file.txt"</span><span class="p">)</span>
+<span class="c1">// &gt; /storage/emulated/0/Android/data/{applicationId}/**cache**/ex_cache_file.txt
+</span></code></pre></div></div>
+
+<h3 id="캐시-할당-크기-및-사용중인-크기">캐시 할당 크기 및 사용중인 크기</h3>
+<p>Api level 26(O)부터는 가용공간 관리를 위해 몇가지 함수들이 추가되었습니다. <a href="https://developer.android.com/reference/android/os/storage/StorageManager#getCacheQuotaBytes(java.util.UUID)">getCacheQuotaBytes</a> 는 <code class="highlighter-rouge">캐시에 사용할 공간으로 할당된 용량</code>을 반환하고 <a href="https://developer.android.com/reference/android/os/storage/StorageManager#getCacheSizeBytes(java.util.UUID)">getCacheSizeBytes</a> 는 <code class="highlighter-rouge">사용중인 캐시파일의 전체 총합</code>을 확인 할 수 있습니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>StorageManager storageManager = (StorageManager) getSystemService(Context.
+val quotaByte = storageManager.getCacheQuotaBytes(storageManager.getUuidForPath(getCacheDir())) // 캐시에 사용할 공간으로 할당된 용량
+val cacheSize = storageManager.getCacheSizeBytes(uuidForPath) // 사용중인 캐시파일의 전체 총합
+</code></pre></div></div>
+
+<h2 id="file-영역">File 영역</h2>
+
+<p>앱이 설치 되어있는 동안만 영속적(Persistence)으로 필요한 파일을 저장하는 영역입니다. 앱이 삭제되면 함께 삭제됩니다. 별도의 권한 없이 파일을 생성가능합니다.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// style #1
+</span><span class="kd">val</span> <span class="py">file1</span> <span class="p">=</span> <span class="n">File</span><span class="p">(</span><span class="n">context</span><span class="p">.</span><span class="n">fileDir</span><span class="p">,</span> <span class="s">"file.txt"</span><span class="p">)</span>
+<span class="kd">val</span> <span class="py">outputStream</span> <span class="p">=</span> <span class="n">file</span><span class="p">.</span><span class="n">outputStream</span><span class="p">()</span>
+<span class="c1">// &gt; /data/user/0/*{applicationId}*/**files**/file.txt
+</span></code></pre></div></div>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// style #2
+</span><span class="kd">val</span> <span class="py">outputStream</span> <span class="p">=</span> <span class="n">openFileOutput</span><span class="p">(</span><span class="s">"file.txt"</span><span class="p">,</span> <span class="n">MODE_PRIVATE</span><span class="p">)</span>
+<span class="c1">// &gt; /data/user/0/*{applicationId}*/**files**/file.txt
+</span></code></pre></div></div>
+
+<p><code class="highlighter-rouge">style #1</code>과 <code class="highlighter-rouge">style #2</code>의 결과로 얻어지는 FileOutputStream은 동일한 파일을 가르키고 있습니다. 하지만 개인적으로는 <code class="highlighter-rouge">openFileOutput</code>메서드를 사용하면 <code class="highlighter-rouge">FileOutputStream</code>에서 path를 얻을 수 없기 때문에 명시적으로 File 객체를 생성하여 사용하는 style #1을 주로 사용하고 있습니다.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">externalFile</span> <span class="p">=</span> <span class="n">File</span><span class="p">(</span><span class="n">context</span><span class="p">.</span><span class="n">getExternalFilesDir</span><span class="p">({</span><span class="n">Environment</span> <span class="n">Type</span><span class="p">},</span> <span class="s">"file.txt"</span><span class="p">)</span>
+<span class="c1">// &gt; /storage/emulated/0/Android/data/**files**/*{Environment Type}*/file.txt
+</span></code></pre></div></div>
+
+<p>외부저장장치에 앱데이터를 저장할때 사용합니다. 공유저장 장치가 에뮬레이션 된 경우에는 Scoped Storage가 적용되지 않은 상태에서는 <code class="highlighter-rouge">WRITE_EXTERNAL_STORAGE</code>권한만 있으면, 이 영역에 접근가능하기 때문에 보안에 취약하며 마운트 여부가 보장되지 않기 때문에 특별한 경우가 아니라면 추천하지않습니다.</p>
+
+<h2 id="공유-되는-외부저장소-영역">공유 되는 외부저장소 영역</h2>
+
+<h3 id="legacy-external-storage">Legacy External Storage</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">file</span> <span class="p">=</span> <span class="n">File</span><span class="p">(</span><span class="n">Environment</span><span class="p">.</span><span class="n">getExternalStorageDirectory</span><span class="p">(),</span> <span class="s">"file.txt"</span><span class="p">)</span>
+<span class="c1">// &gt; /storage/emulated/0/file.txt
+</span></code></pre></div></div>
+<p><code class="highlighter-rouge">Legacy External Storage</code>일때는 <code class="highlighter-rouge">WRITE_EXTERNAL_STORAGE</code>권한이 있는경우 위와같이 외부저장소의 루트부터 대부분의 공간에 접근하고 쓰기가 가능했습니다. 그리고 필요한 경우 ContentProvider에 등록하여 활용합니다.</p>
+
+<blockquote>
+  <p>Legacy External Storage에서 공유되는 파일 작성 <br />
+Step 1. 권한을 얻습니다.<br />
+Step 2. 파일을 작성합니다.<br />
+Step 3. 그리고 용도에 따라 명시적으로 ContentProvider에 등록합니다.</p>
+</blockquote>
+
+<h3 id="scoped-storage">Scoped Storage</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Scoped Storage
+</span><span class="kd">val</span> <span class="py">resolver</span> <span class="p">=</span> <span class="n">applicationContext</span><span class="p">.</span><span class="n">contentResolver</span>
+<span class="kd">val</span> <span class="py">audioCollection</span> <span class="p">=</span> <span class="n">MediaStore</span><span class="p">.</span><span class="n">Audio</span><span class="p">.</span><span class="n">Media</span><span class="p">.</span><span class="n">getContentUri</span><span class="p">(</span>
+        <span class="n">MediaStore</span><span class="p">.</span><span class="n">VOLUME_EXTERNAL_PRIMARY</span><span class="p">)</span>
+<span class="kd">val</span> <span class="py">newSongDetails</span> <span class="p">=</span> <span class="n">ContentValues</span><span class="p">().</span><span class="n">apply</span> <span class="p">{</span>
+    <span class="n">put</span><span class="p">(</span><span class="n">MediaStore</span><span class="p">.</span><span class="n">Audio</span><span class="p">.</span><span class="n">Media</span><span class="p">.</span><span class="n">DISPLAY_NAME</span><span class="p">,</span> <span class="s">"My Song.mp3"</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="kd">val</span> <span class="py">myFavoriteSongUri</span> <span class="p">=</span> <span class="n">resolver</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">audioCollection</span><span class="p">,</span> <span class="n">newSongDetails</span><span class="p">)</span>
+<span class="c1">// &gt; content://media/external/audio/media/{id}
+</span></code></pre></div></div>
+<p><code class="highlighter-rouge">Scoped Storage</code>가 적용되면 다른앱과 공유되는 파일은 모두 MediaStore를 이용하여 생성해야 합니다.</p>
+
+<p>개인적으로 처음에 Scoped Storage를 접했을때 <code class="highlighter-rouge">MediaStore를 이용하여 생성해야 합니다</code>라는 문맥때문에 혼란이 왔었는데요. MediaStore 클래스가 핵심인 것은 맞지만 구현의 관점에서 주어와 목적어를 조금 바꿔서 읽으면 문맥이 더 이해가 쉬워집니다.</p>
+
+<p>ContentResolver.insert는 MediaStore API와 ContentValues 객체를 인자로 받아 Uri를 생성합니다. ContentResolver.openXXXXX 메서드를 통해 FileOutputStream이나 ParcelFileDescriptor를 얻어서 파일을 쓰도록 합니다.</p>
+
+<p>참고로 ContentInterface를 통해 반환하는 Uri는 <code class="highlighter-rouge">content://</code>로 시작합니다. query를 위한</p>
+
+<blockquote>
+  <p>Legacy External Storage에서 공유되는 파일 작성 <br />
+Step 1. ContentProvider에 파일에 대한 정보를 추가합니다. <br />
+Step 2. Step 1에서 얻은 Uri를 통해 파일을 작성합니다.</p>
+</blockquote>
+
+<h3 id="legacyexternalstorage-유지">LegacyExternalStorage 유지</h3>
+
+<p>기본적으로 targetSdkVersion을 30으로 상향하게 되면 Api level 29에서 제공되었던 <a href="https://developer.android.com/training/data-storage/use-cases#opt-out-scoped-storage">requestLegacyExternalStorage</a> 가 무시됩니다. 하지만 이전 버전에서 획득한 WRITE_EXTERNAL_STORAGE을 “유지” 시켜주는 속성이 추가 되었습니다.</p>
+
+<p>메니페스트 파일에 <a href="https://developer.android.com/reference/android/R.attr#preserveLegacyExternalStorage">preserveLegacyExternalStorage</a> 속성을 true로 추가하여 Scoped Storage가 적용되기전에 생성한 파일들은 앱이 삭제되기전까지 계속 쓰기권한을 유지합니다. 하지만, requestLegacyExternalStorage와 달리 앱을 재설치하는 경우에는 무시됩니다. 이 기능은 “유지”만 지원합니다.</p>
+
+<p>주의할 점은 메니페이스트에서 WRITE_EXTERNAL_STORAGE를 제거하거나, WRITE_EXTERNAL_STORAGE를에 maxSdkVersion=28 같은 옵션을 추가하면 LegacyExternalStorage에 대한 권한을 유지 할 수 없습니다.</p>
+
+<p>테스트 절차는 다음과 같습니다.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="m">1</span><span class="p">.</span> <span class="n">Environment</span><span class="p">.</span><span class="n">getExternalStorageDirectory</span><span class="p">()</span><span class="err">경로에</span> <span class="err">파일을</span> <span class="err">추가하는</span> <span class="err">앱준비합니다</span><span class="p">.</span> 
+<span class="m">2</span><span class="p">.</span> <span class="n">target</span><span class="p">/</span><span class="n">compileSdkVersion</span> <span class="m">29</span><span class="err">이하로</span> <span class="err">빌드합니다</span><span class="p">.</span> <span class="err">버전코드는</span> <span class="n">X</span><span class="err">입니다</span><span class="p">.</span>  
+   <span class="p">(</span><span class="m">29</span><span class="err">인</span> <span class="err">경우에는</span> <span class="err">메니페스트에</span> <span class="n">requestLegacyExternalStorage</span><span class="p">=</span><span class="k">true</span><span class="p">)</span>
+<span class="m">3</span><span class="p">.</span> <span class="err">준비된</span> <span class="err">단말기에</span> <span class="m">2</span><span class="err">의</span> <span class="err">앱을</span> <span class="err">설치</span> <span class="err">및</span> <span class="err">실행합니다</span><span class="p">.</span>
+<span class="m">4</span><span class="p">.</span> <span class="err">앱의</span> <span class="err">권한중</span> <span class="n">WRITE_EXTERNAL_STORAGE</span><span class="err">를</span> <span class="err">허용합니다</span><span class="p">.</span>
+<span class="m">5</span><span class="p">.</span> <span class="err">앱을</span> <span class="err">통해</span> <span class="err">파일을</span> <span class="err">생성합니다</span><span class="p">.</span>
+<span class="m">6</span><span class="p">.</span> <span class="err">동일한</span> <span class="err">앱의</span> <span class="err">빌드환경을</span> <span class="n">target</span><span class="p">/</span><span class="n">compileSdkVersion</span><span class="err">는</span> <span class="m">30</span><span class="err">으로</span><span class="p">,</span> <span class="err">버전코드는</span> <span class="n">X</span><span class="p">+</span><span class="err">로</span> <span class="err">변경후</span> <span class="err">다시</span> <span class="err">빌드합니다</span><span class="p">.</span>  
+   <span class="p">(</span><span class="n">WRITE_EXTERNAL_STORAGE</span><span class="err">를</span> <span class="err">제거</span> <span class="err">해선</span> <span class="err">안됩니다</span><span class="p">.)</span>
+<span class="m">7</span><span class="p">.</span> <span class="m">6</span><span class="err">의</span> <span class="err">앱을</span> <span class="err">설치</span><span class="p">,</span> <span class="err">실행합니다</span><span class="p">.</span>
+<span class="m">8</span><span class="p">.</span> <span class="err">앱을</span> <span class="err">통해</span> <span class="err">파일을</span> <span class="err">업데이트</span><span class="p">,</span> <span class="err">추가가</span> <span class="err">잘</span> <span class="err">되는지</span> <span class="err">확인</span> <span class="err">합니다</span><span class="p">.</span> 
+</code></pre></div></div>
+
+<hr />
+
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                        <section class="author-card">
+                            
+                                <img class="author-profile-image" src="/assets/images/mond.jpg" alt="mond" />
+                            
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="/author/mond">jisoo Yang</a></h4>
+                                
+                                    <p>Android application developer</p>
+                                
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="/author/mond">Read More</a>
+                        </div>
+                    
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+                <section class="post-full-comments">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        var disqus_config = function () {
+                            this.page.url = 'https://mond-al.github.io/file-control';
+                            this.page.identifier = '/file-control';
+                            this.page.title = '파일 생성';
+                        };
+                        (function() {
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://mond-al.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                </section>
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+                
+                
+                
+                
+                    <article class="read-next-card"
+                        
+                            style="background-image: url(/assets/images/blog-cover.jpg)"
+                        
+                    >
+                        <header class="read-next-card-header">
+                            <small class="read-next-card-header-sitetitle">&mdash; Developer/App/Android/mond > Log &mdash;</small>
+                            
+                                <h3 class="read-next-card-header-title"><a href="/tag/android/">Android</a></h3>
+                            
+                        </header>
+                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                        <div class="read-next-card-content">
+                            <ul>
+                                
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/android-11-R-Storage">안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/error-log-android-11-api-changed">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/dependency-gradle">앱의 의존성 확인하고 전이 의존성 변경하기</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                            </ul>
+                        </div>
+                        <footer class="read-next-card-footer">
+                            <a href="/tag/android/">
+                                
+                                    See all 5 posts  →
+                                
+                            </a>
+                        </footer>
+                    </article>
+                
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/android-11-R-Storage">
+                <div class="post-card-image" style="background-image: url(/assets/images/cover/common_android.jpg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/android-11-R-Storage">
+                <header class="post-card-header">
+                    
+                        
+                            
+                               <span class="post-card-tags">Android</span>
+                            
+                        
+                            
+                               <span class="post-card-tags">Sdkversion30</span>
+                            
+                        
+                            
+                                <span class="post-card-tags">R</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/mond.jpg" alt="jisoo Yang" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/mond/">jisoo Yang</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="https://mond-al.github.io/">
+            
+            <span>Developer/App/Android/mond > Log</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">파일 생성</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%ED%8C%8C%EC%9D%BC+%EC%83%9D%EC%84%B1&amp;url=https://mond-al.github.io/file-control"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://mond-al.github.io/file-control"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="https://mond-al.github.io/">Developer/App/Android/mond > Log</a> &copy; 2021</section>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js" integrity="sha512-9GIHU4rPKUMvNOHFOer5Zm2zHnZOjayOO3lZpokhhCtgt8FNlNiW/bb7kl0R5ZXfCDVPcQ8S4oBdNs92p5Nm2w==" crossorigin="anonymous"></script>
+
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GGKL7TBGBY"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-GGKL7TBGBY');
+</script>
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+</html>
