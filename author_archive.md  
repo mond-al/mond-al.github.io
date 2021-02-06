@@ -270,8 +270,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="android" class="tag-heading">ANDROID</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/file-control" target="_blank" title="파일 생성">파일 생성</a></li> -->
-      <li class="entry-title"><a href="/file-control" target="_blank" title="파일 생성">파일 생성</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/file-control" target="_blank" title="안드로이드 파일 생성">안드로이드 파일 생성</a></li> -->
+      <li class="entry-title"><a href="/file-control" target="_blank" title="안드로이드 파일 생성">안드로이드 파일 생성</a></li>
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/android-11-R-Storage" target="_blank" title="안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)">안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)</a></li> -->
       <li class="entry-title"><a href="/android-11-R-Storage" target="_blank" title="안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)">안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)</a></li>
@@ -340,8 +340,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="file" class="tag-heading">FILE</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/file-control" target="_blank" title="파일 생성">파일 생성</a></li> -->
-      <li class="entry-title"><a href="/file-control" target="_blank" title="파일 생성">파일 생성</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/file-control" target="_blank" title="안드로이드 파일 생성">안드로이드 파일 생성</a></li> -->
+      <li class="entry-title"><a href="/file-control" target="_blank" title="안드로이드 파일 생성">안드로이드 파일 생성</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -387,8 +387,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="path" class="tag-heading">PATH</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/file-control" target="_blank" title="파일 생성">파일 생성</a></li> -->
-      <li class="entry-title"><a href="/file-control" target="_blank" title="파일 생성">파일 생성</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/file-control" target="_blank" title="안드로이드 파일 생성">안드로이드 파일 생성</a></li> -->
+      <li class="entry-title"><a href="/file-control" target="_blank" title="안드로이드 파일 생성">안드로이드 파일 생성</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
