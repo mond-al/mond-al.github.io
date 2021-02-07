@@ -23,21 +23,6 @@
     
       
       <item>
-        <title>안드로이드 파일 생성</title>
-        
-          <description>&lt;p&gt;안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다.&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Tue, 02 Feb 2021 00:00:00 +0900</pubDate>
-        <link>
-        https://mond-al.github.io/file-read</link>
-        <guid isPermaLink="true">https://mond-al.github.io/file-read</guid>
-      </item>
-      
-    
-      
-      <item>
         <title>Scoped Storage 적용하기</title>
         
           <description>&lt;p&gt;아마도 Scoped Storage를 강제하는 부분인 Android 11(R)에서 가장 큰 변화인 것 같습니다.&lt;/p&gt;
