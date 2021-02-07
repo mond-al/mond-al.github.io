@@ -252,7 +252,7 @@ into the {body} of the default.hbs template -->
 <span class="n">File</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span> 
 </code></pre></div></div>
 
-<p><code class="highlighter-rouge">Scoped Storage 적용되지 않은 상태</code>에서는 새롭게 생성한 이미지나 미디어 파일를 갤러리앱에 노출하기 위해서는 아래처럼 contentResolver에 파일을 등록하도록 하였습니다. 코드의 문맥을 보면 파일의 절대경로는 별도로 존재하고 DB에 해당 파일의 row를 추가하는 형태 였습니다. <code class="highlighter-rouge">Scoped Storage 적용된 상태</code>에서 <code class="highlighter-rouge">MediaStore</code>를 이용하여 이미지,비디오,오디오,다운로된 파일의 경로에 추가 하기 위해서는 아래의 코드 처럼 작성해야 합니다.</p>
+<p><code class="highlighter-rouge">Scoped Storage 적용되지 않은 상태</code>에서는 새롭게 생성한 이미지나 미디어 파일를 갤러리앱에 노출하기 위해서는 아래처럼 contentResolver를 이용해 파일을 등록하도록 하였습니다. 코드의 문맥을 보면 파일의 절대경로는 별도로 존재하고 DB에 해당 파일의 row를 추가하는 형태 였습니다. <code class="highlighter-rouge">Scoped Storage 적용된 상태</code>에서 <code class="highlighter-rouge">MediaStore</code>를 이용하여 이미지,비디오,오디오,다운로된 파일의 경로에 추가 하기 위해서는 아래의 코드 처럼 작성해야 합니다.</p>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ContentValues</span> <span class="n">contentValues</span><span class="p">=</span><span class="n">new</span> <span class="n">ContentValues</span><span class="p">()</span>
 <span class="n">contentValues</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="n">MediaStore</span><span class="p">.</span><span class="n">Images</span><span class="p">.</span><span class="n">Media</span><span class="p">.</span><span class="n">IS_PENDING</span><span class="p">,</span><span class="m">1</span><span class="p">)</span>   <span class="c1">// I/O는 오래 걸리니... 일단 PENDING 시켜놓고
@@ -335,21 +335,6 @@ into the {body} of the default.hbs template -->
 <span class="n">contentResolver</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="n">songContentUri</span><span class="p">,</span> <span class="n">songDetails</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="k">null</span><span class="p">)</span>
 </code></pre></div></div>
 
-<h3 id="혹시-이런게-되진-않을까-private-file--contentresolverinsert">혹시 이런게 되진 않을까? (private file + contentResolver.insert)</h3>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">val</span> <span class="n">privateDir</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="na">getDir</span><span class="o">(</span><span class="s">"tmp"</span><span class="o">,</span> <span class="n">Context</span><span class="o">.</span><span class="na">MODE_PRIVATE</span><span class="o">)</span>
-<span class="n">val</span> <span class="n">file</span> <span class="o">=</span> <span class="n">File</span><span class="o">(</span><span class="n">privateDir</span><span class="o">,</span> <span class="n">filename</span><span class="o">)</span>
-<span class="o">....</span>
-<span class="n">val</span> <span class="n">contentValues</span><span class="o">=</span><span class="n">ContentValues</span><span class="o">()</span>
-<span class="o">....</span>
-<span class="n">contentValues</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">MediaStore</span><span class="o">.</span><span class="na">Images</span><span class="o">.</span><span class="na">Media</span><span class="o">.</span><span class="na">DATA</span><span class="o">,</span><span class="n">file</span><span class="o">.</span><span class="na">absolutePath</span><span class="o">)</span>
-<span class="n">contentResolver</span><span class="o">.</span><span class="na">insert</span><span class="o">(</span><span class="n">MediaStore</span><span class="o">.</span><span class="na">Images</span><span class="o">.</span><span class="na">Media</span><span class="o">.</span><span class="na">EXTERNAL_CONTENT_URI</span><span class="o">,</span><span class="n">contentValues</span><span class="o">)</span>  
-</code></pre></div></div>
-
-<p><img src="assets/images/post/2021-02-01-android-11-R/capture_failure_02.png" alt="capture2" /></p>
-
-<p>호기심에 프라이빗영역에 파일 생성하고  조합으로 코드를 실행 시켜 보았습니다. 왠지 추가작업을 하면 private한파일을 external하게 공유가능하지 않을까?하는 호기심이 생겨서 이리저리 방법을 찾아봤지만, <strong>역시나 그런 방법은 없었습니다.</strong> 썸네일이 추가된 것은 단순히 DB에 row가 추가 된 것이였고 실제 파일에 연결되진 않았습니다. 권한에 의해 링크가 깨진 상태였었다고 생각 하면 될 것 같네요.</p>
-
 <h3 id="legacy-external-storage-유지">Legacy External Storage 유지</h3>
 
 <p>기본적으로 targetSdkVersion을 30으로 상향하게 되면 Api level 29에서 제공되었던 <a href="https://developer.android.com/training/data-storage/use-cases#opt-out-scoped-storage">requestLegacyExternalStorage</a> 가 무시됩니다. 하지만 이전 버전에서 획득한 WRITE_EXTERNAL_STORAGE을 “보존” 시켜주는 속성이 추가 되었습니다.</p>
@@ -370,6 +355,22 @@ into the {body} of the default.hbs template -->
 <span class="m">7</span><span class="p">.</span> <span class="m">6</span><span class="err">의</span> <span class="err">앱을</span> <span class="err">설치</span><span class="p">,</span> <span class="err">실행합니다</span><span class="p">.</span>
 <span class="m">8</span><span class="p">.</span> <span class="err">앱을</span> <span class="err">통해</span> <span class="err">파일을</span> <span class="err">업데이트</span><span class="p">,</span> <span class="err">추가가</span> <span class="err">잘</span> <span class="err">되는지</span> <span class="err">확인</span> <span class="err">합니다</span><span class="p">.</span> 
 </code></pre></div></div>
+
+<h3 id="혹시-이런게-되진-않을까-private-file--contentresolverinsert">혹시 이런게 되진 않을까? (private file + contentResolver.insert)</h3>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">val</span> <span class="n">privateDir</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="na">getDir</span><span class="o">(</span><span class="s">"tmp"</span><span class="o">,</span> <span class="n">Context</span><span class="o">.</span><span class="na">MODE_PRIVATE</span><span class="o">)</span>
+<span class="n">val</span> <span class="n">file</span> <span class="o">=</span> <span class="n">File</span><span class="o">(</span><span class="n">privateDir</span><span class="o">,</span> <span class="n">filename</span><span class="o">)</span>
+<span class="o">....</span>
+<span class="n">val</span> <span class="n">contentValues</span><span class="o">=</span><span class="n">ContentValues</span><span class="o">()</span>
+<span class="o">....</span>
+<span class="n">contentValues</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">MediaStore</span><span class="o">.</span><span class="na">Images</span><span class="o">.</span><span class="na">Media</span><span class="o">.</span><span class="na">DATA</span><span class="o">,</span><span class="n">file</span><span class="o">.</span><span class="na">absolutePath</span><span class="o">)</span>
+<span class="n">contentResolver</span><span class="o">.</span><span class="na">insert</span><span class="o">(</span><span class="n">MediaStore</span><span class="o">.</span><span class="na">Images</span><span class="o">.</span><span class="na">Media</span><span class="o">.</span><span class="na">EXTERNAL_CONTENT_URI</span><span class="o">,</span><span class="n">contentValues</span><span class="o">)</span>  
+</code></pre></div></div>
+
+<p><img src="assets/images/post/2021-02-01-android-11-R/capture_failure_02.png" alt="capture2" /></p>
+
+<p>호기심에 프라이빗영역에 파일 생성하고  조합으로 코드를 실행 시켜 보았습니다. 왠지 추가작업을 하면 private한파일을 external하게 공유가능하지 않을까?하는 호기심이 생겨서 이리저리 방법을 찾아봤지만, <strong>역시나 그런 방법은 없었습니다.</strong> 썸네일이 추가된 것은 단순히 DB에 row가 추가 된 것이였고 실제 파일에 연결되진 않았습니다. 권한에 의해 링크가 깨진 상태였었다고 생각 하면 될 것 같네요.</p>
+
 
                 </div>
             </section>
