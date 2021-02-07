@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/sdkversion30/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-07T09:37:55+09:00</updated>
+  <updated>2021-02-07T09:57:11+09:00</updated>
   <id>https://mond-al.github.io/tag/sdkversion30/feed.xml</id>
 
   
@@ -32,12 +32,12 @@
 
   
     <entry>
-      <title type="html">안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)</title>
-      <link href="https://mond-al.github.io/android-11-R-Storage" rel="alternate" type="text/html" title="안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)" />
+      <title type="html">Scoped Storage 적용하기</title>
+      <link href="https://mond-al.github.io/scoped-storage" rel="alternate" type="text/html" title="Scoped Storage 적용하기" />
       <published>2021-02-01T00:00:00+09:00</published>
       <updated>2021-02-01T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/android-11-R-Storage</id>
-      <content type="html" xml:base="https://mond-al.github.io/android-11-R-Storage">&lt;p&gt;Android 11(R)은 Android 6.0(M,Marshmallow)이후로 가장 큰 변화가 생긴 버전이 아닐까 합니다.&lt;/p&gt;
+      <id>https://mond-al.github.io/scoped-storage</id>
+      <content type="html" xml:base="https://mond-al.github.io/scoped-storage">&lt;p&gt;아마도 Scoped Storage를 강제하는 부분인 Android 11(R)에서 가장 큰 변화인 것 같습니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;scoped-storage-적용&quot;&gt;Scoped Storage 적용&lt;/h2&gt;
 
@@ -184,7 +184,26 @@
 
 &lt;p&gt;호기심에 프라이빗영역에 파일 생성하고  조합으로 코드를 실행 시켜 보았습니다. 왠지 추가작업을 하면 private한파일을 external하게 공유가능하지 않을까?하는 호기심이 생겨서 이리저리 방법을 찾아봤지만, &lt;strong&gt;역시나 그런 방법은 없었습니다.&lt;/strong&gt; 썸네일이 추가된 것은 단순히 DB에 row가 추가 된 것이였고 실제 파일에 연결되진 않았습니다. 권한에 의해 링크가 깨진 상태였었다고 생각 하면 될 것 같네요.&lt;/p&gt;
 
-&lt;h3 id=&quot;파일을-생성과-경로-정리&quot;&gt;파일을 생성과 경로 정리&lt;/h3&gt;</content>
+&lt;h3 id=&quot;legacy-external-storage-유지&quot;&gt;Legacy External Storage 유지&lt;/h3&gt;
+
+&lt;p&gt;기본적으로 targetSdkVersion을 30으로 상향하게 되면 Api level 29에서 제공되었던 &lt;a href=&quot;https://developer.android.com/training/data-storage/use-cases#opt-out-scoped-storage&quot;&gt;requestLegacyExternalStorage&lt;/a&gt; 가 무시됩니다. 하지만 이전 버전에서 획득한 WRITE_EXTERNAL_STORAGE을 “보존” 시켜주는 속성이 추가 되었습니다.&lt;/p&gt;
+
+&lt;p&gt;메니페스트 파일에 &lt;a href=&quot;https://developer.android.com/reference/android/R.attr#preserveLegacyExternalStorage&quot;&gt;preserveLegacyExternalStorage&lt;/a&gt; 속성을 true로 추가하여 Scoped Storage가 적용되기전에 생성한 파일들은 앱이 삭제되기전까지 계속 쓰기권한을 유지합니다. 하지만, requestLegacyExternalStorage와 달리 앱을 재설치하는 경우에는 무시됩니다.&lt;/p&gt;
+
+&lt;p&gt;주의할 점은 메니페이스트에서 WRITE_EXTERNAL_STORAGE를 제거하거나, WRITE_EXTERNAL_STORAGE를에 maxSdkVersion=28 같은 옵션을 추가하면 LegacyExternalStorage에 대한 권한을 유지 할 수 없습니다.&lt;/p&gt;
+
+&lt;p&gt;테스트 절차는 다음과 같습니다.&lt;/p&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Environment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getExternalStorageDirectory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;경로에&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;파일을&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;추가하는&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;앱준비합니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; 
+&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;compileSdkVersion&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;29&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;이하로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;빌드합니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;버전코드는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;입니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;  
+   &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;29&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;인&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;경우에는&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;메니페스트에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requestLegacyExternalStorage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;준비된&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;단말기에&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;의&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;앱을&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;설치&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;및&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;실행합니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;앱의&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;권한중&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WRITE_EXTERNAL_STORAGE&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;를&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;허용합니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;앱을&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;통해&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;파일을&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;생성합니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;m&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;동일한&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;앱의&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;빌드환경을&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;compileSdkVersion&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;는&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;으로&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;버전코드는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;변경후&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;다시&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;빌드합니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;  
+   &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WRITE_EXTERNAL_STORAGE&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;를&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;제거&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;해선&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;안됩니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.)&lt;/span&gt;
+&lt;span class=&quot;m&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;의&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;앱을&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;설치&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;실행합니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;m&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;앱을&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;통해&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;파일을&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;업데이트&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;추가가&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;잘&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;되는지&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;확인&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;합니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
 
       
       
@@ -209,7 +228,7 @@
       
 
       
-        <summary type="html">Android 11(R)은 Android 6.0(M,Marshmallow)이후로 가장 큰 변화가 생긴 버전이 아닐까 합니다.</summary>
+        <summary type="html">아마도 Scoped Storage를 강제하는 부분인 Android 11(R)에서 가장 큰 변화인 것 같습니다.</summary>
       
 
       

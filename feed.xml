@@ -1,4 +1,112 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://mond-al.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mond-al.github.io/" rel="alternate" type="text/html" /><updated>2021-02-07T09:37:55+09:00</updated><id>https://mond-al.github.io/</id><title type="html">Developer/App/Android/mond &amp;gt; Log</title><subtitle>안드로이드 개발 로깅.</subtitle><entry><title type="html">안드로이드 파일 쓰기</title><link href="https://mond-al.github.io/file-write" rel="alternate" type="text/html" title="안드로이드 파일 쓰기" /><published>2021-02-02T00:00:00+09:00</published><updated>2021-02-02T00:00:00+09:00</updated><id>https://mond-al.github.io/file-write</id><content type="html" xml:base="https://mond-al.github.io/file-write">&lt;p&gt;안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://mond-al.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mond-al.github.io/" rel="alternate" type="text/html" /><updated>2021-02-07T09:57:11+09:00</updated><id>https://mond-al.github.io/</id><title type="html">Developer/App/Android/mond &amp;gt; Log</title><subtitle>안드로이드 개발 로깅.</subtitle><entry><title type="html">안드로이드 파일 쓰기</title><link href="https://mond-al.github.io/file-write" rel="alternate" type="text/html" title="안드로이드 파일 쓰기" /><published>2021-02-02T00:00:00+09:00</published><updated>2021-02-02T00:00:00+09:00</updated><id>https://mond-al.github.io/file-write</id><content type="html" xml:base="https://mond-al.github.io/file-write">&lt;p&gt;안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;코드 아래 path를 정리해두었는데 path는 제조사,기종,OS버전등에 의해 따라 달라질 수 있습니다. 대략적인 형상에 대해 정리 해두는 자료로 이해하기 바랍니다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;용어정리&quot;&gt;용어정리&lt;/h2&gt;
+
+&lt;h3 id=&quot;device-storage저장소의-구분&quot;&gt;Device Storage(저장소)의 구분&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;language-tree&quot;&gt;A.Internal Storage : 내부 저장소  
+B.External Storage : 외부 저장소  
+   B1. Built in non-removable storage : 기본으로 제공되는 빌트인 저장소. 보통 내장메모리라고 표현.  
+   B2. SDcard : 디바이스 제조사, 모델에 따라 지원 할 수도 있는 SDcard    
+   B3. USB Storage : USB 단자를 통해 연결된 저장장치  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;기본적으로 내부 메모리 영역은 사용자가 직접 접근할 수 없는 영역이라고 생각 하면 됩니다. 평소 외부 저장소중에 B1을 내장 메모리로 지칭하기 때문에 용어혼란이 오기 쉽기 때문에 미리 정리하고 시작합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;external-storage-정책의-구분&quot;&gt;External Storage 정책의 구분&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Legacy External Storage 
+   : Scoped Storage가 적용되지않은 상태. targetSdkVersion이 28이하 이거나 단말이 Android 9이하. 
+- Scoped Storage
+   : Scoped Storage가 적용된 상태. targetSdkVersion이 29이상이고 단말이 Android 10이상.  
+     단, targetSdkVersion이 29인 경우 requestLegacyExternalStorage를 활성화 하지 않아야 함 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;cache-영역&quot;&gt;Cache 영역&lt;/h2&gt;
+
+&lt;p&gt;별도의 권한없이 파일을 생성,삭제 가능합니다. 다른 앱이나 사용자가 접근 할 수 없습니다. 추가 디스크 공간이 필요할 때 캐시 데이터의 총합이 할당된 크기를 초과한 경우 캐시영역의 파일이 삭제됩니다. sharedUserId 기능을 사용하는 경우 공유 UID의 모든 패키지에 대해 캐시 된 데이터가 함께 추적됩니다. 앱이 삭제되면 함께 삭제됩니다 .&lt;a href=&quot;&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;cacheFile&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cacheDir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;cache_file.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// &amp;gt; /data/user/0/*{applicationId}*/**cache**/cache_file.txt
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;externalCacheFile&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;externalCacheDir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ex_cache_file.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// &amp;gt; /storage/emulated/0/Android/data/{applicationId}/**cache**/ex_cache_file.txt
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;캐시-할당-크기-및-사용중인-크기&quot;&gt;캐시 할당 크기 및 사용중인 크기&lt;/h3&gt;
+&lt;p&gt;Api level 26(O)부터는 가용공간 관리를 위해 몇가지 함수들이 추가되었습니다. &lt;a href=&quot;https://developer.android.com/reference/android/os/storage/StorageManager#getCacheQuotaBytes(java.util.UUID)&quot;&gt;getCacheQuotaBytes&lt;/a&gt; 는 &lt;code class=&quot;highlighter-rouge&quot;&gt;캐시에 사용할 공간으로 할당된 용량&lt;/code&gt;을 반환하고 &lt;a href=&quot;https://developer.android.com/reference/android/os/storage/StorageManager#getCacheSizeBytes(java.util.UUID)&quot;&gt;getCacheSizeBytes&lt;/a&gt; 는 &lt;code class=&quot;highlighter-rouge&quot;&gt;사용중인 캐시파일의 전체 총합&lt;/code&gt;을 확인 할 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;StorageManager storageManager = (StorageManager) getSystemService(Context.
+val quotaByte = storageManager.getCacheQuotaBytes(storageManager.getUuidForPath(getCacheDir())) // 캐시에 사용할 공간으로 할당된 용량
+val cacheSize = storageManager.getCacheSizeBytes(uuidForPath) // 사용중인 캐시파일의 전체 총합
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;file-영역&quot;&gt;File 영역&lt;/h2&gt;
+
+&lt;p&gt;앱이 설치 되어있는 동안만 영속적(Persistence)으로 필요한 파일을 저장하는 영역입니다. 앱이 삭제되면 함께 삭제됩니다. 별도의 권한 없이 파일을 생성가능합니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// style #1
+&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;file1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fileDir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;file.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;outputStream&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;outputStream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// &amp;gt; /data/user/0/*{applicationId}*/**files**/file.txt
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// style #2
+&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;outputStream&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;openFileOutput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;file.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MODE_PRIVATE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// &amp;gt; /data/user/0/*{applicationId}*/**files**/file.txt
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;style #1&lt;/code&gt;과 &lt;code class=&quot;highlighter-rouge&quot;&gt;style #2&lt;/code&gt;의 결과로 얻어지는 FileOutputStream은 동일한 파일을 가르키고 있습니다. 하지만 개인적으로는 &lt;code class=&quot;highlighter-rouge&quot;&gt;openFileOutput&lt;/code&gt;메서드를 사용하면 &lt;code class=&quot;highlighter-rouge&quot;&gt;FileOutputStream&lt;/code&gt;에서 path를 얻을 수 없기 때문에 명시적으로 File 객체를 생성하여 사용하는 style #1을 주로 사용하고 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;externalFile&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getExternalFilesDir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Environment&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;file.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// &amp;gt; /storage/emulated/0/Android/data/**files**/*{Environment Type}*/file.txt
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;외부저장장치에 앱데이터를 저장할때 사용합니다. 공유저장 장치가 에뮬레이션 된 경우에는 Scoped Storage가 적용되지 않은 상태에서는 &lt;code class=&quot;highlighter-rouge&quot;&gt;WRITE_EXTERNAL_STORAGE&lt;/code&gt;권한만 있으면, 이 영역에 접근가능하기 때문에 보안에 취약하며 마운트 여부가 보장되지 않기 때문에 특별한 경우가 아니라면 추천하지않습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;공유-되는-외부저장소-영역&quot;&gt;공유 되는 외부저장소 영역&lt;/h2&gt;
+
+&lt;h3 id=&quot;legacy-external-storage&quot;&gt;Legacy External Storage&lt;/h3&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Environment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getExternalStorageDirectory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;file.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// &amp;gt; /storage/emulated/0/file.txt
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Legacy External Storage&lt;/code&gt;일때는 &lt;code class=&quot;highlighter-rouge&quot;&gt;WRITE_EXTERNAL_STORAGE&lt;/code&gt;권한이 있는경우 위와같이 외부저장소의 루트부터 대부분의 공간에 접근하고 쓰기가 가능했습니다. 그리고 필요한 경우 ContentProvider에 등록하여 활용합니다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Legacy External Storage 정책에서 공유되는 파일 작성 순서 &lt;br /&gt;
+Step 1. 쓰기 권한을 얻습니다.&lt;br /&gt;
+Step 2. 파일을 작성합니다.&lt;br /&gt;
+Step 3. 그리고 용도에 따라 명시적으로 ContentProvider에 등록합니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;scoped-storage&quot;&gt;Scoped Storage&lt;/h3&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Scoped Storage
+&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;resolver&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;applicationContext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;contentResolver&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;audioCollection&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MediaStore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Audio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Media&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getContentUri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;MediaStore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;VOLUME_EXTERNAL_PRIMARY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;newSongDetails&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ContentValues&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apply&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MediaStore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Audio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Media&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DISPLAY_NAME&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;My Song.mp3&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;myFavoriteSongUri&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resolver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;audioCollection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newSongDetails&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// &amp;gt; content://media/external/audio/media/{id}
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Scoped Storage&lt;/code&gt;가 적용되면 다른앱과 공유되는 파일은 모두 MediaStore를 이용하여 생성해야 합니다.&lt;/p&gt;
+
+&lt;p&gt;개인적으로 처음에 Scoped Storage를 접했을때 &lt;code class=&quot;highlighter-rouge&quot;&gt;MediaStore를 이용하여 생성해야 합니다&lt;/code&gt;라는 문맥때문에 혼란이 왔었는데요. MediaStore 클래스가 핵심인 것은 맞지만 구현의 관점에서는 아래처럼 읽으면 문맥이 더 이해가 쉬웠습니다. &lt;br /&gt;
+ContentResolver.insert는 MediaStore API와 ContentValues 객체를 인자로 받아 Uri를 생성합니다. ContentResolver.openXXXXX 메서드를 통해 FileOutputStream이나 ParcelFileDescriptor를 얻어서 파일을 쓰도록 합니다.&lt;/p&gt;
+
+&lt;p&gt;참고로 insert에서 반환하는 Uri는 Content Provider의 컨텐츠이기 때문에 &lt;code class=&quot;highlighter-rouge&quot;&gt;content://&lt;/code&gt;로 시작합니다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Scoped Storage 정책에서 공유되는 파일 작성 &lt;br /&gt;
+Step 1. ContentProvider에 파일에 대한 정보를 추가합니다. &lt;br /&gt;
+Step 2. Step 1에서 얻은 Uri를 통해 파일을 작성합니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;scoped-storage-자세히-들여다-보기&quot;&gt;&lt;a href=&quot;scoped-storage&quot;&gt;Scoped Storage 자세히 들여다 보기&lt;/a&gt;&lt;/h3&gt;</content><author><name>jisoo Yang</name></author><category term="android" /><category term="file" /><category term="write" /><summary type="html">안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다.</summary></entry><entry><title type="html">안드로이드 파일 생성</title><link href="https://mond-al.github.io/file-read" rel="alternate" type="text/html" title="안드로이드 파일 생성" /><published>2021-02-02T00:00:00+09:00</published><updated>2021-02-02T00:00:00+09:00</updated><id>https://mond-al.github.io/file-read</id><content type="html" xml:base="https://mond-al.github.io/file-read">&lt;p&gt;안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;코드 아래 path를 정리해두었는데 path는 제조사,기종,OS버전등에 의해 따라 달라질 수 있습니다. 대략적인 형상에 대해 정리 해두는 자료로 이해하기 바랍니다.&lt;/strong&gt;&lt;/p&gt;
 
@@ -125,134 +233,7 @@ Step 2. Step 1에서 얻은 Uri를 통해 파일을 작성합니다.&lt;/p&gt;
 &lt;span class=&quot;m&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;앱을&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;통해&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;파일을&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;업데이트&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;추가가&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;잘&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;되는지&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;확인&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;합니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;hr /&gt;</content><author><name>jisoo Yang</name></author><category term="android" /><category term="file" /><category term="write" /><summary type="html">안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다.</summary></entry><entry><title type="html">안드로이드 파일 생성</title><link href="https://mond-al.github.io/file-read" rel="alternate" type="text/html" title="안드로이드 파일 생성" /><published>2021-02-02T00:00:00+09:00</published><updated>2021-02-02T00:00:00+09:00</updated><id>https://mond-al.github.io/file-read</id><content type="html" xml:base="https://mond-al.github.io/file-read">&lt;p&gt;안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;코드 아래 path를 정리해두었는데 path는 제조사,기종,OS버전등에 의해 따라 달라질 수 있습니다. 대략적인 형상에 대해 정리 해두는 자료로 이해하기 바랍니다.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;용어정리&quot;&gt;용어정리&lt;/h2&gt;
-
-&lt;h3 id=&quot;device-storage저장소의-구분&quot;&gt;Device Storage(저장소)의 구분&lt;/h3&gt;
-&lt;pre&gt;&lt;code class=&quot;language-tree&quot;&gt;A.Internal Storage : 내부 저장소  
-B.External Storage : 외부 저장소  
-   B1. Built in non-removable storage : 기본으로 제공되는 빌트인 저장소. 보통 내장메모리라고 표현.  
-   B2. SDcard : 디바이스 제조사, 모델에 따라 지원 할 수도 있는 SDcard    
-   B3. USB Storage : USB 단자를 통해 연결된 저장장치  
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;기본적으로 내부 메모리 영역은 사용자가 직접 접근할 수 없는 영역이라고 생각 하면 됩니다. 평소 외부 저장소중에 B1을 내장 메모리로 지칭하기 때문에 용어혼란이 오기 쉽기 때문에 미리 정리하고 시작합니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;external-storage-정책의-구분&quot;&gt;External Storage 정책의 구분&lt;/h3&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Legacy External Storage 
-   : Scoped Storage가 적용되지않은 상태. targetSdkVersion이 28이하 이거나 단말이 Android 9이하. 
-- Scoped Storage
-   : Scoped Storage가 적용된 상태. targetSdkVersion이 29이상이고 단말이 Android 10이상.  
-     단, targetSdkVersion이 29인 경우 requestLegacyExternalStorage를 활성화 하지 않아야 함 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;cache-영역&quot;&gt;Cache 영역&lt;/h2&gt;
-
-&lt;p&gt;별도의 권한없이 파일을 생성,삭제 가능합니다. 다른 앱이나 사용자가 접근 할 수 없습니다. 추가 디스크 공간이 필요할 때 캐시 데이터의 총합이 할당된 크기를 초과한 경우 캐시영역의 파일이 삭제됩니다. sharedUserId 기능을 사용하는 경우 공유 UID의 모든 패키지에 대해 캐시 된 데이터가 함께 추적됩니다. 앱이 삭제되면 함께 삭제됩니다 .&lt;a href=&quot;&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;cacheFile&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cacheDir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;cache_file.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// &amp;gt; /data/user/0/*{applicationId}*/**cache**/cache_file.txt
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;externalCacheFile&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;externalCacheDir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ex_cache_file.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// &amp;gt; /storage/emulated/0/Android/data/{applicationId}/**cache**/ex_cache_file.txt
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;캐시-할당-크기-및-사용중인-크기&quot;&gt;캐시 할당 크기 및 사용중인 크기&lt;/h3&gt;
-&lt;p&gt;Api level 26(O)부터는 가용공간 관리를 위해 몇가지 함수들이 추가되었습니다. &lt;a href=&quot;https://developer.android.com/reference/android/os/storage/StorageManager#getCacheQuotaBytes(java.util.UUID)&quot;&gt;getCacheQuotaBytes&lt;/a&gt; 는 &lt;code class=&quot;highlighter-rouge&quot;&gt;캐시에 사용할 공간으로 할당된 용량&lt;/code&gt;을 반환하고 &lt;a href=&quot;https://developer.android.com/reference/android/os/storage/StorageManager#getCacheSizeBytes(java.util.UUID)&quot;&gt;getCacheSizeBytes&lt;/a&gt; 는 &lt;code class=&quot;highlighter-rouge&quot;&gt;사용중인 캐시파일의 전체 총합&lt;/code&gt;을 확인 할 수 있습니다.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;StorageManager storageManager = (StorageManager) getSystemService(Context.
-val quotaByte = storageManager.getCacheQuotaBytes(storageManager.getUuidForPath(getCacheDir())) // 캐시에 사용할 공간으로 할당된 용량
-val cacheSize = storageManager.getCacheSizeBytes(uuidForPath) // 사용중인 캐시파일의 전체 총합
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;file-영역&quot;&gt;File 영역&lt;/h2&gt;
-
-&lt;p&gt;앱이 설치 되어있는 동안만 영속적(Persistence)으로 필요한 파일을 저장하는 영역입니다. 앱이 삭제되면 함께 삭제됩니다. 별도의 권한 없이 파일을 생성가능합니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// style #1
-&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;file1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fileDir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;file.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;outputStream&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;outputStream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// &amp;gt; /data/user/0/*{applicationId}*/**files**/file.txt
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// style #2
-&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;outputStream&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;openFileOutput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;file.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MODE_PRIVATE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// &amp;gt; /data/user/0/*{applicationId}*/**files**/file.txt
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;style #1&lt;/code&gt;과 &lt;code class=&quot;highlighter-rouge&quot;&gt;style #2&lt;/code&gt;의 결과로 얻어지는 FileOutputStream은 동일한 파일을 가르키고 있습니다. 하지만 개인적으로는 &lt;code class=&quot;highlighter-rouge&quot;&gt;openFileOutput&lt;/code&gt;메서드를 사용하면 &lt;code class=&quot;highlighter-rouge&quot;&gt;FileOutputStream&lt;/code&gt;에서 path를 얻을 수 없기 때문에 명시적으로 File 객체를 생성하여 사용하는 style #1을 주로 사용하고 있습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;externalFile&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getExternalFilesDir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Environment&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;file.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// &amp;gt; /storage/emulated/0/Android/data/**files**/*{Environment Type}*/file.txt
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;외부저장장치에 앱데이터를 저장할때 사용합니다. 공유저장 장치가 에뮬레이션 된 경우에는 Scoped Storage가 적용되지 않은 상태에서는 &lt;code class=&quot;highlighter-rouge&quot;&gt;WRITE_EXTERNAL_STORAGE&lt;/code&gt;권한만 있으면, 이 영역에 접근가능하기 때문에 보안에 취약하며 마운트 여부가 보장되지 않기 때문에 특별한 경우가 아니라면 추천하지않습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;공유-되는-외부저장소-영역&quot;&gt;공유 되는 외부저장소 영역&lt;/h2&gt;
-
-&lt;h3 id=&quot;legacy-external-storage&quot;&gt;Legacy External Storage&lt;/h3&gt;
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Environment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getExternalStorageDirectory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;file.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// &amp;gt; /storage/emulated/0/file.txt
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Legacy External Storage&lt;/code&gt;일때는 &lt;code class=&quot;highlighter-rouge&quot;&gt;WRITE_EXTERNAL_STORAGE&lt;/code&gt;권한이 있는경우 위와같이 외부저장소의 루트부터 대부분의 공간에 접근하고 쓰기가 가능했습니다. 그리고 필요한 경우 ContentProvider에 등록하여 활용합니다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Legacy External Storage 정책에서 공유되는 파일 작성 순서 &lt;br /&gt;
-Step 1. 쓰기 권한을 얻습니다.&lt;br /&gt;
-Step 2. 파일을 작성합니다.&lt;br /&gt;
-Step 3. 그리고 용도에 따라 명시적으로 ContentProvider에 등록합니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;scoped-storage&quot;&gt;Scoped Storage&lt;/h3&gt;
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Scoped Storage
-&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;resolver&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;applicationContext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;contentResolver&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;audioCollection&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MediaStore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Audio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Media&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getContentUri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;MediaStore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;VOLUME_EXTERNAL_PRIMARY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;newSongDetails&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ContentValues&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apply&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MediaStore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Audio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Media&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DISPLAY_NAME&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;My Song.mp3&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;myFavoriteSongUri&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resolver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;audioCollection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newSongDetails&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// &amp;gt; content://media/external/audio/media/{id}
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Scoped Storage&lt;/code&gt;가 적용되면 다른앱과 공유되는 파일은 모두 MediaStore를 이용하여 생성해야 합니다.&lt;/p&gt;
-
-&lt;p&gt;개인적으로 처음에 Scoped Storage를 접했을때 &lt;code class=&quot;highlighter-rouge&quot;&gt;MediaStore를 이용하여 생성해야 합니다&lt;/code&gt;라는 문맥때문에 혼란이 왔었는데요. MediaStore 클래스가 핵심인 것은 맞지만 구현의 관점에서 아래처럼 읽으면 문맥이 더 이해가 쉬웠습니다. 
-ContentResolver.insert는 MediaStore API와 ContentValues 객체를 인자로 받아 Uri를 생성합니다. ContentResolver.openXXXXX 메서드를 통해 FileOutputStream이나 ParcelFileDescriptor를 얻어서 파일을 쓰도록 합니다.&lt;/p&gt;
-
-&lt;p&gt;참고로 insert에서 반환하는 Uri는 Content Provider의 컨텐츠이기 때문에 &lt;code class=&quot;highlighter-rouge&quot;&gt;content://&lt;/code&gt;로 시작합니다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Scoped Storage 정책에서 공유되는 파일 작성 &lt;br /&gt;
-Step 1. ContentProvider에 파일에 대한 정보를 추가합니다. &lt;br /&gt;
-Step 2. Step 1에서 얻은 Uri를 통해 파일을 작성합니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;legacyexternalstorage-유지&quot;&gt;LegacyExternalStorage 유지&lt;/h3&gt;
-
-&lt;p&gt;기본적으로 targetSdkVersion을 30으로 상향하게 되면 Api level 29에서 제공되었던 &lt;a href=&quot;https://developer.android.com/training/data-storage/use-cases#opt-out-scoped-storage&quot;&gt;requestLegacyExternalStorage&lt;/a&gt; 가 무시됩니다. 하지만 이전 버전에서 획득한 WRITE_EXTERNAL_STORAGE을 “유지” 시켜주는 속성이 추가 되었습니다.&lt;/p&gt;
-
-&lt;p&gt;메니페스트 파일에 &lt;a href=&quot;https://developer.android.com/reference/android/R.attr#preserveLegacyExternalStorage&quot;&gt;preserveLegacyExternalStorage&lt;/a&gt; 속성을 true로 추가하여 Scoped Storage가 적용되기전에 생성한 파일들은 앱이 삭제되기전까지 계속 쓰기권한을 유지합니다. 하지만, requestLegacyExternalStorage와 달리 앱을 재설치하는 경우에는 무시됩니다. 이 기능은 “유지”만 지원합니다.&lt;/p&gt;
-
-&lt;p&gt;주의할 점은 메니페이스트에서 WRITE_EXTERNAL_STORAGE를 제거하거나, WRITE_EXTERNAL_STORAGE를에 maxSdkVersion=28 같은 옵션을 추가하면 LegacyExternalStorage에 대한 권한을 유지 할 수 없습니다.&lt;/p&gt;
-
-&lt;p&gt;테스트 절차는 다음과 같습니다.&lt;/p&gt;
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Environment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getExternalStorageDirectory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;경로에&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;파일을&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;추가하는&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;앱준비합니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; 
-&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;compileSdkVersion&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;29&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;이하로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;빌드합니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;버전코드는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;입니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;  
-   &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;29&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;인&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;경우에는&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;메니페스트에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requestLegacyExternalStorage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;준비된&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;단말기에&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;의&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;앱을&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;설치&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;및&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;실행합니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
-&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;앱의&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;권한중&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WRITE_EXTERNAL_STORAGE&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;를&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;허용합니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
-&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;앱을&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;통해&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;파일을&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;생성합니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
-&lt;span class=&quot;m&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;동일한&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;앱의&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;빌드환경을&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;compileSdkVersion&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;는&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;으로&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;버전코드는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;변경후&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;다시&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;빌드합니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;  
-   &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WRITE_EXTERNAL_STORAGE&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;를&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;제거&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;해선&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;안됩니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.)&lt;/span&gt;
-&lt;span class=&quot;m&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;의&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;앱을&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;설치&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;실행합니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
-&lt;span class=&quot;m&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;앱을&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;통해&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;파일을&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;업데이트&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;추가가&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;잘&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;되는지&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;확인&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;합니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;</content><author><name>jisoo Yang</name></author><category term="android" /><category term="file" /><category term="path" /><summary type="html">안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다.</summary></entry><entry><title type="html">안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)</title><link href="https://mond-al.github.io/android-11-R-Storage" rel="alternate" type="text/html" title="안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)" /><published>2021-02-01T00:00:00+09:00</published><updated>2021-02-01T00:00:00+09:00</updated><id>https://mond-al.github.io/android-11-R-Storage</id><content type="html" xml:base="https://mond-al.github.io/android-11-R-Storage">&lt;p&gt;Android 11(R)은 Android 6.0(M,Marshmallow)이후로 가장 큰 변화가 생긴 버전이 아닐까 합니다.&lt;/p&gt;
+&lt;hr /&gt;</content><author><name>jisoo Yang</name></author><category term="android" /><category term="file" /><category term="path" /><summary type="html">안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다.</summary></entry><entry><title type="html">Scoped Storage 적용하기</title><link href="https://mond-al.github.io/scoped-storage" rel="alternate" type="text/html" title="Scoped Storage 적용하기" /><published>2021-02-01T00:00:00+09:00</published><updated>2021-02-01T00:00:00+09:00</updated><id>https://mond-al.github.io/scoped-storage</id><content type="html" xml:base="https://mond-al.github.io/scoped-storage">&lt;p&gt;아마도 Scoped Storage를 강제하는 부분인 Android 11(R)에서 가장 큰 변화인 것 같습니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;scoped-storage-적용&quot;&gt;Scoped Storage 적용&lt;/h2&gt;
 
@@ -399,7 +380,26 @@ Step 2. Step 1에서 얻은 Uri를 통해 파일을 작성합니다.&lt;/p&gt;
 
 &lt;p&gt;호기심에 프라이빗영역에 파일 생성하고  조합으로 코드를 실행 시켜 보았습니다. 왠지 추가작업을 하면 private한파일을 external하게 공유가능하지 않을까?하는 호기심이 생겨서 이리저리 방법을 찾아봤지만, &lt;strong&gt;역시나 그런 방법은 없었습니다.&lt;/strong&gt; 썸네일이 추가된 것은 단순히 DB에 row가 추가 된 것이였고 실제 파일에 연결되진 않았습니다. 권한에 의해 링크가 깨진 상태였었다고 생각 하면 될 것 같네요.&lt;/p&gt;
 
-&lt;h3 id=&quot;파일을-생성과-경로-정리&quot;&gt;파일을 생성과 경로 정리&lt;/h3&gt;</content><author><name>jisoo Yang</name></author><category term="android" /><category term="sdkversion30" /><category term="R" /><summary type="html">Android 11(R)은 Android 6.0(M,Marshmallow)이후로 가장 큰 변화가 생긴 버전이 아닐까 합니다.</summary></entry><entry><title type="html">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</title><link href="https://mond-al.github.io/error-log-android-11-api-changed" rel="alternate" type="text/html" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable" /><published>2021-01-30T00:00:00+09:00</published><updated>2021-01-30T00:00:00+09:00</updated><id>https://mond-al.github.io/error-log-android-11-api-changed</id><content type="html" xml:base="https://mond-al.github.io/error-log-android-11-api-changed">&lt;h3 id=&quot;where-did-the-problem-occur&quot;&gt;Where did the problem occur?&lt;/h3&gt;
+&lt;h3 id=&quot;legacy-external-storage-유지&quot;&gt;Legacy External Storage 유지&lt;/h3&gt;
+
+&lt;p&gt;기본적으로 targetSdkVersion을 30으로 상향하게 되면 Api level 29에서 제공되었던 &lt;a href=&quot;https://developer.android.com/training/data-storage/use-cases#opt-out-scoped-storage&quot;&gt;requestLegacyExternalStorage&lt;/a&gt; 가 무시됩니다. 하지만 이전 버전에서 획득한 WRITE_EXTERNAL_STORAGE을 “보존” 시켜주는 속성이 추가 되었습니다.&lt;/p&gt;
+
+&lt;p&gt;메니페스트 파일에 &lt;a href=&quot;https://developer.android.com/reference/android/R.attr#preserveLegacyExternalStorage&quot;&gt;preserveLegacyExternalStorage&lt;/a&gt; 속성을 true로 추가하여 Scoped Storage가 적용되기전에 생성한 파일들은 앱이 삭제되기전까지 계속 쓰기권한을 유지합니다. 하지만, requestLegacyExternalStorage와 달리 앱을 재설치하는 경우에는 무시됩니다.&lt;/p&gt;
+
+&lt;p&gt;주의할 점은 메니페이스트에서 WRITE_EXTERNAL_STORAGE를 제거하거나, WRITE_EXTERNAL_STORAGE를에 maxSdkVersion=28 같은 옵션을 추가하면 LegacyExternalStorage에 대한 권한을 유지 할 수 없습니다.&lt;/p&gt;
+
+&lt;p&gt;테스트 절차는 다음과 같습니다.&lt;/p&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Environment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getExternalStorageDirectory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;경로에&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;파일을&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;추가하는&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;앱준비합니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; 
+&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;compileSdkVersion&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;29&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;이하로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;빌드합니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;버전코드는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;입니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;  
+   &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;29&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;인&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;경우에는&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;메니페스트에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requestLegacyExternalStorage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;준비된&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;단말기에&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;의&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;앱을&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;설치&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;및&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;실행합니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;앱의&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;권한중&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WRITE_EXTERNAL_STORAGE&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;를&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;허용합니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;앱을&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;통해&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;파일을&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;생성합니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;m&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;동일한&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;앱의&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;빌드환경을&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;compileSdkVersion&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;는&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;으로&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;버전코드는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;변경후&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;다시&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;빌드합니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;  
+   &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WRITE_EXTERNAL_STORAGE&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;를&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;제거&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;해선&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;안됩니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.)&lt;/span&gt;
+&lt;span class=&quot;m&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;의&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;앱을&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;설치&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;실행합니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;m&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;앱을&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;통해&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;파일을&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;업데이트&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;추가가&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;잘&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;되는지&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;확인&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;합니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>jisoo Yang</name></author><category term="android" /><category term="sdkversion30" /><category term="R" /><summary type="html">아마도 Scoped Storage를 강제하는 부분인 Android 11(R)에서 가장 큰 변화인 것 같습니다.</summary></entry><entry><title type="html">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</title><link href="https://mond-al.github.io/error-log-android-11-api-changed" rel="alternate" type="text/html" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable" /><published>2021-01-30T00:00:00+09:00</published><updated>2021-01-30T00:00:00+09:00</updated><id>https://mond-al.github.io/error-log-android-11-api-changed</id><content type="html" xml:base="https://mond-al.github.io/error-log-android-11-api-changed">&lt;h3 id=&quot;where-did-the-problem-occur&quot;&gt;Where did the problem occur?&lt;/h3&gt;
 &lt;h2 id=&quot;case-a&quot;&gt;case A&lt;/h2&gt;
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ExceptionInInitializerError&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;okhttp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;internal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;platform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Platform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Platform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;85&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;

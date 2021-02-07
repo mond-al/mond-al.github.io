@@ -35,15 +35,15 @@
     
       
       <item>
-        <title>안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)</title>
+        <title>Scoped Storage 적용하기</title>
         
-          <description>&lt;p&gt;Android 11(R)은 Android 6.0(M,Marshmallow)이후로 가장 큰 변화가 생긴 버전이 아닐까 합니다.&lt;/p&gt;
+          <description>&lt;p&gt;아마도 Scoped Storage를 강제하는 부분인 Android 11(R)에서 가장 큰 변화인 것 같습니다.&lt;/p&gt;
 
 </description>
         
         <pubDate>Mon, 01 Feb 2021 00:00:00 +0900</pubDate>
-        <link>https://mond-al.github.io//android-11-R-Storage</link>
-        <guid isPermaLink="true">https://mond-al.github.io/android-11-R-Storage</guid>
+        <link>https://mond-al.github.io//scoped-storage</link>
+        <guid isPermaLink="true">https://mond-al.github.io/scoped-storage</guid>
       </item>
       
     

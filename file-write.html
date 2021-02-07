@@ -298,7 +298,7 @@ Step 3. 그리고 용도에 따라 명시적으로 ContentProvider에 등록합�
 </span></code></pre></div></div>
 <p><code class="highlighter-rouge">Scoped Storage</code>가 적용되면 다른앱과 공유되는 파일은 모두 MediaStore를 이용하여 생성해야 합니다.</p>
 
-<p>개인적으로 처음에 Scoped Storage를 접했을때 <code class="highlighter-rouge">MediaStore를 이용하여 생성해야 합니다</code>라는 문맥때문에 혼란이 왔었는데요. MediaStore 클래스가 핵심인 것은 맞지만 구현의 관점에서 아래처럼 읽으면 문맥이 더 이해가 쉬웠습니다. 
+<p>개인적으로 처음에 Scoped Storage를 접했을때 <code class="highlighter-rouge">MediaStore를 이용하여 생성해야 합니다</code>라는 문맥때문에 혼란이 왔었는데요. MediaStore 클래스가 핵심인 것은 맞지만 구현의 관점에서는 아래처럼 읽으면 문맥이 더 이해가 쉬웠습니다. <br />
 ContentResolver.insert는 MediaStore API와 ContentValues 객체를 인자로 받아 Uri를 생성합니다. ContentResolver.openXXXXX 메서드를 통해 FileOutputStream이나 ParcelFileDescriptor를 얻어서 파일을 쓰도록 합니다.</p>
 
 <p>참고로 insert에서 반환하는 Uri는 Content Provider의 컨텐츠이기 때문에 <code class="highlighter-rouge">content://</code>로 시작합니다.</p>
@@ -309,28 +309,9 @@ Step 1. ContentProvider에 파일에 대한 정보를 추가합니다. <br />
 Step 2. Step 1에서 얻은 Uri를 통해 파일을 작성합니다.</p>
 </blockquote>
 
-<h3 id="legacyexternalstorage-유지">LegacyExternalStorage 유지</h3>
-
-<p>기본적으로 targetSdkVersion을 30으로 상향하게 되면 Api level 29에서 제공되었던 <a href="https://developer.android.com/training/data-storage/use-cases#opt-out-scoped-storage">requestLegacyExternalStorage</a> 가 무시됩니다. 하지만 이전 버전에서 획득한 WRITE_EXTERNAL_STORAGE을 “유지” 시켜주는 속성이 추가 되었습니다.</p>
-
-<p>메니페스트 파일에 <a href="https://developer.android.com/reference/android/R.attr#preserveLegacyExternalStorage">preserveLegacyExternalStorage</a> 속성을 true로 추가하여 Scoped Storage가 적용되기전에 생성한 파일들은 앱이 삭제되기전까지 계속 쓰기권한을 유지합니다. 하지만, requestLegacyExternalStorage와 달리 앱을 재설치하는 경우에는 무시됩니다. 이 기능은 “유지”만 지원합니다.</p>
-
-<p>주의할 점은 메니페이스트에서 WRITE_EXTERNAL_STORAGE를 제거하거나, WRITE_EXTERNAL_STORAGE를에 maxSdkVersion=28 같은 옵션을 추가하면 LegacyExternalStorage에 대한 권한을 유지 할 수 없습니다.</p>
-
-<p>테스트 절차는 다음과 같습니다.</p>
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="m">1</span><span class="p">.</span> <span class="n">Environment</span><span class="p">.</span><span class="n">getExternalStorageDirectory</span><span class="p">()</span><span class="err">경로에</span> <span class="err">파일을</span> <span class="err">추가하는</span> <span class="err">앱준비합니다</span><span class="p">.</span> 
-<span class="m">2</span><span class="p">.</span> <span class="n">target</span><span class="p">/</span><span class="n">compileSdkVersion</span> <span class="m">29</span><span class="err">이하로</span> <span class="err">빌드합니다</span><span class="p">.</span> <span class="err">버전코드는</span> <span class="n">X</span><span class="err">입니다</span><span class="p">.</span>  
-   <span class="p">(</span><span class="m">29</span><span class="err">인</span> <span class="err">경우에는</span> <span class="err">메니페스트에</span> <span class="n">requestLegacyExternalStorage</span><span class="p">=</span><span class="k">true</span><span class="p">)</span>
-<span class="m">3</span><span class="p">.</span> <span class="err">준비된</span> <span class="err">단말기에</span> <span class="m">2</span><span class="err">의</span> <span class="err">앱을</span> <span class="err">설치</span> <span class="err">및</span> <span class="err">실행합니다</span><span class="p">.</span>
-<span class="m">4</span><span class="p">.</span> <span class="err">앱의</span> <span class="err">권한중</span> <span class="n">WRITE_EXTERNAL_STORAGE</span><span class="err">를</span> <span class="err">허용합니다</span><span class="p">.</span>
-<span class="m">5</span><span class="p">.</span> <span class="err">앱을</span> <span class="err">통해</span> <span class="err">파일을</span> <span class="err">생성합니다</span><span class="p">.</span>
-<span class="m">6</span><span class="p">.</span> <span class="err">동일한</span> <span class="err">앱의</span> <span class="err">빌드환경을</span> <span class="n">target</span><span class="p">/</span><span class="n">compileSdkVersion</span><span class="err">는</span> <span class="m">30</span><span class="err">으로</span><span class="p">,</span> <span class="err">버전코드는</span> <span class="n">X</span><span class="p">+</span><span class="err">로</span> <span class="err">변경후</span> <span class="err">다시</span> <span class="err">빌드합니다</span><span class="p">.</span>  
-   <span class="p">(</span><span class="n">WRITE_EXTERNAL_STORAGE</span><span class="err">를</span> <span class="err">제거</span> <span class="err">해선</span> <span class="err">안됩니다</span><span class="p">.)</span>
-<span class="m">7</span><span class="p">.</span> <span class="m">6</span><span class="err">의</span> <span class="err">앱을</span> <span class="err">설치</span><span class="p">,</span> <span class="err">실행합니다</span><span class="p">.</span>
-<span class="m">8</span><span class="p">.</span> <span class="err">앱을</span> <span class="err">통해</span> <span class="err">파일을</span> <span class="err">업데이트</span><span class="p">,</span> <span class="err">추가가</span> <span class="err">잘</span> <span class="err">되는지</span> <span class="err">확인</span> <span class="err">합니다</span><span class="p">.</span> 
-</code></pre></div></div>
-
 <hr />
+
+<h3 id="scoped-storage-자세히-들여다-보기"><a href="scoped-storage">Scoped Storage 자세히 들여다 보기</a></h3>
 
 
                 </div>
@@ -433,7 +414,7 @@ Step 2. Step 1에서 얻은 Uri를 통해 파일을 작성합니다.</p>
                                     
                                         
                                         
-                                            <li><a href="/android-11-R-Storage">안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)</a></li>
+                                            <li><a href="/scoped-storage">Scoped Storage 적용하기</a></li>
                                         
                                     
                                   
