@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>안드로이드 파일 쓰기</title>
+        
+          <description>&lt;p&gt;안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 02 Feb 2021 00:00:00 +0900</pubDate>
+        <link>
+        https://mond-al.github.io/file-write</link>
+        <guid isPermaLink="true">https://mond-al.github.io/file-write</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>안드로이드 파일 생성</title>
         
           <description>&lt;p&gt;안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다.&lt;/p&gt;
@@ -16,8 +31,8 @@
         
         <pubDate>Tue, 02 Feb 2021 00:00:00 +0900</pubDate>
         <link>
-        https://mond-al.github.io/file-control</link>
-        <guid isPermaLink="true">https://mond-al.github.io/file-control</guid>
+        https://mond-al.github.io/file-read</link>
+        <guid isPermaLink="true">https://mond-al.github.io/file-read</guid>
       </item>
       
     

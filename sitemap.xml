@@ -2,7 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
-        <loc>https://mond-al.github.io/file-control</loc>
+        <loc>https://mond-al.github.io/file-write</loc>
+    </url>
+    
+    <url>
+        <loc>https://mond-al.github.io/file-read</loc>
     </url>
     
     <url>
@@ -257,6 +261,16 @@
     
     <url>
         <loc>https://mond-al.github.io/tag/path/</loc>
+    </url>
+    
+    
+    
+    
+    
+    
+    
+    <url>
+        <loc>https://mond-al.github.io/tag/write/</loc>
     </url>
     
     

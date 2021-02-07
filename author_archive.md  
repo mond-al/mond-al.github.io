@@ -185,7 +185,7 @@ into the {body} of the default.hbs template -->
   	<li><a href="#R" class="tag"><span class="term alltags">R</span> <span class="count alltags">1</span></a></li>
   
     
-  	<li><a href="#android" class="tag"><span class="term alltags">android</span> <span class="count alltags">6</span></a></li>
+  	<li><a href="#android" class="tag"><span class="term alltags">android</span> <span class="count alltags">7</span></a></li>
   
     
   	<li><a href="#dependency" class="tag"><span class="term alltags">dependency</span> <span class="count alltags">1</span></a></li>
@@ -200,7 +200,7 @@ into the {body} of the default.hbs template -->
   	<li><a href="#fastscroller" class="tag"><span class="term alltags">fastscroller</span> <span class="count alltags">1</span></a></li>
   
     
-  	<li><a href="#file" class="tag"><span class="term alltags">file</span> <span class="count alltags">1</span></a></li>
+  	<li><a href="#file" class="tag"><span class="term alltags">file</span> <span class="count alltags">2</span></a></li>
   
     
   	<li><a href="#gradle" class="tag"><span class="term alltags">gradle</span> <span class="count alltags">2</span></a></li>
@@ -228,6 +228,9 @@ into the {body} of the default.hbs template -->
   
     
   	<li><a href="#u" class="tag"><span class="term alltags">u</span> <span class="count alltags">1</span></a></li>
+  
+    
+  	<li><a href="#write" class="tag"><span class="term alltags">write</span> <span class="count alltags">1</span></a></li>
   
 </ul>
 
@@ -270,8 +273,11 @@ into the {body} of the default.hbs template -->
 	<h2 id="android" class="tag-heading">ANDROID</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/file-control" target="_blank" title="안드로이드 파일 생성">안드로이드 파일 생성</a></li> -->
-      <li class="entry-title"><a href="/file-control" target="_blank" title="안드로이드 파일 생성">안드로이드 파일 생성</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/file-write" target="_blank" title="안드로이드 파일 쓰기">안드로이드 파일 쓰기</a></li> -->
+      <li class="entry-title"><a href="/file-write" target="_blank" title="안드로이드 파일 쓰기">안드로이드 파일 쓰기</a></li>
+    
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/file-read" target="_blank" title="안드로이드 파일 생성">안드로이드 파일 생성</a></li> -->
+      <li class="entry-title"><a href="/file-read" target="_blank" title="안드로이드 파일 생성">안드로이드 파일 생성</a></li>
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/android-11-R-Storage" target="_blank" title="안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)">안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)</a></li> -->
       <li class="entry-title"><a href="/android-11-R-Storage" target="_blank" title="안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)">안드로이드 targetSdkVersion 30으로 올리기(Scoped Storage)</a></li>
@@ -340,8 +346,11 @@ into the {body} of the default.hbs template -->
 	<h2 id="file" class="tag-heading">FILE</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/file-control" target="_blank" title="안드로이드 파일 생성">안드로이드 파일 생성</a></li> -->
-      <li class="entry-title"><a href="/file-control" target="_blank" title="안드로이드 파일 생성">안드로이드 파일 생성</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/file-write" target="_blank" title="안드로이드 파일 쓰기">안드로이드 파일 쓰기</a></li> -->
+      <li class="entry-title"><a href="/file-write" target="_blank" title="안드로이드 파일 쓰기">안드로이드 파일 쓰기</a></li>
+    
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/file-read" target="_blank" title="안드로이드 파일 생성">안드로이드 파일 생성</a></li> -->
+      <li class="entry-title"><a href="/file-read" target="_blank" title="안드로이드 파일 생성">안드로이드 파일 생성</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -387,8 +396,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="path" class="tag-heading">PATH</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/file-control" target="_blank" title="안드로이드 파일 생성">안드로이드 파일 생성</a></li> -->
-      <li class="entry-title"><a href="/file-control" target="_blank" title="안드로이드 파일 생성">안드로이드 파일 생성</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/file-read" target="_blank" title="안드로이드 파일 생성">안드로이드 파일 생성</a></li> -->
+      <li class="entry-title"><a href="/file-read" target="_blank" title="안드로이드 파일 생성">안드로이드 파일 생성</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -444,6 +453,17 @@ into the {body} of the default.hbs template -->
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/about-reboot" target="_blank" title="reboot">reboot</a></li> -->
       <li class="entry-title"><a href="/about-reboot" target="_blank" title="reboot">reboot</a></li>
+    
+		</ul>
+	</article><!-- /.hentry -->
+
+  
+	<article>
+	<h2 id="write" class="tag-heading">WRITE</h2>
+		<ul>
+    
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/file-write" target="_blank" title="안드로이드 파일 쓰기">안드로이드 파일 쓰기</a></li> -->
+      <li class="entry-title"><a href="/file-write" target="_blank" title="안드로이드 파일 쓰기">안드로이드 파일 쓰기</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
