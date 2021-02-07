@@ -356,21 +356,6 @@ into the {body} of the default.hbs template -->
 <span class="m">8</span><span class="p">.</span> <span class="err">앱을</span> <span class="err">통해</span> <span class="err">파일을</span> <span class="err">업데이트</span><span class="p">,</span> <span class="err">추가가</span> <span class="err">잘</span> <span class="err">되는지</span> <span class="err">확인</span> <span class="err">합니다</span><span class="p">.</span> 
 </code></pre></div></div>
 
-<h3 id="혹시-이런게-되진-않을까-private-file--contentresolverinsert">혹시 이런게 되진 않을까? (private file + contentResolver.insert)</h3>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">val</span> <span class="n">privateDir</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="na">getDir</span><span class="o">(</span><span class="s">"tmp"</span><span class="o">,</span> <span class="n">Context</span><span class="o">.</span><span class="na">MODE_PRIVATE</span><span class="o">)</span>
-<span class="n">val</span> <span class="n">file</span> <span class="o">=</span> <span class="n">File</span><span class="o">(</span><span class="n">privateDir</span><span class="o">,</span> <span class="n">filename</span><span class="o">)</span>
-<span class="o">....</span>
-<span class="n">val</span> <span class="n">contentValues</span><span class="o">=</span><span class="n">ContentValues</span><span class="o">()</span>
-<span class="o">....</span>
-<span class="n">contentValues</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">MediaStore</span><span class="o">.</span><span class="na">Images</span><span class="o">.</span><span class="na">Media</span><span class="o">.</span><span class="na">DATA</span><span class="o">,</span><span class="n">file</span><span class="o">.</span><span class="na">absolutePath</span><span class="o">)</span>
-<span class="n">contentResolver</span><span class="o">.</span><span class="na">insert</span><span class="o">(</span><span class="n">MediaStore</span><span class="o">.</span><span class="na">Images</span><span class="o">.</span><span class="na">Media</span><span class="o">.</span><span class="na">EXTERNAL_CONTENT_URI</span><span class="o">,</span><span class="n">contentValues</span><span class="o">)</span>  
-</code></pre></div></div>
-
-<p><img src="assets/images/post/2021-02-01-android-11-R/capture_failure_02.png" alt="capture2" /></p>
-
-<p>호기심에 프라이빗영역에 파일 생성하고  조합으로 코드를 실행 시켜 보았습니다. 왠지 추가작업을 하면 private한파일을 external하게 공유가능하지 않을까?하는 호기심이 생겨서 이리저리 방법을 찾아봤지만, <strong>역시나 그런 방법은 없었습니다.</strong> 썸네일이 추가된 것은 단순히 DB에 row가 추가 된 것이였고 실제 파일에 연결되진 않았습니다. 권한에 의해 링크가 깨진 상태였었다고 생각 하면 될 것 같네요.</p>
-
 
                 </div>
             </section>

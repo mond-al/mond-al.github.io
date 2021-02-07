@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/write/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-07T10:10:13+09:00</updated>
+  <updated>2021-02-07T12:26:53+09:00</updated>
   <id>https://mond-al.github.io/tag/write/feed.xml</id>
 
   
@@ -50,7 +50,7 @@ B.External Storage : 외부 저장소
    B2. SDcard : 디바이스 제조사, 모델에 따라 지원 할 수도 있는 SDcard    
    B3. USB Storage : USB 단자를 통해 연결된 저장장치  
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;기본적으로 내부 메모리 영역은 사용자가 직접 접근할 수 없는 영역이라고 생각 하면 됩니다. 평소 외부 저장소중에 B1을 내장 메모리로 지칭하기 때문에 용어혼란이 오기 쉽기 때문에 미리 정리하고 시작합니다.&lt;/p&gt;
+&lt;p&gt;기본적으로 내부 메모리 영역은 사용자가 직접 접근할 수 없는 영역이라고 생각 하면 됩니다. 보통의 경우 &lt;code class=&quot;highlighter-rouge&quot;&gt;외부저장소는 B1&lt;/code&gt;을 지칭합니다.&lt;/p&gt;
 
 &lt;h3 id=&quot;external-storage-정책의-구분&quot;&gt;External Storage 정책의 구분&lt;/h3&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Legacy External Storage 
@@ -66,13 +66,17 @@ B.External Storage : 외부 저장소
 
 &lt;p&gt;별도의 권한없이 파일을 생성,삭제 가능합니다. 다른 앱이나 사용자가 접근 할 수 없습니다. 추가 디스크 공간이 필요할 때 캐시 데이터의 총합이 할당된 크기를 초과한 경우 캐시영역의 파일이 삭제됩니다. sharedUserId 기능을 사용하는 경우 공유 UID의 모든 패키지에 대해 캐시 된 데이터가 함께 추적됩니다. 앱이 삭제되면 함께 삭제됩니다 .&lt;a href=&quot;&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
 
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;cacheFile&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cacheDir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;cache_file.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// &amp;gt; /data/user/0/*{applicationId}*/**cache**/cache_file.txt
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// 내부 저장소
+&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;cacheFile&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cacheDir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;cache_file.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// &amp;gt; /data/user/0/*{applicationId}*/**cache**/cache_file.txt  #A
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;externalCacheFile&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;externalCacheDir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ex_cache_file.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// &amp;gt; /storage/emulated/0/Android/data/{applicationId}/**cache**/ex_cache_file.txt
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// 외부 저장소
+&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;externalCacheFile&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;externalCacheDir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ex_cache_file.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// &amp;gt; /storage/emulated/0/Android/data/{applicationId}/**cache**/ex_cache_file.txt  #B1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;cache에 사용되는 데이터도&lt;/p&gt;
 
 &lt;h3 id=&quot;캐시-할당-크기-및-사용중인-크기&quot;&gt;캐시 할당 크기 및 사용중인 크기&lt;/h3&gt;
 &lt;p&gt;Api level 26(O)부터는 가용공간 관리를 위해 몇가지 함수들이 추가되었습니다. &lt;a href=&quot;https://developer.android.com/reference/android/os/storage/StorageManager#getCacheQuotaBytes(java.util.UUID)&quot;&gt;getCacheQuotaBytes&lt;/a&gt; 는 &lt;code class=&quot;highlighter-rouge&quot;&gt;캐시에 사용할 공간으로 할당된 용량&lt;/code&gt;을 반환하고 &lt;a href=&quot;https://developer.android.com/reference/android/os/storage/StorageManager#getCacheSizeBytes(java.util.UUID)&quot;&gt;getCacheSizeBytes&lt;/a&gt; 는 &lt;code class=&quot;highlighter-rouge&quot;&gt;사용중인 캐시파일의 전체 총합&lt;/code&gt;을 확인 할 수 있습니다.&lt;/p&gt;
@@ -89,26 +93,26 @@ val cacheSize = storageManager.getCacheSizeBytes(uuidForPath) // 사용중인 �
 &lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// style #1
 &lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;file1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fileDir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;file.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;outputStream&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;outputStream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// &amp;gt; /data/user/0/*{applicationId}*/**files**/file.txt
+&lt;span class=&quot;c1&quot;&gt;// &amp;gt; /data/user/0/*{applicationId}*/**files**/file.txt  #A
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// style #2
 &lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;outputStream&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;openFileOutput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;file.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MODE_PRIVATE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// &amp;gt; /data/user/0/*{applicationId}*/**files**/file.txt
+&lt;span class=&quot;c1&quot;&gt;// &amp;gt; /data/user/0/*{applicationId}*/**files**/file.txt  #A
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;style #1&lt;/code&gt;과 &lt;code class=&quot;highlighter-rouge&quot;&gt;style #2&lt;/code&gt;의 결과로 얻어지는 FileOutputStream은 동일한 파일을 가르키고 있습니다. 하지만 개인적으로는 &lt;code class=&quot;highlighter-rouge&quot;&gt;openFileOutput&lt;/code&gt;메서드를 사용하면 &lt;code class=&quot;highlighter-rouge&quot;&gt;FileOutputStream&lt;/code&gt;에서 path를 얻을 수 없기 때문에 명시적으로 File 객체를 생성하여 사용하는 style #1을 주로 사용하고 있습니다.&lt;/p&gt;
 
 &lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;externalFile&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getExternalFilesDir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Environment&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;file.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// &amp;gt; /storage/emulated/0/Android/data/**files**/*{Environment Type}*/file.txt
+&lt;span class=&quot;c1&quot;&gt;// &amp;gt; /storage/emulated/0/Android/data/**files**/*{Environment Type}*/file.txt #B1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;외부저장장치에 앱데이터를 저장할때 사용합니다. 공유저장 장치가 에뮬레이션 된 경우에는 Scoped Storage가 적용되지 않은 상태에서는 &lt;code class=&quot;highlighter-rouge&quot;&gt;WRITE_EXTERNAL_STORAGE&lt;/code&gt;권한만 있으면, 이 영역에 접근가능하기 때문에 보안에 취약하며 마운트 여부가 보장되지 않기 때문에 특별한 경우가 아니라면 추천하지않습니다.&lt;/p&gt;
+&lt;p&gt;외부저장소에 앱데이터를 저장할때 사용합니다. 공유저장 장치가 에뮬레이션 된 경우에는 Scoped Storage가 적용되지 않은 상태에서는 &lt;code class=&quot;highlighter-rouge&quot;&gt;WRITE_EXTERNAL_STORAGE&lt;/code&gt;권한만 있으면, 이 영역에 접근가능하기 때문에 보안에 취약합니다. 또한 사용자가 파일브라우져를 통해 삭제 할 수 있습니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;공유-되는-외부저장소-영역&quot;&gt;공유 되는 외부저장소 영역&lt;/h2&gt;
 
 &lt;h3 id=&quot;legacy-external-storage&quot;&gt;Legacy External Storage&lt;/h3&gt;
 &lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Environment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getExternalStorageDirectory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;file.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// &amp;gt; /storage/emulated/0/file.txt
+&lt;span class=&quot;c1&quot;&gt;// &amp;gt; /storage/emulated/0/file.txt #B1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Legacy External Storage&lt;/code&gt;일때는 &lt;code class=&quot;highlighter-rouge&quot;&gt;WRITE_EXTERNAL_STORAGE&lt;/code&gt;권한이 있는경우 위와같이 외부저장소의 루트부터 대부분의 공간에 접근하고 쓰기가 가능했습니다. 그리고 필요한 경우 ContentProvider에 등록하여 활용합니다.&lt;/p&gt;
 

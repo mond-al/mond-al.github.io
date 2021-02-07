@@ -216,7 +216,7 @@ B.External Storage : 외부 저장소
    B2. SDcard : 디바이스 제조사, 모델에 따라 지원 할 수도 있는 SDcard    
    B3. USB Storage : USB 단자를 통해 연결된 저장장치  
 </code></pre>
-<p>기본적으로 내부 메모리 영역은 사용자가 직접 접근할 수 없는 영역이라고 생각 하면 됩니다. 평소 외부 저장소중에 B1을 내장 메모리로 지칭하기 때문에 용어혼란이 오기 쉽기 때문에 미리 정리하고 시작합니다.</p>
+<p>기본적으로 내부 메모리 영역은 사용자가 직접 접근할 수 없는 영역이라고 생각 하면 됩니다. 보통의 경우 <code class="highlighter-rouge">외부저장소는 B1</code>을 지칭합니다.</p>
 
 <h3 id="external-storage-정책의-구분">External Storage 정책의 구분</h3>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Legacy External Storage 
@@ -232,13 +232,17 @@ B.External Storage : 외부 저장소
 
 <p>별도의 권한없이 파일을 생성,삭제 가능합니다. 다른 앱이나 사용자가 접근 할 수 없습니다. 추가 디스크 공간이 필요할 때 캐시 데이터의 총합이 할당된 크기를 초과한 경우 캐시영역의 파일이 삭제됩니다. sharedUserId 기능을 사용하는 경우 공유 UID의 모든 패키지에 대해 캐시 된 데이터가 함께 추적됩니다. 앱이 삭제되면 함께 삭제됩니다 .<a href="">link</a></p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">cacheFile</span> <span class="p">=</span> <span class="n">File</span><span class="p">(</span><span class="n">context</span><span class="p">.</span><span class="n">cacheDir</span><span class="p">,</span> <span class="s">"cache_file.txt"</span><span class="p">)</span>
-<span class="c1">// &gt; /data/user/0/*{applicationId}*/**cache**/cache_file.txt
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 내부 저장소
+</span><span class="kd">val</span> <span class="py">cacheFile</span> <span class="p">=</span> <span class="n">File</span><span class="p">(</span><span class="n">context</span><span class="p">.</span><span class="n">cacheDir</span><span class="p">,</span> <span class="s">"cache_file.txt"</span><span class="p">)</span>
+<span class="c1">// &gt; /data/user/0/*{applicationId}*/**cache**/cache_file.txt  #A
 </span></code></pre></div></div>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">externalCacheFile</span> <span class="p">=</span> <span class="n">File</span><span class="p">(</span><span class="n">context</span><span class="p">.</span><span class="n">externalCacheDir</span><span class="p">,</span> <span class="s">"ex_cache_file.txt"</span><span class="p">)</span>
-<span class="c1">// &gt; /storage/emulated/0/Android/data/{applicationId}/**cache**/ex_cache_file.txt
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 외부 저장소
+</span><span class="kd">val</span> <span class="py">externalCacheFile</span> <span class="p">=</span> <span class="n">File</span><span class="p">(</span><span class="n">context</span><span class="p">.</span><span class="n">externalCacheDir</span><span class="p">,</span> <span class="s">"ex_cache_file.txt"</span><span class="p">)</span>
+<span class="c1">// &gt; /storage/emulated/0/Android/data/{applicationId}/**cache**/ex_cache_file.txt  #B1
 </span></code></pre></div></div>
+
+<p>cache에 사용되는 데이터도</p>
 
 <h3 id="캐시-할당-크기-및-사용중인-크기">캐시 할당 크기 및 사용중인 크기</h3>
 <p>Api level 26(O)부터는 가용공간 관리를 위해 몇가지 함수들이 추가되었습니다. <a href="https://developer.android.com/reference/android/os/storage/StorageManager#getCacheQuotaBytes(java.util.UUID)">getCacheQuotaBytes</a> 는 <code class="highlighter-rouge">캐시에 사용할 공간으로 할당된 용량</code>을 반환하고 <a href="https://developer.android.com/reference/android/os/storage/StorageManager#getCacheSizeBytes(java.util.UUID)">getCacheSizeBytes</a> 는 <code class="highlighter-rouge">사용중인 캐시파일의 전체 총합</code>을 확인 할 수 있습니다.</p>
@@ -255,26 +259,26 @@ val cacheSize = storageManager.getCacheSizeBytes(uuidForPath) // 사용중인 �
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// style #1
 </span><span class="kd">val</span> <span class="py">file1</span> <span class="p">=</span> <span class="n">File</span><span class="p">(</span><span class="n">context</span><span class="p">.</span><span class="n">fileDir</span><span class="p">,</span> <span class="s">"file.txt"</span><span class="p">)</span>
 <span class="kd">val</span> <span class="py">outputStream</span> <span class="p">=</span> <span class="n">file</span><span class="p">.</span><span class="n">outputStream</span><span class="p">()</span>
-<span class="c1">// &gt; /data/user/0/*{applicationId}*/**files**/file.txt
+<span class="c1">// &gt; /data/user/0/*{applicationId}*/**files**/file.txt  #A
 </span></code></pre></div></div>
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// style #2
 </span><span class="kd">val</span> <span class="py">outputStream</span> <span class="p">=</span> <span class="n">openFileOutput</span><span class="p">(</span><span class="s">"file.txt"</span><span class="p">,</span> <span class="n">MODE_PRIVATE</span><span class="p">)</span>
-<span class="c1">// &gt; /data/user/0/*{applicationId}*/**files**/file.txt
+<span class="c1">// &gt; /data/user/0/*{applicationId}*/**files**/file.txt  #A
 </span></code></pre></div></div>
 
 <p><code class="highlighter-rouge">style #1</code>과 <code class="highlighter-rouge">style #2</code>의 결과로 얻어지는 FileOutputStream은 동일한 파일을 가르키고 있습니다. 하지만 개인적으로는 <code class="highlighter-rouge">openFileOutput</code>메서드를 사용하면 <code class="highlighter-rouge">FileOutputStream</code>에서 path를 얻을 수 없기 때문에 명시적으로 File 객체를 생성하여 사용하는 style #1을 주로 사용하고 있습니다.</p>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">externalFile</span> <span class="p">=</span> <span class="n">File</span><span class="p">(</span><span class="n">context</span><span class="p">.</span><span class="n">getExternalFilesDir</span><span class="p">({</span><span class="n">Environment</span> <span class="n">Type</span><span class="p">},</span> <span class="s">"file.txt"</span><span class="p">)</span>
-<span class="c1">// &gt; /storage/emulated/0/Android/data/**files**/*{Environment Type}*/file.txt
+<span class="c1">// &gt; /storage/emulated/0/Android/data/**files**/*{Environment Type}*/file.txt #B1
 </span></code></pre></div></div>
 
-<p>외부저장장치에 앱데이터를 저장할때 사용합니다. 공유저장 장치가 에뮬레이션 된 경우에는 Scoped Storage가 적용되지 않은 상태에서는 <code class="highlighter-rouge">WRITE_EXTERNAL_STORAGE</code>권한만 있으면, 이 영역에 접근가능하기 때문에 보안에 취약하며 마운트 여부가 보장되지 않기 때문에 특별한 경우가 아니라면 추천하지않습니다.</p>
+<p>외부저장소에 앱데이터를 저장할때 사용합니다. 공유저장 장치가 에뮬레이션 된 경우에는 Scoped Storage가 적용되지 않은 상태에서는 <code class="highlighter-rouge">WRITE_EXTERNAL_STORAGE</code>권한만 있으면, 이 영역에 접근가능하기 때문에 보안에 취약합니다. 또한 사용자가 파일브라우져를 통해 삭제 할 수 있습니다.</p>
 
 <h2 id="공유-되는-외부저장소-영역">공유 되는 외부저장소 영역</h2>
 
 <h3 id="legacy-external-storage">Legacy External Storage</h3>
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">file</span> <span class="p">=</span> <span class="n">File</span><span class="p">(</span><span class="n">Environment</span><span class="p">.</span><span class="n">getExternalStorageDirectory</span><span class="p">(),</span> <span class="s">"file.txt"</span><span class="p">)</span>
-<span class="c1">// &gt; /storage/emulated/0/file.txt
+<span class="c1">// &gt; /storage/emulated/0/file.txt #B1
 </span></code></pre></div></div>
 <p><code class="highlighter-rouge">Legacy External Storage</code>일때는 <code class="highlighter-rouge">WRITE_EXTERNAL_STORAGE</code>권한이 있는경우 위와같이 외부저장소의 루트부터 대부분의 공간에 접근하고 쓰기가 가능했습니다. 그리고 필요한 경우 ContentProvider에 등록하여 활용합니다.</p>
 
