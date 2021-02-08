@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/android/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-09T00:20:49+09:00</updated>
+  <updated>2021-02-09T00:34:55+09:00</updated>
   <id>https://mond-al.github.io/tag/android/feed.xml</id>
 
   
@@ -39,7 +39,7 @@
       <id>https://mond-al.github.io/cache-share</id>
       <content type="html" xml:base="https://mond-al.github.io/cache-share">&lt;p&gt;File Provider Path 디렉토리영역 매칭&lt;/p&gt;
 
-&lt;p&gt;Android 7(N)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. Android 11(R) 대응을 위해 작업하면서 사이드잡으로 앱의 기능적인 동작의 기본 경로를 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache, files, external(Media/Download)로 구분하는 작업이 진행했습니다. 작업의 결과로 external경로 이외에도 cache영역도 제공할 수 있도록 수정이 필요했습니다. 때문에 &lt;code class=&quot;highlighter-rouge&quot;&gt;provider-meta-data-resource&lt;/code&gt;에 정의한 &lt;code class=&quot;highlighter-rouge&quot;&gt;file_paths.xml&lt;/code&gt; 파일을 아래처럼 수정했습니다.&lt;/p&gt;
+&lt;p&gt;Android 7(N)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. Android 11(R) 대응을 위해 Scoped Storage 적용을 진행하면서 기존 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache, files, external(Media/Download)로 구분하는 처리가 추가되었습니다. 때문에 작업의 결과로 external경로 이외에도 cache영역도 제공할 수 있도록 수정이 필요했습니다.&lt;/p&gt;
 
 &lt;p&gt;추가 할 수 있는 path의 종류&lt;/p&gt;
 
@@ -73,6 +73,8 @@
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
+
+&lt;p&gt;manifest &amp;gt; provider &amp;gt; meta-data &amp;gt; resource 에 정의한 &lt;code class=&quot;highlighter-rouge&quot;&gt;file_paths.xml&lt;/code&gt; 파일을 아래처럼 수정했습니다.&lt;/p&gt;
 
 &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- res/xml/file_paths.xml --&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;path&amp;gt;&lt;/span&gt;

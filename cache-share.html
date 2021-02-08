@@ -63,7 +63,7 @@
     <meta property="og:site_name" content="Developer/App/Android/mond > Log" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="File Provider Path" />
-    <meta property="og:description" content="File Provider Path 디렉토리영역 매칭 Android 7(N)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. Android 11(R) 대응을 위해 작업하면서 사이드잡으로 앱의 기능적인 동작의 기본 경로를 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache, files, external(Media/Download)로 구분하는 작업이 진행했습니다. 작업의 결과로 external경로 이외에도 cache영역도 제공할 수 있도록 수정이 필요했습니다. 때문에" />
+    <meta property="og:description" content="File Provider Path 디렉토리영역 매칭 Android 7(N)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. Android 11(R) 대응을 위해 Scoped Storage 적용을 진행하면서 기존 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache, files, external(Media/Download)로 구분하는 처리가 추가되었습니다. 때문에 작업의 결과로 external경로 이외에도 cache영역도 제공할 수 있도록 수정이 필요했습니다. 추가 할" />
     <meta property="og:url" content="https://mond-al.github.io/cache-share" />
     <meta property="og:image" content="https://mond-al.github.io/assets/images/cover/common_solution.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -73,7 +73,7 @@
     <meta property="article:tag" content="Android" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="File Provider Path" />
-    <meta name="twitter:description" content="File Provider Path 디렉토리영역 매칭 Android 7(N)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. Android 11(R) 대응을 위해 작업하면서 사이드잡으로 앱의 기능적인 동작의 기본 경로를 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache, files, external(Media/Download)로 구분하는 작업이 진행했습니다. 작업의 결과로 external경로 이외에도 cache영역도 제공할 수 있도록 수정이 필요했습니다. 때문에" />
+    <meta name="twitter:description" content="File Provider Path 디렉토리영역 매칭 Android 7(N)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. Android 11(R) 대응을 위해 Scoped Storage 적용을 진행하면서 기존 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache, files, external(Media/Download)로 구분하는 처리가 추가되었습니다. 때문에 작업의 결과로 external경로 이외에도 cache영역도 제공할 수 있도록 수정이 필요했습니다. 추가 할" />
     <meta name="twitter:url" content="https://mond-al.github.io/" />
     <meta name="twitter:image" content="https://mond-al.github.io/assets/images/cover/common_solution.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -105,7 +105,7 @@
         "@type": "WebPage",
         "@id": "https://mond-al.github.io/cache-share"
     },
-    "description": "File Provider Path 디렉토리영역 매칭 Android 7(N)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. Android 11(R) 대응을 위해 작업하면서 사이드잡으로 앱의 기능적인 동작의 기본 경로를 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache, files, external(Media/Download)로 구분하는 작업이 진행했습니다. 작업의 결과로 external경로 이외에도 cache영역도 제공할 수 있도록 수정이 필요했습니다. 때문에"
+    "description": "File Provider Path 디렉토리영역 매칭 Android 7(N)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. Android 11(R) 대응을 위해 Scoped Storage 적용을 진행하면서 기존 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache, files, external(Media/Download)로 구분하는 처리가 추가되었습니다. 때문에 작업의 결과로 external경로 이외에도 cache영역도 제공할 수 있도록 수정이 필요했습니다. 추가 할"
 }
     </script>
 
@@ -205,7 +205,7 @@ into the {body} of the default.hbs template -->
                 <div class="kg-card-markdown">
                     <p>File Provider Path 디렉토리영역 매칭</p>
 
-<p>Android 7(N)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. Android 11(R) 대응을 위해 작업하면서 사이드잡으로 앱의 기능적인 동작의 기본 경로를 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache, files, external(Media/Download)로 구분하는 작업이 진행했습니다. 작업의 결과로 external경로 이외에도 cache영역도 제공할 수 있도록 수정이 필요했습니다. 때문에 <code class="highlighter-rouge">provider-meta-data-resource</code>에 정의한 <code class="highlighter-rouge">file_paths.xml</code> 파일을 아래처럼 수정했습니다.</p>
+<p>Android 7(N)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. Android 11(R) 대응을 위해 Scoped Storage 적용을 진행하면서 기존 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache, files, external(Media/Download)로 구분하는 처리가 추가되었습니다. 때문에 작업의 결과로 external경로 이외에도 cache영역도 제공할 수 있도록 수정이 필요했습니다.</p>
 
 <p>추가 할 수 있는 path의 종류</p>
 
@@ -239,6 +239,8 @@ into the {body} of the default.hbs template -->
     </tr>
   </tbody>
 </table>
+
+<p>manifest &gt; provider &gt; meta-data &gt; resource 에 정의한 <code class="highlighter-rouge">file_paths.xml</code> 파일을 아래처럼 수정했습니다.</p>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- res/xml/file_paths.xml --&gt;</span>
 <span class="nt">&lt;path&gt;</span>
