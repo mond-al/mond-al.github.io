@@ -8,9 +8,9 @@
     
       
       <item>
-        <title>cache file provider</title>
+        <title>File Provider Path</title>
         
-          <description>&lt;p&gt;파일 프로바이더에 cache 영역 추가&lt;/p&gt;
+          <description>&lt;p&gt;File Provider Path 디렉토리영역 매칭&lt;/p&gt;
 
 </description>
         

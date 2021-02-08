@@ -11,7 +11,7 @@
 
 
 
-    <title>cache file provider</title>
+    <title>File Provider Path</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -42,40 +42,40 @@
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>cache file provider | Developer/App/Android/mond &gt; Log</title>
+<title>File Provider Path | Developer/App/Android/mond &gt; Log</title>
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="cache file provider" />
+<meta property="og:title" content="File Provider Path" />
 <meta name="author" content="jisoo Yang" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="파일 프로바이더에 cache 영역 추가" />
-<meta property="og:description" content="파일 프로바이더에 cache 영역 추가" />
+<meta name="description" content="File Provider Path 디렉토리영역 매칭" />
+<meta property="og:description" content="File Provider Path 디렉토리영역 매칭" />
 <link rel="canonical" href="https://mond-al.github.io/cache-share" />
 <meta property="og:url" content="https://mond-al.github.io/cache-share" />
 <meta property="og:site_name" content="Developer/App/Android/mond &gt; Log" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-02-08T00:00:00+09:00" />
 <script type="application/ld+json">
-{"url":"https://mond-al.github.io/cache-share","headline":"cache file provider","datePublished":"2021-02-08T00:00:00+09:00","dateModified":"2021-02-08T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mond-al.github.io/cache-share"},"author":{"@type":"Person","name":"jisoo Yang"},"description":"파일 프로바이더에 cache 영역 추가","@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"url":"https://mond-al.github.io/cache-share","headline":"File Provider Path","datePublished":"2021-02-08T00:00:00+09:00","dateModified":"2021-02-08T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mond-al.github.io/cache-share"},"author":{"@type":"Person","name":"jisoo Yang"},"description":"File Provider Path 디렉토리영역 매칭","@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="Developer/App/Android/mond > Log" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="cache file provider" />
-    <meta property="og:description" content="파일 프로바이더에 cache 영역 추가 Android 7(Nougat)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. Android 11(R) 대응을 위해 작업하면서 앱의 기능적인 동작의 기본 경로를 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache/files/external(Media/Download)로 구분하는 작업이 있었다. external경로 이외에도 cache영역도 제공할 수있도록 수정이 필요했다. provider-meta-data-resource에 정의한 file_paths.xml 파일을 아래처럼 수정했습니다. &lt;!--" />
+    <meta property="og:title" content="File Provider Path" />
+    <meta property="og:description" content="File Provider Path 디렉토리영역 매칭 Android 7(N)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. Android 11(R) 대응을 위해 작업하면서 사이드잡으로 앱의 기능적인 동작의 기본 경로를 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache, files, external(Media/Download)로 구분하는 작업이 진행했습니다. 작업의 결과로 external경로 이외에도 cache영역도 제공할 수 있도록 수정이 필요했습니다. 때문에" />
     <meta property="og:url" content="https://mond-al.github.io/cache-share" />
-    <meta property="og:image" content="https://mond-al.github.io/assets/images/cover/common_android.jpg" />
+    <meta property="og:image" content="https://mond-al.github.io/assets/images/cover/common_solution.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
     <meta property="article:published_time" content="2021-02-08T00:00:00+09:00" />
     <meta property="article:modified_time" content="2021-02-08T00:00:00+09:00" />
     <meta property="article:tag" content="Android" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="cache file provider" />
-    <meta name="twitter:description" content="파일 프로바이더에 cache 영역 추가 Android 7(Nougat)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. Android 11(R) 대응을 위해 작업하면서 앱의 기능적인 동작의 기본 경로를 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache/files/external(Media/Download)로 구분하는 작업이 있었다. external경로 이외에도 cache영역도 제공할 수있도록 수정이 필요했다. provider-meta-data-resource에 정의한 file_paths.xml 파일을 아래처럼 수정했습니다. &lt;!--" />
+    <meta name="twitter:title" content="File Provider Path" />
+    <meta name="twitter:description" content="File Provider Path 디렉토리영역 매칭 Android 7(N)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. Android 11(R) 대응을 위해 작업하면서 사이드잡으로 앱의 기능적인 동작의 기본 경로를 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache, files, external(Media/Download)로 구분하는 작업이 진행했습니다. 작업의 결과로 external경로 이외에도 cache영역도 제공할 수 있도록 수정이 필요했습니다. 때문에" />
     <meta name="twitter:url" content="https://mond-al.github.io/" />
-    <meta name="twitter:image" content="https://mond-al.github.io/assets/images/cover/common_android.jpg" />
+    <meta name="twitter:image" content="https://mond-al.github.io/assets/images/cover/common_solution.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Developer/App/Android/mond > Log" />
     <meta name="twitter:label2" content="Filed under" />
@@ -97,7 +97,7 @@
     "url": "https://mond-al.github.io/cache-share",
     "image": {
         "@type": "ImageObject",
-        "url": "https://mond-al.github.io/assets/images/cover/common_android.jpg",
+        "url": "https://mond-al.github.io/assets/images/cover/common_solution.png",
         "width": 2000,
         "height": 666
     },
@@ -105,7 +105,7 @@
         "@type": "WebPage",
         "@id": "https://mond-al.github.io/cache-share"
     },
-    "description": "파일 프로바이더에 cache 영역 추가 Android 7(Nougat)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. Android 11(R) 대응을 위해 작업하면서 앱의 기능적인 동작의 기본 경로를 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache/files/external(Media/Download)로 구분하는 작업이 있었다. external경로 이외에도 cache영역도 제공할 수있도록 수정이 필요했다. provider-meta-data-resource에 정의한 file_paths.xml 파일을 아래처럼 수정했습니다. &lt;!--"
+    "description": "File Provider Path 디렉토리영역 매칭 Android 7(N)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. Android 11(R) 대응을 위해 작업하면서 사이드잡으로 앱의 기능적인 동작의 기본 경로를 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache, files, external(Media/Download)로 구분하는 작업이 진행했습니다. 작업의 결과로 external경로 이외에도 cache영역도 제공할 수 있도록 수정이 필요했습니다. 때문에"
 }
     </script>
 
@@ -118,7 +118,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="cache file provider" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="File Provider Path" href="/feed.xml" />
 
 
 </head>
@@ -193,24 +193,57 @@ into the {body} of the default.hbs template -->
                         
                     
                 </section>
-                <h1 class="post-full-title">cache file provider</h1>
+                <h1 class="post-full-title">File Provider Path</h1>
             </header>
 
 <!--            -->
-<!--            <figure class="post-full-image" style="background-image: url(/assets/images/cover/common_android.jpg)">-->
+<!--            <figure class="post-full-image" style="background-image: url(/assets/images/cover/common_solution.png)">-->
 <!--            </figure>-->
 <!--            -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p>파일 프로바이더에 cache 영역 추가</p>
+                    <p>File Provider Path 디렉토리영역 매칭</p>
 
-<p>Android 7(Nougat)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. Android 11(R) 대응을 위해 작업하면서 앱의 기능적인 동작의 기본 경로를 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache/files/external(Media/Download)로 구분하는 작업이 있었다. external경로 이외에도 cache영역도 제공할 수있도록 수정이 필요했다. <code class="highlighter-rouge">provider-meta-data-resource</code>에 정의한 <code class="highlighter-rouge">file_paths.xml</code> 파일을 아래처럼 수정했습니다.</p>
+<p>Android 7(N)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. Android 11(R) 대응을 위해 작업하면서 사이드잡으로 앱의 기능적인 동작의 기본 경로를 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache, files, external(Media/Download)로 구분하는 작업이 진행했습니다. 작업의 결과로 external경로 이외에도 cache영역도 제공할 수 있도록 수정이 필요했습니다. 때문에 <code class="highlighter-rouge">provider-meta-data-resource</code>에 정의한 <code class="highlighter-rouge">file_paths.xml</code> 파일을 아래처럼 수정했습니다.</p>
+
+<p>추가 할 수 있는 path의 종류</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>path</th>
+      <th>directory scope</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>files-path</td>
+      <td>context.getFilesDir()</td>
+    </tr>
+    <tr>
+      <td>cache-path</td>
+      <td>context.getCacheDir()</td>
+    </tr>
+    <tr>
+      <td>external-cache-path</td>
+      <td>context.getExternalCacheDir()</td>
+    </tr>
+    <tr>
+      <td>external-path</td>
+      <td>Environment.getExternalStorageDirectory()</td>
+    </tr>
+    <tr>
+      <td>external-media-path</td>
+      <td>context.getExternalMediaDirs() (only API 21+ Devices)</td>
+    </tr>
+  </tbody>
+</table>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- res/xml/file_paths.xml --&gt;</span>
 <span class="nt">&lt;path&gt;</span>
     <span class="nt">&lt;external-path</span> <span class="na">name=</span><span class="s">"external_files"</span> <span class="na">path=</span><span class="s">"."</span><span class="nt">/&gt;</span>
-    <span class="nt">&lt;cache-path</span> <span class="na">name=</span><span class="s">"files"</span> <span class="na">path=</span><span class="s">"."</span><span class="nt">/&gt;</span>  #추가
+    <span class="nt">&lt;cache-path</span> <span class="na">name=</span><span class="s">"files"</span> <span class="na">path=</span><span class="s">"."</span><span class="nt">/&gt;</span>  #cache 영역 전체(.)를 files라는 이름으로 공유 
 <span class="nt">&lt;/path&gt;</span> 
 </code></pre></div></div>
 
@@ -290,7 +323,7 @@ into the {body} of the default.hbs template -->
                         var disqus_config = function () {
                             this.page.url = 'https://mond-al.github.io/cache-share';
                             this.page.identifier = '/cache-share';
-                            this.page.title = 'cache file provider';
+                            this.page.title = 'File Provider Path';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -478,13 +511,13 @@ into the {body} of the default.hbs template -->
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">cache file provider</div>
+    <div class="floating-header-title">File Provider Path</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=cache+file+provider&amp;url=https://mond-al.github.io/cache-share"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=File+Provider+Path&amp;url=https://mond-al.github.io/cache-share"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
