@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>cache file provider</title>
+        
+          <description>&lt;p&gt;파일 프로바이더에 cache 영역 추가&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 08 Feb 2021 00:00:00 +0900</pubDate>
+        <link>
+        https://mond-al.github.io/cache-share</link>
+        <guid isPermaLink="true">https://mond-al.github.io/cache-share</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>안드로이드 파일 쓰기</title>
         
           <description>&lt;p&gt;안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다.&lt;/p&gt;

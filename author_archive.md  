@@ -185,7 +185,10 @@ into the {body} of the default.hbs template -->
   	<li><a href="#R" class="tag"><span class="term alltags">R</span> <span class="count alltags">1</span></a></li>
   
     
-  	<li><a href="#android" class="tag"><span class="term alltags">android</span> <span class="count alltags">6</span></a></li>
+  	<li><a href="#android" class="tag"><span class="term alltags">android</span> <span class="count alltags">7</span></a></li>
+  
+    
+  	<li><a href="#cache" class="tag"><span class="term alltags">cache</span> <span class="count alltags">1</span></a></li>
   
     
   	<li><a href="#dependency" class="tag"><span class="term alltags">dependency</span> <span class="count alltags">1</span></a></li>
@@ -201,6 +204,9 @@ into the {body} of the default.hbs template -->
   
     
   	<li><a href="#file" class="tag"><span class="term alltags">file</span> <span class="count alltags">1</span></a></li>
+  
+    
+  	<li><a href="#file provider" class="tag"><span class="term alltags">file provider</span> <span class="count alltags">1</span></a></li>
   
     
   	<li><a href="#gradle" class="tag"><span class="term alltags">gradle</span> <span class="count alltags">2</span></a></li>
@@ -270,6 +276,9 @@ into the {body} of the default.hbs template -->
 	<h2 id="android" class="tag-heading">ANDROID</h2>
 		<ul>
     
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/cache-share" target="_blank" title="cache file provider">cache file provider</a></li> -->
+      <li class="entry-title"><a href="/cache-share" target="_blank" title="cache file provider">cache file provider</a></li>
+    
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/file-write" target="_blank" title="안드로이드 파일 쓰기">안드로이드 파일 쓰기</a></li> -->
       <li class="entry-title"><a href="/file-write" target="_blank" title="안드로이드 파일 쓰기">안드로이드 파일 쓰기</a></li>
     
@@ -287,6 +296,17 @@ into the {body} of the default.hbs template -->
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/fast-scroller" target="_blank" title="Recyclerview Fastscroller Review">Recyclerview Fastscroller Review</a></li> -->
       <li class="entry-title"><a href="/fast-scroller" target="_blank" title="Recyclerview Fastscroller Review">Recyclerview Fastscroller Review</a></li>
+    
+		</ul>
+	</article><!-- /.hentry -->
+
+  
+	<article>
+	<h2 id="cache" class="tag-heading">CACHE</h2>
+		<ul>
+    
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/cache-share" target="_blank" title="cache file provider">cache file provider</a></li> -->
+      <li class="entry-title"><a href="/cache-share" target="_blank" title="cache file provider">cache file provider</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -342,6 +362,17 @@ into the {body} of the default.hbs template -->
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/file-write" target="_blank" title="안드로이드 파일 쓰기">안드로이드 파일 쓰기</a></li> -->
       <li class="entry-title"><a href="/file-write" target="_blank" title="안드로이드 파일 쓰기">안드로이드 파일 쓰기</a></li>
+    
+		</ul>
+	</article><!-- /.hentry -->
+
+  
+	<article>
+	<h2 id="file provider" class="tag-heading">FILE PROVIDER</h2>
+		<ul>
+    
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/cache-share" target="_blank" title="cache file provider">cache file provider</a></li> -->
+      <li class="entry-title"><a href="/cache-share" target="_blank" title="cache file provider">cache file provider</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
