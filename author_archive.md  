@@ -185,10 +185,10 @@ into the {body} of the default.hbs template -->
   	<li><a href="#R" class="tag"><span class="term alltags">R</span> <span class="count alltags">1</span></a></li>
   
     
-  	<li><a href="#android" class="tag"><span class="term alltags">android</span> <span class="count alltags">10</span></a></li>
+  	<li><a href="#android" class="tag"><span class="term alltags">android</span> <span class="count alltags">9</span></a></li>
   
     
-  	<li><a href="#cache" class="tag"><span class="term alltags">cache</span> <span class="count alltags">3</span></a></li>
+  	<li><a href="#cache" class="tag"><span class="term alltags">cache</span> <span class="count alltags">2</span></a></li>
   
     
   	<li><a href="#camera" class="tag"><span class="term alltags">camera</span> <span class="count alltags">1</span></a></li>
@@ -209,7 +209,7 @@ into the {body} of the default.hbs template -->
   	<li><a href="#file" class="tag"><span class="term alltags">file</span> <span class="count alltags">1</span></a></li>
   
     
-  	<li><a href="#file provider" class="tag"><span class="term alltags">file provider</span> <span class="count alltags">3</span></a></li>
+  	<li><a href="#file provider" class="tag"><span class="term alltags">file provider</span> <span class="count alltags">2</span></a></li>
   
     
   	<li><a href="#gradle" class="tag"><span class="term alltags">gradle</span> <span class="count alltags">2</span></a></li>
@@ -279,14 +279,11 @@ into the {body} of the default.hbs template -->
 	<h2 id="android" class="tag-heading">ANDROID</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/scoped-storage-camera" target="_blank" title="Scoped storage 예제(카메라 사진촬영)">Scoped storage 예제(카메라 사진촬영)</a></li> -->
-      <li class="entry-title"><a href="/scoped-storage-camera" target="_blank" title="Scoped storage 예제(카메라 사진촬영)">Scoped storage 예제(카메라 사진촬영)</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/example-camera" target="_blank" title="Scoped storage 예제(카메라 사진촬영)">Scoped storage 예제(카메라 사진촬영)</a></li> -->
+      <li class="entry-title"><a href="/example-camera" target="_blank" title="Scoped storage 예제(카메라 사진촬영)">Scoped storage 예제(카메라 사진촬영)</a></li>
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/about-binding" target="_blank" title="Binding">Binding</a></li> -->
       <li class="entry-title"><a href="/about-binding" target="_blank" title="Binding">Binding</a></li>
-    
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/pollback-capture-uri" target="_blank" title="File Provider Path">File Provider Path</a></li> -->
-      <li class="entry-title"><a href="/pollback-capture-uri" target="_blank" title="File Provider Path">File Provider Path</a></li>
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/cache-share" target="_blank" title="File Provider Path">File Provider Path</a></li> -->
       <li class="entry-title"><a href="/cache-share" target="_blank" title="File Provider Path">File Provider Path</a></li>
@@ -320,9 +317,6 @@ into the {body} of the default.hbs template -->
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/about-binding" target="_blank" title="Binding">Binding</a></li> -->
       <li class="entry-title"><a href="/about-binding" target="_blank" title="Binding">Binding</a></li>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/pollback-capture-uri" target="_blank" title="File Provider Path">File Provider Path</a></li> -->
-      <li class="entry-title"><a href="/pollback-capture-uri" target="_blank" title="File Provider Path">File Provider Path</a></li>
-    
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/cache-share" target="_blank" title="File Provider Path">File Provider Path</a></li> -->
       <li class="entry-title"><a href="/cache-share" target="_blank" title="File Provider Path">File Provider Path</a></li>
     
@@ -334,8 +328,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="camera" class="tag-heading">CAMERA</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/scoped-storage-camera" target="_blank" title="Scoped storage 예제(카메라 사진촬영)">Scoped storage 예제(카메라 사진촬영)</a></li> -->
-      <li class="entry-title"><a href="/scoped-storage-camera" target="_blank" title="Scoped storage 예제(카메라 사진촬영)">Scoped storage 예제(카메라 사진촬영)</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/example-camera" target="_blank" title="Scoped storage 예제(카메라 사진촬영)">Scoped storage 예제(카메라 사진촬영)</a></li> -->
+      <li class="entry-title"><a href="/example-camera" target="_blank" title="Scoped storage 예제(카메라 사진촬영)">Scoped storage 예제(카메라 사진촬영)</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -403,9 +397,6 @@ into the {body} of the default.hbs template -->
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/about-binding" target="_blank" title="Binding">Binding</a></li> -->
       <li class="entry-title"><a href="/about-binding" target="_blank" title="Binding">Binding</a></li>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/pollback-capture-uri" target="_blank" title="File Provider Path">File Provider Path</a></li> -->
-      <li class="entry-title"><a href="/pollback-capture-uri" target="_blank" title="File Provider Path">File Provider Path</a></li>
-    
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/cache-share" target="_blank" title="File Provider Path">File Provider Path</a></li> -->
       <li class="entry-title"><a href="/cache-share" target="_blank" title="File Provider Path">File Provider Path</a></li>
     
@@ -464,8 +455,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="scoped storage" class="tag-heading">SCOPED STORAGE</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/scoped-storage-camera" target="_blank" title="Scoped storage 예제(카메라 사진촬영)">Scoped storage 예제(카메라 사진촬영)</a></li> -->
-      <li class="entry-title"><a href="/scoped-storage-camera" target="_blank" title="Scoped storage 예제(카메라 사진촬영)">Scoped storage 예제(카메라 사진촬영)</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/example-camera" target="_blank" title="Scoped storage 예제(카메라 사진촬영)">Scoped storage 예제(카메라 사진촬영)</a></li> -->
+      <li class="entry-title"><a href="/example-camera" target="_blank" title="Scoped storage 예제(카메라 사진촬영)">Scoped storage 예제(카메라 사진촬영)</a></li>
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/file-write" target="_blank" title="안드로이드 파일 쓰기">안드로이드 파일 쓰기</a></li> -->
       <li class="entry-title"><a href="/file-write" target="_blank" title="안드로이드 파일 쓰기">안드로이드 파일 쓰기</a></li>
