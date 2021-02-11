@@ -63,7 +63,7 @@
     <meta property="og:site_name" content="Developer/App/Android/mond > Log" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Binding" />
-    <meta property="og:description" content="바인딩 관련 에러 by viewModels()에 에러가 나는 경우. 프로젝트가 세팅되지 않은 상태에서 디펜던시 정의를 빠트린경우인데 new Project를 통해 empty activity 프로젝트로 시작하면 항상 빠트리다 보니 포스팅으로 정리해둡니다. val viewModels = ViewModelClass by viewModels() Unresolved reference: viewModels by 키워드를 이용한 위임으로 처리되는데 이 확장함수는 activity-ktx나 fragment-ktx에 정의 되어있습니다. 그러므로 상황에 맞춰서" />
+    <meta property="og:description" content="바인딩 관련 에러 by viewModels()에 에러가 나는 경우. 프로젝트가 세팅되지 않은 상태에서 디펜던시 정의를 빠트린경우인데 new Project를 통해 empty activity 프로젝트로 시작하면 항상 빠트리다 보니 포스팅으로 정리해둡니다. val viewModels = ViewModelClass by viewModels() Unresolved reference: viewModels by 키워드를 이용한 위임으로 처리되는데 이 확장함수는 activity-ktx나 fragment-ktx에 정의 되어있습니다. dependencies{ implementation 'androidx.activity:activity-ktx:1.2.0'" />
     <meta property="og:url" content="https://mond-al.github.io/about-binding" />
     <meta property="og:image" content="https://mond-al.github.io/assets/images/cover/common_solution.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -73,7 +73,7 @@
     <meta property="article:tag" content="Android" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Binding" />
-    <meta name="twitter:description" content="바인딩 관련 에러 by viewModels()에 에러가 나는 경우. 프로젝트가 세팅되지 않은 상태에서 디펜던시 정의를 빠트린경우인데 new Project를 통해 empty activity 프로젝트로 시작하면 항상 빠트리다 보니 포스팅으로 정리해둡니다. val viewModels = ViewModelClass by viewModels() Unresolved reference: viewModels by 키워드를 이용한 위임으로 처리되는데 이 확장함수는 activity-ktx나 fragment-ktx에 정의 되어있습니다. 그러므로 상황에 맞춰서" />
+    <meta name="twitter:description" content="바인딩 관련 에러 by viewModels()에 에러가 나는 경우. 프로젝트가 세팅되지 않은 상태에서 디펜던시 정의를 빠트린경우인데 new Project를 통해 empty activity 프로젝트로 시작하면 항상 빠트리다 보니 포스팅으로 정리해둡니다. val viewModels = ViewModelClass by viewModels() Unresolved reference: viewModels by 키워드를 이용한 위임으로 처리되는데 이 확장함수는 activity-ktx나 fragment-ktx에 정의 되어있습니다. dependencies{ implementation 'androidx.activity:activity-ktx:1.2.0'" />
     <meta name="twitter:url" content="https://mond-al.github.io/" />
     <meta name="twitter:image" content="https://mond-al.github.io/assets/images/cover/common_solution.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -105,7 +105,7 @@
         "@type": "WebPage",
         "@id": "https://mond-al.github.io/about-binding"
     },
-    "description": "바인딩 관련 에러 by viewModels()에 에러가 나는 경우. 프로젝트가 세팅되지 않은 상태에서 디펜던시 정의를 빠트린경우인데 new Project를 통해 empty activity 프로젝트로 시작하면 항상 빠트리다 보니 포스팅으로 정리해둡니다. val viewModels = ViewModelClass by viewModels() Unresolved reference: viewModels by 키워드를 이용한 위임으로 처리되는데 이 확장함수는 activity-ktx나 fragment-ktx에 정의 되어있습니다. 그러므로 상황에 맞춰서"
+    "description": "바인딩 관련 에러 by viewModels()에 에러가 나는 경우. 프로젝트가 세팅되지 않은 상태에서 디펜던시 정의를 빠트린경우인데 new Project를 통해 empty activity 프로젝트로 시작하면 항상 빠트리다 보니 포스팅으로 정리해둡니다. val viewModels = ViewModelClass by viewModels() Unresolved reference: viewModels by 키워드를 이용한 위임으로 처리되는데 이 확장함수는 activity-ktx나 fragment-ktx에 정의 되어있습니다. dependencies{ implementation 'androidx.activity:activity-ktx:1.2.0'"
 }
     </script>
 
@@ -214,8 +214,7 @@ into the {body} of the default.hbs template -->
 <code class="highlighter-rouge">Unresolved reference: viewModels</code></p>
 </blockquote>
 
-<p>by 키워드를 이용한 위임으로 처리되는데 이 확장함수는 activity-ktx나 fragment-ktx에 정의 되어있습니다.
-그러므로 상황에 맞춰서 디펜던시를 추가하면 해결됩니다.</p>
+<p>by 키워드를 이용한 위임으로 처리되는데 이 확장함수는 activity-ktx나 fragment-ktx에 정의 되어있습니다.</p>
 
 <div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dependencies</span><span class="o">{</span>
     <span class="n">implementation</span> <span class="s1">'androidx.activity:activity-ktx:1.2.0'</span>
@@ -226,63 +225,63 @@ into the {body} of the default.hbs template -->
 <p>참고로 fragment-ktx가 activity-ktx에 의존성을 가지고 있습니다. (아래의 트리는 보기 편하게 적절하게 편집했습니다.)</p>
 
 <h3 id="androidxactivityactivity-ktx120-의존성-그래프">androidx.activity:activity-ktx:1.2.0 의존성 그래프</h3>
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">activity</span><span class="p">:</span><span class="n">activity</span><span class="p">-</span><span class="n">ktx</span><span class="p">:</span><span class="m">1.2</span><span class="p">.</span><span class="m">0</span>
-     <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">activity</span><span class="p">:</span><span class="n">activity</span><span class="p">:</span><span class="m">1.2</span><span class="p">.</span><span class="m">0</span>
-          <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="k">annotation</span><span class="p">:</span><span class="k">annotation</span><span class="p">:</span><span class="m">1.1</span><span class="p">.</span><span class="m">0</span>
-          <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">core</span><span class="p">:</span><span class="n">core</span><span class="p">:</span><span class="m">1.1</span><span class="p">.</span><span class="m">0</span> <span class="p">-&gt;</span> <span class="m">1.3</span><span class="p">.</span><span class="m">2</span> <span class="p">(*)</span>
-          <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">lifecycle</span><span class="p">:</span><span class="n">lifecycle</span><span class="p">-</span><span class="n">runtime</span><span class="p">:</span><span class="m">2.3</span><span class="p">.</span><span class="m">0</span> <span class="p">(*)</span>
-          <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">lifecycle</span><span class="p">:</span><span class="n">lifecycle</span><span class="p">-</span><span class="n">viewmodel</span><span class="p">:</span><span class="m">2.3</span><span class="p">.</span><span class="m">0</span>
-          <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">savedstate</span><span class="p">:</span><span class="n">savedstate</span><span class="p">:</span><span class="m">1.1</span><span class="p">.</span><span class="m">0</span>
-          <span class="err">\</span><span class="p">---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">lifecycle</span><span class="p">:</span><span class="n">lifecycle</span><span class="p">-</span><span class="n">viewmodel</span><span class="p">-</span><span class="n">savedstate</span><span class="p">:</span><span class="m">2.3</span><span class="p">.</span><span class="m">0</span>
-               <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="k">annotation</span><span class="p">:</span><span class="k">annotation</span><span class="p">:</span><span class="m">1.0</span><span class="p">.</span><span class="m">0</span> <span class="p">-&gt;</span> <span class="m">1.1</span><span class="p">.</span><span class="m">0</span>
-               <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">savedstate</span><span class="p">:</span><span class="n">savedstate</span><span class="p">:</span><span class="m">1.1</span><span class="p">.</span><span class="m">0</span> <span class="p">(*)</span>
-               <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">lifecycle</span><span class="p">:</span><span class="n">lifecycle</span><span class="p">-</span><span class="n">livedata</span><span class="p">-</span><span class="n">core</span><span class="p">:</span><span class="m">2.3</span><span class="p">.</span><span class="m">0</span>
-               <span class="p">|</span>    <span class="err">\</span><span class="p">---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">lifecycle</span><span class="p">:</span><span class="n">lifecycle</span><span class="p">-</span><span class="n">common</span><span class="p">:</span><span class="m">2.3</span><span class="p">.</span><span class="m">0</span> <span class="p">(*)</span>
-               <span class="err">\</span><span class="p">---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">lifecycle</span><span class="p">:</span><span class="n">lifecycle</span><span class="p">-</span><span class="n">viewmodel</span><span class="p">:</span><span class="m">2.3</span><span class="p">.</span><span class="m">0</span> <span class="p">(*)</span>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+--- androidx.activity:activity-ktx:1.2.0
+     +--- androidx.activity:activity:1.2.0
+          +--- androidx.annotation:annotation:1.1.0
+          +--- androidx.core:core:1.1.0 -&gt; 1.3.2 (*)
+          +--- androidx.lifecycle:lifecycle-runtime:2.3.0 (*)
+          +--- androidx.lifecycle:lifecycle-viewmodel:2.3.0
+          +--- androidx.savedstate:savedstate:1.1.0
+          \--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.0
+               +--- androidx.annotation:annotation:1.0.0 -&gt; 1.1.0
+               +--- androidx.savedstate:savedstate:1.1.0 (*)
+               +--- androidx.lifecycle:lifecycle-livedata-core:2.3.0
+               |    \--- androidx.lifecycle:lifecycle-common:2.3.0 (*)
+               \--- androidx.lifecycle:lifecycle-viewmodel:2.3.0 (*)
 </code></pre></div></div>
 
 <h3 id="androidxfragmentfragment-ktx130-의존성-그래프">androidx.fragment:fragment-ktx:1.3.0 의존성 그래프</h3>
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">fragment</span><span class="p">:</span><span class="n">fragment</span><span class="p">-</span><span class="n">ktx</span><span class="p">:</span><span class="m">1.3</span><span class="p">.</span><span class="m">0</span>
-     <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">activity</span><span class="p">:</span><span class="n">activity</span><span class="p">-</span><span class="n">ktx</span><span class="p">:</span><span class="m">1.2</span><span class="p">.</span><span class="m">0</span>
-     <span class="p">|</span>    <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">activity</span><span class="p">:</span><span class="n">activity</span><span class="p">:</span><span class="m">1.2</span><span class="p">.</span><span class="m">0</span> <span class="p">(*)</span>
-     <span class="p">|</span>    <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">core</span><span class="p">:</span><span class="n">core</span><span class="p">-</span><span class="n">ktx</span><span class="p">:</span><span class="m">1.1</span><span class="p">.</span><span class="m">0</span> <span class="p">-&gt;</span> <span class="m">1.3</span><span class="p">.</span><span class="m">2</span> <span class="p">(*)</span>
-     <span class="p">|</span>    <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">lifecycle</span><span class="p">:</span><span class="n">lifecycle</span><span class="p">-</span><span class="n">runtime</span><span class="p">-</span><span class="n">ktx</span><span class="p">:</span><span class="m">2.3</span><span class="p">.</span><span class="m">0</span>
-     <span class="p">|</span>    <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">lifecycle</span><span class="p">:</span><span class="n">lifecycle</span><span class="p">-</span><span class="n">viewmodel</span><span class="p">-</span><span class="n">ktx</span><span class="p">:</span><span class="m">2.3</span><span class="p">.</span><span class="m">0</span>
-     <span class="p">|</span>    <span class="p">|</span>    <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">lifecycle</span><span class="p">:</span><span class="n">lifecycle</span><span class="p">-</span><span class="n">viewmodel</span><span class="p">:</span><span class="m">2.3</span><span class="p">.</span><span class="m">0</span> <span class="p">(*)</span>
-     <span class="p">|</span>    <span class="p">|</span>    <span class="p">+---</span> <span class="n">org</span><span class="p">.</span><span class="n">jetbrains</span><span class="p">.</span><span class="n">kotlin</span><span class="p">:</span><span class="n">kotlin</span><span class="p">-</span><span class="n">stdlib</span><span class="p">:</span><span class="m">1.4</span><span class="p">.</span><span class="m">20</span> <span class="p">-&gt;</span> <span class="m">1.4</span><span class="p">.</span><span class="m">30</span> <span class="p">(*)</span>
-     <span class="p">|</span>    <span class="p">|</span>    <span class="err">\</span><span class="p">---</span> <span class="n">org</span><span class="p">.</span><span class="n">jetbrains</span><span class="p">.</span><span class="n">kotlinx</span><span class="p">:</span><span class="n">kotlinx</span><span class="p">-</span><span class="n">coroutines</span><span class="p">-</span><span class="n">android</span><span class="p">:</span><span class="m">1.4</span><span class="p">.</span><span class="m">1</span> <span class="p">(*)</span>
-     <span class="p">|</span>    <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">savedstate</span><span class="p">:</span><span class="n">savedstate</span><span class="p">-</span><span class="n">ktx</span><span class="p">:</span><span class="m">1.1</span><span class="p">.</span><span class="m">0</span>
-     <span class="p">|</span>    <span class="err">\</span><span class="p">---</span> <span class="n">org</span><span class="p">.</span><span class="n">jetbrains</span><span class="p">.</span><span class="n">kotlin</span><span class="p">:</span><span class="n">kotlin</span><span class="p">-</span><span class="n">stdlib</span><span class="p">:</span><span class="m">1.4</span><span class="p">.</span><span class="m">20</span> <span class="p">-&gt;</span> <span class="m">1.4</span><span class="p">.</span><span class="m">30</span> <span class="p">(*)</span>
-     <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">fragment</span><span class="p">:</span><span class="n">fragment</span><span class="p">:</span><span class="m">1.3</span><span class="p">.</span><span class="m">0</span>
-     <span class="p">|</span>    <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="k">annotation</span><span class="p">:</span><span class="k">annotation</span><span class="p">:</span><span class="m">1.1</span><span class="p">.</span><span class="m">0</span>
-     <span class="p">|</span>    <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">core</span><span class="p">:</span><span class="n">core</span><span class="p">:</span><span class="m">1.1</span><span class="p">.</span><span class="m">0</span> <span class="p">-&gt;</span> <span class="m">1.3</span><span class="p">.</span><span class="m">2</span> <span class="p">(*)</span>
-     <span class="p">|</span>    <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">collection</span><span class="p">:</span><span class="n">collection</span><span class="p">:</span><span class="m">1.1</span><span class="p">.</span><span class="m">0</span> <span class="p">(*)</span>
-     <span class="p">|</span>    <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">viewpager</span><span class="p">:</span><span class="n">viewpager</span><span class="p">:</span><span class="m">1.0</span><span class="p">.</span><span class="m">0</span>
-     <span class="p">|</span>    <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">loader</span><span class="p">:</span><span class="n">loader</span><span class="p">:</span><span class="m">1.0</span><span class="p">.</span><span class="m">0</span>
-     <span class="p">|</span>    <span class="p">|</span>    <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">lifecycle</span><span class="p">:</span><span class="n">lifecycle</span><span class="p">-</span><span class="n">livedata</span><span class="p">:</span><span class="m">2.0</span><span class="p">.</span><span class="m">0</span> <span class="p">-&gt;</span> <span class="m">2.2</span><span class="p">.</span><span class="m">0</span>
-     <span class="p">|</span>    <span class="p">|</span>    <span class="err">\</span><span class="p">---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">lifecycle</span><span class="p">:</span><span class="n">lifecycle</span><span class="p">-</span><span class="n">viewmodel</span><span class="p">:</span><span class="m">2.0</span><span class="p">.</span><span class="m">0</span> <span class="p">-&gt;</span> <span class="m">2.3</span><span class="p">.</span><span class="m">0</span>
-     <span class="p">|</span>    <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">activity</span><span class="p">:</span><span class="n">activity</span><span class="p">:</span><span class="m">1.2</span><span class="p">.</span><span class="m">0</span>
-     <span class="p">|</span>    <span class="p">|</span>    <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="k">annotation</span><span class="p">:</span><span class="k">annotation</span><span class="p">:</span><span class="m">1.1</span><span class="p">.</span><span class="m">0</span>
-     <span class="p">|</span>    <span class="p">|</span>    <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">core</span><span class="p">:</span><span class="n">core</span><span class="p">:</span><span class="m">1.1</span><span class="p">.</span><span class="m">0</span> <span class="p">-&gt;</span> <span class="m">1.3</span><span class="p">.</span><span class="m">2</span> <span class="p">(*)</span>
-     <span class="p">|</span>    <span class="p">|</span>    <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">lifecycle</span><span class="p">:</span><span class="n">lifecycle</span><span class="p">-</span><span class="n">runtime</span><span class="p">:</span><span class="m">2.3</span><span class="p">.</span><span class="m">0</span> <span class="p">(*)</span>
-     <span class="p">|</span>    <span class="p">|</span>    <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">lifecycle</span><span class="p">:</span><span class="n">lifecycle</span><span class="p">-</span><span class="n">viewmodel</span><span class="p">:</span><span class="m">2.3</span><span class="p">.</span><span class="m">0</span> <span class="p">(*)</span>
-     <span class="p">|</span>    <span class="p">|</span>    <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">savedstate</span><span class="p">:</span><span class="n">savedstate</span><span class="p">:</span><span class="m">1.1</span><span class="p">.</span><span class="m">0</span>
-     <span class="p">|</span>    <span class="p">|</span>    <span class="err">\</span><span class="p">---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">lifecycle</span><span class="p">:</span><span class="n">lifecycle</span><span class="p">-</span><span class="n">viewmodel</span><span class="p">-</span><span class="n">savedstate</span><span class="p">:</span><span class="m">2.3</span><span class="p">.</span><span class="m">0</span>
-     <span class="p">|</span>    <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">lifecycle</span><span class="p">:</span><span class="n">lifecycle</span><span class="p">-</span><span class="n">livedata</span><span class="p">-</span><span class="n">core</span><span class="p">:</span><span class="m">2.3</span><span class="p">.</span><span class="m">0</span> <span class="p">(*)</span>
-     <span class="p">|</span>    <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">lifecycle</span><span class="p">:</span><span class="n">lifecycle</span><span class="p">-</span><span class="n">viewmodel</span><span class="p">:</span><span class="m">2.3</span><span class="p">.</span><span class="m">0</span> <span class="p">(*)</span>
-     <span class="p">|</span>    <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">lifecycle</span><span class="p">:</span><span class="n">lifecycle</span><span class="p">-</span><span class="n">viewmodel</span><span class="p">-</span><span class="n">savedstate</span><span class="p">:</span><span class="m">2.3</span><span class="p">.</span><span class="m">0</span> <span class="p">(*)</span>
-     <span class="p">|</span>    <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">savedstate</span><span class="p">:</span><span class="n">savedstate</span><span class="p">:</span><span class="m">1.1</span><span class="p">.</span><span class="m">0</span> <span class="p">(*)</span>
-     <span class="p">|</span>    <span class="err">\</span><span class="p">---</span> <span class="n">androidx</span><span class="p">.</span><span class="k">annotation</span><span class="p">:</span><span class="k">annotation</span><span class="p">-</span><span class="n">experimental</span><span class="p">:</span><span class="m">1.0</span><span class="p">.</span><span class="m">0</span>
-     <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">core</span><span class="p">:</span><span class="n">core</span><span class="p">-</span><span class="n">ktx</span><span class="p">:</span><span class="m">1.1</span><span class="p">.</span><span class="m">0</span> <span class="p">-&gt;</span> <span class="m">1.3</span><span class="p">.</span><span class="m">2</span> <span class="p">(*)</span>
-     <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">collection</span><span class="p">:</span><span class="n">collection</span><span class="p">-</span><span class="n">ktx</span><span class="p">:</span><span class="m">1.1</span><span class="p">.</span><span class="m">0</span>
-     <span class="p">|</span>    <span class="p">+---</span> <span class="n">org</span><span class="p">.</span><span class="n">jetbrains</span><span class="p">.</span><span class="n">kotlin</span><span class="p">:</span><span class="n">kotlin</span><span class="p">-</span><span class="n">stdlib</span><span class="p">:</span><span class="m">1.3</span><span class="p">.</span><span class="m">20</span> <span class="p">-&gt;</span> <span class="m">1.4</span><span class="p">.</span><span class="m">30</span> <span class="p">(*)</span>
-     <span class="p">|</span>    <span class="err">\</span><span class="p">---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">collection</span><span class="p">:</span><span class="n">collection</span><span class="p">:</span><span class="m">1.1</span><span class="p">.</span><span class="m">0</span> <span class="p">(*)</span>
-     <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">lifecycle</span><span class="p">:</span><span class="n">lifecycle</span><span class="p">-</span><span class="n">livedata</span><span class="p">-</span><span class="n">core</span><span class="p">-</span><span class="n">ktx</span><span class="p">:</span><span class="m">2.3</span><span class="p">.</span><span class="m">0</span>
-     <span class="p">|</span>    <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">lifecycle</span><span class="p">:</span><span class="n">lifecycle</span><span class="p">-</span><span class="n">livedata</span><span class="p">-</span><span class="n">core</span><span class="p">:</span><span class="m">2.3</span><span class="p">.</span><span class="m">0</span> <span class="p">(*)</span>
-     <span class="p">|</span>    <span class="err">\</span><span class="p">---</span> <span class="n">org</span><span class="p">.</span><span class="n">jetbrains</span><span class="p">.</span><span class="n">kotlin</span><span class="p">:</span><span class="n">kotlin</span><span class="p">-</span><span class="n">stdlib</span><span class="p">:</span><span class="m">1.4</span><span class="p">.</span><span class="m">20</span> <span class="p">-&gt;</span> <span class="m">1.4</span><span class="p">.</span><span class="m">30</span> <span class="p">(*)</span>
-     <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">lifecycle</span><span class="p">:</span><span class="n">lifecycle</span><span class="p">-</span><span class="n">viewmodel</span><span class="p">-</span><span class="n">ktx</span><span class="p">:</span><span class="m">2.3</span><span class="p">.</span><span class="m">0</span> <span class="p">(*)</span>
-     <span class="p">+---</span> <span class="n">androidx</span><span class="p">.</span><span class="n">savedstate</span><span class="p">:</span><span class="n">savedstate</span><span class="p">-</span><span class="n">ktx</span><span class="p">:</span><span class="m">1.1</span><span class="p">.</span><span class="m">0</span> <span class="p">(*)</span>
-     <span class="err">\</span><span class="p">---</span> <span class="n">org</span><span class="p">.</span><span class="n">jetbrains</span><span class="p">.</span><span class="n">kotlin</span><span class="p">:</span><span class="n">kotlin</span><span class="p">-</span><span class="n">stdlib</span><span class="p">:</span><span class="m">1.4</span><span class="p">.</span><span class="m">20</span> <span class="p">-&gt;</span> <span class="m">1.4</span><span class="p">.</span><span class="m">30</span> <span class="p">(*)</span>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+--- androidx.fragment:fragment-ktx:1.3.0
+     +--- androidx.activity:activity-ktx:1.2.0
+     |    +--- androidx.activity:activity:1.2.0 (*)
+     |    +--- androidx.core:core-ktx:1.1.0 -&gt; 1.3.2 (*)
+     |    +--- androidx.lifecycle:lifecycle-runtime-ktx:2.3.0
+     |    +--- androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0
+     |    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.3.0 (*)
+     |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.4.20 -&gt; 1.4.30 (*)
+     |    |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1 (*)
+     |    +--- androidx.savedstate:savedstate-ktx:1.1.0
+     |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.4.20 -&gt; 1.4.30 (*)
+     +--- androidx.fragment:fragment:1.3.0
+     |    +--- androidx.annotation:annotation:1.1.0
+     |    +--- androidx.core:core:1.1.0 -&gt; 1.3.2 (*)
+     |    +--- androidx.collection:collection:1.1.0 (*)
+     |    +--- androidx.viewpager:viewpager:1.0.0
+     |    +--- androidx.loader:loader:1.0.0
+     |    |    +--- androidx.lifecycle:lifecycle-livedata:2.0.0 -&gt; 2.2.0
+     |    |    \--- androidx.lifecycle:lifecycle-viewmodel:2.0.0 -&gt; 2.3.0
+     |    +--- androidx.activity:activity:1.2.0
+     |    |    +--- androidx.annotation:annotation:1.1.0
+     |    |    +--- androidx.core:core:1.1.0 -&gt; 1.3.2 (*)
+     |    |    +--- androidx.lifecycle:lifecycle-runtime:2.3.0 (*)
+     |    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.3.0 (*)
+     |    |    +--- androidx.savedstate:savedstate:1.1.0
+     |    |    \--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.0
+     |    +--- androidx.lifecycle:lifecycle-livedata-core:2.3.0 (*)
+     |    +--- androidx.lifecycle:lifecycle-viewmodel:2.3.0 (*)
+     |    +--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.0 (*)
+     |    +--- androidx.savedstate:savedstate:1.1.0 (*)
+     |    \--- androidx.annotation:annotation-experimental:1.0.0
+     +--- androidx.core:core-ktx:1.1.0 -&gt; 1.3.2 (*)
+     +--- androidx.collection:collection-ktx:1.1.0
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.3.20 -&gt; 1.4.30 (*)
+     |    \--- androidx.collection:collection:1.1.0 (*)
+     +--- androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.0
+     |    +--- androidx.lifecycle:lifecycle-livedata-core:2.3.0 (*)
+     |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.4.20 -&gt; 1.4.30 (*)
+     +--- androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0 (*)
+     +--- androidx.savedstate:savedstate-ktx:1.1.0 (*)
+     \--- org.jetbrains.kotlin:kotlin-stdlib:1.4.20 -&gt; 1.4.30 (*)
                                                                                                         
 </code></pre></div></div>
 
