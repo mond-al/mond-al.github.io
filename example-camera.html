@@ -224,7 +224,7 @@ into the {body} of the default.hbs template -->
         <span class="na">android:name=</span><span class="s">"android.permission.WRITE_EXTERNAL_STORAGE"</span>
         <span class="na">android:maxSdkVersion=</span><span class="s">"28"</span> <span class="nt">/&gt;</span>
 </code></pre></div></div>
-<p>사진 촬영과 저장기능을 한다고 해서 WRITE_EXTERNAL_STORAGE가 꼭 필요하지는 않습니다. 하지만, 촬영한 이미지가 media store에 등록되어야 한다면 Android Q미만의 장치에서는 외부 저장소의 쓰기 기능을 사용해야합니다. 가령 사진을 촬영하고 간단한 가공을 위해 파일로 생성하지만, 사용자의 갤러리에 등록하지 않고 기능만 제공하다면 WRITE_EXTERNAL_STORAGE가를 정의할 필요가 없습니다.</p>
+<p>사진 촬영과 저장기능을 한다고 해서 WRITE_EXTERNAL_STORAGE가 꼭 필요하지는 않습니다. 하지만, 촬영한 이미지가 media store에 등록되어야 한다면 Android Q미만의 장치에서는 외부 저장소의 쓰기 기능을 사용해야합니다. 가령 사진을 촬영하고 간단한 가공을 위해 파일로 생성하지만, 사용자의 갤러리에 등록하지 않고 기능만 제공하다면 WRITE_EXTERNAL_STORAGE를 정의할 필요가 없습니다.</p>
 
 <p>그리고 위 구문에서 주의깊게 볼 부분은 <code class="highlighter-rouge">maxSdkVersion="28"</code>입니다. Scoped Storage가 적용된 경우 <code class="highlighter-rouge">WRITE_EXTERNAL_STORAGE</code>를 요청해도 모두 무시되며, 권한없음을 반환하게 됩니다. 때문에 명시적으로 최대 Api level 28 까지만 <em>WRITE_EXTERNAL_STORAGE</em>를 적용합니다.</p>
 
