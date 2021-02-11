@@ -2,6 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>https://mond-al.github.io/about-binding</loc>
+    </url>
+    
+    <url>
+        <loc>https://mond-al.github.io/pollback-capture-uri</loc>
+    </url>
+    
+    <url>
         <loc>https://mond-al.github.io/cache-share</loc>
     </url>
     
