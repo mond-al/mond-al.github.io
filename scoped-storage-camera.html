@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>Scoped storage 예제(카메라 사진촬영)</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <!-- awesome font   -->
+    <script src="https://kit.fontawesome.com/09fc514f86.js" crossorigin="anonymous"></script>
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="안드로이드 개발 로깅." />
+    <link rel="shortcut icon" href="https://mond-al.github.io/assets/images/fav/favicon-96x96.png" type="image/png" />
+    <link rel="canonical" href="https://mond-al.github.io/scoped-storage-camera" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Scoped storage 예제(카메라 사진촬영) | Developer/App/Android/mond &gt; Log</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="Scoped storage 예제(카메라 사진촬영)" />
+<meta name="author" content="jisoo Yang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Target Sdk version에 Api level 30을 적용한 아주 간단한 사진 촬영 - MediaStore 저장 - 보여주기 앱입니다. 앱의 동작이 특별한 것은 없지만, 최대한 군더더기 없이 Scoped Storage 적용에 대한 참고 자료가 되었으면 합니다." />
+<meta property="og:description" content="Target Sdk version에 Api level 30을 적용한 아주 간단한 사진 촬영 - MediaStore 저장 - 보여주기 앱입니다. 앱의 동작이 특별한 것은 없지만, 최대한 군더더기 없이 Scoped Storage 적용에 대한 참고 자료가 되었으면 합니다." />
+<link rel="canonical" href="https://mond-al.github.io/scoped-storage-camera" />
+<meta property="og:url" content="https://mond-al.github.io/scoped-storage-camera" />
+<meta property="og:site_name" content="Developer/App/Android/mond &gt; Log" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-02-10T00:00:00+09:00" />
+<script type="application/ld+json">
+{"url":"https://mond-al.github.io/scoped-storage-camera","headline":"Scoped storage 예제(카메라 사진촬영)","datePublished":"2021-02-10T00:00:00+09:00","dateModified":"2021-02-10T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mond-al.github.io/scoped-storage-camera"},"author":{"@type":"Person","name":"jisoo Yang"},"description":"Target Sdk version에 Api level 30을 적용한 아주 간단한 사진 촬영 - MediaStore 저장 - 보여주기 앱입니다. 앱의 동작이 특별한 것은 없지만, 최대한 군더더기 없이 Scoped Storage 적용에 대한 참고 자료가 되었으면 합니다.","@type":"BlogPosting","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="Developer/App/Android/mond > Log" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Scoped storage 예제(카메라 사진촬영)" />
+    <meta property="og:description" content="Target Sdk version에 Api level 30을 적용한 아주 간단한 사진 촬영 - MediaStore 저장 - 보여주기 앱입니다. 앱의 동작이 특별한 것은 없지만, 최대한 군더더기 없이 Scoped Storage 적용에 대한 참고 자료가 되었으면 합니다. https://github.com/mond-al/example-camera-capture 맥락 이 앱은 카메라 기능을 위한 앱이 아닙니다. 이 앱의 목표는 다음과 같습니다. 안드로이드 앱에서 최소한의" />
+    <meta property="og:url" content="https://mond-al.github.io/scoped-storage-camera" />
+    <meta property="og:image" content="https://mond-al.github.io/assets/images/cover/2021-02-11-scoped-storage-camera-cover.png" />
+    <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta property="article:author" content="https://www.facebook.com/" />
+    <meta property="article:published_time" content="2021-02-10T00:00:00+09:00" />
+    <meta property="article:modified_time" content="2021-02-10T00:00:00+09:00" />
+    <meta property="article:tag" content="Android" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Scoped storage 예제(카메라 사진촬영)" />
+    <meta name="twitter:description" content="Target Sdk version에 Api level 30을 적용한 아주 간단한 사진 촬영 - MediaStore 저장 - 보여주기 앱입니다. 앱의 동작이 특별한 것은 없지만, 최대한 군더더기 없이 Scoped Storage 적용에 대한 참고 자료가 되었으면 합니다. https://github.com/mond-al/example-camera-capture 맥락 이 앱은 카메라 기능을 위한 앱이 아닙니다. 이 앱의 목표는 다음과 같습니다. 안드로이드 앱에서 최소한의" />
+    <meta name="twitter:url" content="https://mond-al.github.io/" />
+    <meta name="twitter:image" content="https://mond-al.github.io/assets/images/cover/2021-02-11-scoped-storage-camera-cover.png" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Developer/App/Android/mond > Log" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Android" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Developer/App/Android/mond > Log",
+        "logo": "https://mond-al.github.io/"
+    },
+    "url": "https://mond-al.github.io/scoped-storage-camera",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://mond-al.github.io/assets/images/cover/2021-02-11-scoped-storage-camera-cover.png",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://mond-al.github.io/scoped-storage-camera"
+    },
+    "description": "Target Sdk version에 Api level 30을 적용한 아주 간단한 사진 촬영 - MediaStore 저장 - 보여주기 앱입니다. 앱의 동작이 특별한 것은 없지만, 최대한 군더더기 없이 Scoped Storage 적용에 대한 참고 자료가 되었으면 합니다. https://github.com/mond-al/example-camera-capture 맥락 이 앱은 카메라 기능을 위한 앱이 아닙니다. 이 앱의 목표는 다음과 같습니다. 안드로이드 앱에서 최소한의"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="Scoped storage 예제(카메라 사진촬영)" href="/feed.xml" />
+
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+<!-- awesome font   -->
+<script src="https://kit.fontawesome.com/09fc514f86.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/assets/built/syntax.css">
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="https://mond-al.github.io/">Developer/App/Android/mond > Log</a>
+            
+        
+        
+            <!--메뉴 네비바 -->
+<ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-getting-started" role="menuitem"><a href="/tag/android/">Android</a></li>
+    <li class="nav-try-ghost" role="menuitem"><a href="/tag/android/">Project</a></li>
+</ul>
+
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+            
+        </div>
+        
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full  tag-android tag-scoped-storage tag-camera  ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="10 February 2021">10 February 2021</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='/tag/android/'>ANDROID</a>,
+                            
+                        
+                            
+                               <a href='/tag/scoped-storage/'>SCOPED STORAGE</a>,
+                            
+                        
+                            
+                               <a href='/tag/camera/'>CAMERA</a>
+                            
+                        
+                    
+                </section>
+                <h1 class="post-full-title">Scoped storage 예제(카메라 사진촬영)</h1>
+            </header>
+
+<!--            -->
+<!--            <figure class="post-full-image" style="background-image: url(/assets/images/cover/2021-02-11-scoped-storage-camera-cover.png)">-->
+<!--            </figure>-->
+<!--            -->
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <p>Target Sdk version에 Api level 30을 적용한 아주 간단한 사진 촬영 - MediaStore 저장 - 보여주기 앱입니다. 앱의 동작이 특별한 것은 없지만, 최대한 군더더기 없이 Scoped Storage 적용에 대한 참고 자료가 되었으면 합니다.</p>
+
+<p><a href="https://github.com/mond-al/example-camera-capture">https://github.com/mond-al/example-camera-capture</a></p>
+
+<h3 id="맥락">맥락</h3>
+
+<p>이 앱은 카메라 기능을 위한 앱이 아닙니다. 이 앱의 목표는 다음과 같습니다.</p>
+
+<ul>
+  <li>안드로이드 앱에서 최소한의 permission으로 어떻게 사진촬영/저장 기능을 제공하는지 보여줍니다.</li>
+  <li>Android 7(Nougat)이후에 필수로 요구되는 FileProvider를 이용한 사진 촬영 요청 및 Media Store 등록합니다.</li>
+  <li>Android 10(Q)이후 필수로 요구되는 Scoped storage일때 사진 촬영 요청 및 Media Store 등록합니다. (targetSdkVersion이 30.)</li>
+  <li>위의 기능을 통해 안드로이드 디바이스, 미디어 파일을 다루는 방법의 변화를 쉽게 이해 할 수 있도록 합니다.</li>
+</ul>
+
+<h3 id="manifest-살펴보기">manifest 살펴보기</h3>
+<p>먼저 살펴볼 부분은 permission부분입니다.</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;uses-permission</span>
+        <span class="na">android:name=</span><span class="s">"android.permission.WRITE_EXTERNAL_STORAGE"</span>
+        <span class="na">android:maxSdkVersion=</span><span class="s">"28"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+<p>사진 촬영과 저장기능을 한다고 해서 WRITE_EXTERNAL_STORAGE가 꼭 필요하지는 않습니다. 하지만, 촬영한 이미지가 media store에 등록되어야 한다면 Android Q미만의 장치에서는 외부 저장소의 쓰기 기능을 사용해야합니다. 가령 사진을 촬영하고 간단한 가공을 위해 파일로 생성하지만, 앱에서만 사용하고 사용자의 갤러리에 등록하지 않아야하는 기능만 제공하다면 위의 라인은 필요하지 않습니다.</p>
+
+<p>그리고 위 구문에서 주의깊게 볼 부분은 <code class="highlighter-rouge">maxSdkVersion="28"</code>입니다. Scoped Storage가 적용된 경우 <code class="highlighter-rouge">WRITE_EXTERNAL_STORAGE</code>를 요청해도 모두 무시되며, 권한없음을 반환하게 됩니다. 때문에 명시적으로 최대 Api level 28 까지만 <em>WRITE_EXTERNAL_STORAGE</em>를 적용합니다.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;provider</span>
+    <span class="na">android:name=</span><span class="s">"androidx.core.content.FileProvider"</span>
+    <span class="na">android:authorities=</span><span class="s">"${applicationId}.fileprovider"</span>
+    <span class="na">android:exported=</span><span class="s">"false"</span>
+    <span class="na">android:grantUriPermissions=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta-data</span>
+        <span class="na">android:name=</span><span class="s">"android.support.FILE_PROVIDER_PATHS"</span>
+        <span class="na">android:resource=</span><span class="s">"@xml/file_paths"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/provider&gt;</span>
+
+</code></pre></div></div>
+<p>applicaionId에 “.fileprovider”를 붙인 authorities를 명시하는 구문입니다. Android 7이후부터는 Intent를 통해 파일 경로를 넘겨줄 때 file provider를 이용해야합니다. 이때 전달 할 수 있는 파일의 범주는 <code class="highlighter-rouge">android:resource="@xml/file_paths"</code>의 file_paths.xml 파일에서 관리하게 됩니다.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;path&gt;</span>
+    <span class="nt">&lt;cache-path</span> <span class="na">name=</span><span class="s">"files"</span> <span class="na">path=</span><span class="s">"."</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/path&gt;</span>
+</code></pre></div></div>
+
+<p>위와 같이 정의하여 internal storage의 cache영역을 file provider로 제공 할 수 있게 됩니다. internal storage나 다른 영역을 정의하고 싶다면 <a href="2021-02-08-cache-share">File Provider Path</a>를 참고하시기 바랍니다.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;queries&gt;</span>
+    <span class="nt">&lt;intent&gt;</span>
+        <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">"android.media.action.IMAGE_CAPTURE"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/intent&gt;</span>
+<span class="nt">&lt;/queries&gt;</span>
+</code></pre></div></div>
+
+<p>Android 11부터는 Manifest에 정의된 action을 정의해야 합니다. 주의 할 점은 <queries>는 <application>과 동일한 Depth에 정의되야야합니다. 만약 queries에 정의하지 않으면 `Intent.resolveActivity()`를 호출했을때 항상 null을 반환합니다. 이는 Android 11부터 보여지는 강력한 보안정책과 관련있습니다. 예전에는 이 앱이 어떤 인텐트를 처리 할 수 있는지를 명시하는 "기능"적이 정보만 담고 있었다면, 지금은 이 앱이 어떤 요청을 할 것인지 설치전 부터 명세가 가능해 집니다. 이런 기조를 보면 Apple AppStore처럼 Google Play도 앞으로는 등록 과정이나 검수 과정이 꽤 험난해 질 것 같습니다.</application></queries></p>
+
+<h3 id="mainactivitykt">MainActivity.kt</h3>
+
+<p>사실상 이 앱의 모든 기능이 정의 되어 있는 부분입니다. 최대한 심플하게 구현했기 때문에 코루틴이나 RX 또는 쓰레드 컨트롤은 과감하게 생략하였습니다.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">private</span> <span class="k">fun</span> <span class="nf">doCapture</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">val</span> <span class="py">permissionList</span><span class="p">:</span> <span class="n">Array</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">getMustRequiredPermissions</span><span class="p">()</span> <span class="c1">// (1)
+</span>    <span class="k">when</span> <span class="p">{</span>
+        <span class="n">shouldShowRequestPermissionRationale</span><span class="p">(</span><span class="n">permissionList</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="p">{</span>    <span class="c1">// (2)
+</span>            <span class="n">Toast</span><span class="p">.</span><span class="n">makeText</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s">"must permission(s)"</span><span class="p">,</span> <span class="n">Toast</span><span class="p">.</span><span class="n">LENGTH_SHORT</span><span class="p">).</span><span class="n">show</span><span class="p">()</span>
+        <span class="p">}</span>
+        <span class="n">getNotGrantedPermissions</span><span class="p">(</span><span class="n">permissionList</span><span class="p">).</span><span class="n">isNotEmpty</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="p">{</span>   <span class="c1">// (3)
+</span>            <span class="n">ActivityCompat</span><span class="p">.</span><span class="n">requestPermissions</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">permissionList</span><span class="p">,</span> <span class="n">RequestCode</span><span class="p">.</span><span class="n">CapturePermissions</span><span class="p">.</span><span class="n">ordinal</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="p">-&gt;</span> <span class="p">{</span>
+            <span class="n">requestCapture</span><span class="p">()</span> <span class="c1">// (4)
+</span>        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>(1) Android 10이상에서는 권한이 필요 없습니다. 때문에 빌드 버전에 따라 필요한 권한을 분기합니다.
+(2) 명시적으로 거부된 권한이 있으면, 더 이상 진행 할 수 없음을 사용자에게 알립니다.
+(3) 아직 거부 또는 허용되지 않은 권한이 있다면 요청 합니다.
+(4) 권한에 문제가 없다면 실제 촬영 요청 코드로 진입합니다.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">private</span> <span class="kd">var</span> <span class="py">extraOutputFile</span><span class="p">:</span> <span class="n">File</span><span class="p">?</span> <span class="p">=</span> <span class="k">null</span>  <span class="c1">// (1)
+</span><span class="k">private</span> <span class="k">fun</span> <span class="nf">requestCapture</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">val</span> <span class="py">takePictureIntent</span> <span class="p">=</span> <span class="n">Intent</span><span class="p">(</span><span class="n">MediaStore</span><span class="p">.</span><span class="n">ACTION_IMAGE_CAPTURE</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">takePictureIntent</span><span class="p">.</span><span class="n">resolveActivity</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">packageManager</span><span class="p">)</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// (2)
+</span>        <span class="kd">val</span> <span class="py">dateTime</span> <span class="p">=</span> <span class="n">SimpleDateFormat</span><span class="p">(</span><span class="s">"yyyyMMdd_HHmmss"</span><span class="p">,</span> <span class="n">Locale</span><span class="p">.</span><span class="n">US</span><span class="p">).</span><span class="n">format</span><span class="p">(</span><span class="n">Date</span><span class="p">())</span>
+        <span class="n">extraOutputFile</span> <span class="p">=</span> <span class="n">File</span><span class="p">(</span><span class="n">cacheDir</span><span class="p">,</span> <span class="s">"${dateTime}.jpg"</span><span class="p">)</span>                <span class="c1">// (3)
+</span>        <span class="kd">val</span> <span class="py">uri</span> <span class="p">=</span> <span class="n">FileProvider</span><span class="p">.</span><span class="n">getUriForFile</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s">"$packageName.fileprovider"</span><span class="p">,</span> <span class="n">extraOutputFile</span><span class="o">!!</span><span class="p">)</span> <span class="c1">// (4)
+</span>        <span class="n">takePictureIntent</span><span class="p">.</span><span class="n">putExtra</span><span class="p">(</span><span class="n">MediaStore</span><span class="p">.</span><span class="n">EXTRA_OUTPUT</span><span class="p">,</span> <span class="n">uri</span><span class="p">)</span>
+        <span class="n">startActivityForResult</span><span class="p">(</span><span class="n">takePictureIntent</span><span class="p">,</span> <span class="n">RequestCode</span><span class="p">.</span><span class="n">Capture</span><span class="p">.</span><span class="n">ordinal</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>(1) 생성한 내부저장소 파일의 경로를 저장하기 위해 불가피하게 전역변수를 추가합니다. 
+(2) Android 11(R)에서 manifest에 정의되어 있는 queries-intent-action항목이 있기 때문에 원하는 결과를 받아 올 수 있습니다.
+(3) ACTION_IMAGE_CAPTURE는 onActivityResult에서 인자로 넘어오는 intent에서 <code class="highlighter-rouge">MediaStore.EXTRA_OUTPUT</code>로 요청 했던 uri를 다시 받아 올수 없습니다. 참고로 ACTION_VIDEO_CAPTURE는 onActivityResult에서 넘어오는 <code class="highlighter-rouge">intent.data</code>를 이용 할 수 있습니다. 
+(4) FileProvider.getUriForFile를 이용하여 FileProvider가 처리 할 수 있는 uri를 생성합니다.<br />
+    ex) content://com.al.mond.example.camera.fileprovider/files/20210212_023102.jpg
+    예제에서 <code class="highlighter-rouge">com.al.mond.example.camera.fileprovider</code>가 authority입니다.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">RequestCode</span><span class="p">.</span><span class="n">Capture</span><span class="p">.</span><span class="n">ordinal</span> <span class="p">-&gt;</span> <span class="p">{</span>
+    <span class="n">extraOutputFile</span><span class="o">?.</span><span class="n">let</span> <span class="p">{</span> <span class="n">originalCapturedImageFile</span> <span class="p">-&gt;</span>
+        <span class="kd">val</span> <span class="py">contentValues</span> <span class="p">=</span> <span class="n">ContentValues</span><span class="p">().</span><span class="n">apply</span> <span class="p">{</span>
+            <span class="n">put</span><span class="p">(</span><span class="n">MediaStore</span><span class="p">.</span><span class="n">Images</span><span class="p">.</span><span class="n">Media</span><span class="p">.</span><span class="n">TITLE</span><span class="p">,</span> <span class="n">originalCapturedImageFile</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+            <span class="n">put</span><span class="p">(</span><span class="n">MediaStore</span><span class="p">.</span><span class="n">Images</span><span class="p">.</span><span class="n">Media</span><span class="p">.</span><span class="n">SIZE</span><span class="p">,</span> <span class="n">originalCapturedImageFile</span><span class="p">.</span><span class="n">length</span><span class="p">())</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">Build</span><span class="p">.</span><span class="n">VERSION</span><span class="p">.</span><span class="n">SDK_INT</span> <span class="p">&gt;=</span> <span class="n">Build</span><span class="p">.</span><span class="n">VERSION_CODES</span><span class="p">.</span><span class="n">Q</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">contentValues</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="n">MediaStore</span><span class="p">.</span><span class="n">Images</span><span class="p">.</span><span class="n">Media</span><span class="p">.</span><span class="n">RELATIVE_PATH</span><span class="p">,</span> <span class="n">Environment</span><span class="p">.</span><span class="n">DIRECTORY_DCIM</span><span class="p">)</span> <span class="p">(</span><span class="m">1</span><span class="p">)</span>
+            <span class="n">contentValues</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="n">MediaStore</span><span class="p">.</span><span class="n">Images</span><span class="p">.</span><span class="n">Media</span><span class="p">.</span><span class="n">IS_PENDING</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span>   <span class="c1">// (2)
+</span>            <span class="kd">val</span> <span class="py">contentUri</span> <span class="p">=</span> <span class="n">contentResolver</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">MediaStore</span><span class="p">.</span><span class="n">Images</span><span class="p">.</span><span class="n">Media</span><span class="p">.</span><span class="n">EXTERNAL_CONTENT_URI</span><span class="p">,</span> <span class="n">contentValues</span><span class="p">)</span>  <span class="c1">// (3)
+</span>            <span class="k">if</span> <span class="p">(</span><span class="n">contentUri</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">contentResolver</span><span class="p">.</span><span class="n">openFileDescriptor</span><span class="p">(</span><span class="n">contentUri</span><span class="p">,</span> <span class="s">"w"</span><span class="p">)</span><span class="o">?.</span><span class="n">use</span> <span class="p">{</span> <span class="n">pfd</span> <span class="p">-&gt;</span>
+                    <span class="kd">val</span> <span class="py">outputStream</span> <span class="p">=</span> <span class="n">FileOutputStream</span><span class="p">(</span><span class="n">pfd</span><span class="p">.</span><span class="n">fileDescriptor</span><span class="p">)</span>
+                    <span class="n">copyFromTo</span><span class="p">(</span><span class="n">FileInputStream</span><span class="p">(</span><span class="n">extraOutputFile</span><span class="p">),</span> <span class="n">outputStream</span><span class="p">)</span>
+                    <span class="n">contentValues</span><span class="p">.</span><span class="n">clear</span><span class="p">()</span>
+                    <span class="n">contentValues</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="n">MediaStore</span><span class="p">.</span><span class="n">Images</span><span class="p">.</span><span class="n">Media</span><span class="p">.</span><span class="n">IS_PENDING</span><span class="p">,</span> <span class="m">0</span><span class="p">)</span>  <span class="c1">// (4)
+</span>                    <span class="n">contentResolver</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="n">contentUri</span><span class="p">,</span> <span class="n">contentValues</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="k">null</span><span class="p">)</span>
+                <span class="p">}</span>
+                <span class="n">viewModel</span><span class="p">.</span><span class="n">uri</span><span class="p">.</span><span class="n">value</span> <span class="p">=</span> <span class="n">contentUri</span>
+            <span class="p">}</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="kd">val</span> <span class="py">externalFile</span> <span class="p">=</span> <span class="n">File</span><span class="p">(</span><span class="n">Environment</span><span class="p">.</span><span class="n">getExternalStoragePublicDirectory</span><span class="p">(</span><span class="n">Environment</span><span class="p">.</span><span class="n">DIRECTORY_DCIM</span><span class="p">),</span> <span class="n">originalCapturedImageFile</span><span class="p">.</span><span class="n">name</span><span class="p">)</span> <span class="c1">// (A)
+</span>            <span class="n">copyFromTo</span><span class="p">(</span><span class="n">FileInputStream</span><span class="p">(</span><span class="n">extraOutputFile</span><span class="p">),</span> <span class="n">FileOutputStream</span><span class="p">(</span><span class="n">externalFile</span><span class="p">))</span>
+            <span class="n">contentValues</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="n">MediaStore</span><span class="p">.</span><span class="n">Images</span><span class="p">.</span><span class="n">Media</span><span class="p">.</span><span class="n">DATA</span><span class="p">,</span> <span class="n">externalFile</span><span class="p">.</span><span class="n">absolutePath</span><span class="p">)</span>   <span class="c1">// (B)
+</span>            <span class="kd">val</span> <span class="py">contentUri</span> <span class="p">=</span> <span class="n">contentResolver</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">MediaStore</span><span class="p">.</span><span class="n">Images</span><span class="p">.</span><span class="n">Media</span><span class="p">.</span><span class="n">EXTERNAL_CONTENT_URI</span><span class="p">,</span> <span class="n">contentValues</span><span class="p">)</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">contentUri</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">viewModel</span><span class="p">.</span><span class="n">uri</span><span class="p">.</span><span class="n">value</span> <span class="p">=</span> <span class="n">contentUri</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">originalCapturedImageFile</span><span class="p">.</span><span class="n">delete</span><span class="p">())</span>
+            <span class="n">Toast</span><span class="p">.</span><span class="n">makeText</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s">"Removed the garbage file. "</span><span class="p">,</span> <span class="n">Toast</span><span class="p">.</span><span class="n">LENGTH_SHORT</span><span class="p">).</span><span class="n">show</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>(1) RELATIVE_PATH에  Environment.DIRECTORY_DCIM(“DCIM”)을 정의합니다. 단순히 촬영된 사진이기 때문에 DIRECTORY_PICTURES보다 적합해 보입니다. DIRECTORY_PICTURES에 저장되어도 기능상으로는 관계 없지만 맥락에 맞처서 사용하는것이 좋겠습니다.
+(2) 아직 외부저장소에 파일이 복사되지 않았기 때문에 Media Store를 통해 외부에 공개되지 않도록 비트 플래그로 막아둡니다. 혹시 파일을 복사하는 도중에 어떠한 문제로 인해 중단된다면, Media store에 파일 정보만 존재하는 쓰래기 row를 남기게 됩니다. 이럴때는 명확하게 contentResolver.delete를 이용하여 명확하게 제거 하는 로직이 필요 할 것 입니다. 
+(3)contentResolver.insert를 통해 먼저 Media store에 row를 추가합니다. 이 앱에서 쓰기권한이 추가된 파일의 경로를 uri로 전달 받게 됩니다. 실제 파일의 위치(absolutePath)는 알 수 없습니다.</p>
+
+<p>(A) Android 10(Q)미만의 디바이스에서는 File을 통해 실제 경로에 파일을 생성합니다. 여기서 주의 할 점은 <code class="highlighter-rouge">Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM)</code> 와 <code class="highlighter-rouge">context.getExternalFilesDir(Environment.DIRECTORY_DCIM)</code>는 완전히 다른 경로를 반환하기 때문에 헷갈려서는 안됩니다.(<a href="2021-02-02-file-write">안드로이드 파일 쓰기</a>를 참고.)<br />
+(B) 직접 외부저장소의 미디어 영역에 파일을 복사한 이후에 contentResolver.insert를 수행하여 Media Store에 row를 추가합니다. DATA 필드에 실제 파일의 위치(absolutePath)를 명시해야 합니다.</p>
+
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                        <section class="author-card">
+                            
+                                <img class="author-profile-image" src="/assets/images/mond.jpg" alt="mond" />
+                            
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="/author/mond">jisoo Yang</a></h4>
+                                
+                                    <p>Android application developer</p>
+                                
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="/author/mond">Read More</a>
+                        </div>
+                    
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+                <section class="post-full-comments">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        var disqus_config = function () {
+                            this.page.url = 'https://mond-al.github.io/scoped-storage-camera';
+                            this.page.identifier = '/scoped-storage-camera';
+                            this.page.title = 'Scoped storage 예제(카메라 사진촬영)';
+                        };
+                        (function() {
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://mond-al.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                </section>
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+                
+                
+                
+                
+                    <article class="read-next-card"
+                        
+                            style="background-image: url(/assets/images/blog-cover.jpg)"
+                        
+                    >
+                        <header class="read-next-card-header">
+                            <small class="read-next-card-header-sitetitle">&mdash; Developer/App/Android/mond > Log &mdash;</small>
+                            
+                                <h3 class="read-next-card-header-title"><a href="/tag/android/">Android</a></h3>
+                            
+                        </header>
+                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                        <div class="read-next-card-content">
+                            <ul>
+                                
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/about-binding">Binding</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/pollback-capture-uri">File Provider Path</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/cache-share">File Provider Path</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                            </ul>
+                        </div>
+                        <footer class="read-next-card-footer">
+                            <a href="/tag/android/">
+                                
+                                    See all 9 posts  →
+                                
+                            </a>
+                        </footer>
+                    </article>
+                
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/about-binding">
+                <div class="post-card-image" style="background-image: url(/assets/images/cover/common_solution.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/about-binding">
+                <header class="post-card-header">
+                    
+                        
+                            
+                               <span class="post-card-tags">Android</span>
+                            
+                        
+                            
+                               <span class="post-card-tags">File provider</span>
+                            
+                        
+                            
+                                <span class="post-card-tags">Cache</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Binding</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/mond.jpg" alt="jisoo Yang" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/mond/">jisoo Yang</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="https://mond-al.github.io/">
+            
+            <span>Developer/App/Android/mond > Log</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">Scoped storage 예제(카메라 사진촬영)</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Scoped+storage+%EC%98%88%EC%A0%9C%28%EC%B9%B4%EB%A9%94%EB%9D%BC+%EC%82%AC%EC%A7%84%EC%B4%AC%EC%98%81%29&amp;url=https://mond-al.github.io/scoped-storage-camera"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://mond-al.github.io/scoped-storage-camera"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="https://mond-al.github.io/">Developer/App/Android/mond > Log</a> &copy; 2021</section>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js" integrity="sha512-9GIHU4rPKUMvNOHFOer5Zm2zHnZOjayOO3lZpokhhCtgt8FNlNiW/bb7kl0R5ZXfCDVPcQ8S4oBdNs92p5Nm2w==" crossorigin="anonymous"></script>
+
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GGKL7TBGBY"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-GGKL7TBGBY');
+</script>
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+</html>

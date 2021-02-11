@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>https://mond-al.github.io/scoped-storage-camera</loc>
+    </url>
+    
+    <url>
         <loc>https://mond-al.github.io/about-binding</loc>
     </url>
     
@@ -268,7 +272,7 @@
     
     
     <url>
-        <loc>https://mond-al.github.io/tag/write/</loc>
+        <loc>https://mond-al.github.io/tag/scoped-storage/</loc>
     </url>
     
     
@@ -289,6 +293,16 @@
     
     <url>
         <loc>https://mond-al.github.io/tag/cache/</loc>
+    </url>
+    
+    
+    
+    
+    
+    
+    
+    <url>
+        <loc>https://mond-al.github.io/tag/camera/</loc>
     </url>
     
     

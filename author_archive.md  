@@ -185,10 +185,13 @@ into the {body} of the default.hbs template -->
   	<li><a href="#R" class="tag"><span class="term alltags">R</span> <span class="count alltags">1</span></a></li>
   
     
-  	<li><a href="#android" class="tag"><span class="term alltags">android</span> <span class="count alltags">9</span></a></li>
+  	<li><a href="#android" class="tag"><span class="term alltags">android</span> <span class="count alltags">10</span></a></li>
   
     
   	<li><a href="#cache" class="tag"><span class="term alltags">cache</span> <span class="count alltags">3</span></a></li>
+  
+    
+  	<li><a href="#camera" class="tag"><span class="term alltags">camera</span> <span class="count alltags">1</span></a></li>
   
     
   	<li><a href="#dependency" class="tag"><span class="term alltags">dependency</span> <span class="count alltags">1</span></a></li>
@@ -221,6 +224,9 @@ into the {body} of the default.hbs template -->
   	<li><a href="#recyclerview" class="tag"><span class="term alltags">recyclerview</span> <span class="count alltags">1</span></a></li>
   
     
+  	<li><a href="#scoped storage" class="tag"><span class="term alltags">scoped storage</span> <span class="count alltags">2</span></a></li>
+  
+    
   	<li><a href="#sdkversion30" class="tag"><span class="term alltags">sdkversion30</span> <span class="count alltags">1</span></a></li>
   
     
@@ -231,9 +237,6 @@ into the {body} of the default.hbs template -->
   
     
   	<li><a href="#u" class="tag"><span class="term alltags">u</span> <span class="count alltags">1</span></a></li>
-  
-    
-  	<li><a href="#write" class="tag"><span class="term alltags">write</span> <span class="count alltags">1</span></a></li>
   
 </ul>
 
@@ -275,6 +278,9 @@ into the {body} of the default.hbs template -->
 	<article>
 	<h2 id="android" class="tag-heading">ANDROID</h2>
 		<ul>
+    
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/scoped-storage-camera" target="_blank" title="Scoped storage 예제(카메라 사진촬영)">Scoped storage 예제(카메라 사진촬영)</a></li> -->
+      <li class="entry-title"><a href="/scoped-storage-camera" target="_blank" title="Scoped storage 예제(카메라 사진촬영)">Scoped storage 예제(카메라 사진촬영)</a></li>
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/about-binding" target="_blank" title="Binding">Binding</a></li> -->
       <li class="entry-title"><a href="/about-binding" target="_blank" title="Binding">Binding</a></li>
@@ -319,6 +325,17 @@ into the {body} of the default.hbs template -->
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/cache-share" target="_blank" title="File Provider Path">File Provider Path</a></li> -->
       <li class="entry-title"><a href="/cache-share" target="_blank" title="File Provider Path">File Provider Path</a></li>
+    
+		</ul>
+	</article><!-- /.hentry -->
+
+  
+	<article>
+	<h2 id="camera" class="tag-heading">CAMERA</h2>
+		<ul>
+    
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/scoped-storage-camera" target="_blank" title="Scoped storage 예제(카메라 사진촬영)">Scoped storage 예제(카메라 사진촬영)</a></li> -->
+      <li class="entry-title"><a href="/scoped-storage-camera" target="_blank" title="Scoped storage 예제(카메라 사진촬영)">Scoped storage 예제(카메라 사진촬영)</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -444,6 +461,20 @@ into the {body} of the default.hbs template -->
 
   
 	<article>
+	<h2 id="scoped storage" class="tag-heading">SCOPED STORAGE</h2>
+		<ul>
+    
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/scoped-storage-camera" target="_blank" title="Scoped storage 예제(카메라 사진촬영)">Scoped storage 예제(카메라 사진촬영)</a></li> -->
+      <li class="entry-title"><a href="/scoped-storage-camera" target="_blank" title="Scoped storage 예제(카메라 사진촬영)">Scoped storage 예제(카메라 사진촬영)</a></li>
+    
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/file-write" target="_blank" title="안드로이드 파일 쓰기">안드로이드 파일 쓰기</a></li> -->
+      <li class="entry-title"><a href="/file-write" target="_blank" title="안드로이드 파일 쓰기">안드로이드 파일 쓰기</a></li>
+    
+		</ul>
+	</article><!-- /.hentry -->
+
+  
+	<article>
 	<h2 id="sdkversion30" class="tag-heading">SDKVERSION30</h2>
 		<ul>
     
@@ -482,17 +513,6 @@ into the {body} of the default.hbs template -->
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/about-reboot" target="_blank" title="reboot">reboot</a></li> -->
       <li class="entry-title"><a href="/about-reboot" target="_blank" title="reboot">reboot</a></li>
-    
-		</ul>
-	</article><!-- /.hentry -->
-
-  
-	<article>
-	<h2 id="write" class="tag-heading">WRITE</h2>
-		<ul>
-    
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/file-write" target="_blank" title="안드로이드 파일 쓰기">안드로이드 파일 쓰기</a></li> -->
-      <li class="entry-title"><a href="/file-write" target="_blank" title="안드로이드 파일 쓰기">안드로이드 파일 쓰기</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
