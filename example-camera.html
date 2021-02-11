@@ -247,7 +247,7 @@ into the {body} of the default.hbs template -->
 <span class="nt">&lt;/path&gt;</span>
 </code></pre></div></div>
 
-<p>위와 같이 정의하여 internal storage의 cache영역을 file provider로 제공 할 수 있게 됩니다. internal storage나 다른 영역을 정의하고 싶다면 <a href="2021-02-08-cache-share">File Provider Path</a>를 참고하시기 바랍니다.</p>
+<p>위와 같이 정의하여 internal storage의 cache영역을 file provider로 제공 할 수 있게 됩니다. internal storage나 다른 영역을 정의하고 싶다면 <a href="cache-share">File Provider Path</a>를 참고하시기 바랍니다.</p>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;queries&gt;</span>
     <span class="nt">&lt;intent&gt;</span>
@@ -339,7 +339,7 @@ into the {body} of the default.hbs template -->
 (2) 아직 외부저장소에 파일이 복사되지 않았기 때문에 Media Store를 통해 외부에 공개되지 않도록 비트 플래그로 막아둡니다. 혹시 파일을 복사하는 도중에 어떠한 문제로 인해 중단된다면, Media store에 파일 정보만 존재하는 쓰래기 row를 남기게 됩니다. 이럴때는 contentResolver.delete를 이용하여 명확하게 제거 하는 로직이 있다면 쓰레기 데이터를 줄 일 수 있을 것 입니다.<br />
 (3)contentResolver.insert를 통해 먼저 Media store에 row를 추가합니다. 이 앱에서 쓰기권한이 추가된 파일의 경로를 uri로 전달 받게 됩니다. 실제 파일의 위치(absolutePath)는 알 수 없습니다.</p>
 
-<p>(A) Android 10(Q)미만의 디바이스에서는 File을 통해 실제 경로에 파일을 생성합니다. 여기서 주의 할 점은 <code class="highlighter-rouge">Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM)</code> 와 <code class="highlighter-rouge">context.getExternalFilesDir(Environment.DIRECTORY_DCIM)</code>는 완전히 다른 경로를 반환하기 때문에 헷갈려서는 안됩니다.(<a href="2021-02-02-file-write">안드로이드 파일 쓰기</a>를 참고.)<br />
+<p>(A) Android 10(Q)미만의 디바이스에서는 File을 통해 실제 경로에 파일을 생성합니다. 여기서 주의 할 점은 <code class="highlighter-rouge">Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM)</code> 와 <code class="highlighter-rouge">context.getExternalFilesDir(Environment.DIRECTORY_DCIM)</code>는 완전히 다른 경로를 반환하기 때문에 헷갈려서는 안됩니다.(<a href="file-write">안드로이드 파일 쓰기</a>를 참고.)<br />
 (B) 직접 외부저장소의 미디어 영역에 파일을 복사한 이후에 contentResolver.insert를 수행하여 Media Store에 row를 추가합니다. DATA 필드에 실제 파일의 위치(absolutePath)를 명시해야 합니다.</p>
 
 
