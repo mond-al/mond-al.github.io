@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/test/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-12T17:42:21+09:00</updated>
+  <updated>2021-02-12T20:07:52+09:00</updated>
   <id>https://mond-al.github.io/tag/test/feed.xml</id>
 
   
@@ -39,9 +39,18 @@
       <id>https://mond-al.github.io/test-image</id>
       <content type="html" xml:base="https://mond-al.github.io/test-image">&lt;p&gt;기능 테스트를 하다 보면 이미지 소스들이 필요한 경우가 있습니다. 때로는 예제앱에 이미지를 포함하고 싶을때 적당한 이미지를 선택하는것도 은근 신경쓰이는 일 입니다.&lt;/p&gt;
 
-&lt;p&gt;그래서 준비해봤습니다! 간편하게 개발용 테스트 이미지를 다운받을 수 있는 사이트입니다. 저작권문제도 없습니다.&lt;/p&gt;
+&lt;h2 id=&quot;다양한-사이즈로-11000까지-숫자가-적혀있는-테스트-이미지-다운로드&quot;&gt;다양한 사이즈로 1~1000까지 숫자가 적혀있는 테스트 이미지 다운로드&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;assets/images/forTest/random/random1000.zip&quot;&gt;Download&lt;/a&gt;&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;간단한 코딩으로 직접 만든 테스트용 이미지입니다.&lt;/li&gt;
+    &lt;li&gt;폭(1024, 1440, 2550), 높이(800, 1200, 1600) 조합으로 만들어진 랜덤크기 이미지입니다.&lt;/li&gt;
+    &lt;li&gt;배경색과 숫자가 쓰여진 색상은 랜덤이며 폰트는 배민한나체를 사용했습니다.&lt;/li&gt;
+    &lt;li&gt;왼쪽상단에는 이미지의 크기가 검은색으로 쓰여져있습니다.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
 
-&lt;h2 id=&quot;여러장의-이미지가-필요할-때&quot;&gt;여러장의 이미지가 필요할 때&lt;/h2&gt;
+&lt;h2 id=&quot;여러장의-사진-이미지가-필요할-때&quot;&gt;여러장의 사진 이미지가 필요할 때&lt;/h2&gt;
 &lt;blockquote&gt;
   &lt;p&gt;&lt;a href=&quot;http://unsample.net&quot;&gt;http://unsample.net&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -64,7 +73,6 @@
 
 &lt;ul&gt;
   &lt;li&gt;width x height, 배경색, 글자색, format을 지정하면 바로 이미지로 다운로드 가능.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;혹시 한번에 1부터 1000?까지 쓰여진 이미지를 만들어서 다운받을 수 있는 곳은 없을까요? 제보 부탁드립니다. 🙇‍♂️&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;</content>
 
       
