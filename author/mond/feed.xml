@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/author/mond/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-12T20:22:34+09:00</updated>
+  <updated>2021-02-12T20:48:25+09:00</updated>
   <id>https://mond-al.github.io/author/mond/feed.xml</id>
 
   
@@ -1553,19 +1553,25 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
       <content type="html" xml:base="https://mond-al.github.io/test-image">&lt;p&gt;기능 테스트를 하다 보면 이미지 소스들이 필요한 경우가 있습니다. 때로는 예제앱에 이미지를 포함하고 싶을때 적당한 이미지를 선택하는것도 은근 신경쓰이는 일 입니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;랜덤-사이즈로-11000가-쓰여진-테스트-이미지&quot;&gt;랜덤 사이즈로 1~1000가 쓰여진 테스트 이미지&lt;/h2&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Download : &lt;a href=&quot;assets/images/forTest/random/random1000.zip&quot;&gt;random1000.zip&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/images/forTest/random/screenshot_random1000.png&quot; alt=&quot;스크린샷&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
+&lt;p&gt;Download : &lt;a href=&quot;assets/images/forTest/random/random1000.zip&quot;&gt;random1000.zip&lt;/a&gt;&lt;br /&gt;
+&lt;img src=&quot;assets/images/forTest/random/screenshot_random1000.png&quot; alt=&quot;스크린샷&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;아무리 검색해도 찾을 수 없어서 직접 만든 테스트용 이미지 1000장이 압축되어 있습니다.&lt;/li&gt;
-  &lt;li&gt;폭(1024, 1440, 2550), 높이(800, 1200, 1600) 조합으로 만들어진 랜덤크기 이미지입니다.&lt;/li&gt;
+  &lt;li&gt;아무리 검색해도 찾을 수 없어서 그냥 만든 테스트용 이미지!&lt;/li&gt;
+  &lt;li&gt;폭(1024, 1440, 2550), 높이(800, 1200, 1600) 조합으로 만들어진 랜덤크기&lt;/li&gt;
   &lt;li&gt;배경색과 숫자가 쓰여진 색상은 랜덤이며 폰트는 배민한나체를 사용했습니다.&lt;/li&gt;
   &lt;li&gt;왼쪽상단에는 이미지의 크기가 검은색으로 쓰여져있습니다.&lt;/li&gt;
   &lt;li&gt;파일형식은 Png이며, &lt;code class=&quot;highlighter-rouge&quot;&gt;image_{####number}_{width}x{height}.png&lt;/code&gt; 형식의 파일이름으로 저장 되어 있습니다.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&quot;폭-1000px-고정에-높이가-증가하는-이미지들&quot;&gt;폭 1000px 고정에, 높이가 증가하는 이미지들&lt;/h2&gt;
+&lt;p&gt;비율테스트용 폭 1000px에 다양한 높이의 이미지들입니다. &lt;br /&gt;
+Download : &lt;a href=&quot;assets/images/forTest/ratio/ratioVarHeight.zip&quot;&gt;ratioVarHeight.zip&lt;/a&gt;&lt;br /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/var_height_ratio.png&quot; alt=&quot;스크린샷&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;높이-1000px-고정이고-폭이-증가하는-이미지들&quot;&gt;높이 1000px 고정이고 폭이 증가하는 이미지들&lt;/h2&gt;
+&lt;p&gt;비율테스트용 높이 1000px에 다양한 높이의 이미지들입니다.&lt;br /&gt;
+Download : &lt;a href=&quot;assets/images/forTest/ratio/ratioVarWidth.zip&quot;&gt;ratioVarWidth.zip&lt;/a&gt;&lt;br /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/ㅔ.png&quot; alt=&quot;스크린샷&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;여러장의-사진-이미지가-필요할-때&quot;&gt;여러장의 사진 이미지가 필요할 때&lt;/h2&gt;
 &lt;blockquote&gt;
