@@ -182,9 +182,6 @@ into the {body} of the default.hbs template -->
   	<li><a href="#ProductFlavors" class="tag"><span class="term alltags">ProductFlavors</span> <span class="count alltags">1</span></a></li>
   
     
-  	<li><a href="#R" class="tag"><span class="term alltags">R</span> <span class="count alltags">1</span></a></li>
-  
-    
   	<li><a href="#android" class="tag"><span class="term alltags">android</span> <span class="count alltags">9</span></a></li>
   
     
@@ -224,7 +221,7 @@ into the {body} of the default.hbs template -->
   	<li><a href="#recyclerview" class="tag"><span class="term alltags">recyclerview</span> <span class="count alltags">1</span></a></li>
   
     
-  	<li><a href="#scoped storage" class="tag"><span class="term alltags">scoped storage</span> <span class="count alltags">2</span></a></li>
+  	<li><a href="#scoped storage" class="tag"><span class="term alltags">scoped storage</span> <span class="count alltags">3</span></a></li>
   
     
   	<li><a href="#sdkversion30" class="tag"><span class="term alltags">sdkversion30</span> <span class="count alltags">1</span></a></li>
@@ -259,17 +256,6 @@ into the {body} of the default.hbs template -->
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType 조합">ProductFlavors와 BuildType 조합</a></li> -->
       <li class="entry-title"><a href="/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType 조합">ProductFlavors와 BuildType 조합</a></li>
-    
-		</ul>
-	</article><!-- /.hentry -->
-
-  
-	<article>
-	<h2 id="R" class="tag-heading">R</h2>
-		<ul>
-    
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/scoped-storage" target="_blank" title="Scoped Storage 적용하기">Scoped Storage 적용하기</a></li> -->
-      <li class="entry-title"><a href="/scoped-storage" target="_blank" title="Scoped Storage 적용하기">Scoped Storage 적용하기</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -460,6 +446,9 @@ into the {body} of the default.hbs template -->
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/file-write" target="_blank" title="안드로이드 파일 쓰기">안드로이드 파일 쓰기</a></li> -->
       <li class="entry-title"><a href="/file-write" target="_blank" title="안드로이드 파일 쓰기">안드로이드 파일 쓰기</a></li>
+    
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/scoped-storage" target="_blank" title="Scoped Storage 적용하기">Scoped Storage 적용하기</a></li> -->
+      <li class="entry-title"><a href="/scoped-storage" target="_blank" title="Scoped Storage 적용하기">Scoped Storage 적용하기</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
