@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/author/mond/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-14T01:07:56+09:00</updated>
+  <updated>2021-02-14T02:08:54+09:00</updated>
   <id>https://mond-al.github.io/author/mond/feed.xml</id>
 
   
@@ -1538,8 +1538,8 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
     </entry>
   
     <entry>
-      <title type="html">개발 테스트용 이미지 다운로드</title>
-      <link href="https://mond-al.github.io/test-image" rel="alternate" type="text/html" title="개발 테스트용 이미지 다운로드" />
+      <title type="html">개발 테스트용 이미지 다운로드(랜덤1000개.zip,해상도별.zip)</title>
+      <link href="https://mond-al.github.io/test-image" rel="alternate" type="text/html" title="개발 테스트용 이미지 다운로드(랜덤1000개.zip,해상도별.zip)" />
       <published>2021-01-22T00:00:00+09:00</published>
       <updated>2021-01-22T00:00:00+09:00</updated>
       <id>https://mond-al.github.io/test-image</id>

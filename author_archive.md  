@@ -336,8 +336,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="download" class="tag-heading">DOWNLOAD</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/test-image" target="_blank" title="개발 테스트용 이미지 다운로드">개발 테스트용 이미지 다운로드</a></li> -->
-      <li class="entry-title"><a href="/test-image" target="_blank" title="개발 테스트용 이미지 다운로드">개발 테스트용 이미지 다운로드</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/test-image" target="_blank" title="개발 테스트용 이미지 다운로드(랜덤1000개.zip,해상도별.zip)">개발 테스트용 이미지 다운로드(랜덤1000개.zip,해상도별.zip)</a></li> -->
+      <li class="entry-title"><a href="/test-image" target="_blank" title="개발 테스트용 이미지 다운로드(랜덤1000개.zip,해상도별.zip)">개발 테스트용 이미지 다운로드(랜덤1000개.zip,해상도별.zip)</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -408,8 +408,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="image" class="tag-heading">IMAGE</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/test-image" target="_blank" title="개발 테스트용 이미지 다운로드">개발 테스트용 이미지 다운로드</a></li> -->
-      <li class="entry-title"><a href="/test-image" target="_blank" title="개발 테스트용 이미지 다운로드">개발 테스트용 이미지 다운로드</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/test-image" target="_blank" title="개발 테스트용 이미지 다운로드(랜덤1000개.zip,해상도별.zip)">개발 테스트용 이미지 다운로드(랜덤1000개.zip,해상도별.zip)</a></li> -->
+      <li class="entry-title"><a href="/test-image" target="_blank" title="개발 테스트용 이미지 다운로드(랜덤1000개.zip,해상도별.zip)">개발 테스트용 이미지 다운로드(랜덤1000개.zip,해상도별.zip)</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -469,8 +469,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="test" class="tag-heading">TEST</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/test-image" target="_blank" title="개발 테스트용 이미지 다운로드">개발 테스트용 이미지 다운로드</a></li> -->
-      <li class="entry-title"><a href="/test-image" target="_blank" title="개발 테스트용 이미지 다운로드">개발 테스트용 이미지 다운로드</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/test-image" target="_blank" title="개발 테스트용 이미지 다운로드(랜덤1000개.zip,해상도별.zip)">개발 테스트용 이미지 다운로드(랜덤1000개.zip,해상도별.zip)</a></li> -->
+      <li class="entry-title"><a href="/test-image" target="_blank" title="개발 테스트용 이미지 다운로드(랜덤1000개.zip,해상도별.zip)">개발 테스트용 이미지 다운로드(랜덤1000개.zip,해상도별.zip)</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
