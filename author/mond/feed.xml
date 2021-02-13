@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/author/mond/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-12T21:25:52+09:00</updated>
+  <updated>2021-02-13T10:40:01+09:00</updated>
   <id>https://mond-al.github.io/author/mond/feed.xml</id>
 
   
@@ -47,8 +47,8 @@
 
 &lt;ul&gt;
   &lt;li&gt;안드로이드 앱에서 최소한의 permission으로 어떻게 사진촬영/저장 기능을 제공하는지 보여줍니다.&lt;/li&gt;
-  &lt;li&gt;Android 7(Nougat)이후에 필수로 요구되는 FileProvider를 이용한 사진 촬영 요청 및 Media Store 등록합니다.&lt;/li&gt;
-  &lt;li&gt;Android 10(Q)이후 필수로 요구되는 Scoped storage일때 사진 촬영 요청 및 Media Store 등록합니다. (targetSdkVersion이 30.)&lt;/li&gt;
+  &lt;li&gt;Android 7(Nougat)이후 디바이스에서 요구되는 FileProvider를 이용한 사진 촬영 요청 및 Media Store 등록.&lt;/li&gt;
+  &lt;li&gt;Android 10(Q)이후 디바이스에 요구되는 Scoped storage일때 사진 촬영 요청 및 Media Store 등록.&lt;/li&gt;
   &lt;li&gt;위의 기능을 통해 안드로이드 디바이스, 미디어 파일을 다루는 방법의 변화를 쉽게 이해 할 수 있도록 합니다.&lt;/li&gt;
 &lt;/ul&gt;
 
