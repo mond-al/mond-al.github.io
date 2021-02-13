@@ -265,8 +265,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="android" class="tag-heading">ANDROID</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/example-camera" target="_blank" title="Scoped storage 예제  (카메라 사진촬영)">Scoped storage 예제  (카메라 사진촬영)</a></li> -->
-      <li class="entry-title"><a href="/example-camera" target="_blank" title="Scoped storage 예제  (카메라 사진촬영)">Scoped storage 예제  (카메라 사진촬영)</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/example-camera" target="_blank" title="카메라 사진촬영으로 보는 Scoped storage 예제 및 소스">카메라 사진촬영으로 보는 Scoped storage 예제 및 소스</a></li> -->
+      <li class="entry-title"><a href="/example-camera" target="_blank" title="카메라 사진촬영으로 보는 Scoped storage 예제 및 소스">카메라 사진촬영으로 보는 Scoped storage 예제 및 소스</a></li>
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/about-binding" target="_blank" title="Binding">Binding</a></li> -->
       <li class="entry-title"><a href="/about-binding" target="_blank" title="Binding">Binding</a></li>
@@ -314,8 +314,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="camera" class="tag-heading">CAMERA</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/example-camera" target="_blank" title="Scoped storage 예제  (카메라 사진촬영)">Scoped storage 예제  (카메라 사진촬영)</a></li> -->
-      <li class="entry-title"><a href="/example-camera" target="_blank" title="Scoped storage 예제  (카메라 사진촬영)">Scoped storage 예제  (카메라 사진촬영)</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/example-camera" target="_blank" title="카메라 사진촬영으로 보는 Scoped storage 예제 및 소스">카메라 사진촬영으로 보는 Scoped storage 예제 및 소스</a></li> -->
+      <li class="entry-title"><a href="/example-camera" target="_blank" title="카메라 사진촬영으로 보는 Scoped storage 예제 및 소스">카메라 사진촬영으로 보는 Scoped storage 예제 및 소스</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -441,8 +441,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="scoped storage" class="tag-heading">SCOPED STORAGE</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/example-camera" target="_blank" title="Scoped storage 예제  (카메라 사진촬영)">Scoped storage 예제  (카메라 사진촬영)</a></li> -->
-      <li class="entry-title"><a href="/example-camera" target="_blank" title="Scoped storage 예제  (카메라 사진촬영)">Scoped storage 예제  (카메라 사진촬영)</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/example-camera" target="_blank" title="카메라 사진촬영으로 보는 Scoped storage 예제 및 소스">카메라 사진촬영으로 보는 Scoped storage 예제 및 소스</a></li> -->
+      <li class="entry-title"><a href="/example-camera" target="_blank" title="카메라 사진촬영으로 보는 Scoped storage 예제 및 소스">카메라 사진촬영으로 보는 Scoped storage 예제 및 소스</a></li>
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/file-write" target="_blank" title="안드로이드 파일 쓰기">안드로이드 파일 쓰기</a></li> -->
       <li class="entry-title"><a href="/file-write" target="_blank" title="안드로이드 파일 쓰기">안드로이드 파일 쓰기</a></li>

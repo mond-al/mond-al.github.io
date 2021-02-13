@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/author/mond/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-13T10:40:01+09:00</updated>
+  <updated>2021-02-13T11:10:24+09:00</updated>
   <id>https://mond-al.github.io/author/mond/feed.xml</id>
 
   
@@ -32,25 +32,20 @@
 
   
     <entry>
-      <title type="html">Scoped storage 예제 (카메라 사진촬영)</title>
-      <link href="https://mond-al.github.io/example-camera" rel="alternate" type="text/html" title="Scoped storage 예제  (카메라 사진촬영)" />
+      <title type="html">카메라 사진촬영으로 보는 Scoped storage 예제 및 소스</title>
+      <link href="https://mond-al.github.io/example-camera" rel="alternate" type="text/html" title="카메라 사진촬영으로 보는 Scoped storage 예제 및 소스" />
       <published>2021-02-10T00:00:00+09:00</published>
       <updated>2021-02-10T00:00:00+09:00</updated>
       <id>https://mond-al.github.io/example-camera</id>
-      <content type="html" xml:base="https://mond-al.github.io/example-camera">&lt;p&gt;Target/Compile Sdk version에 Api level 30을 적용한 아주 간단한 사진촬영 (요청) 앱입니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/mond-al/example-camera-capture&quot;&gt;https://github.com/mond-al/example-camera-capture&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;맥락&quot;&gt;맥락&lt;/h3&gt;
-
-&lt;p&gt;이 앱의 목표는 다음과 같습니다.&lt;/p&gt;
-
+      <content type="html" xml:base="https://mond-al.github.io/example-camera">&lt;p&gt;Target/Compile Sdk version에 Api level 30을 적용한 아주 간단한 사진촬영 (요청) 앱입니다.  이 앱의 목표는 다음과 같습니다.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;안드로이드 앱에서 최소한의 permission으로 어떻게 사진촬영/저장 기능을 제공하는지 보여줍니다.&lt;/li&gt;
-  &lt;li&gt;Android 7(Nougat)이후 디바이스에서 요구되는 FileProvider를 이용한 사진 촬영 요청 및 Media Store 등록.&lt;/li&gt;
-  &lt;li&gt;Android 10(Q)이후 디바이스에 요구되는 Scoped storage일때 사진 촬영 요청 및 Media Store 등록.&lt;/li&gt;
+  &lt;li&gt;Android 7(Nougat)이후 디바이스에서 요구되는 &lt;em&gt;FileProvider&lt;/em&gt;를 이용한 사진 촬영 요청 및 Media Store 등록.&lt;/li&gt;
+  &lt;li&gt;Android 10(Q)이후 디바이스에 요구되는 &lt;em&gt;Scoped storage&lt;/em&gt;일때 사진 촬영 요청 및 Media Store 등록.&lt;/li&gt;
   &lt;li&gt;위의 기능을 통해 안드로이드 디바이스, 미디어 파일을 다루는 방법의 변화를 쉽게 이해 할 수 있도록 합니다.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;소스 : &lt;a href=&quot;https://github.com/mond-al/example-camera-capture&quot;&gt;https://github.com/mond-al/example-camera-capture&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;앱-소스-해설&quot;&gt;앱 소스 해설&lt;/h2&gt;
 &lt;h3 id=&quot;manifest-살펴보기&quot;&gt;manifest 살펴보기&lt;/h3&gt;
@@ -201,7 +196,7 @@
       
 
       
-        <summary type="html">Target/Compile Sdk version에 Api level 30을 적용한 아주 간단한 사진촬영 (요청) 앱입니다.</summary>
+        <summary type="html">Target/Compile Sdk version에 Api level 30을 적용한 아주 간단한 사진촬영 (요청) 앱입니다. 이 앱의 목표는 다음과 같습니다. 안드로이드 앱에서 최소한의 permission으로 어떻게 사진촬영/저장 기능을 제공하는지 보여줍니다. Android 7(Nougat)이후 디바이스에서 요구되는 FileProvider를 이용한 사진 촬영 요청 및 Media Store 등록. Android 10(Q)이후 디바이스에 요구되는 Scoped storage일때 사진 촬영 요청 및 Media Store 등록. 위의 기능을 통해 안드로이드 디바이스, 미디어 파일을 다루는 방법의 변화를 쉽게 이해 할 수 있도록 합니다.</summary>
       
 
       

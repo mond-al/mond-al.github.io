@@ -8,9 +8,15 @@
     
       
       <item>
-        <title>Scoped storage 예제  (카메라 사진촬영)</title>
+        <title>카메라 사진촬영으로 보는 Scoped storage 예제 및 소스</title>
         
-          <description>&lt;p&gt;Target/Compile Sdk version에 Api level 30을 적용한 아주 간단한 사진촬영 (요청) 앱입니다.&lt;/p&gt;
+          <description>&lt;p&gt;Target/Compile Sdk version에 Api level 30을 적용한 아주 간단한 사진촬영 (요청) 앱입니다.  이 앱의 목표는 다음과 같습니다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;안드로이드 앱에서 최소한의 permission으로 어떻게 사진촬영/저장 기능을 제공하는지 보여줍니다.&lt;/li&gt;
+  &lt;li&gt;Android 7(Nougat)이후 디바이스에서 요구되는 &lt;em&gt;FileProvider&lt;/em&gt;를 이용한 사진 촬영 요청 및 Media Store 등록.&lt;/li&gt;
+  &lt;li&gt;Android 10(Q)이후 디바이스에 요구되는 &lt;em&gt;Scoped storage&lt;/em&gt;일때 사진 촬영 요청 및 Media Store 등록.&lt;/li&gt;
+  &lt;li&gt;위의 기능을 통해 안드로이드 디바이스, 미디어 파일을 다루는 방법의 변화를 쉽게 이해 할 수 있도록 합니다.&lt;/li&gt;
+&lt;/ul&gt;
 
 </description>
         
