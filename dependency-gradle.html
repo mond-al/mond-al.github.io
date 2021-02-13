@@ -148,7 +148,7 @@ into the {body} of the default.hbs template -->
     <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
     <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
     <li class="nav-getting-started" role="menuitem"><a href="/tag/android/">Android</a></li>
-    <li class="nav-try-ghost" role="menuitem"><a href="#subscribe">Search</a></li>
+    <li class="nav-try-ghost" role="menuitem"><a href="#search">Search</a></li>
 </ul>
 
         
@@ -373,18 +373,18 @@ BUILD SUCCESSFUL <span class="k">in </span>693ms
                 </div>
             </section>
 
-            <!-- Email subscribe form at the bottom of the page -->
+            <!-- Email search form at the bottom of the page -->
             
-                <section class="subscribe-form">
-                    <h3 class="subscribe-form-title">Search</h3>
+                <section class="search-form">
+                    <h3 class="search-form-title">Search</h3>
                     <p>Get more post</p>
-                    <span id="searchform" method="post" action="/subscribe/" class="">
+                    <span id="searchform" method="post" action="/search/" class="">
     <input class="confirm" type="hidden" name="confirm"  />
     <input class="location" type="hidden" name="location"  />
     <input class="referrer" type="hidden" name="referrer"  />
 
     <div class="form-group">
-        <input class="subscribe-email" onkeyup="myFunc()"
+        <input class="search-email" onkeyup="myFunc()"
                id="searchtext" type="text" name="searchtext"
                placeholder="Search..." />
     </div>
@@ -740,20 +740,20 @@ BUILD SUCCESSFUL <span class="k">in </span>693ms
     </div>
 
     
-    <div id="subscribe" class="subscribe-overlay">
-        <a class="subscribe-overlay-close" href="#"></a>
-        <div class="subscribe-overlay-content">
+    <div id="search" class="search-overlay">
+        <a class="search-overlay-close" href="#"></a>
+        <div class="search-overlay-content">
             
-            <h1 class="subscribe-overlay-title">Search Developer/App/Android/mond > Log</h1>
-            <p class="subscribe-overlay-description">
+            <h1 class="search-overlay-title">Search Developer/App/Android/mond > Log</h1>
+            <p class="search-overlay-description">
                 posts 검색 </p>
-            <span id="searchform" method="post" action="/subscribe/" class="">
+            <span id="searchform" method="post" action="/search/" class="">
     <input class="confirm" type="hidden" name="confirm"  />
     <input class="location" type="hidden" name="location"  />
     <input class="referrer" type="hidden" name="referrer"  />
 
     <div class="form-group">
-        <input class="subscribe-email" onkeyup="myFunc()"
+        <input class="search-email" onkeyup="myFunc()"
                id="searchtext" type="text" name="searchtext"
                placeholder="Search..." />
     </div>

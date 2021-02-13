@@ -11,14 +11,14 @@ production stylesheet in assets/built/screen.css
 5.  Site Navigation
 6.  Post Feed
 7.  Single Post
-  7.1. Subscribe Form
+  7.1. search Form
   7.2. Post Footer
   7.3. Comments
   7.4. Related Posts
   7.5. Floating Header
 8.  Author Template
 9.  Error Template
-10. Subscribe Overlay
+10. search Overlay
 11. Site Footer
 
 */
@@ -324,7 +324,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     height: 1.9rem;
 }
 
-.subscribe-button {
+.search-button {
     display: block;
     padding: 4px 10px;
     border: #fff 1px solid;
@@ -335,7 +335,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     opacity: 0.8;
 }
 
-.subscribe-button:hover {
+.search-button:hover {
     text-decoration: none;
     opacity: 1;
 }
@@ -1044,10 +1044,10 @@ Usage (In Ghost editor):
 }
 
 
-/* 7.1. Subscribe Form
+/* 7.1. search Form
 /* ---------------------------------------------------------- */
 
-.subscribe-form {
+.search-form {
     margin: 1.5em 0;
     padding: 6.5vw 7vw 7vw;
     border: color(var(--whitegrey) l(+2%)) 1px solid;
@@ -1056,7 +1056,7 @@ Usage (In Ghost editor):
     border-radius: 7px;
 }
 
-.subscribe-form-title {
+.search-form-title {
     margin: 0 0 3px 0;
     padding: 0;
     color: var(--darkgrey);
@@ -1065,7 +1065,7 @@ Usage (In Ghost editor):
     font-weight: 700;
 }
 
-.subscribe-form p {
+.search-form p {
     margin-bottom: 1em;
     color: var(--midgrey);
     font-size: 2.2rem;
@@ -1073,7 +1073,7 @@ Usage (In Ghost editor):
     letter-spacing: 0.2px;
 }
 
-.subscribe-form form {
+.search-form form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1081,11 +1081,11 @@ Usage (In Ghost editor):
     max-width: 420px;
 }
 
-.subscribe-form .form-group {
+.search-form .form-group {
     flex-grow: 1;
 }
 
-.subscribe-email {
+.search-email {
     display: block;
     padding: 10px;
     width: 100%;
@@ -1101,12 +1101,12 @@ Usage (In Ghost editor):
     -webkit-appearance: none;
 }
 
-.subscribe-email:focus {
+.search-email:focus {
     outline: 0;
     border-color: color(var(--lightgrey) l(-2%));
 }
 
-.subscribe-form button {
+.search-form button {
     display: inline-block;
     margin: 0 0 0 10px;
     padding: 0 20px;
@@ -1130,28 +1130,28 @@ Usage (In Ghost editor):
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
-.subscribe-form button:active,
-.subscribe-form button:focus {
+.search-form button:active,
+.search-form button:focus {
     background: color(var(--blue) lightness(-9%) saturation(-10%));
 }
 
 @media (max-width: 650px) {
-    .subscribe-form-title {
+    .search-form-title {
         font-size: 2.4rem;
     }
-    .subscribe-form p {
+    .search-form p {
         font-size: 1.6rem;
     }
 }
 
 @media (max-width: 500px) {
-    .subscribe-form form {
+    .search-form form {
         flex-direction: column;
     }
-    .subscribe-form .form-group {
+    .search-form .form-group {
         width: 100%;
     }
-    .subscribe-form button {
+    .search-form button {
         margin: 10px 0 0 0;
         width: 100%;
     }
@@ -1702,10 +1702,10 @@ Usage (In Ghost editor):
 }
 
 
-/* 10. Subscribe Overlay
+/* 10. search Overlay
 /* ---------------------------------------------------------- */
 
-.subscribe-overlay {
+.search-overlay {
     position: fixed;
     top: 0;
     right: 0;
@@ -1723,12 +1723,12 @@ Usage (In Ghost editor):
     backdrop-filter: blur(3px);
 }
 
-.subscribe-overlay:target {
+.search-overlay:target {
     opacity: 1;
     pointer-events: auto;
 }
 
-.subscribe-overlay-content {
+.search-overlay-content {
     position: relative;
     z-index: 9999;
     margin: 0 0 5vw 0;
@@ -1737,21 +1737,21 @@ Usage (In Ghost editor):
     text-align: center;
 }
 
-.subscribe-overlay-logo {
+.search-overlay-logo {
     position: fixed;
     top: 23px;
     left: 30px;
     height: 30px;
 }
 
-.subscribe-overlay-title {
+.search-overlay-title {
     display: inline-block;
     margin: 0 0 10px 0;
     font-size: 6rem;
     line-height: 1.15em;
 }
 
-.subscribe-overlay-description {
+.search-overlay-description {
     margin: 0 auto 50px;
     max-width: 650px;
     font-family: Georgia, serif;
@@ -1761,7 +1761,7 @@ Usage (In Ghost editor):
     opacity: 0.8;
 }
 
-.subscribe-overlay form {
+.search-overlay form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1769,11 +1769,11 @@ Usage (In Ghost editor):
     max-width: 500px;
 }
 
-.subscribe-overlay .form-group {
+.search-overlay .form-group {
     flex-grow: 1;
 }
 
-.subscribe-overlay .subscribe-email {
+.search-overlay .search-email {
     display: block;
     padding: 14px 20px;
     width: 100%;
@@ -1790,12 +1790,12 @@ Usage (In Ghost editor):
     -webkit-appearance: none;
 }
 
-.subscribe-email:focus {
+.search-email:focus {
     outline: 0;
     border-color: color(var(--lightgrey) l(-2%));
 }
 
-.subscribe-overlay button {
+.search-overlay button {
     display: inline-block;
     margin: 0 0 0 15px;
     padding: 0 25px;
@@ -1819,12 +1819,12 @@ Usage (In Ghost editor):
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
-.subscribe-overlay button:active,
-.subscribe-overlay button:focus {
+.search-overlay button:active,
+.search-overlay button:focus {
     background: color(var(--blue) lightness(-9%) saturation(-10%));
 }
 
-.subscribe-overlay-close {
+.search-overlay-close {
     position: absolute;
     top: 0;
     right: 0;
@@ -1833,7 +1833,7 @@ Usage (In Ghost editor):
     display: block;
 }
 
-.subscribe-overlay-close:before {
+.search-overlay-close:before {
     content: "";
     position: absolute;
     top: 40px;
@@ -1846,7 +1846,7 @@ Usage (In Ghost editor):
     transform: rotate(45deg);
 }
 
-.subscribe-overlay-close:after {
+.search-overlay-close:after {
     content: "";
     position: absolute;
     top: 40px;
@@ -1859,7 +1859,7 @@ Usage (In Ghost editor):
     transform: rotate(-45deg);
 }
 
-.subscribe-overlay-close:hover {
+.search-overlay-close:hover {
     cursor: default;
 }
 
