@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/gradle/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-14T15:17:48+09:00</updated>
+  <updated>2021-02-14T16:08:25+09:00</updated>
   <id>https://mond-al.github.io/tag/gradle/feed.xml</id>
 
   
@@ -405,10 +405,10 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
 &lt;p&gt;그리고 필수는 아니지만 inhouse빌드는 release와 동일하게 난독화된 상태로 진행하는 것을 추천하고 싶습니다. inhouse에서 디버깅의 편리함을 위해 &lt;code class=&quot;highlighter-rouge&quot;&gt;minifyEnabled&lt;/code&gt;을 &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;로 둔다면, 난독화를 통해 클래스나 필드이 변경되기 때문에 이름에 의존적인 코드가 실수로 난독화 되어버린다면, 검수단계에서 발견하지 못하게 됩니다. 예를들어 API호출도 잘 되었고 서버에서 값도 잘 내려주었지만, DAO클래스가 난독화 되어 데이터를 파싱하지 못 할 수 있습니다. 이렇게 되면 검수는 난독화하지 않은 상태로 했기 때문에 잘 동작하고, 실배포에서는 문제가 발생합니다. 때문에 inhouse빌드는 디버그할때 번거롭더라도 항상 &lt;code class=&quot;highlighter-rouge&quot;&gt;minifyEnabled&lt;/code&gt;를 &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;로 두어 난독화를 시켜줍시다.&lt;/p&gt;
 
 &lt;p&gt;정의된 빌드에 따라 실행은 Android Studio 화면 왼쪽 모서리쪽에 접혀있는 &lt;code class=&quot;highlighter-rouge&quot;&gt;build variants&lt;/code&gt; 사이드바를 클릭하여 열어주세요.&lt;br /&gt;
-&lt;img src=&quot;assets/images/post/2021-01-26-ProductFlavors-BuildType/buildvariant.png&quot; alt=&quot;androidStudio&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;assets/images/post/2021-01-26-ProductFlavors-BuildType/buildvariant.png&quot; alt=&quot;Product Flavors build variant&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;이제 아래의 그림처럼 release,inhouse,debug 빌드를 선택할 수 있게 되었습니다.
-&lt;img src=&quot;assets/images/post/2021-01-26-ProductFlavors-BuildType/build_type.png&quot; alt=&quot;androidStudio&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;assets/images/post/2021-01-26-ProductFlavors-BuildType/build_type.png&quot; alt=&quot;Product Flavors build variant debug&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;BuildType은 보통 목적이 뚜렷하고 이미 속성들이 잘 갖추어 져 있기때문에 생각 할 부분이 적습니다.&lt;/p&gt;
 
@@ -475,8 +475,8 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
 &lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;assets/images/post/2021-01-26-ProductFlavors-BuildType/store_server.png&quot; alt=&quot;androidStudio&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;assets/images/post/2021-01-26-ProductFlavors-BuildType/server_store.png&quot; alt=&quot;androidStudio&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;assets/images/post/2021-01-26-ProductFlavors-BuildType/store_server.png&quot; alt=&quot;Product Flavors build variant&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;assets/images/post/2021-01-26-ProductFlavors-BuildType/server_store.png&quot; alt=&quot;Product Flavors build variant&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;

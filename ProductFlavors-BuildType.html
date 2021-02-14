@@ -119,7 +119,7 @@
 
     <meta name="generator" content="Jekyll 3.6.2" />
     <link rel="alternate" type="application/rss+xml" title="ProductFlavors와 BuildType 조합" href="/feed.xml" />
-
+<meta name="google-site-verification" content="GCZr_aYYwDvGhBvJNkNJft6FY0cIWqpS9Zce3sPH784" />
 
 </head>
 <body class="post-template">
@@ -375,10 +375,10 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
 <p>그리고 필수는 아니지만 inhouse빌드는 release와 동일하게 난독화된 상태로 진행하는 것을 추천하고 싶습니다. inhouse에서 디버깅의 편리함을 위해 <code class="highlighter-rouge">minifyEnabled</code>을 <code class="highlighter-rouge">false</code>로 둔다면, 난독화를 통해 클래스나 필드이 변경되기 때문에 이름에 의존적인 코드가 실수로 난독화 되어버린다면, 검수단계에서 발견하지 못하게 됩니다. 예를들어 API호출도 잘 되었고 서버에서 값도 잘 내려주었지만, DAO클래스가 난독화 되어 데이터를 파싱하지 못 할 수 있습니다. 이렇게 되면 검수는 난독화하지 않은 상태로 했기 때문에 잘 동작하고, 실배포에서는 문제가 발생합니다. 때문에 inhouse빌드는 디버그할때 번거롭더라도 항상 <code class="highlighter-rouge">minifyEnabled</code>를 <code class="highlighter-rouge">true</code>로 두어 난독화를 시켜줍시다.</p>
 
 <p>정의된 빌드에 따라 실행은 Android Studio 화면 왼쪽 모서리쪽에 접혀있는 <code class="highlighter-rouge">build variants</code> 사이드바를 클릭하여 열어주세요.<br />
-<img src="assets/images/post/2021-01-26-ProductFlavors-BuildType/buildvariant.png" alt="androidStudio" /></p>
+<img src="assets/images/post/2021-01-26-ProductFlavors-BuildType/buildvariant.png" alt="Product Flavors build variant" /></p>
 
 <p>이제 아래의 그림처럼 release,inhouse,debug 빌드를 선택할 수 있게 되었습니다.
-<img src="assets/images/post/2021-01-26-ProductFlavors-BuildType/build_type.png" alt="androidStudio" /></p>
+<img src="assets/images/post/2021-01-26-ProductFlavors-BuildType/build_type.png" alt="Product Flavors build variant debug" /></p>
 
 <p>BuildType은 보통 목적이 뚜렷하고 이미 속성들이 잘 갖추어 져 있기때문에 생각 할 부분이 적습니다.</p>
 
@@ -445,8 +445,8 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
 <table>
   <tbody>
     <tr>
-      <td><img src="assets/images/post/2021-01-26-ProductFlavors-BuildType/store_server.png" alt="androidStudio" /></td>
-      <td><img src="assets/images/post/2021-01-26-ProductFlavors-BuildType/server_store.png" alt="androidStudio" /></td>
+      <td><img src="assets/images/post/2021-01-26-ProductFlavors-BuildType/store_server.png" alt="Product Flavors build variant" /></td>
+      <td><img src="assets/images/post/2021-01-26-ProductFlavors-BuildType/server_store.png" alt="Product Flavors build variant" /></td>
     </tr>
   </tbody>
 </table>
