@@ -173,10 +173,17 @@
     
       
       <item>
-        <title>reboot</title>
+        <title>About Reboot</title>
         
-          <description>&lt;p&gt;다시 시작합니다.
-BLOG, MRSK project&lt;/p&gt;
+          <description>&lt;p&gt;o—
+layout: post
+current: post
+navigation: True
+title: reboot
+cover : assets/images/post/2021-01-12-about-reboot/cover.png
+class: post-template
+author: mond
+—&lt;/p&gt;
 
 </description>
         

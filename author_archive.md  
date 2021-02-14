@@ -232,9 +232,6 @@ into the {body} of the default.hbs template -->
     
   	<li><a href="#transitive" class="tag"><span class="term alltags">transitive</span> <span class="count alltags">1</span></a></li>
   
-    
-  	<li><a href="#u" class="tag"><span class="term alltags">u</span> <span class="count alltags">1</span></a></li>
-  
 </ul>
 
 
@@ -482,17 +479,6 @@ into the {body} of the default.hbs template -->
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/dependency-gradle" target="_blank" title="앱의 의존성 확인하고 전이 의존성 변경하기">앱의 의존성 확인하고 전이 의존성 변경하기</a></li> -->
       <li class="entry-title"><a href="/dependency-gradle" target="_blank" title="앱의 의존성 확인하고 전이 의존성 변경하기">앱의 의존성 확인하고 전이 의존성 변경하기</a></li>
-    
-		</ul>
-	</article><!-- /.hentry -->
-
-  
-	<article>
-	<h2 id="u" class="tag-heading">U</h2>
-		<ul>
-    
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/about-reboot" target="_blank" title="reboot">reboot</a></li> -->
-      <li class="entry-title"><a href="/about-reboot" target="_blank" title="reboot">reboot</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
