@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/image/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-14T02:08:54+09:00</updated>
+  <updated>2021-02-14T12:40:53+09:00</updated>
   <id>https://mond-al.github.io/tag/image/feed.xml</id>
 
   
@@ -32,8 +32,8 @@
 
   
     <entry>
-      <title type="html">개발 테스트용 이미지 다운로드(랜덤1000개.zip,해상도별.zip)</title>
-      <link href="https://mond-al.github.io/test-image" rel="alternate" type="text/html" title="개발 테스트용 이미지 다운로드(랜덤1000개.zip,해상도별.zip)" />
+      <title type="html">개발 테스트용 이미지 다운로드 (랜덤1000개.zip,해상도별.zip)</title>
+      <link href="https://mond-al.github.io/test-image" rel="alternate" type="text/html" title="개발 테스트용 이미지 다운로드 (랜덤1000개.zip,해상도별.zip)" />
       <published>2021-01-22T00:00:00+09:00</published>
       <updated>2021-01-22T00:00:00+09:00</updated>
       <id>https://mond-al.github.io/test-image</id>
@@ -41,22 +41,22 @@
 &lt;h1 id=&quot;직접-만든-이미지-묶음들&quot;&gt;직접 만든 이미지 묶음들&lt;/h1&gt;
 &lt;p&gt;파일형식은 Png이며, &lt;code class=&quot;highlighter-rouge&quot;&gt;image_{number}_{width}x{height}.png&lt;/code&gt; 형식의 파일이름으로 저장 되어 있습니다. 의견 주시면 또 다른 세트도 추가해보겠습니다.&lt;/p&gt;
 
-&lt;h2 id=&quot;상용-해상도-47가지-qqvga--fuhd&quot;&gt;상용 해상도 47가지 (qqVGA ~ FUHD)&lt;/h2&gt;
+&lt;h2 id=&quot;상용-해상도-47가지-테스트용-이미지-qqvga--fuhd&quot;&gt;상용 해상도 47가지 테스트용 이미지 (qqVGA ~ FUHD)&lt;/h2&gt;
 &lt;p&gt;Download : &lt;a href=&quot;assets/images/forTest/ratio/all_ratio.zip&quot;&gt;all_ratio.zip&lt;/a&gt;&lt;br /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio.png&quot; alt=&quot;스크린샷&quot; width=&quot;70%&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio.png&quot; alt=&quot;상용 해상도 47가지 테스트용 이미지&quot; width=&quot;70%&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;랜덤-사이즈로-1000개의-이미지-1--1000&quot;&gt;랜덤 사이즈로 1000개의 이미지 (1 ~ 1000)&lt;/h2&gt;
 &lt;p&gt;Download : &lt;a href=&quot;assets/images/forTest/random/random1000.zip&quot;&gt;random1000.zip&lt;/a&gt; &lt;br /&gt;
 폭(1024, 1440, 2550), 높이(800, 1200, 1600) 조합으로 만들어진 랜덤크기
-&lt;img src=&quot;assets/images/forTest/random/screenshot_random1000.png&quot; alt=&quot;스크린샷&quot; width=&quot;70%&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;assets/images/forTest/random/screenshot_random1000.png&quot; alt=&quot;랜덤 사이즈로 1000개의 테스트 이미지&quot; width=&quot;70%&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;폭-1000px-고정에-높이가-증가하는-이미지들&quot;&gt;폭 1000px 고정에, 높이가 증가하는 이미지들&lt;/h2&gt;
 &lt;p&gt;Download : &lt;a href=&quot;assets/images/forTest/ratio/ratioVarHeight.zip&quot;&gt;ratioVarHeight.zip&lt;/a&gt;&lt;br /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/var_height_ratio.png&quot; alt=&quot;스크린샷&quot; width=&quot;70%&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/var_height_ratio.png&quot; alt=&quot;높이가 증가하는 테스트용용 이미지&quot; width=&quot;70%&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;높이-1000px-고정이고-폭이-증가하는-이미지들&quot;&gt;높이 1000px 고정이고 폭이 증가하는 이미지들&lt;/h2&gt;
 &lt;p&gt;Download : &lt;a href=&quot;assets/images/forTest/ratio/ratioVarWidth.zip&quot;&gt;ratioVarWidth.zip&lt;/a&gt;&lt;br /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/var_width_ratio.png&quot; alt=&quot;스크린샷&quot; width=&quot;70%&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/var_width_ratio.png&quot; alt=&quot;폭이 증가하는 테스트용 이미지&quot; width=&quot;70%&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;다양한-기능을-제공하는-유용한-사이트들&quot;&gt;다양한 기능을 제공하는 유용한 사이트들&lt;/h1&gt;
 &lt;h2 id=&quot;여러장의-사진-이미지가-필요할-때&quot;&gt;여러장의 사진 이미지가 필요할 때&lt;/h2&gt;
