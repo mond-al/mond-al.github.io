@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/download/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-15T13:18:27+09:00</updated>
+  <updated>2021-02-15T13:43:04+09:00</updated>
   <id>https://mond-al.github.io/tag/download/feed.xml</id>
 
   
@@ -41,13 +41,8 @@
 &lt;h1 id=&quot;직접-만든-이미지-묶음들&quot;&gt;직접 만든 이미지 묶음들&lt;/h1&gt;
 &lt;p&gt;파일형식은 Png이며, &lt;code class=&quot;highlighter-rouge&quot;&gt;image_{number}_{width}x{height}.png&lt;/code&gt; 형식의 파일이름으로 저장 되어 있습니다. 의견 주시면 또 다른 세트도 추가해보겠습니다.&lt;/p&gt;
 
-&lt;h2 id=&quot;상용-해상도-47가지-테스트용-이미지-qqvga--fuhd&quot;&gt;상용 해상도 47가지 테스트용 이미지 (qqVGA ~ FUHD)&lt;/h2&gt;
-&lt;p&gt;Download : &lt;a href=&quot;assets/images/forTest/ratio/all_ratio.zip&quot;&gt;all_ratio.zip&lt;/a&gt;&lt;br /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio.png&quot; alt=&quot;상용 해상도 47가지 테스트용 이미지&quot; width=&quot;70%&quot; /&gt;&lt;/p&gt;
-&lt;details&gt;
-&lt;summary&gt;포함된 이미지 종류 접기/펼치기 버튼&lt;/summary&gt;
+&lt;details&gt;&lt;summary&gt;포함된 해상도 목록 펼치기/접기&lt;/summary&gt;
 &lt;div&gt;
-
     &lt;table&gt;
       &lt;thead&gt;
         &lt;tr&gt;
@@ -441,6 +436,9 @@
 
   &lt;/div&gt;
 &lt;/details&gt;
+&lt;h2 id=&quot;상용-해상도-47가지-테스트용-이미지-qqvga--fuhd&quot;&gt;상용 해상도 47가지 테스트용 이미지 (qqVGA ~ FUHD)&lt;/h2&gt;
+&lt;p&gt;Download : &lt;a href=&quot;assets/images/forTest/ratio/all_ratio.zip&quot;&gt;all_ratio.zip&lt;/a&gt;&lt;br /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio.png&quot; alt=&quot;상용 해상도 47가지 테스트용 이미지&quot; width=&quot;70%&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;랜덤-사이즈로-1000개의-이미지-1--1000&quot;&gt;랜덤 사이즈로 1000개의 이미지 (1 ~ 1000)&lt;/h2&gt;
 &lt;p&gt;Download : &lt;a href=&quot;assets/images/forTest/random/random1000.zip&quot;&gt;random1000.zip&lt;/a&gt; &lt;br /&gt;
