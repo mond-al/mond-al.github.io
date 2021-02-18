@@ -159,10 +159,10 @@ into the {body} of the default.hbs template -->
   	<li><a href="#ProductFlavors" class="tag"><span class="term alltags">ProductFlavors</span> <span class="count alltags">1</span></a></li>
   
     
-  	<li><a href="#android" class="tag"><span class="term alltags">android</span> <span class="count alltags">10</span></a></li>
+  	<li><a href="#android" class="tag"><span class="term alltags">android</span> <span class="count alltags">11</span></a></li>
   
     
-  	<li><a href="#architecture" class="tag"><span class="term alltags">architecture</span> <span class="count alltags">1</span></a></li>
+  	<li><a href="#architecture" class="tag"><span class="term alltags">architecture</span> <span class="count alltags">2</span></a></li>
   
     
   	<li><a href="#cache" class="tag"><span class="term alltags">cache</span> <span class="count alltags">2</span></a></li>
@@ -171,7 +171,7 @@ into the {body} of the default.hbs template -->
   	<li><a href="#camera" class="tag"><span class="term alltags">camera</span> <span class="count alltags">1</span></a></li>
   
     
-  	<li><a href="#cleanCoders" class="tag"><span class="term alltags">cleanCoders</span> <span class="count alltags">1</span></a></li>
+  	<li><a href="#cleanCoders" class="tag"><span class="term alltags">cleanCoders</span> <span class="count alltags">2</span></a></li>
   
     
   	<li><a href="#dependency" class="tag"><span class="term alltags">dependency</span> <span class="count alltags">1</span></a></li>
@@ -245,6 +245,9 @@ into the {body} of the default.hbs template -->
 	<h2 id="android" class="tag-heading">ANDROID</h2>
 		<ul>
     
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/architecture-base-2" target="_blank" title="아키텍처와 클린코드 그리고 TDD (1)">아키텍처와 클린코드 그리고 TDD (1)</a></li> -->
+      <li class="entry-title"><a href="/architecture-base-2" target="_blank" title="아키텍처와 클린코드 그리고 TDD (1)">아키텍처와 클린코드 그리고 TDD (1)</a></li>
+    
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/architecture-base-1" target="_blank" title="아키텍처와 클린코드 그리고 TDD (1)">아키텍처와 클린코드 그리고 TDD (1)</a></li> -->
       <li class="entry-title"><a href="/architecture-base-1" target="_blank" title="아키텍처와 클린코드 그리고 TDD (1)">아키텍처와 클린코드 그리고 TDD (1)</a></li>
     
@@ -283,6 +286,9 @@ into the {body} of the default.hbs template -->
 	<h2 id="architecture" class="tag-heading">ARCHITECTURE</h2>
 		<ul>
     
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/architecture-base-2" target="_blank" title="아키텍처와 클린코드 그리고 TDD (1)">아키텍처와 클린코드 그리고 TDD (1)</a></li> -->
+      <li class="entry-title"><a href="/architecture-base-2" target="_blank" title="아키텍처와 클린코드 그리고 TDD (1)">아키텍처와 클린코드 그리고 TDD (1)</a></li>
+    
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/architecture-base-1" target="_blank" title="아키텍처와 클린코드 그리고 TDD (1)">아키텍처와 클린코드 그리고 TDD (1)</a></li> -->
       <li class="entry-title"><a href="/architecture-base-1" target="_blank" title="아키텍처와 클린코드 그리고 TDD (1)">아키텍처와 클린코드 그리고 TDD (1)</a></li>
     
@@ -318,6 +324,9 @@ into the {body} of the default.hbs template -->
 	<article>
 	<h2 id="cleanCoders" class="tag-heading">CLEANCODERS</h2>
 		<ul>
+    
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/architecture-base-2" target="_blank" title="아키텍처와 클린코드 그리고 TDD (1)">아키텍처와 클린코드 그리고 TDD (1)</a></li> -->
+      <li class="entry-title"><a href="/architecture-base-2" target="_blank" title="아키텍처와 클린코드 그리고 TDD (1)">아키텍처와 클린코드 그리고 TDD (1)</a></li>
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/architecture-base-1" target="_blank" title="아키텍처와 클린코드 그리고 TDD (1)">아키텍처와 클린코드 그리고 TDD (1)</a></li> -->
       <li class="entry-title"><a href="/architecture-base-1" target="_blank" title="아키텍처와 클린코드 그리고 TDD (1)">아키텍처와 클린코드 그리고 TDD (1)</a></li>

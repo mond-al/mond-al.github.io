@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/architecture/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-19T00:06:27+09:00</updated>
+  <updated>2021-02-19T02:24:50+09:00</updated>
   <id>https://mond-al.github.io/tag/architecture/feed.xml</id>
 
   
@@ -30,6 +30,85 @@
   
   
 
+  
+    <entry>
+      <title type="html">아키텍처와 클린코드 그리고 TDD (1)</title>
+      <link href="https://mond-al.github.io/architecture-base-2" rel="alternate" type="text/html" title="아키텍처와 클린코드 그리고 TDD (1)" />
+      <published>2021-02-17T00:00:00+09:00</published>
+      <updated>2021-02-17T00:00:00+09:00</updated>
+      <id>https://mond-al.github.io/architecture-base-2</id>
+      <content type="html" xml:base="https://mond-al.github.io/architecture-base-2">&lt;p&gt;이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 &lt;a href=&quot;https://www.youtube.com/watch?v=60lLSe1phks&amp;amp;t=2091s&quot;&gt;유튜브 강좌&lt;/a&gt;를 보시길 추천드립니다.&lt;/p&gt;
+
+&lt;p&gt;백명석님의 클린코더스 강의 다시보기&lt;/p&gt;
+
+&lt;h1 id=&quot;function&quot;&gt;Function&lt;/h1&gt;
+
+&lt;h3 id=&quot;원칙&quot;&gt;원칙&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;한가지 일만 해야 한다.&lt;/li&gt;
+  &lt;li&gt;함수의 크기는
+    &lt;ul&gt;
+      &lt;li&gt;80년데 vt100터미널 24줄 80컬럼 -&amp;gt; 4줄은 에디터가 사용 -&amp;gt; 함수는 20개 이내여야 한다고 했[었]다.&lt;/li&gt;
+      &lt;li&gt;요즘은 모니터가 커졌다. 심지어 피봇까지? 밥아저씨는 4줄짜리 함수여야 한다.했다&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;indentation, while, nested if등은 없어야한다.&lt;/li&gt;
+  &lt;li&gt;잘지어진 서술적인 긴 이름을 갖는 작은함수를 많이 이용해서 유지해야 한다.
+    &lt;blockquote&gt;
+      &lt;p&gt;Samll many fucntion  + Nice Descriptive long name&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-first-rule-of-fuctions&quot;&gt;The First Rule of Fuctions&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;더이상 작아질 수 없을 만큼 작어야한다.&lt;/li&gt;
+  &lt;li&gt;큰 함수를 보면 클래수로 추출할 생각을 해야함&lt;/li&gt;
+  &lt;li&gt;클래스는 일련의 &lt;code class=&quot;highlighter-rouge&quot;&gt;변수들에 동작하는 기능의 집합&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://youtu.be/GYNT7O3rLhU?t=267&quot;&gt;FitnessExample 그냥 영상을 보자!&lt;/a&gt;&lt;br /&gt;
+gradle에 익숙한 안드로이드 개발자에겐 조금 어색한 소스이고, 2013에 작성된 코드이다보니 안드로이드 스튜디오에서 편하게 따라 해볼만한 코튼린 기반의 라이브러리 프로젝트로 변경해봤다.
+&lt;a href=&quot;https://github.com/mond-al/fitness-example-kotlin&quot;&gt;https://github.com/mond-al/fitness-example-kotlin&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;extract method object -&amp;gt; 이건 코틀린에서 되지않는다. 일단 수동으로 수행. (방법아시는분 공유 부탁드립니다.🙇‍♂️)&lt;/li&gt;
+  &lt;li&gt;변수정리&lt;br /&gt;
+여러곳에서 사용되는 변수를 생성자 파라미터와 init스코프로 올린다. 이 작업은  &lt;code class=&quot;highlighter-rouge&quot;&gt;함수의 인자는 최대한 적어야 한다&lt;/code&gt;라는 규칙과 두개이상의 인자를 변경하는 경우 IDE가 제공하는 extract function 수행할 수 없는 문제를 예방(?)한다.&lt;/li&gt;
+  &lt;li&gt;…&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;이부분은 직접 코드를 보고 맥락을 살피는게 중요하기 때문에 텍스트로 옮기지 않음.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jisoo Yang</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="android" />
+      
+        <category term="architecture" />
+      
+        <category term="cleanCoders" />
+      
+
+      
+        <summary type="html">이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 유튜브 강좌를 보시길 추천드립니다.</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">아키텍처와 클린코드 그리고 TDD (1)</title>
@@ -163,7 +242,31 @@ ZetEngine mc = new ZetMotocycle();
 &lt;/table&gt;
 
 &lt;p&gt;내가 테스트할려는 코드들에게 모두 Mocking을 만들기 쉬워진다.
-서비스 로케이터 패턴 VS 의존성 주입(DI) 에 대해 고민해보자.&lt;/p&gt;</content>
+서비스 로케이터 패턴 VS 의존성 주입(DI) 에 대해 고민해보자.&lt;/p&gt;
+
+&lt;h3 id=&quot;상속을-통한-재사용&quot;&gt;상속을 통한 재사용&lt;/h3&gt;
+&lt;p&gt;서브클래스는 수퍼클래스의 기능을 재사용. 추가적인 기능을 제공하끼 쉽다.&lt;br /&gt;
+변경이 유연함 측면에서 치명적 단점.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;수퍼클래스의 변경이 다수의 서브 클래스에 영향을 미침&lt;/li&gt;
+  &lt;li&gt;유사한 기능의 확장에서 클래스의 개수가 불필요하게 증가 할 수 있다.
+    &lt;ul&gt;
+      &lt;li&gt;2개 이상의 수퍼클래스의 기능이 필요한 경우 다중상속 불가. 1개를 상속받고 1개는 내가 구현?!X&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;상속자체를 잘 못 사용 할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;compositiondelegation&quot;&gt;Composition(delegation)&lt;/h3&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Calculator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;strategy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PriceStrategy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;calculate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strategy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;price&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;PriceStrategy은 얼마든지 다양한 형태의 구현체로 변경가능하고, 이 구현체의 변경은 Calculator 클래스에 영향을 끼치지 않는다. 인터페이스에 의한 의존성을 주입받음으로써 처음 Unit Test를 할 때 가장 까다로운 부분인 Mock을 생성하기 쉽다. 이는 TDD에 기본이 된다.&lt;/p&gt;
+
+&lt;p&gt;inheritance vs implementation -&amp;gt; implementation!&lt;/p&gt;</content>
 
       
       

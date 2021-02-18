@@ -11,7 +11,7 @@
 
 
 
-    <title>Binding</title>
+    <title>아키텍처와 클린코드 그리고 TDD (1)</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -38,24 +38,24 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="./mond.dev > log.txt" />
     <link rel="shortcut icon" href="https://mond-al.github.io/assets/images/fav/favicon-96x96.png" type="image/png" />
-    <link rel="canonical" href="https://mond-al.github.io/about-binding" />
+    <link rel="canonical" href="https://mond-al.github.io/architecture-base-2" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Binding | 몬드 개발 로그</title>
+<title>아키텍처와 클린코드 그리고 TDD (1) | 몬드 개발 로그</title>
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="Binding" />
+<meta property="og:title" content="아키텍처와 클린코드 그리고 TDD (1)" />
 <meta name="author" content="jisoo Yang" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="바인딩 관련 에러" />
-<meta property="og:description" content="바인딩 관련 에러" />
-<link rel="canonical" href="https://mond-al.github.io/about-binding" />
-<meta property="og:url" content="https://mond-al.github.io/about-binding" />
+<meta name="description" content="이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 유튜브 강좌를 보시길 추천드립니다." />
+<meta property="og:description" content="이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 유튜브 강좌를 보시길 추천드립니다." />
+<link rel="canonical" href="https://mond-al.github.io/architecture-base-2" />
+<meta property="og:url" content="https://mond-al.github.io/architecture-base-2" />
 <meta property="og:site_name" content="몬드 개발 로그" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-02-09T00:00:00+09:00" />
+<meta property="article:published_time" content="2021-02-17T00:00:00+09:00" />
 <script type="application/ld+json">
-{"url":"https://mond-al.github.io/about-binding","headline":"Binding","dateModified":"2021-02-09T00:00:00+09:00","datePublished":"2021-02-09T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mond-al.github.io/about-binding"},"author":{"@type":"Person","name":"jisoo Yang"},"description":"바인딩 관련 에러","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://mond-al.github.io/assets/images/logo/normal_icon.png"},"name":"jisoo Yang"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"url":"https://mond-al.github.io/architecture-base-2","headline":"아키텍처와 클린코드 그리고 TDD (1)","dateModified":"2021-02-17T00:00:00+09:00","datePublished":"2021-02-17T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mond-al.github.io/architecture-base-2"},"author":{"@type":"Person","name":"jisoo Yang"},"description":"이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 유튜브 강좌를 보시길 추천드립니다.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://mond-al.github.io/assets/images/logo/normal_icon.png"},"name":"jisoo Yang"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -70,23 +70,23 @@
         "name": "몬드 개발 로그",
         "logo": "https://mond-al.github.io/assets/images/logo/normal_icon.png"
     },
-    "url": "https://mond-al.github.io/about-binding",
+    "url": "https://mond-al.github.io/architecture-base-2",
     "image": {
         "@type": "ImageObject",
-        "url": "https://mond-al.github.io/assets/images/cover/common_solution.png",
+        "url": "https://mond-al.github.io/assets/images/cover/clean_coders.png",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://mond-al.github.io/about-binding"
+        "@id": "https://mond-al.github.io/architecture-base-2"
     },
-    "description": "바인딩 관련 에러 by viewModels()에 에러가 나는 경우. 프로젝트가 세팅되지 않은 상태에서 디펜던시 정의를 빠트린경우인데 new Project를 통해 empty activity 프로젝트로 시작하면 항상 빠트리다 보니 포스팅으로 정리해둡니다. val viewModels = ViewModelClass by viewModels() Unresolved reference: viewModels by 키워드를 이용한 위임으로 처리되는데 이 확장함수는 activity-ktx나 fragment-ktx에 정의 되어있습니다. dependencies{ implementation 'androidx.activity:activity-ktx:1.2.0'"
+    "description": "이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 유튜브 강좌를 보시길 추천드립니다. 백명석님의 클린코더스 강의 다시보기 Function 원칙 한가지 일만 해야 한다. 함수의 크기는 80년데 vt100터미널 24줄 80컬럼 -&gt; 4줄은 에디터가 사용 -&gt; 함수는 20개 이내여야 한다고 했[었]다. 요즘은 모니터가"
 }
     </script>
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="Binding" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="아키텍처와 클린코드 그리고 TDD (1)" href="/feed.xml" />
 <meta name="google-site-verification" content="GCZr_aYYwDvGhBvJNkNJft6FY0cIWqpS9Zce3sPH784" />
 
 </head>
@@ -142,11 +142,11 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-android tag-file-provider tag-cache  ">
+        <article class="post-full  tag-android tag-architecture tag-cleancoders  ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime=" 9 February 2021"> 9 February 2021</time>
+                    <time class="post-full-meta-date" datetime="17 February 2021">17 February 2021</time>
                     
                         <span class="date-divider">/</span>
                         
@@ -155,107 +155,68 @@ into the {body} of the default.hbs template -->
                             
                         
                             
-                               <a href='/tag/file-provider/'>FILE PROVIDER</a>,
+                               <a href='/tag/architecture/'>ARCHITECTURE</a>,
                             
                         
                             
-                               <a href='/tag/cache/'>CACHE</a>
+                               <a href='/tag/cleancoders/'>CLEANCODERS</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title">Binding</h1>
+                <h1 class="post-full-title">아키텍처와 클린코드 그리고 TDD (1)</h1>
             </header>
 
 <!--        본문 상단 커버이미지-->
 <!--            -->
-<!--            <figure class="post-full-image" style="background-image: url(/assets/images/cover/common_solution.png)">-->
+<!--            <figure class="post-full-image" style="background-image: url(/assets/images/cover/clean_coders.png)">-->
 <!--            </figure>-->
 <!--            -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p>바인딩 관련 에러</p>
+                    <p>이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 <a href="https://www.youtube.com/watch?v=60lLSe1phks&amp;t=2091s">유튜브 강좌</a>를 보시길 추천드립니다.</p>
 
-<h2 id="by-viewmodels에-에러가-나는-경우">by viewModels()에 에러가 나는 경우.</h2>
+<p>백명석님의 클린코더스 강의 다시보기</p>
 
-<p>프로젝트가 세팅되지 않은 상태에서 디펜던시 정의를 빠트린경우인데 new Project를 통해 empty activity 프로젝트로 시작하면 항상 빠트리다 보니 포스팅으로 정리해둡니다.</p>
+<h1 id="function">Function</h1>
 
-<blockquote>
-  <p>val viewModels = ViewModelClass <u style="text-decoration-color:red">by viewModels</u>()<br />
-<code class="highlighter-rouge">Unresolved reference: viewModels</code></p>
-</blockquote>
+<h3 id="원칙">원칙</h3>
+<ul>
+  <li>한가지 일만 해야 한다.</li>
+  <li>함수의 크기는
+    <ul>
+      <li>80년데 vt100터미널 24줄 80컬럼 -&gt; 4줄은 에디터가 사용 -&gt; 함수는 20개 이내여야 한다고 했[었]다.</li>
+      <li>요즘은 모니터가 커졌다. 심지어 피봇까지? 밥아저씨는 4줄짜리 함수여야 한다.했다</li>
+    </ul>
+  </li>
+  <li>indentation, while, nested if등은 없어야한다.</li>
+  <li>잘지어진 서술적인 긴 이름을 갖는 작은함수를 많이 이용해서 유지해야 한다.
+    <blockquote>
+      <p>Samll many fucntion  + Nice Descriptive long name</p>
+    </blockquote>
+  </li>
+</ul>
 
-<p>by 키워드를 이용한 위임으로 처리되는데 이 확장함수는 activity-ktx나 fragment-ktx에 정의 되어있습니다.</p>
+<h3 id="the-first-rule-of-fuctions">The First Rule of Fuctions</h3>
+<ul>
+  <li>더이상 작아질 수 없을 만큼 작어야한다.</li>
+  <li>큰 함수를 보면 클래수로 추출할 생각을 해야함</li>
+  <li>클래스는 일련의 <code class="highlighter-rouge">변수들에 동작하는 기능의 집합</code></li>
+</ul>
 
-<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dependencies</span><span class="o">{</span>
-    <span class="n">implementation</span> <span class="s1">'androidx.activity:activity-ktx:1.2.0'</span>
-                           <span class="n">or</span>
-    <span class="n">implementation</span> <span class="s1">'androidx.fragment:fragment-ktx:1.3.0'</span>
-<span class="o">}</span>
-</code></pre></div></div>
-<p>참고로 fragment-ktx가 activity-ktx에 의존성을 가지고 있습니다. (아래의 트리는 보기 편하게 적절하게 편집했습니다.)</p>
+<p><a href="https://youtu.be/GYNT7O3rLhU?t=267">FitnessExample 그냥 영상을 보자!</a><br />
+gradle에 익숙한 안드로이드 개발자에겐 조금 어색한 소스이고, 2013에 작성된 코드이다보니 안드로이드 스튜디오에서 편하게 따라 해볼만한 코튼린 기반의 라이브러리 프로젝트로 변경해봤다.
+<a href="https://github.com/mond-al/fitness-example-kotlin">https://github.com/mond-al/fitness-example-kotlin</a></p>
 
-<h3 id="androidxactivityactivity-ktx120-의존성-그래프">androidx.activity:activity-ktx:1.2.0 의존성 그래프</h3>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+--- androidx.activity:activity-ktx:1.2.0
-     +--- androidx.activity:activity:1.2.0
-          +--- androidx.annotation:annotation:1.1.0
-          +--- androidx.core:core:1.1.0 -&gt; 1.3.2 (*)
-          +--- androidx.lifecycle:lifecycle-runtime:2.3.0 (*)
-          +--- androidx.lifecycle:lifecycle-viewmodel:2.3.0
-          +--- androidx.savedstate:savedstate:1.1.0
-          \--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.0
-               +--- androidx.annotation:annotation:1.0.0 -&gt; 1.1.0
-               +--- androidx.savedstate:savedstate:1.1.0 (*)
-               +--- androidx.lifecycle:lifecycle-livedata-core:2.3.0
-               |    \--- androidx.lifecycle:lifecycle-common:2.3.0 (*)
-               \--- androidx.lifecycle:lifecycle-viewmodel:2.3.0 (*)
-</code></pre></div></div>
+<ol>
+  <li>extract method object -&gt; 이건 코틀린에서 되지않는다. 일단 수동으로 수행. (방법아시는분 공유 부탁드립니다.🙇‍♂️)</li>
+  <li>변수정리<br />
+여러곳에서 사용되는 변수를 생성자 파라미터와 init스코프로 올린다. 이 작업은  <code class="highlighter-rouge">함수의 인자는 최대한 적어야 한다</code>라는 규칙과 두개이상의 인자를 변경하는 경우 IDE가 제공하는 extract function 수행할 수 없는 문제를 예방(?)한다.</li>
+  <li>…</li>
+</ol>
 
-<h3 id="androidxfragmentfragment-ktx130-의존성-그래프">androidx.fragment:fragment-ktx:1.3.0 의존성 그래프</h3>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+--- androidx.fragment:fragment-ktx:1.3.0
-     +--- androidx.activity:activity-ktx:1.2.0
-     |    +--- androidx.activity:activity:1.2.0 (*)
-     |    +--- androidx.core:core-ktx:1.1.0 -&gt; 1.3.2 (*)
-     |    +--- androidx.lifecycle:lifecycle-runtime-ktx:2.3.0
-     |    +--- androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0
-     |    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.3.0 (*)
-     |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.4.20 -&gt; 1.4.30 (*)
-     |    |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1 (*)
-     |    +--- androidx.savedstate:savedstate-ktx:1.1.0
-     |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.4.20 -&gt; 1.4.30 (*)
-     +--- androidx.fragment:fragment:1.3.0
-     |    +--- androidx.annotation:annotation:1.1.0
-     |    +--- androidx.core:core:1.1.0 -&gt; 1.3.2 (*)
-     |    +--- androidx.collection:collection:1.1.0 (*)
-     |    +--- androidx.viewpager:viewpager:1.0.0
-     |    +--- androidx.loader:loader:1.0.0
-     |    |    +--- androidx.lifecycle:lifecycle-livedata:2.0.0 -&gt; 2.2.0
-     |    |    \--- androidx.lifecycle:lifecycle-viewmodel:2.0.0 -&gt; 2.3.0
-     |    +--- androidx.activity:activity:1.2.0
-     |    |    +--- androidx.annotation:annotation:1.1.0
-     |    |    +--- androidx.core:core:1.1.0 -&gt; 1.3.2 (*)
-     |    |    +--- androidx.lifecycle:lifecycle-runtime:2.3.0 (*)
-     |    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.3.0 (*)
-     |    |    +--- androidx.savedstate:savedstate:1.1.0
-     |    |    \--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.0
-     |    +--- androidx.lifecycle:lifecycle-livedata-core:2.3.0 (*)
-     |    +--- androidx.lifecycle:lifecycle-viewmodel:2.3.0 (*)
-     |    +--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.0 (*)
-     |    +--- androidx.savedstate:savedstate:1.1.0 (*)
-     |    \--- androidx.annotation:annotation-experimental:1.0.0
-     +--- androidx.core:core-ktx:1.1.0 -&gt; 1.3.2 (*)
-     +--- androidx.collection:collection-ktx:1.1.0
-     |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.3.20 -&gt; 1.4.30 (*)
-     |    \--- androidx.collection:collection:1.1.0 (*)
-     +--- androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.0
-     |    +--- androidx.lifecycle:lifecycle-livedata-core:2.3.0 (*)
-     |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.4.20 -&gt; 1.4.30 (*)
-     +--- androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0 (*)
-     +--- androidx.savedstate:savedstate-ktx:1.1.0 (*)
-     \--- org.jetbrains.kotlin:kotlin-stdlib:1.4.20 -&gt; 1.4.30 (*)
-                                                                                                        
-</code></pre></div></div>
+<p>이부분은 직접 코드를 보고 맥락을 살피는게 중요하기 때문에 텍스트로 옮기지 않음.</p>
 
 
                 </div>
@@ -320,9 +281,9 @@ into the {body} of the default.hbs template -->
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            this.page.url = 'https://mond-al.github.io/about-binding';
-                            this.page.identifier = '/about-binding';
-                            this.page.title = 'Binding';
+                            this.page.url = 'https://mond-al.github.io/architecture-base-2';
+                            this.page.identifier = '/architecture-base-2';
+                            this.page.title = '아키텍처와 클린코드 그리고 TDD (1)';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -367,19 +328,9 @@ into the {body} of the default.hbs template -->
                                 
                                   
                                     
-                                        
-                                        
-                                            <li><a href="/architecture-base-2">아키텍처와 클린코드 그리고 TDD (1)</a></li>
-                                        
-                                    
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                            <li><a href="/architecture-base-1">아키텍처와 클린코드 그리고 TDD (1)</a></li>
-                                        
                                     
                                   
                                 
@@ -394,11 +345,18 @@ into the {body} of the default.hbs template -->
                                 
                                   
                                     
+                                        
+                                        
+                                            <li><a href="/about-binding">Binding</a></li>
+                                        
+                                    
                                   
                                 
                                   
                                     
                                         
+                                        
+                                            <li><a href="/cache-share">File Provider Path</a></li>
                                         
                                     
                                   
@@ -464,63 +422,6 @@ into the {body} of the default.hbs template -->
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/example-camera">
-                <div class="post-card-image" style="background-image: url(/assets/images/cover/2021-02-11-scoped-storage-camera-cover.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/example-camera">
-                <header class="post-card-header">
-                    
-                        
-                            
-                               <span class="post-card-tags">Android</span>
-                            
-                        
-                            
-                               <span class="post-card-tags">Scoped storage</span>
-                            
-                        
-                            
-                                <span class="post-card-tags">Camera</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">카메라 사진촬영으로 보는 Scoped storage 예제 및 소스</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p></p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/logo/normal.png" alt="jisoo Yang" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/mond/">jisoo Yang</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
@@ -528,12 +429,12 @@ into the {body} of the default.hbs template -->
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/cache-share">
-                <div class="post-card-image" style="background-image: url(/assets/images/cover/common_solution.png)"></div>
+            <a class="post-card-image-link" href="/architecture-base-1">
+                <div class="post-card-image" style="background-image: url(/assets/images/cover/clean_coders.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/cache-share">
+            <a class="post-card-content-link" href="/architecture-base-1">
                 <header class="post-card-header">
                     
                         
@@ -542,16 +443,16 @@ into the {body} of the default.hbs template -->
                             
                         
                             
-                               <span class="post-card-tags">File provider</span>
+                               <span class="post-card-tags">Architecture</span>
                             
                         
                             
-                                <span class="post-card-tags">Cache</span>
+                                <span class="post-card-tags">Cleancoders</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">File Provider Path</h2>
+                    <h2 class="post-card-title">아키텍처와 클린코드 그리고 TDD (1)</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -597,18 +498,18 @@ into the {body} of the default.hbs template -->
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">Binding</div>
+    <div class="floating-header-title">아키텍처와 클린코드 그리고 TDD (1)</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Binding&amp;url=https://mond-al.github.io/about-binding"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98%EC%99%80+%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C+%EA%B7%B8%EB%A6%AC%EA%B3%A0+TDD+%281%29&amp;url=https://mond-al.github.io/architecture-base-2"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://mond-al.github.io/about-binding"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://mond-al.github.io/architecture-base-2"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 
