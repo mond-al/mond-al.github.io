@@ -11,7 +11,7 @@
 
 
 
-    <title>File Provider Path</title>
+    <title>아키텍처와 클린코드 그리고 TDD (1)</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -38,24 +38,24 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="./mond.dev > log.txt" />
     <link rel="shortcut icon" href="https://mond-al.github.io/assets/images/fav/favicon-96x96.png" type="image/png" />
-    <link rel="canonical" href="https://mond-al.github.io/cache-share" />
+    <link rel="canonical" href="https://mond-al.github.io/architecture-base-1" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>File Provider Path | 몬드 개발 로그</title>
+<title>아키텍처와 클린코드 그리고 TDD (1) | 몬드 개발 로그</title>
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="File Provider Path" />
+<meta property="og:title" content="아키텍처와 클린코드 그리고 TDD (1)" />
 <meta name="author" content="jisoo Yang" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="File Provider Path 디렉리터 영역 매칭" />
-<meta property="og:description" content="File Provider Path 디렉리터 영역 매칭" />
-<link rel="canonical" href="https://mond-al.github.io/cache-share" />
-<meta property="og:url" content="https://mond-al.github.io/cache-share" />
+<meta name="description" content="이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 유튜브 강좌를 보시길 추천드립니다." />
+<meta property="og:description" content="이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 유튜브 강좌를 보시길 추천드립니다." />
+<link rel="canonical" href="https://mond-al.github.io/architecture-base-1" />
+<meta property="og:url" content="https://mond-al.github.io/architecture-base-1" />
 <meta property="og:site_name" content="몬드 개발 로그" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-02-08T00:00:00+09:00" />
+<meta property="article:published_time" content="2021-02-15T00:00:00+09:00" />
 <script type="application/ld+json">
-{"url":"https://mond-al.github.io/cache-share","headline":"File Provider Path","dateModified":"2021-02-08T00:00:00+09:00","datePublished":"2021-02-08T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mond-al.github.io/cache-share"},"author":{"@type":"Person","name":"jisoo Yang"},"description":"File Provider Path 디렉리터 영역 매칭","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://mond-al.github.io/assets/images/logo/normal_icon.png"},"name":"jisoo Yang"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"url":"https://mond-al.github.io/architecture-base-1","headline":"아키텍처와 클린코드 그리고 TDD (1)","dateModified":"2021-02-15T00:00:00+09:00","datePublished":"2021-02-15T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mond-al.github.io/architecture-base-1"},"author":{"@type":"Person","name":"jisoo Yang"},"description":"이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 유튜브 강좌를 보시길 추천드립니다.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://mond-al.github.io/assets/images/logo/normal_icon.png"},"name":"jisoo Yang"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -70,23 +70,23 @@
         "name": "몬드 개발 로그",
         "logo": "https://mond-al.github.io/assets/images/logo/normal_icon.png"
     },
-    "url": "https://mond-al.github.io/cache-share",
+    "url": "https://mond-al.github.io/architecture-base-1",
     "image": {
         "@type": "ImageObject",
-        "url": "https://mond-al.github.io/assets/images/cover/common_solution.png",
+        "url": "https://mond-al.github.io/assets/images/cover/clean_coders.png",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://mond-al.github.io/cache-share"
+        "@id": "https://mond-al.github.io/architecture-base-1"
     },
-    "description": "File Provider Path 디렉리터 영역 매칭 Android 7(N)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. 얼마전 기존 프로젝트에 Android 11(R) 대응을 위해 Scoped Storage 적용을 진행하면서 기존 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache, files, external(Media/Download)로 구분하는 처리가 추가되었습니다. 이로 인해 external경로 이외에도 파일프로바이더로 제공할 수 있도록 수정이"
+    "description": "이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 유튜브 강좌를 보시길 추천드립니다. 백명석님의 클린코더스 강의 다시보기 우리의 목표 잘 동작하는 코드 읽을 수 있는 코드 OOP/SOLID 잊지 말아야 할 것. 기계가 이해하고 동작하는 코드는 누구나 작성할 수 있다. 사람이 읽을"
 }
     </script>
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="File Provider Path" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="아키텍처와 클린코드 그리고 TDD (1)" href="/feed.xml" />
 <meta name="google-site-verification" content="GCZr_aYYwDvGhBvJNkNJft6FY0cIWqpS9Zce3sPH784" />
 
 </head>
@@ -142,11 +142,11 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-android tag-file-provider tag-cache  ">
+        <article class="post-full  tag-android tag-architecture tag-cleancoders  ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime=" 8 February 2021"> 8 February 2021</time>
+                    <time class="post-full-meta-date" datetime="15 February 2021">15 February 2021</time>
                     
                         <span class="date-divider">/</span>
                         
@@ -155,114 +155,153 @@ into the {body} of the default.hbs template -->
                             
                         
                             
-                               <a href='/tag/file-provider/'>FILE PROVIDER</a>,
+                               <a href='/tag/architecture/'>ARCHITECTURE</a>,
                             
                         
                             
-                               <a href='/tag/cache/'>CACHE</a>
+                               <a href='/tag/cleancoders/'>CLEANCODERS</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title">File Provider Path</h1>
+                <h1 class="post-full-title">아키텍처와 클린코드 그리고 TDD (1)</h1>
             </header>
 
 <!--        본문 상단 커버이미지-->
 <!--            -->
-<!--            <figure class="post-full-image" style="background-image: url(/assets/images/cover/common_solution.png)">-->
+<!--            <figure class="post-full-image" style="background-image: url(/assets/images/cover/clean_coders.png)">-->
 <!--            </figure>-->
 <!--            -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p>File Provider Path 디렉리터 영역 매칭</p>
+                    <p>이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 <a href="https://www.youtube.com/watch?v=60lLSe1phks&amp;t=2091s">유튜브 강좌</a>를 보시길 추천드립니다.</p>
 
-<p>Android 7(N)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. 얼마전 기존 프로젝트에 Android 11(R) 대응을 위해 Scoped Storage 적용을 진행하면서 기존 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache, files, external(Media/Download)로 구분하는 처리가 추가되었습니다. 이로 인해 external경로 이외에도 파일프로바이더로 제공할 수 있도록 수정이 필요했습니다.</p>
+<p>백명석님의 클린코더스 강의 다시보기</p>
 
-<p>추가 할 수 있는 path의 종류와 가르키는 영역 정리</p>
+<h3 id="우리의-목표">우리의 목표</h3>
+<ul>
+  <li>잘 동작하는 코드</li>
+  <li>읽을 수 있는 코드</li>
+  <li>OOP/SOLID</li>
+</ul>
+
+<h3 id="잊지-말아야-할-것">잊지 말아야 할 것.</h3>
+<ul>
+  <li><code class="highlighter-rouge"> 기계가 이해하고 동작하는 코드는 누구나 작성할 수 있다. 사람이 읽을 수 있는 코드는 숙력된 개발자만 가능하다. -마틴파울러-</code> 동작하는 코드와 읽을 수 있는 코드의 차이는 아주크다.</li>
+  <li><code class="highlighter-rouge">우선동작하는 코드를 만들고, 출시후 아름답게 만든다.</code>는 불가능하다. 나중은 없다. 혹여나 그렇게 만들어진 코드를 정리하는 작업을 한다고 했을때 리팩토링이 아니고 리스트럭처링이 되며, 새로운 버그를 만들어 낸다. 또한 겁나기 때문에 묻어두게 된다.</li>
+</ul>
+
+<h3 id="why-clean-code">Why Clean Code?</h3>
+<ul>
+  <li>코드는 최소 10번이상 읽힌다. 우린 항상 새로운 코드를 만들지 않는다. 대부분 수정하고 추가하고 확장한다.</li>
+  <li>기계가 이해할 수 있는 코드는 바보도 작성 할 수 있다(크흡.)</li>
+</ul>
+
+<h3 id="why-oop">Why OOP?</h3>
+<ul>
+  <li>절차지향적인 코드는 모든 프로시저가 데이터를 공유한다. 프로시저 하나가 변경되면 모든 프로시저가 영향을 받고 함께 수정되어야한다.</li>
+  <li>객체지향적인 코드는 외부에 노출된 인터페이스만 변경 되지 않는다면, 데이터를 조작하는 코드의 변경은 외부에 영향을 미치지않는다. 
+프로시저를 실행하는데 필요한 만큼 데이터만 가진다. 대부분의 사람들은 절차적으로 사고한다. 나 역시 절차지향적이다. 때문에 훈련이 필요하다. 네이티브 본도 있긴하다. 총을 가진 누군가 내 코드를 유지보수 할 예정이라 생각하라 심지어 그는 미치광이다.</li>
+</ul>
+
+<h3 id="객체">객체</h3>
+<ul>
+  <li>WriteArticleService 는 맞지만 ArticleWriteService는 틀렸다.</li>
+  <li>Class 이름은 무엇으로 정의해야한다. RequestParser(O) JsonRequestParser(X) 나중에 Json을 Xml로 바꾼다면? 이름만 바꿔서 되지 않는다. 이름만 바꿔도 참조중인 코드에 변경사항이 생긴다. 또한 클래스 이름을 잘못 지으면 동작까지 달라진다. RequestParser를 구현하고, Reader의 구현을 Json을 참조하여 구현체를 만들면 ReqestParser를 참조하던 클래스에 변경사항 없이 개발 가능하다.
+    <blockquote>
+      <p>무엇으로 정의하라, 어떻게로 정의하지 말고.</p>
+    </blockquote>
+  </li>
+  <li>역할은 관련된 책임의 직합이다.</li>
+  <li>객체는 역할을 가진다.</li>
+</ul>
+
+<h2 id="객체지향-설계-과정">객체지향 설계 과정</h2>
+<ol>
+  <li>내부에서 필요한 데이터 선별</li>
+  <li>객체간 메시지 흐름을 연결</li>
+</ol>
+
+<h3 id="절차적인-설계">절차적인 설계</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FlowController{
+fileRead()
+encrypt()
+fileWrite()
+}
+</code></pre></div></div>
+<h3 id="객체지향적인-설계">객체지향적인 설계</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- FlowController
+  ᆫ FileReader(read:byte[])
+  ᆫ Encrypter(bytes:byte[]):byte[]
+  ᆫ FileWriter(bytes:byte[])
+</code></pre></div></div>
+<p>기능을 제공한 객체로 분리(선별)하고, 객체간 메시지 흐름을 연결한다. 머리로 하지말고 손으로 하라.</p>
+
+<h2 id="encapsulation">Encapsulation</h2>
+<p>내부적으로 어떻게 구현했는지 감춰 내부의 변경(데이터,코드)이 클라이언트의 변경이 되지않도록 하여 <code class="highlighter-rouge">코드 변경에 따는 비용 최소화</code>를 목표로 한다. 변경된 내용은 모두 비용이다.</p>
+
+<h3 id="tell-dont-ask">Tell, Don’t ASK</h3>
+<p>데이터를 요청해서 변경하고 저장하지 말고, 무슨 기능을 실행하라. 아래의 코드를 보면 expire 조건이 변경되면 모든 코드를 찾아서 변경해야한다.</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span><span class="o">(</span><span class="n">member</span><span class="o">.</span><span class="na">getExpiredDate</span><span class="o">().</span><span class="na">getTime</span><span class="o">()&lt;</span><span class="n">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">){...</span>   <span class="c1">// (Bad)</span>
+<span class="k">if</span><span class="o">(</span><span class="n">member</span><span class="o">.</span><span class="na">isExpired</span><span class="o">()){...</span>                                           <span class="c1">// (Good) </span>
+</code></pre></div></div>
+
+<h3 id="command-vs-query">Command Vs Query</h3>
+<p>Command(Tell) 객체 내부의 상태를 변경 원칙은 데이터반환을 하지 않지만, 편의를 위해 어떤 결과를 반환 할 수 있다. 
+Query(Ask) 객체의 상태에 대한 정보를 제공. 하지만 값의 변경은 해선 안된다. 메서드명을 본뒤 코드를 열어보고 당황할 만한 일을 해선 안된다.</p>
+
+<h2 id="polymorphism">Polymorphism</h2>
+<p>한가지 객체가 여러가지(poly) 모습(morph)을 가질 수 있다.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ZetMotocycle zm = new ZetMotocycle(); `Zet` `Motocycle`의 모습
+Motocycle mc = new Motocycle(); `Motocycle`의 모습
+ZetEngine ze = new ZetEngine(); `ZetEngine`의 모습
+</code></pre></div></div>
+<p>그런데 아래처럼 쓸수 있게 된다. 이게 핵심이다.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Motocycle mc = new ZetMotocycle();
+ZetEngine mc = new ZetMotocycle(); 
+</code></pre></div></div>
+
+<p>상속은 두가지가 있다.</p>
+<ul>
+  <li>구현 상속 : 슈퍼타입의 구현을 재사용. <code class="highlighter-rouge">슈퍼타입에서 작성했던 코드</code>를 재사용 할 수 있다. 의존성이 높아진다.</li>
+  <li>인터페이스 상속 : 타입 정의만 상속, 상속은 객체에게 다형성을 제공. <code class="highlighter-rouge">인터페이스를 참조하는 코드</code>를 재사용 할 수 있다.</li>
+</ul>
+
+<p>추상화와 개발자의 습성</p>
+<ul>
+  <li>개발자들은 습성상 상세한 구현에 빠지다 보면 상위 수준의 설계를 놓치기 쉬운데, 추상화를 통해 상위 수준에서 설계를 하는데 도움을 얻을 수 있다.</li>
+</ul>
 
 <table>
   <thead>
     <tr>
-      <th>path</th>
-      <th>directory scope</th>
+      <th>구현</th>
+      <th>추상화</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>files-path</td>
-      <td>context.getFilesDir()</td>
+      <td>디렉토리에서 파일을 읽어와 메모리에 저장하고</td>
+      <td>로그 수집</td>
     </tr>
     <tr>
-      <td>cache-path</td>
-      <td>context.getCacheDir()</td>
+      <td>한줄 한줄 정규표현식으로 파싱하고</td>
+      <td>로그 분석</td>
     </tr>
     <tr>
-      <td>external-cache-path</td>
-      <td>context.getExternalCacheDir()</td>
+      <td>그 결과를 DB에 저장하고</td>
+      <td>결과 저장</td>
     </tr>
     <tr>
-      <td>external-path</td>
-      <td>Environment.getExternalStorageDirectory()</td>
-    </tr>
-    <tr>
-      <td>external-media-path</td>
-      <td>context.getExternalMediaDirs() (only API 21+ Devices)</td>
+      <td>…</td>
+      <td>…</td>
     </tr>
   </tbody>
 </table>
 
-<p>manifest &gt; provider &gt; meta-data &gt; resource 에 정의한 <code class="highlighter-rouge">file_paths.xml</code> 파일을 아래처럼 수정했습니다.</p>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- res/xml/file_paths.xml --&gt;</span>
-<span class="nt">&lt;path&gt;</span>
-    <span class="nt">&lt;external-path</span> <span class="na">name=</span><span class="s">"external_files"</span> <span class="na">path=</span><span class="s">"."</span><span class="nt">/&gt;</span>
-    <span class="nt">&lt;cache-path</span> <span class="na">name=</span><span class="s">"files"</span> <span class="na">path=</span><span class="s">"."</span><span class="nt">/&gt;</span>  #cache 영역 전체(.)를 files라는 이름으로 공유 
-<span class="nt">&lt;/path&gt;</span> 
-</code></pre></div></div>
-
-<hr />
-<p>연관코드</p>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!--manifest.Xml--&gt;</span>
-<span class="nt">&lt;manifest&gt;</span>
-    <span class="nt">&lt;application&gt;</span>
-        ...
-        <span class="nt">&lt;provider</span>
-            <span class="na">android:name=</span><span class="s">"androidx.core.content.FileProvider"</span>
-            <span class="na">android:authorities=</span><span class="s">"${applicationId}.fileprovider"</span>
-            <span class="na">android:exported=</span><span class="s">"false"</span>
-            <span class="na">android:grantUriPermissions=</span><span class="s">"true"</span>
-            <span class="na">tools:replace=</span><span class="s">"android:authorities"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;meta-data</span>
-                <span class="na">android:name=</span><span class="s">"android.support.FILE_PROVIDER_PATHS"</span>
-                <span class="na">android:resource=</span><span class="s">"@xml/file_paths"</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;/provider&gt;</span>
-        ...
-    <span class="nt">&lt;/application&gt;</span>
-<span class="nt">&lt;/manifest&gt;</span>
-
-</code></pre></div></div>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">requestCaptureImage</span><span class="o">(</span><span class="n">Activity</span> <span class="n">activity</span><span class="o">,</span> <span class="n">Uri</span> <span class="n">uri</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">Intent</span> <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Intent</span><span class="o">(</span><span class="n">MediaStore</span><span class="o">.</span><span class="na">ACTION_IMAGE_CAPTURE</span><span class="o">);</span>
-    <span class="k">if</span> <span class="o">(</span><span class="n">Build</span><span class="o">.</span><span class="na">VERSION</span><span class="o">.</span><span class="na">SDK_INT</span> <span class="o">&lt;</span> <span class="n">Build</span><span class="o">.</span><span class="na">VERSION_CODES</span><span class="o">.</span><span class="na">N</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">intent</span><span class="o">.</span><span class="na">putExtra</span><span class="o">(</span><span class="n">android</span><span class="o">.</span><span class="na">provider</span><span class="o">.</span><span class="na">MediaStore</span><span class="o">.</span><span class="na">EXTRA_OUTPUT</span><span class="o">,</span> <span class="n">uri</span><span class="o">);</span>
-    <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-        <span class="n">File</span> <span class="n">file</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="n">uri</span><span class="o">.</span><span class="na">getPath</span><span class="o">());</span>
-        <span class="n">Uri</span> <span class="n">photoUri</span> <span class="o">=</span> <span class="n">FileProvider</span><span class="o">.</span><span class="na">getUriForFile</span><span class="o">(</span><span class="n">MainApplication</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(),</span> <span class="n">BuildConfig</span><span class="o">.</span><span class="na">APPLICATION_ID</span><span class="o">,</span> <span class="n">file</span><span class="o">);</span>
-        <span class="n">intent</span><span class="o">.</span><span class="na">putExtra</span><span class="o">(</span><span class="n">MediaStore</span><span class="o">.</span><span class="na">EXTRA_OUTPUT</span><span class="o">,</span> <span class="n">photoUri</span><span class="o">);</span>
-    <span class="o">}</span>
-    <span class="n">activity</span><span class="o">.</span><span class="na">startActivityForResult</span><span class="o">(</span><span class="n">intent</span><span class="o">,</span> <span class="n">RequestCode</span><span class="o">.</span><span class="na">ACTION_IMAGE_CAPTURE</span><span class="o">.</span><span class="na">getCode</span><span class="o">());</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>Error trace</p>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Caused</span> <span class="nl">by:</span> <span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">IllegalArgumentException</span><span class="o">:</span> <span class="n">Couldn</span><span class="err">'</span><span class="n">t</span> <span class="n">find</span> <span class="n">meta</span><span class="o">-</span><span class="n">data</span> <span class="k">for</span> <span class="n">provider</span> <span class="n">with</span> <span class="n">authority</span> <span class="n">com</span><span class="o">.</span><span class="na">mond</span><span class="o">.</span><span class="na">al</span><span class="o">.</span><span class="na">fileProvider</span>
-        <span class="n">at</span> <span class="n">androidx</span><span class="o">.</span><span class="na">core</span><span class="o">.</span><span class="na">content</span><span class="o">.</span><span class="na">FileProvider</span><span class="o">.</span><span class="na">parsePathStrategy</span><span class="o">(</span><span class="n">FileProvider</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">606</span><span class="o">)</span>
-        <span class="n">at</span> <span class="n">androidx</span><span class="o">.</span><span class="na">core</span><span class="o">.</span><span class="na">content</span><span class="o">.</span><span class="na">FileProvider</span><span class="o">.</span><span class="na">getPathStrategy</span><span class="o">(</span><span class="n">FileProvider</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">579</span><span class="o">)</span>
-        <span class="n">at</span> <span class="n">androidx</span><span class="o">.</span><span class="na">core</span><span class="o">.</span><span class="na">content</span><span class="o">.</span><span class="na">FileProvider</span><span class="o">.</span><span class="na">getUriForFile</span><span class="o">(</span><span class="n">FileProvider</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">417</span><span class="o">)</span>
-</code></pre></div></div>
+<p>내가 테스트할려는 코드들에게 모두 Mocking을 만들기 쉬워진다.
+서비스 로케이터 패턴 VS 의존성 주입(DI) 에 대해 고민해보자.</p>
 
                 </div>
             </section>
@@ -326,9 +365,9 @@ into the {body} of the default.hbs template -->
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            this.page.url = 'https://mond-al.github.io/cache-share';
-                            this.page.identifier = '/cache-share';
-                            this.page.title = 'File Provider Path';
+                            this.page.url = 'https://mond-al.github.io/architecture-base-1';
+                            this.page.identifier = '/architecture-base-1';
+                            this.page.title = '아키텍처와 클린코드 그리고 TDD (1)';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -373,11 +412,6 @@ into the {body} of the default.hbs template -->
                                 
                                   
                                     
-                                        
-                                        
-                                            <li><a href="/architecture-base-1">아키텍처와 클린코드 그리고 TDD (1)</a></li>
-                                        
-                                    
                                   
                                 
                                   
@@ -399,6 +433,11 @@ into the {body} of the default.hbs template -->
                                   
                                 
                                   
+                                    
+                                        
+                                        
+                                            <li><a href="/cache-share">File Provider Path</a></li>
+                                        
                                     
                                   
                                 
@@ -463,63 +502,6 @@ into the {body} of the default.hbs template -->
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/about-binding">
-                <div class="post-card-image" style="background-image: url(/assets/images/cover/common_solution.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/about-binding">
-                <header class="post-card-header">
-                    
-                        
-                            
-                               <span class="post-card-tags">Android</span>
-                            
-                        
-                            
-                               <span class="post-card-tags">File provider</span>
-                            
-                        
-                            
-                                <span class="post-card-tags">Cache</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Binding</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p></p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/logo/normal.png" alt="jisoo Yang" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/mond/">jisoo Yang</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
@@ -527,12 +509,12 @@ into the {body} of the default.hbs template -->
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/file-write">
-                <div class="post-card-image" style="background-image: url(/assets/images/cover/common_android.jpg)"></div>
+            <a class="post-card-image-link" href="/example-camera">
+                <div class="post-card-image" style="background-image: url(/assets/images/cover/2021-02-11-scoped-storage-camera-cover.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/file-write">
+            <a class="post-card-content-link" href="/example-camera">
                 <header class="post-card-header">
                     
                         
@@ -541,16 +523,16 @@ into the {body} of the default.hbs template -->
                             
                         
                             
-                               <span class="post-card-tags">File</span>
+                               <span class="post-card-tags">Scoped storage</span>
                             
                         
                             
-                                <span class="post-card-tags">Scoped storage</span>
+                                <span class="post-card-tags">Camera</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">안드로이드 파일 쓰기</h2>
+                    <h2 class="post-card-title">카메라 사진촬영으로 보는 Scoped storage 예제 및 소스</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -596,18 +578,18 @@ into the {body} of the default.hbs template -->
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">File Provider Path</div>
+    <div class="floating-header-title">아키텍처와 클린코드 그리고 TDD (1)</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=File+Provider+Path&amp;url=https://mond-al.github.io/cache-share"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98%EC%99%80+%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C+%EA%B7%B8%EB%A6%AC%EA%B3%A0+TDD+%281%29&amp;url=https://mond-al.github.io/architecture-base-1"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://mond-al.github.io/cache-share"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://mond-al.github.io/architecture-base-1"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 
