@@ -47,15 +47,15 @@
 <meta property="og:title" content="아키텍처와 클린코드 그리고 TDD (2)" />
 <meta name="author" content="jisoo Yang" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 유튜브 강좌를 보시길 추천드립니다." />
-<meta property="og:description" content="이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 유튜브 강좌를 보시길 추천드립니다." />
+<meta name="description" content="함수 리팩토링을 통해 아름다운 코드로 바꿔보자. 그리고 왜 이렇게 하는지 이해는게 목표이다." />
+<meta property="og:description" content="함수 리팩토링을 통해 아름다운 코드로 바꿔보자. 그리고 왜 이렇게 하는지 이해는게 목표이다." />
 <link rel="canonical" href="https://mond-al.github.io/architecture-base-2" />
 <meta property="og:url" content="https://mond-al.github.io/architecture-base-2" />
 <meta property="og:site_name" content="몬드 개발 로그" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-02-17T00:00:00+09:00" />
 <script type="application/ld+json">
-{"url":"https://mond-al.github.io/architecture-base-2","headline":"아키텍처와 클린코드 그리고 TDD (2)","dateModified":"2021-02-17T00:00:00+09:00","datePublished":"2021-02-17T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mond-al.github.io/architecture-base-2"},"author":{"@type":"Person","name":"jisoo Yang"},"description":"이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 유튜브 강좌를 보시길 추천드립니다.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://mond-al.github.io/assets/images/logo/normal_icon.png"},"name":"jisoo Yang"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"url":"https://mond-al.github.io/architecture-base-2","headline":"아키텍처와 클린코드 그리고 TDD (2)","dateModified":"2021-02-17T00:00:00+09:00","datePublished":"2021-02-17T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mond-al.github.io/architecture-base-2"},"author":{"@type":"Person","name":"jisoo Yang"},"description":"함수 리팩토링을 통해 아름다운 코드로 바꿔보자. 그리고 왜 이렇게 하는지 이해는게 목표이다.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://mond-al.github.io/assets/images/logo/normal_icon.png"},"name":"jisoo Yang"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -81,7 +81,7 @@
         "@type": "WebPage",
         "@id": "https://mond-al.github.io/architecture-base-2"
     },
-    "description": "이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 유튜브 강좌를 보시길 추천드립니다. 백명석님의 클린코더스 강의 다시보기 Function 원칙 한가지 일만 해야 한다. 함수의 크기는 80년데 vt100터미널 24줄 80컬럼 -&gt; 4줄은 에디터가 사용 -&gt; 함수는 20개 이내여야 한다고 했[었]다. 요즘은 모니터가"
+    "description": "함수 리팩토링을 통해 아름다운 코드로 바꿔보자. 그리고 왜 이렇게 하는지 이해는게 목표이다. 이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 유튜브 강좌를 보시길 추천드립니다. 백명석님의 클린코더스 강의 다시보기 Function 원칙 한가지 일만 해야 한다. 함수의 크기는 80년데 vt100터미널 24줄 80컬럼"
 }
     </script>
 
@@ -175,7 +175,9 @@ into the {body} of the default.hbs template -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p>이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 <a href="https://www.youtube.com/watch?v=60lLSe1phks&amp;t=2091s">유튜브 강좌</a>를 보시길 추천드립니다.</p>
+                    <p>함수 리팩토링을 통해 아름다운 코드로 바꿔보자. 그리고 왜 이렇게 하는지 이해는게 목표이다.</p>
+
+<p>이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 <a href="https://www.youtube.com/watch?v=60lLSe1phks&amp;t=2091s">유튜브 강좌</a>를 보시길 추천드립니다.</p>
 
 <p>백명석님의 클린코더스 강의 다시보기</p>
 

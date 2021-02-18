@@ -9,7 +9,7 @@
       <item>
         <title>아키텍처와 클린코드 그리고 TDD (2)</title>
         
-          <description>&lt;p&gt;이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 &lt;a href=&quot;https://www.youtube.com/watch?v=60lLSe1phks&amp;amp;t=2091s&quot;&gt;유튜브 강좌&lt;/a&gt;를 보시길 추천드립니다.&lt;/p&gt;
+          <description>&lt;p&gt;함수 리팩토링을 통해 아름다운 코드로 바꿔보자. 그리고 왜 이렇게 하는지 이해는게 목표이다.&lt;/p&gt;
 
 </description>
         
@@ -23,7 +23,7 @@
       <item>
         <title>아키텍처와 클린코드 그리고 TDD (1)</title>
         
-          <description>&lt;p&gt;이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 &lt;a href=&quot;https://www.youtube.com/watch?v=60lLSe1phks&amp;amp;t=2091s&quot;&gt;유튜브 강좌&lt;/a&gt;를 보시길 추천드립니다.&lt;/p&gt;
+          <description>&lt;p&gt;객체지향에 대해 정리하고, 전체적인 맥락을 짚어본다.&lt;/p&gt;
 
 </description>
         
