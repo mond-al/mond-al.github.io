@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/fragmentstatepageradapter/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-19T23:34:07+09:00</updated>
+  <updated>2021-02-19T23:36:32+09:00</updated>
   <id>https://mond-al.github.io/tag/fragmentstatepageradapter/feed.xml</id>
 
   
@@ -44,7 +44,7 @@
 &lt;h3 id=&quot;fragmentpageradapter는-deprecated된-클래스가-아닙니다-deprecated된-생성자가-있을-뿐입니다&quot;&gt;FragmentPagerAdapter는 Deprecated된 클래스가 아닙니다. Deprecated된 생성자가 있을 뿐입니다.&lt;/h3&gt;
 
 &lt;p&gt;기존에 사용하던 FragmentPagerAdapter들이 모두 Deprecated된 상태로 표시되어 오해하시는 분들이 많습니다. 또한 
-지금 Android developers 페이지를 보면 최종적으로는 RecyclerView.Adapter를 상속받는 ViewPager2로 전향 할 것을 권고하고 있습니다. 이때문에 오해하시는 경우가 많은데, Deprecated된 생성자가 있을 뿐입니다.&lt;/p&gt;
+지금 Android developers 페이지를 보면 최종적으로는 RecyclerView를 상속하는 ViewPager2로 전향 할 것을 권고하고 있습니다. 이때문에 오해하시는 경우가 많은데, Deprecated된 생성자가 있을 뿐입니다.&lt;/p&gt;
 
 &lt;p&gt;한마디로 정리하면 &lt;a href=&quot;https://developer.android.com/reference/kotlin/androidx/fragment/app/Fragment#setuservisiblehint&quot;&gt;Fragment.setUserVisibleHint&lt;/a&gt;가 Deprecated되었기 때문에 FragmentPagerAdapter(FragmentManager) 생성자는 Deprecated되었습니다.&lt;/p&gt;
 
