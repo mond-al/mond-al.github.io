@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/behavior-set-user-visible-hint/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-20T03:29:35+09:00</updated>
+  <updated>2021-02-20T03:39:40+09:00</updated>
   <id>https://mond-al.github.io/tag/behavior-set-user-visible-hint/feed.xml</id>
 
   
@@ -181,7 +181,7 @@ This may be used by the system to prioritize operations such as fragment lifecyc
 
 &lt;h2 id=&quot;정리&quot;&gt;정리&lt;/h2&gt;
 
-&lt;p&gt;로그를 보시면 기존에 사용하던 방식인 &lt;code class=&quot;highlighter-rouge&quot;&gt;BEHAVIOR_SET_USER_VISIBLE_HINT&lt;/code&gt;는 &lt;code class=&quot;highlighter-rouge&quot;&gt;setUserVisibleHint&lt;/code&gt;메서드를 오버라이드하였을때는 fragment가 onCreate된 후를 보장하지 않습니다. 생명주기 상태가 명확하지 않아서 개발자의 많은 개입이 요구됩니다. 또한 사용하지않는 미리 불러놓은 캐쉬된 아이템(현재 활성화된 아이템의 좌우페이지)의 생명주기가 계속 변경되어 더욱 고려할 사항이 많았습니다.&lt;/p&gt;
+&lt;p&gt;로그를 보시면 기존에 사용하던 방식인 &lt;code class=&quot;highlighter-rouge&quot;&gt;BEHAVIOR_SET_USER_VISIBLE_HINT&lt;/code&gt;는 &lt;code class=&quot;highlighter-rouge&quot;&gt;setUserVisibleHint&lt;/code&gt;메서드를 오버라이드하였으며, fragment가 onCreate된 후에 setUserVisibleHint이 호출됨를 보장하지 않습니다. 생명주기 상태가 명확하지 않아서 개발자의 많은 개입이 요구됩니다. 또한 사용하지않는 미리 불러놓은 캐쉬된 아이템(현재 활성화된 아이템의 좌우페이지)의 생명주기가 계속 변경되어 더욱 고려할 사항이 많았습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT&lt;/code&gt;를 사용하면 onResume/onPause 만으로 깔끔하게 bind/unbind 로직을 구현 할 수 있게 되었습니다. 또한 이제 캐쉬된 아이템은 준비단계에서 onCreate만 호출됩니다.&lt;/p&gt;</content>
 

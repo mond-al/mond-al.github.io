@@ -323,7 +323,7 @@ This may be used by the system to prioritize operations such as fragment lifecyc
 
 <h2 id="정리">정리</h2>
 
-<p>로그를 보시면 기존에 사용하던 방식인 <code class="highlighter-rouge">BEHAVIOR_SET_USER_VISIBLE_HINT</code>는 <code class="highlighter-rouge">setUserVisibleHint</code>메서드를 오버라이드하였을때는 fragment가 onCreate된 후를 보장하지 않습니다. 생명주기 상태가 명확하지 않아서 개발자의 많은 개입이 요구됩니다. 또한 사용하지않는 미리 불러놓은 캐쉬된 아이템(현재 활성화된 아이템의 좌우페이지)의 생명주기가 계속 변경되어 더욱 고려할 사항이 많았습니다.</p>
+<p>로그를 보시면 기존에 사용하던 방식인 <code class="highlighter-rouge">BEHAVIOR_SET_USER_VISIBLE_HINT</code>는 <code class="highlighter-rouge">setUserVisibleHint</code>메서드를 오버라이드하였으며, fragment가 onCreate된 후에 setUserVisibleHint이 호출됨를 보장하지 않습니다. 생명주기 상태가 명확하지 않아서 개발자의 많은 개입이 요구됩니다. 또한 사용하지않는 미리 불러놓은 캐쉬된 아이템(현재 활성화된 아이템의 좌우페이지)의 생명주기가 계속 변경되어 더욱 고려할 사항이 많았습니다.</p>
 
 <p><code class="highlighter-rouge">BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT</code>를 사용하면 onResume/onPause 만으로 깔끔하게 bind/unbind 로직을 구현 할 수 있게 되었습니다. 또한 이제 캐쉬된 아이템은 준비단계에서 onCreate만 호출됩니다.</p>
 
