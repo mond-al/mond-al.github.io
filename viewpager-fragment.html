@@ -73,7 +73,7 @@
     "url": "https://mond-al.github.io/viewpager-fragment",
     "image": {
         "@type": "ImageObject",
-        "url": "https://mond-al.github.io/assets/images/sky.jpg",
+        "url": "https://mond-al.github.io/assets/images/cover/2021-02-18-viewpager-fragment.png",
         "width": 2000,
         "height": 666
     },
@@ -142,7 +142,7 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-android tag-fragmentpageradapter tag-fragmentstatepageradapter tag-behavior-set-user-visible-hint  no-image">
+        <article class="post-full  tag-android tag-fragmentpageradapter tag-fragmentstatepageradapter tag-behavior-set-user-visible-hint  ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
@@ -172,6 +172,9 @@ into the {body} of the default.hbs template -->
             </header>
 
 <!--        본문 상단 커버이미지-->
+<!--            -->
+<!--            <figure class="post-full-image" style="background-image: url(/assets/images/cover/2021-02-18-viewpager-fragment.png)">-->
+<!--            </figure>-->
 <!--            -->
 
             <section class="post-full-content">
@@ -239,32 +242,32 @@ This may be used by the system to prioritize operations such as fragment lifecyc
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">private</span> <span class="k">lateinit</span> <span class="kd">var</span> <span class="py">pageViewModel</span><span class="p">:</span> <span class="n">PageViewModel</span> <span class="c1">// onCreated에서 초기화
 </span><span class="k">private</span> <span class="kd">var</span> <span class="py">position</span> <span class="p">=</span> <span class="p">-</span><span class="m">1</span> <span class="c1">// 테스트를 위해 인스턴스를 생성할때 값을 부여했습니다.
-</span>        
+</span>
 <span class="k">override</span> <span class="k">fun</span> <span class="nf">setUserVisibleHint</span><span class="p">(</span><span class="n">isVisibleToUser</span><span class="p">:</span> <span class="n">Boolean</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">super</span><span class="p">.</span><span class="n">setUserVisibleHint</span><span class="p">(</span><span class="n">isVisibleToUser</span><span class="p">)</span>
-        <span class="k">if</span><span class="p">(</span><span class="o">::</span><span class="n">pageViewModel</span><span class="p">.</span><span class="n">isInitialized</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">Log</span><span class="p">.</span><span class="n">e</span><span class="p">(</span><span class="s">"TEST"</span><span class="p">,</span> <span class="s">"pageViewModel($position) is Initialized - setUserVisibleHint : $isVisibleToUser"</span><span class="p">)</span>
-        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-            <span class="n">Log</span><span class="p">.</span><span class="n">e</span><span class="p">(</span><span class="s">"TEST"</span><span class="p">,</span> <span class="s">"pageViewModel($position) is not Initialized - setUserVisibleHint : $isVisibleToUser"</span><span class="p">)</span>
-        <span class="p">}</span>
+    <span class="k">super</span><span class="p">.</span><span class="n">setUserVisibleHint</span><span class="p">(</span><span class="n">isVisibleToUser</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">::</span><span class="n">pageViewModel</span><span class="p">.</span><span class="n">isInitialized</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Log</span><span class="p">.</span><span class="n">e</span><span class="p">(</span><span class="s">"TEST"</span><span class="p">,</span> <span class="s">"pageViewModel($position) is Initialized - setUserVisibleHint : $isVisibleToUser"</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">Log</span><span class="p">.</span><span class="n">e</span><span class="p">(</span><span class="s">"TEST"</span><span class="p">,</span> <span class="s">"pageViewModel($position) is not Initialized - setUserVisibleHint : $isVisibleToUser"</span><span class="p">)</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 
 <span class="k">override</span> <span class="k">fun</span> <span class="nf">onResume</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">super</span><span class="p">.</span><span class="n">onResume</span><span class="p">()</span>
-  <span class="k">if</span><span class="p">(</span><span class="o">::</span><span class="n">pageViewModel</span><span class="p">.</span><span class="n">isInitialized</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">Log</span><span class="p">.</span><span class="n">e</span><span class="p">(</span><span class="s">"TEST"</span><span class="p">,</span> <span class="s">"pageViewModel($position) is Initialized - onResume"</span><span class="p">)</span>
-  <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-    <span class="n">Log</span><span class="p">.</span><span class="n">e</span><span class="p">(</span><span class="s">"TEST"</span><span class="p">,</span> <span class="s">"pageViewModel($position) is not Initialized - onResume"</span><span class="p">)</span>
-  <span class="p">}</span>
+    <span class="k">super</span><span class="p">.</span><span class="n">onResume</span><span class="p">()</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">::</span><span class="n">pageViewModel</span><span class="p">.</span><span class="n">isInitialized</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Log</span><span class="p">.</span><span class="n">e</span><span class="p">(</span><span class="s">"TEST"</span><span class="p">,</span> <span class="s">"pageViewModel($position) is Initialized - onResume"</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">Log</span><span class="p">.</span><span class="n">e</span><span class="p">(</span><span class="s">"TEST"</span><span class="p">,</span> <span class="s">"pageViewModel($position) is not Initialized - onResume"</span><span class="p">)</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 
 <span class="k">override</span> <span class="k">fun</span> <span class="nf">onPause</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">super</span><span class="p">.</span><span class="n">onPause</span><span class="p">()</span>
-  <span class="k">if</span><span class="p">(</span><span class="o">::</span><span class="n">pageViewModel</span><span class="p">.</span><span class="n">isInitialized</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">Log</span><span class="p">.</span><span class="n">e</span><span class="p">(</span><span class="s">"TEST"</span><span class="p">,</span> <span class="s">"pageViewModel($position) is Initialized - onPause"</span><span class="p">)</span>
-  <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-    <span class="n">Log</span><span class="p">.</span><span class="n">e</span><span class="p">(</span><span class="s">"TEST"</span><span class="p">,</span> <span class="s">"pageViewModel($position) is not Initialized - onPause"</span><span class="p">)</span>
-  <span class="p">}</span>
+    <span class="k">super</span><span class="p">.</span><span class="n">onPause</span><span class="p">()</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">::</span><span class="n">pageViewModel</span><span class="p">.</span><span class="n">isInitialized</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Log</span><span class="p">.</span><span class="n">e</span><span class="p">(</span><span class="s">"TEST"</span><span class="p">,</span> <span class="s">"pageViewModel($position) is Initialized - onPause"</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">Log</span><span class="p">.</span><span class="n">e</span><span class="p">(</span><span class="s">"TEST"</span><span class="p">,</span> <span class="s">"pageViewModel($position) is not Initialized - onPause"</span><span class="p">)</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></div>
 <h3 id="behavior_set_user_visible_hint-적용-log">BEHAVIOR_SET_USER_VISIBLE_HINT 적용 LOG</h3>
