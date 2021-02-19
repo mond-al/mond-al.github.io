@@ -1,1 +1,3 @@
-./
+User-agent: *
+Allow: /
+Sitemap: https://mond-al.github.io/sitemap.xml

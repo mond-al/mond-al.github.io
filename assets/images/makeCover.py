@@ -12,7 +12,7 @@ height = 540
 pageLimit = 10
 textSizeFat = 1.2
 textSoruce = "FragmentPagerAdapter"
-query = "desk"
+query = "desk, work"
 
 def linkFetch():
     page = random.randint(1, pageLimit)
@@ -58,7 +58,8 @@ def genFile(retryCount=0):
         textX = ((width - textWidth) / 2)
         textY = ((height - textHeight) / 2)
         draw.text((textX, textY), textSoruce, (255, 255, 255), font)
-        outputFile: str = folderName + f"/_{query}_" + textSoruce + ".png"
+        #outputFile: str = folderName + f"/_{query}_" + textSoruce + ".png"
+        outputFile: str = folderName + f"/_new.png"
         im.save(outputFile, format="JPEG", quality=82, optimize=True)
         os.remove(tempFileOutput)
         return outputFile
