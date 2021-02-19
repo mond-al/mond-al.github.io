@@ -153,7 +153,16 @@ into the {body} of the default.hbs template -->
 <ul class="entry-meta inline-list">
   
     
+  	<li><a href="#BEHAVIOR_SET_USER_VISIBLE_HINT" class="tag"><span class="term alltags">BEHAVIOR_SET_USER_VISIBLE_HINT</span> <span class="count alltags">1</span></a></li>
+  
+    
   	<li><a href="#BuildTypes" class="tag"><span class="term alltags">BuildTypes</span> <span class="count alltags">1</span></a></li>
+  
+    
+  	<li><a href="#FragmentPagerAdapter" class="tag"><span class="term alltags">FragmentPagerAdapter</span> <span class="count alltags">1</span></a></li>
+  
+    
+  	<li><a href="#FragmentStatePagerAdapter" class="tag"><span class="term alltags">FragmentStatePagerAdapter</span> <span class="count alltags">1</span></a></li>
   
     
   	<li><a href="#ProductFlavors" class="tag"><span class="term alltags">ProductFlavors</span> <span class="count alltags">1</span></a></li>
@@ -162,7 +171,7 @@ into the {body} of the default.hbs template -->
   	<li><a href="#android" class="tag"><span class="term alltags">android</span> <span class="count alltags">12</span></a></li>
   
     
-  	<li><a href="#architecture" class="tag"><span class="term alltags">architecture</span> <span class="count alltags">3</span></a></li>
+  	<li><a href="#architecture" class="tag"><span class="term alltags">architecture</span> <span class="count alltags">2</span></a></li>
   
     
   	<li><a href="#cache" class="tag"><span class="term alltags">cache</span> <span class="count alltags">2</span></a></li>
@@ -171,7 +180,7 @@ into the {body} of the default.hbs template -->
   	<li><a href="#camera" class="tag"><span class="term alltags">camera</span> <span class="count alltags">1</span></a></li>
   
     
-  	<li><a href="#cleanCoders" class="tag"><span class="term alltags">cleanCoders</span> <span class="count alltags">3</span></a></li>
+  	<li><a href="#cleanCoders" class="tag"><span class="term alltags">cleanCoders</span> <span class="count alltags">2</span></a></li>
   
     
   	<li><a href="#dependency" class="tag"><span class="term alltags">dependency</span> <span class="count alltags">1</span></a></li>
@@ -220,11 +229,44 @@ into the {body} of the default.hbs template -->
 
   
 	<article>
+	<h2 id="BEHAVIOR_SET_USER_VISIBLE_HINT" class="tag-heading">BEHAVIOR_SET_USER_VISIBLE_HINT</h2>
+		<ul>
+    
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/viewpager-fragment" target="_blank" title="FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)">FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)</a></li> -->
+      <li class="entry-title"><a href="/viewpager-fragment" target="_blank" title="FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)">FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)</a></li>
+    
+		</ul>
+	</article><!-- /.hentry -->
+
+  
+	<article>
 	<h2 id="BuildTypes" class="tag-heading">BUILDTYPES</h2>
 		<ul>
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType 조합">ProductFlavors와 BuildType 조합</a></li> -->
       <li class="entry-title"><a href="/ProductFlavors-BuildType" target="_blank" title="ProductFlavors와 BuildType 조합">ProductFlavors와 BuildType 조합</a></li>
+    
+		</ul>
+	</article><!-- /.hentry -->
+
+  
+	<article>
+	<h2 id="FragmentPagerAdapter" class="tag-heading">FRAGMENTPAGERADAPTER</h2>
+		<ul>
+    
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/viewpager-fragment" target="_blank" title="FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)">FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)</a></li> -->
+      <li class="entry-title"><a href="/viewpager-fragment" target="_blank" title="FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)">FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)</a></li>
+    
+		</ul>
+	</article><!-- /.hentry -->
+
+  
+	<article>
+	<h2 id="FragmentStatePagerAdapter" class="tag-heading">FRAGMENTSTATEPAGERADAPTER</h2>
+		<ul>
+    
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/viewpager-fragment" target="_blank" title="FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)">FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)</a></li> -->
+      <li class="entry-title"><a href="/viewpager-fragment" target="_blank" title="FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)">FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -289,9 +331,6 @@ into the {body} of the default.hbs template -->
 	<h2 id="architecture" class="tag-heading">ARCHITECTURE</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/viewpager-fragment" target="_blank" title="FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)">FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)</a></li> -->
-      <li class="entry-title"><a href="/viewpager-fragment" target="_blank" title="FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)">FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)</a></li>
-    
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/architecture-base-2" target="_blank" title="아키텍처와 클린코드 그리고 TDD (2)">아키텍처와 클린코드 그리고 TDD (2)</a></li> -->
       <li class="entry-title"><a href="/architecture-base-2" target="_blank" title="아키텍처와 클린코드 그리고 TDD (2)">아키텍처와 클린코드 그리고 TDD (2)</a></li>
     
@@ -330,9 +369,6 @@ into the {body} of the default.hbs template -->
 	<article>
 	<h2 id="cleanCoders" class="tag-heading">CLEANCODERS</h2>
 		<ul>
-    
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/viewpager-fragment" target="_blank" title="FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)">FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)</a></li> -->
-      <li class="entry-title"><a href="/viewpager-fragment" target="_blank" title="FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)">FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)</a></li>
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/architecture-base-2" target="_blank" title="아키텍처와 클린코드 그리고 TDD (2)">아키텍처와 클린코드 그리고 TDD (2)</a></li> -->
       <li class="entry-title"><a href="/architecture-base-2" target="_blank" title="아키텍처와 클린코드 그리고 TDD (2)">아키텍처와 클린코드 그리고 TDD (2)</a></li>
