@@ -13,8 +13,8 @@ width = 800
 height = 540
 pageLimit = 10
 textSizeMultiple = 1
-textSoruce = "Android develop"
-query = "dog"
+textSoruce = "Kotlin Collection"
+query = "cats many"
 
 
 def linkByApi():

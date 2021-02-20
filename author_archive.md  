@@ -83,7 +83,7 @@
     "@type": "Website",
     "publisher": {
         "@type": "Organization",
-        "name": "몬드 개발 로그",
+        "name": "All Tags",
         "logo": "https://mond-al.github.io/assets/images/logo/normal_icon.png"
     },
     "url": "https://mond-al.github.io/author_archive.md%20%20",
@@ -224,6 +224,9 @@ into the {body} of the default.hbs template -->
   
     
   	<li><a href="#image" class="tag"><span class="term alltags">image</span> <span class="count alltags">1</span></a></li>
+  
+    
+  	<li><a href="#kotlin" class="tag"><span class="term alltags">kotlin</span> <span class="count alltags">1</span></a></li>
   
     
   	<li><a href="#log" class="tag"><span class="term alltags">log</span> <span class="count alltags">1</span></a></li>
@@ -488,6 +491,17 @@ into the {body} of the default.hbs template -->
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/test-image" target="_blank" title="테스트용 이미지 다운로드 (랜덤1000개.zip,해상도별.zip)">테스트용 이미지 다운로드 (랜덤1000개.zip,해상도별.zip)</a></li> -->
       <li class="entry-title"><a href="/test-image" target="_blank" title="테스트용 이미지 다운로드 (랜덤1000개.zip,해상도별.zip)">테스트용 이미지 다운로드 (랜덤1000개.zip,해상도별.zip)</a></li>
+    
+		</ul>
+	</article><!-- /.hentry -->
+
+  
+	<article>
+	<h2 id="kotlin" class="tag-heading">KOTLIN</h2>
+		<ul>
+    
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/kotlin-collection" target="_blank" title="kotlin collection.associateBy">kotlin collection.associateBy</a></li> -->
+      <li class="entry-title"><a href="/kotlin-collection" target="_blank" title="kotlin collection.associateBy">kotlin collection.associateBy</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
