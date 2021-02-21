@@ -303,8 +303,8 @@ into the {body} of the default.hbs template -->
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/example-camera" target="_blank" title="카메라 사진촬영으로 보는 Scoped storage 예제 및 소스">카메라 사진촬영으로 보는 Scoped storage 예제 및 소스</a></li> -->
       <li class="entry-title"><a href="/example-camera" target="_blank" title="카메라 사진촬영으로 보는 Scoped storage 예제 및 소스">카메라 사진촬영으로 보는 Scoped storage 예제 및 소스</a></li>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/about-binding" target="_blank" title="Binding">Binding</a></li> -->
-      <li class="entry-title"><a href="/about-binding" target="_blank" title="Binding">Binding</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/about-binding" target="_blank" title="Binding이 되지않을때 (by viewModels()에 에러)">Binding이 되지않을때 (by viewModels()에 에러)</a></li> -->
+      <li class="entry-title"><a href="/about-binding" target="_blank" title="Binding이 되지않을때 (by viewModels()에 에러)">Binding이 되지않을때 (by viewModels()에 에러)</a></li>
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/cache-share" target="_blank" title="File Provider Path 디렉리터 영역 매칭">File Provider Path 디렉리터 영역 매칭</a></li> -->
       <li class="entry-title"><a href="/cache-share" target="_blank" title="File Provider Path 디렉리터 영역 매칭">File Provider Path 디렉리터 영역 매칭</a></li>
@@ -349,8 +349,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="cache" class="tag-heading">CACHE</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/about-binding" target="_blank" title="Binding">Binding</a></li> -->
-      <li class="entry-title"><a href="/about-binding" target="_blank" title="Binding">Binding</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/about-binding" target="_blank" title="Binding이 되지않을때 (by viewModels()에 에러)">Binding이 되지않을때 (by viewModels()에 에러)</a></li> -->
+      <li class="entry-title"><a href="/about-binding" target="_blank" title="Binding이 되지않을때 (by viewModels()에 에러)">Binding이 되지않을때 (by viewModels()에 에러)</a></li>
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/cache-share" target="_blank" title="File Provider Path 디렉리터 영역 매칭">File Provider Path 디렉리터 영역 매칭</a></li> -->
       <li class="entry-title"><a href="/cache-share" target="_blank" title="File Provider Path 디렉리터 영역 매칭">File Provider Path 디렉리터 영역 매칭</a></li>
@@ -443,8 +443,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="file provider" class="tag-heading">FILE PROVIDER</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/about-binding" target="_blank" title="Binding">Binding</a></li> -->
-      <li class="entry-title"><a href="/about-binding" target="_blank" title="Binding">Binding</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/about-binding" target="_blank" title="Binding이 되지않을때 (by viewModels()에 에러)">Binding이 되지않을때 (by viewModels()에 에러)</a></li> -->
+      <li class="entry-title"><a href="/about-binding" target="_blank" title="Binding이 되지않을때 (by viewModels()에 에러)">Binding이 되지않을때 (by viewModels()에 에러)</a></li>
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/cache-share" target="_blank" title="File Provider Path 디렉리터 영역 매칭">File Provider Path 디렉리터 영역 매칭</a></li> -->
       <li class="entry-title"><a href="/cache-share" target="_blank" title="File Provider Path 디렉리터 영역 매칭">File Provider Path 디렉리터 영역 매칭</a></li>

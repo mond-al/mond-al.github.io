@@ -95,9 +95,9 @@
     
       
       <item>
-        <title>Binding</title>
+        <title>Binding이 되지않을때 (by viewModels()에 에러)</title>
         
-          <description>&lt;p&gt;바인딩 관련 에러&lt;/p&gt;
+          <description>&lt;p&gt;프로젝트가 세팅되지 않은 상태에서 디펜던시 정의를 빠트린경우인데 new Project를 통해 empty activity 프로젝트로 시작하면 항상 빠트리다 보니 포스팅으로 정리해둡니다.&lt;/p&gt;
 
 </description>
         
