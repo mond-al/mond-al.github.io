@@ -13,8 +13,8 @@ width = 800
 height = 540
 pageLimit = 10
 textSizeMultiple = 1
-textSoruce = "Kotlin Collection"
-query = "cats many"
+textSoruce = "Kotlin Visibility"
+query = "invisible"
 
 
 def linkByApi():
