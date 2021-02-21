@@ -80,5 +80,5 @@ if "None" == filePath:
 else:
     join = os.path.join(os.path.dirname(__file__), filePath)
     print(join)
-    open(join)
+    os.system(f"open {join}")
 
