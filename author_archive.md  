@@ -306,8 +306,8 @@ into the {body} of the default.hbs template -->
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/about-binding" target="_blank" title="Binding">Binding</a></li> -->
       <li class="entry-title"><a href="/about-binding" target="_blank" title="Binding">Binding</a></li>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/cache-share" target="_blank" title="File Provider Path">File Provider Path</a></li> -->
-      <li class="entry-title"><a href="/cache-share" target="_blank" title="File Provider Path">File Provider Path</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/cache-share" target="_blank" title="File Provider Path 디렉리터 영역 매칭">File Provider Path 디렉리터 영역 매칭</a></li> -->
+      <li class="entry-title"><a href="/cache-share" target="_blank" title="File Provider Path 디렉리터 영역 매칭">File Provider Path 디렉리터 영역 매칭</a></li>
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/file-write" target="_blank" title="안드로이드 파일 쓰기">안드로이드 파일 쓰기</a></li> -->
       <li class="entry-title"><a href="/file-write" target="_blank" title="안드로이드 파일 쓰기">안드로이드 파일 쓰기</a></li>
@@ -352,8 +352,8 @@ into the {body} of the default.hbs template -->
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/about-binding" target="_blank" title="Binding">Binding</a></li> -->
       <li class="entry-title"><a href="/about-binding" target="_blank" title="Binding">Binding</a></li>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/cache-share" target="_blank" title="File Provider Path">File Provider Path</a></li> -->
-      <li class="entry-title"><a href="/cache-share" target="_blank" title="File Provider Path">File Provider Path</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/cache-share" target="_blank" title="File Provider Path 디렉리터 영역 매칭">File Provider Path 디렉리터 영역 매칭</a></li> -->
+      <li class="entry-title"><a href="/cache-share" target="_blank" title="File Provider Path 디렉리터 영역 매칭">File Provider Path 디렉리터 영역 매칭</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
@@ -446,8 +446,8 @@ into the {body} of the default.hbs template -->
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/about-binding" target="_blank" title="Binding">Binding</a></li> -->
       <li class="entry-title"><a href="/about-binding" target="_blank" title="Binding">Binding</a></li>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/cache-share" target="_blank" title="File Provider Path">File Provider Path</a></li> -->
-      <li class="entry-title"><a href="/cache-share" target="_blank" title="File Provider Path">File Provider Path</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/cache-share" target="_blank" title="File Provider Path 디렉리터 영역 매칭">File Provider Path 디렉리터 영역 매칭</a></li> -->
+      <li class="entry-title"><a href="/cache-share" target="_blank" title="File Provider Path 디렉리터 영역 매칭">File Provider Path 디렉리터 영역 매칭</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
