@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="https://mond-al.github.io/tag/java/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
+  <updated>2021-02-21T21:43:27+09:00</updated>
+  <id>https://mond-al.github.io/tag/java/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">몬드의 개발로그 | </title>
+  
+
+  
+    <subtitle>몬드는 오늘도 개발을 합니다. 내일도...</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">코틀린의 가시성 정리</title>
+      <link href="https://mond-al.github.io/kotlin-visibility" rel="alternate" type="text/html" title="코틀린의 가시성 정리" />
+      <published>2021-02-19T00:00:00+09:00</published>
+      <updated>2021-02-19T00:00:00+09:00</updated>
+      <id>https://mond-al.github.io/kotlin-visibility</id>
+      <content type="html" xml:base="https://mond-al.github.io/kotlin-visibility">&lt;p&gt;코틀린의 public, protected, private 변경자는 컴파일된 바이트 코드 안에서도 그대로 유지됩니다. 그렇게 컴파일된 코틀린의 가시성은 마치 자바에서 똑같은 가시성을 선언한 경우와 동일합니다. 하지만 private는 다르게 적용됩니다. 자바에서 클래스를 private로 만들수 없으므로 내부적으로 코틀린은 private 클래스를 package-private 클래스로 컴파일 합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;internal&quot;&gt;internal&lt;/h3&gt;
+&lt;p&gt;자바에는 internal에 딱 맞는 가시성은 없습니다. package-private은 internal과 다릅니다. 모듈은 보통 여러 패키지로 이루어지며, 서로 다른 모듈에 같은 패키지에 속한 선언이 들어 있을 수도 있습니다. 따라서 internal 변경자는 바이트 코드상에서 public이 됩니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;kotlin에서-접근할-수-없던-코드가-java에서는-접근이-된다&quot;&gt;kotlin에서 접근할 수 없던 코드가 Java에서는 접근이 된다?&lt;/h3&gt;
+&lt;p&gt;예를 들어 다른 모듈에 정의된 internal 클래스나 internal 최상위 선언을 모듈 외부의 자바 코드에서 접근 할 수 있습니다.  또한 코틀린에서 protected로 정의한 멤버를 코틀린 클래스나 같은 패키지에 속한 자바 코드에서 접근할 수 있습니다. 접근은 가능하지만, 이름이 보기 불편하고 코드의 형상이 어색하게 뀌게됩니다. 가령 action()같은 이름의 함수라면 action$AAA_XXX_BBB() 같이 컴파일 됩니다. 이름을 바꾸는 이유는 우연히 상위 클래스의 internal 메소드와 이름이 중복되어 override되는 것을 방지하고 internal 클래스를 외부에서 사용하는 것 을 방지하기 위한 장치로 생각 할 수 있습니다. 물론 jvmObj&lt;/p&gt;
+
+&lt;p&gt;보너스.&lt;/p&gt;
+&lt;h2 id=&quot;자바의-가시성&quot;&gt;자바의 가시성&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;접근제어자&lt;/th&gt;
+      &lt;th&gt;설명&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;public&lt;/td&gt;
+      &lt;td&gt;클래스와 패키지에 관계없이 어느곳에서나 접근이 가능&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;protected&lt;/td&gt;
+      &lt;td&gt;같은 패키지에서 접근 제한이 없음&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;default(package-private)&lt;/td&gt;
+      &lt;td&gt;접근제어자를 사용하지않을때 기본 설정값. 같은 패키지에서만 접근이 가능&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;private&lt;/td&gt;
+      &lt;td&gt;같은 클래스에서만 접근이 가능&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;해당 클래스&lt;/th&gt;
+      &lt;th&gt;같은 패키지&lt;/th&gt;
+      &lt;th&gt;상속 받은 클래스&lt;/th&gt;
+      &lt;th&gt;import한 클래스&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;public&lt;/td&gt;
+      &lt;td&gt;O&lt;/td&gt;
+      &lt;td&gt;O&lt;/td&gt;
+      &lt;td&gt;O&lt;/td&gt;
+      &lt;td&gt;O&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;protected&lt;/td&gt;
+      &lt;td&gt;O&lt;/td&gt;
+      &lt;td&gt;O&lt;/td&gt;
+      &lt;td&gt;O&lt;/td&gt;
+      &lt;td&gt;X&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;package-private&lt;/td&gt;
+      &lt;td&gt;O&lt;/td&gt;
+      &lt;td&gt;O&lt;/td&gt;
+      &lt;td&gt;X&lt;/td&gt;
+      &lt;td&gt;X&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;private&lt;/td&gt;
+      &lt;td&gt;O&lt;/td&gt;
+      &lt;td&gt;X&lt;/td&gt;
+      &lt;td&gt;X&lt;/td&gt;
+      &lt;td&gt;X&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;static-nested-class-vs-inner-class&quot;&gt;static Nested Class Vs Inner Class&lt;/h3&gt;
+
+&lt;p&gt;static Nested Class는 앞에 static 키워드 사용합니다. 바깥 클래스의 인스턴스를 생성하기 전이라도 Static Nested Class 의 인스턴스를 생성할 수 있기 때문에 사실상 top level class와 차이가 없습니다. 또한 상위 클래스 객체의 변수에 대한 참조가 불가하기 때문에 불필요한 메모리릭을 사전에 방지할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;Inner Class는 인스턴스의 멤버로 취급됩니다. 클래스 앞에 static 키워드를 사용하지 않은경우이며, 클래스의 인스턴스를 생성한 후에 그 인스턴스의 참조를 이용해야만 Inner Class의 인스턴스를 생성할 수 있습니다. 또한 바깥 클래스의 인스턴스 멤버와 클래스 멤버에 접근할 수 있기 때문에 사용시 주의가 필요합니다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jisoo Yang</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="kotlin" />
+      
+        <category term="java" />
+      
+
+      
+        <summary type="html">코틀린의 public, protected, private 변경자는 컴파일된 바이트 코드 안에서도 그대로 유지됩니다. 그렇게 컴파일된 코틀린의 가시성은 마치 자바에서 똑같은 가시성을 선언한 경우와 동일합니다. 하지만 private는 다르게 적용됩니다. 자바에서 클래스를 private로 만들수 없으므로 내부적으로 코틀린은 private 클래스를 package-private 클래스로 컴파일 합니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

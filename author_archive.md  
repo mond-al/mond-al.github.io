@@ -163,7 +163,7 @@ into the {body} of the default.hbs template -->
   	<li><a href="#ProductFlavors" class="tag"><span class="term alltags">ProductFlavors</span> <span class="count alltags">1</span></a></li>
   
     
-  	<li><a href="#android" class="tag"><span class="term alltags">android</span> <span class="count alltags">13</span></a></li>
+  	<li><a href="#android" class="tag"><span class="term alltags">android</span> <span class="count alltags">12</span></a></li>
   
     
   	<li><a href="#architecture" class="tag"><span class="term alltags">architecture</span> <span class="count alltags">2</span></a></li>
@@ -202,7 +202,10 @@ into the {body} of the default.hbs template -->
   	<li><a href="#image" class="tag"><span class="term alltags">image</span> <span class="count alltags">2</span></a></li>
   
     
-  	<li><a href="#kotlin" class="tag"><span class="term alltags">kotlin</span> <span class="count alltags">1</span></a></li>
+  	<li><a href="#java" class="tag"><span class="term alltags">java</span> <span class="count alltags">1</span></a></li>
+  
+    
+  	<li><a href="#kotlin" class="tag"><span class="term alltags">kotlin</span> <span class="count alltags">2</span></a></li>
   
     
   	<li><a href="#log" class="tag"><span class="term alltags">log</span> <span class="count alltags">1</span></a></li>
@@ -287,9 +290,6 @@ into the {body} of the default.hbs template -->
 	<article>
 	<h2 id="android" class="tag-heading">ANDROID</h2>
 		<ul>
-    
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/kotlin-visibility" target="_blank" title="코틀린의 가시성 정리">코틀린의 가시성 정리</a></li> -->
-      <li class="entry-title"><a href="/kotlin-visibility" target="_blank" title="코틀린의 가시성 정리">코틀린의 가시성 정리</a></li>
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/viewpager-fragment" target="_blank" title="FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)">FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)</a></li> -->
       <li class="entry-title"><a href="/viewpager-fragment" target="_blank" title="FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)">FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)</a></li>
@@ -482,8 +482,22 @@ into the {body} of the default.hbs template -->
 
   
 	<article>
+	<h2 id="java" class="tag-heading">JAVA</h2>
+		<ul>
+    
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/kotlin-visibility" target="_blank" title="코틀린의 가시성 정리">코틀린의 가시성 정리</a></li> -->
+      <li class="entry-title"><a href="/kotlin-visibility" target="_blank" title="코틀린의 가시성 정리">코틀린의 가시성 정리</a></li>
+    
+		</ul>
+	</article><!-- /.hentry -->
+
+  
+	<article>
 	<h2 id="kotlin" class="tag-heading">KOTLIN</h2>
 		<ul>
+    
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/kotlin-visibility" target="_blank" title="코틀린의 가시성 정리">코틀린의 가시성 정리</a></li> -->
+      <li class="entry-title"><a href="/kotlin-visibility" target="_blank" title="코틀린의 가시성 정리">코틀린의 가시성 정리</a></li>
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/kotlin-collection" target="_blank" title="kotlin collection.associateBy">kotlin collection.associateBy</a></li> -->
       <li class="entry-title"><a href="/kotlin-collection" target="_blank" title="kotlin collection.associateBy">kotlin collection.associateBy</a></li>
