@@ -8,9 +8,9 @@
     
       
       <item>
-        <title>Kotlin 가시성</title>
+        <title>코틀린의 가시성 정리</title>
         
-          <description>&lt;h3 id=&quot;코틀린의-가시성&quot;&gt;코틀린의 가시성&lt;/h3&gt;
+          <description>&lt;p&gt;코틀린의 public, protected, private 변경자는 컴파일된 바이트 코드 안에서도 그대로 유지됩니다. 그렇게 컴파일된 코틀린의 가시성은 마치 자바에서 똑같은 가시성을 선언한 경우와 동일합니다. 하지만 private는 다르게 적용됩니다. 자바에서 클래스를 private로 만들수 없으므로 내부적으로 코틀린은 private 클래스를 package-private 클래스로 컴파일 합니다.&lt;/p&gt;
 
 </description>
         

@@ -288,8 +288,8 @@ into the {body} of the default.hbs template -->
 	<h2 id="android" class="tag-heading">ANDROID</h2>
 		<ul>
     
-      <!-- <li class="entry-title"><a href="https://mond-al.github.io/kotlin-visibility" target="_blank" title="Kotlin 가시성">Kotlin 가시성</a></li> -->
-      <li class="entry-title"><a href="/kotlin-visibility" target="_blank" title="Kotlin 가시성">Kotlin 가시성</a></li>
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/kotlin-visibility" target="_blank" title="코틀린의 가시성 정리">코틀린의 가시성 정리</a></li> -->
+      <li class="entry-title"><a href="/kotlin-visibility" target="_blank" title="코틀린의 가시성 정리">코틀린의 가시성 정리</a></li>
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/viewpager-fragment" target="_blank" title="FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)">FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)</a></li> -->
       <li class="entry-title"><a href="/viewpager-fragment" target="_blank" title="FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)">FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)</a></li>
