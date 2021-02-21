@@ -199,7 +199,7 @@ into the {body} of the default.hbs template -->
   	<li><a href="#gradle" class="tag"><span class="term alltags">gradle</span> <span class="count alltags">2</span></a></li>
   
     
-  	<li><a href="#image" class="tag"><span class="term alltags">image</span> <span class="count alltags">1</span></a></li>
+  	<li><a href="#image" class="tag"><span class="term alltags">image</span> <span class="count alltags">2</span></a></li>
   
     
   	<li><a href="#kotlin" class="tag"><span class="term alltags">kotlin</span> <span class="count alltags">1</span></a></li>
@@ -217,10 +217,13 @@ into the {body} of the default.hbs template -->
   	<li><a href="#sdkversion30" class="tag"><span class="term alltags">sdkversion30</span> <span class="count alltags">1</span></a></li>
   
     
-  	<li><a href="#test" class="tag"><span class="term alltags">test</span> <span class="count alltags">1</span></a></li>
+  	<li><a href="#test" class="tag"><span class="term alltags">test</span> <span class="count alltags">2</span></a></li>
   
     
   	<li><a href="#transitive" class="tag"><span class="term alltags">transitive</span> <span class="count alltags">1</span></a></li>
+  
+    
+  	<li><a href="#url" class="tag"><span class="term alltags">url</span> <span class="count alltags">1</span></a></li>
   
 </ul>
 
@@ -468,6 +471,9 @@ into the {body} of the default.hbs template -->
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/test-image" target="_blank" title="테스트용 이미지 (랜덤1000개.zip,해상도별.zip)">테스트용 이미지 (랜덤1000개.zip,해상도별.zip)</a></li> -->
       <li class="entry-title"><a href="/test-image" target="_blank" title="테스트용 이미지 (랜덤1000개.zip,해상도별.zip)">테스트용 이미지 (랜덤1000개.zip,해상도별.zip)</a></li>
     
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/test-image-url" target="_blank" title="개발 테스트용 이미지 다운로드">개발 테스트용 이미지 다운로드</a></li> -->
+      <li class="entry-title"><a href="/test-image-url" target="_blank" title="개발 테스트용 이미지 다운로드">개발 테스트용 이미지 다운로드</a></li>
+    
 		</ul>
 	</article><!-- /.hentry -->
 
@@ -540,6 +546,9 @@ into the {body} of the default.hbs template -->
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/test-image" target="_blank" title="테스트용 이미지 (랜덤1000개.zip,해상도별.zip)">테스트용 이미지 (랜덤1000개.zip,해상도별.zip)</a></li> -->
       <li class="entry-title"><a href="/test-image" target="_blank" title="테스트용 이미지 (랜덤1000개.zip,해상도별.zip)">테스트용 이미지 (랜덤1000개.zip,해상도별.zip)</a></li>
     
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/test-image-url" target="_blank" title="개발 테스트용 이미지 다운로드">개발 테스트용 이미지 다운로드</a></li> -->
+      <li class="entry-title"><a href="/test-image-url" target="_blank" title="개발 테스트용 이미지 다운로드">개발 테스트용 이미지 다운로드</a></li>
+    
 		</ul>
 	</article><!-- /.hentry -->
 
@@ -550,6 +559,17 @@ into the {body} of the default.hbs template -->
     
       <!-- <li class="entry-title"><a href="https://mond-al.github.io/dependency-gradle" target="_blank" title="앱의 의존성 확인하고 전이 의존성 변경하기">앱의 의존성 확인하고 전이 의존성 변경하기</a></li> -->
       <li class="entry-title"><a href="/dependency-gradle" target="_blank" title="앱의 의존성 확인하고 전이 의존성 변경하기">앱의 의존성 확인하고 전이 의존성 변경하기</a></li>
+    
+		</ul>
+	</article><!-- /.hentry -->
+
+  
+	<article>
+	<h2 id="url" class="tag-heading">URL</h2>
+		<ul>
+    
+      <!-- <li class="entry-title"><a href="https://mond-al.github.io/test-image-url" target="_blank" title="개발 테스트용 이미지 다운로드">개발 테스트용 이미지 다운로드</a></li> -->
+      <li class="entry-title"><a href="/test-image-url" target="_blank" title="개발 테스트용 이미지 다운로드">개발 테스트용 이미지 다운로드</a></li>
     
 		</ul>
 	</article><!-- /.hentry -->
