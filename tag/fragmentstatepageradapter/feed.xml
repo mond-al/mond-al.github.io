@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://localhost:4000/tag/fragmentstatepageradapter/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2021-02-23T11:16:16+09:00</updated>
-  <id>http://localhost:4000/tag/fragmentstatepageradapter/feed.xml</id>
+  <link href="https://mond-al.github.io/tag/fragmentstatepageradapter/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
+  <updated>2021-02-23T11:20:46+09:00</updated>
+  <id>https://mond-al.github.io/tag/fragmentstatepageradapter/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)</title>
-      <link href="http://localhost:4000/viewpager-fragment" rel="alternate" type="text/html" title="FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)" />
+      <link href="https://mond-al.github.io/viewpager-fragment" rel="alternate" type="text/html" title="FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)" />
       <published>2021-02-18T00:00:00+09:00</published>
       <updated>2021-02-18T00:00:00+09:00</updated>
-      <id>http://localhost:4000/viewpager-fragment</id>
-      <content type="html" xml:base="http://localhost:4000/viewpager-fragment">&lt;p&gt;이름이 워낙 길고, 비슷하기 까지 해서 항상 어떤 녀석을 사용 해야 할지 망설이게 됩니다. 내 앱에서는 딱히 configChanges 나 onPause/onResume에 대한 처리를 딱히 타이트하지 않는데 꼭 “State”가 붙은 것을 사용해야 할지 고민도 되구요. 이 두 클래스에 대해 살펴보겠습니다. 우선 변경된 생성자 이야기부터 시작하겠습니다.&lt;/p&gt;
+      <id>https://mond-al.github.io/viewpager-fragment</id>
+      <content type="html" xml:base="https://mond-al.github.io/viewpager-fragment">&lt;p&gt;이름이 워낙 길고, 비슷하기 까지 해서 항상 어떤 녀석을 사용 해야 할지 망설이게 됩니다. 내 앱에서는 딱히 configChanges 나 onPause/onResume에 대한 처리를 딱히 타이트하지 않는데 꼭 “State”가 붙은 것을 사용해야 할지 고민도 되구요. 이 두 클래스에 대해 살펴보겠습니다. 우선 변경된 생성자 이야기부터 시작하겠습니다.&lt;/p&gt;
 
 &lt;p&gt;두 클래스 모두 androidx.fragment.app 패키지에 포함되어 있습니다. 이번 문서에서는 공통적인 내용만 다룰 예정이라 FragmentPagerAdapter를 기준으로 설명하고 Fragment(State)PagerAdapter에 대한 지칭은 생략하겠습니다.&lt;/p&gt;
 
