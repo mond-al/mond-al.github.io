@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="https://mond-al.github.io/tag/java/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-23T11:20:46+09:00</updated>
-  <id>https://mond-al.github.io/tag/java/feed.xml</id>
+  <link href="http://localhost:4000/tag/java/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2021-02-23T11:27:50+09:00</updated>
+  <id>http://localhost:4000/tag/java/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">코틀린의 가시성 정리</title>
-      <link href="https://mond-al.github.io/kotlin-visibility" rel="alternate" type="text/html" title="코틀린의 가시성 정리" />
+      <link href="http://localhost:4000/kotlin-visibility" rel="alternate" type="text/html" title="코틀린의 가시성 정리" />
       <published>2021-02-19T00:00:00+09:00</published>
       <updated>2021-02-19T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/kotlin-visibility</id>
-      <content type="html" xml:base="https://mond-al.github.io/kotlin-visibility">&lt;p&gt;코틀린의 public, protected, private 변경자는 컴파일된 바이트 코드 안에서도 그대로 유지됩니다. 그렇게 컴파일된 코틀린의 가시성은 마치 자바에서 똑같은 가시성을 선언한 경우와 동일합니다. 하지만 private는 다르게 적용됩니다. 자바에서 클래스를 private로 만들수 없으므로 내부적으로 코틀린은 private 클래스를 package-private 클래스로 컴파일 합니다.&lt;/p&gt;
+      <id>http://localhost:4000/kotlin-visibility</id>
+      <content type="html" xml:base="http://localhost:4000/kotlin-visibility">&lt;p&gt;코틀린의 public, protected, private 변경자는 컴파일된 바이트 코드 안에서도 그대로 유지됩니다. 그렇게 컴파일된 코틀린의 가시성은 마치 자바에서 똑같은 가시성을 선언한 경우와 동일합니다. 하지만 private는 다르게 적용됩니다. 자바에서 클래스를 private로 만들수 없으므로 내부적으로 코틀린은 private 클래스를 package-private 클래스로 컴파일 합니다.&lt;/p&gt;
 
 &lt;h3 id=&quot;internal&quot;&gt;internal&lt;/h3&gt;
 &lt;p&gt;자바에는 internal에 딱 맞는 가시성은 없습니다. package-private은 internal과 다릅니다. 모듈은 보통 여러 패키지로 이루어지며, 서로 다른 모듈에 같은 패키지에 속한 선언이 들어 있을 수도 있습니다. 따라서 internal 변경자는 바이트 코드상에서 public이 됩니다.&lt;/p&gt;
@@ -153,11 +153,11 @@
   
     <entry>
       <title type="html">코틀린의 지연(lazy) 컬랙션 연산</title>
-      <link href="https://mond-al.github.io/kotlin-lazy-calc" rel="alternate" type="text/html" title="코틀린의 지연(lazy) 컬랙션 연산" />
+      <link href="http://localhost:4000/kotlin-lazy-calc" rel="alternate" type="text/html" title="코틀린의 지연(lazy) 컬랙션 연산" />
       <published>2021-02-19T00:00:00+09:00</published>
       <updated>2021-02-19T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/kotlin-lazy-calc</id>
-      <content type="html" xml:base="https://mond-al.github.io/kotlin-lazy-calc">&lt;p&gt;map이나 filter 같은 컬랙션 함수는 결과 컬랙션을 즉시(eagerly:열심히) 생성합니다. 이는 컬랙션 함수를 연쇄하면 단계마다 중간 결과를 새로운 컬랙션 객체로 생성한다는 말이기도 합니다. 하지만 시퀀스(sequence)를 사용하면 중간 임시 컬렉션을 사용하지 않고도 연살을 연쇄적으로 수행 할 수 있습니다.&lt;/p&gt;
+      <id>http://localhost:4000/kotlin-lazy-calc</id>
+      <content type="html" xml:base="http://localhost:4000/kotlin-lazy-calc">&lt;p&gt;map이나 filter 같은 컬랙션 함수는 결과 컬랙션을 즉시(eagerly:열심히) 생성합니다. 이는 컬랙션 함수를 연쇄하면 단계마다 중간 결과를 새로운 컬랙션 객체로 생성한다는 말이기도 합니다. 하지만 시퀀스(sequence)를 사용하면 중간 임시 컬렉션을 사용하지 않고도 연살을 연쇄적으로 수행 할 수 있습니다.&lt;/p&gt;
 
 &lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;articles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Article&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filter&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;startsWith&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;[&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)}&lt;/span&gt; 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
