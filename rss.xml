@@ -5,8 +5,8 @@
         <description>몬드의 개발로그 - </description>
         <link>https://mond-al.github.io/</link>
         <link>https://mond-al.github.io/</link>
-        <lastBuildDate>2021-02-23T14:08:32+09:00</lastBuildDate>
-        <pubDate>2021-02-23T14:08:32+09:00</pubDate>
+        <lastBuildDate>2021-02-23T14:19:23+09:00</lastBuildDate>
+        <pubDate>2021-02-23T14:19:23+09:00</pubDate>
         <ttl>60</ttl>
 
         
@@ -188,7 +188,7 @@
 
 &lt;p&gt;중간연산은 항상 지연됩니다. 최종 연산을 호출하면 연기되었던 모든 계산이 수행됩니다. 만약 위의 예에서 마지막 줄의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lengthsSequence.toList()&lt;/code&gt;를 호출하지 않으면, 결과는 아무런 출력도 일어나지 않습니다. 즉, filter,map구문에서 일어나는 모든 중간 연산은 수행이 되지 않습니다.&lt;/p&gt;
 
-&lt;p&gt;안드로이드에서는 예전 버전의 자바를 사용하는 경우 자바8 부터 지원하는 스트림이 없기 때문에 이러한 시퀸스를 통해 동일한 (또는 조금 모자란) 수행을 코딩할 수 있도록 지원합니다. 만약 자바 8을 사용 할 수 있다면 스트림을 사용하는것이 더 나은 해결 책이 될 수 있습니다.&lt;/p&gt;
+&lt;p&gt;안드로이드 컴파일 환경에서는 아직 스트림을 지원하지 않기 때문에 이러한 시퀸스를 통해 게으른 연산을 지원합니다.&lt;/p&gt;
 
 </description>
             <link>https://mond-al.github.io//kotlin-lazy-calc</link>
