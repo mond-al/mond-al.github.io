@@ -5,8 +5,8 @@
         <description>몬드의 개발로그 - </description>
         <link>https://mond-al.github.io/</link>
         <link>https://mond-al.github.io/</link>
-        <lastBuildDate>2021-02-23T12:55:24+09:00</lastBuildDate>
-        <pubDate>2021-02-23T12:55:24+09:00</pubDate>
+        <lastBuildDate>2021-02-23T13:23:47+09:00</lastBuildDate>
+        <pubDate>2021-02-23T13:23:47+09:00</pubDate>
         <ttl>60</ttl>
 
         
@@ -2024,15 +2024,12 @@ Download : &lt;a href=&quot;assets/images/forTest/random/random1000.zip&quot;&gt
 &lt;h2 id=&quot;폭-1000px-고정에-높이가-증가하는-이미지들&quot;&gt;폭 1000px 고정에, 높이가 증가하는 이미지들&lt;/h2&gt;
 &lt;p&gt;비율테스트용 폭 1000px에 다양한 높이의 이미지들입니다. &lt;br /&gt;
 Download : &lt;a href=&quot;assets/images/forTest/ratio/ratioVarHeight.zip&quot;&gt;ratioVarHeight.zip&lt;/a&gt;&lt;br /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/var_height_ratio.png&quot; alt=&quot;스크린샷&quot; width=&quot;100%&quot; /&gt;&lt;br /&gt;
 &lt;img src=&quot;assets/images/forTest/ratio/var_height_ratio.png&quot; alt=&quot;스크린샷&quot; width=&quot;70%&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;높이-1000px-고정이고-폭이-증가하는-이미지들&quot;&gt;높이 1000px 고정이고 폭이 증가하는 이미지들&lt;/h2&gt;
 &lt;p&gt;비율테스트용 높이 1000px에 다양한 높이의 이미지들입니다.&lt;br /&gt;
-Download : &lt;a href=&quot;assets/images/forTest/ratio/ratioVarWidth.zip&quot;&gt;ratioVarWidth.zip&lt;/a&gt;&lt;br /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/ㅔ.png&quot; alt=&quot;스크린샷&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/images/forTest/ratio/var_width_ratio.png&quot; alt=&quot;스크린샷&quot; width=&quot;70%&quot; /&gt;&lt;/p&gt;
+Download : &lt;a href=&quot;assets/images/forTest/ratio/ratioVarWidth.zip&quot;&gt;ratioVarWidth.zip&lt;/a&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/var_width_ratio.png&quot; alt=&quot;스크린샷&quot; width=&quot;70%&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;여러장의-사진-이미지가-필요할-때&quot;&gt;여러장의 사진 이미지가 필요할 때&lt;/h2&gt;
 &lt;blockquote&gt;
