@@ -47,7 +47,7 @@
 <title> 안드로이드 파일 쓰기 -  </title>
 
 <!-- Begin Jekyll SEO tag v2.5.0 -->
-<meta name="generator" content="Jekyll v3.7.4" />
+<meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="안드로이드 파일 쓰기" />
 <meta name="author" content="jisoo Yang" />
 <meta property="og:locale" content="en_US" />
@@ -59,7 +59,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-02-02T00:00:00+09:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/file-write","headline":"안드로이드 파일 쓰기","dateModified":"2021-02-02T00:00:00+09:00","datePublished":"2021-02-02T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/file-write"},"author":{"@type":"Person","name":"jisoo Yang"},"description":"안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo/normal_icon.png"},"name":"jisoo Yang"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"author":{"@type":"Person","name":"jisoo Yang"},"url":"http://localhost:4000/file-write","headline":"안드로이드 파일 쓰기","dateModified":"2021-02-02T00:00:00+09:00","datePublished":"2021-02-02T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/file-write"},"description":"안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo/normal_icon.png"},"name":"jisoo Yang"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -75,7 +75,7 @@
 <!--<meta property="article:author" content="https://www.facebook.com/jisoo.yang.56"/>-->
 <!--<meta property="article:published_time" content="2021-02-02T00:00:00+09:00"/>-->
 <!--<meta property="article:modified_time" content="2021-02-02T00:00:00+09:00"/>-->
-<!--<meta property="article:tag" content="Android"/>-->
+<!--<meta property="article:tag" content="android"/>-->
 <!--<meta name="twitter:card" content="summary_large_image"/>-->
 <!--<meta name="twitter:title" content="안드로이드 파일 쓰기"/>-->
 <!--<meta name="twitter:description" content="안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다. 코드 아래 path를 정리해두었는데 path는 제조사,기종,OS버전등에 의해 따라 달라질 수 있습니다. 대략적인 형상에 대해 정리 해두는 자료로 이해하기 바랍니다. 용어정리 Device Storage(저장소)의 구분 A.Internal Storage : 내부 저장소 B.External Storage : 외부 저장소 B1. Built in non-removable storage :"/>-->
@@ -84,7 +84,7 @@
 <!--<meta name="twitter:label1" content="Written by"/>-->
 <!--<meta name="twitter:data1" content="몬드의 개발로그"/>-->
 <!--<meta name="twitter:label2" content="Filed under"/>-->
-<!--<meta name="twitter:data2" content="Android"/>-->
+<!--<meta name="twitter:data2" content="android"/>-->
 <!--<meta name="twitter:site" content="@false"/>-->
 <!--<meta name="twitter:creator" content="@false"/>-->
 <!--<meta property="og:image:width" content="1400"/>-->
@@ -191,10 +191,10 @@ B.External Storage : 외부 저장소
    B2. SDcard : 디바이스 제조사, 모델에 따라 지원 할 수도 있는 SDcard    
    B3. USB Storage : USB 단자를 통해 연결된 저장장치  
 </code></pre>
-<p>기본적으로 내부 메모리 영역은 사용자가 직접 접근할 수 없는 영역이라고 생각 하면 됩니다. 보통의 경우 <code class="highlighter-rouge">외부저장소는 B1</code>을 지칭합니다.</p>
+<p>기본적으로 내부 메모리 영역은 사용자가 직접 접근할 수 없는 영역이라고 생각 하면 됩니다. 보통의 경우 <code class="language-plaintext highlighter-rouge">외부저장소는 B1</code>을 지칭합니다.</p>
 
 <h3 id="external-storage-정책의-구분">External Storage 정책의 구분</h3>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Legacy External Storage 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Legacy External Storage 
    : Scoped Storage가 적용되지않은 상태. targetSdkVersion이 28이하 이거나 단말이 Android 9이하. 
 - Scoped Storage
    : Scoped Storage가 적용된 상태. targetSdkVersion이 29이상이고 단말이 Android 10이상.  
@@ -209,22 +209,22 @@ B.External Storage : 외부 저장소
 
 <p>별도의 권한없이 파일을 생성,삭제 가능합니다. 다른 앱이나 사용자가 접근 할 수 없습니다. 추가 디스크 공간이 필요할 때 캐시 데이터의 총합이 할당된 크기를 초과한 경우 캐시영역의 파일이 삭제됩니다. sharedUserId 기능을 사용하는 경우 공유 UID의 모든 패키지에 대해 캐시 된 데이터가 함께 추적됩니다. 앱이 삭제되면 함께 삭제됩니다 .<a href="">link</a></p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 내부 저장소
-</span><span class="kd">val</span> <span class="py">cacheFile</span> <span class="p">=</span> <span class="n">File</span><span class="p">(</span><span class="n">context</span><span class="p">.</span><span class="n">cacheDir</span><span class="p">,</span> <span class="s">"cache_file.txt"</span><span class="p">)</span>
-<span class="c1">// &gt; /data/user/0/*{applicationId}*/**cache**/cache_file.txt  #A
-</span></code></pre></div></div>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 내부 저장소</span>
+<span class="kd">val</span> <span class="py">cacheFile</span> <span class="p">=</span> <span class="nc">File</span><span class="p">(</span><span class="n">context</span><span class="p">.</span><span class="n">cacheDir</span><span class="p">,</span> <span class="s">"cache_file.txt"</span><span class="p">)</span>
+<span class="c1">// &gt; /data/user/0/*{applicationId}*/**cache**/cache_file.txt  #A</span>
+</code></pre></div></div>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 외부 저장소
-</span><span class="kd">val</span> <span class="py">externalCacheFile</span> <span class="p">=</span> <span class="n">File</span><span class="p">(</span><span class="n">context</span><span class="p">.</span><span class="n">externalCacheDir</span><span class="p">,</span> <span class="s">"ex_cache_file.txt"</span><span class="p">)</span>
-<span class="c1">// &gt; /storage/emulated/0/Android/data/{applicationId}/**cache**/ex_cache_file.txt  #B1
-</span></code></pre></div></div>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 외부 저장소</span>
+<span class="kd">val</span> <span class="py">externalCacheFile</span> <span class="p">=</span> <span class="nc">File</span><span class="p">(</span><span class="n">context</span><span class="p">.</span><span class="n">externalCacheDir</span><span class="p">,</span> <span class="s">"ex_cache_file.txt"</span><span class="p">)</span>
+<span class="c1">// &gt; /storage/emulated/0/Android/data/{applicationId}/**cache**/ex_cache_file.txt  #B1</span>
+</code></pre></div></div>
 
 <p>cache에 사용되는 데이터도</p>
 
 <h3 id="캐시-할당-크기-및-사용중인-크기">캐시 할당 크기 및 사용중인 크기</h3>
-<p>Api level 26(O)부터는 가용공간 관리를 위해 몇가지 함수들이 추가되었습니다. <a href="https://developer.android.com/reference/android/os/storage/StorageManager#getCacheQuotaBytes(java.util.UUID)">getCacheQuotaBytes</a> 는 <code class="highlighter-rouge">캐시에 사용할 공간으로 할당된 용량</code>을 반환하고 <a href="https://developer.android.com/reference/android/os/storage/StorageManager#getCacheSizeBytes(java.util.UUID)">getCacheSizeBytes</a> 는 <code class="highlighter-rouge">사용중인 캐시파일의 전체 총합</code>을 확인 할 수 있습니다.</p>
+<p>Api level 26(O)부터는 가용공간 관리를 위해 몇가지 함수들이 추가되었습니다. <a href="https://developer.android.com/reference/android/os/storage/StorageManager#getCacheQuotaBytes(java.util.UUID)">getCacheQuotaBytes</a> 는 <code class="language-plaintext highlighter-rouge">캐시에 사용할 공간으로 할당된 용량</code>을 반환하고 <a href="https://developer.android.com/reference/android/os/storage/StorageManager#getCacheSizeBytes(java.util.UUID)">getCacheSizeBytes</a> 는 <code class="language-plaintext highlighter-rouge">사용중인 캐시파일의 전체 총합</code>을 확인 할 수 있습니다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>StorageManager storageManager = (StorageManager) getSystemService(Context.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>StorageManager storageManager = (StorageManager) getSystemService(Context.
 val quotaByte = storageManager.getCacheQuotaBytes(storageManager.getUuidForPath(getCacheDir())) // 캐시에 사용할 공간으로 할당된 용량
 val cacheSize = storageManager.getCacheSizeBytes(uuidForPath) // 사용중인 캐시파일의 전체 총합
 </code></pre></div></div>
@@ -233,23 +233,23 @@ val cacheSize = storageManager.getCacheSizeBytes(uuidForPath) // 사용중인 �
 
 <p>앱이 설치 되어있는 동안만 영속적(Persistence)으로 필요한 파일을 저장하는 영역입니다. 앱이 삭제되면 함께 삭제됩니다. 별도의 권한 없이 파일을 생성가능합니다.</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// style #1
-</span><span class="kd">val</span> <span class="py">file1</span> <span class="p">=</span> <span class="n">File</span><span class="p">(</span><span class="n">context</span><span class="p">.</span><span class="n">fileDir</span><span class="p">,</span> <span class="s">"file.txt"</span><span class="p">)</span>
-<span class="kd">val</span> <span class="py">outputStream</span> <span class="p">=</span> <span class="n">file</span><span class="p">.</span><span class="n">outputStream</span><span class="p">()</span>
-<span class="c1">// &gt; /data/user/0/*{applicationId}*/**files**/file.txt  #A
-</span></code></pre></div></div>
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// style #2
-</span><span class="kd">val</span> <span class="py">outputStream</span> <span class="p">=</span> <span class="n">openFileOutput</span><span class="p">(</span><span class="s">"file.txt"</span><span class="p">,</span> <span class="n">MODE_PRIVATE</span><span class="p">)</span>
-<span class="c1">// &gt; /data/user/0/*{applicationId}*/**files**/file.txt  #A
-</span></code></pre></div></div>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// style #1</span>
+<span class="kd">val</span> <span class="py">file1</span> <span class="p">=</span> <span class="nc">File</span><span class="p">(</span><span class="n">context</span><span class="p">.</span><span class="n">fileDir</span><span class="p">,</span> <span class="s">"file.txt"</span><span class="p">)</span>
+<span class="kd">val</span> <span class="py">outputStream</span> <span class="p">=</span> <span class="n">file</span><span class="p">.</span><span class="nf">outputStream</span><span class="p">()</span>
+<span class="c1">// &gt; /data/user/0/*{applicationId}*/**files**/file.txt  #A</span>
+</code></pre></div></div>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// style #2</span>
+<span class="kd">val</span> <span class="py">outputStream</span> <span class="p">=</span> <span class="nf">openFileOutput</span><span class="p">(</span><span class="s">"file.txt"</span><span class="p">,</span> <span class="nc">MODE_PRIVATE</span><span class="p">)</span>
+<span class="c1">// &gt; /data/user/0/*{applicationId}*/**files**/file.txt  #A</span>
+</code></pre></div></div>
 
-<p><code class="highlighter-rouge">style #1</code>과 <code class="highlighter-rouge">style #2</code>의 결과로 얻어지는 FileOutputStream은 동일한 파일을 가르키고 있습니다. 하지만 개인적으로는 <code class="highlighter-rouge">openFileOutput</code>메서드를 사용하면 <code class="highlighter-rouge">FileOutputStream</code>에서 path를 얻을 수 없기 때문에 명시적으로 File 객체를 생성하여 사용하는 style #1을 주로 사용하고 있습니다.</p>
+<p><code class="language-plaintext highlighter-rouge">style #1</code>과 <code class="language-plaintext highlighter-rouge">style #2</code>의 결과로 얻어지는 FileOutputStream은 동일한 파일을 가르키고 있습니다. 하지만 개인적으로는 <code class="language-plaintext highlighter-rouge">openFileOutput</code>메서드를 사용하면 <code class="language-plaintext highlighter-rouge">FileOutputStream</code>에서 path를 얻을 수 없기 때문에 명시적으로 File 객체를 생성하여 사용하는 style #1을 주로 사용하고 있습니다.</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">externalFile</span> <span class="p">=</span> <span class="n">File</span><span class="p">(</span><span class="n">context</span><span class="p">.</span><span class="n">getExternalFilesDir</span><span class="p">({</span><span class="n">Environment</span> <span class="n">Type</span><span class="p">},</span> <span class="s">"file.txt"</span><span class="p">)</span>
-<span class="c1">// &gt; /storage/emulated/0/Android/data/**files**/*{Environment Type}*/file.txt #B1
-</span></code></pre></div></div>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">externalFile</span> <span class="p">=</span> <span class="nc">File</span><span class="p">(</span><span class="n">context</span><span class="p">.</span><span class="nf">getExternalFilesDir</span><span class="p">({</span><span class="nc">Environment</span> <span class="nc">Type</span><span class="p">},</span> <span class="s">"file.txt"</span><span class="p">)</span>
+<span class="c1">// &gt; /storage/emulated/0/Android/data/**files**/*{Environment Type}*/file.txt #B1</span>
+</code></pre></div></div>
 
-<p>외부저장소에 앱데이터를 저장할때 사용합니다. 공유저장 장치가 에뮬레이션 된 경우에는 Scoped Storage가 적용되지 않은 상태에서는 <code class="highlighter-rouge">WRITE_EXTERNAL_STORAGE</code>권한만 있으면, 이 영역에 접근가능하기 때문에 보안에 취약합니다. 또한 사용자가 파일브라우져를 통해 삭제 할 수 있습니다.</p>
+<p>외부저장소에 앱데이터를 저장할때 사용합니다. 공유저장 장치가 에뮬레이션 된 경우에는 Scoped Storage가 적용되지 않은 상태에서는 <code class="language-plaintext highlighter-rouge">WRITE_EXTERNAL_STORAGE</code>권한만 있으면, 이 영역에 접근가능하기 때문에 보안에 취약합니다. 또한 사용자가 파일브라우져를 통해 삭제 할 수 있습니다.</p>
 
 <h1 id="공유-저장소-shared-storage">공유 저장소 (Shared storage)</h1>
 <p>미디어, 문서 및 기타 파일을 비롯하여 앱이 다른 앱과 공유하려는 파일을 저장합니다. 다른앱에서 접근을 허용해야 하기 때문에 공유 저장소는 내부저장소를 사용 할 수 없습니다.</p>
@@ -257,10 +257,10 @@ val cacheSize = storageManager.getCacheSizeBytes(uuidForPath) // 사용중인 �
 <h2 id="legacy-external-storage">Legacy External Storage</h2>
 <p>Scoped Storage가 적용되지않은 상태. targetSdkVersion이 28이하 이거나 단말이 Android 9이하인 경우에는 Legacy External Storage를 사용가능 했습니다. 미디어와 파일의 구분없이 생성가능합니다.</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">file</span> <span class="p">=</span> <span class="n">File</span><span class="p">(</span><span class="n">Environment</span><span class="p">.</span><span class="n">getExternalStorageDirectory</span><span class="p">(),</span> <span class="s">"file.txt"</span><span class="p">)</span>
-<span class="c1">// &gt; /storage/emulated/0/file.txt #B1
-</span></code></pre></div></div>
-<p><code class="highlighter-rouge">Legacy External Storage</code>일때는 <code class="highlighter-rouge">WRITE_EXTERNAL_STORAGE</code>권한이 있는 경우 위와같이 외부저장소의 루트부터 대부분의 공간에 접근하고 쓰기가 가능했습니다. 그리고 필요한 경우 미디어는 ContentProvider에 등록했습니다.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">file</span> <span class="p">=</span> <span class="nc">File</span><span class="p">(</span><span class="nc">Environment</span><span class="p">.</span><span class="nf">getExternalStorageDirectory</span><span class="p">(),</span> <span class="s">"file.txt"</span><span class="p">)</span>
+<span class="c1">// &gt; /storage/emulated/0/file.txt #B1</span>
+</code></pre></div></div>
+<p><code class="language-plaintext highlighter-rouge">Legacy External Storage</code>일때는 <code class="language-plaintext highlighter-rouge">WRITE_EXTERNAL_STORAGE</code>권한이 있는 경우 위와같이 외부저장소의 루트부터 대부분의 공간에 접근하고 쓰기가 가능했습니다. 그리고 필요한 경우 미디어는 ContentProvider에 등록했습니다.</p>
 
 <blockquote>
   <p>Legacy External Storage 정책에서 공유되는 파일 작성 순서 <br />
@@ -272,24 +272,24 @@ Step 3. 그리고 용도에 따라 명시적으로 ContentProvider에 등록합�
 <h2 id="scoped-storage">Scoped Storage</h2>
 
 <h3 id="media-유형">Media 유형</h3>
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Scoped Storage
-</span><span class="kd">val</span> <span class="py">resolver</span> <span class="p">=</span> <span class="n">applicationContext</span><span class="p">.</span><span class="n">contentResolver</span>
-<span class="kd">val</span> <span class="py">audioCollection</span> <span class="p">=</span> <span class="n">MediaStore</span><span class="p">.</span><span class="n">Audio</span><span class="p">.</span><span class="n">Media</span><span class="p">.</span><span class="n">getContentUri</span><span class="p">(</span>
-        <span class="n">MediaStore</span><span class="p">.</span><span class="n">VOLUME_EXTERNAL_PRIMARY</span><span class="p">)</span>
-<span class="kd">val</span> <span class="py">newSongDetails</span> <span class="p">=</span> <span class="n">ContentValues</span><span class="p">().</span><span class="n">apply</span> <span class="p">{</span>
-    <span class="n">put</span><span class="p">(</span><span class="n">MediaStore</span><span class="p">.</span><span class="n">Audio</span><span class="p">.</span><span class="n">Media</span><span class="p">.</span><span class="n">DISPLAY_NAME</span><span class="p">,</span> <span class="s">"My Song.mp3"</span><span class="p">)</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Scoped Storage</span>
+<span class="kd">val</span> <span class="py">resolver</span> <span class="p">=</span> <span class="n">applicationContext</span><span class="p">.</span><span class="n">contentResolver</span>
+<span class="kd">val</span> <span class="py">audioCollection</span> <span class="p">=</span> <span class="nc">MediaStore</span><span class="p">.</span><span class="nc">Audio</span><span class="p">.</span><span class="nc">Media</span><span class="p">.</span><span class="nf">getContentUri</span><span class="p">(</span>
+        <span class="nc">MediaStore</span><span class="p">.</span><span class="nc">VOLUME_EXTERNAL_PRIMARY</span><span class="p">)</span>
+<span class="kd">val</span> <span class="py">newSongDetails</span> <span class="p">=</span> <span class="nc">ContentValues</span><span class="p">().</span><span class="nf">apply</span> <span class="p">{</span>
+    <span class="nf">put</span><span class="p">(</span><span class="nc">MediaStore</span><span class="p">.</span><span class="nc">Audio</span><span class="p">.</span><span class="nc">Media</span><span class="p">.</span><span class="nc">DISPLAY_NAME</span><span class="p">,</span> <span class="s">"My Song.mp3"</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="kd">val</span> <span class="py">myFavoriteSongUri</span> <span class="p">=</span> <span class="n">resolver</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">audioCollection</span><span class="p">,</span> <span class="n">newSongDetails</span><span class="p">)</span>
-<span class="c1">// &gt; content://media/external/audio/media/{id}
-</span></code></pre></div></div>
-<p><code class="highlighter-rouge">Scoped Storage</code>가 적용되면 다른앱과 공유되는 미디어 파일은 모두 MediaStore를 이용하여 생성해야 합니다.</p>
+<span class="kd">val</span> <span class="py">myFavoriteSongUri</span> <span class="p">=</span> <span class="n">resolver</span><span class="p">.</span><span class="nf">insert</span><span class="p">(</span><span class="n">audioCollection</span><span class="p">,</span> <span class="n">newSongDetails</span><span class="p">)</span>
+<span class="c1">// &gt; content://media/external/audio/media/{id}</span>
+</code></pre></div></div>
+<p><code class="language-plaintext highlighter-rouge">Scoped Storage</code>가 적용되면 다른앱과 공유되는 미디어 파일은 모두 MediaStore를 이용하여 생성해야 합니다.</p>
 
 <blockquote>
-  <p>개인적으로 처음에 Scoped Storage를 접했을때 <code class="highlighter-rouge">MediaStore를 이용하여 생성해야 합니다</code>라는 문맥때문에 혼란이 왔습니다. MediaStore 클래스가 핵심인 것은 맞지만 구현의 관점에서는 아래처럼 읽으면 문맥이 더 이해가 쉬웠습니다. <br />
+  <p>개인적으로 처음에 Scoped Storage를 접했을때 <code class="language-plaintext highlighter-rouge">MediaStore를 이용하여 생성해야 합니다</code>라는 문맥때문에 혼란이 왔습니다. MediaStore 클래스가 핵심인 것은 맞지만 구현의 관점에서는 아래처럼 읽으면 문맥이 더 이해가 쉬웠습니다. <br />
 ContentResolver.insert는 MediaStore API와 ContentValues 객체를 인자로 받아 Uri를 생성합니다. ContentResolver.openXXXXX 메서드를 통해 FileOutputStream이나 ParcelFileDescriptor를 얻어서 파일을 쓰도록 합니다.</p>
 </blockquote>
 
-<p>참고로 insert에서 반환하는 Uri는 Content Provider의 컨텐츠이기 때문에 <code class="highlighter-rouge">content://</code>로 시작합니다.</p>
+<p>참고로 insert에서 반환하는 Uri는 Content Provider의 컨텐츠이기 때문에 <code class="language-plaintext highlighter-rouge">content://</code>로 시작합니다.</p>
 
 <blockquote>
   <p>Scoped Storage 정책에서 공유되는 파일 작성 <br />
@@ -299,61 +299,61 @@ Step 2. Step 1에서 얻은 Uri를 통해 파일을 작성합니다.</p>
 
 <h3 id="file문서-유형">File(문서) 유형</h3>
 
-<p><code class="highlighter-rouge">Scoped Storage</code>에서도 사용자 액션을 통해 파일을 특정 외부저장소에 저장가능합니다. 하지만, Legacy External Storage 에서 처럼 지정한 폴더에 지정한 이름으로 저장하지 않고, SAF(Storage Access Framework)를 통해 유저가 선택 할 수 있습니다. 우리는 단지 생성할 폴더,파일명 초기값만 넘겨주고 사용자가 선택하도록 합니다. onResultActivity를 통해 전달받은 uri를 통해 우리는 해당 파일을 컨트롤 할 수 있습니다.</p>
+<p><code class="language-plaintext highlighter-rouge">Scoped Storage</code>에서도 사용자 액션을 통해 파일을 특정 외부저장소에 저장가능합니다. 하지만, Legacy External Storage 에서 처럼 지정한 폴더에 지정한 이름으로 저장하지 않고, SAF(Storage Access Framework)를 통해 유저가 선택 할 수 있습니다. 우리는 단지 생성할 폴더,파일명 초기값만 넘겨주고 사용자가 선택하도록 합니다. onResultActivity를 통해 전달받은 uri를 통해 우리는 해당 파일을 컨트롤 할 수 있습니다.</p>
 
 <p>아래는 간단한 예를 들기 위해 액티비티가 시작되면 사용자가 파일을 생성하고, 생성한 파일에 다운로드 받아 저장하는 아주 단순한 예제코드입니다. 가독성과 복붙만으로 동작을 보장하기 위해 의존성과 코드를 최대한으로 줄였습니다.</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">DownloadAndSaveActivity</span> <span class="p">:</span> <span class="n">AppCompatActivity</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">private</span> <span class="kd">val</span> <span class="py">requestCodeForCreateDocument</span><span class="p">:</span> <span class="n">Int</span> <span class="p">=</span> <span class="m">1000</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">DownloadAndSaveActivity</span> <span class="p">:</span> <span class="nc">AppCompatActivity</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">private</span> <span class="kd">val</span> <span class="py">requestCodeForCreateDocument</span><span class="p">:</span> <span class="nc">Int</span> <span class="p">=</span> <span class="m">1000</span>
 
-    <span class="k">override</span> <span class="k">fun</span> <span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">:</span> <span class="n">Bundle</span><span class="p">?)</span> <span class="p">{</span>
-        <span class="k">super</span><span class="p">.</span><span class="n">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">)</span>
-        <span class="n">setContentView</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="n">layout</span><span class="p">.</span><span class="n">activity_main</span><span class="p">)</span>
-        <span class="n">reqeustCreateDoc</span><span class="p">()</span>
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">:</span> <span class="nc">Bundle</span><span class="p">?)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">.</span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">)</span>
+        <span class="nf">setContentView</span><span class="p">(</span><span class="nc">R</span><span class="p">.</span><span class="n">layout</span><span class="p">.</span><span class="n">activity_main</span><span class="p">)</span>
+        <span class="nf">reqeustCreateDoc</span><span class="p">()</span>
     <span class="p">}</span>
 
     <span class="k">private</span> <span class="k">fun</span> <span class="nf">reqeustCreateDoc</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">val</span> <span class="py">intent</span> <span class="p">=</span> <span class="n">Intent</span><span class="p">(</span><span class="n">Intent</span><span class="p">.</span><span class="n">ACTION_CREATE_DOCUMENT</span><span class="p">).</span><span class="n">apply</span> <span class="p">{</span>
-            <span class="n">addCategory</span><span class="p">(</span><span class="n">Intent</span><span class="p">.</span><span class="n">CATEGORY_OPENABLE</span><span class="p">)</span>
-            <span class="n">putExtra</span><span class="p">(</span><span class="n">Intent</span><span class="p">.</span><span class="n">EXTRA_TITLE</span><span class="p">,</span> <span class="s">"example.pdf"</span><span class="p">)</span>
+        <span class="kd">val</span> <span class="py">intent</span> <span class="p">=</span> <span class="nc">Intent</span><span class="p">(</span><span class="nc">Intent</span><span class="p">.</span><span class="nc">ACTION_CREATE_DOCUMENT</span><span class="p">).</span><span class="nf">apply</span> <span class="p">{</span>
+            <span class="nf">addCategory</span><span class="p">(</span><span class="nc">Intent</span><span class="p">.</span><span class="nc">CATEGORY_OPENABLE</span><span class="p">)</span>
+            <span class="nf">putExtra</span><span class="p">(</span><span class="nc">Intent</span><span class="p">.</span><span class="nc">EXTRA_TITLE</span><span class="p">,</span> <span class="s">"example.pdf"</span><span class="p">)</span>
             <span class="n">type</span> <span class="p">=</span> <span class="s">"application/pdf"</span>
         <span class="p">}</span>
-        <span class="n">startActivityForResult</span><span class="p">(</span><span class="n">intent</span><span class="p">,</span> <span class="n">requestCodeForCreateDocument</span><span class="p">)</span>
+        <span class="nf">startActivityForResult</span><span class="p">(</span><span class="n">intent</span><span class="p">,</span> <span class="n">requestCodeForCreateDocument</span><span class="p">)</span>
     <span class="p">}</span>
 
-    <span class="k">override</span> <span class="k">fun</span> <span class="nf">onActivityResult</span><span class="p">(</span><span class="n">requestCode</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">resultCode</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">Intent</span><span class="p">?)</span> <span class="p">{</span>
-        <span class="k">super</span><span class="p">.</span><span class="n">onActivityResult</span><span class="p">(</span><span class="n">requestCode</span><span class="p">,</span> <span class="n">resultCode</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">requestCode</span> <span class="p">==</span> <span class="n">requestCodeForCreateDocument</span> <span class="p">&amp;&amp;</span> <span class="n">resultCode</span> <span class="p">==</span> <span class="n">Activity</span><span class="p">.</span><span class="n">RESULT_OK</span> <span class="p">&amp;&amp;</span> <span class="n">data</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">Thread</span> <span class="p">{</span>
-                <span class="kd">val</span> <span class="py">inUri</span> <span class="p">=</span> <span class="n">Uri</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="s">"http://www.africau.edu/images/default/sample.pdf"</span><span class="p">)</span>
-                <span class="kd">val</span> <span class="py">outUri</span> <span class="p">=</span> <span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">data</span><span class="p">)</span> <span class="k">as</span> <span class="n">Uri</span>
-                <span class="n">download</span><span class="p">(</span><span class="n">inUri</span><span class="p">,</span> <span class="n">outUri</span><span class="p">)</span>
-            <span class="p">}.</span><span class="n">start</span><span class="p">()</span>
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">onActivityResult</span><span class="p">(</span><span class="n">requestCode</span><span class="p">:</span> <span class="nc">Int</span><span class="p">,</span> <span class="n">resultCode</span><span class="p">:</span> <span class="nc">Int</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nc">Intent</span><span class="p">?)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">.</span><span class="nf">onActivityResult</span><span class="p">(</span><span class="n">requestCode</span><span class="p">,</span> <span class="n">resultCode</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">requestCode</span> <span class="p">==</span> <span class="n">requestCodeForCreateDocument</span> <span class="p">&amp;&amp;</span> <span class="n">resultCode</span> <span class="p">==</span> <span class="nc">Activity</span><span class="p">.</span><span class="nc">RESULT_OK</span> <span class="p">&amp;&amp;</span> <span class="n">data</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nc">Thread</span> <span class="p">{</span>
+                <span class="kd">val</span> <span class="py">inUri</span> <span class="p">=</span> <span class="nc">Uri</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="s">"http://www.africau.edu/images/default/sample.pdf"</span><span class="p">)</span>
+                <span class="kd">val</span> <span class="py">outUri</span> <span class="p">=</span> <span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">data</span><span class="p">)</span> <span class="k">as</span> <span class="nc">Uri</span>
+                <span class="nf">download</span><span class="p">(</span><span class="n">inUri</span><span class="p">,</span> <span class="n">outUri</span><span class="p">)</span>
+            <span class="p">}.</span><span class="nf">start</span><span class="p">()</span>
         <span class="p">}</span>
     <span class="p">}</span>
 
-    <span class="k">private</span> <span class="k">fun</span> <span class="nf">download</span><span class="p">(</span><span class="n">sourceUri</span><span class="p">:</span> <span class="n">Uri</span><span class="p">,</span> <span class="n">destUri</span><span class="p">:</span> <span class="n">Uri</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">val</span> <span class="py">connect</span> <span class="p">=</span> <span class="n">URL</span><span class="p">(</span><span class="n">sourceUri</span><span class="p">.</span><span class="n">toString</span><span class="p">()).</span><span class="n">openConnection</span><span class="p">()</span>
-        <span class="kd">val</span> <span class="py">inputStream</span> <span class="p">=</span> <span class="n">connect</span><span class="p">.</span><span class="n">getInputStream</span><span class="p">()</span>
-        <span class="kd">val</span> <span class="py">outputStream</span><span class="p">:</span> <span class="n">FileOutputStream</span> <span class="p">=</span> <span class="n">contentResolver</span><span class="p">.</span><span class="n">openFileDescriptor</span><span class="p">(</span><span class="n">destUri</span><span class="p">,</span> <span class="s">"w"</span><span class="p">)</span><span class="o">?.</span><span class="n">use</span> <span class="p">{</span> <span class="n">pfd</span> <span class="p">-&gt;</span>
-            <span class="n">FileOutputStream</span><span class="p">(</span><span class="n">pfd</span><span class="p">.</span><span class="n">fileDescriptor</span><span class="p">)</span>
-        <span class="p">}</span> <span class="o">?:</span> <span class="k">throw</span> <span class="n">IllegalArgumentException</span><span class="p">()</span>
-        <span class="n">writeStream</span><span class="p">(</span><span class="n">inputStream</span><span class="p">,</span> <span class="n">outputStream</span><span class="p">)</span>
+    <span class="k">private</span> <span class="k">fun</span> <span class="nf">download</span><span class="p">(</span><span class="n">sourceUri</span><span class="p">:</span> <span class="nc">Uri</span><span class="p">,</span> <span class="n">destUri</span><span class="p">:</span> <span class="nc">Uri</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">val</span> <span class="py">connect</span> <span class="p">=</span> <span class="nc">URL</span><span class="p">(</span><span class="n">sourceUri</span><span class="p">.</span><span class="nf">toString</span><span class="p">()).</span><span class="nf">openConnection</span><span class="p">()</span>
+        <span class="kd">val</span> <span class="py">inputStream</span> <span class="p">=</span> <span class="n">connect</span><span class="p">.</span><span class="nf">getInputStream</span><span class="p">()</span>
+        <span class="kd">val</span> <span class="py">outputStream</span><span class="p">:</span> <span class="nc">FileOutputStream</span> <span class="p">=</span> <span class="n">contentResolver</span><span class="p">.</span><span class="nf">openFileDescriptor</span><span class="p">(</span><span class="n">destUri</span><span class="p">,</span> <span class="s">"w"</span><span class="p">)</span><span class="o">?.</span><span class="nf">use</span> <span class="p">{</span> <span class="n">pfd</span> <span class="p">-&gt;</span>
+            <span class="nc">FileOutputStream</span><span class="p">(</span><span class="n">pfd</span><span class="p">.</span><span class="n">fileDescriptor</span><span class="p">)</span>
+        <span class="p">}</span> <span class="o">?:</span> <span class="k">throw</span> <span class="nc">IllegalArgumentException</span><span class="p">()</span>
+        <span class="nf">writeStream</span><span class="p">(</span><span class="n">inputStream</span><span class="p">,</span> <span class="n">outputStream</span><span class="p">)</span>
     <span class="p">}</span>
 
 
-    <span class="k">private</span> <span class="k">fun</span> <span class="nf">writeStream</span><span class="p">(</span><span class="n">inputStream</span><span class="p">:</span> <span class="n">InputStream</span><span class="p">,</span> <span class="n">outputStream</span><span class="p">:</span> <span class="n">OutputStream</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">private</span> <span class="k">fun</span> <span class="nf">writeStream</span><span class="p">(</span><span class="n">inputStream</span><span class="p">:</span> <span class="nc">InputStream</span><span class="p">,</span> <span class="n">outputStream</span><span class="p">:</span> <span class="nc">OutputStream</span><span class="p">)</span> <span class="p">{</span>
         <span class="kd">var</span> <span class="py">total</span> <span class="p">=</span> <span class="m">0</span>
         <span class="k">while</span> <span class="p">(</span><span class="k">true</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kd">val</span> <span class="py">data</span> <span class="p">=</span> <span class="n">inputStream</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
+            <span class="kd">val</span> <span class="py">data</span> <span class="p">=</span> <span class="n">inputStream</span><span class="p">.</span><span class="nf">read</span><span class="p">()</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">data</span> <span class="p">==</span> <span class="p">-</span><span class="m">1</span><span class="p">)</span> <span class="p">{</span>
                 <span class="k">break</span>
             <span class="p">}</span>
             <span class="n">total</span> <span class="p">+=</span> <span class="n">data</span>
-            <span class="n">outputStream</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="n">outputStream</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
         <span class="p">}</span>
-        <span class="n">inputStream</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
-        <span class="n">outputStream</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="n">inputStream</span><span class="p">.</span><span class="nf">close</span><span class="p">()</span>
+        <span class="n">outputStream</span><span class="p">.</span><span class="nf">close</span><span class="p">()</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></div>

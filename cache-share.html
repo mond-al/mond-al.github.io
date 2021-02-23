@@ -47,7 +47,7 @@
 <title> File Provider Path 디렉리터 영역 매칭 -  </title>
 
 <!-- Begin Jekyll SEO tag v2.5.0 -->
-<meta name="generator" content="Jekyll v3.7.4" />
+<meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="File Provider Path 디렉리터 영역 매칭" />
 <meta name="author" content="jisoo Yang" />
 <meta property="og:locale" content="en_US" />
@@ -59,7 +59,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-02-08T00:00:00+09:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/cache-share","headline":"File Provider Path 디렉리터 영역 매칭","dateModified":"2021-02-08T00:00:00+09:00","datePublished":"2021-02-08T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/cache-share"},"author":{"@type":"Person","name":"jisoo Yang"},"description":"Android 7(N)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. 얼마전 기존 프로젝트에 Android 11(R) 대응을 위해 Scoped Storage 적용을 진행하면서 기존 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache, files, external(Media/Download)로 구분하는 처리가 추가되었습니다. 이로 인해 external경로 이외에도 파일프로바이더로 제공할 수 있도록 수정이 필요했습니다.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo/normal_icon.png"},"name":"jisoo Yang"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"author":{"@type":"Person","name":"jisoo Yang"},"url":"http://localhost:4000/cache-share","headline":"File Provider Path 디렉리터 영역 매칭","dateModified":"2021-02-08T00:00:00+09:00","datePublished":"2021-02-08T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/cache-share"},"description":"Android 7(N)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. 얼마전 기존 프로젝트에 Android 11(R) 대응을 위해 Scoped Storage 적용을 진행하면서 기존 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache, files, external(Media/Download)로 구분하는 처리가 추가되었습니다. 이로 인해 external경로 이외에도 파일프로바이더로 제공할 수 있도록 수정이 필요했습니다.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo/normal_icon.png"},"name":"jisoo Yang"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -75,7 +75,7 @@
 <!--<meta property="article:author" content="https://www.facebook.com/jisoo.yang.56"/>-->
 <!--<meta property="article:published_time" content="2021-02-08T00:00:00+09:00"/>-->
 <!--<meta property="article:modified_time" content="2021-02-08T00:00:00+09:00"/>-->
-<!--<meta property="article:tag" content="Android"/>-->
+<!--<meta property="article:tag" content="android"/>-->
 <!--<meta name="twitter:card" content="summary_large_image"/>-->
 <!--<meta name="twitter:title" content="File Provider Path 디렉리터 영역 매칭"/>-->
 <!--<meta name="twitter:description" content="Android 7(N)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. 얼마전 기존 프로젝트에 Android 11(R) 대응을 위해 Scoped Storage 적용을 진행하면서 기존 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache, files, external(Media/Download)로 구분하는 처리가 추가되었습니다. 이로 인해 external경로 이외에도 파일프로바이더로 제공할 수 있도록 수정이 필요했습니다. 추가 할 수 있는 path의"/>-->
@@ -84,7 +84,7 @@
 <!--<meta name="twitter:label1" content="Written by"/>-->
 <!--<meta name="twitter:data1" content="몬드의 개발로그"/>-->
 <!--<meta name="twitter:label2" content="Filed under"/>-->
-<!--<meta name="twitter:data2" content="Android"/>-->
+<!--<meta name="twitter:data2" content="android"/>-->
 <!--<meta name="twitter:site" content="@false"/>-->
 <!--<meta name="twitter:creator" content="@false"/>-->
 <!--<meta property="og:image:width" content="1400"/>-->
@@ -213,7 +213,7 @@ into the {body} of the default.hbs template -->
   </tbody>
 </table>
 
-<p>manifest &gt; provider &gt; meta-data &gt; resource 에 정의한 <code class="highlighter-rouge">file_paths.xml</code> 파일을 아래처럼 수정했습니다.</p>
+<p>manifest &gt; provider &gt; meta-data &gt; resource 에 정의한 <code class="language-plaintext highlighter-rouge">file_paths.xml</code> 파일을 아래처럼 수정했습니다.</p>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- res/xml/file_paths.xml --&gt;</span>
 <span class="nt">&lt;path&gt;</span>
@@ -245,24 +245,24 @@ into the {body} of the default.hbs template -->
 
 </code></pre></div></div>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">requestCaptureImage</span><span class="o">(</span><span class="n">Activity</span> <span class="n">activity</span><span class="o">,</span> <span class="n">Uri</span> <span class="n">uri</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">Intent</span> <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Intent</span><span class="o">(</span><span class="n">MediaStore</span><span class="o">.</span><span class="na">ACTION_IMAGE_CAPTURE</span><span class="o">);</span>
-    <span class="k">if</span> <span class="o">(</span><span class="n">Build</span><span class="o">.</span><span class="na">VERSION</span><span class="o">.</span><span class="na">SDK_INT</span> <span class="o">&lt;</span> <span class="n">Build</span><span class="o">.</span><span class="na">VERSION_CODES</span><span class="o">.</span><span class="na">N</span><span class="o">)</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">requestCaptureImage</span><span class="o">(</span><span class="nc">Activity</span> <span class="n">activity</span><span class="o">,</span> <span class="nc">Uri</span> <span class="n">uri</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">Intent</span> <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Intent</span><span class="o">(</span><span class="nc">MediaStore</span><span class="o">.</span><span class="na">ACTION_IMAGE_CAPTURE</span><span class="o">);</span>
+    <span class="k">if</span> <span class="o">(</span><span class="nc">Build</span><span class="o">.</span><span class="na">VERSION</span><span class="o">.</span><span class="na">SDK_INT</span> <span class="o">&lt;</span> <span class="nc">Build</span><span class="o">.</span><span class="na">VERSION_CODES</span><span class="o">.</span><span class="na">N</span><span class="o">)</span> <span class="o">{</span>
         <span class="n">intent</span><span class="o">.</span><span class="na">putExtra</span><span class="o">(</span><span class="n">android</span><span class="o">.</span><span class="na">provider</span><span class="o">.</span><span class="na">MediaStore</span><span class="o">.</span><span class="na">EXTRA_OUTPUT</span><span class="o">,</span> <span class="n">uri</span><span class="o">);</span>
     <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-        <span class="n">File</span> <span class="n">file</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="n">uri</span><span class="o">.</span><span class="na">getPath</span><span class="o">());</span>
-        <span class="n">Uri</span> <span class="n">photoUri</span> <span class="o">=</span> <span class="n">FileProvider</span><span class="o">.</span><span class="na">getUriForFile</span><span class="o">(</span><span class="n">MainApplication</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(),</span> <span class="n">BuildConfig</span><span class="o">.</span><span class="na">APPLICATION_ID</span><span class="o">,</span> <span class="n">file</span><span class="o">);</span>
-        <span class="n">intent</span><span class="o">.</span><span class="na">putExtra</span><span class="o">(</span><span class="n">MediaStore</span><span class="o">.</span><span class="na">EXTRA_OUTPUT</span><span class="o">,</span> <span class="n">photoUri</span><span class="o">);</span>
+        <span class="nc">File</span> <span class="n">file</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="n">uri</span><span class="o">.</span><span class="na">getPath</span><span class="o">());</span>
+        <span class="nc">Uri</span> <span class="n">photoUri</span> <span class="o">=</span> <span class="nc">FileProvider</span><span class="o">.</span><span class="na">getUriForFile</span><span class="o">(</span><span class="nc">MainApplication</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(),</span> <span class="nc">BuildConfig</span><span class="o">.</span><span class="na">APPLICATION_ID</span><span class="o">,</span> <span class="n">file</span><span class="o">);</span>
+        <span class="n">intent</span><span class="o">.</span><span class="na">putExtra</span><span class="o">(</span><span class="nc">MediaStore</span><span class="o">.</span><span class="na">EXTRA_OUTPUT</span><span class="o">,</span> <span class="n">photoUri</span><span class="o">);</span>
     <span class="o">}</span>
-    <span class="n">activity</span><span class="o">.</span><span class="na">startActivityForResult</span><span class="o">(</span><span class="n">intent</span><span class="o">,</span> <span class="n">RequestCode</span><span class="o">.</span><span class="na">ACTION_IMAGE_CAPTURE</span><span class="o">.</span><span class="na">getCode</span><span class="o">());</span>
+    <span class="n">activity</span><span class="o">.</span><span class="na">startActivityForResult</span><span class="o">(</span><span class="n">intent</span><span class="o">,</span> <span class="nc">RequestCode</span><span class="o">.</span><span class="na">ACTION_IMAGE_CAPTURE</span><span class="o">.</span><span class="na">getCode</span><span class="o">());</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
 <p>Error trace</p>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Caused</span> <span class="nl">by:</span> <span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">IllegalArgumentException</span><span class="o">:</span> <span class="n">Couldn</span><span class="err">'</span><span class="n">t</span> <span class="n">find</span> <span class="n">meta</span><span class="o">-</span><span class="n">data</span> <span class="k">for</span> <span class="n">provider</span> <span class="n">with</span> <span class="n">authority</span> <span class="n">com</span><span class="o">.</span><span class="na">mond</span><span class="o">.</span><span class="na">al</span><span class="o">.</span><span class="na">fileProvider</span>
-        <span class="n">at</span> <span class="n">androidx</span><span class="o">.</span><span class="na">core</span><span class="o">.</span><span class="na">content</span><span class="o">.</span><span class="na">FileProvider</span><span class="o">.</span><span class="na">parsePathStrategy</span><span class="o">(</span><span class="n">FileProvider</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">606</span><span class="o">)</span>
-        <span class="n">at</span> <span class="n">androidx</span><span class="o">.</span><span class="na">core</span><span class="o">.</span><span class="na">content</span><span class="o">.</span><span class="na">FileProvider</span><span class="o">.</span><span class="na">getPathStrategy</span><span class="o">(</span><span class="n">FileProvider</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">579</span><span class="o">)</span>
-        <span class="n">at</span> <span class="n">androidx</span><span class="o">.</span><span class="na">core</span><span class="o">.</span><span class="na">content</span><span class="o">.</span><span class="na">FileProvider</span><span class="o">.</span><span class="na">getUriForFile</span><span class="o">(</span><span class="n">FileProvider</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">417</span><span class="o">)</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Caused</span> <span class="nl">by:</span> <span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">IllegalArgumentException</span><span class="o">:</span> <span class="nc">Couldn</span><span class="err">'</span><span class="n">t</span> <span class="n">find</span> <span class="n">meta</span><span class="o">-</span><span class="n">data</span> <span class="k">for</span> <span class="n">provider</span> <span class="n">with</span> <span class="n">authority</span> <span class="n">com</span><span class="o">.</span><span class="na">mond</span><span class="o">.</span><span class="na">al</span><span class="o">.</span><span class="na">fileProvider</span>
+        <span class="n">at</span> <span class="n">androidx</span><span class="o">.</span><span class="na">core</span><span class="o">.</span><span class="na">content</span><span class="o">.</span><span class="na">FileProvider</span><span class="o">.</span><span class="na">parsePathStrategy</span><span class="o">(</span><span class="nc">FileProvider</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">606</span><span class="o">)</span>
+        <span class="n">at</span> <span class="n">androidx</span><span class="o">.</span><span class="na">core</span><span class="o">.</span><span class="na">content</span><span class="o">.</span><span class="na">FileProvider</span><span class="o">.</span><span class="na">getPathStrategy</span><span class="o">(</span><span class="nc">FileProvider</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">579</span><span class="o">)</span>
+        <span class="n">at</span> <span class="n">androidx</span><span class="o">.</span><span class="na">core</span><span class="o">.</span><span class="na">content</span><span class="o">.</span><span class="na">FileProvider</span><span class="o">.</span><span class="na">getUriForFile</span><span class="o">(</span><span class="nc">FileProvider</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">417</span><span class="o">)</span>
 </code></pre></div></div>
 
                 </div>

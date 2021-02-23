@@ -47,7 +47,7 @@
 <title> 아키텍처와 클린코드 그리고 TDD (2) -  </title>
 
 <!-- Begin Jekyll SEO tag v2.5.0 -->
-<meta name="generator" content="Jekyll v3.7.4" />
+<meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="아키텍처와 클린코드 그리고 TDD (2)" />
 <meta name="author" content="jisoo Yang" />
 <meta property="og:locale" content="en_US" />
@@ -59,7 +59,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-02-17T00:00:00+09:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/architecture-base-2","headline":"아키텍처와 클린코드 그리고 TDD (2)","dateModified":"2021-02-17T00:00:00+09:00","datePublished":"2021-02-17T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/architecture-base-2"},"author":{"@type":"Person","name":"jisoo Yang"},"description":"함수 리팩토링을 통해 아름다운 코드로 바꿔보자. 그리고 왜 이렇게 하는지 이해는게 목표이다.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo/normal_icon.png"},"name":"jisoo Yang"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"author":{"@type":"Person","name":"jisoo Yang"},"url":"http://localhost:4000/architecture-base-2","headline":"아키텍처와 클린코드 그리고 TDD (2)","dateModified":"2021-02-17T00:00:00+09:00","datePublished":"2021-02-17T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/architecture-base-2"},"description":"함수 리팩토링을 통해 아름다운 코드로 바꿔보자. 그리고 왜 이렇게 하는지 이해는게 목표이다.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo/normal_icon.png"},"name":"jisoo Yang"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -75,7 +75,7 @@
 <!--<meta property="article:author" content="https://www.facebook.com/jisoo.yang.56"/>-->
 <!--<meta property="article:published_time" content="2021-02-17T00:00:00+09:00"/>-->
 <!--<meta property="article:modified_time" content="2021-02-17T00:00:00+09:00"/>-->
-<!--<meta property="article:tag" content="Android"/>-->
+<!--<meta property="article:tag" content="android"/>-->
 <!--<meta name="twitter:card" content="summary_large_image"/>-->
 <!--<meta name="twitter:title" content="아키텍처와 클린코드 그리고 TDD (2)"/>-->
 <!--<meta name="twitter:description" content="함수 리팩토링을 통해 아름다운 코드로 바꿔보자. 그리고 왜 이렇게 하는지 이해는게 목표이다. 이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 유튜브 강좌를 보시길 추천드립니다. 백명석님의 클린코더스 강의 다시보기 Function 원칙 한가지 일만 해야 한다. 함수의 크기는 80년데 vt100터미널 24줄 80컬럼"/>-->
@@ -84,7 +84,7 @@
 <!--<meta name="twitter:label1" content="Written by"/>-->
 <!--<meta name="twitter:data1" content="몬드의 개발로그"/>-->
 <!--<meta name="twitter:label2" content="Filed under"/>-->
-<!--<meta name="twitter:data2" content="Android"/>-->
+<!--<meta name="twitter:data2" content="android"/>-->
 <!--<meta name="twitter:site" content="@false"/>-->
 <!--<meta name="twitter:creator" content="@false"/>-->
 <!--<meta property="og:image:width" content="1400"/>-->
@@ -207,7 +207,7 @@ into the {body} of the default.hbs template -->
 <ul>
   <li>더이상 작아질 수 없을 만큼 작어야한다.</li>
   <li>큰 함수를 보면 클래수로 추출할 생각을 해야함</li>
-  <li>클래스는 일련의 <code class="highlighter-rouge">변수들에 동작하는 기능의 집합</code></li>
+  <li>클래스는 일련의 <code class="language-plaintext highlighter-rouge">변수들에 동작하는 기능의 집합</code></li>
 </ul>
 
 <p><a href="https://youtu.be/GYNT7O3rLhU?t=267">FitnessExample 그냥 영상을 보자!</a><br />
@@ -217,7 +217,7 @@ gradle에 익숙한 안드로이드 개발자에겐 조금 어색한 소스이�
 <ol>
   <li>extract method object -&gt; 이건 코틀린에서 되지않는다. 일단 수동으로 수행. (방법아시는분 공유 부탁드립니다.🙇‍♂️)</li>
   <li>변수정리<br />
-여러곳에서 사용되는 변수를 생성자 파라미터와 init스코프로 올린다. 이 작업은  <code class="highlighter-rouge">함수의 인자는 최대한 적어야 한다</code>라는 규칙과 두개이상의 인자를 변경하는 경우 IDE가 제공하는 extract function 수행할 수 없는 문제를 예방(?)한다.</li>
+여러곳에서 사용되는 변수를 생성자 파라미터와 init스코프로 올린다. 이 작업은  <code class="language-plaintext highlighter-rouge">함수의 인자는 최대한 적어야 한다</code>라는 규칙과 두개이상의 인자를 변경하는 경우 IDE가 제공하는 extract function 수행할 수 없는 문제를 예방(?)한다.</li>
   <li>…</li>
 </ol>
 

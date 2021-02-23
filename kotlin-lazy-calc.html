@@ -47,7 +47,7 @@
 <title> 코틀린의 지연(lazy) 컬랙션 연산 -  </title>
 
 <!-- Begin Jekyll SEO tag v2.5.0 -->
-<meta name="generator" content="Jekyll v3.7.4" />
+<meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="코틀린의 지연(lazy) 컬랙션 연산" />
 <meta name="author" content="jisoo Yang" />
 <meta property="og:locale" content="en_US" />
@@ -59,7 +59,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-02-19T00:00:00+09:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/kotlin-lazy-calc","headline":"코틀린의 지연(lazy) 컬랙션 연산","dateModified":"2021-02-19T00:00:00+09:00","datePublished":"2021-02-19T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/kotlin-lazy-calc"},"author":{"@type":"Person","name":"jisoo Yang"},"description":"map이나 filter 같은 컬랙션 함수는 결과 컬랙션을 즉시(eagerly:열심히) 생성합니다. 이는 컬랙션 함수를 연쇄하면 단계마다 중간 결과를 새로운 컬랙션 객체로 생성한다는 말이기도 합니다. 하지만 시퀀스(sequence)를 사용하면 중간 임시 컬렉션을 사용하지 않고도 연살을 연쇄적으로 수행 할 수 있습니다.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo/normal_icon.png"},"name":"jisoo Yang"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"author":{"@type":"Person","name":"jisoo Yang"},"url":"http://localhost:4000/kotlin-lazy-calc","headline":"코틀린의 지연(lazy) 컬랙션 연산","dateModified":"2021-02-19T00:00:00+09:00","datePublished":"2021-02-19T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/kotlin-lazy-calc"},"description":"map이나 filter 같은 컬랙션 함수는 결과 컬랙션을 즉시(eagerly:열심히) 생성합니다. 이는 컬랙션 함수를 연쇄하면 단계마다 중간 결과를 새로운 컬랙션 객체로 생성한다는 말이기도 합니다. 하지만 시퀀스(sequence)를 사용하면 중간 임시 컬렉션을 사용하지 않고도 연살을 연쇄적으로 수행 할 수 있습니다.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo/normal_icon.png"},"name":"jisoo Yang"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -75,7 +75,7 @@
 <!--<meta property="article:author" content="https://www.facebook.com/jisoo.yang.56"/>-->
 <!--<meta property="article:published_time" content="2021-02-19T00:00:00+09:00"/>-->
 <!--<meta property="article:modified_time" content="2021-02-19T00:00:00+09:00"/>-->
-<!--<meta property="article:tag" content="Kotlin"/>-->
+<!--<meta property="article:tag" content="kotlin"/>-->
 <!--<meta name="twitter:card" content="summary_large_image"/>-->
 <!--<meta name="twitter:title" content="코틀린의 지연(lazy) 컬랙션 연산"/>-->
 <!--<meta name="twitter:description" content="map이나 filter 같은 컬랙션 함수는 결과 컬랙션을 즉시(eagerly:열심히) 생성합니다. 이는 컬랙션 함수를 연쇄하면 단계마다 중간 결과를 새로운 컬랙션 객체로 생성한다는 말이기도 합니다. 하지만 시퀀스(sequence)를 사용하면 중간 임시 컬렉션을 사용하지 않고도 연살을 연쇄적으로 수행 할 수 있습니다. articles.map(Article::title).filter { it.startsWith("[")} 코틀린 표준 라이브러리 문서에서는 filter와 map의 리턴값이 리스트라고 되어있습니다. 이는 순차적으로(연쇄적으로)"/>-->
@@ -84,7 +84,7 @@
 <!--<meta name="twitter:label1" content="Written by"/>-->
 <!--<meta name="twitter:data1" content="몬드의 개발로그"/>-->
 <!--<meta name="twitter:label2" content="Filed under"/>-->
-<!--<meta name="twitter:data2" content="Kotlin"/>-->
+<!--<meta name="twitter:data2" content="kotlin"/>-->
 <!--<meta name="twitter:site" content="@false"/>-->
 <!--<meta name="twitter:creator" content="@false"/>-->
 <!--<meta property="og:image:width" content="1400"/>-->
@@ -176,40 +176,40 @@ into the {body} of the default.hbs template -->
                 <div class="kg-card-markdown">
                     <p>map이나 filter 같은 컬랙션 함수는 결과 컬랙션을 즉시(eagerly:열심히) 생성합니다. 이는 컬랙션 함수를 연쇄하면 단계마다 중간 결과를 새로운 컬랙션 객체로 생성한다는 말이기도 합니다. 하지만 시퀀스(sequence)를 사용하면 중간 임시 컬렉션을 사용하지 않고도 연살을 연쇄적으로 수행 할 수 있습니다.</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">articles</span><span class="p">.</span><span class="n">map</span><span class="p">(</span><span class="n">Article</span><span class="o">::</span><span class="n">title</span><span class="p">).</span><span class="n">filter</span> <span class="p">{</span> <span class="n">it</span><span class="p">.</span><span class="n">startsWith</span><span class="p">(</span><span class="s">"["</span><span class="p">)}</span> 
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">articles</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="nc">Article</span><span class="o">::</span><span class="n">title</span><span class="p">).</span><span class="nf">filter</span> <span class="p">{</span> <span class="n">it</span><span class="p">.</span><span class="nf">startsWith</span><span class="p">(</span><span class="s">"["</span><span class="p">)}</span> 
 </code></pre></div></div>
 <p>코틀린 표준 라이브러리 문서에서는 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/filter.html">filter</a>와 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/map.html">map</a>의 리턴값이 리스트라고 되어있습니다. 이는 순차적으로(연쇄적으로) 연산을 수행하면서 각각 새로운 리스트를 만든다는 것인데, 사실 요즘 안드로이드 디바이스 성능과 메모리크기를 고려하면 큰 부담이 되는 경우는 적긴합니다. 하지만  아이템이 수백만개나 구성요소 하나하나가 상당히 큰 객체라면 이야기가 달라집니다.</p>
 
 <p>이런경우 각 연산이 컬랙션을 직접 사용하는 대신 시퀀스를 사용하도록 구성하면 문제를 개선할 수 있습니다.</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">aritcles</span><span class="p">.</span><span class="n">asSequence</span><span class="p">()</span>
-    <span class="p">.</span><span class="n">map</span><span class="p">(</span><span class="n">Article</span><span class="o">::</span><span class="n">title</span><span class="p">).</span><span class="n">filter</span> <span class="p">{</span> <span class="n">it</span><span class="p">.</span><span class="n">startsWith</span><span class="p">(</span><span class="s">"["</span><span class="p">)}</span>
-    <span class="p">.</span><span class="n">toList</span><span class="p">()</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">aritcles</span><span class="p">.</span><span class="nf">asSequence</span><span class="p">()</span>
+    <span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="nc">Article</span><span class="o">::</span><span class="n">title</span><span class="p">).</span><span class="nf">filter</span> <span class="p">{</span> <span class="n">it</span><span class="p">.</span><span class="nf">startsWith</span><span class="p">(</span><span class="s">"["</span><span class="p">)}</span>
+    <span class="p">.</span><span class="nf">toList</span><span class="p">()</span>
 </code></pre></div></div>
 <p>시작은 .asSequence()로 변환하고 마지막에 다시 Sequence를 List로 변환해야합니다. 시퀀스에서도 map과 filter를 그대로 사용합니다. 혹시 sequence클래스나 패키지에서 어떤 함수를 제공하지 않을까 했지만, Sequence는 아래처럼 단순한 Iterator를 가진 인터페이스입니다. (그렇다고 역할이 단순하다는 이야기는 아닙니다.)</p>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="nn">kotlin.sequences</span>
 
-<span class="k">public</span> <span class="kd">interface</span> <span class="nc">Sequence</span><span class="p">&lt;</span><span class="k">out</span> <span class="n">T</span><span class="p">&gt;</span> <span class="p">{</span>
-    <span class="k">public</span> <span class="k">abstract</span> <span class="k">operator</span> <span class="k">fun</span> <span class="nf">iterator</span><span class="p">():</span> <span class="n">kotlin</span><span class="p">.</span><span class="n">collections</span><span class="p">.</span><span class="n">Iterator</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span>
+<span class="k">public</span> <span class="kd">interface</span> <span class="nc">Sequence</span><span class="p">&lt;</span><span class="k">out</span> <span class="nc">T</span><span class="p">&gt;</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="k">abstract</span> <span class="k">operator</span> <span class="k">fun</span> <span class="nf">iterator</span><span class="p">():</span> <span class="n">kotlin</span><span class="p">.</span><span class="n">collections</span><span class="p">.</span><span class="nc">Iterator</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>여기서 나오는 iterator() 메소드를 통해 원소값을 하나씩 순차적으로 얻어오는게 Sequence의 전부입니다. 여기에 <code class="highlighter-rouge">필요할때 계산</code>하는 lazy의 개념이 지원되면서 결과를 저장하지 않고 연쇄적으로 적용하여 효율적으로 계산을 수행할 수 있습니다.</p>
+<p>여기서 나오는 iterator() 메소드를 통해 원소값을 하나씩 순차적으로 얻어오는게 Sequence의 전부입니다. 여기에 <code class="language-plaintext highlighter-rouge">필요할때 계산</code>하는 lazy의 개념이 지원되면서 결과를 저장하지 않고 연쇄적으로 적용하여 효율적으로 계산을 수행할 수 있습니다.</p>
 
 <p>시퀀스의 연산은 중간 단계(Intermediate Step)과 최종 연산(Terminal operations)으로 구분되어집니다.</p>
 
 <p>조금 더 명확한 예를 들기 위해 kotlinlang.org에 예제를 가져와 봤습니다.</p>
 
 <h3 id="listcollection으로-수행">List(Collection)으로 수행.</h3>
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">words</span> <span class="p">=</span> <span class="s">"The quick brown fox jumps over the lazy dog"</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">" "</span><span class="p">)</span>
-<span class="kd">val</span> <span class="py">lengthsList</span> <span class="p">=</span> <span class="n">words</span><span class="p">.</span><span class="n">filter</span> <span class="p">{</span> <span class="n">println</span><span class="p">(</span><span class="s">"filter: $it"</span><span class="p">);</span> <span class="n">it</span><span class="p">.</span><span class="n">length</span> <span class="p">&gt;</span> <span class="m">3</span> <span class="p">}</span>
-    <span class="p">.</span><span class="n">map</span> <span class="p">{</span> <span class="n">println</span><span class="p">(</span><span class="s">"length: ${it.length}"</span><span class="p">);</span> <span class="n">it</span><span class="p">.</span><span class="n">length</span> <span class="p">}</span>
-    <span class="p">.</span><span class="n">take</span><span class="p">(</span><span class="m">4</span><span class="p">)</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">words</span> <span class="p">=</span> <span class="s">"The quick brown fox jumps over the lazy dog"</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s">" "</span><span class="p">)</span>
+<span class="kd">val</span> <span class="py">lengthsList</span> <span class="p">=</span> <span class="n">words</span><span class="p">.</span><span class="nf">filter</span> <span class="p">{</span> <span class="nf">println</span><span class="p">(</span><span class="s">"filter: $it"</span><span class="p">);</span> <span class="n">it</span><span class="p">.</span><span class="n">length</span> <span class="p">&gt;</span> <span class="m">3</span> <span class="p">}</span>
+    <span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="nf">println</span><span class="p">(</span><span class="s">"length: ${it.length}"</span><span class="p">);</span> <span class="n">it</span><span class="p">.</span><span class="n">length</span> <span class="p">}</span>
+    <span class="p">.</span><span class="nf">take</span><span class="p">(</span><span class="m">4</span><span class="p">)</span>
 
-<span class="n">println</span><span class="p">(</span><span class="n">lengthsList</span><span class="p">)</span>
+<span class="nf">println</span><span class="p">(</span><span class="n">lengthsList</span><span class="p">)</span>
 </code></pre></div></div>
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">filter</span><span class="p">:</span> <span class="n">The</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">filter</span><span class="p">:</span> <span class="nc">The</span>
 <span class="n">filter</span><span class="p">:</span> <span class="n">quick</span>
 <span class="n">filter</span><span class="p">:</span> <span class="n">brown</span>
 <span class="n">filter</span><span class="p">:</span> <span class="n">fox</span>
@@ -223,24 +223,24 @@ into the {body} of the default.hbs template -->
 <span class="n">length</span><span class="p">:</span> <span class="m">5</span>
 <span class="n">length</span><span class="p">:</span> <span class="m">4</span>
 <span class="n">length</span><span class="p">:</span> <span class="m">4</span>
-<span class="n">Lengths</span> <span class="n">of</span> <span class="n">first</span> <span class="m">4</span> <span class="n">words</span> <span class="n">longer</span> <span class="n">than</span> <span class="m">3</span> <span class="n">chars</span><span class="p">:</span>
+<span class="nc">Lengths</span> <span class="n">of</span> <span class="n">first</span> <span class="m">4</span> <span class="n">words</span> <span class="n">longer</span> <span class="n">than</span> <span class="m">3</span> <span class="n">chars</span><span class="p">:</span>
 <span class="na">[5, 5, 5, 4]</span>
 </code></pre></div></div>
 
 <p><img src="https://kotlinlang.org/docs/images/list-processing.png" alt="https://kotlinlang.org/docs/images/list-processing.png" /></p>
 
 <h3 id="sequence로-수행">Sequence로 수행.</h3>
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">words</span> <span class="p">=</span> <span class="s">"The quick brown fox jumps over the lazy dog"</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">" "</span><span class="p">)</span>
-<span class="kd">val</span> <span class="py">wordsSequence</span> <span class="p">=</span> <span class="n">words</span><span class="p">.</span><span class="n">asSequence</span><span class="p">()</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">words</span> <span class="p">=</span> <span class="s">"The quick brown fox jumps over the lazy dog"</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s">" "</span><span class="p">)</span>
+<span class="kd">val</span> <span class="py">wordsSequence</span> <span class="p">=</span> <span class="n">words</span><span class="p">.</span><span class="nf">asSequence</span><span class="p">()</span>
 
-<span class="kd">val</span> <span class="py">lengthsSequence</span> <span class="p">=</span> <span class="n">wordsSequence</span><span class="p">.</span><span class="n">filter</span> <span class="p">{</span> <span class="n">println</span><span class="p">(</span><span class="s">"filter: $it"</span><span class="p">);</span> <span class="n">it</span><span class="p">.</span><span class="n">length</span> <span class="p">&gt;</span> <span class="m">3</span> <span class="p">}</span>
-    <span class="p">.</span><span class="n">map</span> <span class="p">{</span> <span class="n">println</span><span class="p">(</span><span class="s">"length: ${it.length}"</span><span class="p">);</span> <span class="n">it</span><span class="p">.</span><span class="n">length</span> <span class="p">}</span>
-    <span class="p">.</span><span class="n">take</span><span class="p">(</span><span class="m">4</span><span class="p">)</span>
+<span class="kd">val</span> <span class="py">lengthsSequence</span> <span class="p">=</span> <span class="n">wordsSequence</span><span class="p">.</span><span class="nf">filter</span> <span class="p">{</span> <span class="nf">println</span><span class="p">(</span><span class="s">"filter: $it"</span><span class="p">);</span> <span class="n">it</span><span class="p">.</span><span class="n">length</span> <span class="p">&gt;</span> <span class="m">3</span> <span class="p">}</span>
+    <span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="nf">println</span><span class="p">(</span><span class="s">"length: ${it.length}"</span><span class="p">);</span> <span class="n">it</span><span class="p">.</span><span class="n">length</span> <span class="p">}</span>
+    <span class="p">.</span><span class="nf">take</span><span class="p">(</span><span class="m">4</span><span class="p">)</span>
 
-<span class="n">println</span><span class="p">(</span><span class="n">lengthsSequence</span><span class="p">.</span><span class="n">toList</span><span class="p">())</span>
+<span class="nf">println</span><span class="p">(</span><span class="n">lengthsSequence</span><span class="p">.</span><span class="nf">toList</span><span class="p">())</span>
 </code></pre></div></div>
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Lengths</span> <span class="n">of</span> <span class="n">first</span> <span class="m">4</span> <span class="n">words</span> <span class="n">longer</span> <span class="n">than</span> <span class="m">3</span> <span class="n">chars</span>
-<span class="n">filter</span><span class="p">:</span> <span class="n">The</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Lengths</span> <span class="n">of</span> <span class="n">first</span> <span class="m">4</span> <span class="n">words</span> <span class="n">longer</span> <span class="n">than</span> <span class="m">3</span> <span class="n">chars</span>
+<span class="n">filter</span><span class="p">:</span> <span class="nc">The</span>
 <span class="n">filter</span><span class="p">:</span> <span class="n">quick</span>
 <span class="n">length</span><span class="p">:</span> <span class="m">5</span>
 <span class="n">filter</span><span class="p">:</span> <span class="n">brown</span>
@@ -255,7 +255,7 @@ into the {body} of the default.hbs template -->
 </code></pre></div></div>
 <p><img src="https://kotlinlang.org/docs/images/sequence-processing.png" alt="https://kotlinlang.org/docs/images/sequence-processing.png" /></p>
 
-<p>중간연산은 항상 지연됩니다. 최종 연산을 호출하면 연기되었던 모든 계산이 수행됩니다. 만약 위의 예에서 마지막 줄의 <code class="highlighter-rouge">lengthsSequence.toList()</code>를 호출하지 않으면, 결과는 아무런 출력도 일어나지 않습니다. 즉, filter,map구문에서 일어나는 모든 중간 연산은 수행이 되지 않습니다.</p>
+<p>중간연산은 항상 지연됩니다. 최종 연산을 호출하면 연기되었던 모든 계산이 수행됩니다. 만약 위의 예에서 마지막 줄의 <code class="language-plaintext highlighter-rouge">lengthsSequence.toList()</code>를 호출하지 않으면, 결과는 아무런 출력도 일어나지 않습니다. 즉, filter,map구문에서 일어나는 모든 중간 연산은 수행이 되지 않습니다.</p>
 
 <p>안드로이드에서는 예전 버전의 자바를 사용하는 경우 자바8 부터 지원하는 스트림이 없기 때문에 이러한 시퀸스를 통해 동일한 (또는 조금 모자란) 수행을 코딩할 수 있도록 지원합니다. 만약 자바 8을 사용 할 수 있다면 스트림을 사용하는것이 더 나은 해결 책이 될 수 있습니다.</p>
 

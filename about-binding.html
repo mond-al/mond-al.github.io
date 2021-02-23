@@ -47,7 +47,7 @@
 <title> Binding이 되지않을때 (by viewModels()에 에러) -  </title>
 
 <!-- Begin Jekyll SEO tag v2.5.0 -->
-<meta name="generator" content="Jekyll v3.7.4" />
+<meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="Binding이 되지않을때 (by viewModels()에 에러)" />
 <meta name="author" content="jisoo Yang" />
 <meta property="og:locale" content="en_US" />
@@ -59,7 +59,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-02-09T00:00:00+09:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/about-binding","headline":"Binding이 되지않을때 (by viewModels()에 에러)","dateModified":"2021-02-09T00:00:00+09:00","datePublished":"2021-02-09T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/about-binding"},"author":{"@type":"Person","name":"jisoo Yang"},"description":"프로젝트가 세팅되지 않은 상태에서 디펜던시 정의를 빠트린경우인데 new Project를 통해 empty activity 프로젝트로 시작하면 항상 빠트리다 보니 포스팅으로 정리해둡니다.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo/normal_icon.png"},"name":"jisoo Yang"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"author":{"@type":"Person","name":"jisoo Yang"},"url":"http://localhost:4000/about-binding","headline":"Binding이 되지않을때 (by viewModels()에 에러)","dateModified":"2021-02-09T00:00:00+09:00","datePublished":"2021-02-09T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/about-binding"},"description":"프로젝트가 세팅되지 않은 상태에서 디펜던시 정의를 빠트린경우인데 new Project를 통해 empty activity 프로젝트로 시작하면 항상 빠트리다 보니 포스팅으로 정리해둡니다.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo/normal_icon.png"},"name":"jisoo Yang"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -75,7 +75,7 @@
 <!--<meta property="article:author" content="https://www.facebook.com/jisoo.yang.56"/>-->
 <!--<meta property="article:published_time" content="2021-02-09T00:00:00+09:00"/>-->
 <!--<meta property="article:modified_time" content="2021-02-09T00:00:00+09:00"/>-->
-<!--<meta property="article:tag" content="Android"/>-->
+<!--<meta property="article:tag" content="android"/>-->
 <!--<meta name="twitter:card" content="summary_large_image"/>-->
 <!--<meta name="twitter:title" content="Binding이 되지않을때 (by viewModels()에 에러)"/>-->
 <!--<meta name="twitter:description" content="프로젝트가 세팅되지 않은 상태에서 디펜던시 정의를 빠트린경우인데 new Project를 통해 empty activity 프로젝트로 시작하면 항상 빠트리다 보니 포스팅으로 정리해둡니다. by viewModels()에 에러가 나는 경우. 프로젝트가 세팅되지 않은 상태에서 디펜던시 정의를 빠트린경우인데 new Project를 통해 empty activity 프로젝트로 시작하면 항상 빠트리다 보니 포스팅으로 정리해둡니다. val viewModels = ViewModelClass by viewModels() Unresolved"/>-->
@@ -84,7 +84,7 @@
 <!--<meta name="twitter:label1" content="Written by"/>-->
 <!--<meta name="twitter:data1" content="몬드의 개발로그"/>-->
 <!--<meta name="twitter:label2" content="Filed under"/>-->
-<!--<meta name="twitter:data2" content="Android"/>-->
+<!--<meta name="twitter:data2" content="android"/>-->
 <!--<meta name="twitter:site" content="@false"/>-->
 <!--<meta name="twitter:creator" content="@false"/>-->
 <!--<meta property="og:image:width" content="1400"/>-->
@@ -186,7 +186,7 @@ into the {body} of the default.hbs template -->
 
 <blockquote>
   <p>val viewModels = ViewModelClass <u style="text-decoration-color:red">by viewModels</u>()<br />
-<code class="highlighter-rouge">Unresolved reference: viewModels</code></p>
+<code class="language-plaintext highlighter-rouge">Unresolved reference: viewModels</code></p>
 </blockquote>
 
 <p>by 키워드를 이용한 위임으로 처리되는데 이 확장함수는 activity-ktx나 fragment-ktx에 정의 되어있습니다.</p>
@@ -200,7 +200,7 @@ into the {body} of the default.hbs template -->
 <p>참고로 fragment-ktx가 activity-ktx에 의존성을 가지고 있습니다. (아래의 트리는 보기 편하게 적절하게 편집했습니다.)</p>
 
 <h3 id="androidxactivityactivity-ktx120-의존성-그래프">androidx.activity:activity-ktx:1.2.0 의존성 그래프</h3>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+--- androidx.activity:activity-ktx:1.2.0
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+--- androidx.activity:activity-ktx:1.2.0
      +--- androidx.activity:activity:1.2.0
           +--- androidx.annotation:annotation:1.1.0
           +--- androidx.core:core:1.1.0 -&gt; 1.3.2 (*)
@@ -216,7 +216,7 @@ into the {body} of the default.hbs template -->
 </code></pre></div></div>
 
 <h3 id="androidxfragmentfragment-ktx130-의존성-그래프">androidx.fragment:fragment-ktx:1.3.0 의존성 그래프</h3>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+--- androidx.fragment:fragment-ktx:1.3.0
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+--- androidx.fragment:fragment-ktx:1.3.0
      +--- androidx.activity:activity-ktx:1.2.0
      |    +--- androidx.activity:activity:1.2.0 (*)
      |    +--- androidx.core:core-ktx:1.1.0 -&gt; 1.3.2 (*)
