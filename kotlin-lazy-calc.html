@@ -11,7 +11,7 @@
 
 
 
-    <title>테스트용 이미지 (랜덤1000개.zip,해상도별.zip)</title>
+    <title>코틀린의 지연(lazy) 컬랙션 연산</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -39,27 +39,27 @@
     <meta name="generator" content="Jekyll 3.6.2"/>
 <meta name="description" content="몬드는 오늘도 개발을 합니다. 내일도..."/>
 <link rel="shortcut icon" href="https://mond-al.github.io/assets/images/fav/favicon-96x96.png" type="image/png"/>
-<link rel="canonical" href="https://mond-al.github.io/test-image"/>
+<link rel="canonical" href="https://mond-al.github.io/kotlin-lazy-calc"/>
 <link rel="alternate" type="application/rss+xml" href="https://mond-al.github.io/rss.xml">
 <meta name="referrer" content="no-referrer-when-downgrade"/>
 
 
 
 <!--<!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>테스트용 이미지 (랜덤1000개.zip,해상도별.zip) | 몬드의 개발로그</title>
+<title>코틀린의 지연(lazy) 컬랙션 연산 | 몬드의 개발로그</title>
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="테스트용 이미지 (랜덤1000개.zip,해상도별.zip)" />
+<meta property="og:title" content="코틀린의 지연(lazy) 컬랙션 연산" />
 <meta name="author" content="jisoo Yang" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="테스트용 이미지 파일 형식은 Png이며, image_{number}_{width}x{height}.png 형식의 파일이름으로 저장 되어 있습니다. 의견 주시면 또 다른 세트도 추가해보겠습니다." />
-<meta property="og:description" content="테스트용 이미지 파일 형식은 Png이며, image_{number}_{width}x{height}.png 형식의 파일이름으로 저장 되어 있습니다. 의견 주시면 또 다른 세트도 추가해보겠습니다." />
-<link rel="canonical" href="https://mond-al.github.io/test-image" />
-<meta property="og:url" content="https://mond-al.github.io/test-image" />
+<meta name="description" content="map이나 filter 같은 컬랙션 함수는 결과 컬랙션을 즉시(eagerly:열심히) 생성합니다. 이는 컬랙션 함수를 연쇄하면 단계마다 중간 결과를 새로운 컬랙션 객체로 생성한다는 말이기도 합니다. 하지만 시퀀스(sequence)를 사용하면 중간 임시 컬렉션을 사용하지 않고도 연살을 연쇄적으로 수행 할 수 있습니다." />
+<meta property="og:description" content="map이나 filter 같은 컬랙션 함수는 결과 컬랙션을 즉시(eagerly:열심히) 생성합니다. 이는 컬랙션 함수를 연쇄하면 단계마다 중간 결과를 새로운 컬랙션 객체로 생성한다는 말이기도 합니다. 하지만 시퀀스(sequence)를 사용하면 중간 임시 컬렉션을 사용하지 않고도 연살을 연쇄적으로 수행 할 수 있습니다." />
+<link rel="canonical" href="https://mond-al.github.io/kotlin-lazy-calc" />
+<meta property="og:url" content="https://mond-al.github.io/kotlin-lazy-calc" />
 <meta property="og:site_name" content="몬드의 개발로그" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-01-22T00:00:00+09:00" />
+<meta property="article:published_time" content="2021-02-19T00:00:00+09:00" />
 <script type="application/ld+json">
-{"url":"https://mond-al.github.io/test-image","headline":"테스트용 이미지 (랜덤1000개.zip,해상도별.zip)","dateModified":"2021-01-22T00:00:00+09:00","datePublished":"2021-01-22T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mond-al.github.io/test-image"},"author":{"@type":"Person","name":"jisoo Yang"},"description":"테스트용 이미지 파일 형식은 Png이며, image_{number}_{width}x{height}.png 형식의 파일이름으로 저장 되어 있습니다. 의견 주시면 또 다른 세트도 추가해보겠습니다.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://mond-al.github.io/assets/images/logo/normal_icon.png"},"name":"jisoo Yang"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"url":"https://mond-al.github.io/kotlin-lazy-calc","headline":"코틀린의 지연(lazy) 컬랙션 연산","dateModified":"2021-02-19T00:00:00+09:00","datePublished":"2021-02-19T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mond-al.github.io/kotlin-lazy-calc"},"author":{"@type":"Person","name":"jisoo Yang"},"description":"map이나 filter 같은 컬랙션 함수는 결과 컬랙션을 즉시(eagerly:열심히) 생성합니다. 이는 컬랙션 함수를 연쇄하면 단계마다 중간 결과를 새로운 컬랙션 객체로 생성한다는 말이기도 합니다. 하지만 시퀀스(sequence)를 사용하면 중간 임시 컬렉션을 사용하지 않고도 연살을 연쇄적으로 수행 할 수 있습니다.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://mond-al.github.io/assets/images/logo/normal_icon.png"},"name":"jisoo Yang"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 -->
 <script type="application/ld+json">
@@ -71,41 +71,41 @@
             "name": "몬드의 개발로그",
             "logo": "https://mond-al.github.io/assets/images/logo/normal_icon.png"
         },
-        "url": "https://mond-al.github.io/test-image",
+        "url": "https://mond-al.github.io/kotlin-lazy-calc",
         "image": {
             "@type": "ImageObject",
-            "url": "https://mond-al.github.io/assets/images/post/2021-01-22-test-image/cover.png",
+            "url": "https://mond-al.github.io/assets/images/cover/2021-02-19-kotlin-visibility.png",
             "width": 2000,
             "height": 666
         },
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://mond-al.github.io/test-image"
+            "@id": "https://mond-al.github.io/kotlin-lazy-calc"
         },
-        "description": "테스트용 이미지 파일 형식은 Png이며, image_{number}_{width}x{height}.png 형식의 파일이름으로 저장 되어 있습니다. 의견 주시면 또 다른 세트도 추가해보겠습니다. 직접 만든 이미지 묶음들 기능 개발 테스트를 하다 보면 이미지 소스들이 필요한 경우가 있습니다. 때로는 예제앱에 이미지를 포함하고 싶을때 적당한 이미지를 선택하는것도 은근 신경쓰이는 일 입니다. 필요한데 아무리 검색해도 찾을 수 없어서 그냥"
+        "description": "map이나 filter 같은 컬랙션 함수는 결과 컬랙션을 즉시(eagerly:열심히) 생성합니다. 이는 컬랙션 함수를 연쇄하면 단계마다 중간 결과를 새로운 컬랙션 객체로 생성한다는 말이기도 합니다. 하지만 시퀀스(sequence)를 사용하면 중간 임시 컬렉션을 사용하지 않고도 연살을 연쇄적으로 수행 할 수 있습니다. articles.map(Article::title).filter { it.startsWith("[")} 코틀린 표준 라이브러리 문서에서는 filter와 map의 리턴값이 리스트라고 되어있습니다. 이는 순차적으로(연쇄적으로)"
     }
 </script>
 
 <meta property="og:site_name" content="몬드의 개발로그"/>
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="테스트용 이미지 (랜덤1000개.zip,해상도별.zip)"/>
-<meta property="og:description" content="테스트용 이미지 파일 형식은 Png이며, image_{number}_{width}x{height}.png 형식의 파일이름으로 저장 되어 있습니다. 의견 주시면 또 다른 세트도 추가해보겠습니다. 직접 만든 이미지 묶음들 기능 개발 테스트를 하다 보면 이미지 소스들이 필요한 경우가 있습니다. 때로는 예제앱에 이미지를 포함하고 싶을때 적당한 이미지를 선택하는것도 은근 신경쓰이는 일 입니다. 필요한데 아무리 검색해도 찾을 수 없어서 그냥"/>
-<meta property="og:url" content="https://mond-al.github.io/test-image"/>
-<meta property="og:image" content="https://mond-al.github.io/assets/images/post/2021-01-22-test-image/cover.png"/>
+<meta property="og:title" content="코틀린의 지연(lazy) 컬랙션 연산"/>
+<meta property="og:description" content="map이나 filter 같은 컬랙션 함수는 결과 컬랙션을 즉시(eagerly:열심히) 생성합니다. 이는 컬랙션 함수를 연쇄하면 단계마다 중간 결과를 새로운 컬랙션 객체로 생성한다는 말이기도 합니다. 하지만 시퀀스(sequence)를 사용하면 중간 임시 컬렉션을 사용하지 않고도 연살을 연쇄적으로 수행 할 수 있습니다. articles.map(Article::title).filter { it.startsWith("[")} 코틀린 표준 라이브러리 문서에서는 filter와 map의 리턴값이 리스트라고 되어있습니다. 이는 순차적으로(연쇄적으로)"/>
+<meta property="og:url" content="https://mond-al.github.io/kotlin-lazy-calc"/>
+<meta property="og:image" content="https://mond-al.github.io/assets/images/cover/2021-02-19-kotlin-visibility.png"/>
 <meta property="article:publisher" content="https://www.facebook.com/jisoo.yang.56"/>
 <meta property="article:author" content="https://www.facebook.com/jisoo.yang.56"/>
-<meta property="article:published_time" content="2021-01-22T00:00:00+09:00"/>
-<meta property="article:modified_time" content="2021-01-22T00:00:00+09:00"/>
-<meta property="article:tag" content="Test"/>
+<meta property="article:published_time" content="2021-02-19T00:00:00+09:00"/>
+<meta property="article:modified_time" content="2021-02-19T00:00:00+09:00"/>
+<meta property="article:tag" content="Kotlin"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="테스트용 이미지 (랜덤1000개.zip,해상도별.zip)"/>
-<meta name="twitter:description" content="테스트용 이미지 파일 형식은 Png이며, image_{number}_{width}x{height}.png 형식의 파일이름으로 저장 되어 있습니다. 의견 주시면 또 다른 세트도 추가해보겠습니다. 직접 만든 이미지 묶음들 기능 개발 테스트를 하다 보면 이미지 소스들이 필요한 경우가 있습니다. 때로는 예제앱에 이미지를 포함하고 싶을때 적당한 이미지를 선택하는것도 은근 신경쓰이는 일 입니다. 필요한데 아무리 검색해도 찾을 수 없어서 그냥"/>
+<meta name="twitter:title" content="코틀린의 지연(lazy) 컬랙션 연산"/>
+<meta name="twitter:description" content="map이나 filter 같은 컬랙션 함수는 결과 컬랙션을 즉시(eagerly:열심히) 생성합니다. 이는 컬랙션 함수를 연쇄하면 단계마다 중간 결과를 새로운 컬랙션 객체로 생성한다는 말이기도 합니다. 하지만 시퀀스(sequence)를 사용하면 중간 임시 컬렉션을 사용하지 않고도 연살을 연쇄적으로 수행 할 수 있습니다. articles.map(Article::title).filter { it.startsWith("[")} 코틀린 표준 라이브러리 문서에서는 filter와 map의 리턴값이 리스트라고 되어있습니다. 이는 순차적으로(연쇄적으로)"/>
 <meta name="twitter:url" content="https://mond-al.github.io/"/>
-<meta name="twitter:image" content="https://mond-al.github.io/assets/images/post/2021-01-22-test-image/cover.png"/>
+<meta name="twitter:image" content="https://mond-al.github.io/assets/images/cover/2021-02-19-kotlin-visibility.png"/>
 <meta name="twitter:label1" content="Written by"/>
 <meta name="twitter:data1" content="몬드의 개발로그"/>
 <meta name="twitter:label2" content="Filed under"/>
-<meta name="twitter:data2" content="Test"/>
+<meta name="twitter:data2" content="Kotlin"/>
 <meta name="twitter:site" content="@false"/>
 <meta name="twitter:creator" content="@false"/>
 <meta property="og:image:width" content="1400"/>
@@ -166,111 +166,119 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-test tag-image tag-download  ">
+        <article class="post-full  tag-kotlin tag-java  ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="22 January 2021">22 January 2021</time>
+                    <time class="post-full-meta-date" datetime="19 February 2021">19 February 2021</time>
                     
                         <span class="date-divider">/</span>
                         
                             
-                               <a href='/tag/test/'>TEST</a>,
+                               <a href='/tag/kotlin/'>KOTLIN</a>,
                             
                         
                             
-                               <a href='/tag/image/'>IMAGE</a>,
-                            
-                        
-                            
-                               <a href='/tag/download/'>DOWNLOAD</a>
+                               <a href='/tag/java/'>JAVA</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title">테스트용 이미지 (랜덤1000개.zip,해상도별.zip)</h1>
+                <h1 class="post-full-title">코틀린의 지연(lazy) 컬랙션 연산</h1>
             </header>
 
 <!--        본문 상단 커버이미지-->
 <!--            -->
-<!--            <figure class="post-full-image" style="background-image: url(/assets/images/post/2021-01-22-test-image/cover.png)">-->
+<!--            <figure class="post-full-image" style="background-image: url(/assets/images/cover/2021-02-19-kotlin-visibility.png)">-->
 <!--            </figure>-->
 <!--            -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p>테스트용 이미지 파일 형식은 Png이며, <code class="highlighter-rouge">image_{number}_{width}x{height}.png</code> 형식의 파일이름으로 저장 되어 있습니다. 의견 주시면 또 다른 세트도 추가해보겠습니다.</p>
+                    <p>map이나 filter 같은 컬랙션 함수는 결과 컬랙션을 즉시(eagerly:열심히) 생성합니다. 이는 컬랙션 함수를 연쇄하면 단계마다 중간 결과를 새로운 컬랙션 객체로 생성한다는 말이기도 합니다. 하지만 시퀀스(sequence)를 사용하면 중간 임시 컬렉션을 사용하지 않고도 연살을 연쇄적으로 수행 할 수 있습니다.</p>
 
-<h1 id="직접-만든-이미지-묶음들">직접 만든 이미지 묶음들</h1>
-<p>기능 개발 테스트를 하다 보면 이미지 소스들이 필요한 경우가 있습니다. 때로는 예제앱에 이미지를 포함하고 싶을때 적당한 이미지를 선택하는것도 은근 신경쓰이는 일 입니다. 필요한데 아무리 검색해도 찾을 수 없어서 그냥 만든 테스트용 이미지들을 공유합니다.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">articles</span><span class="p">.</span><span class="n">map</span><span class="p">(</span><span class="n">Article</span><span class="o">::</span><span class="n">title</span><span class="p">).</span><span class="n">filter</span> <span class="p">{</span> <span class="n">it</span><span class="p">.</span><span class="n">startsWith</span><span class="p">(</span><span class="s">"["</span><span class="p">)}</span> 
+</code></pre></div></div>
+<p>코틀린 표준 라이브러리 문서에서는 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/filter.html">filter</a>와 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/map.html">map</a>의 리턴값이 리스트라고 되어있습니다. 이는 순차적으로(연쇄적으로) 연산을 수행하면서 각각 새로운 리스트를 만든다는 것인데, 사실 요즘 안드로이드 디바이스 성능과 메모리크기를 고려하면 큰 부담이 되는 경우는 적긴합니다. 하지만  아이템이 수백만개나 구성요소 하나하나가 상당히 큰 객체라면 이야기가 달라집니다.</p>
 
-<h2 id="상용-해상도-47가지-테스트용-이미지-qqvga--fuhd">상용 해상도 47가지 테스트용 이미지 (qqVGA ~ FUHD)</h2>
-<p>Download : <a href="assets/images/forTest/ratio/all_ratio.zip">all_ratio.zip</a><br />
-<img src="assets/images/forTest/ratio/all_ratio.png" alt="상용 해상도 47가지 테스트용 이미지" width="70%" /></p>
-<details><summary>포함된 47가지 해상도 이미지 펼치기/접기</summary>
-<div>
-    <p><img src="assets/images/forTest/ratio/all_ratio/image_1_160x120.png" alt="image_1_160x120.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_2_240x160.png" alt="image_2_240x160.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_3_320x240.png" alt="image_3_320x240.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_4_400x240.png" alt="image_4_400x240.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_5_480x320.png" alt="image_5_480x320.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_6_640x480.png" alt="image_6_640x480.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_7_800x480.png" alt="image_7_800x480.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_8_854x480.png" alt="image_8_854x480.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_9_800x600.png" alt="image_9_800x600.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_10_960x640.png" alt="image_10_960x640.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_11_1024x576.png" alt="image_11_1024x576.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_12_1024x 600.png" alt="image_12_1024x 600.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_13_1024x768.png" alt="image_13_1024x768.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_14_1280x768.png" alt="image_14_1280x768.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_15_1280x800.png" alt="image_15_1280x800.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_16_1366x768.png" alt="image_16_1366x768.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_17_1152x864.png" alt="image_17_1152x864.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_18_1440x900.png" alt="image_18_1440x900.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_19_1680x1050.png" alt="image_19_1680x1050.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_20_1280x1024.png" alt="image_20_1280x1024.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_21_1400x1050.png" alt="image_21_1400x1050.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_22_1600x1200.png" alt="image_22_1600x1200.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_23_1920x1200.png" alt="image_23_1920x1200.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_24_2048x1536.png" alt="image_24_2048x1536.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_25_2560x1600.png" alt="image_25_2560x1600.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_26_ 2880x1800.png" alt="image_26_ 2880x1800.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_27_ 3072x1920.png" alt="image_27_ 3072x1920.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_28_2560x2048.png" alt="image_28_2560x2048.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_29_3200x2048.png" alt="image_29_3200x2048.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_30_3200x2400.png" alt="image_30_3200x2400.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_31_3840x2400.png" alt="image_31_3840x2400.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_32_4096x3072.png" alt="image_32_4096x3072.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_33_5120x3200.png" alt="image_33_5120x3200.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_34_5120x4096.png" alt="image_34_5120x4096.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_35_6400x4096.png" alt="image_35_6400x4096.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_36_6400x4800.png" alt="image_36_6400x4800.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_37_7680x4800.png" alt="image_37_7680x4800.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_38_640x360.png" alt="image_38_640x360.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_39_960x540.png" alt="image_39_960x540.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_40_1280x720.png" alt="image_40_1280x720.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_41_1600x900.png" alt="image_41_1600x900.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_42_1920x1080.png" alt="image_42_1920x1080.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_43_2560x1440.png" alt="image_43_2560x1440.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_44_3200x1800.png" alt="image_44_3200x1800.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_45_3840x2160.png" alt="image_45_3840x2160.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_46_5120x2880.png" alt="image_46_5120x2880.png" />
-<img src="assets/images/forTest/ratio/all_ratio/image_47_7680x4320.png" alt="image_47_7680x4320.png" /></p>
-  </div>
-</details>
+<p>이런경우 각 연산이 컬랙션을 직접 사용하는 대신 시퀀스를 사용하도록 구성하면 문제를 개선할 수 있습니다.</p>
 
-<h2 id="랜덤-사이즈로-1000개의-이미지-1--1000">랜덤 사이즈로 1000개의 이미지 (1 ~ 1000)</h2>
-<p>Download : <a href="assets/images/forTest/random/random1000.zip">random1000.zip</a> <br />
-폭(1024, 1440, 2550), 높이(800, 1200, 1600) 조합으로 만들어진 랜덤크기
-<img src="assets/images/forTest/random/screenshot_random1000.png" alt="랜덤 사이즈로 1000개의 테스트 이미지" width="70%" /></p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">aritcles</span><span class="p">.</span><span class="n">asSequence</span><span class="p">()</span>
+    <span class="p">.</span><span class="n">map</span><span class="p">(</span><span class="n">Article</span><span class="o">::</span><span class="n">title</span><span class="p">).</span><span class="n">filter</span> <span class="p">{</span> <span class="n">it</span><span class="p">.</span><span class="n">startsWith</span><span class="p">(</span><span class="s">"["</span><span class="p">)}</span>
+    <span class="p">.</span><span class="n">toList</span><span class="p">()</span>
+</code></pre></div></div>
+<p>시작은 .asSequence()로 변환하고 마지막에 다시 Sequence를 List로 변환해야합니다. 시퀀스에서도 map과 filter를 그대로 사용합니다. 혹시 sequence클래스나 패키지에서 어떤 함수를 제공하지 않을까 했지만, Sequence는 아래처럼 단순한 Iterator를 가진 인터페이스입니다. (그렇다고 역할이 단순하다는 이야기는 아닙니다.)</p>
 
-<h2 id="폭-1000px-고정에-높이가-증가하는-이미지들">폭 1000px 고정에, 높이가 증가하는 이미지들</h2>
-<p>Download : <a href="assets/images/forTest/ratio/ratioVarHeight.zip">ratioVarHeight.zip</a><br />
-<img src="assets/images/forTest/ratio/var_height_ratio.png" alt="높이가 증가하는 테스트용용 이미지" width="70%" /></p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="nn">kotlin.sequences</span>
 
-<h2 id="높이-1000px-고정이고-폭이-증가하는-이미지들">높이 1000px 고정이고 폭이 증가하는 이미지들</h2>
-<p>Download : <a href="assets/images/forTest/ratio/ratioVarWidth.zip">ratioVarWidth.zip</a><br />
-<img src="assets/images/forTest/ratio/var_width_ratio.png" alt="폭이 증가하는 테스트용 이미지" width="70%" /></p>
+<span class="k">public</span> <span class="kd">interface</span> <span class="nc">Sequence</span><span class="p">&lt;</span><span class="k">out</span> <span class="n">T</span><span class="p">&gt;</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="k">abstract</span> <span class="k">operator</span> <span class="k">fun</span> <span class="nf">iterator</span><span class="p">():</span> <span class="n">kotlin</span><span class="p">.</span><span class="n">collections</span><span class="p">.</span><span class="n">Iterator</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>여기서 나오는 iterator() 메소드를 통해 원소값을 하나씩 순차적으로 얻어오는게 Sequence의 전부입니다. 여기에 <code class="highlighter-rouge">필요할때 계산</code>하는 lazy의 개념이 지원되면서 결과를 저장하지 않고 연쇄적으로 적용하여 효율적으로 계산을 수행할 수 있습니다.</p>
+
+<p>시퀀스의 연산은 중간 단계(Intermediate Step)과 최종 연산(Terminal operations)으로 구분되어집니다.</p>
+
+<p>조금 더 명확한 예를 들기 위해 kotlinlang.org에 예제를 가져와 봤습니다.</p>
+
+<h3 id="listcollection으로-수행">List(Collection)으로 수행.</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">words</span> <span class="p">=</span> <span class="s">"The quick brown fox jumps over the lazy dog"</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">" "</span><span class="p">)</span>
+<span class="kd">val</span> <span class="py">lengthsList</span> <span class="p">=</span> <span class="n">words</span><span class="p">.</span><span class="n">filter</span> <span class="p">{</span> <span class="n">println</span><span class="p">(</span><span class="s">"filter: $it"</span><span class="p">);</span> <span class="n">it</span><span class="p">.</span><span class="n">length</span> <span class="p">&gt;</span> <span class="m">3</span> <span class="p">}</span>
+    <span class="p">.</span><span class="n">map</span> <span class="p">{</span> <span class="n">println</span><span class="p">(</span><span class="s">"length: ${it.length}"</span><span class="p">);</span> <span class="n">it</span><span class="p">.</span><span class="n">length</span> <span class="p">}</span>
+    <span class="p">.</span><span class="n">take</span><span class="p">(</span><span class="m">4</span><span class="p">)</span>
+
+<span class="n">println</span><span class="p">(</span><span class="n">lengthsList</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">filter</span><span class="p">:</span> <span class="n">The</span>
+<span class="n">filter</span><span class="p">:</span> <span class="n">quick</span>
+<span class="n">filter</span><span class="p">:</span> <span class="n">brown</span>
+<span class="n">filter</span><span class="p">:</span> <span class="n">fox</span>
+<span class="n">filter</span><span class="p">:</span> <span class="n">jumps</span>
+<span class="n">filter</span><span class="p">:</span> <span class="n">over</span>
+<span class="n">filter</span><span class="p">:</span> <span class="n">the</span>
+<span class="n">filter</span><span class="p">:</span> <span class="n">lazy</span>
+<span class="n">filter</span><span class="p">:</span> <span class="n">dog</span>
+<span class="n">length</span><span class="p">:</span> <span class="m">5</span>
+<span class="n">length</span><span class="p">:</span> <span class="m">5</span>
+<span class="n">length</span><span class="p">:</span> <span class="m">5</span>
+<span class="n">length</span><span class="p">:</span> <span class="m">4</span>
+<span class="n">length</span><span class="p">:</span> <span class="m">4</span>
+<span class="n">Lengths</span> <span class="n">of</span> <span class="n">first</span> <span class="m">4</span> <span class="n">words</span> <span class="n">longer</span> <span class="n">than</span> <span class="m">3</span> <span class="n">chars</span><span class="p">:</span>
+<span class="na">[5, 5, 5, 4]</span>
+</code></pre></div></div>
+
+<p><img src="https://kotlinlang.org/docs/images/list-processing.png" alt="https://kotlinlang.org/docs/images/list-processing.png" /></p>
+
+<h3 id="sequence로-수행">Sequence로 수행.</h3>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">words</span> <span class="p">=</span> <span class="s">"The quick brown fox jumps over the lazy dog"</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">" "</span><span class="p">)</span>
+<span class="kd">val</span> <span class="py">wordsSequence</span> <span class="p">=</span> <span class="n">words</span><span class="p">.</span><span class="n">asSequence</span><span class="p">()</span>
+
+<span class="kd">val</span> <span class="py">lengthsSequence</span> <span class="p">=</span> <span class="n">wordsSequence</span><span class="p">.</span><span class="n">filter</span> <span class="p">{</span> <span class="n">println</span><span class="p">(</span><span class="s">"filter: $it"</span><span class="p">);</span> <span class="n">it</span><span class="p">.</span><span class="n">length</span> <span class="p">&gt;</span> <span class="m">3</span> <span class="p">}</span>
+    <span class="p">.</span><span class="n">map</span> <span class="p">{</span> <span class="n">println</span><span class="p">(</span><span class="s">"length: ${it.length}"</span><span class="p">);</span> <span class="n">it</span><span class="p">.</span><span class="n">length</span> <span class="p">}</span>
+    <span class="p">.</span><span class="n">take</span><span class="p">(</span><span class="m">4</span><span class="p">)</span>
+
+<span class="n">println</span><span class="p">(</span><span class="n">lengthsSequence</span><span class="p">.</span><span class="n">toList</span><span class="p">())</span>
+</code></pre></div></div>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Lengths</span> <span class="n">of</span> <span class="n">first</span> <span class="m">4</span> <span class="n">words</span> <span class="n">longer</span> <span class="n">than</span> <span class="m">3</span> <span class="n">chars</span>
+<span class="n">filter</span><span class="p">:</span> <span class="n">The</span>
+<span class="n">filter</span><span class="p">:</span> <span class="n">quick</span>
+<span class="n">length</span><span class="p">:</span> <span class="m">5</span>
+<span class="n">filter</span><span class="p">:</span> <span class="n">brown</span>
+<span class="n">length</span><span class="p">:</span> <span class="m">5</span>
+<span class="n">filter</span><span class="p">:</span> <span class="n">fox</span>
+<span class="n">filter</span><span class="p">:</span> <span class="n">jumps</span>
+<span class="n">length</span><span class="p">:</span> <span class="m">5</span>
+<span class="n">filter</span><span class="p">:</span> <span class="n">over</span>
+<span class="n">length</span><span class="p">:</span> <span class="m">4</span>
+<span class="na">[5, 5, 5, 4]</span>
+
+</code></pre></div></div>
+<p><img src="https://kotlinlang.org/docs/images/sequence-processing.png" alt="https://kotlinlang.org/docs/images/sequence-processing.png" /></p>
+
+<p>중간연산은 항상 지연됩니다. 최종 연산을 호출하면 연기되었던 모든 계산이 수행됩니다. 만약 위의 예에서 마지막 줄의 <code class="highlighter-rouge">lengthsSequence.toList()</code>를 호출하지 않으면, 결과는 아무런 출력도 일어나지 않습니다. 즉, filter,map구문에서 일어나는 모든 중간 연산은 수행이 되지 않습니다.</p>
+
+<p>안드로이드에서는 예전 버전의 자바를 사용하는 경우 자바8 부터 지원하는 스트림이 없기 때문에 이러한 시퀸스를 통해 동일한 (또는 조금 모자란) 수행을 코딩할 수 있도록 지원합니다. 만약 자바 8을 사용 할 수 있다면 스트림을 사용하는것이 더 나은 해결 책이 될 수 있습니다.</p>
 
 
                 </div>
@@ -335,9 +343,9 @@ into the {body} of the default.hbs template -->
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            this.page.url = 'https://mond-al.github.io/test-image';
-                            this.page.identifier = '/test-image';
-                            this.page.title = '테스트용 이미지 (랜덤1000개.zip,해상도별.zip)';
+                            this.page.url = 'https://mond-al.github.io/kotlin-lazy-calc';
+                            this.page.identifier = '/kotlin-lazy-calc';
+                            this.page.title = '코틀린의 지연(lazy) 컬랙션 연산';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -371,7 +379,7 @@ into the {body} of the default.hbs template -->
                         <header class="read-next-card-header">
                             <small class="read-next-card-header-sitetitle">&mdash; 몬드의 개발로그 &mdash;</small>
                             
-                                <h3 class="read-next-card-header-title"><a href="/tag/test/">Test</a></h3>
+                                <h3 class="read-next-card-header-title"><a href="/tag/kotlin/">Kotlin</a></h3>
                             
                         </header>
                         <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
@@ -381,31 +389,12 @@ into the {body} of the default.hbs template -->
                                 
                                 
                                   
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
+                                    
+                                        
+                                        
+                                            <li><a href="/kotlin-visibility">코틀린의 가시성 정리</a></li>
+                                        
+                                    
                                   
                                 
                                   
@@ -416,9 +405,35 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                         
-                                            <li><a href="/test-image-url">개발 테스트용 이미지 다운로드</a></li>
+                                            <li><a href="/kotlin-collection">kotlin collection.associateBy</a></li>
                                         
                                     
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
                                   
                                 
                                   
@@ -428,9 +443,9 @@ into the {body} of the default.hbs template -->
                             </ul>
                         </div>
                         <footer class="read-next-card-footer">
-                            <a href="/tag/test/">
+                            <a href="/tag/kotlin/">
                                 
-                                    See all 1 posts  →
+                                    See all 2 posts  →
                                 
                             </a>
                         </footer>
@@ -444,34 +459,26 @@ into the {body} of the default.hbs template -->
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/ProductFlavors-BuildType">
-                <div class="post-card-image" style="background-image: url(/assets/images/post/2021-01-26-ProductFlavors-BuildType/cover.png)"></div>
+            <a class="post-card-image-link" href="/kotlin-visibility">
+                <div class="post-card-image" style="background-image: url(/assets/images/cover/2021-02-19-kotlin-visibility.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/ProductFlavors-BuildType">
+            <a class="post-card-content-link" href="/kotlin-visibility">
                 <header class="post-card-header">
                     
                         
                             
-                               <span class="post-card-tags">Android</span>
+                               <span class="post-card-tags">Kotlin</span>
                             
                         
                             
-                               <span class="post-card-tags">Gradle</span>
-                            
-                        
-                            
-                               <span class="post-card-tags">Productflavors</span>
-                            
-                        
-                            
-                                <span class="post-card-tags">Buildtypes</span>
+                                <span class="post-card-tags">Java</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">ProductFlavors와 BuildType 조합</h2>
+                    <h2 class="post-card-title">코틀린의 가시성 정리</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -508,30 +515,22 @@ into the {body} of the default.hbs template -->
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/test-image-url">
-                <div class="post-card-image" style="background-image: url(/assets/images/post/2021-01-22-test-image/cover.png)"></div>
+            <a class="post-card-image-link" href="/kotlin-collection">
+                <div class="post-card-image" style="background-image: url(/assets/images/cover/2021-02-19-kotlin-collection.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/test-image-url">
+            <a class="post-card-content-link" href="/kotlin-collection">
                 <header class="post-card-header">
                     
                         
                             
-                               <span class="post-card-tags">Test</span>
-                            
-                        
-                            
-                               <span class="post-card-tags">Image</span>
-                            
-                        
-                            
-                                <span class="post-card-tags">Url</span>
+                                <span class="post-card-tags">Kotlin</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">개발 테스트용 이미지 다운로드</h2>
+                    <h2 class="post-card-title">kotlin collection.associateBy</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -577,18 +576,18 @@ into the {body} of the default.hbs template -->
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">테스트용 이미지 (랜덤1000개.zip,해상도별.zip)</div>
+    <div class="floating-header-title">코틀린의 지연(lazy) 컬랙션 연산</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%9A%A9+%EC%9D%B4%EB%AF%B8%EC%A7%80+%28%EB%9E%9C%EB%8D%A41000%EA%B0%9C.zip%2C%ED%95%B4%EC%83%81%EB%8F%84%EB%B3%84.zip%29&amp;url=https://mond-al.github.io/test-image"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%EC%BD%94%ED%8B%80%EB%A6%B0%EC%9D%98+%EC%A7%80%EC%97%B0%28lazy%29+%EC%BB%AC%EB%9E%99%EC%85%98+%EC%97%B0%EC%82%B0&amp;url=https://mond-al.github.io/kotlin-lazy-calc"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://mond-al.github.io/test-image"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://mond-al.github.io/kotlin-lazy-calc"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 

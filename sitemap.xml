@@ -1,75 +1,295 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
-        <loc>https://mond-al.github.io/kotlin-visibility</loc>
+        <loc>https://mond-al.github.io/kotlin-visibility.html</loc>
+        
+        <lastmod>2021-02-19T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
     </url>
     
     <url>
-        <loc>https://mond-al.github.io/kotlin-collection</loc>
+        <loc>https://mond-al.github.io/kotlin-lazy-calc.html</loc>
+        
+        <lastmod>2021-02-19T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
     </url>
     
     <url>
-        <loc>https://mond-al.github.io/viewpager-fragment</loc>
+        <loc>https://mond-al.github.io/kotlin-collection.html</loc>
+        
+        <lastmod>2021-02-19T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
     </url>
     
     <url>
-        <loc>https://mond-al.github.io/architecture-base-2</loc>
+        <loc>https://mond-al.github.io/viewpager-fragment.html</loc>
+        
+        <lastmod>2021-02-18T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
     </url>
     
     <url>
-        <loc>https://mond-al.github.io/architecture-base-1</loc>
+        <loc>https://mond-al.github.io/architecture-base-2.html</loc>
+        
+        <lastmod>2021-02-17T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
     </url>
     
     <url>
-        <loc>https://mond-al.github.io/example-camera</loc>
+        <loc>https://mond-al.github.io/architecture-base-1.html</loc>
+        
+        <lastmod>2021-02-15T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
     </url>
     
     <url>
-        <loc>https://mond-al.github.io/about-binding</loc>
+        <loc>https://mond-al.github.io/example-camera.html</loc>
+        
+        <lastmod>2021-02-10T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
     </url>
     
     <url>
-        <loc>https://mond-al.github.io/cache-share</loc>
+        <loc>https://mond-al.github.io/about-binding.html</loc>
+        
+        <lastmod>2021-02-09T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
     </url>
     
     <url>
-        <loc>https://mond-al.github.io/file-write</loc>
+        <loc>https://mond-al.github.io/cache-share.html</loc>
+        
+        <lastmod>2021-02-08T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
     </url>
     
     <url>
-        <loc>https://mond-al.github.io/scoped-storage</loc>
+        <loc>https://mond-al.github.io/file-write.html</loc>
+        
+        <lastmod>2021-02-02T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
     </url>
     
     <url>
-        <loc>https://mond-al.github.io/error-log-android-11-api-changed</loc>
+        <loc>https://mond-al.github.io/scoped-storage.html</loc>
+        
+        <lastmod>2021-02-01T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
     </url>
     
     <url>
-        <loc>https://mond-al.github.io/dependency-gradle</loc>
+        <loc>https://mond-al.github.io/error-log-android-11-api-changed.html</loc>
+        
+        <lastmod>2021-01-30T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
     </url>
     
     <url>
-        <loc>https://mond-al.github.io/ProductFlavors-BuildType</loc>
+        <loc>https://mond-al.github.io/dependency-gradle.html</loc>
+        
+        <lastmod>2021-01-27T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
     </url>
     
     <url>
-        <loc>https://mond-al.github.io/test-image</loc>
+        <loc>https://mond-al.github.io/ProductFlavors-BuildType.html</loc>
+        
+        <lastmod>2021-01-26T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
     </url>
     
     <url>
-        <loc>https://mond-al.github.io/test-image-url</loc>
+        <loc>https://mond-al.github.io/test-image.html</loc>
+        
+        <lastmod>2021-01-22T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
     </url>
     
     <url>
-        <loc>https://mond-al.github.io/fast-scroller</loc>
+        <loc>https://mond-al.github.io/test-image-url.html</loc>
+        
+        <lastmod>2021-01-22T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
     </url>
     
     <url>
-        <loc>https://mond-al.github.io/about-reboot</loc>
+        <loc>https://mond-al.github.io/fast-scroller.html</loc>
+        
+        <lastmod>2021-01-18T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
     </url>
     
     <url>
-        <loc>https://mond-al.github.io/about/</loc>
+        <loc>https://mond-al.github.io/about-reboot.html</loc>
+        
+        <lastmod>2021-01-12T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
     </url>
+    
 </urlset>
