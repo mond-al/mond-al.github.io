@@ -600,7 +600,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 
 .post-full-image {
     margin: 0 -20vw -30px;
-    height: 400px;
+    height: 0px;
     background: var(--lightgrey) center center;
     background-size: cover;
     border-radius: 5px;
@@ -609,14 +609,14 @@ The first (most recent) post in the list is styled to be bigger than the others 
 @media (max-width: 1170px) {
     .post-full-image {
         margin: 0 -20vw -20px;
-        height: 300px;
+        height: 0px;
         border-radius: 0;
     }
 }
 
 @media (max-width: 800px) {
     .post-full-image {
-        height: 200px;
+        height: 0px;
     }
 }
 

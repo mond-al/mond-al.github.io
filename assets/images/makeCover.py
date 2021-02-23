@@ -9,12 +9,12 @@ from PIL import Image
 apiMode = False
 
 folderName = 'cover'
-width = 800
-height = 540
-pageLimit = 10
+width = 1600
+height = 400
+pageLimit = 20
 textSizeMultiple = 1
-textSoruce = "Kotlin Visibility"
-query = "invisible"
+textSoruce = "Kotlin Sequence"
+query = "Sequence"
 
 
 def linkByApi():
@@ -49,7 +49,7 @@ def genFile(retryCount=0):
     try:
         print(f"------ > {retryCount}")
         if retryCount >= 10:
-            return "None"
+            return None
         img_url = setUrl()
         print(img_url)
 
@@ -75,10 +75,9 @@ def genFile(retryCount=0):
 
 
 filePath = genFile()
-if "None" == filePath:
+if None == filePath:
     print("Failue")
 else:
     join = os.path.join(os.path.dirname(__file__), filePath)
     print(join)
     os.system(f"open {join}")
-
