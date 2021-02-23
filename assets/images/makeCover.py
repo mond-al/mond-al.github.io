@@ -9,7 +9,7 @@ from PIL import Image
 apiMode = False
 
 folderName = 'cover'
-width = 1600
+width = 600
 height = 400
 pageLimit = 20
 textSizeMultiple = 1
