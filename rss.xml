@@ -1,13 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
     <channel>
         <title>몬드의 개발로그</title>
-        <description>몬드는 오늘도 개발을 합니다. 내일도...</description>
-        <link>https://mond-al.github.io//</link>
-        <atom:link href="https://mond-al.github.io//rss.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 23 Feb 2021 12:28:46 +0900</pubDate>
-        <lastBuildDate>Tue, 23 Feb 2021 12:28:46 +0900</lastBuildDate>
-        <generator>Jekyll v3.9.0</generator>
+        <description>몬드의 개발로그 - </description>
+        <link>https://mond-al.github.io/</link>
+        <link>https://mond-al.github.io/</link>
+        <lastBuildDate>2021-02-23T12:55:24+09:00</lastBuildDate>
+        <pubDate>2021-02-23T12:55:24+09:00</pubDate>
+        <ttl>60</ttl>
+
         
         <item>
             <title>코틀린의 가시성 정리</title>
@@ -97,15 +98,9 @@
 
 &lt;p&gt;Inner Class는 인스턴스의 멤버로 취급됩니다. 클래스 앞에 static 키워드를 사용하지 않은경우이며, 클래스의 인스턴스를 생성한 후에 그 인스턴스의 참조를 이용해야만 Inner Class의 인스턴스를 생성할 수 있습니다. 또한 바깥 클래스의 인스턴스 멤버와 클래스 멤버에 접근할 수 있기 때문에 사용시 주의가 필요합니다.&lt;/p&gt;
 </description>
-            <pubDate>Fri, 19 Feb 2021 00:00:00 +0900</pubDate>
             <link>https://mond-al.github.io//kotlin-visibility</link>
-            <guid isPermaLink="true">https://mond-al.github.io//kotlin-visibility</guid>
-            
-            <category>kotlin</category>
-            
-            <category>java</category>
-            
-            
+            <guid>https://mond-al.github.io//kotlin-visibility</guid>
+            <pubDate>2021-02-19T00:00:00+09:00</pubDate>
         </item>
         
         <item>
@@ -196,15 +191,9 @@
 &lt;p&gt;안드로이드에서는 예전 버전의 자바를 사용하는 경우 자바8 부터 지원하는 스트림이 없기 때문에 이러한 시퀸스를 통해 동일한 (또는 조금 모자란) 수행을 코딩할 수 있도록 지원합니다. 만약 자바 8을 사용 할 수 있다면 스트림을 사용하는것이 더 나은 해결 책이 될 수 있습니다.&lt;/p&gt;
 
 </description>
-            <pubDate>Fri, 19 Feb 2021 00:00:00 +0900</pubDate>
             <link>https://mond-al.github.io//kotlin-lazy-calc</link>
-            <guid isPermaLink="true">https://mond-al.github.io//kotlin-lazy-calc</guid>
-            
-            <category>kotlin</category>
-            
-            <category>java</category>
-            
-            
+            <guid>https://mond-al.github.io//kotlin-lazy-calc</guid>
+            <pubDate>2021-02-19T00:00:00+09:00</pubDate>
         </item>
         
         <item>
@@ -287,13 +276,9 @@ The returned map preserves the entry iteration order of the original array.&lt;/
 &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-            <pubDate>Fri, 19 Feb 2021 00:00:00 +0900</pubDate>
             <link>https://mond-al.github.io//kotlin-collection</link>
-            <guid isPermaLink="true">https://mond-al.github.io//kotlin-collection</guid>
-            
-            <category>kotlin</category>
-            
-            
+            <guid>https://mond-al.github.io//kotlin-collection</guid>
+            <pubDate>2021-02-19T00:00:00+09:00</pubDate>
         </item>
         
         <item>
@@ -446,19 +431,9 @@ This may be used by the system to prioritize operations such as fragment lifecyc
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT&lt;/code&gt;를 사용하면 onResume/onPause 만으로 깔끔하게 bind/unbind 로직을 구현 할 수 있게 되었습니다. 또한 이제 캐쉬된 아이템은 준비단계에서 onCreate만 호출됩니다.&lt;/p&gt;
 </description>
-            <pubDate>Thu, 18 Feb 2021 00:00:00 +0900</pubDate>
             <link>https://mond-al.github.io//viewpager-fragment</link>
-            <guid isPermaLink="true">https://mond-al.github.io//viewpager-fragment</guid>
-            
-            <category>android</category>
-            
-            <category>FragmentPagerAdapter</category>
-            
-            <category>FragmentStatePagerAdapter</category>
-            
-            <category>BEHAVIOR_SET_USER_VISIBLE_HINT</category>
-            
-            
+            <guid>https://mond-al.github.io//viewpager-fragment</guid>
+            <pubDate>2021-02-18T00:00:00+09:00</pubDate>
         </item>
         
         <item>
@@ -509,17 +484,9 @@ gradle에 익숙한 안드로이드 개발자에겐 조금 어색한 소스이�
 &lt;p&gt;이부분은 직접 코드를 보고 맥락을 살피는게 중요하기 때문에 텍스트로 옮기지 않음.&lt;/p&gt;
 
 </description>
-            <pubDate>Wed, 17 Feb 2021 00:00:00 +0900</pubDate>
             <link>https://mond-al.github.io//architecture-base-2</link>
-            <guid isPermaLink="true">https://mond-al.github.io//architecture-base-2</guid>
-            
-            <category>android</category>
-            
-            <category>architecture</category>
-            
-            <category>cleanCoders</category>
-            
-            
+            <guid>https://mond-al.github.io//architecture-base-2</guid>
+            <pubDate>2021-02-17T00:00:00+09:00</pubDate>
         </item>
         
         <item>
@@ -678,17 +645,9 @@ ZetEngine mc = new ZetMotocycle();
 
 &lt;p&gt;inheritance vs implementation -&amp;gt; implementation!&lt;/p&gt;
 </description>
-            <pubDate>Mon, 15 Feb 2021 00:00:00 +0900</pubDate>
             <link>https://mond-al.github.io//architecture-base-1</link>
-            <guid isPermaLink="true">https://mond-al.github.io//architecture-base-1</guid>
-            
-            <category>android</category>
-            
-            <category>architecture</category>
-            
-            <category>cleanCoders</category>
-            
-            
+            <guid>https://mond-al.github.io//architecture-base-1</guid>
+            <pubDate>2021-02-15T00:00:00+09:00</pubDate>
         </item>
         
         <item>
@@ -828,17 +787,9 @@ ZetEngine mc = new ZetMotocycle();
 (B) 직접 외부저장소의 미디어 영역에 파일을 복사한 이후에 contentResolver.insert를 수행하여 Media Store에 row를 추가합니다. DATA 필드에 실제 파일의 위치(absolutePath)를 명시해야 합니다.&lt;/p&gt;
 
 </description>
-            <pubDate>Wed, 10 Feb 2021 00:00:00 +0900</pubDate>
             <link>https://mond-al.github.io//example-camera</link>
-            <guid isPermaLink="true">https://mond-al.github.io//example-camera</guid>
-            
-            <category>android</category>
-            
-            <category>scoped storage</category>
-            
-            <category>camera</category>
-            
-            
+            <guid>https://mond-al.github.io//example-camera</guid>
+            <pubDate>2021-02-10T00:00:00+09:00</pubDate>
         </item>
         
         <item>
@@ -926,17 +877,9 @@ ZetEngine mc = new ZetMotocycle();
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 </description>
-            <pubDate>Tue, 09 Feb 2021 00:00:00 +0900</pubDate>
             <link>https://mond-al.github.io//about-binding</link>
-            <guid isPermaLink="true">https://mond-al.github.io//about-binding</guid>
-            
-            <category>android</category>
-            
-            <category>file provider</category>
-            
-            <category>cache</category>
-            
-            
+            <guid>https://mond-al.github.io//about-binding</guid>
+            <pubDate>2021-02-09T00:00:00+09:00</pubDate>
         </item>
         
         <item>
@@ -1028,17 +971,9 @@ ZetEngine mc = new ZetMotocycle();
         &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;androidx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;core&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;FileProvider&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getUriForFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;FileProvider&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;417&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-            <pubDate>Mon, 08 Feb 2021 00:00:00 +0900</pubDate>
             <link>https://mond-al.github.io//cache-share</link>
-            <guid isPermaLink="true">https://mond-al.github.io//cache-share</guid>
-            
-            <category>android</category>
-            
-            <category>file provider</category>
-            
-            <category>cache</category>
-            
-            
+            <guid>https://mond-al.github.io//cache-share</guid>
+            <pubDate>2021-02-08T00:00:00+09:00</pubDate>
         </item>
         
         <item>
@@ -1227,17 +1162,9 @@ Step 2. Step 1에서 얻은 Uri를 통해 파일을 작성합니다.&lt;/p&gt;
 &lt;p&gt;Scoped Storage로 전환하는 방법에 대한 내용은 따로 정리하였습니다.&lt;/p&gt;
 
 </description>
-            <pubDate>Tue, 02 Feb 2021 00:00:00 +0900</pubDate>
             <link>https://mond-al.github.io//file-write</link>
-            <guid isPermaLink="true">https://mond-al.github.io//file-write</guid>
-            
-            <category>android</category>
-            
-            <category>file</category>
-            
-            <category>scoped storage</category>
-            
-            
+            <guid>https://mond-al.github.io//file-write</guid>
+            <pubDate>2021-02-02T00:00:00+09:00</pubDate>
         </item>
         
         <item>
@@ -1396,17 +1323,9 @@ Step 2. Step 1에서 얻은 Uri를 통해 파일을 작성합니다.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 </description>
-            <pubDate>Mon, 01 Feb 2021 00:00:00 +0900</pubDate>
             <link>https://mond-al.github.io//scoped-storage</link>
-            <guid isPermaLink="true">https://mond-al.github.io//scoped-storage</guid>
-            
-            <category>android</category>
-            
-            <category>sdkversion30</category>
-            
-            <category>scoped storage</category>
-            
-            
+            <guid>https://mond-al.github.io//scoped-storage</guid>
+            <pubDate>2021-02-01T00:00:00+09:00</pubDate>
         </item>
         
         <item>
@@ -1481,17 +1400,9 @@ Step 2. Step 1에서 얻은 Uri를 통해 파일을 작성합니다.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://developer.android.com/about/versions/11/non-sdk-11#how-to-toggle&quot;&gt;https://developer.android.com/about/versions/11/non-sdk-11#how-to-toggle&lt;/a&gt;
 &lt;a href=&quot;https://developer.android.com/about/versions/11/non-sdk-11#how-to-toggle&quot;&gt;https://github.com/square/okhttp/issues/5816&lt;/a&gt;&lt;/p&gt;
 </description>
-            <pubDate>Sat, 30 Jan 2021 00:00:00 +0900</pubDate>
             <link>https://mond-al.github.io//error-log-android-11-api-changed</link>
-            <guid isPermaLink="true">https://mond-al.github.io//error-log-android-11-api-changed</guid>
-            
-            <category>android</category>
-            
-            <category>error</category>
-            
-            <category>log</category>
-            
-            
+            <guid>https://mond-al.github.io//error-log-android-11-api-changed</guid>
+            <pubDate>2021-01-30T00:00:00+09:00</pubDate>
         </item>
         
         <item>
@@ -1659,19 +1570,9 @@ BUILD SUCCESSFUL &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;693ms
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 </description>
-            <pubDate>Wed, 27 Jan 2021 00:00:00 +0900</pubDate>
             <link>https://mond-al.github.io//dependency-gradle</link>
-            <guid isPermaLink="true">https://mond-al.github.io//dependency-gradle</guid>
-            
-            <category>android</category>
-            
-            <category>gradle</category>
-            
-            <category>dependency</category>
-            
-            <category>transitive</category>
-            
-            
+            <guid>https://mond-al.github.io//dependency-gradle</guid>
+            <pubDate>2021-01-27T00:00:00+09:00</pubDate>
         </item>
         
         <item>
@@ -2016,19 +1917,9 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 </description>
-            <pubDate>Tue, 26 Jan 2021 00:00:00 +0900</pubDate>
             <link>https://mond-al.github.io//ProductFlavors-BuildType</link>
-            <guid isPermaLink="true">https://mond-al.github.io//ProductFlavors-BuildType</guid>
-            
-            <category>android</category>
-            
-            <category>gradle</category>
-            
-            <category>ProductFlavors</category>
-            
-            <category>BuildTypes</category>
-            
-            
+            <guid>https://mond-al.github.io//ProductFlavors-BuildType</guid>
+            <pubDate>2021-01-26T00:00:00+09:00</pubDate>
         </item>
         
         <item>
@@ -2107,17 +1998,9 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
 &lt;img src=&quot;assets/images/forTest/ratio/var_width_ratio.png&quot; alt=&quot;폭이 증가하는 테스트용 이미지&quot; width=&quot;70%&quot; /&gt;&lt;/p&gt;
 
 </description>
-            <pubDate>Fri, 22 Jan 2021 00:00:00 +0900</pubDate>
             <link>https://mond-al.github.io//test-image</link>
-            <guid isPermaLink="true">https://mond-al.github.io//test-image</guid>
-            
-            <category>test</category>
-            
-            <category>image</category>
-            
-            <category>download</category>
-            
-            
+            <guid>https://mond-al.github.io//test-image</guid>
+            <pubDate>2021-01-22T00:00:00+09:00</pubDate>
         </item>
         
         <item>
@@ -2157,17 +2040,9 @@ Download : &lt;a href=&quot;assets/images/forTest/ratio/ratioVarWidth.zip&quot;&
 &lt;/blockquote&gt;
 
 </description>
-            <pubDate>Fri, 22 Jan 2021 00:00:00 +0900</pubDate>
             <link>https://mond-al.github.io//test-image-url</link>
-            <guid isPermaLink="true">https://mond-al.github.io//test-image-url</guid>
-            
-            <category>test</category>
-            
-            <category>image</category>
-            
-            <category>url</category>
-            
-            
+            <guid>https://mond-al.github.io//test-image-url</guid>
+            <pubDate>2021-01-22T00:00:00+09:00</pubDate>
         </item>
         
         <item>
@@ -2266,17 +2141,9 @@ Download : &lt;a href=&quot;assets/images/forTest/ratio/ratioVarWidth.zip&quot;&
 
 &lt;p&gt;link : &lt;a href=&quot;https://github.com/mond-al/recyclerview-fastscroller&quot;&gt;https://github.com/mond-al/recyclerview-fastscroller&lt;/a&gt;&lt;/p&gt;
 </description>
-            <pubDate>Mon, 18 Jan 2021 00:00:00 +0900</pubDate>
             <link>https://mond-al.github.io//fast-scroller</link>
-            <guid isPermaLink="true">https://mond-al.github.io//fast-scroller</guid>
-            
-            <category>android</category>
-            
-            <category>recyclerview</category>
-            
-            <category>fastscroller</category>
-            
-            
+            <guid>https://mond-al.github.io//fast-scroller</guid>
+            <pubDate>2021-01-18T00:00:00+09:00</pubDate>
         </item>
         
         <item>
@@ -2308,12 +2175,11 @@ BLOG, MRSK project&lt;/p&gt;
 &lt;/ul&gt;
 
 </description>
-            <pubDate>Tue, 12 Jan 2021 00:00:00 +0900</pubDate>
             <link>https://mond-al.github.io//about-reboot</link>
-            <guid isPermaLink="true">https://mond-al.github.io//about-reboot</guid>
-            
-            
+            <guid>https://mond-al.github.io//about-reboot</guid>
+            <pubDate>2021-01-12T00:00:00+09:00</pubDate>
         </item>
         
+
     </channel>
 </rss>

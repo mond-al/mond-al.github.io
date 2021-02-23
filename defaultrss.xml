@@ -1,27 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<feed xmlns="http://webmastertool.naver.com">
-    <id>https://mond-al.github.io</id>
-    <title><![CDATA[ 몬드의 개발로그 ]]></title>
-    <author>
-        <name></name>
-        <email></email>
-    </author>
-
-    <updated>2021-02-23T12:55:24+09:00</updated>
-    <link rel="site" href="https://mond-al.github.io" />
-
-    
-    <entry>
-        <id>https://mond-al.github.io//kotlin-visibility</id>
-        <title><![CDATA[ 코틀린의 가시성 정리 ]]></title>
-        <author>
-            <name></name>
-            <email></email>
-        </author>
-        <updated>2021-02-19T00:00:00+09:00</updated>
-        <published>2021-02-19T00:00:00+09:00</published>
-        <link rel="via" href="https://mond-al.github.io/kotlin-visibility" />
-        <content type="html"><![CDATA[  &lt;p&gt;코틀린의 public, protected, private 변경자는 컴파일된 바이트 코드 안에서도 그대로 유지됩니다. 그렇게 컴파일된 코틀린의 가시성은 마치 자바에서 똑같은 가시성을 선언한 경우와 동일합니다. 하지만 private는 다르게 적용됩니다. 자바에서 클래스를 private로 만들수 없으므로 내부적으로 코틀린은 private 클래스를 package-private 클래스로 컴파일 합니다.&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>몬드의 개발로그</title>
+        <description>몬드는 오늘도 개발을 합니다. 내일도...</description>
+        <link>https://mond-al.github.io//</link>
+        <atom:link href="https://mond-al.github.io//rss.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Tue, 23 Feb 2021 12:55:24 +0900</pubDate>
+        <lastBuildDate>Tue, 23 Feb 2021 12:55:24 +0900</lastBuildDate>
+        <generator>Jekyll v3.9.0</generator>
+        
+        <item>
+            <title>코틀린의 가시성 정리</title>
+            <description>&lt;p&gt;코틀린의 public, protected, private 변경자는 컴파일된 바이트 코드 안에서도 그대로 유지됩니다. 그렇게 컴파일된 코틀린의 가시성은 마치 자바에서 똑같은 가시성을 선언한 경우와 동일합니다. 하지만 private는 다르게 적용됩니다. 자바에서 클래스를 private로 만들수 없으므로 내부적으로 코틀린은 private 클래스를 package-private 클래스로 컴파일 합니다.&lt;/p&gt;
 
 &lt;h3 id=&quot;internal&quot;&gt;internal&lt;/h3&gt;
 &lt;p&gt;자바에는 internal에 딱 맞는 가시성은 없습니다. package-private은 internal과 다릅니다. 모듈은 보통 여러 패키지로 이루어지며, 서로 다른 모듈에 같은 패키지에 속한 선언이 들어 있을 수도 있습니다. 따라서 internal 변경자는 바이트 코드상에서 public이 됩니다.&lt;/p&gt;
@@ -106,20 +96,21 @@
 &lt;p&gt;static Nested Class는 앞에 static 키워드 사용합니다. 바깥 클래스의 인스턴스를 생성하기 전이라도 Static Nested Class 의 인스턴스를 생성할 수 있기 때문에 사실상 top level class와 차이가 없습니다. 또한 상위 클래스 객체의 변수에 대한 참조가 불가하기 때문에 불필요한 메모리릭을 사전에 방지할 수 있습니다.&lt;/p&gt;
 
 &lt;p&gt;Inner Class는 인스턴스의 멤버로 취급됩니다. 클래스 앞에 static 키워드를 사용하지 않은경우이며, 클래스의 인스턴스를 생성한 후에 그 인스턴스의 참조를 이용해야만 Inner Class의 인스턴스를 생성할 수 있습니다. 또한 바깥 클래스의 인스턴스 멤버와 클래스 멤버에 접근할 수 있기 때문에 사용시 주의가 필요합니다.&lt;/p&gt;
- ]]></content>
-    </entry>
-    
-    <entry>
-        <id>https://mond-al.github.io//kotlin-lazy-calc</id>
-        <title><![CDATA[ 코틀린의 지연(lazy) 컬랙션 연산 ]]></title>
-        <author>
-            <name></name>
-            <email></email>
-        </author>
-        <updated>2021-02-19T00:00:00+09:00</updated>
-        <published>2021-02-19T00:00:00+09:00</published>
-        <link rel="via" href="https://mond-al.github.io/kotlin-lazy-calc" />
-        <content type="html"><![CDATA[  &lt;p&gt;map이나 filter 같은 컬랙션 함수는 결과 컬랙션을 즉시(eagerly:열심히) 생성합니다. 이는 컬랙션 함수를 연쇄하면 단계마다 중간 결과를 새로운 컬랙션 객체로 생성한다는 말이기도 합니다. 하지만 시퀀스(sequence)를 사용하면 중간 임시 컬렉션을 사용하지 않고도 연살을 연쇄적으로 수행 할 수 있습니다.&lt;/p&gt;
+</description>
+            <pubDate>Fri, 19 Feb 2021 00:00:00 +0900</pubDate>
+            <link>https://mond-al.github.io//kotlin-visibility</link>
+            <guid isPermaLink="true">https://mond-al.github.io//kotlin-visibility</guid>
+            
+            <category>kotlin</category>
+            
+            <category>java</category>
+            
+            
+        </item>
+        
+        <item>
+            <title>코틀린의 지연(lazy) 컬랙션 연산</title>
+            <description>&lt;p&gt;map이나 filter 같은 컬랙션 함수는 결과 컬랙션을 즉시(eagerly:열심히) 생성합니다. 이는 컬랙션 함수를 연쇄하면 단계마다 중간 결과를 새로운 컬랙션 객체로 생성한다는 말이기도 합니다. 하지만 시퀀스(sequence)를 사용하면 중간 임시 컬렉션을 사용하지 않고도 연살을 연쇄적으로 수행 할 수 있습니다.&lt;/p&gt;
 
 &lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;articles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Article&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;filter&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;startsWith&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;[&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)}&lt;/span&gt; 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -204,20 +195,21 @@
 
 &lt;p&gt;안드로이드에서는 예전 버전의 자바를 사용하는 경우 자바8 부터 지원하는 스트림이 없기 때문에 이러한 시퀸스를 통해 동일한 (또는 조금 모자란) 수행을 코딩할 수 있도록 지원합니다. 만약 자바 8을 사용 할 수 있다면 스트림을 사용하는것이 더 나은 해결 책이 될 수 있습니다.&lt;/p&gt;
 
- ]]></content>
-    </entry>
-    
-    <entry>
-        <id>https://mond-al.github.io//kotlin-collection</id>
-        <title><![CDATA[ kotlin collection.associateBy ]]></title>
-        <author>
-            <name></name>
-            <email></email>
-        </author>
-        <updated>2021-02-19T00:00:00+09:00</updated>
-        <published>2021-02-19T00:00:00+09:00</published>
-        <link rel="via" href="https://mond-al.github.io/kotlin-collection" />
-        <content type="html"><![CDATA[  &lt;p&gt;코틀린에서는 Guava 다른 여타 편라한 기능을 제공하던 라이브러리를 사용하지않고도 충분히 많은 일을 효율적이고 간편하게 해결 할 수 있도록 제공하고있습니다. 귀찮은 문제를 가볍게 해결 해주는 편리한 함수 associateBy, groupBy에 대해 정리해보겠습니다.&lt;/p&gt;
+</description>
+            <pubDate>Fri, 19 Feb 2021 00:00:00 +0900</pubDate>
+            <link>https://mond-al.github.io//kotlin-lazy-calc</link>
+            <guid isPermaLink="true">https://mond-al.github.io//kotlin-lazy-calc</guid>
+            
+            <category>kotlin</category>
+            
+            <category>java</category>
+            
+            
+        </item>
+        
+        <item>
+            <title>kotlin collection.associateBy</title>
+            <description>&lt;p&gt;코틀린에서는 Guava 다른 여타 편라한 기능을 제공하던 라이브러리를 사용하지않고도 충분히 많은 일을 효율적이고 간편하게 해결 할 수 있도록 제공하고있습니다. 귀찮은 문제를 가볍게 해결 해주는 편리한 함수 associateBy, groupBy에 대해 정리해보겠습니다.&lt;/p&gt;
 
 &lt;h3 id=&quot;associateby&quot;&gt;associateBy&lt;/h3&gt;
 
@@ -294,20 +286,19 @@ The returned map preserves the entry iteration order of the original array.&lt;/
      &lt;span class=&quot;nc&quot;&gt;Article&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;일반글&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;내용&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;일반글&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
- ]]></content>
-    </entry>
-    
-    <entry>
-        <id>https://mond-al.github.io//viewpager-fragment</id>
-        <title><![CDATA[ FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편) ]]></title>
-        <author>
-            <name></name>
-            <email></email>
-        </author>
-        <updated>2021-02-18T00:00:00+09:00</updated>
-        <published>2021-02-18T00:00:00+09:00</published>
-        <link rel="via" href="https://mond-al.github.io/viewpager-fragment" />
-        <content type="html"><![CDATA[  &lt;p&gt;이름이 워낙 길고, 비슷하기 까지 해서 항상 어떤 녀석을 사용 해야 할지 망설이게 됩니다. 내 앱에서는 딱히 configChanges 나 onPause/onResume에 대한 처리를 딱히 타이트하지 않는데 꼭 “State”가 붙은 것을 사용해야 할지 고민도 되구요. 이 두 클래스에 대해 살펴보겠습니다. 우선 변경된 생성자 이야기부터 시작하겠습니다.&lt;/p&gt;
+</description>
+            <pubDate>Fri, 19 Feb 2021 00:00:00 +0900</pubDate>
+            <link>https://mond-al.github.io//kotlin-collection</link>
+            <guid isPermaLink="true">https://mond-al.github.io//kotlin-collection</guid>
+            
+            <category>kotlin</category>
+            
+            
+        </item>
+        
+        <item>
+            <title>FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)</title>
+            <description>&lt;p&gt;이름이 워낙 길고, 비슷하기 까지 해서 항상 어떤 녀석을 사용 해야 할지 망설이게 됩니다. 내 앱에서는 딱히 configChanges 나 onPause/onResume에 대한 처리를 딱히 타이트하지 않는데 꼭 “State”가 붙은 것을 사용해야 할지 고민도 되구요. 이 두 클래스에 대해 살펴보겠습니다. 우선 변경된 생성자 이야기부터 시작하겠습니다.&lt;/p&gt;
 
 &lt;p&gt;두 클래스 모두 androidx.fragment.app 패키지에 포함되어 있습니다. 이번 문서에서는 공통적인 내용만 다룰 예정이라 FragmentPagerAdapter를 기준으로 설명하고 Fragment(State)PagerAdapter에 대한 지칭은 생략하겠습니다.&lt;/p&gt;
 
@@ -454,20 +445,25 @@ This may be used by the system to prioritize operations such as fragment lifecyc
 &lt;p&gt;로그를 보시면 기존에 사용하던 방식인 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BEHAVIOR_SET_USER_VISIBLE_HINT&lt;/code&gt;는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setUserVisibleHint&lt;/code&gt;메서드를 오버라이드하였으며, fragment가 onCreate된 후에 setUserVisibleHint이 호출됨를 보장하지 않습니다. 생명주기 상태가 명확하지 않아서 개발자의 많은 개입이 요구됩니다. 또한 사용하지않는 미리 불러놓은 캐쉬된 아이템(현재 활성화된 아이템의 좌우페이지)의 생명주기가 계속 변경되어 더욱 고려할 사항이 많았습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT&lt;/code&gt;를 사용하면 onResume/onPause 만으로 깔끔하게 bind/unbind 로직을 구현 할 수 있게 되었습니다. 또한 이제 캐쉬된 아이템은 준비단계에서 onCreate만 호출됩니다.&lt;/p&gt;
- ]]></content>
-    </entry>
-    
-    <entry>
-        <id>https://mond-al.github.io//architecture-base-2</id>
-        <title><![CDATA[ 아키텍처와 클린코드 그리고 TDD (2) ]]></title>
-        <author>
-            <name></name>
-            <email></email>
-        </author>
-        <updated>2021-02-17T00:00:00+09:00</updated>
-        <published>2021-02-17T00:00:00+09:00</published>
-        <link rel="via" href="https://mond-al.github.io/architecture-base-2" />
-        <content type="html"><![CDATA[  &lt;p&gt;함수 리팩토링을 통해 아름다운 코드로 바꿔보자. 그리고 왜 이렇게 하는지 이해는게 목표이다.&lt;/p&gt;
+</description>
+            <pubDate>Thu, 18 Feb 2021 00:00:00 +0900</pubDate>
+            <link>https://mond-al.github.io//viewpager-fragment</link>
+            <guid isPermaLink="true">https://mond-al.github.io//viewpager-fragment</guid>
+            
+            <category>android</category>
+            
+            <category>FragmentPagerAdapter</category>
+            
+            <category>FragmentStatePagerAdapter</category>
+            
+            <category>BEHAVIOR_SET_USER_VISIBLE_HINT</category>
+            
+            
+        </item>
+        
+        <item>
+            <title>아키텍처와 클린코드 그리고 TDD (2)</title>
+            <description>&lt;p&gt;함수 리팩토링을 통해 아름다운 코드로 바꿔보자. 그리고 왜 이렇게 하는지 이해는게 목표이다.&lt;/p&gt;
 
 &lt;p&gt;이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 &lt;a href=&quot;https://www.youtube.com/watch?v=60lLSe1phks&amp;amp;t=2091s&quot;&gt;유튜브 강좌&lt;/a&gt;를 보시길 추천드립니다.&lt;/p&gt;
 
@@ -512,20 +508,23 @@ gradle에 익숙한 안드로이드 개발자에겐 조금 어색한 소스이�
 
 &lt;p&gt;이부분은 직접 코드를 보고 맥락을 살피는게 중요하기 때문에 텍스트로 옮기지 않음.&lt;/p&gt;
 
- ]]></content>
-    </entry>
-    
-    <entry>
-        <id>https://mond-al.github.io//architecture-base-1</id>
-        <title><![CDATA[ 아키텍처와 클린코드 그리고 TDD (1) ]]></title>
-        <author>
-            <name></name>
-            <email></email>
-        </author>
-        <updated>2021-02-15T00:00:00+09:00</updated>
-        <published>2021-02-15T00:00:00+09:00</published>
-        <link rel="via" href="https://mond-al.github.io/architecture-base-1" />
-        <content type="html"><![CDATA[  &lt;p&gt;객체지향에 대해 정리하고, 전체적인 맥락을 짚어본다.&lt;/p&gt;
+</description>
+            <pubDate>Wed, 17 Feb 2021 00:00:00 +0900</pubDate>
+            <link>https://mond-al.github.io//architecture-base-2</link>
+            <guid isPermaLink="true">https://mond-al.github.io//architecture-base-2</guid>
+            
+            <category>android</category>
+            
+            <category>architecture</category>
+            
+            <category>cleanCoders</category>
+            
+            
+        </item>
+        
+        <item>
+            <title>아키텍처와 클린코드 그리고 TDD (1)</title>
+            <description>&lt;p&gt;객체지향에 대해 정리하고, 전체적인 맥락을 짚어본다.&lt;/p&gt;
 
 &lt;p&gt;이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 &lt;a href=&quot;https://www.youtube.com/watch?v=60lLSe1phks&amp;amp;t=2091s&quot;&gt;유튜브 강좌&lt;/a&gt;를 보시길 추천드립니다.&lt;/p&gt;
 
@@ -678,20 +677,23 @@ ZetEngine mc = new ZetMotocycle();
 &lt;p&gt;PriceStrategy은 얼마든지 다양한 형태의 구현체로 변경가능하고, 이 구현체의 변경은 Calculator 클래스에 영향을 끼치지 않는다. 인터페이스에 의한 의존성을 주입받음으로써 처음 Unit Test를 할 때 가장 까다로운 부분인 Mock을 생성하기 쉽다. 이는 TDD에 기본이 된다.&lt;/p&gt;
 
 &lt;p&gt;inheritance vs implementation -&amp;gt; implementation!&lt;/p&gt;
- ]]></content>
-    </entry>
-    
-    <entry>
-        <id>https://mond-al.github.io//example-camera</id>
-        <title><![CDATA[ 카메라 사진촬영으로 보는 Scoped storage 예제 및 소스 ]]></title>
-        <author>
-            <name></name>
-            <email></email>
-        </author>
-        <updated>2021-02-10T00:00:00+09:00</updated>
-        <published>2021-02-10T00:00:00+09:00</published>
-        <link rel="via" href="https://mond-al.github.io/example-camera" />
-        <content type="html"><![CDATA[  &lt;p&gt;Target/Compile Sdk version에 Api level 30을 적용한 아주 간단한 사진촬영 (요청) 앱입니다.  이 앱의 목표는 다음과 같습니다.&lt;/p&gt;
+</description>
+            <pubDate>Mon, 15 Feb 2021 00:00:00 +0900</pubDate>
+            <link>https://mond-al.github.io//architecture-base-1</link>
+            <guid isPermaLink="true">https://mond-al.github.io//architecture-base-1</guid>
+            
+            <category>android</category>
+            
+            <category>architecture</category>
+            
+            <category>cleanCoders</category>
+            
+            
+        </item>
+        
+        <item>
+            <title>카메라 사진촬영으로 보는 Scoped storage 예제 및 소스</title>
+            <description>&lt;p&gt;Target/Compile Sdk version에 Api level 30을 적용한 아주 간단한 사진촬영 (요청) 앱입니다.  이 앱의 목표는 다음과 같습니다.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Android 10(Q)이후 디바이스에 요구되는 &lt;em&gt;Scoped storage&lt;/em&gt;일때 사진 촬영 요청 및 Media Store 등록.&lt;/li&gt;
   &lt;li&gt;안드로이드 앱에서 최소한의 permission으로 어떻게 사진촬영/저장 기능을 제공하는지 보여줍니다.&lt;/li&gt;
@@ -825,20 +827,23 @@ ZetEngine mc = new ZetMotocycle();
 &lt;p&gt;(A) Android 10(Q)미만의 디바이스에서는 File을 통해 실제 경로에 파일을 생성합니다. 여기서 주의 할 점은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM)&lt;/code&gt; 와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;context.getExternalFilesDir(Environment.DIRECTORY_DCIM)&lt;/code&gt;는 완전히 다른 경로를 반환하기 때문에 헷갈려서는 안됩니다.(&lt;a href=&quot;file-write&quot;&gt;안드로이드 파일 쓰기&lt;/a&gt;를 참고.)&lt;br /&gt;
 (B) 직접 외부저장소의 미디어 영역에 파일을 복사한 이후에 contentResolver.insert를 수행하여 Media Store에 row를 추가합니다. DATA 필드에 실제 파일의 위치(absolutePath)를 명시해야 합니다.&lt;/p&gt;
 
- ]]></content>
-    </entry>
-    
-    <entry>
-        <id>https://mond-al.github.io//about-binding</id>
-        <title><![CDATA[ Binding이 되지않을때 (by viewModels()에 에러) ]]></title>
-        <author>
-            <name></name>
-            <email></email>
-        </author>
-        <updated>2021-02-09T00:00:00+09:00</updated>
-        <published>2021-02-09T00:00:00+09:00</published>
-        <link rel="via" href="https://mond-al.github.io/about-binding" />
-        <content type="html"><![CDATA[  &lt;p&gt;프로젝트가 세팅되지 않은 상태에서 디펜던시 정의를 빠트린경우인데 new Project를 통해 empty activity 프로젝트로 시작하면 항상 빠트리다 보니 포스팅으로 정리해둡니다.&lt;/p&gt;
+</description>
+            <pubDate>Wed, 10 Feb 2021 00:00:00 +0900</pubDate>
+            <link>https://mond-al.github.io//example-camera</link>
+            <guid isPermaLink="true">https://mond-al.github.io//example-camera</guid>
+            
+            <category>android</category>
+            
+            <category>scoped storage</category>
+            
+            <category>camera</category>
+            
+            
+        </item>
+        
+        <item>
+            <title>Binding이 되지않을때 (by viewModels()에 에러)</title>
+            <description>&lt;p&gt;프로젝트가 세팅되지 않은 상태에서 디펜던시 정의를 빠트린경우인데 new Project를 통해 empty activity 프로젝트로 시작하면 항상 빠트리다 보니 포스팅으로 정리해둡니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;by-viewmodels에-에러가-나는-경우&quot;&gt;by viewModels()에 에러가 나는 경우.&lt;/h2&gt;
 
@@ -920,20 +925,23 @@ ZetEngine mc = new ZetMotocycle();
                                                                                                         
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
- ]]></content>
-    </entry>
-    
-    <entry>
-        <id>https://mond-al.github.io//cache-share</id>
-        <title><![CDATA[ File Provider Path 디렉리터 영역 매칭 ]]></title>
-        <author>
-            <name></name>
-            <email></email>
-        </author>
-        <updated>2021-02-08T00:00:00+09:00</updated>
-        <published>2021-02-08T00:00:00+09:00</published>
-        <link rel="via" href="https://mond-al.github.io/cache-share" />
-        <content type="html"><![CDATA[  &lt;p&gt;Android 7(N)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. 얼마전 기존 프로젝트에 Android 11(R) 대응을 위해 Scoped Storage 적용을 진행하면서 기존 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache, files, external(Media/Download)로 구분하는 처리가 추가되었습니다. 이로 인해 external경로 이외에도 파일프로바이더로 제공할 수 있도록 수정이 필요했습니다.&lt;/p&gt;
+</description>
+            <pubDate>Tue, 09 Feb 2021 00:00:00 +0900</pubDate>
+            <link>https://mond-al.github.io//about-binding</link>
+            <guid isPermaLink="true">https://mond-al.github.io//about-binding</guid>
+            
+            <category>android</category>
+            
+            <category>file provider</category>
+            
+            <category>cache</category>
+            
+            
+        </item>
+        
+        <item>
+            <title>File Provider Path 디렉리터 영역 매칭</title>
+            <description>&lt;p&gt;Android 7(N)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. 얼마전 기존 프로젝트에 Android 11(R) 대응을 위해 Scoped Storage 적용을 진행하면서 기존 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache, files, external(Media/Download)로 구분하는 처리가 추가되었습니다. 이로 인해 external경로 이외에도 파일프로바이더로 제공할 수 있도록 수정이 필요했습니다.&lt;/p&gt;
 
 &lt;p&gt;추가 할 수 있는 path의 종류와 가르키는 영역 정리&lt;/p&gt;
 
@@ -1019,20 +1027,23 @@ ZetEngine mc = new ZetMotocycle();
         &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;androidx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;core&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;FileProvider&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getPathStrategy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;FileProvider&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;579&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;androidx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;core&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;FileProvider&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getUriForFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;FileProvider&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;417&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
- ]]></content>
-    </entry>
-    
-    <entry>
-        <id>https://mond-al.github.io//file-write</id>
-        <title><![CDATA[ 안드로이드 파일 쓰기 ]]></title>
-        <author>
-            <name></name>
-            <email></email>
-        </author>
-        <updated>2021-02-02T00:00:00+09:00</updated>
-        <published>2021-02-02T00:00:00+09:00</published>
-        <link rel="via" href="https://mond-al.github.io/file-write" />
-        <content type="html"><![CDATA[  &lt;p&gt;안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다.&lt;/p&gt;
+</description>
+            <pubDate>Mon, 08 Feb 2021 00:00:00 +0900</pubDate>
+            <link>https://mond-al.github.io//cache-share</link>
+            <guid isPermaLink="true">https://mond-al.github.io//cache-share</guid>
+            
+            <category>android</category>
+            
+            <category>file provider</category>
+            
+            <category>cache</category>
+            
+            
+        </item>
+        
+        <item>
+            <title>안드로이드 파일 쓰기</title>
+            <description>&lt;p&gt;안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;코드 아래 path를 정리해두었는데 path는 제조사,기종,OS버전등에 의해 따라 달라질 수 있습니다. 대략적인 형상에 대해 정리 해두는 자료로 이해하기 바랍니다.&lt;/strong&gt;&lt;/p&gt;
 
@@ -1215,20 +1226,23 @@ Step 2. Step 1에서 얻은 Uri를 통해 파일을 작성합니다.&lt;/p&gt;
 &lt;h3 id=&quot;scoped-storage-자세히-들여다-보기&quot;&gt;&lt;a href=&quot;scoped-storage&quot;&gt;Scoped Storage 자세히 들여다 보기&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Scoped Storage로 전환하는 방법에 대한 내용은 따로 정리하였습니다.&lt;/p&gt;
 
- ]]></content>
-    </entry>
-    
-    <entry>
-        <id>https://mond-al.github.io//scoped-storage</id>
-        <title><![CDATA[ Scoped Storage 적용하기 ]]></title>
-        <author>
-            <name></name>
-            <email></email>
-        </author>
-        <updated>2021-02-01T00:00:00+09:00</updated>
-        <published>2021-02-01T00:00:00+09:00</published>
-        <link rel="via" href="https://mond-al.github.io/scoped-storage" />
-        <content type="html"><![CDATA[  &lt;p&gt;아마도 Scoped Storage를 강제하는 부분인 Android 11(R)에서 가장 큰 변화인 것 같습니다.&lt;/p&gt;
+</description>
+            <pubDate>Tue, 02 Feb 2021 00:00:00 +0900</pubDate>
+            <link>https://mond-al.github.io//file-write</link>
+            <guid isPermaLink="true">https://mond-al.github.io//file-write</guid>
+            
+            <category>android</category>
+            
+            <category>file</category>
+            
+            <category>scoped storage</category>
+            
+            
+        </item>
+        
+        <item>
+            <title>Scoped Storage 적용하기</title>
+            <description>&lt;p&gt;아마도 Scoped Storage를 강제하는 부분인 Android 11(R)에서 가장 큰 변화인 것 같습니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;scoped-storage-적용&quot;&gt;Scoped Storage 적용&lt;/h2&gt;
 
@@ -1381,20 +1395,23 @@ Step 2. Step 1에서 얻은 Uri를 통해 파일을 작성합니다.&lt;/p&gt;
 &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;앱을&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;통해&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;파일을&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;업데이트&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;추가가&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;잘&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;되는지&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;확인&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;합니다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
- ]]></content>
-    </entry>
-    
-    <entry>
-        <id>https://mond-al.github.io//error-log-android-11-api-changed</id>
-        <title><![CDATA[ java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable ]]></title>
-        <author>
-            <name></name>
-            <email></email>
-        </author>
-        <updated>2021-01-30T00:00:00+09:00</updated>
-        <published>2021-01-30T00:00:00+09:00</published>
-        <link rel="via" href="https://mond-al.github.io/error-log-android-11-api-changed" />
-        <content type="html"><![CDATA[  &lt;h3 id=&quot;where-did-the-problem-occur&quot;&gt;Where did the problem occur?&lt;/h3&gt;
+</description>
+            <pubDate>Mon, 01 Feb 2021 00:00:00 +0900</pubDate>
+            <link>https://mond-al.github.io//scoped-storage</link>
+            <guid isPermaLink="true">https://mond-al.github.io//scoped-storage</guid>
+            
+            <category>android</category>
+            
+            <category>sdkversion30</category>
+            
+            <category>scoped storage</category>
+            
+            
+        </item>
+        
+        <item>
+            <title>java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</title>
+            <description>&lt;h3 id=&quot;where-did-the-problem-occur&quot;&gt;Where did the problem occur?&lt;/h3&gt;
 &lt;h2 id=&quot;case-a&quot;&gt;case A&lt;/h2&gt;
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ExceptionInInitializerError&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;okhttp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;internal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;platform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Platform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Platform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;85&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
@@ -1463,20 +1480,23 @@ Step 2. Step 1에서 얻은 Uri를 통해 파일을 작성합니다.&lt;/p&gt;
 &lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&quot;https://developer.android.com/about/versions/11/non-sdk-11#how-to-toggle&quot;&gt;https://developer.android.com/about/versions/11/non-sdk-11#how-to-toggle&lt;/a&gt;
 &lt;a href=&quot;https://developer.android.com/about/versions/11/non-sdk-11#how-to-toggle&quot;&gt;https://github.com/square/okhttp/issues/5816&lt;/a&gt;&lt;/p&gt;
- ]]></content>
-    </entry>
-    
-    <entry>
-        <id>https://mond-al.github.io//dependency-gradle</id>
-        <title><![CDATA[ 앱의 의존성 확인하고 전이 의존성 변경하기 ]]></title>
-        <author>
-            <name></name>
-            <email></email>
-        </author>
-        <updated>2021-01-27T00:00:00+09:00</updated>
-        <published>2021-01-27T00:00:00+09:00</published>
-        <link rel="via" href="https://mond-al.github.io/dependency-gradle" />
-        <content type="html"><![CDATA[  &lt;p&gt;의존성과 관련하여 문제가 생겼다고 판단되면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;의존성 트리&lt;/code&gt;를 봐야합니다. 터미널에서 프로젝트가 있는 폴더로 이동하고 아래의 명령어를 실행 하면됩니다.&lt;/p&gt;
+</description>
+            <pubDate>Sat, 30 Jan 2021 00:00:00 +0900</pubDate>
+            <link>https://mond-al.github.io//error-log-android-11-api-changed</link>
+            <guid isPermaLink="true">https://mond-al.github.io//error-log-android-11-api-changed</guid>
+            
+            <category>android</category>
+            
+            <category>error</category>
+            
+            <category>log</category>
+            
+            
+        </item>
+        
+        <item>
+            <title>앱의 의존성 확인하고 전이 의존성 변경하기</title>
+            <description>&lt;p&gt;의존성과 관련하여 문제가 생겼다고 판단되면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;의존성 트리&lt;/code&gt;를 봐야합니다. 터미널에서 프로젝트가 있는 폴더로 이동하고 아래의 명령어를 실행 하면됩니다.&lt;/p&gt;
 
 &lt;p&gt;혹시 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{Dementions...}{buildType}&lt;/code&gt;부분이 이해되지 않으신다면, &lt;a href=&quot;ProductFlavors-BuildType&quot;&gt;ProductFlavors와 BuildType&lt;/a&gt;을 참고해주세요.&lt;/p&gt;
 
@@ -1638,20 +1658,25 @@ BUILD SUCCESSFUL &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;693ms
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
- ]]></content>
-    </entry>
-    
-    <entry>
-        <id>https://mond-al.github.io//ProductFlavors-BuildType</id>
-        <title><![CDATA[ ProductFlavors와 BuildType 조합 ]]></title>
-        <author>
-            <name></name>
-            <email></email>
-        </author>
-        <updated>2021-01-26T00:00:00+09:00</updated>
-        <published>2021-01-26T00:00:00+09:00</published>
-        <link rel="via" href="https://mond-al.github.io/ProductFlavors-BuildType" />
-        <content type="html"><![CDATA[  &lt;p&gt;Gradle에서 ProductFlavors와 BuildType을 이용해서 다양한 형상을 만들 수 있습니다. Gradle을 기반으로 BuildTypes은 기본으로하고 ProductFlavors에 여러가지 dimension을 정의하여 조합하여 빌드를 간편하게 생산 할 수있습니다. 간략한 예를 들어 상황을 정의하고 실제 build.gradle 파일을 수정해 보겠습니다.&lt;/p&gt;
+</description>
+            <pubDate>Wed, 27 Jan 2021 00:00:00 +0900</pubDate>
+            <link>https://mond-al.github.io//dependency-gradle</link>
+            <guid isPermaLink="true">https://mond-al.github.io//dependency-gradle</guid>
+            
+            <category>android</category>
+            
+            <category>gradle</category>
+            
+            <category>dependency</category>
+            
+            <category>transitive</category>
+            
+            
+        </item>
+        
+        <item>
+            <title>ProductFlavors와 BuildType 조합</title>
+            <description>&lt;p&gt;Gradle에서 ProductFlavors와 BuildType을 이용해서 다양한 형상을 만들 수 있습니다. Gradle을 기반으로 BuildTypes은 기본으로하고 ProductFlavors에 여러가지 dimension을 정의하여 조합하여 빌드를 간편하게 생산 할 수있습니다. 간략한 예를 들어 상황을 정의하고 실제 build.gradle 파일을 수정해 보겠습니다.&lt;/p&gt;
 
 &lt;p&gt;서비스가 점점 커지다 보면 일명 “OO향”빌드를 배포해야하는 경우나 “XX용”빌드를 따로 뽑아야하는 경우가 생깁니다. 가령 예를 들자면 “중국향”과 “국내향”처럼 나눌수 있을 것이고, “개발용”,”QA용”,”내부배포용”,”실서비스용”으로도 나눌 수도 있습니다. 이런 구성을 개발에서 각 버전을 구분하여 관리해야 한다면 우리는 어떻게 해야 할까요?&lt;/p&gt;
 
@@ -1990,20 +2015,25 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
- ]]></content>
-    </entry>
-    
-    <entry>
-        <id>https://mond-al.github.io//test-image</id>
-        <title><![CDATA[ 테스트용 이미지 (랜덤1000개.zip,해상도별.zip) ]]></title>
-        <author>
-            <name></name>
-            <email></email>
-        </author>
-        <updated>2021-01-22T00:00:00+09:00</updated>
-        <published>2021-01-22T00:00:00+09:00</published>
-        <link rel="via" href="https://mond-al.github.io/test-image" />
-        <content type="html"><![CDATA[  &lt;p&gt;테스트용 이미지 파일 형식은 Png이며, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;image_{number}_{width}x{height}.png&lt;/code&gt; 형식의 파일이름으로 저장 되어 있습니다. 의견 주시면 또 다른 세트도 추가해보겠습니다.&lt;/p&gt;
+</description>
+            <pubDate>Tue, 26 Jan 2021 00:00:00 +0900</pubDate>
+            <link>https://mond-al.github.io//ProductFlavors-BuildType</link>
+            <guid isPermaLink="true">https://mond-al.github.io//ProductFlavors-BuildType</guid>
+            
+            <category>android</category>
+            
+            <category>gradle</category>
+            
+            <category>ProductFlavors</category>
+            
+            <category>BuildTypes</category>
+            
+            
+        </item>
+        
+        <item>
+            <title>테스트용 이미지 (랜덤1000개.zip,해상도별.zip)</title>
+            <description>&lt;p&gt;테스트용 이미지 파일 형식은 Png이며, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;image_{number}_{width}x{height}.png&lt;/code&gt; 형식의 파일이름으로 저장 되어 있습니다. 의견 주시면 또 다른 세트도 추가해보겠습니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;직접-만든-이미지-묶음들&quot;&gt;직접 만든 이미지 묶음들&lt;/h1&gt;
 &lt;p&gt;기능 개발 테스트를 하다 보면 이미지 소스들이 필요한 경우가 있습니다. 때로는 예제앱에 이미지를 포함하고 싶을때 적당한 이미지를 선택하는것도 은근 신경쓰이는 일 입니다. 필요한데 아무리 검색해도 찾을 수 없어서 그냥 만든 테스트용 이미지들을 공유합니다.&lt;/p&gt;
@@ -2076,20 +2106,23 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
 &lt;p&gt;Download : &lt;a href=&quot;assets/images/forTest/ratio/ratioVarWidth.zip&quot;&gt;ratioVarWidth.zip&lt;/a&gt;&lt;br /&gt;
 &lt;img src=&quot;assets/images/forTest/ratio/var_width_ratio.png&quot; alt=&quot;폭이 증가하는 테스트용 이미지&quot; width=&quot;70%&quot; /&gt;&lt;/p&gt;
 
- ]]></content>
-    </entry>
-    
-    <entry>
-        <id>https://mond-al.github.io//test-image-url</id>
-        <title><![CDATA[ 개발 테스트용 이미지 다운로드 ]]></title>
-        <author>
-            <name></name>
-            <email></email>
-        </author>
-        <updated>2021-01-22T00:00:00+09:00</updated>
-        <published>2021-01-22T00:00:00+09:00</published>
-        <link rel="via" href="https://mond-al.github.io/test-image-url" />
-        <content type="html"><![CDATA[  &lt;p&gt;기능 테스트를 하다 보면 이미지 소스들이 필요한 경우가 있습니다. 때로는 예제앱에 이미지를 포함하고 싶을때 적당한 이미지를 선택하는것도 은근 신경쓰이는 일 입니다.&lt;/p&gt;
+</description>
+            <pubDate>Fri, 22 Jan 2021 00:00:00 +0900</pubDate>
+            <link>https://mond-al.github.io//test-image</link>
+            <guid isPermaLink="true">https://mond-al.github.io//test-image</guid>
+            
+            <category>test</category>
+            
+            <category>image</category>
+            
+            <category>download</category>
+            
+            
+        </item>
+        
+        <item>
+            <title>개발 테스트용 이미지 다운로드</title>
+            <description>&lt;p&gt;기능 테스트를 하다 보면 이미지 소스들이 필요한 경우가 있습니다. 때로는 예제앱에 이미지를 포함하고 싶을때 적당한 이미지를 선택하는것도 은근 신경쓰이는 일 입니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;랜덤-사이즈로-11000가-쓰여진-테스트-이미지&quot;&gt;랜덤 사이즈로 1~1000가 쓰여진 테스트 이미지&lt;/h2&gt;
 &lt;p&gt;Download : &lt;a href=&quot;assets/images/forTest/random/random1000.zip&quot;&gt;random1000.zip&lt;/a&gt;&lt;br /&gt;
@@ -2123,20 +2156,23 @@ Download : &lt;a href=&quot;assets/images/forTest/ratio/ratioVarWidth.zip&quot;&
   &lt;p&gt;&lt;a href=&quot;http://unsample.net&quot;&gt;http://unsample.net&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
- ]]></content>
-    </entry>
-    
-    <entry>
-        <id>https://mond-al.github.io//fast-scroller</id>
-        <title><![CDATA[ Recyclerview Fastscroller Review ]]></title>
-        <author>
-            <name></name>
-            <email></email>
-        </author>
-        <updated>2021-01-18T00:00:00+09:00</updated>
-        <published>2021-01-18T00:00:00+09:00</published>
-        <link rel="via" href="https://mond-al.github.io/fast-scroller" />
-        <content type="html"><![CDATA[  &lt;p&gt;&lt;img src=&quot;assets/images/post/2021-01-18-fast-scroller/samsung_fastscroll.gif&quot; alt=&quot;drawing&quot; width=&quot;200&quot; /&gt;&lt;br /&gt;
+</description>
+            <pubDate>Fri, 22 Jan 2021 00:00:00 +0900</pubDate>
+            <link>https://mond-al.github.io//test-image-url</link>
+            <guid isPermaLink="true">https://mond-al.github.io//test-image-url</guid>
+            
+            <category>test</category>
+            
+            <category>image</category>
+            
+            <category>url</category>
+            
+            
+        </item>
+        
+        <item>
+            <title>Recyclerview Fastscroller Review</title>
+            <description>&lt;p&gt;&lt;img src=&quot;assets/images/post/2021-01-18-fast-scroller/samsung_fastscroll.gif&quot; alt=&quot;drawing&quot; width=&quot;200&quot; /&gt;&lt;br /&gt;
 위 그림처럼 갤러리나 수많은 아이템을 보여줄 때, 순차적으로 스크롤하여 접근하는 대신 스크롤 바를 잡고 바로 이동하는 역활을 하는 것을 FastScroller라고 합니다. FastScroller를 한마디로 이야기하면 “드래그하여 특정한 위치로 이동가능한 스크롤 바”라고 정의 할 수 있습니다.&lt;/p&gt;
 
 &lt;p&gt;Recyclerview는 &lt;a href=&quot;https://android.googlesource.com/platform/frameworks/support/+/androidx-main/recyclerview/recyclerview/src/main/java/androidx/recyclerview/widget/FastScroller.java&quot;&gt;FastScroller&lt;/a&gt;를 가지고있고 RecyclerView를 xml로 정의할때 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app:fastScrollEnabled=&quot;true&quot;&lt;/code&gt; 한줄만 넣어주면 해당기능을 지원 할 것 처럼 생겼습니다. 역시 구글형!&lt;/p&gt;
@@ -2229,20 +2265,23 @@ Download : &lt;a href=&quot;assets/images/forTest/ratio/ratioVarWidth.zip&quot;&
 &lt;h3 id=&quot;한번-써보세요-&quot;&gt;한번 써보세요~ 👍&lt;/h3&gt;
 
 &lt;p&gt;link : &lt;a href=&quot;https://github.com/mond-al/recyclerview-fastscroller&quot;&gt;https://github.com/mond-al/recyclerview-fastscroller&lt;/a&gt;&lt;/p&gt;
- ]]></content>
-    </entry>
-    
-    <entry>
-        <id>https://mond-al.github.io//about-reboot</id>
-        <title><![CDATA[ reboot ]]></title>
-        <author>
-            <name></name>
-            <email></email>
-        </author>
-        <updated>2021-01-12T00:00:00+09:00</updated>
-        <published>2021-01-12T00:00:00+09:00</published>
-        <link rel="via" href="https://mond-al.github.io/about-reboot" />
-        <content type="html"><![CDATA[  &lt;p&gt;다시 시작합니다.
+</description>
+            <pubDate>Mon, 18 Jan 2021 00:00:00 +0900</pubDate>
+            <link>https://mond-al.github.io//fast-scroller</link>
+            <guid isPermaLink="true">https://mond-al.github.io//fast-scroller</guid>
+            
+            <category>android</category>
+            
+            <category>recyclerview</category>
+            
+            <category>fastscroller</category>
+            
+            
+        </item>
+        
+        <item>
+            <title>reboot</title>
+            <description>&lt;p&gt;다시 시작합니다.
 BLOG, MRSK project&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -2268,7 +2307,13 @@ BLOG, MRSK project&lt;/p&gt;
 (https://github.com/mond-al/recyclerview-fastscroller)&lt;/li&gt;
 &lt;/ul&gt;
 
- ]]></content>
-    </entry>
-    
-</feed>
+</description>
+            <pubDate>Tue, 12 Jan 2021 00:00:00 +0900</pubDate>
+            <link>https://mond-al.github.io//about-reboot</link>
+            <guid isPermaLink="true">https://mond-al.github.io//about-reboot</guid>
+            
+            
+        </item>
+        
+    </channel>
+</rss>
