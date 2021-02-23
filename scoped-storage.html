@@ -38,28 +38,31 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="generator" content="Jekyll 3.6.2"/>
 <meta name="description" content="몬드는 오늘도 개발을 합니다. 내일도..."/>
-<link rel="shortcut icon" href="http://localhost:4000/assets/images/fav/favicon-96x96.png" type="image/png"/>
-<link rel="canonical" href="http://localhost:4000/scoped-storage"/>
-<link rel="alternate" type="application/rss+xml" href="http://localhost:4000/rss.xml">
+<link rel="shortcut icon" href="https://mond-al.github.io/assets/images/fav/favicon-96x96.png" type="image/png"/>
+<link rel="canonical" href="https://mond-al.github.io/scoped-storage"/>
+<link rel="alternate" type="application/rss+xml" href="https://mond-al.github.io/rss.xml">
 <meta name="referrer" content="no-referrer-when-downgrade"/>
 <meta name="google-site-verification" content="GCZr_aYYwDvGhBvJNkNJft6FY0cIWqpS9Zce3sPH784"/>
 
-<title> Scoped Storage 적용하기 -  </title>
+<title> Scoped Storage 적용하기</title>
 
-<!-- Begin Jekyll SEO tag v2.5.0 -->
-<meta name="generator" content="Jekyll v3.8.5" />
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Scoped Storage 적용하기 | 몬드의 개발로그</title>
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Scoped Storage 적용하기" />
 <meta name="author" content="jisoo Yang" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="아마도 Scoped Storage를 강제하는 부분인 Android 11(R)에서 가장 큰 변화인 것 같습니다." />
 <meta property="og:description" content="아마도 Scoped Storage를 강제하는 부분인 Android 11(R)에서 가장 큰 변화인 것 같습니다." />
-<link rel="canonical" href="http://localhost:4000/scoped-storage" />
-<meta property="og:url" content="http://localhost:4000/scoped-storage" />
+<link rel="canonical" href="https://mond-al.github.io/scoped-storage" />
+<meta property="og:url" content="https://mond-al.github.io/scoped-storage" />
 <meta property="og:site_name" content="몬드의 개발로그" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-02-01T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Scoped Storage 적용하기" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"jisoo Yang"},"url":"http://localhost:4000/scoped-storage","headline":"Scoped Storage 적용하기","dateModified":"2021-02-01T00:00:00+09:00","datePublished":"2021-02-01T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/scoped-storage"},"description":"아마도 Scoped Storage를 강제하는 부분인 Android 11(R)에서 가장 큰 변화인 것 같습니다.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo/normal_icon.png"},"name":"jisoo Yang"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"headline":"Scoped Storage 적용하기","url":"https://mond-al.github.io/scoped-storage","dateModified":"2021-02-01T00:00:00+09:00","datePublished":"2021-02-01T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mond-al.github.io/scoped-storage"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://mond-al.github.io/assets/images/logo/normal_icon.png"},"name":"jisoo Yang"},"author":{"@type":"Person","name":"jisoo Yang"},"description":"아마도 Scoped Storage를 강제하는 부분인 Android 11(R)에서 가장 큰 변화인 것 같습니다.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -69,8 +72,8 @@
 <!--<meta property="og:type" content="website"/>-->
 <!--<meta property="og:title" content="Scoped Storage 적용하기"/>-->
 <!--<meta property="og:description" content="아마도 Scoped Storage를 강제하는 부분인 Android 11(R)에서 가장 큰 변화인 것 같습니다. Scoped Storage 적용 Android 10(Q) 발표당시 안드로이드 개발자를 공포로 몰아넣었던 Scoped Storage의 유예기간이 종료되었습니다. targetSdkVersion 29를 적용할때 Scoped Storage를 무시할 수 있도록 제공된 requestLegacyExternalStorage는 targetSdkVersion 30이 적용되면 Android 11(R) 이상 디바이스에서 무시됩니다. 대신 또 다른 일회성 예외가 추가되었습니다."/>-->
-<!--<meta property="og:url" content="http://localhost:4000/scoped-storage"/>-->
-<!--<meta property="og:image" content="http://localhost:4000/assets/images/cover/common_android.jpg"/>-->
+<!--<meta property="og:url" content="https://mond-al.github.io/scoped-storage"/>-->
+<!--<meta property="og:image" content="https://mond-al.github.io/assets/images/cover/common_android.jpg"/>-->
 <!--<meta property="article:publisher" content="https://www.facebook.com/jisoo.yang.56"/>-->
 <!--<meta property="article:author" content="https://www.facebook.com/jisoo.yang.56"/>-->
 <!--<meta property="article:published_time" content="2021-02-01T00:00:00+09:00"/>-->
@@ -79,8 +82,8 @@
 <!--<meta name="twitter:card" content="summary_large_image"/>-->
 <!--<meta name="twitter:title" content="Scoped Storage 적용하기"/>-->
 <!--<meta name="twitter:description" content="아마도 Scoped Storage를 강제하는 부분인 Android 11(R)에서 가장 큰 변화인 것 같습니다. Scoped Storage 적용 Android 10(Q) 발표당시 안드로이드 개발자를 공포로 몰아넣었던 Scoped Storage의 유예기간이 종료되었습니다. targetSdkVersion 29를 적용할때 Scoped Storage를 무시할 수 있도록 제공된 requestLegacyExternalStorage는 targetSdkVersion 30이 적용되면 Android 11(R) 이상 디바이스에서 무시됩니다. 대신 또 다른 일회성 예외가 추가되었습니다."/>-->
-<!--<meta name="twitter:url" content="http://localhost:4000/"/>-->
-<!--<meta name="twitter:image" content="http://localhost:4000/assets/images/cover/common_android.jpg"/>-->
+<!--<meta name="twitter:url" content="https://mond-al.github.io/"/>-->
+<!--<meta name="twitter:image" content="https://mond-al.github.io/assets/images/cover/common_android.jpg"/>-->
 <!--<meta name="twitter:label1" content="Written by"/>-->
 <!--<meta name="twitter:data1" content="몬드의 개발로그"/>-->
 <!--<meta name="twitter:label2" content="Filed under"/>-->
@@ -110,7 +113,7 @@ into the {body} of the default.hbs template -->
     <div class="site-nav-left">
         
             
-                <a class="site-nav-logo" href="http://localhost:4000/"><img src="/assets/images/logo/normal_icon.png" alt="몬드의 개발로그" /></a>
+                <a class="site-nav-logo" href="https://mond-al.github.io/"><img src="/assets/images/logo/normal_icon.png" alt="몬드의 개발로그" /></a>
             
         
         
@@ -230,7 +233,7 @@ into the {body} of the default.hbs template -->
 <p><code class="language-plaintext highlighter-rouge">Scoped Storage 적용되지 않은 상태</code>에서는 새롭게 생성한 이미지나 미디어 파일를 갤러리앱에 노출하기 위해서는 아래처럼 contentResolver를 이용해 파일을 등록하도록 하였습니다. 코드의 문맥을 보면 파일의 절대경로는 별도로 존재하고 DB에 해당 파일의 row를 추가하는 형태 였습니다. <code class="language-plaintext highlighter-rouge">Scoped Storage 적용된 상태</code>에서 <code class="language-plaintext highlighter-rouge">MediaStore</code>를 이용하여 이미지,비디오,오디오,다운로된 파일의 경로에 추가 하기 위해서는 아래의 코드 처럼 작성해야 합니다.</p>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">ContentValues</span> <span class="n">contentValues</span><span class="p">=</span><span class="n">new</span> <span class="nc">ContentValues</span><span class="p">()</span>
-<span class="n">contentValues</span><span class="p">.</span><span class="nf">put</span><span class="p">(</span><span class="nc">MediaStore</span><span class="p">.</span><span class="nc">Images</span><span class="p">.</span><span class="nc">Media</span><span class="p">.</span><span class="nc">IS_PENDING</span><span class="p">,</span><span class="m">1</span><span class="p">)</span>   <span class="c1">// I/O는 오래 걸리니... 일단 PENDING 시켜놓고</span>
+<span class="n">contentValues</span><span class="p">.</span><span class="nf">put</span><span class="p">(</span><span class="nc">MediaStore</span><span class="p">.</span><span class="nc">Images</span><span class="p">.</span><span class="nc">Media</span><span class="p">.</span><span class="nc">IS_PENDING</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>   <span class="c1">// I/O는 오래 걸리니... 일단 PENDING 시켜놓고</span>
 <span class="n">contentValues</span><span class="p">.</span><span class="nf">put</span><span class="p">(</span><span class="nc">MediaStore</span><span class="p">.</span><span class="nc">Images</span><span class="p">.</span><span class="nc">Media</span><span class="p">.</span><span class="nc">RELATIVE_PATH</span><span class="p">,</span><span class="nc">Environment</span><span class="p">.</span><span class="nc">DIRECTORY_PICTURES</span><span class="p">)</span> <span class="c1">// 경로를 결정합니다.</span>
 <span class="o">....</span>
 <span class="kd">val</span> <span class="py">uri</span><span class="p">=</span><span class="nf">getContentResolver</span><span class="p">().</span><span class="nf">insert</span><span class="p">(</span><span class="nc">MediaStore</span><span class="p">.</span><span class="nc">Images</span><span class="p">.</span><span class="nc">Media</span><span class="p">.</span><span class="nc">EXTERNAL_CONTENT_URI</span><span class="p">,</span><span class="n">contentValues</span><span class="p">)</span>
@@ -242,7 +245,7 @@ into the {body} of the default.hbs template -->
 
 <span class="n">contentValues</span><span class="p">.</span><span class="nf">clear</span><span class="p">()</span>
 <span class="n">contentValues</span><span class="p">.</span><span class="nf">put</span><span class="p">(</span><span class="nc">MediaStore</span><span class="p">.</span><span class="nc">Images</span><span class="p">.</span><span class="nc">Media</span><span class="p">.</span><span class="nc">SIZE</span><span class="p">,</span><span class="n">file</span><span class="p">.</span><span class="nf">length</span><span class="p">())</span>
-<span class="n">contentValues</span><span class="p">.</span><span class="nf">put</span><span class="p">(</span><span class="nc">MediaStore</span><span class="p">.</span><span class="nc">Images</span><span class="p">.</span><span class="nc">Media</span><span class="p">.</span><span class="nc">IS_PENDING</span><span class="p">,</span><span class="m">0</span><span class="p">)</span>    <span class="c1">// 작업이 끝나면 PENDING을 해제합니다.</span>
+<span class="n">contentValues</span><span class="p">.</span><span class="nf">put</span><span class="p">(</span><span class="nc">MediaStore</span><span class="p">.</span><span class="nc">Images</span><span class="p">.</span><span class="nc">Media</span><span class="p">.</span><span class="nc">IS_PENDING</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>    <span class="c1">// 작업이 끝나면 PENDING을 해제합니다.</span>
 <span class="nf">getContentResolver</span><span class="p">().</span><span class="nf">update</span><span class="p">(</span><span class="n">fileUri</span><span class="p">,</span><span class="n">contentValues</span><span class="p">,</span><span class="k">null</span><span class="p">,</span><span class="k">null</span><span class="p">)</span>
 </code></pre></div></div>
 
@@ -289,7 +292,7 @@ into the {body} of the default.hbs template -->
         <span class="p">.</span><span class="nf">getContentUri</span><span class="p">(</span><span class="nc">MediaStore</span><span class="p">.</span><span class="nc">VOLUME_EXTERNAL_PRIMARY</span><span class="p">)</span>
 <span class="kd">val</span> <span class="py">songDetails</span> <span class="p">=</span> <span class="nc">ContentValues</span><span class="p">().</span><span class="nf">apply</span> <span class="p">{</span>
     <span class="nf">put</span><span class="p">(</span><span class="nc">MediaStore</span><span class="p">.</span><span class="nc">Audio</span><span class="p">.</span><span class="nc">Media</span><span class="p">.</span><span class="nc">DISPLAY_NAME</span><span class="p">,</span> <span class="s">"My Workout Playlist.mp3"</span><span class="p">)</span>
-    <span class="nf">put</span><span class="p">(</span><span class="nc">MediaStore</span><span class="p">.</span><span class="nc">Audio</span><span class="p">.</span><span class="nc">Media</span><span class="p">.</span><span class="nc">IS_PENDING</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span>
+    <span class="nf">put</span><span class="p">(</span><span class="nc">MediaStore</span><span class="p">.</span><span class="nc">Audio</span><span class="p">.</span><span class="nc">Media</span><span class="p">.</span><span class="nc">IS_PENDING</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="p">}</span>
 <span class="kd">val</span> <span class="py">songContentUri</span> <span class="p">=</span> <span class="n">contentResolver</span><span class="p">.</span><span class="nf">insert</span><span class="p">(</span><span class="n">audioCollection</span><span class="p">,</span> <span class="n">songDetails</span><span class="p">)</span><span class="o">!!</span>
 <span class="n">contentResolver</span><span class="p">.</span><span class="nf">openFileDescriptor</span><span class="p">(</span><span class="n">songContentUri</span><span class="p">,</span> <span class="s">"w"</span><span class="p">,</span> <span class="k">null</span><span class="p">)</span><span class="o">?.</span><span class="nf">use</span> <span class="p">{</span> <span class="n">pfd</span> <span class="p">-&gt;</span>
@@ -297,7 +300,7 @@ into the {body} of the default.hbs template -->
     <span class="kd">val</span> <span class="py">outputStream</span> <span class="p">=</span> <span class="nc">FileOutputStream</span><span class="p">(</span><span class="n">pfd</span><span class="p">.</span><span class="n">fileDescriptor</span><span class="p">)</span>
     <span class="k">while</span> <span class="p">(</span><span class="k">true</span><span class="p">)</span> <span class="p">{</span>
         <span class="kd">val</span> <span class="py">data</span> <span class="p">=</span> <span class="n">inputStream</span><span class="p">.</span><span class="nf">read</span><span class="p">()</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">data</span> <span class="p">==</span> <span class="p">-</span><span class="m">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">data</span> <span class="p">==</span> <span class="p">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
             <span class="k">break</span>
         <span class="p">}</span>
         <span class="n">outputStream</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
@@ -306,7 +309,7 @@ into the {body} of the default.hbs template -->
     <span class="n">outputStream</span><span class="p">.</span><span class="nf">close</span><span class="p">()</span>
 <span class="p">}</span>
 <span class="n">songDetails</span><span class="p">.</span><span class="nf">clear</span><span class="p">()</span>
-<span class="n">songDetails</span><span class="p">.</span><span class="nf">put</span><span class="p">(</span><span class="nc">MediaStore</span><span class="p">.</span><span class="nc">Audio</span><span class="p">.</span><span class="nc">Media</span><span class="p">.</span><span class="nc">IS_PENDING</span><span class="p">,</span> <span class="m">0</span><span class="p">)</span>
+<span class="n">songDetails</span><span class="p">.</span><span class="nf">put</span><span class="p">(</span><span class="nc">MediaStore</span><span class="p">.</span><span class="nc">Audio</span><span class="p">.</span><span class="nc">Media</span><span class="p">.</span><span class="nc">IS_PENDING</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">contentResolver</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">songContentUri</span><span class="p">,</span> <span class="n">songDetails</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="k">null</span><span class="p">)</span>
 </code></pre></div></div>
 
@@ -319,16 +322,16 @@ into the {body} of the default.hbs template -->
 <p>주의할 점은 메니페이스트에서 WRITE_EXTERNAL_STORAGE를 제거하거나, WRITE_EXTERNAL_STORAGE를에 maxSdkVersion=28 같은 옵션을 추가하면 LegacyExternalStorage에 대한 권한을 유지 할 수 없습니다.</p>
 
 <p>테스트 절차는 다음과 같습니다.</p>
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="m">1</span><span class="p">.</span> <span class="nc">Environment</span><span class="p">.</span><span class="nf">getExternalStorageDirectory</span><span class="p">()</span><span class="err">경로에</span> <span class="err">파일을</span> <span class="err">추가하는</span> <span class="err">앱준비합니다</span><span class="p">.</span> 
-<span class="m">2</span><span class="p">.</span> <span class="n">target</span><span class="p">/</span><span class="n">compileSdkVersion</span> <span class="m">29</span><span class="err">이하로</span> <span class="err">빌드합니다</span><span class="p">.</span> <span class="err">버전코드는</span> <span class="nc">X</span><span class="err">입니다</span><span class="p">.</span>  
-   <span class="p">(</span><span class="m">29</span><span class="err">인</span> <span class="err">경우에는</span> <span class="err">메니페스트에</span> <span class="n">requestLegacyExternalStorage</span><span class="p">=</span><span class="k">true</span><span class="p">)</span>
-<span class="m">3</span><span class="p">.</span> <span class="err">준비된</span> <span class="err">단말기에</span> <span class="m">2</span><span class="err">의</span> <span class="err">앱을</span> <span class="err">설치</span> <span class="err">및</span> <span class="err">실행합니다</span><span class="p">.</span>
-<span class="m">4</span><span class="p">.</span> <span class="err">앱의</span> <span class="err">권한중</span> <span class="nc">WRITE_EXTERNAL_STORAGE</span><span class="err">를</span> <span class="err">허용합니다</span><span class="p">.</span>
-<span class="m">5</span><span class="p">.</span> <span class="err">앱을</span> <span class="err">통해</span> <span class="err">파일을</span> <span class="err">생성합니다</span><span class="p">.</span>
-<span class="m">6</span><span class="p">.</span> <span class="err">동일한</span> <span class="err">앱의</span> <span class="err">빌드환경을</span> <span class="n">target</span><span class="p">/</span><span class="n">compileSdkVersion</span><span class="err">는</span> <span class="m">30</span><span class="err">으로</span><span class="p">,</span> <span class="err">버전코드는</span> <span class="nc">X</span><span class="p">+</span><span class="err">로</span> <span class="err">변경후</span> <span class="err">다시</span> <span class="err">빌드합니다</span><span class="p">.</span>  
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">1</span><span class="p">.</span> <span class="nc">Environment</span><span class="p">.</span><span class="nf">getExternalStorageDirectory</span><span class="p">()</span><span class="err">경로에</span> <span class="err">파일을</span> <span class="err">추가하는</span> <span class="err">앱준비합니다</span><span class="p">.</span> 
+<span class="mi">2</span><span class="p">.</span> <span class="n">target</span><span class="p">/</span><span class="n">compileSdkVersion</span> <span class="mi">29</span><span class="err">이하로</span> <span class="err">빌드합니다</span><span class="p">.</span> <span class="err">버전코드는</span> <span class="nc">X</span><span class="err">입니다</span><span class="p">.</span>  
+   <span class="p">(</span><span class="mi">29</span><span class="err">인</span> <span class="err">경우에는</span> <span class="err">메니페스트에</span> <span class="n">requestLegacyExternalStorage</span><span class="p">=</span><span class="k">true</span><span class="p">)</span>
+<span class="mi">3</span><span class="p">.</span> <span class="err">준비된</span> <span class="err">단말기에</span> <span class="mi">2</span><span class="err">의</span> <span class="err">앱을</span> <span class="err">설치</span> <span class="err">및</span> <span class="err">실행합니다</span><span class="p">.</span>
+<span class="mi">4</span><span class="p">.</span> <span class="err">앱의</span> <span class="err">권한중</span> <span class="nc">WRITE_EXTERNAL_STORAGE</span><span class="err">를</span> <span class="err">허용합니다</span><span class="p">.</span>
+<span class="mi">5</span><span class="p">.</span> <span class="err">앱을</span> <span class="err">통해</span> <span class="err">파일을</span> <span class="err">생성합니다</span><span class="p">.</span>
+<span class="mi">6</span><span class="p">.</span> <span class="err">동일한</span> <span class="err">앱의</span> <span class="err">빌드환경을</span> <span class="n">target</span><span class="p">/</span><span class="n">compileSdkVersion</span><span class="err">는</span> <span class="mi">30</span><span class="err">으로</span><span class="p">,</span> <span class="err">버전코드는</span> <span class="nc">X</span><span class="p">+</span><span class="err">로</span> <span class="err">변경후</span> <span class="err">다시</span> <span class="err">빌드합니다</span><span class="p">.</span>  
    <span class="p">(</span><span class="nc">WRITE_EXTERNAL_STORAGE</span><span class="err">를</span> <span class="err">제거</span> <span class="err">해선</span> <span class="err">안됩니다</span><span class="p">.)</span>
-<span class="m">7</span><span class="p">.</span> <span class="m">6</span><span class="err">의</span> <span class="err">앱을</span> <span class="err">설치</span><span class="p">,</span> <span class="err">실행합니다</span><span class="p">.</span>
-<span class="m">8</span><span class="p">.</span> <span class="err">앱을</span> <span class="err">통해</span> <span class="err">파일을</span> <span class="err">업데이트</span><span class="p">,</span> <span class="err">추가가</span> <span class="err">잘</span> <span class="err">되는지</span> <span class="err">확인</span> <span class="err">합니다</span><span class="p">.</span> 
+<span class="mi">7</span><span class="p">.</span> <span class="mi">6</span><span class="err">의</span> <span class="err">앱을</span> <span class="err">설치</span><span class="p">,</span> <span class="err">실행합니다</span><span class="p">.</span>
+<span class="mi">8</span><span class="p">.</span> <span class="err">앱을</span> <span class="err">통해</span> <span class="err">파일을</span> <span class="err">업데이트</span><span class="p">,</span> <span class="err">추가가</span> <span class="err">잘</span> <span class="err">되는지</span> <span class="err">확인</span> <span class="err">합니다</span><span class="p">.</span> 
 </code></pre></div></div>
 
 
@@ -394,7 +397,7 @@ into the {body} of the default.hbs template -->
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            this.page.url = 'http://localhost:4000/scoped-storage';
+                            this.page.url = 'https://mond-al.github.io/scoped-storage';
                             this.page.identifier = '/scoped-storage';
                             this.page.title = 'Scoped Storage 적용하기';
                         };
@@ -678,7 +681,7 @@ into the {body} of the default.hbs template -->
 <!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
 <div class="floating-header">
     <div class="floating-header-logo">
-        <a href="http://localhost:4000/">
+        <a href="https://mond-al.github.io/">
             
                 <img src="/assets/images/logo/black_diver_icon.png" alt="몬드의 개발로그 icon" />
             
@@ -722,7 +725,7 @@ into the {body} of the default.hbs template -->
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="http://localhost:4000/">몬드의 개발로그</a> &copy; 2021</section>
+                <section class="copyright"><a href="https://mond-al.github.io/">몬드의 개발로그</a> &copy; 2021</section>
             </div>
         </footer>
 
