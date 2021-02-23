@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="https://mond-al.github.io/tag/android/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-23T11:39:12+09:00</updated>
-  <id>https://mond-al.github.io/tag/android/feed.xml</id>
+  <link href="http://localhost:4000/tag/android/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2021-02-23T11:39:20+09:00</updated>
+  <id>http://localhost:4000/tag/android/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)</title>
-      <link href="https://mond-al.github.io/viewpager-fragment" rel="alternate" type="text/html" title="FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)" />
+      <link href="http://localhost:4000/viewpager-fragment" rel="alternate" type="text/html" title="FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)" />
       <published>2021-02-18T00:00:00+09:00</published>
       <updated>2021-02-18T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/viewpager-fragment</id>
-      <content type="html" xml:base="https://mond-al.github.io/viewpager-fragment">&lt;p&gt;이름이 워낙 길고, 비슷하기 까지 해서 항상 어떤 녀석을 사용 해야 할지 망설이게 됩니다. 내 앱에서는 딱히 configChanges 나 onPause/onResume에 대한 처리를 딱히 타이트하지 않는데 꼭 “State”가 붙은 것을 사용해야 할지 고민도 되구요. 이 두 클래스에 대해 살펴보겠습니다. 우선 변경된 생성자 이야기부터 시작하겠습니다.&lt;/p&gt;
+      <id>http://localhost:4000/viewpager-fragment</id>
+      <content type="html" xml:base="http://localhost:4000/viewpager-fragment">&lt;p&gt;이름이 워낙 길고, 비슷하기 까지 해서 항상 어떤 녀석을 사용 해야 할지 망설이게 됩니다. 내 앱에서는 딱히 configChanges 나 onPause/onResume에 대한 처리를 딱히 타이트하지 않는데 꼭 “State”가 붙은 것을 사용해야 할지 고민도 되구요. 이 두 클래스에 대해 살펴보겠습니다. 우선 변경된 생성자 이야기부터 시작하겠습니다.&lt;/p&gt;
 
 &lt;p&gt;두 클래스 모두 androidx.fragment.app 패키지에 포함되어 있습니다. 이번 문서에서는 공통적인 내용만 다룰 예정이라 FragmentPagerAdapter를 기준으로 설명하고 Fragment(State)PagerAdapter에 대한 지칭은 생략하겠습니다.&lt;/p&gt;
 
@@ -219,11 +219,11 @@ This may be used by the system to prioritize operations such as fragment lifecyc
   
     <entry>
       <title type="html">아키텍처와 클린코드 그리고 TDD (2)</title>
-      <link href="https://mond-al.github.io/architecture-base-2" rel="alternate" type="text/html" title="아키텍처와 클린코드 그리고 TDD (2)" />
+      <link href="http://localhost:4000/architecture-base-2" rel="alternate" type="text/html" title="아키텍처와 클린코드 그리고 TDD (2)" />
       <published>2021-02-17T00:00:00+09:00</published>
       <updated>2021-02-17T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/architecture-base-2</id>
-      <content type="html" xml:base="https://mond-al.github.io/architecture-base-2">&lt;p&gt;함수 리팩토링을 통해 아름다운 코드로 바꿔보자. 그리고 왜 이렇게 하는지 이해는게 목표이다.&lt;/p&gt;
+      <id>http://localhost:4000/architecture-base-2</id>
+      <content type="html" xml:base="http://localhost:4000/architecture-base-2">&lt;p&gt;함수 리팩토링을 통해 아름다운 코드로 바꿔보자. 그리고 왜 이렇게 하는지 이해는게 목표이다.&lt;/p&gt;
 
 &lt;p&gt;이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 &lt;a href=&quot;https://www.youtube.com/watch?v=60lLSe1phks&amp;amp;t=2091s&quot;&gt;유튜브 강좌&lt;/a&gt;를 보시길 추천드립니다.&lt;/p&gt;
 
@@ -300,11 +300,11 @@ gradle에 익숙한 안드로이드 개발자에겐 조금 어색한 소스이�
   
     <entry>
       <title type="html">아키텍처와 클린코드 그리고 TDD (1)</title>
-      <link href="https://mond-al.github.io/architecture-base-1" rel="alternate" type="text/html" title="아키텍처와 클린코드 그리고 TDD (1)" />
+      <link href="http://localhost:4000/architecture-base-1" rel="alternate" type="text/html" title="아키텍처와 클린코드 그리고 TDD (1)" />
       <published>2021-02-15T00:00:00+09:00</published>
       <updated>2021-02-15T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/architecture-base-1</id>
-      <content type="html" xml:base="https://mond-al.github.io/architecture-base-1">&lt;p&gt;객체지향에 대해 정리하고, 전체적인 맥락을 짚어본다.&lt;/p&gt;
+      <id>http://localhost:4000/architecture-base-1</id>
+      <content type="html" xml:base="http://localhost:4000/architecture-base-1">&lt;p&gt;객체지향에 대해 정리하고, 전체적인 맥락을 짚어본다.&lt;/p&gt;
 
 &lt;p&gt;이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 &lt;a href=&quot;https://www.youtube.com/watch?v=60lLSe1phks&amp;amp;t=2091s&quot;&gt;유튜브 강좌&lt;/a&gt;를 보시길 추천드립니다.&lt;/p&gt;
 
@@ -490,11 +490,11 @@ ZetEngine mc = new ZetMotocycle();
   
     <entry>
       <title type="html">카메라 사진촬영으로 보는 Scoped storage 예제 및 소스</title>
-      <link href="https://mond-al.github.io/example-camera" rel="alternate" type="text/html" title="카메라 사진촬영으로 보는 Scoped storage 예제 및 소스" />
+      <link href="http://localhost:4000/example-camera" rel="alternate" type="text/html" title="카메라 사진촬영으로 보는 Scoped storage 예제 및 소스" />
       <published>2021-02-10T00:00:00+09:00</published>
       <updated>2021-02-10T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/example-camera</id>
-      <content type="html" xml:base="https://mond-al.github.io/example-camera">&lt;p&gt;Target/Compile Sdk version에 Api level 30을 적용한 아주 간단한 사진촬영 (요청) 앱입니다.  이 앱의 목표는 다음과 같습니다.&lt;/p&gt;
+      <id>http://localhost:4000/example-camera</id>
+      <content type="html" xml:base="http://localhost:4000/example-camera">&lt;p&gt;Target/Compile Sdk version에 Api level 30을 적용한 아주 간단한 사진촬영 (요청) 앱입니다.  이 앱의 목표는 다음과 같습니다.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Android 10(Q)이후 디바이스에 요구되는 &lt;em&gt;Scoped storage&lt;/em&gt;일때 사진 촬영 요청 및 Media Store 등록.&lt;/li&gt;
   &lt;li&gt;안드로이드 앱에서 최소한의 permission으로 어떻게 사진촬영/저장 기능을 제공하는지 보여줍니다.&lt;/li&gt;
@@ -660,11 +660,11 @@ ZetEngine mc = new ZetMotocycle();
   
     <entry>
       <title type="html">Binding이 되지않을때 (by viewModels()에 에러)</title>
-      <link href="https://mond-al.github.io/about-binding" rel="alternate" type="text/html" title="Binding이 되지않을때 (by viewModels()에 에러)" />
+      <link href="http://localhost:4000/about-binding" rel="alternate" type="text/html" title="Binding이 되지않을때 (by viewModels()에 에러)" />
       <published>2021-02-09T00:00:00+09:00</published>
       <updated>2021-02-09T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/about-binding</id>
-      <content type="html" xml:base="https://mond-al.github.io/about-binding">&lt;p&gt;프로젝트가 세팅되지 않은 상태에서 디펜던시 정의를 빠트린경우인데 new Project를 통해 empty activity 프로젝트로 시작하면 항상 빠트리다 보니 포스팅으로 정리해둡니다.&lt;/p&gt;
+      <id>http://localhost:4000/about-binding</id>
+      <content type="html" xml:base="http://localhost:4000/about-binding">&lt;p&gt;프로젝트가 세팅되지 않은 상태에서 디펜던시 정의를 빠트린경우인데 new Project를 통해 empty activity 프로젝트로 시작하면 항상 빠트리다 보니 포스팅으로 정리해둡니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;by-viewmodels에-에러가-나는-경우&quot;&gt;by viewModels()에 에러가 나는 경우.&lt;/h2&gt;
 
@@ -778,11 +778,11 @@ ZetEngine mc = new ZetMotocycle();
   
     <entry>
       <title type="html">File Provider Path 디렉리터 영역 매칭</title>
-      <link href="https://mond-al.github.io/cache-share" rel="alternate" type="text/html" title="File Provider Path 디렉리터 영역 매칭" />
+      <link href="http://localhost:4000/cache-share" rel="alternate" type="text/html" title="File Provider Path 디렉리터 영역 매칭" />
       <published>2021-02-08T00:00:00+09:00</published>
       <updated>2021-02-08T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/cache-share</id>
-      <content type="html" xml:base="https://mond-al.github.io/cache-share">&lt;p&gt;Android 7(N)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. 얼마전 기존 프로젝트에 Android 11(R) 대응을 위해 Scoped Storage 적용을 진행하면서 기존 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache, files, external(Media/Download)로 구분하는 처리가 추가되었습니다. 이로 인해 external경로 이외에도 파일프로바이더로 제공할 수 있도록 수정이 필요했습니다.&lt;/p&gt;
+      <id>http://localhost:4000/cache-share</id>
+      <content type="html" xml:base="http://localhost:4000/cache-share">&lt;p&gt;Android 7(N)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. 얼마전 기존 프로젝트에 Android 11(R) 대응을 위해 Scoped Storage 적용을 진행하면서 기존 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache, files, external(Media/Download)로 구분하는 처리가 추가되었습니다. 이로 인해 external경로 이외에도 파일프로바이더로 제공할 수 있도록 수정이 필요했습니다.&lt;/p&gt;
 
 &lt;p&gt;추가 할 수 있는 path의 종류와 가르키는 영역 정리&lt;/p&gt;
 
@@ -901,11 +901,11 @@ ZetEngine mc = new ZetMotocycle();
   
     <entry>
       <title type="html">안드로이드 파일 쓰기</title>
-      <link href="https://mond-al.github.io/file-write" rel="alternate" type="text/html" title="안드로이드 파일 쓰기" />
+      <link href="http://localhost:4000/file-write" rel="alternate" type="text/html" title="안드로이드 파일 쓰기" />
       <published>2021-02-02T00:00:00+09:00</published>
       <updated>2021-02-02T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/file-write</id>
-      <content type="html" xml:base="https://mond-al.github.io/file-write">&lt;p&gt;안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다.&lt;/p&gt;
+      <id>http://localhost:4000/file-write</id>
+      <content type="html" xml:base="http://localhost:4000/file-write">&lt;p&gt;안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;코드 아래 path를 정리해두었는데 path는 제조사,기종,OS버전등에 의해 따라 달라질 수 있습니다. 대략적인 형상에 대해 정리 해두는 자료로 이해하기 바랍니다.&lt;/strong&gt;&lt;/p&gt;
 
@@ -1120,11 +1120,11 @@ Step 2. Step 1에서 얻은 Uri를 통해 파일을 작성합니다.&lt;/p&gt;
   
     <entry>
       <title type="html">Scoped Storage 적용하기</title>
-      <link href="https://mond-al.github.io/scoped-storage" rel="alternate" type="text/html" title="Scoped Storage 적용하기" />
+      <link href="http://localhost:4000/scoped-storage" rel="alternate" type="text/html" title="Scoped Storage 적용하기" />
       <published>2021-02-01T00:00:00+09:00</published>
       <updated>2021-02-01T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/scoped-storage</id>
-      <content type="html" xml:base="https://mond-al.github.io/scoped-storage">&lt;p&gt;아마도 Scoped Storage를 강제하는 부분인 Android 11(R)에서 가장 큰 변화인 것 같습니다.&lt;/p&gt;
+      <id>http://localhost:4000/scoped-storage</id>
+      <content type="html" xml:base="http://localhost:4000/scoped-storage">&lt;p&gt;아마도 Scoped Storage를 강제하는 부분인 Android 11(R)에서 가장 큰 변화인 것 같습니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;scoped-storage-적용&quot;&gt;Scoped Storage 적용&lt;/h2&gt;
 
@@ -1309,11 +1309,11 @@ Step 2. Step 1에서 얻은 Uri를 통해 파일을 작성합니다.&lt;/p&gt;
   
     <entry>
       <title type="html">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</title>
-      <link href="https://mond-al.github.io/error-log-android-11-api-changed" rel="alternate" type="text/html" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable" />
+      <link href="http://localhost:4000/error-log-android-11-api-changed" rel="alternate" type="text/html" title="java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable" />
       <published>2021-01-30T00:00:00+09:00</published>
       <updated>2021-01-30T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/error-log-android-11-api-changed</id>
-      <content type="html" xml:base="https://mond-al.github.io/error-log-android-11-api-changed">&lt;h3 id=&quot;where-did-the-problem-occur&quot;&gt;Where did the problem occur?&lt;/h3&gt;
+      <id>http://localhost:4000/error-log-android-11-api-changed</id>
+      <content type="html" xml:base="http://localhost:4000/error-log-android-11-api-changed">&lt;h3 id=&quot;where-did-the-problem-occur&quot;&gt;Where did the problem occur?&lt;/h3&gt;
 &lt;h2 id=&quot;case-a&quot;&gt;case A&lt;/h2&gt;
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ExceptionInInitializerError&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;okhttp3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;internal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;platform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Platform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Platform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;85&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
@@ -1415,11 +1415,11 @@ Step 2. Step 1에서 얻은 Uri를 통해 파일을 작성합니다.&lt;/p&gt;
   
     <entry>
       <title type="html">앱의 의존성 확인하고 전이 의존성 변경하기</title>
-      <link href="https://mond-al.github.io/dependency-gradle" rel="alternate" type="text/html" title="앱의 의존성 확인하고 전이 의존성 변경하기" />
+      <link href="http://localhost:4000/dependency-gradle" rel="alternate" type="text/html" title="앱의 의존성 확인하고 전이 의존성 변경하기" />
       <published>2021-01-27T00:00:00+09:00</published>
       <updated>2021-01-27T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/dependency-gradle</id>
-      <content type="html" xml:base="https://mond-al.github.io/dependency-gradle">&lt;p&gt;의존성과 관련하여 문제가 생겼다고 판단되면 &lt;code class=&quot;highlighter-rouge&quot;&gt;의존성 트리&lt;/code&gt;를 봐야합니다. 터미널에서 프로젝트가 있는 폴더로 이동하고 아래의 명령어를 실행 하면됩니다.&lt;/p&gt;
+      <id>http://localhost:4000/dependency-gradle</id>
+      <content type="html" xml:base="http://localhost:4000/dependency-gradle">&lt;p&gt;의존성과 관련하여 문제가 생겼다고 판단되면 &lt;code class=&quot;highlighter-rouge&quot;&gt;의존성 트리&lt;/code&gt;를 봐야합니다. 터미널에서 프로젝트가 있는 폴더로 이동하고 아래의 명령어를 실행 하면됩니다.&lt;/p&gt;
 
 &lt;p&gt;혹시 &lt;code class=&quot;highlighter-rouge&quot;&gt;{Dementions...}{buildType}&lt;/code&gt;부분이 이해되지 않으신다면, &lt;a href=&quot;ProductFlavors-BuildType&quot;&gt;ProductFlavors와 BuildType&lt;/a&gt;을 참고해주세요.&lt;/p&gt;
 

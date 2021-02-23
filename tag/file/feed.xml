@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="https://mond-al.github.io/tag/file/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-23T11:39:12+09:00</updated>
-  <id>https://mond-al.github.io/tag/file/feed.xml</id>
+  <link href="http://localhost:4000/tag/file/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2021-02-23T11:39:20+09:00</updated>
+  <id>http://localhost:4000/tag/file/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">안드로이드 파일 쓰기</title>
-      <link href="https://mond-al.github.io/file-write" rel="alternate" type="text/html" title="안드로이드 파일 쓰기" />
+      <link href="http://localhost:4000/file-write" rel="alternate" type="text/html" title="안드로이드 파일 쓰기" />
       <published>2021-02-02T00:00:00+09:00</published>
       <updated>2021-02-02T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/file-write</id>
-      <content type="html" xml:base="https://mond-al.github.io/file-write">&lt;p&gt;안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다.&lt;/p&gt;
+      <id>http://localhost:4000/file-write</id>
+      <content type="html" xml:base="http://localhost:4000/file-write">&lt;p&gt;안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;코드 아래 path를 정리해두었는데 path는 제조사,기종,OS버전등에 의해 따라 달라질 수 있습니다. 대략적인 형상에 대해 정리 해두는 자료로 이해하기 바랍니다.&lt;/strong&gt;&lt;/p&gt;
 

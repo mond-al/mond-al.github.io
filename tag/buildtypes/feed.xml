@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="https://mond-al.github.io/tag/buildtypes/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-23T11:39:12+09:00</updated>
-  <id>https://mond-al.github.io/tag/buildtypes/feed.xml</id>
+  <link href="http://localhost:4000/tag/buildtypes/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2021-02-23T11:39:20+09:00</updated>
+  <id>http://localhost:4000/tag/buildtypes/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">ProductFlavors와 BuildType 조합</title>
-      <link href="https://mond-al.github.io/ProductFlavors-BuildType" rel="alternate" type="text/html" title="ProductFlavors와 BuildType 조합" />
+      <link href="http://localhost:4000/ProductFlavors-BuildType" rel="alternate" type="text/html" title="ProductFlavors와 BuildType 조합" />
       <published>2021-01-26T00:00:00+09:00</published>
       <updated>2021-01-26T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/ProductFlavors-BuildType</id>
-      <content type="html" xml:base="https://mond-al.github.io/ProductFlavors-BuildType">&lt;p&gt;Gradle에서 ProductFlavors와 BuildType을 이용해서 다양한 형상을 만들 수 있습니다. Gradle을 기반으로 BuildTypes은 기본으로하고 ProductFlavors에 여러가지 dimension을 정의하여 조합하여 빌드를 간편하게 생산 할 수있습니다. 간략한 예를 들어 상황을 정의하고 실제 build.gradle 파일을 수정해 보겠습니다.&lt;/p&gt;
+      <id>http://localhost:4000/ProductFlavors-BuildType</id>
+      <content type="html" xml:base="http://localhost:4000/ProductFlavors-BuildType">&lt;p&gt;Gradle에서 ProductFlavors와 BuildType을 이용해서 다양한 형상을 만들 수 있습니다. Gradle을 기반으로 BuildTypes은 기본으로하고 ProductFlavors에 여러가지 dimension을 정의하여 조합하여 빌드를 간편하게 생산 할 수있습니다. 간략한 예를 들어 상황을 정의하고 실제 build.gradle 파일을 수정해 보겠습니다.&lt;/p&gt;
 
 &lt;p&gt;서비스가 점점 커지다 보면 일명 “OO향”빌드를 배포해야하는 경우나 “XX용”빌드를 따로 뽑아야하는 경우가 생깁니다. 가령 예를 들자면 “중국향”과 “국내향”처럼 나눌수 있을 것이고, “개발용”,”QA용”,”내부배포용”,”실서비스용”으로도 나눌 수도 있습니다. 이런 구성을 개발에서 각 버전을 구분하여 관리해야 한다면 우리는 어떻게 해야 할까요?&lt;/p&gt;
 

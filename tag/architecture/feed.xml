@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="https://mond-al.github.io/tag/architecture/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-23T11:39:12+09:00</updated>
-  <id>https://mond-al.github.io/tag/architecture/feed.xml</id>
+  <link href="http://localhost:4000/tag/architecture/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2021-02-23T11:39:20+09:00</updated>
+  <id>http://localhost:4000/tag/architecture/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">아키텍처와 클린코드 그리고 TDD (2)</title>
-      <link href="https://mond-al.github.io/architecture-base-2" rel="alternate" type="text/html" title="아키텍처와 클린코드 그리고 TDD (2)" />
+      <link href="http://localhost:4000/architecture-base-2" rel="alternate" type="text/html" title="아키텍처와 클린코드 그리고 TDD (2)" />
       <published>2021-02-17T00:00:00+09:00</published>
       <updated>2021-02-17T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/architecture-base-2</id>
-      <content type="html" xml:base="https://mond-al.github.io/architecture-base-2">&lt;p&gt;함수 리팩토링을 통해 아름다운 코드로 바꿔보자. 그리고 왜 이렇게 하는지 이해는게 목표이다.&lt;/p&gt;
+      <id>http://localhost:4000/architecture-base-2</id>
+      <content type="html" xml:base="http://localhost:4000/architecture-base-2">&lt;p&gt;함수 리팩토링을 통해 아름다운 코드로 바꿔보자. 그리고 왜 이렇게 하는지 이해는게 목표이다.&lt;/p&gt;
 
 &lt;p&gt;이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 &lt;a href=&quot;https://www.youtube.com/watch?v=60lLSe1phks&amp;amp;t=2091s&quot;&gt;유튜브 강좌&lt;/a&gt;를 보시길 추천드립니다.&lt;/p&gt;
 
@@ -114,11 +114,11 @@ gradle에 익숙한 안드로이드 개발자에겐 조금 어색한 소스이�
   
     <entry>
       <title type="html">아키텍처와 클린코드 그리고 TDD (1)</title>
-      <link href="https://mond-al.github.io/architecture-base-1" rel="alternate" type="text/html" title="아키텍처와 클린코드 그리고 TDD (1)" />
+      <link href="http://localhost:4000/architecture-base-1" rel="alternate" type="text/html" title="아키텍처와 클린코드 그리고 TDD (1)" />
       <published>2021-02-15T00:00:00+09:00</published>
       <updated>2021-02-15T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/architecture-base-1</id>
-      <content type="html" xml:base="https://mond-al.github.io/architecture-base-1">&lt;p&gt;객체지향에 대해 정리하고, 전체적인 맥락을 짚어본다.&lt;/p&gt;
+      <id>http://localhost:4000/architecture-base-1</id>
+      <content type="html" xml:base="http://localhost:4000/architecture-base-1">&lt;p&gt;객체지향에 대해 정리하고, 전체적인 맥락을 짚어본다.&lt;/p&gt;
 
 &lt;p&gt;이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 &lt;a href=&quot;https://www.youtube.com/watch?v=60lLSe1phks&amp;amp;t=2091s&quot;&gt;유튜브 강좌&lt;/a&gt;를 보시길 추천드립니다.&lt;/p&gt;
 
