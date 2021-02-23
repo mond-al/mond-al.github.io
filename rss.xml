@@ -5,8 +5,8 @@
         <description>몬드의 개발로그 - </description>
         <link>https://mond-al.github.io/</link>
         <link>https://mond-al.github.io/</link>
-        <lastBuildDate>2021-02-23T13:23:47+09:00</lastBuildDate>
-        <pubDate>2021-02-23T13:23:47+09:00</pubDate>
+        <lastBuildDate>2021-02-23T13:27:47+09:00</lastBuildDate>
+        <pubDate>2021-02-23T13:27:47+09:00</pubDate>
         <ttl>60</ttl>
 
         
@@ -1932,57 +1932,6 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
 &lt;h2 id=&quot;상용-해상도-47가지-테스트용-이미지-qqvga--fuhd&quot;&gt;상용 해상도 47가지 테스트용 이미지 (qqVGA ~ FUHD)&lt;/h2&gt;
 &lt;p&gt;Download : &lt;a href=&quot;assets/images/forTest/ratio/all_ratio.zip&quot;&gt;all_ratio.zip&lt;/a&gt;&lt;br /&gt;
 &lt;img src=&quot;assets/images/forTest/ratio/all_ratio.png&quot; alt=&quot;상용 해상도 47가지 테스트용 이미지&quot; width=&quot;70%&quot; /&gt;&lt;/p&gt;
-&lt;details&gt;&lt;summary&gt;포함된 47가지 해상도 이미지 펼치기/접기&lt;/summary&gt;
-&lt;div&gt;
-    &lt;p&gt;&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_1_160x120.png&quot; alt=&quot;image_1_160x120.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_2_240x160.png&quot; alt=&quot;image_2_240x160.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_3_320x240.png&quot; alt=&quot;image_3_320x240.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_4_400x240.png&quot; alt=&quot;image_4_400x240.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_5_480x320.png&quot; alt=&quot;image_5_480x320.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_6_640x480.png&quot; alt=&quot;image_6_640x480.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_7_800x480.png&quot; alt=&quot;image_7_800x480.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_8_854x480.png&quot; alt=&quot;image_8_854x480.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_9_800x600.png&quot; alt=&quot;image_9_800x600.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_10_960x640.png&quot; alt=&quot;image_10_960x640.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_11_1024x576.png&quot; alt=&quot;image_11_1024x576.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_12_1024x 600.png&quot; alt=&quot;image_12_1024x 600.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_13_1024x768.png&quot; alt=&quot;image_13_1024x768.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_14_1280x768.png&quot; alt=&quot;image_14_1280x768.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_15_1280x800.png&quot; alt=&quot;image_15_1280x800.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_16_1366x768.png&quot; alt=&quot;image_16_1366x768.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_17_1152x864.png&quot; alt=&quot;image_17_1152x864.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_18_1440x900.png&quot; alt=&quot;image_18_1440x900.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_19_1680x1050.png&quot; alt=&quot;image_19_1680x1050.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_20_1280x1024.png&quot; alt=&quot;image_20_1280x1024.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_21_1400x1050.png&quot; alt=&quot;image_21_1400x1050.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_22_1600x1200.png&quot; alt=&quot;image_22_1600x1200.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_23_1920x1200.png&quot; alt=&quot;image_23_1920x1200.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_24_2048x1536.png&quot; alt=&quot;image_24_2048x1536.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_25_2560x1600.png&quot; alt=&quot;image_25_2560x1600.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_26_ 2880x1800.png&quot; alt=&quot;image_26_ 2880x1800.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_27_ 3072x1920.png&quot; alt=&quot;image_27_ 3072x1920.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_28_2560x2048.png&quot; alt=&quot;image_28_2560x2048.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_29_3200x2048.png&quot; alt=&quot;image_29_3200x2048.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_30_3200x2400.png&quot; alt=&quot;image_30_3200x2400.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_31_3840x2400.png&quot; alt=&quot;image_31_3840x2400.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_32_4096x3072.png&quot; alt=&quot;image_32_4096x3072.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_33_5120x3200.png&quot; alt=&quot;image_33_5120x3200.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_34_5120x4096.png&quot; alt=&quot;image_34_5120x4096.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_35_6400x4096.png&quot; alt=&quot;image_35_6400x4096.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_36_6400x4800.png&quot; alt=&quot;image_36_6400x4800.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_37_7680x4800.png&quot; alt=&quot;image_37_7680x4800.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_38_640x360.png&quot; alt=&quot;image_38_640x360.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_39_960x540.png&quot; alt=&quot;image_39_960x540.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_40_1280x720.png&quot; alt=&quot;image_40_1280x720.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_41_1600x900.png&quot; alt=&quot;image_41_1600x900.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_42_1920x1080.png&quot; alt=&quot;image_42_1920x1080.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_43_2560x1440.png&quot; alt=&quot;image_43_2560x1440.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_44_3200x1800.png&quot; alt=&quot;image_44_3200x1800.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_45_3840x2160.png&quot; alt=&quot;image_45_3840x2160.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_46_5120x2880.png&quot; alt=&quot;image_46_5120x2880.png&quot; /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_47_7680x4320.png&quot; alt=&quot;image_47_7680x4320.png&quot; /&gt;&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/details&gt;
 
 &lt;h2 id=&quot;랜덤-사이즈로-1000개의-이미지-1--1000&quot;&gt;랜덤 사이즈로 1000개의 이미지 (1 ~ 1000)&lt;/h2&gt;
 &lt;p&gt;Download : &lt;a href=&quot;assets/images/forTest/random/random1000.zip&quot;&gt;random1000.zip&lt;/a&gt; &lt;br /&gt;
@@ -1997,6 +1946,53 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
 &lt;p&gt;Download : &lt;a href=&quot;assets/images/forTest/ratio/ratioVarWidth.zip&quot;&gt;ratioVarWidth.zip&lt;/a&gt;&lt;br /&gt;
 &lt;img src=&quot;assets/images/forTest/ratio/var_width_ratio.png&quot; alt=&quot;폭이 증가하는 테스트용 이미지&quot; width=&quot;70%&quot; /&gt;&lt;/p&gt;
 
+&lt;p&gt;&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_1_160x120.png&quot; alt=&quot;160x120.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_2_240x160.png&quot; alt=&quot;240x160.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_3_320x240.png&quot; alt=&quot;320x240.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_4_400x240.png&quot; alt=&quot;400x240.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_5_480x320.png&quot; alt=&quot;480x320.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_6_640x480.png&quot; alt=&quot;640x480.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_7_800x480.png&quot; alt=&quot;800x480.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_8_854x480.png&quot; alt=&quot;854x480.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_9_800x600.png&quot; alt=&quot;800x600.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_10_960x640.png&quot; alt=&quot;960x640.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_11_1024x576.png&quot; alt=&quot;1024x576.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_12_1024x 600.png&quot; alt=&quot;1024x 600.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_13_1024x768.png&quot; alt=&quot;1024x768.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_14_1280x768.png&quot; alt=&quot;1280x768.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_15_1280x800.png&quot; alt=&quot;1280x800.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_16_1366x768.png&quot; alt=&quot;1366x768.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_17_1152x864.png&quot; alt=&quot;1152x864.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_18_1440x900.png&quot; alt=&quot;1440x900.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_19_1680x1050.png&quot; alt=&quot;1680x1050.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_20_1280x1024.png&quot; alt=&quot;1280x1024.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_21_1400x1050.png&quot; alt=&quot;1400x1050.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_22_1600x1200.png&quot; alt=&quot;1600x1200.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_23_1920x1200.png&quot; alt=&quot;1920x1200.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_24_2048x1536.png&quot; alt=&quot;2048x1536.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_25_2560x1600.png&quot; alt=&quot;2560x1600.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_26_ 2880x1800.png&quot; alt=&quot;2880x1800.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_27_ 3072x1920.png&quot; alt=&quot;3072x1920.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_28_2560x2048.png&quot; alt=&quot;2560x2048.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_29_3200x2048.png&quot; alt=&quot;3200x2048.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_30_3200x2400.png&quot; alt=&quot;3200x2400.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_31_3840x2400.png&quot; alt=&quot;3840x2400.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_32_4096x3072.png&quot; alt=&quot;4096x3072.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_33_5120x3200.png&quot; alt=&quot;5120x3200.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_34_5120x4096.png&quot; alt=&quot;5120x4096.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_35_6400x4096.png&quot; alt=&quot;6400x4096.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_36_6400x4800.png&quot; alt=&quot;6400x4800.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_37_7680x4800.png&quot; alt=&quot;7680x4800.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_38_640x360.png&quot; alt=&quot;640x360.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_39_960x540.png&quot; alt=&quot;960x540.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_40_1280x720.png&quot; alt=&quot;1280x720.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_41_1600x900.png&quot; alt=&quot;1600x900.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_42_1920x1080.png&quot; alt=&quot;1920x1080.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_43_2560x1440.png&quot; alt=&quot;2560x1440.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_44_3200x1800.png&quot; alt=&quot;3200x1800.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_45_3840x2160.png&quot; alt=&quot;3840x2160.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_46_5120x2880.png&quot; alt=&quot;5120x2880.png&quot; /&gt;
+&lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_47_7680x4320.png&quot; alt=&quot;7680x4320.png&quot; /&gt;&lt;/p&gt;
 </description>
             <link>https://mond-al.github.io//test-image</link>
             <guid>https://mond-al.github.io//test-image</guid>
@@ -2007,35 +2003,37 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
             <title>개발 테스트용 이미지 다운로드</title>
             <description>&lt;p&gt;기능 테스트를 하다 보면 이미지 소스들이 필요한 경우가 있습니다. 때로는 예제앱에 이미지를 포함하고 싶을때 적당한 이미지를 선택하는것도 은근 신경쓰이는 일 입니다.&lt;/p&gt;
 
-&lt;h2 id=&quot;랜덤-사이즈로-11000가-쓰여진-테스트-이미지&quot;&gt;랜덤 사이즈로 1~1000가 쓰여진 테스트 이미지&lt;/h2&gt;
-&lt;p&gt;Download : &lt;a href=&quot;assets/images/forTest/random/random1000.zip&quot;&gt;random1000.zip&lt;/a&gt;&lt;br /&gt;
-&lt;img src=&quot;assets/images/forTest/random/screenshot_random1000.png&quot; alt=&quot;스크린샷&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;아무리 검색해도 찾을 수 없어서 그냥 만든 테스트용 이미지!
-Download : &lt;a href=&quot;assets/images/forTest/random/random1000.zip&quot;&gt;random1000.zip&lt;/a&gt; &lt;br /&gt;
-필요한데 아무리 검색해도 찾을 수 없어서 그냥 만든 테스트용 이미지!&lt;br /&gt;
-&lt;img src=&quot;assets/images/forTest/random/screenshot_random1000.png&quot; alt=&quot;스크린샷&quot; width=&quot;70%&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;폭(1024, 1440, 2550), 높이(800, 1200, 1600) 조합으로 만들어진 랜덤크기&lt;/li&gt;
-  &lt;li&gt;배경색과 숫자가 쓰여진 색상은 랜덤이며 폰트는 배민한나체를 사용했습니다.&lt;/li&gt;
-  &lt;li&gt;왼쪽상단에는 이미지의 크기가 검은색으로 쓰여져있습니다.&lt;/li&gt;
-  &lt;li&gt;파일형식은 Png이며, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;image_{####number}_{width}x{height}.png&lt;/code&gt; 형식의 파일이름으로 저장 되어 있습니다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;폭-1000px-고정에-높이가-증가하는-이미지들&quot;&gt;폭 1000px 고정에, 높이가 증가하는 이미지들&lt;/h2&gt;
-&lt;p&gt;비율테스트용 폭 1000px에 다양한 높이의 이미지들입니다. &lt;br /&gt;
-Download : &lt;a href=&quot;assets/images/forTest/ratio/ratioVarHeight.zip&quot;&gt;ratioVarHeight.zip&lt;/a&gt;&lt;br /&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/var_height_ratio.png&quot; alt=&quot;스크린샷&quot; width=&quot;70%&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;높이-1000px-고정이고-폭이-증가하는-이미지들&quot;&gt;높이 1000px 고정이고 폭이 증가하는 이미지들&lt;/h2&gt;
-&lt;p&gt;비율테스트용 높이 1000px에 다양한 높이의 이미지들입니다.&lt;br /&gt;
-Download : &lt;a href=&quot;assets/images/forTest/ratio/ratioVarWidth.zip&quot;&gt;ratioVarWidth.zip&lt;/a&gt;
-&lt;img src=&quot;assets/images/forTest/ratio/var_width_ratio.png&quot; alt=&quot;스크린샷&quot; width=&quot;70%&quot; /&gt;&lt;/p&gt;
-
+&lt;h1 id=&quot;다양한-기능을-제공하는-유용한-사이트들&quot;&gt;다양한 기능을 제공하는 유용한 사이트들&lt;/h1&gt;
 &lt;h2 id=&quot;여러장의-사진-이미지가-필요할-때&quot;&gt;여러장의 사진 이미지가 필요할 때&lt;/h2&gt;
 &lt;blockquote&gt;
   &lt;p&gt;&lt;a href=&quot;http://unsample.net&quot;&gt;http://unsample.net&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://unsplash.com&quot;&gt;이미지 공유 사이트 unsplash&lt;/a&gt;를 기반으로 zip으로 묶어서 한번에 다운로드.&lt;/li&gt;
+  &lt;li&gt;한번에 원하는 크기의 이미지를 최대 30장을 묶어서 내려받을 수 있습니다.&lt;/li&gt;
+  &lt;li&gt;필요한 이미지 갯수, width/height, quality를 지정 가능하고, 원한다면 특정 이미지를 검색해서 모을 수 있습니다.&lt;/li&gt;
+  &lt;li&gt;모든 사진은 무료 로 다운로드 하여 사용할 수 있습니다.&lt;/li&gt;
+  &lt;li&gt;심지어 상업적 및 비상업적 목적 모두 사용도 가능합니다. 이미지 자체를 판매는 금지!.&lt;/li&gt;
+  &lt;li&gt;샘플앱에 넣어서 사용하는 것도 가능 하겠네요. :~)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;url로-요청하면-이미지를-만들어주는-페이지들&quot;&gt;url로 요청하면 이미지를 만들어주는 페이지들&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://dummyimage.com/&quot;&gt;https://dummyimage.com/&lt;/a&gt;
+&lt;a href=&quot;https://plchldr.co/&quot;&gt;https://plchldr.co/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;더미-이미지가-필요할-때&quot;&gt;더미 이미지가 필요할 때&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://www.websiteplanet.com/webtools/dummy-images-generator&quot;&gt;https://www.websiteplanet.com/webtools/dummy-images-generator&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/post/2021-01-22-test-image/dummy-images-generator.png&quot; alt=&quot;title&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;width x height, 배경색, 글자색, format을 지정하면 바로 이미지로 다운로드 가능.&lt;/li&gt;
+&lt;/ul&gt;
 </description>
             <link>https://mond-al.github.io//test-image-url</link>
             <guid>https://mond-al.github.io//test-image-url</guid>
