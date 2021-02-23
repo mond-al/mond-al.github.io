@@ -5,7 +5,7 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
-        <loc>http://localhost:4000/kotlin-visibility.html</loc>
+        <loc>https://mond-al.github.io/kotlin-visibility.html</loc>
         
         <lastmod>2021-02-19T00:00:00+09:00</lastmod>
         
@@ -21,7 +21,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/kotlin-lazy-calc.html</loc>
+        <loc>https://mond-al.github.io/kotlin-lazy-calc.html</loc>
         
         <lastmod>2021-02-19T00:00:00+09:00</lastmod>
         
@@ -37,7 +37,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/kotlin-collection.html</loc>
+        <loc>https://mond-al.github.io/kotlin-collection.html</loc>
         
         <lastmod>2021-02-19T00:00:00+09:00</lastmod>
         
@@ -53,7 +53,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/viewpager-fragment.html</loc>
+        <loc>https://mond-al.github.io/viewpager-fragment.html</loc>
         
         <lastmod>2021-02-18T00:00:00+09:00</lastmod>
         
@@ -69,7 +69,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/architecture-base-2.html</loc>
+        <loc>https://mond-al.github.io/architecture-base-2.html</loc>
         
         <lastmod>2021-02-17T00:00:00+09:00</lastmod>
         
@@ -85,7 +85,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/architecture-base-1.html</loc>
+        <loc>https://mond-al.github.io/architecture-base-1.html</loc>
         
         <lastmod>2021-02-15T00:00:00+09:00</lastmod>
         
@@ -101,7 +101,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/example-camera.html</loc>
+        <loc>https://mond-al.github.io/example-camera.html</loc>
         
         <lastmod>2021-02-10T00:00:00+09:00</lastmod>
         
@@ -117,7 +117,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/about-binding.html</loc>
+        <loc>https://mond-al.github.io/about-binding.html</loc>
         
         <lastmod>2021-02-09T00:00:00+09:00</lastmod>
         
@@ -133,7 +133,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/cache-share.html</loc>
+        <loc>https://mond-al.github.io/cache-share.html</loc>
         
         <lastmod>2021-02-08T00:00:00+09:00</lastmod>
         
@@ -149,7 +149,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/file-write.html</loc>
+        <loc>https://mond-al.github.io/file-write.html</loc>
         
         <lastmod>2021-02-02T00:00:00+09:00</lastmod>
         
@@ -165,7 +165,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/scoped-storage.html</loc>
+        <loc>https://mond-al.github.io/scoped-storage.html</loc>
         
         <lastmod>2021-02-01T00:00:00+09:00</lastmod>
         
@@ -181,7 +181,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/error-log-android-11-api-changed.html</loc>
+        <loc>https://mond-al.github.io/error-log-android-11-api-changed.html</loc>
         
         <lastmod>2021-01-30T00:00:00+09:00</lastmod>
         
@@ -197,7 +197,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/dependency-gradle.html</loc>
+        <loc>https://mond-al.github.io/dependency-gradle.html</loc>
         
         <lastmod>2021-01-27T00:00:00+09:00</lastmod>
         
@@ -213,7 +213,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/ProductFlavors-BuildType.html</loc>
+        <loc>https://mond-al.github.io/ProductFlavors-BuildType.html</loc>
         
         <lastmod>2021-01-26T00:00:00+09:00</lastmod>
         
@@ -229,7 +229,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/test-image.html</loc>
+        <loc>https://mond-al.github.io/test-image.html</loc>
         
         <lastmod>2021-01-22T00:00:00+09:00</lastmod>
         
@@ -245,7 +245,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/test-image-url.html</loc>
+        <loc>https://mond-al.github.io/test-image-url.html</loc>
         
         <lastmod>2021-01-22T00:00:00+09:00</lastmod>
         
@@ -261,7 +261,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/fast-scroller.html</loc>
+        <loc>https://mond-al.github.io/fast-scroller.html</loc>
         
         <lastmod>2021-01-18T00:00:00+09:00</lastmod>
         
@@ -277,7 +277,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/about-reboot.html</loc>
+        <loc>https://mond-al.github.io/about-reboot.html</loc>
         
         <lastmod>2021-01-12T00:00:00+09:00</lastmod>
         

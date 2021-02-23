@@ -3,10 +3,10 @@
     <channel>
         <title>몬드의 개발로그</title>
         <description>몬드는 오늘도 개발을 합니다. 내일도...</description>
-        <link>http://localhost:4000//</link>
-        <atom:link href="http://localhost:4000//rss.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 23 Feb 2021 11:57:50 +0900</pubDate>
-        <lastBuildDate>Tue, 23 Feb 2021 11:57:50 +0900</lastBuildDate>
+        <link>https://mond-al.github.io//</link>
+        <atom:link href="https://mond-al.github.io//rss.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Tue, 23 Feb 2021 12:11:08 +0900</pubDate>
+        <lastBuildDate>Tue, 23 Feb 2021 12:11:08 +0900</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
         
         <item>
@@ -98,8 +98,8 @@
 &lt;p&gt;Inner Class는 인스턴스의 멤버로 취급됩니다. 클래스 앞에 static 키워드를 사용하지 않은경우이며, 클래스의 인스턴스를 생성한 후에 그 인스턴스의 참조를 이용해야만 Inner Class의 인스턴스를 생성할 수 있습니다. 또한 바깥 클래스의 인스턴스 멤버와 클래스 멤버에 접근할 수 있기 때문에 사용시 주의가 필요합니다.&lt;/p&gt;
 </description>
             <pubDate>Fri, 19 Feb 2021 00:00:00 +0900</pubDate>
-            <link>http://localhost:4000//kotlin-visibility</link>
-            <guid isPermaLink="true">http://localhost:4000//kotlin-visibility</guid>
+            <link>https://mond-al.github.io//kotlin-visibility</link>
+            <guid isPermaLink="true">https://mond-al.github.io//kotlin-visibility</guid>
             
             <category>kotlin</category>
             
@@ -197,8 +197,8 @@
 
 </description>
             <pubDate>Fri, 19 Feb 2021 00:00:00 +0900</pubDate>
-            <link>http://localhost:4000//kotlin-lazy-calc</link>
-            <guid isPermaLink="true">http://localhost:4000//kotlin-lazy-calc</guid>
+            <link>https://mond-al.github.io//kotlin-lazy-calc</link>
+            <guid isPermaLink="true">https://mond-al.github.io//kotlin-lazy-calc</guid>
             
             <category>kotlin</category>
             
@@ -288,8 +288,8 @@ The returned map preserves the entry iteration order of the original array.&lt;/
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
             <pubDate>Fri, 19 Feb 2021 00:00:00 +0900</pubDate>
-            <link>http://localhost:4000//kotlin-collection</link>
-            <guid isPermaLink="true">http://localhost:4000//kotlin-collection</guid>
+            <link>https://mond-al.github.io//kotlin-collection</link>
+            <guid isPermaLink="true">https://mond-al.github.io//kotlin-collection</guid>
             
             <category>kotlin</category>
             
@@ -447,8 +447,8 @@ This may be used by the system to prioritize operations such as fragment lifecyc
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT&lt;/code&gt;를 사용하면 onResume/onPause 만으로 깔끔하게 bind/unbind 로직을 구현 할 수 있게 되었습니다. 또한 이제 캐쉬된 아이템은 준비단계에서 onCreate만 호출됩니다.&lt;/p&gt;
 </description>
             <pubDate>Thu, 18 Feb 2021 00:00:00 +0900</pubDate>
-            <link>http://localhost:4000//viewpager-fragment</link>
-            <guid isPermaLink="true">http://localhost:4000//viewpager-fragment</guid>
+            <link>https://mond-al.github.io//viewpager-fragment</link>
+            <guid isPermaLink="true">https://mond-al.github.io//viewpager-fragment</guid>
             
             <category>android</category>
             
@@ -510,8 +510,8 @@ gradle에 익숙한 안드로이드 개발자에겐 조금 어색한 소스이�
 
 </description>
             <pubDate>Wed, 17 Feb 2021 00:00:00 +0900</pubDate>
-            <link>http://localhost:4000//architecture-base-2</link>
-            <guid isPermaLink="true">http://localhost:4000//architecture-base-2</guid>
+            <link>https://mond-al.github.io//architecture-base-2</link>
+            <guid isPermaLink="true">https://mond-al.github.io//architecture-base-2</guid>
             
             <category>android</category>
             
@@ -679,8 +679,8 @@ ZetEngine mc = new ZetMotocycle();
 &lt;p&gt;inheritance vs implementation -&amp;gt; implementation!&lt;/p&gt;
 </description>
             <pubDate>Mon, 15 Feb 2021 00:00:00 +0900</pubDate>
-            <link>http://localhost:4000//architecture-base-1</link>
-            <guid isPermaLink="true">http://localhost:4000//architecture-base-1</guid>
+            <link>https://mond-al.github.io//architecture-base-1</link>
+            <guid isPermaLink="true">https://mond-al.github.io//architecture-base-1</guid>
             
             <category>android</category>
             
@@ -829,8 +829,8 @@ ZetEngine mc = new ZetMotocycle();
 
 </description>
             <pubDate>Wed, 10 Feb 2021 00:00:00 +0900</pubDate>
-            <link>http://localhost:4000//example-camera</link>
-            <guid isPermaLink="true">http://localhost:4000//example-camera</guid>
+            <link>https://mond-al.github.io//example-camera</link>
+            <guid isPermaLink="true">https://mond-al.github.io//example-camera</guid>
             
             <category>android</category>
             
@@ -927,8 +927,8 @@ ZetEngine mc = new ZetMotocycle();
 
 </description>
             <pubDate>Tue, 09 Feb 2021 00:00:00 +0900</pubDate>
-            <link>http://localhost:4000//about-binding</link>
-            <guid isPermaLink="true">http://localhost:4000//about-binding</guid>
+            <link>https://mond-al.github.io//about-binding</link>
+            <guid isPermaLink="true">https://mond-al.github.io//about-binding</guid>
             
             <category>android</category>
             
@@ -1029,8 +1029,8 @@ ZetEngine mc = new ZetMotocycle();
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
             <pubDate>Mon, 08 Feb 2021 00:00:00 +0900</pubDate>
-            <link>http://localhost:4000//cache-share</link>
-            <guid isPermaLink="true">http://localhost:4000//cache-share</guid>
+            <link>https://mond-al.github.io//cache-share</link>
+            <guid isPermaLink="true">https://mond-al.github.io//cache-share</guid>
             
             <category>android</category>
             
@@ -1228,8 +1228,8 @@ Step 2. Step 1에서 얻은 Uri를 통해 파일을 작성합니다.&lt;/p&gt;
 
 </description>
             <pubDate>Tue, 02 Feb 2021 00:00:00 +0900</pubDate>
-            <link>http://localhost:4000//file-write</link>
-            <guid isPermaLink="true">http://localhost:4000//file-write</guid>
+            <link>https://mond-al.github.io//file-write</link>
+            <guid isPermaLink="true">https://mond-al.github.io//file-write</guid>
             
             <category>android</category>
             
@@ -1397,8 +1397,8 @@ Step 2. Step 1에서 얻은 Uri를 통해 파일을 작성합니다.&lt;/p&gt;
 
 </description>
             <pubDate>Mon, 01 Feb 2021 00:00:00 +0900</pubDate>
-            <link>http://localhost:4000//scoped-storage</link>
-            <guid isPermaLink="true">http://localhost:4000//scoped-storage</guid>
+            <link>https://mond-al.github.io//scoped-storage</link>
+            <guid isPermaLink="true">https://mond-al.github.io//scoped-storage</guid>
             
             <category>android</category>
             
@@ -1482,8 +1482,8 @@ Step 2. Step 1에서 얻은 Uri를 통해 파일을 작성합니다.&lt;/p&gt;
 &lt;a href=&quot;https://developer.android.com/about/versions/11/non-sdk-11#how-to-toggle&quot;&gt;https://github.com/square/okhttp/issues/5816&lt;/a&gt;&lt;/p&gt;
 </description>
             <pubDate>Sat, 30 Jan 2021 00:00:00 +0900</pubDate>
-            <link>http://localhost:4000//error-log-android-11-api-changed</link>
-            <guid isPermaLink="true">http://localhost:4000//error-log-android-11-api-changed</guid>
+            <link>https://mond-al.github.io//error-log-android-11-api-changed</link>
+            <guid isPermaLink="true">https://mond-al.github.io//error-log-android-11-api-changed</guid>
             
             <category>android</category>
             
@@ -1660,8 +1660,8 @@ BUILD SUCCESSFUL &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;693ms
 
 </description>
             <pubDate>Wed, 27 Jan 2021 00:00:00 +0900</pubDate>
-            <link>http://localhost:4000//dependency-gradle</link>
-            <guid isPermaLink="true">http://localhost:4000//dependency-gradle</guid>
+            <link>https://mond-al.github.io//dependency-gradle</link>
+            <guid isPermaLink="true">https://mond-al.github.io//dependency-gradle</guid>
             
             <category>android</category>
             
@@ -2017,8 +2017,8 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
 
 </description>
             <pubDate>Tue, 26 Jan 2021 00:00:00 +0900</pubDate>
-            <link>http://localhost:4000//ProductFlavors-BuildType</link>
-            <guid isPermaLink="true">http://localhost:4000//ProductFlavors-BuildType</guid>
+            <link>https://mond-al.github.io//ProductFlavors-BuildType</link>
+            <guid isPermaLink="true">https://mond-al.github.io//ProductFlavors-BuildType</guid>
             
             <category>android</category>
             
@@ -2108,8 +2108,8 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
 
 </description>
             <pubDate>Fri, 22 Jan 2021 00:00:00 +0900</pubDate>
-            <link>http://localhost:4000//test-image</link>
-            <guid isPermaLink="true">http://localhost:4000//test-image</guid>
+            <link>https://mond-al.github.io//test-image</link>
+            <guid isPermaLink="true">https://mond-al.github.io//test-image</guid>
             
             <category>test</category>
             
@@ -2158,8 +2158,8 @@ Download : &lt;a href=&quot;assets/images/forTest/ratio/ratioVarWidth.zip&quot;&
 
 </description>
             <pubDate>Fri, 22 Jan 2021 00:00:00 +0900</pubDate>
-            <link>http://localhost:4000//test-image-url</link>
-            <guid isPermaLink="true">http://localhost:4000//test-image-url</guid>
+            <link>https://mond-al.github.io//test-image-url</link>
+            <guid isPermaLink="true">https://mond-al.github.io//test-image-url</guid>
             
             <category>test</category>
             
@@ -2267,8 +2267,8 @@ Download : &lt;a href=&quot;assets/images/forTest/ratio/ratioVarWidth.zip&quot;&
 &lt;p&gt;link : &lt;a href=&quot;https://github.com/mond-al/recyclerview-fastscroller&quot;&gt;https://github.com/mond-al/recyclerview-fastscroller&lt;/a&gt;&lt;/p&gt;
 </description>
             <pubDate>Mon, 18 Jan 2021 00:00:00 +0900</pubDate>
-            <link>http://localhost:4000//fast-scroller</link>
-            <guid isPermaLink="true">http://localhost:4000//fast-scroller</guid>
+            <link>https://mond-al.github.io//fast-scroller</link>
+            <guid isPermaLink="true">https://mond-al.github.io//fast-scroller</guid>
             
             <category>android</category>
             
@@ -2309,8 +2309,8 @@ BLOG, MRSK project&lt;/p&gt;
 
 </description>
             <pubDate>Tue, 12 Jan 2021 00:00:00 +0900</pubDate>
-            <link>http://localhost:4000//about-reboot</link>
-            <guid isPermaLink="true">http://localhost:4000//about-reboot</guid>
+            <link>https://mond-al.github.io//about-reboot</link>
+            <guid isPermaLink="true">https://mond-al.github.io//about-reboot</guid>
             
             
         </item>
