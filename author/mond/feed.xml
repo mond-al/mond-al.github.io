@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://mond-al.github.io/author/mond/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-24T03:13:54+09:00</updated>
+  <updated>2021-02-24T23:09:00+09:00</updated>
   <id>https://mond-al.github.io/author/mond/feed.xml</id>
 
   
@@ -32,12 +32,12 @@
 
   
     <entry>
-      <title type="html">코틀린의 가시성 정리</title>
-      <link href="https://mond-al.github.io/kotlin-visibility" rel="alternate" type="text/html" title="코틀린의 가시성 정리" />
+      <title type="html">코틀린의 internal 가시성</title>
+      <link href="https://mond-al.github.io/kotlin-visibility-internal" rel="alternate" type="text/html" title="코틀린의 internal 가시성" />
       <published>2021-02-19T00:00:00+09:00</published>
       <updated>2021-02-19T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/kotlin-visibility</id>
-      <content type="html" xml:base="https://mond-al.github.io/kotlin-visibility">&lt;p&gt;코틀린의 public, protected, private 변경자는 컴파일된 바이트 코드 안에서도 그대로 유지됩니다. 그렇게 컴파일된 코틀린의 가시성은 마치 자바에서 똑같은 가시성을 선언한 경우와 동일합니다. 하지만 private는 다르게 적용됩니다. 자바에서 클래스를 private로 만들수 없으므로 내부적으로 코틀린은 private 클래스를 package-private 클래스로 컴파일 합니다.&lt;/p&gt;
+      <id>https://mond-al.github.io/kotlin-visibility-internal</id>
+      <content type="html" xml:base="https://mond-al.github.io/kotlin-visibility-internal">&lt;p&gt;코틀린의 public, protected, private 변경자는 컴파일된 바이트 코드 안에서도 그대로 유지됩니다. 그렇게 컴파일된 코틀린의 가시성은 마치 자바에서 똑같은 가시성을 선언한 경우와 동일합니다. 하지만 private는 다르게 적용됩니다. 자바에서 클래스를 private로 만들수 없으므로 내부적으로 코틀린은 private 클래스를 package-private 클래스로 컴파일 합니다.&lt;/p&gt;
 
 &lt;h3 id=&quot;internal&quot;&gt;internal&lt;/h3&gt;
 &lt;p&gt;자바에는 internal에 딱 맞는 가시성은 없습니다. package-private은 internal과 다릅니다. 모듈은 보통 여러 패키지로 이루어지며, 서로 다른 모듈에 같은 패키지에 속한 선언이 들어 있을 수도 있습니다. 따라서 internal 변경자는 바이트 코드상에서 public이 됩니다.&lt;/p&gt;
@@ -153,11 +153,11 @@
   
     <entry>
       <title type="html">코틀린의 지연(lazy) 컬랙션 연산</title>
-      <link href="https://mond-al.github.io/kotlin-lazy-calc" rel="alternate" type="text/html" title="코틀린의 지연(lazy) 컬랙션 연산" />
+      <link href="https://mond-al.github.io/kotlin-lazy-operation" rel="alternate" type="text/html" title="코틀린의 지연(lazy) 컬랙션 연산" />
       <published>2021-02-19T00:00:00+09:00</published>
       <updated>2021-02-19T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/kotlin-lazy-calc</id>
-      <content type="html" xml:base="https://mond-al.github.io/kotlin-lazy-calc">&lt;p&gt;map이나 filter 같은 컬랙션 함수는 결과 컬랙션을 즉시(eagerly:열심히) 생성합니다. 이는 컬랙션 함수를 연쇄하면 단계마다 중간 결과를 새로운 컬랙션 객체로 생성한다는 말이기도 합니다. 하지만 시퀀스(sequence)를 사용하면 중간 임시 컬렉션을 사용하지 않고도 연살을 연쇄적으로 수행 할 수 있습니다.&lt;/p&gt;
+      <id>https://mond-al.github.io/kotlin-lazy-operation</id>
+      <content type="html" xml:base="https://mond-al.github.io/kotlin-lazy-operation">&lt;p&gt;map이나 filter 같은 컬랙션 함수는 결과 컬랙션을 즉시(eagerly:열심히) 생성합니다. 이는 컬랙션 함수를 연쇄하면 단계마다 중간 결과를 새로운 컬랙션 객체로 생성한다는 말이기도 합니다. 하지만 시퀀스(sequence)를 사용하면 중간 임시 컬렉션을 사용하지 않고도 연살을 연쇄적으로 수행 할 수 있습니다.&lt;/p&gt;
 
 &lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;articles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Article&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;filter&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;startsWith&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;[&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)}&lt;/span&gt; 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -271,12 +271,12 @@
     </entry>
   
     <entry>
-      <title type="html">kotlin collection.associateBy</title>
-      <link href="https://mond-al.github.io/kotlin-collection" rel="alternate" type="text/html" title="kotlin collection.associateBy" />
+      <title type="html">kotlin collection.associateBy,groupBy,partition</title>
+      <link href="https://mond-al.github.io/kotlin-associateBy-groupBy-partition" rel="alternate" type="text/html" title="kotlin collection.associateBy,groupBy,partition" />
       <published>2021-02-19T00:00:00+09:00</published>
       <updated>2021-02-19T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/kotlin-collection</id>
-      <content type="html" xml:base="https://mond-al.github.io/kotlin-collection">&lt;p&gt;코틀린에서는 Guava 다른 여타 편라한 기능을 제공하던 라이브러리를 사용하지않고도 충분히 많은 일을 효율적이고 간편하게 해결 할 수 있도록 제공하고있습니다. 귀찮은 문제를 가볍게 해결 해주는 편리한 함수 associateBy, groupBy에 대해 정리해보겠습니다.&lt;/p&gt;
+      <id>https://mond-al.github.io/kotlin-associateBy-groupBy-partition</id>
+      <content type="html" xml:base="https://mond-al.github.io/kotlin-associateBy-groupBy-partition">&lt;p&gt;코틀린에서는 Guava 다른 여타 편라한 기능을 제공하던 라이브러리를 사용하지않고도 충분히 많은 일을 효율적이고 간편하게 해결 할 수 있도록 제공하고있습니다. 귀찮은 문제를 가볍게 해결 해주는 편리한 함수 associateBy, groupBy에 대해 정리해보겠습니다.&lt;/p&gt;
 
 &lt;h3 id=&quot;associateby&quot;&gt;associateBy&lt;/h3&gt;
 
@@ -382,11 +382,11 @@ The returned map preserves the entry iteration order of the original array.&lt;/
   
     <entry>
       <title type="html">FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)</title>
-      <link href="https://mond-al.github.io/viewpager-fragment" rel="alternate" type="text/html" title="FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)" />
+      <link href="https://mond-al.github.io/fragment-pager-adapter" rel="alternate" type="text/html" title="FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)" />
       <published>2021-02-18T00:00:00+09:00</published>
       <updated>2021-02-18T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/viewpager-fragment</id>
-      <content type="html" xml:base="https://mond-al.github.io/viewpager-fragment">&lt;p&gt;이름이 워낙 길고, 비슷하기 까지 해서 항상 어떤 녀석을 사용 해야 할지 망설이게 됩니다. 내 앱에서는 딱히 configChanges 나 onPause/onResume에 대한 처리를 딱히 타이트하지 않는데 꼭 “State”가 붙은 것을 사용해야 할지 고민도 되구요. 이 두 클래스에 대해 살펴보겠습니다. 우선 변경된 생성자 이야기부터 시작하겠습니다.&lt;/p&gt;
+      <id>https://mond-al.github.io/fragment-pager-adapter</id>
+      <content type="html" xml:base="https://mond-al.github.io/fragment-pager-adapter">&lt;p&gt;이름이 워낙 길고, 비슷하기 까지 해서 항상 어떤 녀석을 사용 해야 할지 망설이게 됩니다. 내 앱에서는 딱히 configChanges 나 onPause/onResume에 대한 처리를 딱히 타이트하지 않는데 꼭 “State”가 붙은 것을 사용해야 할지 고민도 되구요. 이 두 클래스에 대해 살펴보겠습니다. 우선 변경된 생성자 이야기부터 시작하겠습니다.&lt;/p&gt;
 
 &lt;p&gt;두 클래스 모두 androidx.fragment.app 패키지에 포함되어 있습니다. 이번 문서에서는 공통적인 내용만 다룰 예정이라 FragmentPagerAdapter를 기준으로 설명하고 Fragment(State)PagerAdapter에 대한 지칭은 생략하겠습니다.&lt;/p&gt;
 
@@ -568,11 +568,11 @@ This may be used by the system to prioritize operations such as fragment lifecyc
   
     <entry>
       <title type="html">아키텍처와 클린코드 그리고 TDD (2)</title>
-      <link href="https://mond-al.github.io/architecture-base-2" rel="alternate" type="text/html" title="아키텍처와 클린코드 그리고 TDD (2)" />
+      <link href="https://mond-al.github.io/cleancoders-2" rel="alternate" type="text/html" title="아키텍처와 클린코드 그리고 TDD (2)" />
       <published>2021-02-17T00:00:00+09:00</published>
       <updated>2021-02-17T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/architecture-base-2</id>
-      <content type="html" xml:base="https://mond-al.github.io/architecture-base-2">&lt;p&gt;함수 리팩토링을 통해 아름다운 코드로 바꿔보자. 그리고 왜 이렇게 하는지 이해는게 목표이다.&lt;/p&gt;
+      <id>https://mond-al.github.io/cleancoders-2</id>
+      <content type="html" xml:base="https://mond-al.github.io/cleancoders-2">&lt;p&gt;함수 리팩토링을 통해 아름다운 코드로 바꿔보자. 그리고 왜 이렇게 하는지 이해는게 목표이다.&lt;/p&gt;
 
 &lt;p&gt;이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 &lt;a href=&quot;https://www.youtube.com/watch?v=60lLSe1phks&amp;amp;t=2091s&quot;&gt;유튜브 강좌&lt;/a&gt;를 보시길 추천드립니다.&lt;/p&gt;
 
@@ -649,11 +649,11 @@ gradle에 익숙한 안드로이드 개발자에겐 조금 어색한 소스이�
   
     <entry>
       <title type="html">아키텍처와 클린코드 그리고 TDD (1)</title>
-      <link href="https://mond-al.github.io/architecture-base-1" rel="alternate" type="text/html" title="아키텍처와 클린코드 그리고 TDD (1)" />
+      <link href="https://mond-al.github.io/cleancoders-1" rel="alternate" type="text/html" title="아키텍처와 클린코드 그리고 TDD (1)" />
       <published>2021-02-15T00:00:00+09:00</published>
       <updated>2021-02-15T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/architecture-base-1</id>
-      <content type="html" xml:base="https://mond-al.github.io/architecture-base-1">&lt;p&gt;객체지향에 대해 정리하고, 전체적인 맥락을 짚어본다.&lt;/p&gt;
+      <id>https://mond-al.github.io/cleancoders-1</id>
+      <content type="html" xml:base="https://mond-al.github.io/cleancoders-1">&lt;p&gt;객체지향에 대해 정리하고, 전체적인 맥락을 짚어본다.&lt;/p&gt;
 
 &lt;p&gt;이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 &lt;a href=&quot;https://www.youtube.com/watch?v=60lLSe1phks&amp;amp;t=2091s&quot;&gt;유튜브 강좌&lt;/a&gt;를 보시길 추천드립니다.&lt;/p&gt;
 
@@ -839,11 +839,11 @@ ZetEngine mc = new ZetMotocycle();
   
     <entry>
       <title type="html">카메라 사진촬영으로 보는 Scoped storage 예제 및 소스</title>
-      <link href="https://mond-al.github.io/example-camera" rel="alternate" type="text/html" title="카메라 사진촬영으로 보는 Scoped storage 예제 및 소스" />
+      <link href="https://mond-al.github.io/exampleapp-camera-capture-request" rel="alternate" type="text/html" title="카메라 사진촬영으로 보는 Scoped storage 예제 및 소스" />
       <published>2021-02-10T00:00:00+09:00</published>
       <updated>2021-02-10T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/example-camera</id>
-      <content type="html" xml:base="https://mond-al.github.io/example-camera">&lt;p&gt;Target/Compile Sdk version에 Api level 30을 적용한 아주 간단한 사진촬영 (요청) 앱입니다.  이 앱의 목표는 다음과 같습니다.&lt;/p&gt;
+      <id>https://mond-al.github.io/exampleapp-camera-capture-request</id>
+      <content type="html" xml:base="https://mond-al.github.io/exampleapp-camera-capture-request">&lt;p&gt;Target/Compile Sdk version에 Api level 30을 적용한 아주 간단한 사진촬영 (요청) 앱입니다.  이 앱의 목표는 다음과 같습니다.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Android 10(Q)이후 디바이스에 요구되는 &lt;em&gt;Scoped storage&lt;/em&gt;일때 사진 촬영 요청 및 Media Store 등록.&lt;/li&gt;
   &lt;li&gt;안드로이드 앱에서 최소한의 permission으로 어떻게 사진촬영/저장 기능을 제공하는지 보여줍니다.&lt;/li&gt;
@@ -1009,11 +1009,11 @@ ZetEngine mc = new ZetMotocycle();
   
     <entry>
       <title type="html">Binding이 되지않을때 (by viewModels()에 에러)</title>
-      <link href="https://mond-al.github.io/about-binding" rel="alternate" type="text/html" title="Binding이 되지않을때 (by viewModels()에 에러)" />
+      <link href="https://mond-al.github.io/error-binding-notwork" rel="alternate" type="text/html" title="Binding이 되지않을때 (by viewModels()에 에러)" />
       <published>2021-02-09T00:00:00+09:00</published>
       <updated>2021-02-09T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/about-binding</id>
-      <content type="html" xml:base="https://mond-al.github.io/about-binding">&lt;p&gt;프로젝트가 세팅되지 않은 상태에서 디펜던시 정의를 빠트린경우인데 new Project를 통해 empty activity 프로젝트로 시작하면 항상 빠트리다 보니 포스팅으로 정리해둡니다.&lt;/p&gt;
+      <id>https://mond-al.github.io/error-binding-notwork</id>
+      <content type="html" xml:base="https://mond-al.github.io/error-binding-notwork">&lt;p&gt;프로젝트가 세팅되지 않은 상태에서 디펜던시 정의를 빠트린경우인데 new Project를 통해 empty activity 프로젝트로 시작하면 항상 빠트리다 보니 포스팅으로 정리해둡니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;by-viewmodels에-에러가-나는-경우&quot;&gt;by viewModels()에 에러가 나는 경우.&lt;/h2&gt;
 
@@ -1127,11 +1127,11 @@ ZetEngine mc = new ZetMotocycle();
   
     <entry>
       <title type="html">File Provider Path 디렉리터 영역 매칭</title>
-      <link href="https://mond-al.github.io/cache-share" rel="alternate" type="text/html" title="File Provider Path 디렉리터 영역 매칭" />
+      <link href="https://mond-al.github.io/cachefile-share" rel="alternate" type="text/html" title="File Provider Path 디렉리터 영역 매칭" />
       <published>2021-02-08T00:00:00+09:00</published>
       <updated>2021-02-08T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/cache-share</id>
-      <content type="html" xml:base="https://mond-al.github.io/cache-share">&lt;p&gt;Android 7(N)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. 얼마전 기존 프로젝트에 Android 11(R) 대응을 위해 Scoped Storage 적용을 진행하면서 기존 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache, files, external(Media/Download)로 구분하는 처리가 추가되었습니다. 이로 인해 external경로 이외에도 파일프로바이더로 제공할 수 있도록 수정이 필요했습니다.&lt;/p&gt;
+      <id>https://mond-al.github.io/cachefile-share</id>
+      <content type="html" xml:base="https://mond-al.github.io/cachefile-share">&lt;p&gt;Android 7(N)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. 얼마전 기존 프로젝트에 Android 11(R) 대응을 위해 Scoped Storage 적용을 진행하면서 기존 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache, files, external(Media/Download)로 구분하는 처리가 추가되었습니다. 이로 인해 external경로 이외에도 파일프로바이더로 제공할 수 있도록 수정이 필요했습니다.&lt;/p&gt;
 
 &lt;p&gt;추가 할 수 있는 path의 종류와 가르키는 영역 정리&lt;/p&gt;
 
@@ -1250,11 +1250,11 @@ ZetEngine mc = new ZetMotocycle();
   
     <entry>
       <title type="html">안드로이드 파일 쓰기</title>
-      <link href="https://mond-al.github.io/file-write" rel="alternate" type="text/html" title="안드로이드 파일 쓰기" />
+      <link href="https://mond-al.github.io/scopedstorage-filewrite" rel="alternate" type="text/html" title="안드로이드 파일 쓰기" />
       <published>2021-02-02T00:00:00+09:00</published>
       <updated>2021-02-02T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/file-write</id>
-      <content type="html" xml:base="https://mond-al.github.io/file-write">&lt;p&gt;안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다.&lt;/p&gt;
+      <id>https://mond-al.github.io/scopedstorage-filewrite</id>
+      <content type="html" xml:base="https://mond-al.github.io/scopedstorage-filewrite">&lt;p&gt;안드로이드 저장소의 형태를 구분하고, 실제 파일을 생성하고 사용하는 방법에 대해 정리하였습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;코드 아래 path를 정리해두었는데 path는 제조사,기종,OS버전등에 의해 따라 달라질 수 있습니다. 대략적인 형상에 대해 정리 해두는 자료로 이해하기 바랍니다.&lt;/strong&gt;&lt;/p&gt;
 

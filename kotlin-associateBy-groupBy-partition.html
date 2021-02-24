@@ -11,7 +11,7 @@
 
 
 
-    <title>코틀린의 지연(lazy) 컬랙션 연산</title>
+    <title>kotlin collection.associateBy,groupBy,partition</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -39,25 +39,25 @@
         <meta name="google-site-verification" content="GCZr_aYYwDvGhBvJNkNJft6FY0cIWqpS9Zce3sPH784"/>
 
     <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>코틀린의 지연(lazy) 컬랙션 연산 | 몬드의 개발로그</title>
+<title>kotlin collection.associateBy,groupBy,partition | 몬드의 개발로그</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="코틀린의 지연(lazy) 컬랙션 연산" />
+<meta property="og:title" content="kotlin collection.associateBy,groupBy,partition" />
 <meta name="author" content="jisoo Yang" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="map이나 filter 같은 컬랙션 함수는 결과 컬랙션을 즉시(eagerly:열심히) 생성합니다. 이는 컬랙션 함수를 연쇄하면 단계마다 중간 결과를 새로운 컬랙션 객체로 생성한다는 말이기도 합니다. 하지만 시퀀스(sequence)를 사용하면 중간 임시 컬렉션을 사용하지 않고도 연살을 연쇄적으로 수행 할 수 있습니다." />
-<meta property="og:description" content="map이나 filter 같은 컬랙션 함수는 결과 컬랙션을 즉시(eagerly:열심히) 생성합니다. 이는 컬랙션 함수를 연쇄하면 단계마다 중간 결과를 새로운 컬랙션 객체로 생성한다는 말이기도 합니다. 하지만 시퀀스(sequence)를 사용하면 중간 임시 컬렉션을 사용하지 않고도 연살을 연쇄적으로 수행 할 수 있습니다." />
-<link rel="canonical" href="https://mond-al.github.io/kotlin-lazy-calc" />
-<meta property="og:url" content="https://mond-al.github.io/kotlin-lazy-calc" />
+<meta name="description" content="코틀린에서는 Guava 다른 여타 편라한 기능을 제공하던 라이브러리를 사용하지않고도 충분히 많은 일을 효율적이고 간편하게 해결 할 수 있도록 제공하고있습니다. 귀찮은 문제를 가볍게 해결 해주는 편리한 함수 associateBy, groupBy에 대해 정리해보겠습니다." />
+<meta property="og:description" content="코틀린에서는 Guava 다른 여타 편라한 기능을 제공하던 라이브러리를 사용하지않고도 충분히 많은 일을 효율적이고 간편하게 해결 할 수 있도록 제공하고있습니다. 귀찮은 문제를 가볍게 해결 해주는 편리한 함수 associateBy, groupBy에 대해 정리해보겠습니다." />
+<link rel="canonical" href="https://mond-al.github.io/kotlin-associateBy-groupBy-partition" />
+<meta property="og:url" content="https://mond-al.github.io/kotlin-associateBy-groupBy-partition" />
 <meta property="og:site_name" content="몬드의 개발로그" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-02-19T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="코틀린의 지연(lazy) 컬랙션 연산" />
+<meta property="twitter:title" content="kotlin collection.associateBy,groupBy,partition" />
 <script type="application/ld+json">
-{"url":"https://mond-al.github.io/kotlin-lazy-calc","author":{"@type":"Person","name":"jisoo Yang"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://mond-al.github.io/assets/images/logo/normal_icon.png"},"name":"jisoo Yang"},"headline":"코틀린의 지연(lazy) 컬랙션 연산","dateModified":"2021-02-19T00:00:00+09:00","datePublished":"2021-02-19T00:00:00+09:00","description":"map이나 filter 같은 컬랙션 함수는 결과 컬랙션을 즉시(eagerly:열심히) 생성합니다. 이는 컬랙션 함수를 연쇄하면 단계마다 중간 결과를 새로운 컬랙션 객체로 생성한다는 말이기도 합니다. 하지만 시퀀스(sequence)를 사용하면 중간 임시 컬렉션을 사용하지 않고도 연살을 연쇄적으로 수행 할 수 있습니다.","mainEntityOfPage":{"@type":"WebPage","@id":"https://mond-al.github.io/kotlin-lazy-calc"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"url":"https://mond-al.github.io/kotlin-associateBy-groupBy-partition","author":{"@type":"Person","name":"jisoo Yang"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://mond-al.github.io/assets/images/logo/normal_icon.png"},"name":"jisoo Yang"},"headline":"kotlin collection.associateBy,groupBy,partition","dateModified":"2021-02-19T00:00:00+09:00","datePublished":"2021-02-19T00:00:00+09:00","description":"코틀린에서는 Guava 다른 여타 편라한 기능을 제공하던 라이브러리를 사용하지않고도 충분히 많은 일을 효율적이고 간편하게 해결 할 수 있도록 제공하고있습니다. 귀찮은 문제를 가볍게 해결 해주는 편리한 함수 associateBy, groupBy에 대해 정리해보겠습니다.","mainEntityOfPage":{"@type":"WebPage","@id":"https://mond-al.github.io/kotlin-associateBy-groupBy-partition"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <meta property="og:image" content="https://mond-al.github.io/assets/images/cover/2021-02-19-kotlin-lazy-calc.png"/>
+    <meta property="og:image" content="https://mond-al.github.io/assets/images/cover/2021-02-19-kotlin-collection.png"/>
     <meta property="og:image:width" content="800"/> <meta property="og:image:height" content="540"/> 
     <meta property="article:publisher" content="https://www.facebook.com/jisoo.yang.56"/>
     <meta name="referrer" content="no-referrer-when-downgrade"/>
@@ -122,7 +122,7 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-kotlin tag-java  ">
+        <article class="post-full  tag-kotlin  ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
@@ -131,110 +131,98 @@ into the {body} of the default.hbs template -->
                         <span class="date-divider">/</span>
                         
                             
-                               <a href='/tag/kotlin/'>KOTLIN</a>,
-                            
-                        
-                            
-                               <a href='/tag/java/'>JAVA</a>
+                               <a href='/tag/kotlin/'>KOTLIN</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title">코틀린의 지연(lazy) 컬랙션 연산</h1>
+                <h1 class="post-full-title">kotlin collection.associateBy,groupBy,partition</h1>
             </header>
 
             
-            <figure class="post-full-image" style="background-image: url(/assets/images/cover/2021-02-19-kotlin-lazy-calc.png)">
+            <figure class="post-full-image" style="background-image: url(/assets/images/cover/2021-02-19-kotlin-collection.png)">
             </figure>
             
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p>map이나 filter 같은 컬랙션 함수는 결과 컬랙션을 즉시(eagerly:열심히) 생성합니다. 이는 컬랙션 함수를 연쇄하면 단계마다 중간 결과를 새로운 컬랙션 객체로 생성한다는 말이기도 합니다. 하지만 시퀀스(sequence)를 사용하면 중간 임시 컬렉션을 사용하지 않고도 연살을 연쇄적으로 수행 할 수 있습니다.</p>
+                    <p>코틀린에서는 Guava 다른 여타 편라한 기능을 제공하던 라이브러리를 사용하지않고도 충분히 많은 일을 효율적이고 간편하게 해결 할 수 있도록 제공하고있습니다. 귀찮은 문제를 가볍게 해결 해주는 편리한 함수 associateBy, groupBy에 대해 정리해보겠습니다.</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">articles</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="nc">Article</span><span class="o">::</span><span class="n">title</span><span class="p">).</span><span class="nf">filter</span> <span class="p">{</span> <span class="n">it</span><span class="p">.</span><span class="nf">startsWith</span><span class="p">(</span><span class="s">"["</span><span class="p">)}</span> 
+<h3 id="associateby">associateBy</h3>
+
+<blockquote>
+  <p>Returns a Map containing the values provided by valueTransform and indexed by keySelector functions applied to elements of the given array.<br />
+If any two elements would have the same key returned by keySelector the last one gets added to the map.<br />
+The returned map preserves the entry iteration order of the original array.</p>
+</blockquote>
+
+<p>valueTransform에서 제공하고 주어진 배열의 요소에 적용된 keySelector 함수에 의해 인덱싱 된 값을 포함하는 Map을 반환합니다. 두 요소가 keySelector에 의해 반환 된 동일한 키를 갖는 경우 마지막 요소가 맵에 추가됩니다. 반환 된 맵은 원래 배열의 항목 반복 순서를 유지합니다.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="k">inline</span> <span class="k">fun</span> <span class="p">&lt;</span><span class="nc">T</span><span class="p">,</span> <span class="nc">K</span><span class="p">,</span> <span class="nc">V</span><span class="p">&gt;</span> <span class="nf">kotlin</span><span class="p">.</span><span class="nc">Array</span><span class="p">&lt;</span><span class="k">out</span> <span class="nc">T</span><span class="p">&gt;.</span><span class="nf">associate</span><span class="p">(</span><span class="n">transform</span><span class="p">:</span> <span class="p">(</span><span class="nc">T</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">kotlin</span><span class="p">.</span><span class="nc">Pair</span><span class="p">&lt;</span><span class="nc">K</span><span class="p">,</span> <span class="nc">V</span><span class="p">&gt;):</span> <span class="n">kotlin</span><span class="p">.</span><span class="n">collections</span><span class="p">.</span><span class="nc">Map</span><span class="p">&lt;</span><span class="nc">K</span><span class="p">,</span> <span class="nc">V</span><span class="p">&gt;</span> <span class="p">{</span> <span class="cm">/* compiled code */</span> <span class="p">}</span>
 </code></pre></div></div>
-<p>코틀린 표준 라이브러리 문서에서는 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/filter.html">filter</a>와 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/map.html">map</a>의 리턴값이 리스트라고 되어있습니다. 이는 순차적으로(연쇄적으로) 연산을 수행하면서 각각 새로운 리스트를 만든다는 것인데, 사실 요즘 안드로이드 디바이스 성능과 메모리크기를 고려하면 큰 부담이 되는 경우는 적긴합니다. 하지만  아이템이 수백만개나 구성요소 하나하나가 상당히 큰 객체라면 이야기가 달라집니다.</p>
+<p>실제 구현부 중에 Array의 형태를 보면 transform을 통해 Key/Value형태로 다시 Map을 반환하는 것을 확인 할 수 있습니다.</p>
 
-<p>이런경우 각 연산이 컬랙션을 직접 사용하는 대신 시퀀스를 사용하도록 구성하면 문제를 개선할 수 있습니다.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">charCodes</span> <span class="p">=</span> <span class="nf">intArrayOf</span><span class="p">(</span><span class="mi">72</span><span class="p">,</span> <span class="mi">69</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">79</span><span class="p">)</span>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">aritcles</span><span class="p">.</span><span class="nf">asSequence</span><span class="p">()</span>
-    <span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="nc">Article</span><span class="o">::</span><span class="n">title</span><span class="p">).</span><span class="nf">filter</span> <span class="p">{</span> <span class="n">it</span><span class="p">.</span><span class="nf">startsWith</span><span class="p">(</span><span class="s">"["</span><span class="p">)}</span>
-    <span class="p">.</span><span class="nf">toList</span><span class="p">()</span>
+<span class="kd">val</span> <span class="py">byChar</span> <span class="p">=</span> <span class="n">charCodes</span><span class="p">.</span><span class="nf">associateBy</span> <span class="p">{</span> <span class="n">it</span><span class="p">.</span><span class="nf">toChar</span><span class="p">()</span> <span class="p">}</span>
+
+<span class="c1">// L=76 only occurs once because only the last pair with the same key gets added</span>
+<span class="nf">println</span><span class="p">(</span><span class="n">byChar</span><span class="p">)</span> <span class="c1">// {H=72, E=69, L=76, O=79}</span>
 </code></pre></div></div>
-<p>시작은 .asSequence()로 변환하고 마지막에 다시 Sequence를 List로 변환해야합니다. 시퀀스에서도 map과 filter를 그대로 사용합니다. 혹시 sequence클래스나 패키지에서 어떤 함수를 제공하지 않을까 했지만, Sequence는 아래처럼 단순한 Iterator를 가진 인터페이스입니다. (그렇다고 역할이 단순하다는 이야기는 아닙니다.)</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nc">H</span><span class="p">=</span><span class="mi">72</span><span class="p">,</span> <span class="nc">E</span><span class="p">=</span><span class="mi">69</span><span class="p">,</span> <span class="nc">L</span><span class="p">=</span><span class="mi">76</span><span class="p">,</span> <span class="nc">O</span><span class="p">=</span><span class="mi">79</span><span class="p">}</span>
+</code></pre></div></div>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="nn">kotlin.sequences</span>
+<p>이 예제에서 중요한 것은 두개의 76중 어떤 값이 실제 저장된걸까?입니다. 정답은 뒤에 들어온 76입니다. 아래의 예를 보시면 조금 더 명확해집니다.</p>
 
-<span class="k">public</span> <span class="kd">interface</span> <span class="nc">Sequence</span><span class="p">&lt;</span><span class="k">out</span> <span class="nc">T</span><span class="p">&gt;</span> <span class="p">{</span>
-    <span class="k">public</span> <span class="k">abstract</span> <span class="k">operator</span> <span class="k">fun</span> <span class="nf">iterator</span><span class="p">():</span> <span class="n">kotlin</span><span class="p">.</span><span class="n">collections</span><span class="p">.</span><span class="nc">Iterator</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">articles</span> <span class="p">=</span> <span class="nf">listOf</span><span class="p">(</span>
+    <span class="nc">Article</span><span class="p">(</span><span class="s">"갤러리 글"</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">"내용"</span><span class="p">,</span> <span class="s">"이미지"</span><span class="p">),</span>
+    <span class="nc">Article</span><span class="p">(</span><span class="s">"일반글 2"</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s">"내용"</span><span class="p">,</span> <span class="s">"일반글"</span><span class="p">),</span>
+    <span class="nc">Article</span><span class="p">(</span><span class="s">"공지입니다."</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s">"내용"</span><span class="p">,</span> <span class="s">"공지"</span><span class="p">),</span>
+    <span class="nc">Article</span><span class="p">(</span><span class="s">"필독 공지입니다."</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s">"내용"</span><span class="p">,</span> <span class="s">"공지"</span><span class="p">),</span>
+    <span class="nc">Article</span><span class="p">(</span><span class="s">"일반글 3"</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s">"내용"</span><span class="p">,</span> <span class="s">"일반글"</span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="n">articles</span><span class="p">.</span><span class="nf">associateBy</span> <span class="p">{</span> <span class="k">if</span> <span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="n">type</span> <span class="p">==</span> <span class="s">"공지"</span><span class="p">)</span> <span class="s">"공지"</span> <span class="k">else</span> <span class="s">"그외"</span> <span class="p">})</span>
+</code></pre></div></div>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+    <span class="err">그외</span><span class="p">=</span><span class="nc">Article</span><span class="p">(</span><span class="n">title</span><span class="p">=</span><span class="err">일반글</span> <span class="mi">3</span><span class="p">,</span> <span class="n">id</span><span class="p">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">body</span><span class="p">=</span><span class="err">내용</span><span class="p">,</span> <span class="n">type</span><span class="p">=</span><span class="err">일반글</span><span class="p">),</span> 
+    <span class="err">공지</span><span class="p">=</span><span class="nc">Article</span><span class="p">(</span><span class="n">title</span><span class="p">=</span><span class="err">필독</span> <span class="err">공지입니다</span><span class="p">.,</span> <span class="n">id</span><span class="p">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">body</span><span class="p">=</span><span class="err">내용</span><span class="p">,</span> <span class="n">type</span><span class="p">=</span><span class="err">공지</span><span class="p">)</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">kotlinlang.org</code>에서 제공하는 예제처럼 collection을 map으로 단순히 반환하는 구현에도 사용가능합니다.</p>
+
+<h3 id="groupby">groupBy</h3>
+
+<p>가령 <code class="language-plaintext highlighter-rouge">서버에서 게시글 목록을 내려주었는데, 게시글 중에 공지사항만 모아서 헤더아이템으로 제공하고 싶은 경우</code>도 associateBy를 활용하면 가능합니다. (정렬은 그냥 넣어봤어요.)</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="n">articles</span><span class="p">.</span><span class="nf">sortedBy</span> <span class="p">{</span> <span class="n">it</span><span class="p">.</span><span class="n">id</span> <span class="p">}.</span><span class="nf">groupBy</span> <span class="p">{</span> <span class="k">if</span> <span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="n">type</span> <span class="p">==</span> <span class="s">"공지"</span><span class="p">)</span> <span class="s">"공지"</span> <span class="k">else</span> <span class="s">"그외"</span> <span class="p">})</span>
+</code></pre></div></div>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+    <span class="err">공지</span> <span class="p">=</span> <span class="p">[</span><span class="nc">Article</span><span class="p">(</span><span class="n">title</span> <span class="p">=</span> <span class="err">필독</span> <span class="err">공지입니다</span> <span class="p">.,</span> <span class="n">id</span> <span class="p">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">body</span> <span class="p">=</span> <span class="err">내용</span><span class="p">,</span> <span class="n">type</span> <span class="p">=</span> <span class="err">공지</span><span class="p">),</span>
+        <span class="nc">Article</span><span class="p">(</span><span class="n">title</span> <span class="p">=</span> <span class="err">공지입니다</span><span class="p">.,</span> <span class="n">id</span> <span class="p">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">body</span> <span class="p">=</span> <span class="err">내용</span><span class="p">,</span> <span class="n">type</span> <span class="p">=</span> <span class="err">공지</span><span class="p">)],</span>
+    <span class="err">그외</span> <span class="p">=</span> <span class="p">[</span><span class="nc">Article</span><span class="p">(</span><span class="n">title</span> <span class="p">=</span> <span class="err">갤러리</span> <span class="err">글</span><span class="p">,</span> <span class="n">id</span> <span class="p">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">body</span> <span class="p">=</span> <span class="err">내용</span><span class="p">,</span> <span class="n">type</span> <span class="p">=</span> <span class="err">이미지</span><span class="p">),</span>
+        <span class="nc">Article</span><span class="p">(</span><span class="n">title</span> <span class="p">=</span> <span class="err">일반글</span> <span class="mi">2</span><span class="p">,</span> <span class="n">id</span> <span class="p">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">body</span> <span class="p">=</span> <span class="err">내용</span><span class="p">,</span> <span class="n">type</span> <span class="p">=</span> <span class="err">일반글</span><span class="p">),</span>
+        <span class="nc">Article</span><span class="p">(</span><span class="n">title</span> <span class="p">=</span> <span class="err">일반글</span> <span class="mi">3</span><span class="p">,</span> <span class="n">id</span> <span class="p">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">body</span> <span class="p">=</span> <span class="err">내용</span><span class="p">,</span> <span class="n">type</span> <span class="p">=</span> <span class="err">일반글</span><span class="p">)]</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>여기서 나오는 iterator() 메소드를 통해 원소값을 하나씩 순차적으로 얻어오는게 Sequence의 전부입니다. 여기에 <code class="language-plaintext highlighter-rouge">필요할때 계산</code>하는 lazy의 개념이 지원되면서 결과를 저장하지 않고 연쇄적으로 적용하여 효율적으로 계산을 수행할 수 있습니다.</p>
+<h3 id="partition">partition</h3>
 
-<p>시퀀스의 연산은 중간 단계(Intermediate Step)과 최종 연산(Terminal operations)으로 구분되어집니다.</p>
-
-<p>조금 더 명확한 예를 들기 위해 kotlinlang.org에 예제를 가져와 봤습니다.</p>
-
-<h3 id="listcollection으로-수행">List(Collection)으로 수행.</h3>
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">words</span> <span class="p">=</span> <span class="s">"The quick brown fox jumps over the lazy dog"</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s">" "</span><span class="p">)</span>
-<span class="kd">val</span> <span class="py">lengthsList</span> <span class="p">=</span> <span class="n">words</span><span class="p">.</span><span class="nf">filter</span> <span class="p">{</span> <span class="nf">println</span><span class="p">(</span><span class="s">"filter: $it"</span><span class="p">);</span> <span class="n">it</span><span class="p">.</span><span class="n">length</span> <span class="p">&gt;</span> <span class="mi">3</span> <span class="p">}</span>
-    <span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="nf">println</span><span class="p">(</span><span class="s">"length: ${it.length}"</span><span class="p">);</span> <span class="n">it</span><span class="p">.</span><span class="n">length</span> <span class="p">}</span>
-    <span class="p">.</span><span class="nf">take</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-
-<span class="nf">println</span><span class="p">(</span><span class="n">lengthsList</span><span class="p">)</span>
+<p>하나의 규칙을 통해서 두개의 컬랙션으로 나눈다면 차라리 partition을  쓰는게 더 직관적일 수 있습니다.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="n">articles</span><span class="p">.</span><span class="nf">partition</span> <span class="p">{</span> <span class="n">it</span><span class="p">.</span><span class="n">type</span> <span class="p">==</span> <span class="s">"공지"</span> <span class="p">})</span>
 </code></pre></div></div>
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">filter</span><span class="p">:</span> <span class="nc">The</span>
-<span class="n">filter</span><span class="p">:</span> <span class="n">quick</span>
-<span class="n">filter</span><span class="p">:</span> <span class="n">brown</span>
-<span class="n">filter</span><span class="p">:</span> <span class="n">fox</span>
-<span class="n">filter</span><span class="p">:</span> <span class="n">jumps</span>
-<span class="n">filter</span><span class="p">:</span> <span class="n">over</span>
-<span class="n">filter</span><span class="p">:</span> <span class="n">the</span>
-<span class="n">filter</span><span class="p">:</span> <span class="n">lazy</span>
-<span class="n">filter</span><span class="p">:</span> <span class="n">dog</span>
-<span class="n">length</span><span class="p">:</span> <span class="mi">5</span>
-<span class="n">length</span><span class="p">:</span> <span class="mi">5</span>
-<span class="n">length</span><span class="p">:</span> <span class="mi">5</span>
-<span class="n">length</span><span class="p">:</span> <span class="mi">4</span>
-<span class="n">length</span><span class="p">:</span> <span class="mi">4</span>
-<span class="nc">Lengths</span> <span class="n">of</span> <span class="n">first</span> <span class="mi">4</span> <span class="n">words</span> <span class="n">longer</span> <span class="n">than</span> <span class="mi">3</span> <span class="n">chars</span><span class="p">:</span>
-<span class="na">[5, 5, 5, 4]</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span>
+    <span class="p">[</span><span class="nc">Article</span><span class="p">(</span><span class="n">title</span> <span class="p">=</span> <span class="err">공지입니다</span><span class="p">.,</span> <span class="n">id</span> <span class="p">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">body</span> <span class="p">=</span> <span class="err">내용</span><span class="p">,</span> <span class="n">type</span> <span class="p">=</span> <span class="err">공지</span><span class="p">),</span>
+     <span class="nc">Article</span><span class="p">(</span><span class="n">title</span> <span class="p">=</span> <span class="err">필독</span> <span class="err">공지입니다</span> <span class="p">.,</span> <span class="n">id</span> <span class="p">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">body</span> <span class="p">=</span> <span class="err">내용</span><span class="p">,</span> <span class="n">type</span> <span class="p">=</span> <span class="err">공지</span><span class="p">)],</span>
+    <span class="p">[</span><span class="nc">Article</span><span class="p">(</span><span class="n">title</span> <span class="p">=</span> <span class="err">갤러리</span> <span class="err">글</span><span class="p">,</span> <span class="n">id</span> <span class="p">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">body</span> <span class="p">=</span> <span class="err">내용</span><span class="p">,</span> <span class="n">type</span> <span class="p">=</span> <span class="err">이미지</span><span class="p">),</span>
+     <span class="nc">Article</span><span class="p">(</span><span class="n">title</span> <span class="p">=</span> <span class="err">일반글</span> <span class="mi">2</span><span class="p">,</span> <span class="n">id</span> <span class="p">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">body</span> <span class="p">=</span> <span class="err">내용</span><span class="p">,</span> <span class="n">type</span> <span class="p">=</span> <span class="err">일반글</span><span class="p">),</span>
+     <span class="nc">Article</span><span class="p">(</span><span class="n">title</span> <span class="p">=</span> <span class="err">일반글</span> <span class="mi">3</span><span class="p">,</span> <span class="n">id</span> <span class="p">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">body</span> <span class="p">=</span> <span class="err">내용</span><span class="p">,</span> <span class="n">type</span> <span class="p">=</span> <span class="err">일반글</span><span class="p">)]</span>
+<span class="p">)</span>
 </code></pre></div></div>
-
-<p><img src="https://kotlinlang.org/docs/images/list-processing.png" alt="https://kotlinlang.org/docs/images/list-processing.png" /></p>
-
-<h3 id="sequence로-수행">Sequence로 수행.</h3>
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">words</span> <span class="p">=</span> <span class="s">"The quick brown fox jumps over the lazy dog"</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s">" "</span><span class="p">)</span>
-<span class="kd">val</span> <span class="py">wordsSequence</span> <span class="p">=</span> <span class="n">words</span><span class="p">.</span><span class="nf">asSequence</span><span class="p">()</span>
-
-<span class="kd">val</span> <span class="py">lengthsSequence</span> <span class="p">=</span> <span class="n">wordsSequence</span><span class="p">.</span><span class="nf">filter</span> <span class="p">{</span> <span class="nf">println</span><span class="p">(</span><span class="s">"filter: $it"</span><span class="p">);</span> <span class="n">it</span><span class="p">.</span><span class="n">length</span> <span class="p">&gt;</span> <span class="mi">3</span> <span class="p">}</span>
-    <span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="nf">println</span><span class="p">(</span><span class="s">"length: ${it.length}"</span><span class="p">);</span> <span class="n">it</span><span class="p">.</span><span class="n">length</span> <span class="p">}</span>
-    <span class="p">.</span><span class="nf">take</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-
-<span class="nf">println</span><span class="p">(</span><span class="n">lengthsSequence</span><span class="p">.</span><span class="nf">toList</span><span class="p">())</span>
-</code></pre></div></div>
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Lengths</span> <span class="n">of</span> <span class="n">first</span> <span class="mi">4</span> <span class="n">words</span> <span class="n">longer</span> <span class="n">than</span> <span class="mi">3</span> <span class="n">chars</span>
-<span class="n">filter</span><span class="p">:</span> <span class="nc">The</span>
-<span class="n">filter</span><span class="p">:</span> <span class="n">quick</span>
-<span class="n">length</span><span class="p">:</span> <span class="mi">5</span>
-<span class="n">filter</span><span class="p">:</span> <span class="n">brown</span>
-<span class="n">length</span><span class="p">:</span> <span class="mi">5</span>
-<span class="n">filter</span><span class="p">:</span> <span class="n">fox</span>
-<span class="n">filter</span><span class="p">:</span> <span class="n">jumps</span>
-<span class="n">length</span><span class="p">:</span> <span class="mi">5</span>
-<span class="n">filter</span><span class="p">:</span> <span class="n">over</span>
-<span class="n">length</span><span class="p">:</span> <span class="mi">4</span>
-<span class="na">[5, 5, 5, 4]</span>
-
-</code></pre></div></div>
-<p><img src="https://kotlinlang.org/docs/images/sequence-processing.png" alt="https://kotlinlang.org/docs/images/sequence-processing.png" /></p>
-
-<p>중간연산은 항상 지연됩니다. 최종 연산을 호출하면 연기되었던 모든 계산이 수행됩니다. 만약 위의 예에서 마지막 줄의 <code class="language-plaintext highlighter-rouge">lengthsSequence.toList()</code>를 호출하지 않으면, 결과는 아무런 출력도 일어나지 않습니다. 즉, filter,map구문에서 일어나는 모든 중간 연산은 수행이 되지 않습니다.</p>
-
-<p>안드로이드 컴파일 환경에서는 아직 스트림을 지원하지 않기 때문에 이러한 시퀸스를 통해 게으른 연산을 지원합니다.</p>
-
 
                 </div>
             </section>
@@ -298,9 +286,9 @@ into the {body} of the default.hbs template -->
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            this.page.url = 'https://mond-al.github.io/kotlin-lazy-calc';
-                            this.page.identifier = '/kotlin-lazy-calc';
-                            this.page.title = '코틀린의 지연(lazy) 컬랙션 연산';
+                            this.page.url = 'https://mond-al.github.io/kotlin-associateBy-groupBy-partition';
+                            this.page.identifier = '/kotlin-associateBy-groupBy-partition';
+                            this.page.title = 'kotlin collection.associateBy,groupBy,partition';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -347,21 +335,21 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                         
-                                            <li><a href="/kotlin-visibility">코틀린의 가시성 정리</a></li>
+                                            <li><a href="/kotlin-visibility-internal">코틀린의 internal 가시성</a></li>
                                         
                                     
                                   
                                 
                                   
                                     
+                                        
+                                        
+                                            <li><a href="/kotlin-lazy-operation">코틀린의 지연(lazy) 컬랙션 연산</a></li>
+                                        
+                                    
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                            <li><a href="/kotlin-collection">kotlin collection.associateBy</a></li>
-                                        
                                     
                                   
                                 
@@ -414,12 +402,12 @@ into the {body} of the default.hbs template -->
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/kotlin-visibility">
-                <div class="post-card-image" style="background-image: url(/assets/images/cover/2021-02-19-kotlin-visibility.png)"></div>
+            <a class="post-card-image-link" href="/kotlin-lazy-operation">
+                <div class="post-card-image" style="background-image: url(/assets/images/cover/2021-02-19-kotlin-lazy-calc.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/kotlin-visibility">
+            <a class="post-card-content-link" href="/kotlin-lazy-operation">
                 <header class="post-card-header">
                     
                         
@@ -433,7 +421,7 @@ into the {body} of the default.hbs template -->
                         
                     
 
-                    <h2 class="post-card-title">코틀린의 가시성 정리</h2>
+                    <h2 class="post-card-title">코틀린의 지연(lazy) 컬랙션 연산</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -470,22 +458,34 @@ into the {body} of the default.hbs template -->
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/kotlin-collection">
-                <div class="post-card-image" style="background-image: url(/assets/images/cover/2021-02-19-kotlin-collection.png)"></div>
+            <a class="post-card-image-link" href="/fragment-pager-adapter">
+                <div class="post-card-image" style="background-image: url(/assets/images/cover/2021-02-18-viewpager-fragment.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/kotlin-collection">
+            <a class="post-card-content-link" href="/fragment-pager-adapter">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Kotlin</span>
+                               <span class="post-card-tags">Android</span>
+                            
+                        
+                            
+                               <span class="post-card-tags">Fragmentpageradapter</span>
+                            
+                        
+                            
+                               <span class="post-card-tags">Fragmentstatepageradapter</span>
+                            
+                        
+                            
+                                <span class="post-card-tags">Behavior_set_user_visible_hint</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">kotlin collection.associateBy</h2>
+                    <h2 class="post-card-title">FragmentPagerAdapter, FragmentStatePagerAdapter (생성자 Behavior편)</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -531,18 +531,18 @@ into the {body} of the default.hbs template -->
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">코틀린의 지연(lazy) 컬랙션 연산</div>
+    <div class="floating-header-title">kotlin collection.associateBy,groupBy,partition</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%EC%BD%94%ED%8B%80%EB%A6%B0%EC%9D%98+%EC%A7%80%EC%97%B0%28lazy%29+%EC%BB%AC%EB%9E%99%EC%85%98+%EC%97%B0%EC%82%B0&amp;url=https://mond-al.github.io/kotlin-lazy-calc"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=kotlin+collection.associateBy%2CgroupBy%2Cpartition&amp;url=https://mond-al.github.io/kotlin-associateBy-groupBy-partition"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://mond-al.github.io/kotlin-lazy-calc"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://mond-al.github.io/kotlin-associateBy-groupBy-partition"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 
