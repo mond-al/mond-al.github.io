@@ -5,8 +5,8 @@
         <description>몬드는 오늘도 개발을 합니다. 내일도...</description>
         <link>https://mond-al.github.io//</link>
         <atom:link href="https://mond-al.github.io//rss.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 02 Mar 2021 22:52:03 +0900</pubDate>
-        <lastBuildDate>Tue, 02 Mar 2021 22:52:03 +0900</lastBuildDate>
+        <pubDate>Tue, 02 Mar 2021 22:55:51 +0900</pubDate>
+        <lastBuildDate>Tue, 02 Mar 2021 22:55:51 +0900</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
         
         <item>
@@ -1036,7 +1036,7 @@ ZetEngine mc = new ZetMotocycle();
 &lt;p&gt;프로젝트가 세팅되지 않은 상태에서 디펜던시 정의를 빠트린경우인데 new Project를 통해 empty activity 프로젝트로 시작하면 항상 빠트리다 보니 포스팅으로 정리해둡니다.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;val viewModels = ViewModelClass &lt;u style=&quot;text-decoration-color:red&quot;&gt;by viewModels&lt;/u&gt;()&lt;br /&gt;
+  &lt;p&gt;val viewModels : ViewModelClass &lt;u style=&quot;text-decoration-color:red&quot;&gt;by viewModels&lt;/u&gt;()&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Unresolved reference: viewModels&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 

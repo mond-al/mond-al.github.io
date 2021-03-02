@@ -7,7 +7,7 @@
         <email></email>
     </author>
 
-    <updated>2021-03-02T22:52:03+09:00</updated>
+    <updated>2021-03-02T22:55:51+09:00</updated>
     <link rel="site" href="https://mond-al.github.io" />
 
     
@@ -1021,7 +1021,7 @@ ZetEngine mc = new ZetMotocycle();
 &lt;p&gt;프로젝트가 세팅되지 않은 상태에서 디펜던시 정의를 빠트린경우인데 new Project를 통해 empty activity 프로젝트로 시작하면 항상 빠트리다 보니 포스팅으로 정리해둡니다.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;val viewModels = ViewModelClass &lt;u style=&quot;text-decoration-color:red&quot;&gt;by viewModels&lt;/u&gt;()&lt;br /&gt;
+  &lt;p&gt;val viewModels : ViewModelClass &lt;u style=&quot;text-decoration-color:red&quot;&gt;by viewModels&lt;/u&gt;()&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Unresolved reference: viewModels&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
