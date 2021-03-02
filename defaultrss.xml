@@ -5,8 +5,8 @@
         <description>몬드는 오늘도 개발을 합니다. 내일도...</description>
         <link>https://mond-al.github.io//</link>
         <atom:link href="https://mond-al.github.io//rss.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 02 Mar 2021 22:50:36 +0900</pubDate>
-        <lastBuildDate>Tue, 02 Mar 2021 22:50:36 +0900</lastBuildDate>
+        <pubDate>Tue, 02 Mar 2021 22:51:32 +0900</pubDate>
+        <lastBuildDate>Tue, 02 Mar 2021 22:51:32 +0900</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
         
         <item>
@@ -2315,8 +2315,11 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
 &lt;h3 id=&quot;random-1000장-랜덤-해상도---넘버링-1부터-1000까지&quot;&gt;Random 1000장 랜덤 해상도 - 넘버링 1부터 1000까지&lt;/h3&gt;
 &lt;blockquote&gt;
   &lt;p&gt;&lt;a href=&quot;https://mond-al.github.io/test-image-url-web&quot;&gt;https://mond-al.github.io/test-image-url-web&lt;/a&gt;&lt;/p&gt;
-  &lt;h1 id=&quot;다양한-기능을-제공하는-유용한-사이트들&quot;&gt;다양한 기능을 제공하는 유용한 사이트들&lt;/h1&gt;
-  &lt;h2 id=&quot;여러장의-사진-이미지가-필요할-때&quot;&gt;여러장의 사진 이미지가 필요할 때&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;다양한-기능을-제공하는-유용한-사이트들&quot;&gt;다양한 기능을 제공하는 유용한 사이트들&lt;/h1&gt;
+&lt;h2 id=&quot;여러장의-사진-이미지가-필요할-때&quot;&gt;여러장의 사진 이미지가 필요할 때&lt;/h2&gt;
+&lt;blockquote&gt;
   &lt;p&gt;&lt;a href=&quot;http://unsample.net&quot;&gt;http://unsample.net&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
