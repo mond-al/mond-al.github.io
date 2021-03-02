@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/test/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-02-28T13:53:19+09:00</updated>
+  <updated>2021-03-02T22:50:36+09:00</updated>
   <id>https://mond-al.github.io/tag/test/feed.xml</id>
 
   
@@ -145,9 +145,17 @@
       <id>https://mond-al.github.io/test-image-url-web</id>
       <content type="html" xml:base="https://mond-al.github.io/test-image-url-web">&lt;p&gt;기능 테스트를 하다 보면 이미지 소스들이 필요한 경우가 있습니다. 때로는 예제앱에 이미지를 포함하고 싶을때 적당한 이미지를 선택하는것도 은근 신경쓰이는 일 입니다.&lt;/p&gt;
 
-&lt;h1 id=&quot;다양한-기능을-제공하는-유용한-사이트들&quot;&gt;다양한 기능을 제공하는 유용한 사이트들&lt;/h1&gt;
-&lt;h2 id=&quot;여러장의-사진-이미지가-필요할-때&quot;&gt;여러장의 사진 이미지가 필요할 때&lt;/h2&gt;
+&lt;h1 id=&quot;조금씩-다르지만-많은-수의-파일이-필요할때&quot;&gt;조금씩 다르지만 많은 수의 파일이 필요할때&lt;/h1&gt;
+&lt;h3 id=&quot;표준-해상도-종류별로-47가지&quot;&gt;표준 해상도 종류별로 47가지&lt;/h3&gt;
 &lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://mond-al.github.io/test-image-url-web&quot;&gt;https://mond-al.github.io/test-image-url-web&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;random-1000장-랜덤-해상도---넘버링-1부터-1000까지&quot;&gt;Random 1000장 랜덤 해상도 - 넘버링 1부터 1000까지&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://mond-al.github.io/test-image-url-web&quot;&gt;https://mond-al.github.io/test-image-url-web&lt;/a&gt;&lt;/p&gt;
+  &lt;h1 id=&quot;다양한-기능을-제공하는-유용한-사이트들&quot;&gt;다양한 기능을 제공하는 유용한 사이트들&lt;/h1&gt;
+  &lt;h2 id=&quot;여러장의-사진-이미지가-필요할-때&quot;&gt;여러장의 사진 이미지가 필요할 때&lt;/h2&gt;
   &lt;p&gt;&lt;a href=&quot;http://unsample.net&quot;&gt;http://unsample.net&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
