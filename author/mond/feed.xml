@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://mond-al.github.io/author/mond/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-03-02T22:55:51+09:00</updated>
+  <updated>2021-03-04T03:13:36+09:00</updated>
   <id>https://mond-al.github.io/author/mond/feed.xml</id>
 
   
@@ -38,119 +38,6 @@
       <updated>2021-02-25T00:00:00+09:00</updated>
       <id>https://mond-al.github.io/cleancoders-tdd</id>
       <content type="html" xml:base="https://mond-al.github.io/cleancoders-tdd">&lt;h3 id=&quot;tdd-원칙&quot;&gt;TDD 원칙&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;실패하는 테스트를 작성하기 전에는 절대로 제품 코드를 작성하지 않는다.&lt;/li&gt;
-  &lt;li&gt;실패하는 테스트 코드를 한 번에 하나 이상 작성하지 않는다.&lt;/li&gt;
-  &lt;li&gt;현재 실패하고 있는 테스트를 성공하기에 충분한 정도를 넘어서는 프로덕션 코드를 작성하지 않는다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Start -&amp;gt; write a failing test &amp;lt;-&amp;gt; write code to make it pass (refactoring) -&amp;gt; end&lt;/p&gt;
-
-&lt;p&gt;리팩터링은 옵션이 아니다!&lt;/p&gt;
-
-&lt;h3 id=&quot;원칙과-팁&quot;&gt;원칙과 팁&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;간단하고 쉬운것, 수준이하의 것부터.
-    &lt;ul&gt;
-      &lt;li&gt;0 + 0… 0 + 1 …&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;작은 골프게임.
-    &lt;ul&gt;
-      &lt;li&gt;최소한의 코드로 돌아 갈 수 있게&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;테스트가 더욱 구체화 될 수록, 프로덕션코드는 범용적이어야 한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;tdd-잇점&quot;&gt;TDD 잇점&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Debugging Time 이 줄어든다.
-    &lt;ul&gt;
-      &lt;li&gt;디버그 챔피언이 되고 싶은가? 그건 아니다. 하지만….
-        &lt;ul&gt;
-          &lt;li&gt;이건 요구되는 스킬이 아니다.&lt;/li&gt;
-          &lt;li&gt;디버깅에 시간을 보내길 원치 않는다.&lt;/li&gt;
-          &lt;li&gt;코드가 동작하도록 하는데 시간을 사용하기 바란다.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;TDD가 디버깅 시간을 1/10로 줄여 줄 것이다.
-        &lt;ul&gt;
-          &lt;li&gt;그런데 1/10 이 아니라, 1/2만 줄여도 의미가 있다&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;설계문서를 얻게 된다.
-    &lt;ul&gt;
-      &lt;li&gt;test is “Low level design document.”&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Decoupling
-    &lt;ul&gt;
-      &lt;li&gt;테스트를 먼저 작성하면 프로덕션 코드가 테스트 가능해진다.&lt;/li&gt;
-      &lt;li&gt;테스트 코드에서 코드라인을 접근하기 쉬운 유일한 방법은 Decouple 시키는 것이다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Courage to change
-    &lt;ul&gt;
-      &lt;li&gt;개발자가 코드를 깨끗하게 리팩토링 하는 것을 두려워하면 코드는 썩는다.&lt;/li&gt;
-      &lt;li&gt;테스트가 있어서 시스템이 정상 동작하는지 확인 할 수 있어서 두렵지 않을것이다.
-        &lt;ul&gt;
-          &lt;li&gt;리그레이션(회귀) 테스트&lt;/li&gt;
-          &lt;li&gt;버그가 발견되면 버그를 재현하는 테스트를 추가한다. «&amp;lt; 중요한거 같음.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;완벽한 설계에 기반해 개발을 했더라도 테스트가 없다면, 코드를 클린하게 하는데 두려움이 생길것이다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Trust
-    &lt;ul&gt;
-      &lt;li&gt;TAD(Test After Development)테스트를 신뢰할 수 없다. 항상 구멍이 있을것이라 생각할 것이다.&lt;/li&gt;
-      &lt;li&gt;TAD는 지루하다. 이미 수작업으로 트스트 했기때문에 코드가 동작하는 것을 안다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>jisoo Yang</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="android" />
-      
-        <category term="architecture" />
-      
-        <category term="cleanCoders" />
-      
-        <category term="tdd" />
-      
-
-      
-        <summary type="html">TDD 원칙 실패하는 테스트를 작성하기 전에는 절대로 제품 코드를 작성하지 않는다. 실패하는 테스트 코드를 한 번에 하나 이상 작성하지 않는다. 현재 실패하고 있는 테스트를 성공하기에 충분한 정도를 넘어서는 프로덕션 코드를 작성하지 않는다.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">아키텍처와 클린코드 그리고 TDD (3)</title>
-      <link href="https://mond-al.github.io/cleancoders-tdd-2" rel="alternate" type="text/html" title="아키텍처와 클린코드 그리고 TDD (3)" />
-      <published>2021-02-25T00:00:00+09:00</published>
-      <updated>2021-02-25T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/cleancoders-tdd-2</id>
-      <content type="html" xml:base="https://mond-al.github.io/cleancoders-tdd-2">&lt;h3 id=&quot;tdd-원칙&quot;&gt;TDD 원칙&lt;/h3&gt;
 &lt;ol&gt;
   &lt;li&gt;실패하는 테스트를 작성하기 전에는 절대로 제품 코드를 작성하지 않는다.&lt;/li&gt;
   &lt;li&gt;실패하는 테스트 코드를 한 번에 하나 이상 작성하지 않는다.&lt;/li&gt;
@@ -1345,6 +1232,129 @@ ZetEngine mc = new ZetMotocycle();
 
       
         <summary type="html">프로젝트가 세팅되지 않은 상태에서 디펜던시 정의를 빠트린경우인데 new Project를 통해 empty activity 프로젝트로 시작하면 항상 빠트리다 보니 포스팅으로 정리해둡니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">File Provider Path 디렉리터 영역 매칭</title>
+      <link href="https://mond-al.github.io/cachefile-share" rel="alternate" type="text/html" title="File Provider Path 디렉리터 영역 매칭" />
+      <published>2021-02-08T00:00:00+09:00</published>
+      <updated>2021-02-08T00:00:00+09:00</updated>
+      <id>https://mond-al.github.io/cachefile-share</id>
+      <content type="html" xml:base="https://mond-al.github.io/cachefile-share">&lt;p&gt;Android 7(N)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. 얼마전 기존 프로젝트에 Android 11(R) 대응을 위해 Scoped Storage 적용을 진행하면서 기존 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache, files, external(Media/Download)로 구분하는 처리가 추가되었습니다. 이로 인해 external경로 이외에도 파일프로바이더로 제공할 수 있도록 수정이 필요했습니다.&lt;/p&gt;
+
+&lt;p&gt;추가 할 수 있는 path의 종류와 가르키는 영역 정리&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;path&lt;/th&gt;
+      &lt;th&gt;directory scope&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;files-path&lt;/td&gt;
+      &lt;td&gt;context.getFilesDir()&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;cache-path&lt;/td&gt;
+      &lt;td&gt;context.getCacheDir()&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;external-cache-path&lt;/td&gt;
+      &lt;td&gt;context.getExternalCacheDir()&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;external-path&lt;/td&gt;
+      &lt;td&gt;Environment.getExternalStorageDirectory()&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;external-media-path&lt;/td&gt;
+      &lt;td&gt;context.getExternalMediaDirs() (only API 21+ Devices)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;manifest &amp;gt; provider &amp;gt; meta-data &amp;gt; resource 에 정의한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;file_paths.xml&lt;/code&gt; 파일을 아래처럼 수정했습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- res/xml/file_paths.xml --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;path&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;external-path&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;external_files&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;cache-path&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;files&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;  #cache 영역 전체(.)를 files라는 이름으로 공유 
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/path&amp;gt;&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;연관코드&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!--manifest.Xml--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;manifest&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;application&amp;gt;&lt;/span&gt;
+        ...
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;provider&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;androidx.core.content.FileProvider&quot;&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;android:authorities=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;${applicationId}.fileprovider&quot;&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;android:exported=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;false&quot;&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;android:grantUriPermissions=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;tools:replace=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;android:authorities&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta-data&lt;/span&gt;
+                &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;android.support.FILE_PROVIDER_PATHS&quot;&lt;/span&gt;
+                &lt;span class=&quot;na&quot;&gt;android:resource=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@xml/file_paths&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/provider&amp;gt;&lt;/span&gt;
+        ...
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/application&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/manifest&amp;gt;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;requestCaptureImage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Activity&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Uri&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;Intent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MediaStore&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ACTION_IMAGE_CAPTURE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;VERSION&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;SDK_INT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;VERSION_CODES&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;putExtra&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;provider&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;MediaStore&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;EXTRA_OUTPUT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getPath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;Uri&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;photoUri&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FileProvider&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getUriForFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MainApplication&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BuildConfig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;APPLICATION_ID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;putExtra&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MediaStore&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;EXTRA_OUTPUT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;photoUri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;activity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;startActivityForResult&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;RequestCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ACTION_IMAGE_CAPTURE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Error trace&lt;/p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;Caused&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;by:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;IllegalArgumentException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Couldn&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;find&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;meta&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;provider&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;authority&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mond&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;al&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;fileProvider&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;androidx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;core&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;FileProvider&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parsePathStrategy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;FileProvider&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;606&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;androidx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;core&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;FileProvider&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getPathStrategy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;FileProvider&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;579&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;androidx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;core&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;FileProvider&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getUriForFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;FileProvider&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;417&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jisoo Yang</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="android" />
+      
+        <category term="file provider" />
+      
+        <category term="cache" />
+      
+
+      
+        <summary type="html">Android 7(N)부터는 넘겨받을 파일경로를 전달하기 위해서는 직접 FileProvider를 정의해야 합니다. 얼마전 기존 프로젝트에 Android 11(R) 대응을 위해 Scoped Storage 적용을 진행하면서 기존 external 영역에 생성한 폴더에서 직접 관리하던 파일들을 cache, files, external(Media/Download)로 구분하는 처리가 추가되었습니다. 이로 인해 external경로 이외에도 파일프로바이더로 제공할 수 있도록 수정이 필요했습니다.</summary>
       
 
       

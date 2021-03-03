@@ -7,7 +7,7 @@
         <email></email>
     </author>
 
-    <updated>2021-03-02T22:55:51+09:00</updated>
+    <updated>2021-03-04T03:13:36+09:00</updated>
     <link rel="site" href="https://mond-al.github.io" />
 
     
@@ -21,94 +21,6 @@
         <updated>2021-02-25T00:00:00+09:00</updated>
         <published>2021-02-25T00:00:00+09:00</published>
         <link rel="via" href="https://mond-al.github.io/cleancoders-tdd" />
-        <content type="html"><![CDATA[  &lt;h3 id=&quot;tdd-원칙&quot;&gt;TDD 원칙&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;실패하는 테스트를 작성하기 전에는 절대로 제품 코드를 작성하지 않는다.&lt;/li&gt;
-  &lt;li&gt;실패하는 테스트 코드를 한 번에 하나 이상 작성하지 않는다.&lt;/li&gt;
-  &lt;li&gt;현재 실패하고 있는 테스트를 성공하기에 충분한 정도를 넘어서는 프로덕션 코드를 작성하지 않는다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Start -&amp;gt; write a failing test &amp;lt;-&amp;gt; write code to make it pass (refactoring) -&amp;gt; end&lt;/p&gt;
-
-&lt;p&gt;리팩터링은 옵션이 아니다!&lt;/p&gt;
-
-&lt;h3 id=&quot;원칙과-팁&quot;&gt;원칙과 팁&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;간단하고 쉬운것, 수준이하의 것부터.
-    &lt;ul&gt;
-      &lt;li&gt;0 + 0… 0 + 1 …&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;작은 골프게임.
-    &lt;ul&gt;
-      &lt;li&gt;최소한의 코드로 돌아 갈 수 있게&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;테스트가 더욱 구체화 될 수록, 프로덕션코드는 범용적이어야 한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;tdd-잇점&quot;&gt;TDD 잇점&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Debugging Time 이 줄어든다.
-    &lt;ul&gt;
-      &lt;li&gt;디버그 챔피언이 되고 싶은가? 그건 아니다. 하지만….
-        &lt;ul&gt;
-          &lt;li&gt;이건 요구되는 스킬이 아니다.&lt;/li&gt;
-          &lt;li&gt;디버깅에 시간을 보내길 원치 않는다.&lt;/li&gt;
-          &lt;li&gt;코드가 동작하도록 하는데 시간을 사용하기 바란다.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;TDD가 디버깅 시간을 1/10로 줄여 줄 것이다.
-        &lt;ul&gt;
-          &lt;li&gt;그런데 1/10 이 아니라, 1/2만 줄여도 의미가 있다&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;설계문서를 얻게 된다.
-    &lt;ul&gt;
-      &lt;li&gt;test is “Low level design document.”&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Decoupling
-    &lt;ul&gt;
-      &lt;li&gt;테스트를 먼저 작성하면 프로덕션 코드가 테스트 가능해진다.&lt;/li&gt;
-      &lt;li&gt;테스트 코드에서 코드라인을 접근하기 쉬운 유일한 방법은 Decouple 시키는 것이다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Courage to change
-    &lt;ul&gt;
-      &lt;li&gt;개발자가 코드를 깨끗하게 리팩토링 하는 것을 두려워하면 코드는 썩는다.&lt;/li&gt;
-      &lt;li&gt;테스트가 있어서 시스템이 정상 동작하는지 확인 할 수 있어서 두렵지 않을것이다.
-        &lt;ul&gt;
-          &lt;li&gt;리그레이션(회귀) 테스트&lt;/li&gt;
-          &lt;li&gt;버그가 발견되면 버그를 재현하는 테스트를 추가한다. «&amp;lt; 중요한거 같음.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;완벽한 설계에 기반해 개발을 했더라도 테스트가 없다면, 코드를 클린하게 하는데 두려움이 생길것이다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Trust
-    &lt;ul&gt;
-      &lt;li&gt;TAD(Test After Development)테스트를 신뢰할 수 없다. 항상 구멍이 있을것이라 생각할 것이다.&lt;/li&gt;
-      &lt;li&gt;TAD는 지루하다. 이미 수작업으로 트스트 했기때문에 코드가 동작하는 것을 안다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
- ]]></content>
-    </entry>
-    
-    <entry>
-        <id>https://mond-al.github.io//cleancoders-tdd-2</id>
-        <title><![CDATA[ 아키텍처와 클린코드 그리고 TDD (3) ]]></title>
-        <author>
-            <name></name>
-            <email></email>
-        </author>
-        <updated>2021-02-25T00:00:00+09:00</updated>
-        <published>2021-02-25T00:00:00+09:00</published>
-        <link rel="via" href="https://mond-al.github.io/cleancoders-tdd-2" />
         <content type="html"><![CDATA[  &lt;h3 id=&quot;tdd-원칙&quot;&gt;TDD 원칙&lt;/h3&gt;
 &lt;ol&gt;
   &lt;li&gt;실패하는 테스트를 작성하기 전에는 절대로 제품 코드를 작성하지 않는다.&lt;/li&gt;
