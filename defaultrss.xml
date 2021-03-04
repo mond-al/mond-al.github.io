@@ -5,13 +5,15 @@
         <description>몬드는 오늘도 개발을 합니다. 내일도...</description>
         <link>https://mond-al.github.io//</link>
         <atom:link href="https://mond-al.github.io//rss.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Thu, 04 Mar 2021 23:30:15 +0900</pubDate>
-        <lastBuildDate>Thu, 04 Mar 2021 23:30:15 +0900</lastBuildDate>
+        <pubDate>Fri, 05 Mar 2021 00:23:12 +0900</pubDate>
+        <lastBuildDate>Fri, 05 Mar 2021 00:23:12 +0900</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
         
         <item>
             <title>Typer - 타이핑 입력효과 라이브러러리</title>
-            <description>&lt;p&gt;안드로이드에서 TextView(또는 상속받는)에 한글을 자소단위로 타이핑하는 효과를 수행하는 라이브러리입니다. 이 프로젝트는 TDD 테스트작성 연습이 첫 목표였기 때문에 아직 많이 부족한점 참고부탁드립니다. 하지만 하다보니 재미가 있어서 추후 발전시켜볼 예정입니다. :~)&lt;/p&gt;
+            <description>&lt;p&gt;안드로이드에서 TextView(또는 상속받는)에 한글을 자소단위로 타이핑하는 효과를 수행하는 라이브러리입니다.&lt;/p&gt;
+
+&lt;p&gt;** 이 프로젝트는 TDD 테스트작성 연습이 첫 목표였기 때문에 아직 많이 부족한점 참고부탁드립니다. 하지만 하다보니 재미가 있어서 추후 발전시켜볼 예정입니다. :~)&lt;/p&gt;
 
 &lt;h1 id=&quot;typer&quot;&gt;typer&lt;/h1&gt;
 &lt;p&gt;안드로이드 TextView(EditText)뷰에 텍스트를 타이핑하는 것처럼 순차적으로 첫가끝(자음모음)입력을 지원합니다.
