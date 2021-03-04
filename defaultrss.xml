@@ -5,25 +5,19 @@
         <description>몬드는 오늘도 개발을 합니다. 내일도...</description>
         <link>https://mond-al.github.io//</link>
         <atom:link href="https://mond-al.github.io//rss.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Thu, 04 Mar 2021 22:59:09 +0900</pubDate>
-        <lastBuildDate>Thu, 04 Mar 2021 22:59:09 +0900</lastBuildDate>
+        <pubDate>Thu, 04 Mar 2021 23:30:15 +0900</pubDate>
+        <lastBuildDate>Thu, 04 Mar 2021 23:30:15 +0900</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
         
         <item>
-            <title>아키텍처와 클린코드 그리고 TDD (3)</title>
+            <title>Typer - 타이핑 입력효과 라이브러러리</title>
             <description>&lt;p&gt;안드로이드에서 TextView(또는 상속받는)에 한글을 자소단위로 타이핑하는 효과를 수행하는 라이브러리입니다. 이 프로젝트는 TDD 테스트작성 연습이 첫 목표였기 때문에 아직 많이 부족한점 참고부탁드립니다. 하지만 하다보니 재미가 있어서 추후 발전시켜볼 예정입니다. :~)&lt;/p&gt;
 
 &lt;h1 id=&quot;typer&quot;&gt;typer&lt;/h1&gt;
 &lt;p&gt;안드로이드 TextView(EditText)뷰에 텍스트를 타이핑하는 것처럼 순차적으로 첫가끝(자음모음)입력을 지원합니다.
 한글을 &lt;a href=&quot;https://pat.im/1176&quot;&gt;첫가끝&lt;/a&gt;으로 분해하여 타이핑하는 것처럼 입력합니다. 아직은 두벌식을 사용할때 처럼 &lt;a href=&quot;https://namu.wiki/w/%EB%8F%84%EA%B9%A8%EB%B9%84%EB%B6%88%20%ED%98%84%EC%83%81&quot;&gt;도깨비불현상&lt;/a&gt;을 구현하지는 못했습니다.&lt;/p&gt;
 
-&lt;p&gt;첫 배포. 아직은 아주 간단한 수준의 타이핑 효과를 줄수 있습니다. &lt;br /&gt;
-Todo :&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;데이터 최적화 및 Stream(Sequence)적용&lt;/li&gt;
-  &lt;li&gt;도깨비불현상 구현&lt;/li&gt;
-  &lt;li&gt;구간 지우고 다시 쓰기&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;첫 배포. 아직은 아주 간단한 수준의 타이핑 효과를 줄수 있습니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;demo&quot;&gt;DEMO&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://github.com/mond-al/typer/blob/main/demo.gif?raw=true&quot; width=&quot;50%&quot; /&gt;&lt;/p&gt;
@@ -50,6 +44,15 @@ Todo :&lt;/p&gt;
     &lt;span class=&quot;nc&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;makeText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;타이핑 끝&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;LENGTH_SHORT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;github-link&quot;&gt;&lt;a href=&quot;https://github.com/mond-al/typer&quot;&gt;Github link&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;todo&quot;&gt;Todo&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;데이터 최적화 및 Stream(Sequence)적용&lt;/li&gt;
+  &lt;li&gt;도깨비불현상 구현&lt;/li&gt;
+  &lt;li&gt;구간 지우고 다시 쓰기&lt;/li&gt;
+&lt;/ul&gt;
 </description>
             <pubDate>Tue, 02 Mar 2021 00:00:00 +0900</pubDate>
             <link>https://mond-al.github.io//hangeul-type-write</link>
