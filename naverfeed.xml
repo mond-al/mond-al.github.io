@@ -7,9 +7,61 @@
         <email></email>
     </author>
 
-    <updated>2021-03-04T03:13:36+09:00</updated>
+    <updated>2021-03-04T22:59:09+09:00</updated>
     <link rel="site" href="https://mond-al.github.io" />
 
+    
+    <entry>
+        <id>https://mond-al.github.io//hangeul-type-write</id>
+        <title><![CDATA[ 아키텍처와 클린코드 그리고 TDD (3) ]]></title>
+        <author>
+            <name></name>
+            <email></email>
+        </author>
+        <updated>2021-03-02T00:00:00+09:00</updated>
+        <published>2021-03-02T00:00:00+09:00</published>
+        <link rel="via" href="https://mond-al.github.io/hangeul-type-write" />
+        <content type="html"><![CDATA[  &lt;p&gt;안드로이드에서 TextView(또는 상속받는)에 한글을 자소단위로 타이핑하는 효과를 수행하는 라이브러리입니다. 이 프로젝트는 TDD 테스트작성 연습이 첫 목표였기 때문에 아직 많이 부족한점 참고부탁드립니다. 하지만 하다보니 재미가 있어서 추후 발전시켜볼 예정입니다. :~)&lt;/p&gt;
+
+&lt;h1 id=&quot;typer&quot;&gt;typer&lt;/h1&gt;
+&lt;p&gt;안드로이드 TextView(EditText)뷰에 텍스트를 타이핑하는 것처럼 순차적으로 첫가끝(자음모음)입력을 지원합니다.
+한글을 &lt;a href=&quot;https://pat.im/1176&quot;&gt;첫가끝&lt;/a&gt;으로 분해하여 타이핑하는 것처럼 입력합니다. 아직은 두벌식을 사용할때 처럼 &lt;a href=&quot;https://namu.wiki/w/%EB%8F%84%EA%B9%A8%EB%B9%84%EB%B6%88%20%ED%98%84%EC%83%81&quot;&gt;도깨비불현상&lt;/a&gt;을 구현하지는 못했습니다.&lt;/p&gt;
+
+&lt;p&gt;첫 배포. 아직은 아주 간단한 수준의 타이핑 효과를 줄수 있습니다. &lt;br /&gt;
+Todo :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;데이터 최적화 및 Stream(Sequence)적용&lt;/li&gt;
+  &lt;li&gt;도깨비불현상 구현&lt;/li&gt;
+  &lt;li&gt;구간 지우고 다시 쓰기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;demo&quot;&gt;DEMO&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/mond-al/typer/blob/main/demo.gif?raw=true&quot; width=&quot;50%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jitpack.io/#mond-al/typer&quot;&gt;&lt;img src=&quot;https://jitpack.io/v/mond-al/typer.svg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Step 1. Add it in your root build.gradle at the end of repositories:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Step 2. Add the dependency&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	dependencies {
+	        implementation 'com.github.mond-al:typer:Tag'
+	}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Step3. Just Use it!
+타이핑 효과를 줄 View, 문자열, 커서 효과 사용여부, 타이핑 완료시 콜백을 인자로 받습니다.&lt;/p&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;Typer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;typing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;textView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;타이핑할 문자열&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;useCursor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;makeText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;타이핑 끝&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;LENGTH_SHORT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+ ]]></content>
+    </entry>
     
     <entry>
         <id>https://mond-al.github.io//cleancoders-tdd</id>

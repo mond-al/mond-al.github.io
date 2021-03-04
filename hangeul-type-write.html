@@ -11,7 +11,7 @@
 
 
 
-    <title>앱의 의존성 확인하고 전이 의존성 변경하기</title>
+    <title>아키텍처와 클린코드 그리고 TDD (3)</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -39,25 +39,25 @@
         <meta name="google-site-verification" content="GCZr_aYYwDvGhBvJNkNJft6FY0cIWqpS9Zce3sPH784"/>
 
     <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>앱의 의존성 확인하고 전이 의존성 변경하기 | 몬드의 개발로그</title>
+<title>아키텍처와 클린코드 그리고 TDD (3) | 몬드의 개발로그</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="앱의 의존성 확인하고 전이 의존성 변경하기" />
+<meta property="og:title" content="아키텍처와 클린코드 그리고 TDD (3)" />
 <meta name="author" content="jisoo Yang" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="의존성과 관련하여 문제가 생겼다고 판단되면 의존성 트리를 봐야합니다. 터미널에서 프로젝트가 있는 폴더로 이동하고 아래의 명령어를 실행 하면됩니다." />
-<meta property="og:description" content="의존성과 관련하여 문제가 생겼다고 판단되면 의존성 트리를 봐야합니다. 터미널에서 프로젝트가 있는 폴더로 이동하고 아래의 명령어를 실행 하면됩니다." />
-<link rel="canonical" href="https://mond-al.github.io/dependency-gradle-setup" />
-<meta property="og:url" content="https://mond-al.github.io/dependency-gradle-setup" />
+<meta name="description" content="안드로이드에서 TextView(또는 상속받는)에 한글을 자소단위로 타이핑하는 효과를 수행하는 라이브러리입니다. 이 프로젝트는 TDD 테스트작성 연습이 첫 목표였기 때문에 아직 많이 부족한점 참고부탁드립니다. 하지만 하다보니 재미가 있어서 추후 발전시켜볼 예정입니다. :~)" />
+<meta property="og:description" content="안드로이드에서 TextView(또는 상속받는)에 한글을 자소단위로 타이핑하는 효과를 수행하는 라이브러리입니다. 이 프로젝트는 TDD 테스트작성 연습이 첫 목표였기 때문에 아직 많이 부족한점 참고부탁드립니다. 하지만 하다보니 재미가 있어서 추후 발전시켜볼 예정입니다. :~)" />
+<link rel="canonical" href="https://mond-al.github.io/hangeul-type-write" />
+<meta property="og:url" content="https://mond-al.github.io/hangeul-type-write" />
 <meta property="og:site_name" content="몬드의 개발로그" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-01-27T00:00:00+09:00" />
+<meta property="article:published_time" content="2021-03-02T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="앱의 의존성 확인하고 전이 의존성 변경하기" />
+<meta property="twitter:title" content="아키텍처와 클린코드 그리고 TDD (3)" />
 <script type="application/ld+json">
-{"url":"https://mond-al.github.io/dependency-gradle-setup","author":{"@type":"Person","name":"jisoo Yang"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://mond-al.github.io/assets/images/logo/normal_icon.png"},"name":"jisoo Yang"},"headline":"앱의 의존성 확인하고 전이 의존성 변경하기","dateModified":"2021-01-27T00:00:00+09:00","datePublished":"2021-01-27T00:00:00+09:00","description":"의존성과 관련하여 문제가 생겼다고 판단되면 의존성 트리를 봐야합니다. 터미널에서 프로젝트가 있는 폴더로 이동하고 아래의 명령어를 실행 하면됩니다.","mainEntityOfPage":{"@type":"WebPage","@id":"https://mond-al.github.io/dependency-gradle-setup"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"url":"https://mond-al.github.io/hangeul-type-write","author":{"@type":"Person","name":"jisoo Yang"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://mond-al.github.io/assets/images/logo/normal_icon.png"},"name":"jisoo Yang"},"headline":"아키텍처와 클린코드 그리고 TDD (3)","dateModified":"2021-03-02T00:00:00+09:00","datePublished":"2021-03-02T00:00:00+09:00","description":"안드로이드에서 TextView(또는 상속받는)에 한글을 자소단위로 타이핑하는 효과를 수행하는 라이브러리입니다. 이 프로젝트는 TDD 테스트작성 연습이 첫 목표였기 때문에 아직 많이 부족한점 참고부탁드립니다. 하지만 하다보니 재미가 있어서 추후 발전시켜볼 예정입니다. :~)","mainEntityOfPage":{"@type":"WebPage","@id":"https://mond-al.github.io/hangeul-type-write"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <meta property="og:image" content="https://mond-al.github.io/assets/images/cover/2021-01-27-dependency-gradle.png"/>
+    <meta property="og:image" content="https://mond-al.github.io/assets/images/cover/clean_coders.png"/>
     <meta property="og:image:width" content="800"/> <meta property="og:image:height" content="540"/> 
     <meta property="article:publisher" content="https://www.facebook.com/jisoo.yang.56"/>
     <meta name="referrer" content="no-referrer-when-downgrade"/>
@@ -122,11 +122,11 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-android tag-gradle tag-dependency tag-transitive  ">
+        <article class="post-full  tag-android tag-type-writer tag-tdd  ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="27 January 2021">27 January 2021</time>
+                    <time class="post-full-meta-date" datetime=" 2 March 2021"> 2 March 2021</time>
                     
                         <span class="date-divider">/</span>
                         
@@ -135,191 +135,64 @@ into the {body} of the default.hbs template -->
                             
                         
                             
-                               <a href='/tag/gradle/'>GRADLE</a>,
+                               <a href='/tag/type-writer/'>TYPE-WRITER</a>,
                             
                         
                             
-                               <a href='/tag/dependency/'>DEPENDENCY</a>,
-                            
-                        
-                            
-                               <a href='/tag/transitive/'>TRANSITIVE</a>
+                               <a href='/tag/tdd/'>TDD</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title">앱의 의존성 확인하고 전이 의존성 변경하기</h1>
+                <h1 class="post-full-title">아키텍처와 클린코드 그리고 TDD (3)</h1>
             </header>
 
             
-            <figure class="post-full-image" style="background-image: url(/assets/images/cover/2021-01-27-dependency-gradle.png)">
+            <figure class="post-full-image" style="background-image: url(/assets/images/cover/clean_coders.png)">
             </figure>
             
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p>의존성과 관련하여 문제가 생겼다고 판단되면 <code class="language-plaintext highlighter-rouge">의존성 트리</code>를 봐야합니다. 터미널에서 프로젝트가 있는 폴더로 이동하고 아래의 명령어를 실행 하면됩니다.</p>
+                    <p>안드로이드에서 TextView(또는 상속받는)에 한글을 자소단위로 타이핑하는 효과를 수행하는 라이브러리입니다. 이 프로젝트는 TDD 테스트작성 연습이 첫 목표였기 때문에 아직 많이 부족한점 참고부탁드립니다. 하지만 하다보니 재미가 있어서 추후 발전시켜볼 예정입니다. :~)</p>
 
-<p>혹시 <code class="language-plaintext highlighter-rouge">{Dementions...}{buildType}</code>부분이 이해되지 않으신다면, <a href="ProductFlavors-BuildType">ProductFlavors와 BuildType</a>을 참고해주세요.</p>
+<h1 id="typer">typer</h1>
+<p>안드로이드 TextView(EditText)뷰에 텍스트를 타이핑하는 것처럼 순차적으로 첫가끝(자음모음)입력을 지원합니다.
+한글을 <a href="https://pat.im/1176">첫가끝</a>으로 분해하여 타이핑하는 것처럼 입력합니다. 아직은 두벌식을 사용할때 처럼 <a href="https://namu.wiki/w/%EB%8F%84%EA%B9%A8%EB%B9%84%EB%B6%88%20%ED%98%84%EC%83%81">도깨비불현상</a>을 구현하지는 못했습니다.</p>
 
-<h2 id="의존성-트리-보기">의존성 트리 보기</h2>
+<p>첫 배포. 아직은 아주 간단한 수준의 타이핑 효과를 줄수 있습니다. <br />
+Todo :</p>
+<ul>
+  <li>데이터 최적화 및 Stream(Sequence)적용</li>
+  <li>도깨비불현상 구현</li>
+  <li>구간 지우고 다시 쓰기</li>
+</ul>
 
-<h3 id="명령어-형식">명령어 형식</h3>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./gradlew app:dependencies <span class="nt">--configuration</span> <span class="o">{</span>Dementions...<span class="o">}{</span>buildType<span class="o">}{</span>Compile|Runtime<span class="o">}</span>Classpath   
+<h1 id="demo">DEMO</h1>
+<p><img src="https://github.com/mond-al/typer/blob/main/demo.gif?raw=true" width="50%" /></p>
+
+<p><a href="https://jitpack.io/#mond-al/typer"><img src="https://jitpack.io/v/mond-al/typer.svg" alt="" /></a></p>
+
+<p>Step 1. Add it in your root build.gradle at the end of repositories:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+</code></pre></div></div>
+<p>Step 2. Add the dependency</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	dependencies {
+	        implementation 'com.github.mond-al:typer:Tag'
+	}
 </code></pre></div></div>
 
-<h3 id="실제-실행-시켰을때-화면">실제 실행 시켰을때 화면</h3>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./gradlew app:dependencies <span class="nt">--configuration</span> prodDebugCompileClasspath
-
-<span class="o">&gt;</span> Task :app:dependencies
-
-<span class="nt">------------------------------------------------------------</span>
-Project :app
-<span class="nt">------------------------------------------------------------</span>
-
-oneStoreDevDebugCompileClasspath - Compile classpath <span class="k">for </span>compilation <span class="s1">'oneStoreDevDebug'</span> <span class="o">(</span>target  
-<span class="o">(</span>androidJvm<span class="o">))</span><span class="nb">.</span>
-+--- androidx.core:core-ktx:1.3.2
-|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.3.71 -&gt; 1.4.21 <span class="o">(</span><span class="k">*</span><span class="o">)</span>
-|    +--- androidx.annotation:annotation:1.1.0
-|    <span class="se">\-</span><span class="nt">--</span> androidx.core:core:1.3.2
-|         +--- androidx.annotation:annotation:1.1.0
-|         +--- androidx.lifecycle:lifecycle-runtime:2.0.0 -&gt; 2.1.0
-|         |    +--- androidx.lifecycle:lifecycle-common:2.1.0                         <span class="c"># (A)</span>
-...
-+--- androidx.appcompat:appcompat:1.2.0
-|    +--- androidx.annotation:annotation:1.1.0
-...
-|    |    |    +--- androidx.annotation:annotation:1.0.0 -&gt; 1.1.0
-|    |    |    +--- androidx.core:core:1.0.0 -&gt; 1.3.2 <span class="o">(</span><span class="k">*</span><span class="o">)</span>
-|    |    |    +--- androidx.lifecycle:lifecycle-livedata:2.0.0
-|    |    |    |    +--- androidx.arch.core:core-runtime:2.0.0
-|    |    |    |    |    +--- androidx.annotation:annotation:1.0.0 -&gt; 1.1.0
-|    |    |    |    |    <span class="se">\-</span><span class="nt">--</span> androidx.arch.core:core-common:2.0.0 -&gt; 2.1.0 <span class="o">(</span><span class="k">*</span><span class="o">)</span>
-|    |    |    |    +--- androidx.lifecycle:lifecycle-livedata-core:2.0.0
-|    |    |    |    |    +--- androidx.lifecycle:lifecycle-common:2.0.0 -&gt; 2.1.0 <span class="o">(</span><span class="k">*</span><span class="o">)</span>   <span class="c"># (B)</span>
-...
-+--- org.jetbrains.kotlin:kotlin-stdlib:<span class="o">{</span>strictly 1.4.21<span class="o">}</span> -&gt; 1.4.21 <span class="o">(</span>c<span class="o">)</span>
-+--- androidx.core:core-ktx:<span class="o">{</span>strictly 1.3.2<span class="o">}</span> -&gt; 1.3.2 <span class="o">(</span>c<span class="o">)</span>
-+--- androidx.appcompat:appcompat:<span class="o">{</span>strictly 1.2.0<span class="o">}</span> -&gt; 1.2.0 <span class="o">(</span>c<span class="o">)</span>
-+--- com.google.android.material:material:<span class="o">{</span>strictly 1.2.1<span class="o">}</span> -&gt; 1.2.1 <span class="o">(</span>c<span class="o">)</span>
-...
-+--- androidx.interpolator:interpolator:<span class="o">{</span>strictly 1.0.0<span class="o">}</span> -&gt; 1.0.0 <span class="o">(</span>c<span class="o">)</span>
-+--- androidx.arch.core:core-runtime:<span class="o">{</span>strictly 2.0.0<span class="o">}</span> -&gt; 2.0.0 <span class="o">(</span>c<span class="o">)</span>
-<span class="se">\-</span><span class="nt">--</span> androidx.lifecycle:lifecycle-livedata-core:<span class="o">{</span>strictly 2.0.0<span class="o">}</span> -&gt; 2.0.0 <span class="o">(</span>c<span class="o">)</span>
-
-<span class="o">(</span>c<span class="o">)</span> - dependency constraint
-<span class="o">(</span><span class="k">*</span><span class="o">)</span> - dependencies omitted <span class="o">(</span>listed previously<span class="o">)</span>
-
-A web-based, searchable dependency report is available by adding the <span class="nt">--scan</span> option.
-
-BUILD SUCCESSFUL <span class="k">in </span>693ms
-1 actionable task: 1 executed
-
+<p>Step3. Just Use it!
+타이핑 효과를 줄 View, 문자열, 커서 효과 사용여부, 타이핑 완료시 콜백을 인자로 받습니다.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Typer</span><span class="p">.</span><span class="nf">typing</span><span class="p">(</span><span class="n">textView</span><span class="p">,</span> <span class="s">"타이핑할 문자열"</span><span class="p">,</span> <span class="n">useCursor</span><span class="p">){</span>
+    <span class="nc">Toast</span><span class="p">.</span><span class="nf">makeText</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s">"타이핑 끝"</span><span class="p">,</span> <span class="nc">Toast</span><span class="p">.</span><span class="nc">LENGTH_SHORT</span><span class="p">).</span><span class="nf">show</span><span class="p">()</span>
+<span class="p">}</span>
 </code></pre></div></div>
-
-<h3 id="의존성-트리-읽기">의존성 트리 읽기</h3>
-
-<p><code class="language-plaintext highlighter-rouge">(c)</code>는 의존성 제약이 걸려있는 상태를 의미합니다. gradle이 알아서 결정하지 못하도록 명시되어 있는 경우입니다. <code class="language-plaintext highlighter-rouge">(\*)</code>은 이전에 트리에서 이미 하위구조를 보여주었기 때문에 생략되었음을 의미합니다.</p>
-
-<p>(B)는 <code class="language-plaintext highlighter-rouge">androidx.appcompat:appcompat:1.2.0</code>는 <code class="language-plaintext highlighter-rouge">androidx.lifecycle:lifecycle-common:2.0.0</code>을 참조하고 있지만, (A)에서 <code class="language-plaintext highlighter-rouge">androidx.core:core-ktx:1.3.2</code>에서 <code class="language-plaintext highlighter-rouge">androidx.lifecycle:lifecycle-common:2.1.0</code>를 참조하고 있기 때문에 최종적으로 <code class="language-plaintext highlighter-rouge">2.0.0</code>대신 <code class="language-plaintext highlighter-rouge">2.1.0</code>으로 갈음(<code class="language-plaintext highlighter-rouge">-&gt;</code>)되었음을 알 수 있습니다.</p>
-
-<p>실제 사용 할때는 위 예시 처럼 결과를 화면에 바로 띄우면 사용하기 번거롭습니다. 때문에 아래처럼 파일로 만들거나, 클립보드로 복사해두었다가 내가 쓰기 편한 편집기나 IDE에 붙여놓고 보는 게 편합니다.</p>
-
-<blockquote>
-  <p>파일로 저장하기</p>
-  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./gradlew app:dependencies <span class="nt">--configuration</span> prodReleaseCompileClasspath <span class="o">&gt;</span> dependency.tree
-</code></pre></div>  </div>
-  <p>클립보드에 복사하기</p>
-  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./gradlew app:dependencies <span class="nt">--configuration</span> prodReleaseCompileClasspath | pbcopy  
-</code></pre></div>  </div>
-</blockquote>
-
-<h2 id="의존성-문제-해결-하기">의존성 문제 해결 하기</h2>
-
-<p>의존성을 변경하게 되면 기존 빌드와 다른 환경으로 빌드 되기 때문에 코드 수준의 변경이 일어났다고 생각하는 것이 좋습니다. 빌드가 성공한다고 하여도 런타임에 문제를 일으킬 수 있습니다. 때문에 항상 의존성 관리는 신중해야 하고 변경 후에는 리그레이션 테스트를 통해 검증하는 것이 좋습니다.</p>
-
-<p>실제 예로 보면 눈이 너무 아프니 간단한 상황을 만들고 간략하게 예를 만들어 진행해 보겠습니다.</p>
-
-<h3 id="시나리오-1-전이-의존성-컨트롤하기upgrade">시나리오 1 (전이 의존성 컨트롤하기:upgrade)</h3>
-
-<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dependencies</span> <span class="o">{</span>                                                                                  
-    <span class="n">implementation</span> <span class="s1">'B:1.0.0'</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./gradlew app:dependencies <span class="nt">--configuration</span> compileClasspath                                      
-...
-+--- B:1.0.0
-     <span class="se">\-</span><span class="nt">--</span> C:1.0.0
-</code></pre></div></div>
-
-<p>내 프로젝트에서는 C를 직접 사용지 않았습니다. 하지만 C:1.0.0에 의존성을 가진 B:1.0.0이 있습니다. 그런데 C:1.0.0에 문제가 있어서 B를 사용할때 특정상황에서 버그가 있습니다. 찾아보니 C:1.2.0버전에서는 이 문제를 해결했습니다. 하지만 B는 아직 업데이트 되지 않았습니다. 결국 B에서 C의 버전만 올리면 되는 상황입니다.</p>
-
-<p>참고로 이런 상황에서 B에 대한 명시적인 의존성을 가진 <code class="language-plaintext highlighter-rouge">직접 의존성</code>(direct dependencies)이라고 하고 C에대한 의존성은 <code class="language-plaintext highlighter-rouge">전이 의존성</code>(transitive dependencies)이라고 합니다.</p>
-
-<p>전이 의존성을 변경하기 위해서는 아래처럼 constraint블럭을 지정하고 직접 기입해주면 됩니다. because에 명시적으로 이유까지 적어주면 좋겠습니다.</p>
-
-<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dependencies</span> <span class="o">{</span>                                                                                  
-    <span class="n">implementation</span> <span class="s1">'B:1.0.0'</span>
-    <span class="n">constraints</span> <span class="o">{</span>
-        <span class="n">implementation</span><span class="o">(</span><span class="s1">'C:1.2.0'</span><span class="o">)</span> <span class="o">{</span>
-            <span class="n">because</span> <span class="s1">'previous versions have a bug impacting this application'</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
-
-<span class="o">}</span>
-</code></pre></div></div>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./gradlew app:dependencies <span class="nt">--configuration</span> compileClasspath
-...
-+--- B:1.0.0
-|    <span class="se">\-</span><span class="nt">--</span> C:1.0.0 -&gt; 1.2.0 <span class="o">(</span><span class="k">*</span><span class="o">)</span>
-</code></pre></div></div>
-
-<h3 id="시나리오-2-전이-의존성-제외하기--downgrade">시나리오 2 (전이 의존성 제외하기 : downgrade)</h3>
-
-<p>여러 모듈 의존성을 가진 X가 있습니다. 물론 그중에 최신 버전을 사용하는 모듈도 포함되어 있습니다. 그런데 X의 최신 버전이 내 코드에서 문제를 일으키는 것을 발견하게 되었습니다. 이런 경우 강제로 버전을 다운그레이드 합니다. 방법은 특정 버전을 strictly로 지정하면 됩니다.</p>
-
-<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dependencies</span> <span class="o">{</span>                                                                                  
-    <span class="n">implementation</span> <span class="s1">'X'</span>
-    <span class="o">{</span>
-        <span class="n">version</span> <span class="o">{</span>
-            <span class="n">strictly</span> <span class="s1">'1.0.0'</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
-    <span class="n">implementation</span> <span class="s1">'A:1.0.0'</span>
-    <span class="n">implementation</span> <span class="s1">'B:1.1.0'</span>
-    <span class="n">implementation</span> <span class="s1">'C:1.0.1'</span>
-<span class="o">}</span>
-</code></pre></div></div>
-<p>또는 dependencies 블록 밖에서 전역적으로 덮어 쓸 수도 있습니다.</p>
-<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">configurations</span><span class="o">.</span><span class="na">all</span> <span class="o">{</span>                                                                            
-    <span class="n">resolutionStrategy</span><span class="o">.</span><span class="na">force</span> <span class="s2">"X:1.0.0"</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./gradlew app:dependencies <span class="nt">--configuration</span> compileClasspath                                     
-...
-+--- X:<span class="o">{</span>strictly 1.0.0<span class="o">}</span> -&gt; 1.0.0
-+--- B:1.0.0
-|    <span class="se">\-</span><span class="nt">--</span> X:1.3.0 -&gt; 1.0.0 <span class="o">(</span><span class="k">*</span><span class="o">)</span>
-+--- C:1.1.0
-|    <span class="se">\-</span><span class="nt">--</span> X:1.4.0 -&gt; 1.0.0 <span class="o">(</span><span class="k">*</span><span class="o">)</span>
-+--- D:1.0.1
-     <span class="se">\-</span><span class="nt">--</span> X:1.5.0 -&gt; 1.0.0 <span class="o">(</span><span class="k">*</span><span class="o">)</span>
-</code></pre></div></div>
-
-<h3 id="시나리오-3-전이-의존성-제외하기--exclude">시나리오 3 (전이 의존성 제외하기 : exclude)</h3>
-
-<p>가장 많이 게 되는 상황입니다. 특정 라이브러리를 가져와서 사용해야겪 하는데, 특정 모듈이나 그룹을 제외하고 싶습니다. 가령 aar로 가져온 모듈과 gradle로 가져온 모듈이 서로 다른버전을 보고 있는 경우가 있습니다. 또는 버전에 따라 패키지 형상이 다른 라이브러리에 각각 의존성이 있는경우가 이에 해당합니다. 이럴 때는 gradle로 가져오는 모듈에서 제외 할 수 있다면 그 부분만 제거합니다.</p>
-
-<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dependencies</span> <span class="o">{</span>                                                                                  
-    <span class="n">implementation</span><span class="o">(</span><span class="s1">'X:1.0.0'</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">exclude</span> <span class="nl">group:</span> <span class="s1">'{group_name}'</span><span class="o">,</span> <span class="nl">module:</span> <span class="s1">'{module_name}'</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
 
                 </div>
             </section>
@@ -383,9 +256,9 @@ BUILD SUCCESSFUL <span class="k">in </span>693ms
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            this.page.url = 'https://mond-al.github.io/dependency-gradle-setup';
-                            this.page.identifier = '/dependency-gradle-setup';
-                            this.page.title = '앱의 의존성 확인하고 전이 의존성 변경하기';
+                            this.page.url = 'https://mond-al.github.io/hangeul-type-write';
+                            this.page.identifier = '/hangeul-type-write';
+                            this.page.title = '아키텍처와 클린코드 그리고 TDD (3)';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -430,19 +303,9 @@ BUILD SUCCESSFUL <span class="k">in </span>693ms
                                 
                                   
                                     
-                                        
-                                        
-                                            <li><a href="/hangeul-type-write">아키텍처와 클린코드 그리고 TDD (3)</a></li>
-                                        
-                                    
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                            <li><a href="/cleancoders-tdd">아키텍처와 클린코드 그리고 TDD (3)</a></li>
-                                        
                                     
                                   
                                 
@@ -465,6 +328,17 @@ BUILD SUCCESSFUL <span class="k">in </span>693ms
                                     
                                         
                                         
+                                            <li><a href="/cleancoders-2">아키텍처와 클린코드 그리고 TDD (2)</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/cleancoders-1">아키텍처와 클린코드 그리고 TDD (1)</a></li>
+                                        
                                     
                                   
                                 
@@ -514,10 +388,6 @@ BUILD SUCCESSFUL <span class="k">in </span>693ms
                                     
                                         
                                         
-                                    
-                                  
-                                
-                                  
                                     
                                   
                                 
@@ -556,63 +426,6 @@ BUILD SUCCESSFUL <span class="k">in </span>693ms
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/errorlog-android-11-api-changed">
-                <div class="post-card-image" style="background-image: url(/assets/images/cover/common_error_log.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/errorlog-android-11-api-changed">
-                <header class="post-card-header">
-                    
-                        
-                            
-                               <span class="post-card-tags">Android</span>
-                            
-                        
-                            
-                               <span class="post-card-tags">Error</span>
-                            
-                        
-                            
-                                <span class="post-card-tags">Log</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">java.lang.NoSuchMethodError No virtual method log(ILjava/lang/String;Ljava/lang/Throwable</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p></p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/logo/normal.png" alt="jisoo Yang" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/mond/">jisoo Yang</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
@@ -620,12 +433,12 @@ BUILD SUCCESSFUL <span class="k">in </span>693ms
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/productflavors-buildtype-combine">
-                <div class="post-card-image" style="background-image: url(/assets/images/post/2021-01-26-ProductFlavors-BuildType/cover.png)"></div>
+            <a class="post-card-image-link" href="/cleancoders-tdd">
+                <div class="post-card-image" style="background-image: url(/assets/images/cover/clean_coders.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/productflavors-buildtype-combine">
+            <a class="post-card-content-link" href="/cleancoders-tdd">
                 <header class="post-card-header">
                     
                         
@@ -634,20 +447,20 @@ BUILD SUCCESSFUL <span class="k">in </span>693ms
                             
                         
                             
-                               <span class="post-card-tags">Gradle</span>
+                               <span class="post-card-tags">Architecture</span>
                             
                         
                             
-                               <span class="post-card-tags">Productflavors</span>
+                               <span class="post-card-tags">Cleancoders</span>
                             
                         
                             
-                                <span class="post-card-tags">Buildtypes</span>
+                                <span class="post-card-tags">Tdd</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">ProductFlavors와 BuildType 조합</h2>
+                    <h2 class="post-card-title">아키텍처와 클린코드 그리고 TDD (3)</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -693,18 +506,18 @@ BUILD SUCCESSFUL <span class="k">in </span>693ms
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">앱의 의존성 확인하고 전이 의존성 변경하기</div>
+    <div class="floating-header-title">아키텍처와 클린코드 그리고 TDD (3)</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%EC%95%B1%EC%9D%98+%EC%9D%98%EC%A1%B4%EC%84%B1+%ED%99%95%EC%9D%B8%ED%95%98%EA%B3%A0+%EC%A0%84%EC%9D%B4+%EC%9D%98%EC%A1%B4%EC%84%B1+%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0&amp;url=https://mond-al.github.io/dependency-gradle-setup"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98%EC%99%80+%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C+%EA%B7%B8%EB%A6%AC%EA%B3%A0+TDD+%283%29&amp;url=https://mond-al.github.io/hangeul-type-write"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://mond-al.github.io/dependency-gradle-setup"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://mond-al.github.io/hangeul-type-write"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 
