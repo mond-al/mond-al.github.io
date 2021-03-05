@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/android/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-03-06T03:05:29+09:00</updated>
+  <updated>2021-03-06T03:05:45+09:00</updated>
   <id>https://mond-al.github.io/tag/android/feed.xml</id>
 
   
@@ -62,8 +62,7 @@ Add it in your root build.gradle at the end of repositories:&lt;/p&gt;
 	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Share this release:
-Step3. Just Use it!
+&lt;p&gt;Step3. Just Use it!
 표시할 숫자, 마지막에 더해질 숫자(default=1) 그리고 콤마 사용 여부(default=false)를 인자로 받습니다.&lt;/p&gt;
 
 &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;com.al.mond.digitcounter.DigitCounter&lt;/span&gt;
