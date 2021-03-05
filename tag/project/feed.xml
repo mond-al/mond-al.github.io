@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://mond-al.github.io/tag/mond-lab/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://mond-al.github.io/tag/project/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-03-06T02:05:36+09:00</updated>
-  <id>https://mond-al.github.io/tag/mond-lab/feed.xml</id>
+  <updated>2021-03-06T02:05:49+09:00</updated>
+  <id>https://mond-al.github.io/tag/project/feed.xml</id>
 
   
   
@@ -99,7 +99,7 @@
       
 
       
-        <category term="mond-lab" />
+        <category term="project" />
       
         <category term="android" />
       
@@ -271,7 +271,7 @@
       
 
       
-        <category term="mond-lab" />
+        <category term="project" />
       
         <category term="scoped storage" />
       
@@ -377,7 +377,7 @@
       
 
       
-        <category term="mond-lab" />
+        <category term="project" />
       
         <category term="test" />
       
@@ -460,7 +460,7 @@
       
 
       
-        <category term="mond-lab" />
+        <category term="project" />
       
         <category term="test" />
       
@@ -592,7 +592,7 @@
       
 
       
-        <category term="mond-lab" />
+        <category term="project" />
       
         <category term="android" />
       
