@@ -5,8 +5,8 @@
         <description>몬드는 오늘도 개발을 합니다. 내일도...</description>
         <link>https://mond-al.github.io//</link>
         <atom:link href="https://mond-al.github.io//rss.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sat, 06 Mar 2021 02:01:07 +0900</pubDate>
-        <lastBuildDate>Sat, 06 Mar 2021 02:01:07 +0900</lastBuildDate>
+        <pubDate>Sat, 06 Mar 2021 02:01:50 +0900</pubDate>
+        <lastBuildDate>Sat, 06 Mar 2021 02:01:50 +0900</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
         
         <item>
@@ -62,7 +62,7 @@
             <link>https://mond-al.github.io//hangeul-type-write</link>
             <guid isPermaLink="true">https://mond-al.github.io//hangeul-type-write</guid>
             
-            <category>MondLab</category>
+            <category>mond-lab</category>
             
             <category>android</category>
             
@@ -989,7 +989,7 @@ ZetEngine mc = new ZetMotocycle();
             <link>https://mond-al.github.io//exampleapp-camera-capture-request</link>
             <guid isPermaLink="true">https://mond-al.github.io//exampleapp-camera-capture-request</guid>
             
-            <category>MondLab</category>
+            <category>mond-lab</category>
             
             <category>scoped storage</category>
             
@@ -2264,6 +2264,8 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
             <link>https://mond-al.github.io//test-image-zip</link>
             <guid isPermaLink="true">https://mond-al.github.io//test-image-zip</guid>
             
+            <category>mond-lab</category>
+            
             <category>test</category>
             
             <category>image</category>
@@ -2324,7 +2326,7 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
             <link>https://mond-al.github.io//test-image-url-web</link>
             <guid isPermaLink="true">https://mond-al.github.io//test-image-url-web</guid>
             
-            <category>MondLab</category>
+            <category>mond-lab</category>
             
             <category>test</category>
             
@@ -2435,7 +2437,7 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
             <link>https://mond-al.github.io//fast-scroller-lib</link>
             <guid isPermaLink="true">https://mond-al.github.io//fast-scroller-lib</guid>
             
-            <category>MondLab</category>
+            <category>mond-lab</category>
             
             <category>android</category>
             
