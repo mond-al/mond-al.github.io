@@ -5,8 +5,8 @@
         <description>몬드는 오늘도 개발을 합니다. 내일도...</description>
         <link>https://mond-al.github.io//</link>
         <atom:link href="https://mond-al.github.io//rss.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sat, 06 Mar 2021 02:51:57 +0900</pubDate>
-        <lastBuildDate>Sat, 06 Mar 2021 02:51:57 +0900</lastBuildDate>
+        <pubDate>Sat, 06 Mar 2021 02:53:21 +0900</pubDate>
+        <lastBuildDate>Sat, 06 Mar 2021 02:53:21 +0900</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
         
         <item>
@@ -53,8 +53,8 @@ Step3. Just Use it!
 
 &lt;h3 id=&quot;todo&quot;&gt;Todo&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;comma option&lt;/li&gt;
   &lt;li&gt;fix digits&lt;/li&gt;
+  &lt;li&gt;&lt;del&gt;comma option&lt;/del&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
             <pubDate>Thu, 04 Mar 2021 00:00:00 +0900</pubDate>

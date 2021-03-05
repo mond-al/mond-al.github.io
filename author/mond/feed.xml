@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://mond-al.github.io/author/mond/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-03-06T02:51:57+09:00</updated>
+  <updated>2021-03-06T02:53:21+09:00</updated>
   <id>https://mond-al.github.io/author/mond/feed.xml</id>
 
   
@@ -79,8 +79,8 @@ Step3. Just Use it!
 
 &lt;h3 id=&quot;todo&quot;&gt;Todo&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;comma option&lt;/li&gt;
   &lt;li&gt;fix digits&lt;/li&gt;
+  &lt;li&gt;&lt;del&gt;comma option&lt;/del&gt;&lt;/li&gt;
 &lt;/ul&gt;</content>
 
       

@@ -7,7 +7,7 @@
         <email></email>
     </author>
 
-    <updated>2021-03-06T02:51:57+09:00</updated>
+    <updated>2021-03-06T02:53:21+09:00</updated>
     <link rel="site" href="https://mond-al.github.io" />
 
     
@@ -63,8 +63,8 @@ Step3. Just Use it!
 
 &lt;h3 id=&quot;todo&quot;&gt;Todo&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;comma option&lt;/li&gt;
   &lt;li&gt;fix digits&lt;/li&gt;
+  &lt;li&gt;&lt;del&gt;comma option&lt;/del&gt;&lt;/li&gt;
 &lt;/ul&gt;
  ]]></content>
     </entry>
