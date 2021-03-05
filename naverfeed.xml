@@ -7,9 +7,67 @@
         <email></email>
     </author>
 
-    <updated>2021-03-06T02:07:23+09:00</updated>
+    <updated>2021-03-06T02:31:36+09:00</updated>
     <link rel="site" href="https://mond-al.github.io" />
 
+    
+    <entry>
+        <id>https://mond-al.github.io//digit-roll-libs</id>
+        <title><![CDATA[ Typer - 한글 타이핑 입력효과 라이브러리 ]]></title>
+        <author>
+            <name></name>
+            <email></email>
+        </author>
+        <updated>2021-03-04T00:00:00+09:00</updated>
+        <published>2021-03-04T00:00:00+09:00</published>
+        <link rel="via" href="https://mond-al.github.io/digit-roll-libs" />
+        <content type="html"><![CDATA[  &lt;p&gt;안드로이드에서 회전하는 숫자판 컴포넌트입니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;digit-roll-counter&quot;&gt;digit roll counter&lt;/h1&gt;
+&lt;p&gt;자연스럽게 숫자가 회전하다가 마지막에 특정숫자만큼 더해지는 효과를 구현가능합니다. Demo캡쳐는 +1을 수행하게 되어 있습니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;demo&quot;&gt;DEMO&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/cover/2021-03-04-digit-roll-libs.gif&quot; width=&quot;50%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jitpack.io/#mond-al/digit-roll-numbers&quot;&gt;&lt;img src=&quot;https://jitpack.io/v/mond-al/digit-roll-numbers.svg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Step 1. Add the JitPack repository to your build file
+Add it in your root build.gradle at the end of repositories:&lt;/p&gt;
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&lt;span class=&quot;n&quot;&gt;allprojects&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;repositories&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;maven&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://jitpack.io'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Step 2. Add the dependency&lt;/p&gt;
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&lt;span class=&quot;n&quot;&gt;dependencies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	        &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'com.github.mond-al:digit-roll-numbers:0.1.0'&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Share this release:
+Step3. Just Use it!
+최종숫자와 마지막에 더해질 숫자(default=1)를 인자로 받습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;com.al.mond.digitcounter.DigitCounter&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@+id/counter&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wrap_content&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wrap_content&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;counter&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;findViewById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;DigitCounter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;counter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;counter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;github-link&quot;&gt;&lt;a href=&quot;https://github.com/mond-al/digit-roll-numbers&quot;&gt;Github link&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;todo&quot;&gt;Todo&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;comma option&lt;/li&gt;
+  &lt;li&gt;fix digits&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></content>
+    </entry>
     
     <entry>
         <id>https://mond-al.github.io//hangeul-type-write</id>
@@ -2281,7 +2339,7 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
     
     <entry>
         <id>https://mond-al.github.io//fast-scroller-lib</id>
-        <title><![CDATA[ Recyclerview Fastscroller Review ]]></title>
+        <title><![CDATA[ Recyclerview Fastscroller 라이브러리 ]]></title>
         <author>
             <name></name>
             <email></email>
@@ -2382,45 +2440,6 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
 &lt;h3 id=&quot;한번-써보세요-&quot;&gt;한번 써보세요~ 👍&lt;/h3&gt;
 
 &lt;p&gt;link : &lt;a href=&quot;https://github.com/mond-al/recyclerview-fastscroller&quot;&gt;https://github.com/mond-al/recyclerview-fastscroller&lt;/a&gt;&lt;/p&gt;
- ]]></content>
-    </entry>
-    
-    <entry>
-        <id>https://mond-al.github.io//reboot</id>
-        <title><![CDATA[ reboot ]]></title>
-        <author>
-            <name></name>
-            <email></email>
-        </author>
-        <updated>2021-01-12T00:00:00+09:00</updated>
-        <published>2021-01-12T00:00:00+09:00</published>
-        <link rel="via" href="https://mond-al.github.io/reboot" />
-        <content type="html"><![CDATA[  &lt;p&gt;다시 시작합니다.
-BLOG, MRSK project&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Blog&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;주니어 시절에는 블로그를 꽤 열심히 정리 했던 것 같습니다. 주니어 시절 개발과정에서 겪게 되는 삽질이 반복 되지 않도록 쓰기 시작했던 블로그 글들은 분명 제가 개발자로 성장하는데 큰 도움이 되었다고 생각됩니다. 하지만 세상일이 항상 그렇듯 일이 바쁘다는 핑계로 정리하는 습관이 사라지더니 어느 순간 모두 비공개로만 혼자서 보는 일기장으로, 그 후에는 점점 잊힌 페이지가 되더군요.&lt;/p&gt;
-
-&lt;p&gt;문득 정신을 차려보니 안드로이드를 개발한 지 어느덧 10년이란 시간이 지났습니다. 근래 들어 다시 “성장”하고 싶다는 생각이 들기 시작했고 포털에서 제공하는 블로그대신 github으로 자리를 옮겨와서 새롭게 시작합니다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;MRSK project &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(alMond Reyclerview Support Kit)&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;안드로이드 앱을 개발하다 보면 가장 많이 사용하게 되는 컴포넌트가 아무래도 RecyclerView가 아닐까 합니다. 구글이 제공해주는 만능상자 같은 리사이클러뷰가 제공하는 다양한 API를 이용해 엮고 응용해서 RecyclerView를 사용하기 편하게 도와주는 키트를 만들어 보려 합니다. 언제든 간편하게 적용하고, 간편하게 제거 가능한 형태를 목표로 합니다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;snippet code로 바로 적용 가능한 용법을 예제앱에 적용해거나
-(https://github.com/mond-al/RecyclerView-Support)&lt;/li&gt;
-  &lt;li&gt;조금 구성이 필요한 것은 별도로 배포할 예정입니다.
-(https://github.com/mond-al/recyclerview-fastscroller)&lt;/li&gt;
-&lt;/ul&gt;
-
  ]]></content>
     </entry>
     

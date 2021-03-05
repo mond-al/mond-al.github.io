@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/project/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-03-06T02:07:23+09:00</updated>
+  <updated>2021-03-06T02:31:36+09:00</updated>
   <id>https://mond-al.github.io/tag/project/feed.xml</id>
 
   
@@ -30,6 +30,90 @@
   
   
 
+  
+    <entry>
+      <title type="html">Typer - 한글 타이핑 입력효과 라이브러리</title>
+      <link href="https://mond-al.github.io/digit-roll-libs" rel="alternate" type="text/html" title="Typer - 한글 타이핑 입력효과 라이브러리" />
+      <published>2021-03-04T00:00:00+09:00</published>
+      <updated>2021-03-04T00:00:00+09:00</updated>
+      <id>https://mond-al.github.io/digit-roll-libs</id>
+      <content type="html" xml:base="https://mond-al.github.io/digit-roll-libs">&lt;p&gt;안드로이드에서 회전하는 숫자판 컴포넌트입니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;digit-roll-counter&quot;&gt;digit roll counter&lt;/h1&gt;
+&lt;p&gt;자연스럽게 숫자가 회전하다가 마지막에 특정숫자만큼 더해지는 효과를 구현가능합니다. Demo캡쳐는 +1을 수행하게 되어 있습니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;demo&quot;&gt;DEMO&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/cover/2021-03-04-digit-roll-libs.gif&quot; width=&quot;50%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jitpack.io/#mond-al/digit-roll-numbers&quot;&gt;&lt;img src=&quot;https://jitpack.io/v/mond-al/digit-roll-numbers.svg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Step 1. Add the JitPack repository to your build file
+Add it in your root build.gradle at the end of repositories:&lt;/p&gt;
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&lt;span class=&quot;n&quot;&gt;allprojects&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;repositories&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;maven&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://jitpack.io'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Step 2. Add the dependency&lt;/p&gt;
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&lt;span class=&quot;n&quot;&gt;dependencies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	        &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'com.github.mond-al:digit-roll-numbers:0.1.0'&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Share this release:
+Step3. Just Use it!
+최종숫자와 마지막에 더해질 숫자(default=1)를 인자로 받습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;com.al.mond.digitcounter.DigitCounter&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@+id/counter&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wrap_content&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wrap_content&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;counter&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;findViewById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;DigitCounter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;counter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;counter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;github-link&quot;&gt;&lt;a href=&quot;https://github.com/mond-al/digit-roll-numbers&quot;&gt;Github link&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;todo&quot;&gt;Todo&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;comma option&lt;/li&gt;
+  &lt;li&gt;fix digits&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jisoo Yang</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="project" />
+      
+        <category term="android" />
+      
+        <category term="roll-digit" />
+      
+        <category term="tdd" />
+      
+
+      
+        <summary type="html">안드로이드에서 회전하는 숫자판 컴포넌트입니다.</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Typer - 한글 타이핑 입력효과 라이브러리</title>
@@ -395,8 +479,8 @@
     </entry>
   
     <entry>
-      <title type="html">Recyclerview Fastscroller Review</title>
-      <link href="https://mond-al.github.io/fast-scroller-lib" rel="alternate" type="text/html" title="Recyclerview Fastscroller Review" />
+      <title type="html">Recyclerview Fastscroller 라이브러리</title>
+      <link href="https://mond-al.github.io/fast-scroller-lib" rel="alternate" type="text/html" title="Recyclerview Fastscroller 라이브러리" />
       <published>2021-01-18T00:00:00+09:00</published>
       <updated>2021-01-18T00:00:00+09:00</updated>
       <id>https://mond-al.github.io/fast-scroller-lib</id>
