@@ -175,7 +175,7 @@ into the {body} of the default.hbs template -->
 
 <p><a href="https://jitpack.io/#mond-al/typer"><img src="https://jitpack.io/v/mond-al/typer.svg" alt="" /></a></p>
 
-<p>Step 1. Add it in your root build.gradle at the end of repositories:</p>
+<h3 id="step-1-add-it-in-your-root-buildgradle-at-the-end-of-repositories">Step 1. Add it in your root build.gradle at the end of repositories:</h3>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	allprojects {
 		repositories {
 			...
@@ -183,14 +183,14 @@ into the {body} of the default.hbs template -->
 		}
 	}
 </code></pre></div></div>
-<p>Step 2. Add the dependency</p>
+<h3 id="step-2-add-the-dependency">Step 2. Add the dependency</h3>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	dependencies {
 	        implementation 'com.github.mond-al:typer:Tag'
 	}
 </code></pre></div></div>
 
-<p>Step3. Just Use it!
-타이핑 효과를 줄 View, 문자열, 커서 효과 사용여부, 타이핑 완료시 콜백을 인자로 받습니다.</p>
+<h3 id="step3-just-use-it">Step3. Just Use it!</h3>
+<p>타이핑 효과를 줄 View, 문자열, 커서 효과 사용여부, 타이핑 완료시 콜백을 인자로 받습니다.</p>
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Typer</span><span class="p">.</span><span class="nf">typing</span><span class="p">(</span><span class="n">textView</span><span class="p">,</span> <span class="s">"타이핑할 문자열"</span><span class="p">,</span> <span class="n">useCursor</span><span class="p">){</span>
     <span class="nc">Toast</span><span class="p">.</span><span class="nf">makeText</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s">"타이핑 끝"</span><span class="p">,</span> <span class="nc">Toast</span><span class="p">.</span><span class="nc">LENGTH_SHORT</span><span class="p">).</span><span class="nf">show</span><span class="p">()</span>
 <span class="p">}</span>

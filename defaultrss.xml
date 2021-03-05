@@ -5,8 +5,8 @@
         <description>몬드는 오늘도 개발을 합니다. 내일도...</description>
         <link>https://mond-al.github.io//</link>
         <atom:link href="https://mond-al.github.io//rss.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sat, 06 Mar 2021 03:11:30 +0900</pubDate>
-        <lastBuildDate>Sat, 06 Mar 2021 03:11:30 +0900</lastBuildDate>
+        <pubDate>Sat, 06 Mar 2021 03:34:32 +0900</pubDate>
+        <lastBuildDate>Sat, 06 Mar 2021 03:34:32 +0900</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
         
         <item>
@@ -90,7 +90,7 @@
 
 &lt;p&gt;&lt;a href=&quot;https://jitpack.io/#mond-al/typer&quot;&gt;&lt;img src=&quot;https://jitpack.io/v/mond-al/typer.svg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Step 1. Add it in your root build.gradle at the end of repositories:&lt;/p&gt;
+&lt;h3 id=&quot;step-1-add-it-in-your-root-buildgradle-at-the-end-of-repositories&quot;&gt;Step 1. Add it in your root build.gradle at the end of repositories:&lt;/h3&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	allprojects {
 		repositories {
 			...
@@ -98,14 +98,14 @@
 		}
 	}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Step 2. Add the dependency&lt;/p&gt;
+&lt;h3 id=&quot;step-2-add-the-dependency&quot;&gt;Step 2. Add the dependency&lt;/h3&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	dependencies {
 	        implementation 'com.github.mond-al:typer:Tag'
 	}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Step3. Just Use it!
-타이핑 효과를 줄 View, 문자열, 커서 효과 사용여부, 타이핑 완료시 콜백을 인자로 받습니다.&lt;/p&gt;
+&lt;h3 id=&quot;step3-just-use-it&quot;&gt;Step3. Just Use it!&lt;/h3&gt;
+&lt;p&gt;타이핑 효과를 줄 View, 문자열, 커서 효과 사용여부, 타이핑 완료시 콜백을 인자로 받습니다.&lt;/p&gt;
 &lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;Typer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;typing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;textView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;타이핑할 문자열&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;useCursor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
     &lt;span class=&quot;nc&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;makeText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;타이핑 끝&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;LENGTH_SHORT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
