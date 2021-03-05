@@ -168,8 +168,8 @@ into the {body} of the default.hbs template -->
 
 <p><a href="https://jitpack.io/#mond-al/digit-roll-numbers"><img src="https://jitpack.io/v/mond-al/digit-roll-numbers.svg" alt="" /></a></p>
 
-<p>Step 1. Add the JitPack repository to your build file
-Add it in your root build.gradle at the end of repositories:</p>
+<h3 id="step-1-add-the-jitpack-repository-to-your-build-file">Step 1. Add the JitPack repository to your build file</h3>
+<p>Add it in your root build.gradle at the end of repositories:</p>
 <div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="n">allprojects</span> <span class="o">{</span>
 		<span class="n">repositories</span> <span class="o">{</span>
 			<span class="o">...</span>
@@ -177,14 +177,14 @@ Add it in your root build.gradle at the end of repositories:</p>
 		<span class="o">}</span>
 	<span class="o">}</span>
 </code></pre></div></div>
-<p>Step 2. Add the dependency</p>
+<h3 id="step-2-add-the-dependency">Step 2. Add the dependency</h3>
 <div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="n">dependencies</span> <span class="o">{</span>
 	        <span class="n">implementation</span> <span class="s1">'com.github.mond-al:digit-roll-numbers:0.2'</span>
 	<span class="o">}</span>
 </code></pre></div></div>
 
-<p>Step3. Just Use it!
-표시할 숫자, 마지막에 더해질 숫자(default=1) 그리고 콤마 사용 여부(default=false)를 인자로 받습니다.</p>
+<h3 id="step3-just-use-it">Step3. Just Use it!</h3>
+<p>표시할 숫자, 마지막에 더해질 숫자(default=1) 그리고 콤마 사용 여부(default=false)를 인자로 받습니다.</p>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;com.al.mond.digitcounter.DigitCounter</span>
     <span class="na">android:id=</span><span class="s">"@+id/counter"</span>

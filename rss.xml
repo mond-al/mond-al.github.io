@@ -5,8 +5,8 @@
         <description>몬드의 개발로그 - </description>
         <link>https://mond-al.github.io/</link>
         <link>https://mond-al.github.io/</link>
-        <lastBuildDate>2021-03-06T03:05:45+09:00</lastBuildDate>
-        <pubDate>2021-03-06T03:05:45+09:00</pubDate>
+        <lastBuildDate>2021-03-06T03:06:01+09:00</lastBuildDate>
+        <pubDate>2021-03-06T03:06:01+09:00</pubDate>
         <ttl>60</ttl>
 
         
@@ -22,8 +22,8 @@
 
 &lt;p&gt;&lt;a href=&quot;https://jitpack.io/#mond-al/digit-roll-numbers&quot;&gt;&lt;img src=&quot;https://jitpack.io/v/mond-al/digit-roll-numbers.svg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Step 1. Add the JitPack repository to your build file
-Add it in your root build.gradle at the end of repositories:&lt;/p&gt;
+&lt;h3 id=&quot;step-1-add-the-jitpack-repository-to-your-build-file&quot;&gt;Step 1. Add the JitPack repository to your build file&lt;/h3&gt;
+&lt;p&gt;Add it in your root build.gradle at the end of repositories:&lt;/p&gt;
 &lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&lt;span class=&quot;n&quot;&gt;allprojects&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
 		&lt;span class=&quot;n&quot;&gt;repositories&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
 			&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
@@ -31,14 +31,14 @@ Add it in your root build.gradle at the end of repositories:&lt;/p&gt;
 		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Step 2. Add the dependency&lt;/p&gt;
+&lt;h3 id=&quot;step-2-add-the-dependency&quot;&gt;Step 2. Add the dependency&lt;/h3&gt;
 &lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&lt;span class=&quot;n&quot;&gt;dependencies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
 	        &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'com.github.mond-al:digit-roll-numbers:0.2'&lt;/span&gt;
 	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Step3. Just Use it!
-표시할 숫자, 마지막에 더해질 숫자(default=1) 그리고 콤마 사용 여부(default=false)를 인자로 받습니다.&lt;/p&gt;
+&lt;h3 id=&quot;step3-just-use-it&quot;&gt;Step3. Just Use it!&lt;/h3&gt;
+&lt;p&gt;표시할 숫자, 마지막에 더해질 숫자(default=1) 그리고 콤마 사용 여부(default=false)를 인자로 받습니다.&lt;/p&gt;
 
 &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;com.al.mond.digitcounter.DigitCounter&lt;/span&gt;
     &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@+id/counter&quot;&lt;/span&gt;
