@@ -7,7 +7,7 @@
         <email></email>
     </author>
 
-    <updated>2021-03-06T02:31:36+09:00</updated>
+    <updated>2021-03-06T02:33:02+09:00</updated>
     <link rel="site" href="https://mond-al.github.io" />
 
     
@@ -2421,11 +2421,11 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
 
 &lt;p&gt;여기서 끝이났다면 이 포스팅이 작성 되지 않았겠죠. 사용자와 디자이너 그리고 기획자가 용납할 수 없는 문제가 여기서 발생합니다.&lt;/p&gt;
 
-&lt;h3 id=&quot;터치-할-수-없는-스크롤바&quot;&gt;터치 할 수 없는 스크롤바&lt;/h3&gt;
+&lt;h3 id=&quot;문제&quot;&gt;문제&lt;/h3&gt;
 
 &lt;p&gt;아이템의 수가 적을때는 아쉬운 점이 있어도 그나마 사용하는데 문제는 없었습니다. 하지만, 아이템의 수가 늘어나면 스크롤이 길어지고 thumb의 높이는 0px로 수렴하게됩니다. 아쉽게도 일정크기를 유지 하도록 하는 옵션이 제공되지 않습니다. 아이템이 1000개만 넘어가도 이미 손가락으로 터치는 불가능할 정도로 작아집니다.  이 문제는 구글 이슈트레커에 등록된지 4년째 이지만 진행되는 내용은 없는 것 같습니다.(&lt;a href=&quot;https://issuetracker.google.com/issues/64729576&quot;&gt;https://issuetracker.google.com/issues/64729576&lt;/a&gt;)&lt;/p&gt;
 
-&lt;h3 id=&quot;바인드-지옥&quot;&gt;바인드 지옥&lt;/h3&gt;
+&lt;h3 id=&quot;그외-단점들&quot;&gt;그외 단점들&lt;/h3&gt;
 
 &lt;p&gt;터치할 수 없는 스크롤 바를 해결하기위해 고민하다가 문득 또 다른 해법이 떠올랐습니다. 고리짝 시절에 사용해 봤던 android.view.View의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scrollbarThumbVertical&lt;/code&gt;이라는 속성이 있습니다. RecyclerView도 View를 상속하니 무리없이 xml에 한줄로 적용이 가능했습니다. VectorDrawable로 정의도 가능하고, 스크롤의 길이에 따라 크기가 변하지도 않습니다.&lt;/p&gt;
 
@@ -2435,7 +2435,7 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
 
 &lt;h3 id=&quot;결론--그래서-fastscroller-를-직접-구현-하게-되었습니다&quot;&gt;결론 : 그래서 FastScroller 를 직접 구현 하게 되었습니다.&lt;/h3&gt;
 
-&lt;p&gt;다음편에서는 직접 구현한 FastScroller를 살펴보겠습니다. 물론 앞으로 개선되어야 할 부분이 많지만 일단은 잘 동작합니다.&lt;/p&gt;
+&lt;p&gt;다음편에서는 직접 구현한 FastScroller를 살펴보겠습니다. 단순한만큼 버그는 적고 잘 동작합니다.&lt;/p&gt;
 
 &lt;h3 id=&quot;한번-써보세요-&quot;&gt;한번 써보세요~ 👍&lt;/h3&gt;
 
