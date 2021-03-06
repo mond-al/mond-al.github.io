@@ -5,8 +5,8 @@
         <description>몬드는 오늘도 개발을 합니다. 내일도...</description>
         <link>https://mond-al.github.io//</link>
         <atom:link href="https://mond-al.github.io//rss.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sat, 06 Mar 2021 19:10:08 +0900</pubDate>
-        <lastBuildDate>Sat, 06 Mar 2021 19:10:08 +0900</lastBuildDate>
+        <pubDate>Sat, 06 Mar 2021 19:48:33 +0900</pubDate>
+        <lastBuildDate>Sat, 06 Mar 2021 19:48:33 +0900</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
         
         <item>
@@ -217,7 +217,7 @@
             <link>https://mond-al.github.io//cleancoders-tdd</link>
             <guid isPermaLink="true">https://mond-al.github.io//cleancoders-tdd</guid>
             
-            <category>android</category>
+            <category>tdd</category>
             
             <category>architecture</category>
             
@@ -732,7 +732,7 @@ gradle에 익숙한 안드로이드 개발자에겐 조금 어색한 소스이�
             <link>https://mond-al.github.io//cleancoders-2</link>
             <guid isPermaLink="true">https://mond-al.github.io//cleancoders-2</guid>
             
-            <category>android</category>
+            <category>tdd</category>
             
             <category>architecture</category>
             
@@ -901,7 +901,7 @@ ZetEngine mc = new ZetMotocycle();
             <link>https://mond-al.github.io//cleancoders-1</link>
             <guid isPermaLink="true">https://mond-al.github.io//cleancoders-1</guid>
             
-            <category>android</category>
+            <category>tdd</category>
             
             <category>architecture</category>
             
