@@ -5,13 +5,13 @@
         <description>몬드의 개발로그 - </description>
         <link>https://mond-al.github.io/</link>
         <link>https://mond-al.github.io/</link>
-        <lastBuildDate>2021-03-06T19:53:53+09:00</lastBuildDate>
-        <pubDate>2021-03-06T19:53:53+09:00</pubDate>
+        <lastBuildDate>2021-03-07T12:24:45+09:00</lastBuildDate>
+        <pubDate>2021-03-07T12:24:45+09:00</pubDate>
         <ttl>60</ttl>
 
         
         <item>
-            <title>Typer - 한글 타이핑 입력효과 라이브러리</title>
+            <title>Digit roll counter - 회전 점수판</title>
             <description>&lt;p&gt;안드로이드에서 회전하는 숫자판 컴포넌트입니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;digit-roll-counter&quot;&gt;digit roll counter&lt;/h1&gt;
