@@ -6,7 +6,20 @@
     <url>
         <loc>https://mond-al.github.io/about/</loc>
     </url>
+    <url>
+        <loc>https://mond-al.github.io/tag/project/</loc>
+        
+        <lastmod></lastmod>
+        
+        
+        <changefreq>weekly</changefreq>
+        
 
+        
+        <priority>0.5</priority>
+        
+
+    </url>
     
     <url>
         <loc>https://mond-al.github.io/digit-roll-libs</loc>
