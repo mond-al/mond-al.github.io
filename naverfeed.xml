@@ -7,7 +7,7 @@
         <email></email>
     </author>
 
-    <updated>2021-03-10T00:37:37+09:00</updated>
+    <updated>2021-03-10T00:38:19+09:00</updated>
     <link rel="site" href="https://mond-al.github.io" />
 
     
@@ -21,7 +21,7 @@
         <updated>2021-03-09T00:00:00+09:00</updated>
         <published>2021-03-09T00:00:00+09:00</published>
         <link rel="via" href="https://mond-al.github.io/webview-android11" />
-        <content type="html"><![CDATA[  &lt;p&gt;TargetSdkVersion 30을 적용후 Webview에서 발생한 문제와 해결방법.&lt;/p&gt;
+        <content type="html"><![CDATA[  &lt;p&gt;TargetSdkVersion 30을 적용후 Webview에서 발생한 문제와 해결방법. 그리고 결론은 WebViewAssetLoader을 사용하세요.&lt;/p&gt;
 
 &lt;h2 id=&quot;setallowfileaccess&quot;&gt;setAllowFileAccess&lt;/h2&gt;
 

@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://mond-al.github.io/author/mond/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-03-10T00:37:37+09:00</updated>
+  <updated>2021-03-10T00:38:19+09:00</updated>
   <id>https://mond-al.github.io/author/mond/feed.xml</id>
 
   
@@ -214,7 +214,7 @@ If you want, you can also use the bubble function.&lt;/p&gt;
       <published>2021-03-09T00:00:00+09:00</published>
       <updated>2021-03-09T00:00:00+09:00</updated>
       <id>https://mond-al.github.io/webview-android11</id>
-      <content type="html" xml:base="https://mond-al.github.io/webview-android11">&lt;p&gt;TargetSdkVersion 30을 적용후 Webview에서 발생한 문제와 해결방법.&lt;/p&gt;
+      <content type="html" xml:base="https://mond-al.github.io/webview-android11">&lt;p&gt;TargetSdkVersion 30을 적용후 Webview에서 발생한 문제와 해결방법. 그리고 결론은 WebViewAssetLoader을 사용하세요.&lt;/p&gt;
 
 &lt;h2 id=&quot;setallowfileaccess&quot;&gt;setAllowFileAccess&lt;/h2&gt;
 
@@ -260,7 +260,7 @@ If you want, you can also use the bubble function.&lt;/p&gt;
       
 
       
-        <summary type="html">TargetSdkVersion 30을 적용후 Webview에서 발생한 문제와 해결방법.</summary>
+        <summary type="html">TargetSdkVersion 30을 적용후 Webview에서 발생한 문제와 해결방법. 그리고 결론은 WebViewAssetLoader을 사용하세요.</summary>
       
 
       
