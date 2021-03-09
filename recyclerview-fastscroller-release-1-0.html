@@ -198,9 +198,8 @@ Scroll HandleView가 타겟이 되는 RecyclerView와 같은 부모뷰를 가질
 </code></pre></div></div>
 
 <h3 id="버블뷰">버블뷰</h3>
-<p>BubbleView를 구성하고,RecyclerView Adapter에 BubbleAdapter인터페이스를 구성합니다.
-BubbleAdapter인터페이스는 RecyclerView position에 따른 string값 반환하는 getBubbleItem()를 포함합니다.
-getBubbleItem()을 통해 반환된 String은 BubbleListener.setBubble()를 호출하여 화면에 표시됩니다.</p>
+<p>BubbleView를 구성하고, RecyclerView Adapter에 BubbleAdapter 인터페이스를 구현합니다..
+BubbleAdapter 인터페이스에는 getBubbleItem()메서드 하나를 가지고 있습니다. 이 메서드는 RecyclerView position에 따른 문자열을 반환하는 메서드입니다. 반환된 문자열은 BubbleListener.setBubble(str:String)를 호출하여 화면에 표시됩니다.</p>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// HandleView</span>
 <span class="kd">val</span> <span class="py">handleView</span> <span class="p">=</span> <span class="n">findViewById</span><span class="p">&lt;</span><span class="nc">View</span><span class="p">&gt;(</span><span class="nc">R</span><span class="p">.</span><span class="n">id</span><span class="p">.</span><span class="n">handle_view</span><span class="p">)</span>
@@ -212,6 +211,12 @@ getBubbleItem()을 통해 반환된 String은 BubbleListener.setBubble()를 호�
 <span class="kd">val</span> <span class="py">bubbleListener</span> <span class="p">=</span> <span class="kd">object</span> <span class="err">: </span><span class="nc">BubbleListener</span> <span class="p">{</span>
     <span class="k">override</span> <span class="k">fun</span> <span class="nf">setBubble</span><span class="p">(</span><span class="n">str</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">bubbleText</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="n">str</span>
+    <span class="p">}</span>
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">setViewY</span><span class="p">(</span><span class="n">y</span><span class="p">:</span> <span class="nc">Float</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">bubble</span><span class="p">.</span><span class="n">y</span> <span class="p">=</span> <span class="n">y</span>
+    <span class="p">}</span>
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">setVisible</span><span class="p">(</span><span class="n">isVisible</span><span class="p">:</span> <span class="nc">Boolean</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">bubble</span><span class="p">.</span><span class="n">visibility</span> <span class="p">=</span> <span class="k">if</span> <span class="p">(</span><span class="n">isVisible</span><span class="p">)</span> <span class="nc">View</span><span class="p">.</span><span class="nc">VISIBLE</span> <span class="k">else</span> <span class="nc">View</span><span class="p">.</span><span class="nc">GONE</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
