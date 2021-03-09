@@ -5,8 +5,8 @@
         <description>몬드는 오늘도 개발을 합니다. 내일도...</description>
         <link>https://mond-al.github.io//</link>
         <atom:link href="https://mond-al.github.io//rss.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Wed, 10 Mar 2021 02:11:59 +0900</pubDate>
-        <lastBuildDate>Wed, 10 Mar 2021 02:11:59 +0900</lastBuildDate>
+        <pubDate>Wed, 10 Mar 2021 02:17:57 +0900</pubDate>
+        <lastBuildDate>Wed, 10 Mar 2021 02:17:57 +0900</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
         
         <item>
@@ -2724,7 +2724,7 @@ BLOG, MRSK project&lt;/p&gt;
 &lt;hr /&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;MRSK project &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(alMond Reyclerview Support Kit)&lt;/code&gt;&lt;/p&gt;
+  &lt;p&gt;project &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(alMond Support Kit)&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;안드로이드 앱을 개발하다 보면 가장 많이 사용하게 되는 컴포넌트가 아무래도 RecyclerView가 아닐까 합니다. 구글이 제공해주는 만능상자 같은 리사이클러뷰가 제공하는 다양한 API를 이용해 엮고 응용해서 RecyclerView를 사용하기 편하게 도와주는 키트를 만들어 보려 합니다. 언제든 간편하게 적용하고, 간편하게 제거 가능한 형태를 목표로 합니다.&lt;/p&gt;
