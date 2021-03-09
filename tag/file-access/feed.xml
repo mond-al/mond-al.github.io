@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="https://mond-al.github.io/tag/file-access/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
+  <updated>2021-03-10T00:07:22+09:00</updated>
+  <id>https://mond-al.github.io/tag/file-access/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">몬드의 개발로그 | </title>
+  
+
+  
+    <subtitle>몬드는 오늘도 개발을 합니다. 내일도...</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Webview에서 디바이스의 리소스를 사용할때</title>
+      <link href="https://mond-al.github.io/error-webview-file-access" rel="alternate" type="text/html" title="Webview에서 디바이스의 리소스를 사용할때" />
+      <published>2021-03-09T00:00:00+09:00</published>
+      <updated>2021-03-09T00:00:00+09:00</updated>
+      <id>https://mond-al.github.io/error-webview-file-access</id>
+      <content type="html" xml:base="https://mond-al.github.io/error-webview-file-access">&lt;p&gt;앱은 WebView에서 외부 소스의 file : // URL을 열지 않아야합니다. 앱이 외부 소스의 임의 URL을 허용하는 경우이 기능을 활성화하지 마십시오. 항상 androidx.webkit.WebViewAssetLoader를 사용하여 file : // URL 대신 http (s) : // 스키마를 통해 자산 및 리소스를 포함한 파일에 액세스하는 것이 좋습니다. Build.VERSION_CODES.Q 이전 버전을 대상으로하는 보안 문제를 방지하려면이 값을 명시 적으로 false로 설정해야합니다.&lt;/p&gt;
+
+&lt;p&gt;사실이 setAllowFileAccess Api가 생긴건 Api level 3부터입니다. 하지만&lt;/p&gt;
+
+&lt;p&gt;https://developer.android.com/reference/android/webkit/WebSettings#setAllowFileAccess(boolean)&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jisoo Yang</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="android" />
+      
+        <category term="file access" />
+      
+        <category term="webview" />
+      
+
+      
+        <summary type="html">앱은 WebView에서 외부 소스의 file : // URL을 열지 않아야합니다. 앱이 외부 소스의 임의 URL을 허용하는 경우이 기능을 활성화하지 마십시오. 항상 androidx.webkit.WebViewAssetLoader를 사용하여 file : // URL 대신 http (s) : // 스키마를 통해 자산 및 리소스를 포함한 파일에 액세스하는 것이 좋습니다. Build.VERSION_CODES.Q 이전 버전을 대상으로하는 보안 문제를 방지하려면이 값을 명시 적으로 false로 설정해야합니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

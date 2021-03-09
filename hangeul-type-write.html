@@ -160,15 +160,26 @@ into the {body} of the default.hbs template -->
                 <div class="kg-card-markdown">
                     <p>안드로이드에서 TextView(또는 상속받는)에 한글을 자소단위로 타이핑하는 효과를 수행하는 라이브러리입니다. (#TypeWriter)</p>
 
-<p><img src="assets/images/cover/2021-03-02-hangeul-type-write.gif" alt="assets/images/cover/2021-03-02-hangeul-type-write.gif" /></p>
-
 <h1 id="typer">typer</h1>
 <p>안드로이드 TextView(EditText)뷰에 텍스트를 타이핑하는 것처럼 순차적으로 첫가끝(자음모음)입력을 지원합니다.
 한글을 <a href="https://pat.im/1176">첫가끝</a>으로 분해하여 타이핑하는 것처럼 입력합니다. 아직은 두벌식을 사용할때 처럼 <a href="https://namu.wiki/w/%EB%8F%84%EA%B9%A8%EB%B9%84%EB%B6%88%20%ED%98%84%EC%83%81">도깨비불현상</a>을 구현하지는 못했습니다.</p>
 
-<p>첫 배포. 아직은 아주 간단한 수준의 타이핑 효과를 줄수 있습니다.</p>
+<h3 id="typer로-할-수-있는-동작들">typer로 할 수 있는 동작들</h3>
+<p>예제1. 커서없이_쓰기:<br />
+<img src="https://github.com/mond-al/typer/blob/main/demo1.gif?raw=true" alt="예제1_커서없이_쓰기" /></p>
 
-<h1 id="demo">DEMO</h1>
+<p>예제2. 커서보이게_쓰기<br />
+<img src="https://github.com/mond-al/typer/blob/main/demo2.gif?raw=true" alt="예제2_커서보이게_쓰기" /></p>
+
+<p>예제3. 커서보이게_지우기<br />
+<img src="https://github.com/mond-al/typer/blob/main/demo3.gif?raw=true" alt="예제3_커서보이게_지우기" /></p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Typer</span><span class="p">.</span><span class="nf">typing</span><span class="p">(</span><span class="n">textView</span><span class="p">,</span> <span class="s">"타이핑할 문자열"</span><span class="p">,</span> <span class="n">useCursor</span><span class="p">){</span>
+    <span class="nc">Toast</span><span class="p">.</span><span class="nf">makeText</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s">"타이핑 끝"</span><span class="p">,</span> <span class="nc">Toast</span><span class="p">.</span><span class="nc">LENGTH_SHORT</span><span class="p">).</span><span class="nf">show</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="example-demo">Example DEMO</h1>
 <p><img src="https://github.com/mond-al/typer/blob/main/demo.gif?raw=true" width="50%" /></p>
 
 <p><a href="https://jitpack.io/#mond-al/typer"><img src="https://jitpack.io/v/mond-al/typer.svg" alt="" /></a></p>
@@ -317,6 +328,8 @@ into the {body} of the default.hbs template -->
                                             <li><a href="/recyclerview-fastscroller-release-1-0">RecyclerView-FastScroller v1.0</a></li>
                                         
                                     
+                                  
+                                
                                   
                                 
                                   

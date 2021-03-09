@@ -7,7 +7,7 @@
         <email></email>
     </author>
 
-    <updated>2021-03-09T22:31:21+09:00</updated>
+    <updated>2021-03-10T00:07:22+09:00</updated>
     <link rel="site" href="https://mond-al.github.io" />
 
     
@@ -163,6 +163,24 @@ If you want, you can also use the bubble function.&lt;/p&gt;
     </entry>
     
     <entry>
+        <id>https://mond-al.github.io//error-webview-file-access</id>
+        <title><![CDATA[ Webview에서 디바이스의 리소스를 사용할때 ]]></title>
+        <author>
+            <name></name>
+            <email></email>
+        </author>
+        <updated>2021-03-09T00:00:00+09:00</updated>
+        <published>2021-03-09T00:00:00+09:00</published>
+        <link rel="via" href="https://mond-al.github.io/error-webview-file-access" />
+        <content type="html"><![CDATA[  &lt;p&gt;앱은 WebView에서 외부 소스의 file : // URL을 열지 않아야합니다. 앱이 외부 소스의 임의 URL을 허용하는 경우이 기능을 활성화하지 마십시오. 항상 androidx.webkit.WebViewAssetLoader를 사용하여 file : // URL 대신 http (s) : // 스키마를 통해 자산 및 리소스를 포함한 파일에 액세스하는 것이 좋습니다. Build.VERSION_CODES.Q 이전 버전을 대상으로하는 보안 문제를 방지하려면이 값을 명시 적으로 false로 설정해야합니다.&lt;/p&gt;
+
+&lt;p&gt;사실이 setAllowFileAccess Api가 생긴건 Api level 3부터입니다. 하지만&lt;/p&gt;
+
+&lt;p&gt;https://developer.android.com/reference/android/webkit/WebSettings#setAllowFileAccess(boolean)&lt;/p&gt;
+ ]]></content>
+    </entry>
+    
+    <entry>
         <id>https://mond-al.github.io//digit-roll-libs</id>
         <title><![CDATA[ Digit roll counter - 회전 점수판 ]]></title>
         <author>
@@ -231,15 +249,26 @@ If you want, you can also use the bubble function.&lt;/p&gt;
         <link rel="via" href="https://mond-al.github.io/hangeul-type-write" />
         <content type="html"><![CDATA[  &lt;p&gt;안드로이드에서 TextView(또는 상속받는)에 한글을 자소단위로 타이핑하는 효과를 수행하는 라이브러리입니다. (#TypeWriter)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/images/cover/2021-03-02-hangeul-type-write.gif&quot; alt=&quot;assets/images/cover/2021-03-02-hangeul-type-write.gif&quot; /&gt;&lt;/p&gt;
-
 &lt;h1 id=&quot;typer&quot;&gt;typer&lt;/h1&gt;
 &lt;p&gt;안드로이드 TextView(EditText)뷰에 텍스트를 타이핑하는 것처럼 순차적으로 첫가끝(자음모음)입력을 지원합니다.
 한글을 &lt;a href=&quot;https://pat.im/1176&quot;&gt;첫가끝&lt;/a&gt;으로 분해하여 타이핑하는 것처럼 입력합니다. 아직은 두벌식을 사용할때 처럼 &lt;a href=&quot;https://namu.wiki/w/%EB%8F%84%EA%B9%A8%EB%B9%84%EB%B6%88%20%ED%98%84%EC%83%81&quot;&gt;도깨비불현상&lt;/a&gt;을 구현하지는 못했습니다.&lt;/p&gt;
 
-&lt;p&gt;첫 배포. 아직은 아주 간단한 수준의 타이핑 효과를 줄수 있습니다.&lt;/p&gt;
+&lt;h3 id=&quot;typer로-할-수-있는-동작들&quot;&gt;typer로 할 수 있는 동작들&lt;/h3&gt;
+&lt;p&gt;예제1. 커서없이_쓰기:&lt;br /&gt;
+&lt;img src=&quot;https://github.com/mond-al/typer/blob/main/demo1.gif?raw=true&quot; alt=&quot;예제1_커서없이_쓰기&quot; /&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;demo&quot;&gt;DEMO&lt;/h1&gt;
+&lt;p&gt;예제2. 커서보이게_쓰기&lt;br /&gt;
+&lt;img src=&quot;https://github.com/mond-al/typer/blob/main/demo2.gif?raw=true&quot; alt=&quot;예제2_커서보이게_쓰기&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;예제3. 커서보이게_지우기&lt;br /&gt;
+&lt;img src=&quot;https://github.com/mond-al/typer/blob/main/demo3.gif?raw=true&quot; alt=&quot;예제3_커서보이게_지우기&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;Typer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;typing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;textView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;타이핑할 문자열&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;useCursor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;makeText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;타이핑 끝&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;LENGTH_SHORT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;example-demo&quot;&gt;Example DEMO&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://github.com/mond-al/typer/blob/main/demo.gif?raw=true&quot; width=&quot;50%&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://jitpack.io/#mond-al/typer&quot;&gt;&lt;img src=&quot;https://jitpack.io/v/mond-al/typer.svg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -2425,63 +2454,6 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
 &lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_45_3840x2160.png&quot; alt=&quot;3840x2160.png&quot; /&gt;
 &lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_46_5120x2880.png&quot; alt=&quot;5120x2880.png&quot; /&gt;
 &lt;img src=&quot;assets/images/forTest/ratio/all_ratio/image_47_7680x4320.png&quot; alt=&quot;7680x4320.png&quot; /&gt;&lt;/p&gt;
- ]]></content>
-    </entry>
-    
-    <entry>
-        <id>https://mond-al.github.io//test-image-url-web</id>
-        <title><![CDATA[ 개발 테스트용 이미지 다운로드 ]]></title>
-        <author>
-            <name></name>
-            <email></email>
-        </author>
-        <updated>2021-01-22T00:00:00+09:00</updated>
-        <published>2021-01-22T00:00:00+09:00</published>
-        <link rel="via" href="https://mond-al.github.io/test-image-url-web" />
-        <content type="html"><![CDATA[  &lt;p&gt;기능 테스트를 하다 보면 이미지 소스들이 필요한 경우가 있습니다. 때로는 예제앱에 이미지를 포함하고 싶을때 적당한 이미지를 선택하는것도 은근 신경쓰이는 일 입니다.&lt;/p&gt;
-
-&lt;h1 id=&quot;조금씩-다르지만-많은-수의-파일이-필요할때&quot;&gt;조금씩 다르지만 많은 수의 파일이 필요할때&lt;/h1&gt;
-&lt;h3 id=&quot;표준-해상도-종류별로-47가지&quot;&gt;표준 해상도 종류별로 47가지&lt;/h3&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;a href=&quot;https://mond-al.github.io/test-image-zip&quot;&gt;https://mond-al.github.io/test-image-zip&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;random-1000장-랜덤-해상도---넘버링-1부터-1000까지&quot;&gt;Random 1000장 랜덤 해상도 - 넘버링 1부터 1000까지&lt;/h3&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;a href=&quot;https://mond-al.github.io/test-image-zip&quot;&gt;https://mond-al.github.io/test-image-zip&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&quot;다양한-기능을-제공하는-유용한-사이트들&quot;&gt;다양한 기능을 제공하는 유용한 사이트들&lt;/h1&gt;
-&lt;h2 id=&quot;여러장의-사진-이미지가-필요할-때&quot;&gt;여러장의 사진 이미지가 필요할 때&lt;/h2&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;a href=&quot;http://unsample.net&quot;&gt;http://unsample.net&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://unsplash.com&quot;&gt;이미지 공유 사이트 unsplash&lt;/a&gt;를 기반으로 zip으로 묶어서 한번에 다운로드.&lt;/li&gt;
-  &lt;li&gt;한번에 원하는 크기의 이미지를 최대 30장을 묶어서 내려받을 수 있습니다.&lt;/li&gt;
-  &lt;li&gt;필요한 이미지 갯수, width/height, quality를 지정 가능하고, 원한다면 특정 이미지를 검색해서 모을 수 있습니다.&lt;/li&gt;
-  &lt;li&gt;모든 사진은 무료 로 다운로드 하여 사용할 수 있습니다.&lt;/li&gt;
-  &lt;li&gt;심지어 상업적 및 비상업적 목적 모두 사용도 가능합니다. 이미지 자체를 판매는 금지!.&lt;/li&gt;
-  &lt;li&gt;샘플앱에 넣어서 사용하는 것도 가능 하겠네요. :~)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;url로-요청하면-이미지를-만들어주는-페이지들&quot;&gt;url로 요청하면 이미지를 만들어주는 페이지들&lt;/h2&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;a href=&quot;https://dummyimage.com/&quot;&gt;https://dummyimage.com/&lt;/a&gt;
-&lt;a href=&quot;https://plchldr.co/&quot;&gt;https://plchldr.co/&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;더미-이미지가-필요할-때&quot;&gt;더미 이미지가 필요할 때&lt;/h2&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;a href=&quot;https://www.websiteplanet.com/webtools/dummy-images-generator&quot;&gt;https://www.websiteplanet.com/webtools/dummy-images-generator&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/images/post/2021-01-22-test-image/dummy-images-generator.png&quot; alt=&quot;title&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;width x height, 배경색, 글자색, format을 지정하면 바로 이미지로 다운로드 가능.&lt;/li&gt;
-&lt;/ul&gt;
  ]]></content>
     </entry>
     

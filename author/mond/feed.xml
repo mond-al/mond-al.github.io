@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://mond-al.github.io/author/mond/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-03-09T22:31:21+09:00</updated>
+  <updated>2021-03-10T00:07:22+09:00</updated>
   <id>https://mond-al.github.io/author/mond/feed.xml</id>
 
   
@@ -30,6 +30,48 @@
   
   
 
+  
+    <entry>
+      <title type="html">Webview에서 디바이스의 리소스를 사용할때</title>
+      <link href="https://mond-al.github.io/error-webview-file-access" rel="alternate" type="text/html" title="Webview에서 디바이스의 리소스를 사용할때" />
+      <published>2021-03-09T00:00:00+09:00</published>
+      <updated>2021-03-09T00:00:00+09:00</updated>
+      <id>https://mond-al.github.io/error-webview-file-access</id>
+      <content type="html" xml:base="https://mond-al.github.io/error-webview-file-access">&lt;p&gt;앱은 WebView에서 외부 소스의 file : // URL을 열지 않아야합니다. 앱이 외부 소스의 임의 URL을 허용하는 경우이 기능을 활성화하지 마십시오. 항상 androidx.webkit.WebViewAssetLoader를 사용하여 file : // URL 대신 http (s) : // 스키마를 통해 자산 및 리소스를 포함한 파일에 액세스하는 것이 좋습니다. Build.VERSION_CODES.Q 이전 버전을 대상으로하는 보안 문제를 방지하려면이 값을 명시 적으로 false로 설정해야합니다.&lt;/p&gt;
+
+&lt;p&gt;사실이 setAllowFileAccess Api가 생긴건 Api level 3부터입니다. 하지만&lt;/p&gt;
+
+&lt;p&gt;https://developer.android.com/reference/android/webkit/WebSettings#setAllowFileAccess(boolean)&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jisoo Yang</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="android" />
+      
+        <category term="file access" />
+      
+        <category term="webview" />
+      
+
+      
+        <summary type="html">앱은 WebView에서 외부 소스의 file : // URL을 열지 않아야합니다. 앱이 외부 소스의 임의 URL을 허용하는 경우이 기능을 활성화하지 마십시오. 항상 androidx.webkit.WebViewAssetLoader를 사용하여 file : // URL 대신 http (s) : // 스키마를 통해 자산 및 리소스를 포함한 파일에 액세스하는 것이 좋습니다. Build.VERSION_CODES.Q 이전 버전을 대상으로하는 보안 문제를 방지하려면이 값을 명시 적으로 false로 설정해야합니다.</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">RecyclerView-FastScroller v1.0</title>
@@ -299,15 +341,26 @@ If you want, you can also use the bubble function.&lt;/p&gt;
       <id>https://mond-al.github.io/hangeul-type-write</id>
       <content type="html" xml:base="https://mond-al.github.io/hangeul-type-write">&lt;p&gt;안드로이드에서 TextView(또는 상속받는)에 한글을 자소단위로 타이핑하는 효과를 수행하는 라이브러리입니다. (#TypeWriter)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/images/cover/2021-03-02-hangeul-type-write.gif&quot; alt=&quot;assets/images/cover/2021-03-02-hangeul-type-write.gif&quot; /&gt;&lt;/p&gt;
-
 &lt;h1 id=&quot;typer&quot;&gt;typer&lt;/h1&gt;
 &lt;p&gt;안드로이드 TextView(EditText)뷰에 텍스트를 타이핑하는 것처럼 순차적으로 첫가끝(자음모음)입력을 지원합니다.
 한글을 &lt;a href=&quot;https://pat.im/1176&quot;&gt;첫가끝&lt;/a&gt;으로 분해하여 타이핑하는 것처럼 입력합니다. 아직은 두벌식을 사용할때 처럼 &lt;a href=&quot;https://namu.wiki/w/%EB%8F%84%EA%B9%A8%EB%B9%84%EB%B6%88%20%ED%98%84%EC%83%81&quot;&gt;도깨비불현상&lt;/a&gt;을 구현하지는 못했습니다.&lt;/p&gt;
 
-&lt;p&gt;첫 배포. 아직은 아주 간단한 수준의 타이핑 효과를 줄수 있습니다.&lt;/p&gt;
+&lt;h3 id=&quot;typer로-할-수-있는-동작들&quot;&gt;typer로 할 수 있는 동작들&lt;/h3&gt;
+&lt;p&gt;예제1. 커서없이_쓰기:&lt;br /&gt;
+&lt;img src=&quot;https://github.com/mond-al/typer/blob/main/demo1.gif?raw=true&quot; alt=&quot;예제1_커서없이_쓰기&quot; /&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;demo&quot;&gt;DEMO&lt;/h1&gt;
+&lt;p&gt;예제2. 커서보이게_쓰기&lt;br /&gt;
+&lt;img src=&quot;https://github.com/mond-al/typer/blob/main/demo2.gif?raw=true&quot; alt=&quot;예제2_커서보이게_쓰기&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;예제3. 커서보이게_지우기&lt;br /&gt;
+&lt;img src=&quot;https://github.com/mond-al/typer/blob/main/demo3.gif?raw=true&quot; alt=&quot;예제3_커서보이게_지우기&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;Typer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;typing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;textView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;타이핑할 문자열&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;useCursor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;makeText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;타이핑 끝&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;LENGTH_SHORT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;example-demo&quot;&gt;Example DEMO&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://github.com/mond-al/typer/blob/main/demo.gif?raw=true&quot; width=&quot;50%&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://jitpack.io/#mond-al/typer&quot;&gt;&lt;img src=&quot;https://jitpack.io/v/mond-al/typer.svg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -1097,196 +1150,6 @@ gradle에 익숙한 안드로이드 개발자에겐 조금 어색한 소스이�
 
       
         <summary type="html">함수 리팩토링을 통해 아름다운 코드로 바꿔보자. 그리고 왜 이렇게 하는지 이해는게 목표이다.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">아키텍처와 클린코드 그리고 TDD (1)</title>
-      <link href="https://mond-al.github.io/cleancoders-1" rel="alternate" type="text/html" title="아키텍처와 클린코드 그리고 TDD (1)" />
-      <published>2021-02-15T00:00:00+09:00</published>
-      <updated>2021-02-15T00:00:00+09:00</updated>
-      <id>https://mond-al.github.io/cleancoders-1</id>
-      <content type="html" xml:base="https://mond-al.github.io/cleancoders-1">&lt;p&gt;객체지향에 대해 정리하고, 전체적인 맥락을 짚어본다.&lt;/p&gt;
-
-&lt;p&gt;이 포스팅에 나오는 내용 대부분은 백명석님의 유튜브영상에서 발췌된 내용입니다. 개인적인 학습, 리마인드를 위해 기록한 내용이며 자세한 내용은 해당 &lt;a href=&quot;https://www.youtube.com/watch?v=60lLSe1phks&amp;amp;t=2091s&quot;&gt;유튜브 강좌&lt;/a&gt;를 보시길 추천드립니다.&lt;/p&gt;
-
-&lt;p&gt;백명석님의 클린코더스 강의 다시보기&lt;/p&gt;
-
-&lt;h3 id=&quot;우리의-목표&quot;&gt;우리의 목표&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;잘 동작하는 코드&lt;/li&gt;
-  &lt;li&gt;읽을 수 있는 코드&lt;/li&gt;
-  &lt;li&gt;OOP/SOLID&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;잊지-말아야-할-것&quot;&gt;잊지 말아야 할 것.&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt; 기계가 이해하고 동작하는 코드는 누구나 작성할 수 있다. 사람이 읽을 수 있는 코드는 숙력된 개발자만 가능하다. -마틴파울러-&lt;/code&gt; 동작하는 코드와 읽을 수 있는 코드의 차이는 아주크다.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;우선동작하는 코드를 만들고, 출시후 아름답게 만든다.&lt;/code&gt;는 불가능하다. 나중은 없다. 혹여나 그렇게 만들어진 코드를 정리하는 작업을 한다고 했을때 리팩토링이 아니고 리스트럭처링이 되며, 새로운 버그를 만들어 낸다. 또한 겁나기 때문에 묻어두게 된다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;why-clean-code&quot;&gt;Why Clean Code?&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;코드는 최소 10번이상 읽힌다. 우린 항상 새로운 코드를 만들지 않는다. 대부분 수정하고 추가하고 확장한다.&lt;/li&gt;
-  &lt;li&gt;기계가 이해할 수 있는 코드는 바보도 작성 할 수 있다(크흡.)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;why-oop&quot;&gt;Why OOP?&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;절차지향적인 코드는 모든 프로시저가 데이터를 공유한다. 프로시저 하나가 변경되면 모든 프로시저가 영향을 받고 함께 수정되어야한다.&lt;/li&gt;
-  &lt;li&gt;객체지향적인 코드는 외부에 노출된 인터페이스만 변경 되지 않는다면, 데이터를 조작하는 코드의 변경은 외부에 영향을 미치지않는다. 
-프로시저를 실행하는데 필요한 만큼 데이터만 가진다. 대부분의 사람들은 절차적으로 사고한다. 나 역시 절차지향적이다. 때문에 훈련이 필요하다. 네이티브 본도 있긴하다. 총을 가진 누군가 내 코드를 유지보수 할 예정이라 생각하라 심지어 그는 미치광이다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;객체&quot;&gt;객체&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;WriteArticleService 는 맞지만 ArticleWriteService는 틀렸다.&lt;/li&gt;
-  &lt;li&gt;Class 이름은 무엇으로 정의해야한다. RequestParser(O) JsonRequestParser(X) 나중에 Json을 Xml로 바꾼다면? 이름만 바꿔서 되지 않는다. 이름만 바꿔도 참조중인 코드에 변경사항이 생긴다. 또한 클래스 이름을 잘못 지으면 동작까지 달라진다. RequestParser를 구현하고, Reader의 구현을 Json을 참조하여 구현체를 만들면 ReqestParser를 참조하던 클래스에 변경사항 없이 개발 가능하다.
-    &lt;blockquote&gt;
-      &lt;p&gt;무엇으로 정의하라, 어떻게로 정의하지 말고.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;역할은 관련된 책임의 직합이다.&lt;/li&gt;
-  &lt;li&gt;객체는 역할을 가진다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;객체지향-설계-과정&quot;&gt;객체지향 설계 과정&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;내부에서 필요한 데이터 선별&lt;/li&gt;
-  &lt;li&gt;객체간 메시지 흐름을 연결&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;절차적인-설계&quot;&gt;절차적인 설계&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FlowController{
-fileRead()
-encrypt()
-fileWrite()
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;객체지향적인-설계&quot;&gt;객체지향적인 설계&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- FlowController
-  ᆫ FileReader(read:byte[])
-  ᆫ Encrypter(bytes:byte[]):byte[]
-  ᆫ FileWriter(bytes:byte[])
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;기능을 제공한 객체로 분리(선별)하고, 객체간 메시지 흐름을 연결한다. 머리로 하지말고 손으로 하라.&lt;/p&gt;
-
-&lt;h2 id=&quot;encapsulation&quot;&gt;Encapsulation&lt;/h2&gt;
-&lt;p&gt;내부적으로 어떻게 구현했는지 감춰 내부의 변경(데이터,코드)이 클라이언트의 변경이 되지않도록 하여 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;코드 변경에 따는 비용 최소화&lt;/code&gt;를 목표로 한다. 변경된 내용은 모두 비용이다.&lt;/p&gt;
-
-&lt;h3 id=&quot;tell-dont-ask&quot;&gt;Tell, Don’t ASK&lt;/h3&gt;
-&lt;p&gt;데이터를 요청해서 변경하고 저장하지 말고, 무슨 기능을 실행하라. 아래의 코드를 보면 expire 조건이 변경되면 모든 코드를 찾아서 변경해야한다.&lt;/p&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;member&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getExpiredDate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getTime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;currentTimeMillis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){...&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;// (Bad)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;member&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isExpired&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()){...&lt;/span&gt;                                           &lt;span class=&quot;c1&quot;&gt;// (Good) &lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;command-vs-query&quot;&gt;Command Vs Query&lt;/h3&gt;
-&lt;p&gt;Command(Tell) 객체 내부의 상태를 변경 원칙은 데이터반환을 하지 않지만, 편의를 위해 어떤 결과를 반환 할 수 있다. 
-Query(Ask) 객체의 상태에 대한 정보를 제공. 하지만 값의 변경은 해선 안된다. 메서드명을 본뒤 코드를 열어보고 당황할 만한 일을 해선 안된다.&lt;/p&gt;
-
-&lt;h2 id=&quot;polymorphism&quot;&gt;Polymorphism&lt;/h2&gt;
-&lt;p&gt;한가지 객체가 여러가지(poly) 모습(morph)을 가질 수 있다.&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ZetMotocycle zm = new ZetMotocycle(); `Zet` `Motocycle`의 모습
-Motocycle mc = new Motocycle(); `Motocycle`의 모습
-ZetEngine ze = new ZetEngine(); `ZetEngine`의 모습
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;그런데 아래처럼 쓸수 있게 된다. 이게 핵심이다.&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Motocycle mc = new ZetMotocycle();
-ZetEngine mc = new ZetMotocycle(); 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;상속은 두가지가 있다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;구현 상속 : 슈퍼타입의 구현을 재사용. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;슈퍼타입에서 작성했던 코드&lt;/code&gt;를 재사용 할 수 있다. 의존성이 높아진다.&lt;/li&gt;
-  &lt;li&gt;인터페이스 상속 : 타입 정의만 상속, 상속은 객체에게 다형성을 제공. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;인터페이스를 참조하는 코드&lt;/code&gt;를 재사용 할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;추상화와 개발자의 습성&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;개발자들은 습성상 상세한 구현에 빠지다 보면 상위 수준의 설계를 놓치기 쉬운데, 추상화를 통해 상위 수준에서 설계를 하는데 도움을 얻을 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;구현&lt;/th&gt;
-      &lt;th&gt;추상화&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;디렉토리에서 파일을 읽어와 메모리에 저장하고&lt;/td&gt;
-      &lt;td&gt;로그 수집&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;한줄 한줄 정규표현식으로 파싱하고&lt;/td&gt;
-      &lt;td&gt;로그 분석&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;그 결과를 DB에 저장하고&lt;/td&gt;
-      &lt;td&gt;결과 저장&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;…&lt;/td&gt;
-      &lt;td&gt;…&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;내가 테스트할려는 코드들에게 모두 Mocking을 만들기 쉬워진다.
-서비스 로케이터 패턴 VS 의존성 주입(DI) 에 대해 고민해보자.&lt;/p&gt;
-
-&lt;h3 id=&quot;상속을-통한-재사용&quot;&gt;상속을 통한 재사용&lt;/h3&gt;
-&lt;p&gt;서브클래스는 수퍼클래스의 기능을 재사용. 추가적인 기능을 제공하끼 쉽다.&lt;br /&gt;
-변경이 유연함 측면에서 치명적 단점.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;수퍼클래스의 변경이 다수의 서브 클래스에 영향을 미침&lt;/li&gt;
-  &lt;li&gt;유사한 기능의 확장에서 클래스의 개수가 불필요하게 증가 할 수 있다.
-    &lt;ul&gt;
-      &lt;li&gt;2개 이상의 수퍼클래스의 기능이 필요한 경우 다중상속 불가. 1개를 상속받고 1개는 내가 구현?!X&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;상속자체를 잘 못 사용 할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;compositiondelegation&quot;&gt;Composition(delegation)&lt;/h3&gt;
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Calculator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;strategy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;PriceStrategy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nf&quot;&gt;calculate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strategy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;price&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;PriceStrategy은 얼마든지 다양한 형태의 구현체로 변경가능하고, 이 구현체의 변경은 Calculator 클래스에 영향을 끼치지 않는다. 인터페이스에 의한 의존성을 주입받음으로써 처음 Unit Test를 할 때 가장 까다로운 부분인 Mock을 생성하기 쉽다. 이는 TDD에 기본이 된다.&lt;/p&gt;
-
-&lt;p&gt;inheritance vs implementation -&amp;gt; implementation!&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>jisoo Yang</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="tdd" />
-      
-        <category term="architecture" />
-      
-        <category term="cleanCoders" />
-      
-
-      
-        <summary type="html">객체지향에 대해 정리하고, 전체적인 맥락을 짚어본다.</summary>
       
 
       
