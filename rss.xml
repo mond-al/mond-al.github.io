@@ -5,8 +5,8 @@
         <description>몬드의 개발로그 - </description>
         <link>https://mond-al.github.io/</link>
         <link>https://mond-al.github.io/</link>
-        <lastBuildDate>2021-03-09T22:07:00+09:00</lastBuildDate>
-        <pubDate>2021-03-09T22:07:00+09:00</pubDate>
+        <lastBuildDate>2021-03-09T22:24:08+09:00</lastBuildDate>
+        <pubDate>2021-03-09T22:24:08+09:00</pubDate>
         <ttl>60</ttl>
 
         
@@ -2469,10 +2469,8 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scrollbarThumbVertical&lt;/code&gt;속성으로 그려지게 되는 ScrollBarDrawable 객체의 콜백은 스크롤하는 범위의 모든 아이템이 OnBindViewHolder를 호출하게 됩니다. 수십 수백개 정도는 큰 문제가 되지않지만,구조에 따라 천단위를 넘어가기 시작하면 스크롤중 아이템의 이미지를 그리는 앱이나, 아이템의 모델이 큰 경우에는 상당한 부담이 될 것 입니다.&lt;/p&gt;
 
-&lt;h3 id=&quot;결론--그래서-fastscroller-를-직접-구현-하게-되었습니다&quot;&gt;결론 : 그래서 FastScroller 를 직접 구현 하게 되었습니다.&lt;/h3&gt;
-
+&lt;h3 id=&quot;결론--그래서-recyclerview-fastscroller를-직접-구현-하게-되었습니다&quot;&gt;결론 : 그래서 &lt;a href=&quot;recyclerview-fastscroller-release-1-0&quot;&gt;recyclerview-fastscroller&lt;/a&gt;를 직접 구현 하게 되었습니다.&lt;/h3&gt;
 &lt;p&gt;다음편에서는 직접 구현한 FastScroller를 살펴보겠습니다. 단순한만큼 버그는 적고 잘 동작합니다.&lt;/p&gt;
-
 &lt;h3 id=&quot;한번-써보세요-&quot;&gt;한번 써보세요~ 👍&lt;/h3&gt;
 
 &lt;p&gt;link : &lt;a href=&quot;https://github.com/mond-al/recyclerview-fastscroller&quot;&gt;https://github.com/mond-al/recyclerview-fastscroller&lt;/a&gt;&lt;/p&gt;
