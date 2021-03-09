@@ -5,8 +5,8 @@
         <description>몬드의 개발로그 - </description>
         <link>https://mond-al.github.io/</link>
         <link>https://mond-al.github.io/</link>
-        <lastBuildDate>2021-03-10T02:21:34+09:00</lastBuildDate>
-        <pubDate>2021-03-10T02:21:34+09:00</pubDate>
+        <lastBuildDate>2021-03-10T02:22:36+09:00</lastBuildDate>
+        <pubDate>2021-03-10T02:22:36+09:00</pubDate>
         <ttl>60</ttl>
 
         
@@ -2531,12 +2531,7 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
 
 &lt;p&gt;안드로이드 앱을 개발하다 보면 가장 많이 사용하게 되는 컴포넌트가 아무래도 RecyclerView가 아닐까 합니다. 구글이 제공해주는 만능상자 같은 리사이클러뷰가 제공하는 다양한 API를 이용해 엮고 응용해서 RecyclerView를 사용하기 편하게 도와주는 키트를 만들어 보려 합니다. 언제든 간편하게 적용하고, 간편하게 제거 가능한 형태를 목표로 합니다.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;snippet code로 바로 적용 가능한 용법을 예제앱에 적용해거나
-(https://github.com/mond-al/RecyclerView-Support)&lt;/li&gt;
-  &lt;li&gt;조금 구성이 필요한 것은 별도로 배포할 예정입니다.
-(https://github.com/mond-al/recyclerview-fastscroller)&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://mond-al.github.io/tag/project/&quot;&gt;https://mond-al.github.io/tag/project/&lt;/a&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Blog&lt;/p&gt;
