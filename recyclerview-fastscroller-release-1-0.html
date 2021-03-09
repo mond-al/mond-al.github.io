@@ -192,38 +192,16 @@ Scroll HandleView가 타겟이 되는 RecyclerView와 같은 부모뷰를 가질
             <span class="na">android:src=</span><span class="s">"@drawable/ic_unfold_more_black_48dp"</span>
             <span class="na">app:layout_constraintEnd_toEndOf=</span><span class="s">"parent"</span>
             <span class="na">app:layout_constraintTop_toTopOf=</span><span class="s">"parent"</span><span class="nt">/&gt;</span>
-
-        <span class="c">&lt;!-- bubble view--&gt;</span>
-        <span class="nt">&lt;FrameLayout</span>
-            <span class="na">android:id=</span><span class="s">"@+id/bubble"</span>
-            <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
-            <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
-            <span class="na">android:layout_marginEnd=</span><span class="s">"4dp"</span>
-            <span class="na">android:paddingTop=</span><span class="s">"10dp"</span>
-            <span class="na">app:layout_constraintEnd_toStartOf=</span><span class="s">"@+id/handle_view"</span>
-            <span class="na">app:layout_constraintTop_toTopOf=</span><span class="s">"parent"</span><span class="nt">&gt;</span>
-
-        <span class="nt">&lt;TextView</span>
-            <span class="na">android:id=</span><span class="s">"@+id/bubble_text"</span>
-            <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
-            <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
-            <span class="na">android:layout_gravity=</span><span class="s">"center"</span>
-            <span class="na">android:background=</span><span class="s">"@drawable/bubble"</span>
-            <span class="na">android:ellipsize=</span><span class="s">"end"</span>
-            <span class="na">android:lines=</span><span class="s">"1"</span>
-            <span class="na">android:paddingBottom=</span><span class="s">"4dp"</span>
-            <span class="na">android:paddingTop=</span><span class="s">"2dp"</span>
-            <span class="na">android:paddingStart=</span><span class="s">"10dp"</span>
-            <span class="na">android:paddingEnd=</span><span class="s">"20dp"</span>
-            <span class="na">android:textSize=</span><span class="s">"20sp"</span>
-            <span class="na">tools:text=</span><span class="s">"123"</span><span class="nt">/&gt;</span>
-        <span class="nt">&lt;/FrameLayout&gt;</span>
+    
     ...
 <span class="nt">&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</span>  
 </code></pre></div></div>
 
-<p>HandleView와 BubbleListener를 인자로 넘겨주면 됩니다.<br />
-핸들뷰를 숨기는 애니메이션의 지연과 패이드아웃 애니메이션 지속시간을 옵션으로 제공합니다.</p>
+<h3 id="버블뷰">버블뷰</h3>
+<p>BubbleView를 구성하고,RecyclerView Adapter에 BubbleAdapter인터페이스를 구성합니다.
+BubbleAdapter인터페이스는 RecyclerView position에 따른 string값 반환하는 getBubbleItem()를 포함합니다.
+getBubbleItem()을 통해 반환된 String은 BubbleListener.setBubble()를 호출하여 화면에 표시됩니다.</p>
+
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// HandleView</span>
 <span class="kd">val</span> <span class="py">handleView</span> <span class="p">=</span> <span class="n">findViewById</span><span class="p">&lt;</span><span class="nc">View</span><span class="p">&gt;(</span><span class="nc">R</span><span class="p">.</span><span class="n">id</span><span class="p">.</span><span class="n">handle_view</span><span class="p">)</span>
 
@@ -235,13 +213,44 @@ Scroll HandleView가 타겟이 되는 RecyclerView와 같은 부모뷰를 가질
     <span class="k">override</span> <span class="k">fun</span> <span class="nf">setBubble</span><span class="p">(</span><span class="n">str</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">bubbleText</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="n">str</span>
     <span class="p">}</span>
-    <span class="k">override</span> <span class="k">fun</span> <span class="nf">setViewY</span><span class="p">(</span><span class="n">y</span><span class="p">:</span> <span class="nc">Float</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">bubble</span><span class="p">.</span><span class="n">y</span> <span class="p">=</span> <span class="n">y</span>
-    <span class="p">}</span>
-    <span class="k">override</span> <span class="k">fun</span> <span class="nf">setVisible</span><span class="p">(</span><span class="n">isVisible</span><span class="p">:</span> <span class="nc">Boolean</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">bubble</span><span class="p">.</span><span class="n">visibility</span> <span class="p">=</span> <span class="k">if</span> <span class="p">(</span><span class="n">isVisible</span><span class="p">)</span> <span class="nc">View</span><span class="p">.</span><span class="nc">VISIBLE</span> <span class="k">else</span> <span class="nc">View</span><span class="p">.</span><span class="nc">GONE</span>
-    <span class="p">}</span>
 <span class="p">}</span>
+
+<span class="c1">// Bind</span>
+<span class="nc">FastScroller</span><span class="p">(</span><span class="n">handleView</span><span class="p">,</span><span class="n">bubbleListener</span><span class="p">).</span><span class="nf">bind</span><span class="p">(</span><span class="n">recyclerView</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;androidx.constraintlayout.widget.ConstraintLayout&gt;</span>
+    ...
+    <span class="nt">&lt;androidx.recyclerview.widget.RecyclerView/&gt;</span>
+    <span class="nt">&lt;ImageView</span> <span class="na">android:id=</span><span class="s">"@+id/handle_view"</span><span class="nt">/&gt;</span>
+
+    <span class="c">&lt;!-- bubble view--&gt;</span>
+    <span class="nt">&lt;FrameLayout</span>
+        <span class="na">android:id=</span><span class="s">"@+id/bubble"</span>
+        <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+        <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+        <span class="na">android:layout_marginEnd=</span><span class="s">"4dp"</span>
+        <span class="na">android:paddingTop=</span><span class="s">"10dp"</span>
+        <span class="na">app:layout_constraintEnd_toStartOf=</span><span class="s">"@+id/handle_view"</span>
+        <span class="na">app:layout_constraintTop_toTopOf=</span><span class="s">"parent"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;TextView</span>
+        <span class="na">android:id=</span><span class="s">"@+id/bubble_text"</span>
+        <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+        <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+        <span class="na">android:layout_gravity=</span><span class="s">"center"</span>
+        <span class="na">android:background=</span><span class="s">"@drawable/bubble"</span>
+        <span class="na">android:ellipsize=</span><span class="s">"end"</span>
+        <span class="na">android:lines=</span><span class="s">"1"</span>
+        <span class="na">android:paddingBottom=</span><span class="s">"4dp"</span>
+        <span class="na">android:paddingTop=</span><span class="s">"2dp"</span>
+        <span class="na">android:paddingStart=</span><span class="s">"10dp"</span>
+        <span class="na">android:paddingEnd=</span><span class="s">"20dp"</span>
+        <span class="na">android:textSize=</span><span class="s">"20sp"</span>
+        <span class="na">tools:text=</span><span class="s">"123"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/FrameLayout&gt;</span>
+...
+<span class="nt">&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</span>
 
 </code></pre></div></div>
 <p>자세한 내용은 Github의 소스를 내려받아 Example App을 참고부탁드립니다.
