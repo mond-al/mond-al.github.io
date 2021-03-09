@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/android/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-03-09T21:45:31+09:00</updated>
+  <updated>2021-03-09T21:54:46+09:00</updated>
   <id>https://mond-al.github.io/tag/android/feed.xml</id>
 
   
@@ -40,7 +40,7 @@
       <content type="html" xml:base="https://mond-al.github.io/recyclerview-fastscroller-release-1-0">&lt;h1 id=&quot;recyclerview-fastscroller&quot;&gt;RecyclerView FastScroller&lt;/h1&gt;
 &lt;p&gt;RecyclerView에서 FastScroller와 Bubble(현재 아이템 정보)를 지원하는 라이브러리입니다. LinearLayoutManager와  GridLayoutManager를 지원하며, 부드러운 애니메이션을 제공합니다. 간단한 구성으로 핸들뷰와 버블뷰를 먼저 구성하고 RecyclerView와 Bind만 하면 사용 가능합니다.&lt;/p&gt;
 
-&lt;p&gt;HandleView를 추가해주세요. 필요하다면 Bubble을 표시할 View도 함께 배치해주시면됩니다.
+&lt;p&gt;핸들뷰를 추가해주세요. 필요하다면 버블을 표시할 View도 함께 배치해주시면됩니다.
 Scroll HandleView가 타겟이 되는 RecyclerView와 같은 부모뷰를 가질 필요는 없지만, 동일한 높이의 부모뷰를 가지고 있어야합니다.&lt;/p&gt;
 
 &lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Bind to RecyclerView&lt;/span&gt;
@@ -102,7 +102,7 @@ Scroll HandleView가 타겟이 되는 RecyclerView와 같은 부모뷰를 가질
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;HandleView와 BubbleListener를 인자로 넘겨주면 됩니다.&lt;br /&gt;
-스크롤이 일어나지않으면 다음 스크롤이 발생하기 전까지 Handle을 숨기는 애니메이션의 지연과 패이드아웃 애니메이션 지속시간을 옵션으로 제공합니다.&lt;/p&gt;
+핸들뷰를 숨기는 애니메이션의 지연과 패이드아웃 애니메이션 지속시간을 옵션으로 제공합니다.&lt;/p&gt;
 &lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// HandleView&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;handleView&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;findViewById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;View&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;handle_view&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
@@ -146,7 +146,7 @@ Scroll HandleView가 타겟이 되는 RecyclerView와 같은 부모뷰를 가질
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;h3 id=&quot;step-2-add-the-dependency&quot;&gt;Step 2. Add the dependency&lt;/h3&gt;
 &lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&lt;span class=&quot;n&quot;&gt;dependencies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'com.github.mond-al:recyclerview-fastscroller:1.0'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'com.github.mond-al:recyclerview-fastscroller:1.0'&lt;/span&gt;
 	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
