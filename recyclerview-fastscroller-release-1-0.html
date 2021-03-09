@@ -11,7 +11,7 @@
 
 
 
-    <title>아키텍처와 클린코드 그리고 TDD (3)</title>
+    <title>RecyclerView-FastScroller v1.0</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -39,25 +39,25 @@
         <meta name="google-site-verification" content="GCZr_aYYwDvGhBvJNkNJft6FY0cIWqpS9Zce3sPH784"/>
 
     <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>아키텍처와 클린코드 그리고 TDD (3) | 몬드의 개발로그</title>
+<title>RecyclerView-FastScroller v1.0 | 몬드의 개발로그</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="아키텍처와 클린코드 그리고 TDD (3)" />
+<meta property="og:title" content="RecyclerView-FastScroller v1.0" />
 <meta name="author" content="jisoo Yang" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="TDD 원칙 실패하는 테스트를 작성하기 전에는 절대로 제품 코드를 작성하지 않는다. 실패하는 테스트 코드를 한 번에 하나 이상 작성하지 않는다. 현재 실패하고 있는 테스트를 성공하기에 충분한 정도를 넘어서는 프로덕션 코드를 작성하지 않는다." />
-<meta property="og:description" content="TDD 원칙 실패하는 테스트를 작성하기 전에는 절대로 제품 코드를 작성하지 않는다. 실패하는 테스트 코드를 한 번에 하나 이상 작성하지 않는다. 현재 실패하고 있는 테스트를 성공하기에 충분한 정도를 넘어서는 프로덕션 코드를 작성하지 않는다." />
-<link rel="canonical" href="https://mond-al.github.io/cleancoders-tdd" />
-<meta property="og:url" content="https://mond-al.github.io/cleancoders-tdd" />
+<meta name="description" content="RecyclerView FastScroller RecyclerView에서 FastScroller와 Bubble(현재 아이템 정보)를 지원하는 라이브러리입니다. LinearLayoutManager와 GridLayoutManager를 지원하며, 부드러운 애니메이션을 제공합니다. 간단한 구성으로 핸들뷰와 버블뷰를 먼저 구성하고 RecyclerView와 Bind만 하면 사용 가능합니다." />
+<meta property="og:description" content="RecyclerView FastScroller RecyclerView에서 FastScroller와 Bubble(현재 아이템 정보)를 지원하는 라이브러리입니다. LinearLayoutManager와 GridLayoutManager를 지원하며, 부드러운 애니메이션을 제공합니다. 간단한 구성으로 핸들뷰와 버블뷰를 먼저 구성하고 RecyclerView와 Bind만 하면 사용 가능합니다." />
+<link rel="canonical" href="https://mond-al.github.io/recyclerview-fastscroller-release-1-0" />
+<meta property="og:url" content="https://mond-al.github.io/recyclerview-fastscroller-release-1-0" />
 <meta property="og:site_name" content="몬드의 개발로그" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-02-25T00:00:00+09:00" />
+<meta property="article:published_time" content="2021-03-09T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="아키텍처와 클린코드 그리고 TDD (3)" />
+<meta property="twitter:title" content="RecyclerView-FastScroller v1.0" />
 <script type="application/ld+json">
-{"url":"https://mond-al.github.io/cleancoders-tdd","author":{"@type":"Person","name":"jisoo Yang"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://mond-al.github.io/assets/images/logo/normal_icon.png"},"name":"jisoo Yang"},"headline":"아키텍처와 클린코드 그리고 TDD (3)","dateModified":"2021-02-25T00:00:00+09:00","datePublished":"2021-02-25T00:00:00+09:00","description":"TDD 원칙 실패하는 테스트를 작성하기 전에는 절대로 제품 코드를 작성하지 않는다. 실패하는 테스트 코드를 한 번에 하나 이상 작성하지 않는다. 현재 실패하고 있는 테스트를 성공하기에 충분한 정도를 넘어서는 프로덕션 코드를 작성하지 않는다.","mainEntityOfPage":{"@type":"WebPage","@id":"https://mond-al.github.io/cleancoders-tdd"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"url":"https://mond-al.github.io/recyclerview-fastscroller-release-1-0","author":{"@type":"Person","name":"jisoo Yang"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://mond-al.github.io/assets/images/logo/normal_icon.png"},"name":"jisoo Yang"},"headline":"RecyclerView-FastScroller v1.0","dateModified":"2021-03-09T00:00:00+09:00","datePublished":"2021-03-09T00:00:00+09:00","description":"RecyclerView FastScroller RecyclerView에서 FastScroller와 Bubble(현재 아이템 정보)를 지원하는 라이브러리입니다. LinearLayoutManager와 GridLayoutManager를 지원하며, 부드러운 애니메이션을 제공합니다. 간단한 구성으로 핸들뷰와 버블뷰를 먼저 구성하고 RecyclerView와 Bind만 하면 사용 가능합니다.","mainEntityOfPage":{"@type":"WebPage","@id":"https://mond-al.github.io/recyclerview-fastscroller-release-1-0"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <meta property="og:image" content="https://mond-al.github.io/assets/images/cover/clean_coders.png"/>
+    <meta property="og:image" content="https://mond-al.github.io/assets/images/cover/2021-03-09-recyclerview-fastscroller-release-1-0.gif"/>
     <meta property="og:image:width" content="800"/> <meta property="og:image:height" content="540"/> 
     <meta property="article:publisher" content="https://www.facebook.com/jisoo.yang.56"/>
     <meta name="referrer" content="no-referrer-when-downgrade"/>
@@ -122,117 +122,155 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-tdd tag-architecture tag-cleancoders tag-tdd  ">
+        <article class="post-full  tag-project tag-android tag-recyclerview tag-fastscroller  ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="25 February 2021">25 February 2021</time>
+                    <time class="post-full-meta-date" datetime=" 9 March 2021"> 9 March 2021</time>
                     
                         <span class="date-divider">/</span>
                         
                             
-                               <a href='/tag/tdd/'>TDD</a>,
+                               <a href='/tag/project/'>PROJECT</a>,
                             
                         
                             
-                               <a href='/tag/architecture/'>ARCHITECTURE</a>,
+                               <a href='/tag/android/'>ANDROID</a>,
                             
                         
                             
-                               <a href='/tag/cleancoders/'>CLEANCODERS</a>,
+                               <a href='/tag/recyclerview/'>RECYCLERVIEW</a>,
                             
                         
                             
-                               <a href='/tag/tdd/'>TDD</a>
+                               <a href='/tag/fastscroller/'>FASTSCROLLER</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title">아키텍처와 클린코드 그리고 TDD (3)</h1>
+                <h1 class="post-full-title">RecyclerView-FastScroller v1.0</h1>
             </header>
 
             
-            <figure class="post-full-image" style="background-image: url(/assets/images/cover/clean_coders.png)">
+            <figure class="post-full-image" style="background-image: url(/assets/images/cover/2021-03-09-recyclerview-fastscroller-release-1-0.gif)">
             </figure>
             
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <h3 id="tdd-원칙">TDD 원칙</h3>
-<ol>
-  <li>실패하는 테스트를 작성하기 전에는 절대로 제품 코드를 작성하지 않는다.</li>
-  <li>실패하는 테스트 코드를 한 번에 하나 이상 작성하지 않는다.</li>
-  <li>현재 실패하고 있는 테스트를 성공하기에 충분한 정도를 넘어서는 프로덕션 코드를 작성하지 않는다.</li>
-</ol>
+                    <h1 id="recyclerview-fastscroller">RecyclerView FastScroller</h1>
+<p>RecyclerView에서 FastScroller와 Bubble(현재 아이템 정보)를 지원하는 라이브러리입니다. LinearLayoutManager와  GridLayoutManager를 지원하며, 부드러운 애니메이션을 제공합니다. 간단한 구성으로 핸들뷰와 버블뷰를 먼저 구성하고 RecyclerView와 Bind만 하면 사용 가능합니다.</p>
 
-<p>Start -&gt; write a failing test &lt;-&gt; write code to make it pass (refactoring) -&gt; end</p>
+<p>HandleView를 추가해주세요. 필요하다면 Bubble을 표시할 View도 함께 배치해주시면됩니다.
+Scroll HandleView가 타겟이 되는 RecyclerView와 같은 부모뷰를 가질 필요는 없지만, 동일한 높이의 부모뷰를 가지고 있어야합니다.</p>
 
-<p>리팩터링은 옵션이 아니다!</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Bind to RecyclerView</span>
+<span class="nc">FastScroller</span><span class="p">(</span><span class="n">handleView</span><span class="p">,</span> <span class="n">bubbleListener</span><span class="p">).</span><span class="nf">bind</span><span class="p">(</span><span class="n">recyclerView</span><span class="p">)</span>
+</code></pre></div></div>
 
-<h3 id="원칙과-팁">원칙과 팁</h3>
+<h3 id="뷰구성-예제">뷰구성 예제</h3>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;androidx.constraintlayout.widget.ConstraintLayout&gt;</span>
+    ...
+        <span class="nt">&lt;androidx.recyclerview.widget.RecyclerView</span>
+            <span class="na">android:id=</span><span class="s">"@+id/items"</span>
+            <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+            <span class="na">android:layout_height=</span><span class="s">"match_parent"</span>
+            <span class="na">app:layoutManager=</span><span class="s">"androidx.recyclerview.widget.LinearLayoutManager"</span>
+            <span class="na">tools:layout_editor_absoluteX=</span><span class="s">"16dp"</span>
+            <span class="na">tools:layout_editor_absoluteY=</span><span class="s">"0dp"</span><span class="nt">/&gt;</span>
+
+        <span class="c">&lt;!-- handle view--&gt;</span>
+        <span class="nt">&lt;ImageView</span>
+            <span class="na">android:id=</span><span class="s">"@+id/handle_view"</span>
+            <span class="na">android:layout_width=</span><span class="s">"20dp"</span>
+            <span class="na">android:layout_height=</span><span class="s">"40dp"</span>
+            <span class="na">android:layout_marginTop=</span><span class="s">"0dp"</span>
+            <span class="na">android:layout_marginEnd=</span><span class="s">"0dp"</span>
+            <span class="na">android:background=</span><span class="s">"@color/black"</span>
+            <span class="na">android:contentDescription=</span><span class="s">"@string/quick_scroll_handle"</span>
+            <span class="na">android:scaleType=</span><span class="s">"centerCrop"</span>
+            <span class="na">android:src=</span><span class="s">"@drawable/ic_unfold_more_black_48dp"</span>
+            <span class="na">app:layout_constraintEnd_toEndOf=</span><span class="s">"parent"</span>
+            <span class="na">app:layout_constraintTop_toTopOf=</span><span class="s">"parent"</span><span class="nt">/&gt;</span>
+
+        <span class="c">&lt;!-- bubble view--&gt;</span>
+        <span class="nt">&lt;FrameLayout</span>
+            <span class="na">android:id=</span><span class="s">"@+id/bubble"</span>
+            <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+            <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+            <span class="na">android:layout_marginEnd=</span><span class="s">"4dp"</span>
+            <span class="na">android:paddingTop=</span><span class="s">"10dp"</span>
+            <span class="na">app:layout_constraintEnd_toStartOf=</span><span class="s">"@+id/handle_view"</span>
+            <span class="na">app:layout_constraintTop_toTopOf=</span><span class="s">"parent"</span><span class="nt">&gt;</span>
+
+        <span class="nt">&lt;TextView</span>
+            <span class="na">android:id=</span><span class="s">"@+id/bubble_text"</span>
+            <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+            <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+            <span class="na">android:layout_gravity=</span><span class="s">"center"</span>
+            <span class="na">android:background=</span><span class="s">"@drawable/bubble"</span>
+            <span class="na">android:ellipsize=</span><span class="s">"end"</span>
+            <span class="na">android:lines=</span><span class="s">"1"</span>
+            <span class="na">android:paddingBottom=</span><span class="s">"4dp"</span>
+            <span class="na">android:paddingTop=</span><span class="s">"2dp"</span>
+            <span class="na">android:paddingStart=</span><span class="s">"10dp"</span>
+            <span class="na">android:paddingEnd=</span><span class="s">"20dp"</span>
+            <span class="na">android:textSize=</span><span class="s">"20sp"</span>
+            <span class="na">tools:text=</span><span class="s">"123"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/FrameLayout&gt;</span>
+    ...
+<span class="nt">&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</span>  
+</code></pre></div></div>
+
+<p>HandleView와 BubbleListener를 인자로 넘겨주면 됩니다.<br />
+스크롤이 일어나지않으면 다음 스크롤이 발생하기 전까지 Handle을 숨기는 애니메이션의 지연과 패이드아웃 애니메이션 지속시간을 옵션으로 제공합니다.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// HandleView</span>
+<span class="kd">val</span> <span class="py">handleView</span> <span class="p">=</span> <span class="n">findViewById</span><span class="p">&lt;</span><span class="nc">View</span><span class="p">&gt;(</span><span class="nc">R</span><span class="p">.</span><span class="n">id</span><span class="p">.</span><span class="n">handle_view</span><span class="p">)</span>
+
+<span class="c1">// BubbleView (optional feature)</span>
+<span class="c1">// must implement with BubbleAdapter. see @SimpleAdapter</span>
+<span class="kd">val</span> <span class="py">bubble</span> <span class="p">=</span> <span class="n">findViewById</span><span class="p">&lt;</span><span class="nc">View</span><span class="p">&gt;(</span><span class="nc">R</span><span class="p">.</span><span class="n">id</span><span class="p">.</span><span class="n">bubble</span><span class="p">)</span>
+<span class="kd">val</span> <span class="py">bubbleText</span> <span class="p">=</span> <span class="n">findViewById</span><span class="p">&lt;</span><span class="nc">TextView</span><span class="p">&gt;(</span><span class="nc">R</span><span class="p">.</span><span class="n">id</span><span class="p">.</span><span class="n">bubble_text</span><span class="p">)</span>
+<span class="kd">val</span> <span class="py">bubbleListener</span> <span class="p">=</span> <span class="kd">object</span> <span class="err">: </span><span class="nc">BubbleListener</span> <span class="p">{</span>
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">setBubble</span><span class="p">(</span><span class="n">str</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">bubbleText</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="n">str</span>
+    <span class="p">}</span>
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">setViewY</span><span class="p">(</span><span class="n">y</span><span class="p">:</span> <span class="nc">Float</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">bubble</span><span class="p">.</span><span class="n">y</span> <span class="p">=</span> <span class="n">y</span>
+    <span class="p">}</span>
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">setVisible</span><span class="p">(</span><span class="n">isVisible</span><span class="p">:</span> <span class="nc">Boolean</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">bubble</span><span class="p">.</span><span class="n">visibility</span> <span class="p">=</span> <span class="k">if</span> <span class="p">(</span><span class="n">isVisible</span><span class="p">)</span> <span class="nc">View</span><span class="p">.</span><span class="nc">VISIBLE</span> <span class="k">else</span> <span class="nc">View</span><span class="p">.</span><span class="nc">GONE</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+<p>자세한 내용은 Github의 소스를 내려받아 Example App을 참고부탁드립니다.
+문의사항이나 개선요청은 댓글로 남겨주시면, 빠른시일내에 반영하겠습니다.</p>
+
+<h2 id="github-link"><a href="https://github.com/mond-al/recyclerview-fastscroller/">Github link</a></h2>
+
+<h3 id="todo">Todo</h3>
 <ul>
-  <li>간단하고 쉬운것, 수준이하의 것부터.
-    <ul>
-      <li>0 + 0… 0 + 1 …</li>
-    </ul>
-  </li>
-  <li>작은 골프게임.
-    <ul>
-      <li>최소한의 코드로 돌아 갈 수 있게</li>
-    </ul>
-  </li>
-  <li>테스트가 더욱 구체화 될 수록, 프로덕션코드는 범용적이어야 한다.</li>
+  <li>Smooth Scroll</li>
+  <li>Intelligent ScrollPosition</li>
 </ul>
 
-<h3 id="tdd-잇점">TDD 잇점</h3>
-<ul>
-  <li>Debugging Time 이 줄어든다.
-    <ul>
-      <li>디버그 챔피언이 되고 싶은가? 그건 아니다. 하지만….
-        <ul>
-          <li>이건 요구되는 스킬이 아니다.</li>
-          <li>디버깅에 시간을 보내길 원치 않는다.</li>
-          <li>코드가 동작하도록 하는데 시간을 사용하기 바란다.</li>
-        </ul>
-      </li>
-      <li>TDD가 디버깅 시간을 1/10로 줄여 줄 것이다.
-        <ul>
-          <li>그런데 1/10 이 아니라, 1/2만 줄여도 의미가 있다</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>설계문서를 얻게 된다.
-    <ul>
-      <li>test is “Low level design document.”</li>
-    </ul>
-  </li>
-  <li>Decoupling
-    <ul>
-      <li>테스트를 먼저 작성하면 프로덕션 코드가 테스트 가능해진다.</li>
-      <li>테스트 코드에서 코드라인을 접근하기 쉬운 유일한 방법은 Decouple 시키는 것이다.</li>
-    </ul>
-  </li>
-  <li>Courage to change
-    <ul>
-      <li>개발자가 코드를 깨끗하게 리팩토링 하는 것을 두려워하면 코드는 썩는다.</li>
-      <li>테스트가 있어서 시스템이 정상 동작하는지 확인 할 수 있어서 두렵지 않을것이다.
-        <ul>
-          <li>리그레이션(회귀) 테스트</li>
-          <li>버그가 발견되면 버그를 재현하는 테스트를 추가한다. «&lt; 중요한거 같음.</li>
-        </ul>
-      </li>
-      <li>완벽한 설계에 기반해 개발을 했더라도 테스트가 없다면, 코드를 클린하게 하는데 두려움이 생길것이다.</li>
-    </ul>
-  </li>
-  <li>Trust
-    <ul>
-      <li>TAD(Test After Development)테스트를 신뢰할 수 없다. 항상 구멍이 있을것이라 생각할 것이다.</li>
-      <li>TAD는 지루하다. 이미 수작업으로 트스트 했기때문에 코드가 동작하는 것을 안다.</li>
-    </ul>
-  </li>
-</ul>
+<h3 id="step-1-add-the-jitpack-repository-to-your-build-file">Step 1. Add the JitPack repository to your build file</h3>
+<p>Add it in your root build.gradle at the end of repositories:</p>
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="n">allprojects</span> <span class="o">{</span>
+		<span class="n">repositories</span> <span class="o">{</span>
+			<span class="o">...</span>
+			<span class="n">maven</span> <span class="o">{</span> <span class="n">url</span> <span class="s1">'https://jitpack.io'</span> <span class="o">}</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+</code></pre></div></div>
+<h3 id="step-2-add-the-dependency">Step 2. Add the dependency</h3>
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="n">dependencies</span> <span class="o">{</span>
+	        <span class="n">implementation</span> <span class="s1">'com.github.mond-al:digit-roll-numbers:0.2'</span>
+	<span class="o">}</span>
+</code></pre></div></div>
 
+<h3 id="step3-just-use-it">Step3. Just Use it!</h3>
 
                 </div>
             </section>
@@ -296,9 +334,9 @@ into the {body} of the default.hbs template -->
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            this.page.url = 'https://mond-al.github.io/cleancoders-tdd';
-                            this.page.identifier = '/cleancoders-tdd';
-                            this.page.title = '아키텍처와 클린코드 그리고 TDD (3)';
+                            this.page.url = 'https://mond-al.github.io/recyclerview-fastscroller-release-1-0';
+                            this.page.identifier = '/recyclerview-fastscroller-release-1-0';
+                            this.page.title = 'RecyclerView-FastScroller v1.0';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -332,7 +370,7 @@ into the {body} of the default.hbs template -->
                         <header class="read-next-card-header">
                             <small class="read-next-card-header-sitetitle">&mdash; 몬드의 개발로그 &mdash;</small>
                             
-                                <h3 class="read-next-card-header-title"><a href="/tag/tdd/">Tdd</a></h3>
+                                <h3 class="read-next-card-header-title"><a href="/tag/project/">Project</a></h3>
                             
                         </header>
                         <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
@@ -341,6 +379,8 @@ into the {body} of the default.hbs template -->
                             <ul>
                                 
                                 
+                                  
+                                    
                                   
                                 
                                   
@@ -362,7 +402,25 @@ into the {body} of the default.hbs template -->
                                   
                                 
                                   
-                                    
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
                                   
                                 
                                   
@@ -377,14 +435,7 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                         
-                                            <li><a href="/cleancoders-2">아키텍처와 클린코드 그리고 TDD (2)</a></li>
-                                        
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
+                                            <li><a href="/test-image-zip">테스트용 이미지 (랜덤1000개.zip,해상도별.zip)</a></li>
                                         
                                     
                                   
@@ -392,23 +443,10 @@ into the {body} of the default.hbs template -->
                                   
                                 
                                   
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
+                                    
+                                        
+                                        
+                                    
                                   
                                 
                                   
@@ -416,7 +454,7 @@ into the {body} of the default.hbs template -->
                             </ul>
                         </div>
                         <footer class="read-next-card-footer">
-                            <a href="/tag/tdd/">
+                            <a href="/tag/project/">
                                 
                                     See all 4 posts  →
                                 
@@ -428,16 +466,19 @@ into the {body} of the default.hbs template -->
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
                 
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/hangeul-type-write">
-                <div class="post-card-image" style="background-image: url(/assets/images/cover/2021-03-02-hangeul-type-write.gif)"></div>
+            <a class="post-card-image-link" href="/digit-roll-libs">
+                <div class="post-card-image" style="background-image: url(/assets/images/cover/2021-03-04-digit-roll-libs.gif)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/hangeul-type-write">
+            <a class="post-card-content-link" href="/digit-roll-libs">
                 <header class="post-card-header">
                     
                         
@@ -450,7 +491,7 @@ into the {body} of the default.hbs template -->
                             
                         
                             
-                               <span class="post-card-tags">Type-writer</span>
+                               <span class="post-card-tags">Roll-digit</span>
                             
                         
                             
@@ -459,63 +500,7 @@ into the {body} of the default.hbs template -->
                         
                     
 
-                    <h2 class="post-card-title">Typer - 한글 타이핑 입력효과 라이브러리</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p></p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/logo/normal.png" alt="jisoo Yang" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/mond/">jisoo Yang</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
-
-            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
-            
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/kotlin-visibility-internal">
-                <div class="post-card-image" style="background-image: url(/assets/images/cover/2021-02-19-kotlin-visibility.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/kotlin-visibility-internal">
-                <header class="post-card-header">
-                    
-                        
-                            
-                               <span class="post-card-tags">Kotlin</span>
-                            
-                        
-                            
-                                <span class="post-card-tags">Java</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">코틀린의 internal 가시성</h2>
+                    <h2 class="post-card-title">Digit roll counter - 회전 점수판</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -561,18 +546,18 @@ into the {body} of the default.hbs template -->
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">아키텍처와 클린코드 그리고 TDD (3)</div>
+    <div class="floating-header-title">RecyclerView-FastScroller v1.0</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98%EC%99%80+%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C+%EA%B7%B8%EB%A6%AC%EA%B3%A0+TDD+%283%29&amp;url=https://mond-al.github.io/cleancoders-tdd"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=RecyclerView-FastScroller+v1.0&amp;url=https://mond-al.github.io/recyclerview-fastscroller-release-1-0"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://mond-al.github.io/cleancoders-tdd"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://mond-al.github.io/recyclerview-fastscroller-release-1-0"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 
