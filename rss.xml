@@ -5,8 +5,8 @@
         <description>몬드의 개발로그 - </description>
         <link>https://mond-al.github.io/</link>
         <link>https://mond-al.github.io/</link>
-        <lastBuildDate>2021-03-10T00:38:19+09:00</lastBuildDate>
-        <pubDate>2021-03-10T00:38:19+09:00</pubDate>
+        <lastBuildDate>2021-03-10T00:39:20+09:00</lastBuildDate>
+        <pubDate>2021-03-10T00:39:20+09:00</pubDate>
         <ttl>60</ttl>
 
         
@@ -29,7 +29,7 @@
 
 &lt;p&gt;&lt;a href=&quot;https://developer.android.com/reference/android/webkit/WebSettings#setMixedContentMode(int)&quot;&gt;https://developer.android.com/reference/android/webkit/WebSettings#setMixedContentMode(int)&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;결론적으로-webviewassetloader를-사용하세요&quot;&gt;결론적으로 WebViewAssetLoader를 사용하세요.&lt;/h2&gt;
+&lt;h2 id=&quot;결론적으로-webviewassetloader로-대체해야-안전합니다&quot;&gt;결론적으로 WebViewAssetLoader로 대체해야 안전합니다.&lt;/h2&gt;
 
 &lt;p&gt;예외를 제거하고, 동적으로 발생 가능한 문제를 방어 할 수 있습니다.&lt;/p&gt;
 
