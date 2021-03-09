@@ -5,8 +5,8 @@
         <description>몬드의 개발로그 - </description>
         <link>https://mond-al.github.io/</link>
         <link>https://mond-al.github.io/</link>
-        <lastBuildDate>2021-03-09T22:24:08+09:00</lastBuildDate>
-        <pubDate>2021-03-09T22:24:08+09:00</pubDate>
+        <lastBuildDate>2021-03-09T22:28:21+09:00</lastBuildDate>
+        <pubDate>2021-03-09T22:28:21+09:00</pubDate>
         <ttl>60</ttl>
 
         
@@ -14,6 +14,11 @@
             <title>RecyclerView-FastScroller v1.0</title>
             <description>&lt;h1 id=&quot;recyclerview-fastscroller&quot;&gt;RecyclerView FastScroller&lt;/h1&gt;
 &lt;p&gt;RecyclerView에서 FastScroller와 Bubble(현재 아이템 정보)를 지원하는 라이브러리입니다. LinearLayoutManager와  GridLayoutManager를 지원하며, 부드러운 애니메이션을 제공합니다. 간단한 구성으로 핸들뷰와 버블뷰를 먼저 구성하고 RecyclerView와 Bind만 하면 사용 가능합니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;demo&quot;&gt;DEMO&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/mond-al/recyclerview-fastscroller/raw/main/demo.gif?raw=true&quot; width=&quot;50%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jitpack.io/#mond-al/recyclerview-fastscroller&quot;&gt;&lt;img src=&quot;https://jitpack.io/v/mond-al/recyclerview-fastscroller.svg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;핸들뷰를 추가해주세요. 필요하다면 버블을 표시할 View도 함께 배치해주시면됩니다.
 Scroll HandleView가 타겟이 되는 RecyclerView와 같은 부모뷰를 가질 필요는 없지만, 동일한 높이의 부모뷰를 가지고 있어야합니다.&lt;/p&gt;
