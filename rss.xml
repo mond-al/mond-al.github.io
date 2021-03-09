@@ -5,8 +5,8 @@
         <description>몬드의 개발로그 - </description>
         <link>https://mond-al.github.io/</link>
         <link>https://mond-al.github.io/</link>
-        <lastBuildDate>2021-03-09T22:28:21+09:00</lastBuildDate>
-        <pubDate>2021-03-09T22:28:21+09:00</pubDate>
+        <lastBuildDate>2021-03-09T22:28:38+09:00</lastBuildDate>
+        <pubDate>2021-03-09T22:28:38+09:00</pubDate>
         <ttl>60</ttl>
 
         
@@ -16,7 +16,7 @@
 &lt;p&gt;RecyclerView에서 FastScroller와 Bubble(현재 아이템 정보)를 지원하는 라이브러리입니다. LinearLayoutManager와  GridLayoutManager를 지원하며, 부드러운 애니메이션을 제공합니다. 간단한 구성으로 핸들뷰와 버블뷰를 먼저 구성하고 RecyclerView와 Bind만 하면 사용 가능합니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;demo&quot;&gt;DEMO&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&quot;https://github.com/mond-al/recyclerview-fastscroller/raw/main/demo.gif?raw=true&quot; width=&quot;50%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/mond-al/recyclerview-fastscroller/raw/main/demo.gif?raw=true&quot; alt=&quot;Demo&quot; width=&quot;50%&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://jitpack.io/#mond-al/recyclerview-fastscroller&quot;&gt;&lt;img src=&quot;https://jitpack.io/v/mond-al/recyclerview-fastscroller.svg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
