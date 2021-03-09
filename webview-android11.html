@@ -161,8 +161,10 @@ into the {body} of the default.hbs template -->
 
 <p>웹뷰에서 디바이스 로컬(앱영역)으로 복사한 리소스에 접근하는 기능을 제공하기 위해서는 위의 링크 페이지에서 나온것 처럼 webSettings.setAllowFileAccess(true) api를 이용해서 해결가능합니다. 하지만 페이지에 따라 <code class="language-plaintext highlighter-rouge">보안에 대한 평가후 적용이 필요합니다.</code></p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">참고</span> <span class="p">:</span> <span class="err">앱은</span> <span class="nc">WebView</span><span class="err">에서</span> <span class="err">외부</span> <span class="err">소스의</span> <span class="nc">URL</span><span class="p">(</span><span class="n">file</span><span class="p">:</span><span class="c1">//)을 열지 말아야합니다. 앱이 외부 소스의 임의 URL을 허용하는 경우이를 활성화하지 마십시오. URL 대신 스키마를 통해 자산 및 리소스를 포함한 파일에 액세스 하려면 항상 androidx.webkit.WebViewAssetLoader 를 사용하는 것이 좋습니다. 이전 버전을 대상으로하는 보안 문제를 방지하려면 이 값을 명시 적으로 설정해야합니다 .</span>
-</code></pre></div></div>
+<blockquote>
+  <p>앱은 WebView에서 외부 소스의 URL(file://)을 열지 말아야합니다. 앱이 외부 소스의 임의 URL을 허용하는 경우 이를 활성화하지 마십시오. URL 대신 스키마를 통해 자산 및 리소스를 포함한 파일에 액세스 하려면 androidx.webkit.WebViewAssetLoader 를 사용하는 것이 좋습니다.
+```</p>
+</blockquote>
 
 <h2 id="setmixedcontentmode">setMixedContentMode</h2>
 <h3 id="websettingssetmixedcontentmodeint"><a href="https://developer.android.com/reference/android/webkit/WebSettings#setMixedContentMode(int)">WebSettings#setMixedContentMode(int)</a></h3>
