@@ -5,8 +5,8 @@
         <description>몬드의 개발로그 - </description>
         <link>https://mond-al.github.io/</link>
         <link>https://mond-al.github.io/</link>
-        <lastBuildDate>2021-03-10T02:17:57+09:00</lastBuildDate>
-        <pubDate>2021-03-10T02:17:57+09:00</pubDate>
+        <lastBuildDate>2021-03-10T02:21:34+09:00</lastBuildDate>
+        <pubDate>2021-03-10T02:21:34+09:00</pubDate>
         <ttl>60</ttl>
 
         
@@ -2525,20 +2525,7 @@ app/build.gradle을 열어보면 아주 심플한 빌드환경 설정을 볼 수
         
         <item>
             <title>reboot</title>
-            <description>&lt;p&gt;다시 시작합니다.
-BLOG, MRSK project&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Blog&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;주니어 시절에는 블로그를 꽤 열심히 정리 했던 것 같습니다. 주니어 시절 개발과정에서 겪게 되는 삽질이 반복 되지 않도록 쓰기 시작했던 블로그 글들은 분명 제가 개발자로 성장하는데 큰 도움이 되었다고 생각됩니다. 하지만 세상일이 항상 그렇듯 일이 바쁘다는 핑계로 정리하는 습관이 사라지더니 어느 순간 모두 비공개로만 혼자서 보는 일기장으로, 그 후에는 점점 잊힌 페이지가 되더군요.&lt;/p&gt;
-
-&lt;p&gt;문득 정신을 차려보니 안드로이드를 개발한 지 어느덧 10년이란 시간이 지났습니다. 근래 들어 다시 “성장”하고 싶다는 생각이 들기 시작했고 포털에서 제공하는 블로그대신 github으로 자리를 옮겨와서 새롭게 시작합니다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
+            <description>&lt;blockquote&gt;
   &lt;p&gt;project &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(alMond Support Kit)&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -2551,6 +2538,13 @@ BLOG, MRSK project&lt;/p&gt;
 (https://github.com/mond-al/recyclerview-fastscroller)&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;blockquote&gt;
+  &lt;p&gt;Blog&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;5년즈음 전까지는 블로그를 꽤 열심히 정리 했던 것 같습니다. 한번 쓰고나면 잊게되고, 두번째 찾을때는 번거로움이 따르고, 반복해서 찾을때 마다 다른 사람의 생각을 내 생각으로 만드는데 드는 비용을 줄이고자 나의 언어로 기록하기 위해 시작했습니다. 그렇게 주니어 시절 개발과정에서 겪게 되는 삽질이 반복 되지 않도록 쓰기 시작했던 블로그 글들은 분명 제가 개발자로 성장하는데 큰 도움이 되었다고 생각됩니다. 하지만 세상일이 항상 그렇듯 일이 바쁘다는 핑계로 미루다 보니 공들여 쌓아놓은 데이터도 모두 옛것이 되어 건질게 많이 없는 상태가 되었습니다. 그리고 문득 정신을 차려보니 안드로이드를 개발한 지 어느덧 10년이란 시간이 지났습니다. 근래 들어 기록의 힘을 빌어 노쇠하는 개발력을 보충하고자 github으로 자리를 옮겨와서 새롭게 시작합니다.&lt;/p&gt;
+
+&lt;hr /&gt;
 </description>
             <link>https://mond-al.github.io//reboot</link>
             <guid>https://mond-al.github.io//reboot</guid>
