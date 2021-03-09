@@ -7,7 +7,7 @@
         <email></email>
     </author>
 
-    <updated>2021-03-10T00:40:27+09:00</updated>
+    <updated>2021-03-10T00:41:39+09:00</updated>
     <link rel="site" href="https://mond-al.github.io" />
 
     
@@ -37,10 +37,10 @@
 &lt;p&gt;일부(Android 10 미만의) 디바이스에서는 https페이지에서 setAllowFileAccess(true)를 통해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;file://&lt;/code&gt;로 시작하는 컨텐츠에 접근할 경우  Mixed_content로 판단하여 리소스 접근을 거부합니다. MIXED_CONTENT_COMPATIBILITY_MODE만으로는 해결이 불가능합니다. 때문에 setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW)를 설정하여 접근을 허용해 주어야합니다. 기껏 Https를 적용하고 방어막을 깨트리는 행동이기 때문에 신중을 기해야합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;결론적으로-webviewassetloader로-대체해야-안전합니다&quot;&gt;결론적으로 WebViewAssetLoader로 대체해야 안전합니다.&lt;/h2&gt;
+&lt;h3 id=&quot;webviewassetloader&quot;&gt;&lt;a href=&quot;https://developer.android.com/reference/androidx/webkit/WebViewAssetLoader&quot;&gt;WebViewAssetLoader&lt;/a&gt;&lt;/h3&gt;
 
-&lt;p&gt;예외를 제거하고, 동적으로 발생 가능한 문제를 방어 할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;예외를 제거하고, 동적으로 발생 가능한 문제를 방어 할 수 있습니다. 예제가 잘 구성되어있어 적용이 간편합니다. 👍&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://developer.android.com/reference/androidx/webkit/WebViewAssetLoader&quot;&gt;https://developer.android.com/reference/androidx/webkit/WebViewAssetLoader&lt;/a&gt;&lt;/p&gt;
  ]]></content>
     </entry>
     
