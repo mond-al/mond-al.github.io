@@ -5,8 +5,8 @@
         <description>몬드는 오늘도 개발을 합니다. 내일도...</description>
         <link>https://mond-al.github.io//</link>
         <atom:link href="https://mond-al.github.io//rss.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Wed, 10 Mar 2021 00:07:22 +0900</pubDate>
-        <lastBuildDate>Wed, 10 Mar 2021 00:07:22 +0900</lastBuildDate>
+        <pubDate>Wed, 10 Mar 2021 00:07:57 +0900</pubDate>
+        <lastBuildDate>Wed, 10 Mar 2021 00:07:57 +0900</lastBuildDate>
         <generator>Jekyll v3.9.0</generator>
         
         <item>
@@ -250,7 +250,7 @@ If you want, you can also use the bubble function.&lt;/p&gt;
         
         <item>
             <title>Typer - 한글 타이핑 입력효과 라이브러리</title>
-            <description>&lt;p&gt;안드로이드에서 TextView(또는 상속받는)에 한글을 자소단위로 타이핑하는 효과를 수행하는 라이브러리입니다. (#TypeWriter)&lt;/p&gt;
+            <description>&lt;p&gt;안드로이드에서 TextView(또는 상속받는)에 한글을 자소단위로 타이핑하는 효과를 수행하는 라이브러리입니다. (#한글 #타이핑 #효과)&lt;/p&gt;
 
 &lt;h1 id=&quot;typer&quot;&gt;typer&lt;/h1&gt;
 &lt;p&gt;안드로이드 TextView(EditText)뷰에 텍스트를 타이핑하는 것처럼 순차적으로 첫가끝(자음모음)입력을 지원합니다.

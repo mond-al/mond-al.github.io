@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://mond-al.github.io/tag/tdd/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mond-al.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-03-10T00:07:22+09:00</updated>
+  <updated>2021-03-10T00:07:57+09:00</updated>
   <id>https://mond-al.github.io/tag/tdd/feed.xml</id>
 
   
@@ -120,7 +120,7 @@
       <published>2021-03-02T00:00:00+09:00</published>
       <updated>2021-03-02T00:00:00+09:00</updated>
       <id>https://mond-al.github.io/hangeul-type-write</id>
-      <content type="html" xml:base="https://mond-al.github.io/hangeul-type-write">&lt;p&gt;안드로이드에서 TextView(또는 상속받는)에 한글을 자소단위로 타이핑하는 효과를 수행하는 라이브러리입니다. (#TypeWriter)&lt;/p&gt;
+      <content type="html" xml:base="https://mond-al.github.io/hangeul-type-write">&lt;p&gt;안드로이드에서 TextView(또는 상속받는)에 한글을 자소단위로 타이핑하는 효과를 수행하는 라이브러리입니다. (#한글 #타이핑 #효과)&lt;/p&gt;
 
 &lt;h1 id=&quot;typer&quot;&gt;typer&lt;/h1&gt;
 &lt;p&gt;안드로이드 TextView(EditText)뷰에 텍스트를 타이핑하는 것처럼 순차적으로 첫가끝(자음모음)입력을 지원합니다.
@@ -201,7 +201,7 @@
       
 
       
-        <summary type="html">안드로이드에서 TextView(또는 상속받는)에 한글을 자소단위로 타이핑하는 효과를 수행하는 라이브러리입니다. (#TypeWriter)</summary>
+        <summary type="html">안드로이드에서 TextView(또는 상속받는)에 한글을 자소단위로 타이핑하는 효과를 수행하는 라이브러리입니다. (#한글 #타이핑 #효과)</summary>
       
 
       
