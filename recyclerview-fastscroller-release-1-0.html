@@ -255,6 +255,7 @@ Scroll HandleView가 타겟이 되는 RecyclerView와 같은 부모뷰를 가질
   <li>Intelligent ScrollPosition</li>
 </ul>
 
+<h2 id="how-to-use">How to Use</h2>
 <h3 id="step-1-add-the-jitpack-repository-to-your-build-file">Step 1. Add the JitPack repository to your build file</h3>
 <p>Add it in your root build.gradle at the end of repositories:</p>
 <div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="n">allprojects</span> <span class="o">{</span>
@@ -266,11 +267,16 @@ Scroll HandleView가 타겟이 되는 RecyclerView와 같은 부모뷰를 가질
 </code></pre></div></div>
 <h3 id="step-2-add-the-dependency">Step 2. Add the dependency</h3>
 <div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="n">dependencies</span> <span class="o">{</span>
-	        <span class="n">implementation</span> <span class="s1">'com.github.mond-al:digit-roll-numbers:0.2'</span>
+        <span class="n">implementation</span> <span class="s1">'com.github.mond-al:recyclerview-fastscroller:1.0'</span><span class="err">'</span>
 	<span class="o">}</span>
 </code></pre></div></div>
 
 <h3 id="step3-just-use-it">Step3. Just Use it!</h3>
+<p>All you have to do is configure the view and bind it.<br />
+If you want, you can also use the bubble function.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Bind to RecyclerView</span>
+<span class="nc">FastScroller</span><span class="p">(</span><span class="n">handleView</span><span class="p">).</span><span class="nf">bind</span><span class="p">(</span><span class="n">recyclerView</span><span class="p">)</span>
+</code></pre></div></div>
 
                 </div>
             </section>
