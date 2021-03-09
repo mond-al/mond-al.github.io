@@ -136,21 +136,21 @@ into the {body} of the default.hbs template -->
 <script>
     window.store = {
     
+    "webview-android11": {
+        "title": "Android 11대응 WebView편",
+            "author": "mond",
+            "category": "",
+            "content": "TargetSdkVersion 30을 적용후 Webview에서 발생한 문제와 해결방법.setAllowFileAccess웹뷰에서 디바이스 로컬(앱영역)으로 복사한 리소스에 접근하는 기능을 제공하기 위해서는 아래의 페이지에서 나온것 처럼 webSettings.setAllowFileAccess(true) api를 이용해서 해결가능합니다. 물론 페이지에 따라 보안에 대한 평가가 필요합니다.https://developer.android.com/reference/android/webkit/WebSettings#setAllowFileAccess(boolean)setMixedContentMode일부(Android 10 미만의) 디바이스에서는 https페이지에서 setAllowFileAccess(true)를 통해 file://로 시작하는 컨텐츠에 접근할 경우  Mixed_content로 판단하여 리소스 접근을 거부합니다. 때문에 setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW)를 설정하여 접근을 허용해 주어야합니다. 기껏 Https를 적용하고 방어막을 깨트리는 행동이기 때문에 신중을 기해야합니다.https://developer.android.com/reference/android/webkit/WebSettings#setMixedContentMode(int)",
+        "url": "/webview-android11"
+    }
+    ,
+    
     "recyclerview-fastscroller-release-1-0": {
         "title": "RecyclerView-FastScroller v1.0",
             "author": "mond",
             "category": "",
             "content": "RecyclerView FastScrollerRecyclerView에서 FastScroller와 Bubble(현재 아이템 정보)를 지원하는 라이브러리입니다. LinearLayoutManager와  GridLayoutManager를 지원하며, 부드러운 애니메이션을 제공합니다. 간단한 구성으로 핸들뷰와 버블뷰를 먼저 구성하고 RecyclerView와 Bind만 하면 사용 가능합니다.DEMO사용방법은 간단합니다. 핸들뷰를 추가해주세요. 필요하다면 버블을 표시할 뷰도 함께 배치해주시면됩니다.Scroll HandleView가 타겟이 되는 RecyclerView와 같은 부모뷰를 가질 필요는 없지만, 동일한 높이의 부모뷰를 가지고 있어야합니다.// Bind to RecyclerViewFastScroller(handleView, bubbleListener).bind(recyclerView)뷰구성 예제&lt;androidx.constraintlayout.widget.ConstraintLayout&gt;    ...        &lt;androidx.recyclerview.widget.RecyclerView            android:id=\"@+id/items\"            android:layout_width=\"match_parent\"            android:layout_height=\"match_parent\"            app:layoutManager=\"androidx.recyclerview.widget.LinearLayoutManager\"            tools:layout_editor_absoluteX=\"16dp\"            tools:layout_editor_absoluteY=\"0dp\"/&gt;        &lt;!-- handle view--&gt;        &lt;ImageView            android:id=\"@+id/handle_view\"            android:layout_width=\"20dp\"            android:layout_height=\"40dp\"            android:layout_marginTop=\"0dp\"            android:layout_marginEnd=\"0dp\"            android:background=\"@color/black\"            android:contentDescription=\"@string/quick_scroll_handle\"            android:scaleType=\"centerCrop\"            android:src=\"@drawable/ic_unfold_more_black_48dp\"            app:layout_constraintEnd_toEndOf=\"parent\"            app:layout_constraintTop_toTopOf=\"parent\"/&gt;        ...&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;  버블뷰BubbleView를 구성하고, RecyclerView Adapter에 BubbleAdapter 인터페이스를 구현합니다..BubbleAdapter 인터페이스에는 getBubbleItem()메서드 하나를 가지고 있습니다. 이 메서드는 RecyclerView position에 따른 문자열을 반환하는 메서드입니다. 반환된 문자열은 BubbleListener.setBubble(str:String)를 호출하여 화면에 표시됩니다.// HandleViewval handleView = findViewById&lt;View&gt;(R.id.handle_view)// BubbleView (optional feature)// must implement with BubbleAdapter. see @SimpleAdapterval bubble = findViewById&lt;View&gt;(R.id.bubble)val bubbleText = findViewById&lt;TextView&gt;(R.id.bubble_text)val bubbleListener = object : BubbleListener {    override fun setBubble(str: String) {        bubbleText.text = str    }    override fun setViewY(y: Float) {        bubble.y = y    }    override fun setVisible(isVisible: Boolean) {        bubble.visibility = if (isVisible) View.VISIBLE else View.GONE    }}// BindFastScroller(handleView,bubbleListener).bind(recyclerView)&lt;androidx.constraintlayout.widget.ConstraintLayout&gt;    ...    &lt;androidx.recyclerview.widget.RecyclerView/&gt;    &lt;ImageView android:id=\"@+id/handle_view\"/&gt;    &lt;!-- bubble view--&gt;    &lt;FrameLayout        android:id=\"@+id/bubble\"        android:layout_width=\"wrap_content\"        android:layout_height=\"wrap_content\"        android:layout_marginEnd=\"4dp\"        android:paddingTop=\"10dp\"        app:layout_constraintEnd_toStartOf=\"@+id/handle_view\"        app:layout_constraintTop_toTopOf=\"parent\"&gt;    &lt;TextView        android:id=\"@+id/bubble_text\"        android:layout_width=\"wrap_content\"        android:layout_height=\"wrap_content\"        android:layout_gravity=\"center\"        android:background=\"@drawable/bubble\"        android:ellipsize=\"end\"        android:lines=\"1\"        android:paddingBottom=\"4dp\"        android:paddingTop=\"2dp\"        android:paddingStart=\"10dp\"        android:paddingEnd=\"20dp\"        android:textSize=\"20sp\"        tools:text=\"123\"/&gt;    &lt;/FrameLayout&gt;...&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;자세한 내용은 Github의 소스를 내려받아 Example App을 참고부탁드립니다.문의사항이나 개선요청은 댓글로 남겨주시면, 빠른시일내에 반영하겠습니다.Github linkTodo  Smooth Scroll  Intelligent ScrollPositionHow to UseStep 1. Add the JitPack repository to your build fileAdd it in your root build.gradle at the end of repositories:\tallprojects {\t\trepositories {\t\t\t...\t\t\tmaven { url 'https://jitpack.io' }\t\t}\t}Step 2. Add the dependency\tdependencies {        implementation 'com.github.mond-al:recyclerview-fastscroller:1.0'\t}Step3. Just Use it!All you have to do is configure the view and bind it.If you want, you can also use the bubble function.// Bind to RecyclerViewFastScroller(handleView).bind(recyclerView)",
         "url": "/recyclerview-fastscroller-release-1-0"
-    }
-    ,
-    
-    "error-webview-file-access": {
-        "title": "Webview에서 디바이스의 리소스를 사용할때",
-            "author": "mond",
-            "category": "",
-            "content": "앱은 WebView에서 외부 소스의 file : // URL을 열지 않아야합니다. 앱이 외부 소스의 임의 URL을 허용하는 경우이 기능을 활성화하지 마십시오. 항상 androidx.webkit.WebViewAssetLoader를 사용하여 file : // URL 대신 http (s) : // 스키마를 통해 자산 및 리소스를 포함한 파일에 액세스하는 것이 좋습니다. Build.VERSION_CODES.Q 이전 버전을 대상으로하는 보안 문제를 방지하려면이 값을 명시 적으로 false로 설정해야합니다.사실이 setAllowFileAccess Api가 생긴건 Api level 3부터입니다. 하지만https://developer.android.com/reference/android/webkit/WebSettings#setAllowFileAccess(boolean)",
-        "url": "/error-webview-file-access"
     }
     ,
     
